@@ -1,0 +1,5 @@
+# Automatic HTTPS (Let's Encrypt) and the 80 -> 443 redirect.
+{$DOMAIN} {
+    encode gzip
+    reverse_proxy web:80
+}

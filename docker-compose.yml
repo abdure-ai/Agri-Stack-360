@@ -1,0 +1,125 @@
+# Production deployment of Agri-Stack 360 (see deployment.md).
+#
+#   cp .env.example .env     # fill in section 4 of deployment.md, plus DOMAIN
+#   docker compose build
+#   docker compose --profile setup run --rm setup     # once: database, boundaries, seed data, knowledge base
+#   docker compose up -d
+#
+# Only ports 80/443 (Caddy) are published. The APIs and the disease model stay on the internal network.
+
+x-app: &app
+  build:
+    context: .
+    dockerfile: deploy/Dockerfile.app
+  image: agristack-app:latest
+  env_file: .env
+  environment: &app-env
+    STATE_DIR: /state
+    NMIS_MODEL_DIR: /state/models/lgbm
+    NMIS_MODEL_REGISTRY: /state/models/model_registry.json
+    NMIS_PRICES_DB: /state/nmis_prices.db
+    NMIS_PLATFORM_DB: /state/agri_platform.db
+    NMIS_SYNC_LOG_DIR: /state/logs/sync
+    NMIS_CSV_EXPORT: /state/exports/nmis_prices.csv
+    ADVISORY_DISEASE_URL: http://disease:8003
+    ADVISORY_FORECAST_URL: http://forecast:8001
+    ADVISORY_OFFLINE: "0"
+  volumes:
+    - state:/state
+  restart: unless-stopped
+  logging: &logging
+    driver: json-file
+    options: { max-size: "10m", max-file: "10" }   # log rotation
+
+services:
+  api:
+    <<: *app
+    command: python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000   # one worker: runs the hourly alert engine
+    depends_on: [forecast, disease]
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/api/docs"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  forecast:
+    <<: *app
+    command: python -m uvicorn serving.predict_api:app --host 0.0.0.0 --port 8001
+
+  sync:
+    <<: *app
+    command: python -m uvicorn scraper.api:app --host 0.0.0.0 --port 8002
+
+  disease:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.disease
+    image: agristack-disease:latest
+    env_file: .env          # needs JWT_SECRET_KEY (shared with the platform API)
+    restart: unless-stopped
+    logging: *logging
+
+  telegram:
+    <<: *app
+    command: python -m backend.telegram_bot
+    profiles: [telegram]    # enable with: docker compose --profile telegram up -d
+
+  web:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.web
+      args:
+        PUBLIC_URL: https://${DOMAIN:?set DOMAIN in .env}
+    image: agristack-web:latest
+    depends_on: [api, forecast, sync]
+    restart: unless-stopped
+    logging: *logging
+
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on: [web]
+    restart: unless-stopped
+    logging: *logging
+
+  # One-time setup. Never run the demo seed scripts in production.
+  setup:
+    <<: *app
+    profiles: [setup]
+    restart: "no"
+    command: >
+      sh -c "python -m backend.db_init &&
+             python scripts/import_admin_boundaries.py &&
+             python scripts/load_advisory_seed.py &&
+             python scripts/ingest_knowledge.py"
+
+  # Daily backup of the databases and photos into ./backups (copy these off the server, encrypted).
+  backup:
+    <<: *app
+    profiles: [backup]
+    restart: "no"
+    volumes:
+      - state:/state:ro
+      - ./backups:/backup
+    entrypoint: ["sh", "-c"]
+    command:
+      - |
+        apt-get update -qq && apt-get install -y -qq sqlite3 >/dev/null
+        d=$$(date +%F)
+        sqlite3 /state/agri_platform.db ".backup /backup/agri_platform-$$d.db"
+        sqlite3 /state/nmis_prices.db   ".backup /backup/nmis_prices-$$d.db"
+        tar czf /backup/uploads-training-$$d.tgz -C /state uploads training
+        find /backup -type f -mtime +30 -delete
+
+volumes:
+  state:
+  caddy_data:
+  caddy_config:
