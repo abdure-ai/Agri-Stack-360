@@ -1,5 +1,5 @@
-# Automatic HTTPS (Let's Encrypt) and the 80 -> 443 redirect.
+# Optional (--profile caddy): automatic HTTPS and the 80 -> 443 redirect.
 {$DOMAIN} {
     encode gzip
-    reverse_proxy web:80
+    reverse_proxy web:7004
 }

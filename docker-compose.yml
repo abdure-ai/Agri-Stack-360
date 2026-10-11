@@ -5,13 +5,15 @@
 #   docker compose --profile setup run --rm setup     # once: database, boundaries, seed data, knowledge base
 #   docker compose up -d
 #
-# Only ports 80/443 (Caddy) are published. The APIs and the disease model stay on the internal network.
+# Ports: api 7000, forecast 7001, sync 7002, disease 7003, web 7004 (all inside the Docker network).
+# Only the web app is published, on 127.0.0.1:7004: put your HTTPS reverse proxy in front of it, or start the
+# bundled Caddy (ports 80/443) with --profile caddy.
 
 x-app: &app
   build:
     context: .
     dockerfile: deploy/Dockerfile.app
-  image: agristack-app:latest
+  image: ${REGISTRY:-}agristack-app:${TAG:-latest}
   env_file: .env
   environment: &app-env
     STATE_DIR: /state
@@ -21,8 +23,8 @@ x-app: &app
     NMIS_PLATFORM_DB: /state/agri_platform.db
     NMIS_SYNC_LOG_DIR: /state/logs/sync
     NMIS_CSV_EXPORT: /state/exports/nmis_prices.csv
-    ADVISORY_DISEASE_URL: http://disease:8003
-    ADVISORY_FORECAST_URL: http://forecast:8001
+    ADVISORY_DISEASE_URL: http://disease:7003
+    ADVISORY_FORECAST_URL: http://forecast:7001
     ADVISORY_OFFLINE: "0"
   volumes:
     - state:/state
@@ -34,27 +36,27 @@ x-app: &app
 services:
   api:
     <<: *app
-    command: python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000   # one worker: runs the hourly alert engine
+    command: python -m uvicorn backend.main:app --host 0.0.0.0 --port 7000   # one worker: runs the hourly alert engine
     depends_on: [forecast, disease]
     healthcheck:
-      test: ["CMD", "curl", "-fsS", "http://localhost:8000/api/docs"]
+      test: ["CMD", "curl", "-fsS", "http://localhost:7000/api/docs"]
       interval: 30s
       timeout: 5s
       retries: 5
 
   forecast:
     <<: *app
-    command: python -m uvicorn serving.predict_api:app --host 0.0.0.0 --port 8001
+    command: python -m uvicorn serving.predict_api:app --host 0.0.0.0 --port 7001
 
   sync:
     <<: *app
-    command: python -m uvicorn scraper.api:app --host 0.0.0.0 --port 8002
+    command: python -m uvicorn scraper.api:app --host 0.0.0.0 --port 7002
 
   disease:
     build:
       context: .
       dockerfile: deploy/Dockerfile.disease
-    image: agristack-disease:latest
+    image: ${REGISTRY:-}agristack-disease:${TAG:-latest}
     env_file: .env          # needs JWT_SECRET_KEY (shared with the platform API)
     restart: unless-stopped
     logging: *logging
@@ -70,13 +72,16 @@ services:
       dockerfile: deploy/Dockerfile.web
       args:
         PUBLIC_URL: https://${DOMAIN:?set DOMAIN in .env}
-    image: agristack-web:latest
+    image: ${REGISTRY:-}agristack-web:${TAG:-latest}
     depends_on: [api, forecast, sync]
+    ports:
+      - "127.0.0.1:7004:7004"   # point your host's HTTPS reverse proxy here
     restart: unless-stopped
     logging: *logging
 
   caddy:
     image: caddy:2-alpine
+    profiles: [caddy]       # only if nothing else on the host terminates HTTPS
     ports:
       - "80:80"
       - "443:443"
