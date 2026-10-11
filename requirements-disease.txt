@@ -1,0 +1,11 @@
+# Wheat disease model service (serving/disease_api.py) — separate environment.
+# The model was saved with Keras 2.13 / TensorFlow 2.13, which needs Python <= 3.11:
+#   py -3.10 -m venv .venv-disease
+#   .venv-disease\Scripts\python -m pip install -r requirements-disease.txt
+tensorflow-cpu==2.13.1
+pillow
+fastapi
+uvicorn
+python-multipart
+python-jose[cryptography]
+bcrypt

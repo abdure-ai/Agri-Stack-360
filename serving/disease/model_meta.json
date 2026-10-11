@@ -1,0 +1,57 @@
+{
+  "model_file": "New_model_with_dropout_256_20_32.keras",
+  "training_script": "Desktop/Experiment Result/Hybrid_with_dropout.py",
+  "training_data": "Desktop/Experiment Result/Disease_Data_2.csv",
+  "training_data_sha256": "c203d3f4b2ba1bac06d7d01381f4e530b3e007d4637b7c6604a0bcc4054b24be",
+  "image_size": [
+    80,
+    80
+  ],
+  "image_scaling": "RGB pixel / 255.0",
+  "classes": [
+    "Brown Rust",
+    "Healthy",
+    "Invalid",
+    "Powdery Mildew",
+    "Septoria",
+    "Yellow Rust"
+  ],
+  "ecological_features": [
+    "altitude_m",
+    "temperature_C",
+    "humidity_pct",
+    "precipitation_mm_per_week"
+  ],
+  "scaler_mean": [
+    902.3894916853402,
+    12.97278570586154,
+    57.25350866847506,
+    315.805372095766
+  ],
+  "scaler_scale": [
+    719.5859780030083,
+    8.147789930566478,
+    32.14628721133878,
+    192.16641198008637
+  ],
+  "scaler_note": "StandardScaler fit on the 80% training split: train_test_split(env, test_size=0.2, random_state=42), as in the training script.",
+  "training_ranges": {
+    "altitude_m": [
+      0.0,
+      2000.0
+    ],
+    "temperature_C": [
+      0.0,
+      25.0
+    ],
+    "humidity_pct": [
+      0.0,
+      100.0
+    ],
+    "precipitation_mm_per_week": [
+      100.0,
+      700.0
+    ]
+  },
+  "invalid_class_ecological_value": -1
+}

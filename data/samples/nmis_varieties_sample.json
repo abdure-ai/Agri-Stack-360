@@ -1,0 +1,152 @@
+[
+  {
+    "marketPlaceId": 327,
+    "cropId": 1,
+    "id": 1,
+    "varietyName": "White Teff (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 1,
+    "id": 2,
+    "varietyName": "Red Teff (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 1,
+    "id": 3,
+    "varietyName": "Mixed Teff (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 4,
+    "id": 4,
+    "varietyName": "White Sesame (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 4,
+    "id": 5,
+    "varietyName": "Mixed Sesame (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 5,
+    "id": 6,
+    "varietyName": "White pea bean (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 5,
+    "id": 7,
+    "varietyName": "Red kidney bean (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 2,
+    "id": 8,
+    "varietyName": "White Wheat (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 3,
+    "id": 9,
+    "varietyName": "White Maize (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 5,
+    "id": 10,
+    "varietyName": "Mixed Bean (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 4,
+    "id": 11,
+    "varietyName": "Red Sesame (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 6,
+    "id": 12,
+    "varietyName": "Onion (KG)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 7,
+    "id": 13,
+    "varietyName": "Tomato (KG)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 8,
+    "id": 14,
+    "varietyName": "Potato (KG)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 9,
+    "id": 15,
+    "varietyName": "Avocado (KG)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 10,
+    "id": 16,
+    "varietyName": "Mango (KG)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 11,
+    "id": 17,
+    "varietyName": "Raw Bananas (KG)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 12,
+    "id": 18,
+    "varietyName": "Malt Barely (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 13,
+    "id": 19,
+    "varietyName": "Sorghum (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 14,
+    "id": 20,
+    "varietyName": "Local Rice (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 15,
+    "id": 21,
+    "varietyName": "Garlic (KG)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 16,
+    "id": 22,
+    "varietyName": "Soybean (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 17,
+    "id": 23,
+    "varietyName": "Red Pepper (KG)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 18,
+    "id": 24,
+    "varietyName": "Green Mung (Quintal)"
+  },
+  {
+    "marketPlaceId": 327,
+    "cropId": 11,
+    "id": 25,
+    "varietyName": "Ripe bananas (KG)"
+  }
+]

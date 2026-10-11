@@ -1,0 +1,5 @@
+product_name,formulation,crop,target,dose_per_ha,dose_per_knapsack,water_volume_l_per_ha,max_applications,interval_days,pre_harvest_interval_days,re_entry_hours,rain_free_hours,ppe_required,source,verification_status
+PLACEHOLDER_FUNGICIDE_A,PLACEHOLDER_FORM,wheat,yellow_rust,PLACEHOLDER_VERIFY,PLACEHOLDER_VERIFY,PLACEHOLDER_VERIFY,,,,,,gloves|mask|long_sleeves|boots|goggles,PLACEHOLDER_VERIFY: product label / MoA package,PLACEHOLDER_VERIFY
+PLACEHOLDER_FUNGICIDE_A,PLACEHOLDER_FORM,wheat,leaf_rust,PLACEHOLDER_VERIFY,PLACEHOLDER_VERIFY,PLACEHOLDER_VERIFY,,,,,,gloves|mask|long_sleeves|boots|goggles,PLACEHOLDER_VERIFY: product label / MoA package,PLACEHOLDER_VERIFY
+PLACEHOLDER_FUNGICIDE_B,PLACEHOLDER_FORM,wheat,septoria_tritici_blotch,PLACEHOLDER_VERIFY,PLACEHOLDER_VERIFY,PLACEHOLDER_VERIFY,,,,,,gloves|mask|long_sleeves|boots|goggles,PLACEHOLDER_VERIFY: product label / MoA package,PLACEHOLDER_VERIFY
+PLACEHOLDER_FUNGICIDE_C,PLACEHOLDER_FORM,wheat,powdery_mildew,PLACEHOLDER_VERIFY,PLACEHOLDER_VERIFY,PLACEHOLDER_VERIFY,,,,,,gloves|mask|long_sleeves|boots|goggles,PLACEHOLDER_VERIFY: product label / MoA package,PLACEHOLDER_VERIFY

@@ -1,0 +1,40 @@
+# Python dependencies — NMIS Price Intelligence System
+# Install with: pip install -r requirements.txt
+# Tested on Python 3.12+ (3.14 confirmed working)
+
+# ── Core data ──────────────────────────────────────────────────────────────
+pandas==3.0.1
+numpy==2.4.2
+scipy==1.17.1
+
+# ── ML pipeline ────────────────────────────────────────────────────────────
+scikit-learn==1.8.0
+lightgbm==4.3.0
+prophet==1.3.0
+joblib==1.5.3
+
+# ── Plotting (training diagnostics, not served) ────────────────────────────
+matplotlib==3.10.8
+
+# ── Backend API (market data + prediction serving + data sync) ────────────
+fastapi==0.135.0
+uvicorn==0.41.0
+segno==1.6.6          # QR codes for Input Trust batch labels (pure Python)
+
+# ── Data sync (scraper/) ──────────────────────────────────────────────────
+requests==2.34.2
+
+# ── Auth (RBAC, JWT, password hashing) ────────────────────────────────────
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+python-multipart>=0.0.9
+
+# ── AI chat ───────────────────────────────────────────────────────────────
+google-genai>=1.0.0
+
+# ── Node / npm packages (frontend — managed by package.json) ──────────────
+# react 18, vite, recharts, react-datepicker
+# See frontend/package.json
+
+# ── Advisory module ─────────────────────────────────────────────────────────
+pymupdf>=1.26           # page-by-page text extraction from the MoA guideline PDFs

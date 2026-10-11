@@ -1,0 +1,2246 @@
+{
+  "/listMarketPlaces/null/0": {
+    "status": 200,
+    "data": [
+      {
+        "id": 296,
+        "marketName": "Amhara - Addis Alem"
+      },
+      {
+        "id": 217,
+        "marketName": "Amhara - Shewa Robit Kebele 02  Gebeya"
+      },
+      {
+        "id": 323,
+        "marketName": "Amhara - Chuahit"
+      },
+      {
+        "id": 204,
+        "marketName": "Amhara - Kola Diba"
+      },
+      {
+        "id": 310,
+        "marketName": "Amhara - Kobo ketema"
+      },
+      {
+        "id": 374,
+        "marketName": "Amhara - Kuye"
+      },
+      {
+        "id": 223,
+        "marketName": "Amhara - Wereyilu Segno Gebeya "
+      },
+      {
+        "id": 2,
+        "marketName": "Amhara - Bure Woreda"
+      },
+      {
+        "id": 210,
+        "marketName": "Amhara - Motta Gebeya"
+      },
+      {
+        "id": 316,
+        "marketName": "Amhara - Hayike"
+      },
+      {
+        "id": 380,
+        "marketName": "Amhara - Gunde woyin"
+      },
+      {
+        "id": 229,
+        "marketName": "Amhara - Enjbara"
+      },
+      {
+        "id": 303,
+        "marketName": "Amhara - Shola gebeya"
+      },
+      {
+        "id": 216,
+        "marketName": "Amhara - Arerti Gebeya "
+      },
+      {
+        "id": 322,
+        "marketName": "Amhara - Degolo"
+      },
+      {
+        "id": 203,
+        "marketName": "Amhara - Shawura Gebeya"
+      },
+      {
+        "id": 309,
+        "marketName": "Amhara - Enewari"
+      },
+      {
+        "id": 373,
+        "marketName": "Amhara - Amanuel"
+      },
+      {
+        "id": 222,
+        "marketName": "Amhara - Mekane Selam gebeya"
+      },
+      {
+        "id": 328,
+        "marketName": "Amhara - Genda wuha"
+      },
+      {
+        "id": 1,
+        "marketName": "Amhara - Bahir Dar kebele 04"
+      },
+      {
+        "id": 209,
+        "marketName": "Amhara - Dejen Gebeya"
+      },
+      {
+        "id": 315,
+        "marketName": "Amhara - Nefas Mewucha"
+      },
+      {
+        "id": 379,
+        "marketName": "Amhara - Debere Work"
+      },
+      {
+        "id": 228,
+        "marketName": "Amhara - Dangla "
+      },
+      {
+        "id": 302,
+        "marketName": "Amhara - Ginager"
+      },
+      {
+        "id": 215,
+        "marketName": "Amhara - Alem Ketema Kedame Gebeya"
+      },
+      {
+        "id": 321,
+        "marketName": "Amhara - Weyin Amba"
+      },
+      {
+        "id": 202,
+        "marketName": "Amhara - Debark Gebeya"
+      },
+      {
+        "id": 308,
+        "marketName": "Amhara - Molalalie"
+      },
+      {
+        "id": 300,
+        "marketName": "Amhara - kelaji"
+      },
+      {
+        "id": 221,
+        "marketName": "Amhara - tenta Gebeya"
+      },
+      {
+        "id": 327,
+        "marketName": "Amhara - Amba Georgies"
+      },
+      {
+        "id": 208,
+        "marketName": "Amhara - Estie Mekane Yesus Gebeya "
+      },
+      {
+        "id": 314,
+        "marketName": "Amhara - Kimer Dingay"
+      },
+      {
+        "id": 32,
+        "marketName": "Amhara - Gondar Kedamie  Gebeya "
+      },
+      {
+        "id": 378,
+        "marketName": "Amhara - Yeduha"
+      },
+      {
+        "id": 301,
+        "marketName": "Amhara - Fendika"
+      },
+      {
+        "id": 227,
+        "marketName": "Amhara - Lalibela Ketema Gebeya"
+      },
+      {
+        "id": 6,
+        "marketName": "Amhara - Debre Markos Huseta Gebeya"
+      },
+      {
+        "id": 214,
+        "marketName": "Amhara - Debere Birhan Kebele 08 Gebeya"
+      },
+      {
+        "id": 320,
+        "marketName": "Amhara - Kelala"
+      },
+      {
+        "id": 233,
+        "marketName": "Amhara - Bati Segno Gebeya"
+      },
+      {
+        "id": 201,
+        "marketName": "Amhara - Dabat Gebeya"
+      },
+      {
+        "id": 307,
+        "marketName": "Amhara - Deneba"
+      },
+      {
+        "id": 299,
+        "marketName": "Amhara - Liben"
+      },
+      {
+        "id": 220,
+        "marketName": "Amhara - kombolcha kebele 03 Gebeya"
+      },
+      {
+        "id": 326,
+        "marketName": "Amhara - Aykel"
+      },
+      {
+        "id": 207,
+        "marketName": "Amhara - Wereta Arada Gebeya "
+      },
+      {
+        "id": 313,
+        "marketName": "Amhara - Ebenat Ketema"
+      },
+      {
+        "id": 377,
+        "marketName": "Amhara - Lumame"
+      },
+      {
+        "id": 226,
+        "marketName": "Amhara - Meresa  Gebeya"
+      },
+      {
+        "id": 5,
+        "marketName": "Amhara - Debere Elias Gebeya"
+      },
+      {
+        "id": 213,
+        "marketName": "Amhara - Fenot selam Gebeya"
+      },
+      {
+        "id": 319,
+        "marketName": "Amhara - Deansa"
+      },
+      {
+        "id": 232,
+        "marketName": "Amhara - Kemise Hamus Gebeya "
+      },
+      {
+        "id": 306,
+        "marketName": "Amhara - Sela dengay"
+      },
+      {
+        "id": 298,
+        "marketName": "Amhara - Durbete"
+      },
+      {
+        "id": 219,
+        "marketName": "Amhara - Debresina Gebeya"
+      },
+      {
+        "id": 325,
+        "marketName": "Amhara - Sanja"
+      },
+      {
+        "id": 206,
+        "marketName": "Amhara - Wegeda Gebeya"
+      },
+      {
+        "id": 312,
+        "marketName": "Amhara - Dera Amebesamie"
+      },
+      {
+        "id": 376,
+        "marketName": "Amhara - Yejube"
+      },
+      {
+        "id": 225,
+        "marketName": "Amhara - Woldia Gebeya"
+      },
+      {
+        "id": 4,
+        "marketName": "Amhara - Bichena Gebeya"
+      },
+      {
+        "id": 212,
+        "marketName": "Amhara - Merawi Gebeya"
+      },
+      {
+        "id": 318,
+        "marketName": "Amhara - Akeseta"
+      },
+      {
+        "id": 231,
+        "marketName": "Amhara - Sekota makesego Gebeya"
+      },
+      {
+        "id": 305,
+        "marketName": "Amhara - Meragna"
+      },
+      {
+        "id": 23,
+        "marketName": "Amhara - Kokit  Metema Gebeya"
+      },
+      {
+        "id": 297,
+        "marketName": "Amhara - Mehal Genet Gebeya"
+      },
+      {
+        "id": 218,
+        "marketName": "Amhara - Mehal Meda"
+      },
+      {
+        "id": 324,
+        "marketName": "Amhara - Delgie"
+      },
+      {
+        "id": 205,
+        "marketName": "Amhara - Debretabor Segno Gebeya "
+      },
+      {
+        "id": 311,
+        "marketName": "Amhara - Addis Zemen"
+      },
+      {
+        "id": 375,
+        "marketName": "Amhara - Amber"
+      },
+      {
+        "id": 224,
+        "marketName": "Amhara - Desse Robit Gebaya"
+      },
+      {
+        "id": 3,
+        "marketName": "Amhara - Shindie Gebeya"
+      },
+      {
+        "id": 211,
+        "marketName": "Amhara - Dembecha Gebeya"
+      },
+      {
+        "id": 317,
+        "marketName": "Amhara - Salmen"
+      },
+      {
+        "id": 381,
+        "marketName": "Amhara - Merto Lemariam"
+      },
+      {
+        "id": 230,
+        "marketName": "Amhara - Chagini"
+      },
+      {
+        "id": 304,
+        "marketName": "Amhara - Zemereo"
+      },
+      {
+        "id": 22,
+        "marketName": "Amhara - Adet Gebeya "
+      },
+      {
+        "id": 387,
+        "marketName": "Oromia - Beltu"
+      },
+      {
+        "id": 9,
+        "marketName": "Oromia - Dodola "
+      },
+      {
+        "id": 249,
+        "marketName": "Oromia - Menna"
+      },
+      {
+        "id": 77,
+        "marketName": "Oromia - Kofale"
+      },
+      {
+        "id": 42,
+        "marketName": "Oromia - Chafe Donsa"
+      },
+      {
+        "id": 64,
+        "marketName": "Oromia - Finchaha"
+      },
+      {
+        "id": 283,
+        "marketName": "Oromia - Wayu Jima Rare"
+      },
+      {
+        "id": 51,
+        "marketName": "Oromia - Tullo Bolo"
+      },
+      {
+        "id": 393,
+        "marketName": "Oromia - Silki Amba"
+      },
+      {
+        "id": 15,
+        "marketName": "Oromia - Nekemte Town"
+      },
+      {
+        "id": 255,
+        "marketName": "Oromia - Dambi"
+      },
+      {
+        "id": 83,
+        "marketName": "Oromia - Goro Bale"
+      },
+      {
+        "id": 242,
+        "marketName": "Oromia - Adele"
+      },
+      {
+        "id": 70,
+        "marketName": "Oromia - Chiro"
+      },
+      {
+        "id": 34,
+        "marketName": "Oromia - Yanfa"
+      },
+      {
+        "id": 289,
+        "marketName": "Oromia - Bagi"
+      },
+      {
+        "id": 57,
+        "marketName": "Oromia - Haro Limu"
+      },
+      {
+        "id": 399,
+        "marketName": "Oromia - Dilela"
+      },
+      {
+        "id": 262,
+        "marketName": "Oromia - Uke"
+      },
+      {
+        "id": 295,
+        "marketName": "Oromia - Hoja Dure"
+      },
+      {
+        "id": 386,
+        "marketName": "Oromia - Micha"
+      },
+      {
+        "id": 8,
+        "marketName": "Oromia - Shashemene Town"
+      },
+      {
+        "id": 248,
+        "marketName": "Oromia - Dinsho"
+      },
+      {
+        "id": 76,
+        "marketName": "Oromia - Negelle Arsi"
+      },
+      {
+        "id": 41,
+        "marketName": "Oromia - Batu"
+      },
+      {
+        "id": 235,
+        "marketName": "Oromia - Sheno"
+      },
+      {
+        "id": 63,
+        "marketName": "Oromia - Kake"
+      },
+      {
+        "id": 282,
+        "marketName": "Oromia - Sakele"
+      },
+      {
+        "id": 47,
+        "marketName": "Oromia - Ijaji"
+      },
+      {
+        "id": 392,
+        "marketName": "Oromia - Goljota"
+      },
+      {
+        "id": 14,
+        "marketName": "Oromia - Gimbi Town"
+      },
+      {
+        "id": 254,
+        "marketName": "Oromia - Ilu harer"
+      },
+      {
+        "id": 82,
+        "marketName": "Oromia - Gasara"
+      },
+      {
+        "id": 241,
+        "marketName": "Oromia - Huruta"
+      },
+      {
+        "id": 69,
+        "marketName": "Oromia - Deder"
+      },
+      {
+        "id": 33,
+        "marketName": "Oromia - Bedele"
+      },
+      {
+        "id": 288,
+        "marketName": "Oromia - Yabu"
+      },
+      {
+        "id": 56,
+        "marketName": "Oromia - Gidda Ayana"
+      },
+      {
+        "id": 398,
+        "marketName": "Oromia - Gindo"
+      },
+      {
+        "id": 261,
+        "marketName": "Oromia - Metehara"
+      },
+      {
+        "id": 94,
+        "marketName": "Oromia - Wayu"
+      },
+      {
+        "id": 385,
+        "marketName": "Oromia - Jara"
+      },
+      {
+        "id": 7,
+        "marketName": "Oromia - Adama City"
+      },
+      {
+        "id": 247,
+        "marketName": "Oromia - Goba"
+      },
+      {
+        "id": 75,
+        "marketName": "Oromia - Sire"
+      },
+      {
+        "id": 40,
+        "marketName": "Oromia - Mojo"
+      },
+      {
+        "id": 294,
+        "marketName": "Oromia - Sululta"
+      },
+      {
+        "id": 234,
+        "marketName": "Oromia - Fiche"
+      },
+      {
+        "id": 62,
+        "marketName": "Oromia - Dambi Dolo"
+      },
+      {
+        "id": 281,
+        "marketName": "Oromia - Dedu"
+      },
+      {
+        "id": 46,
+        "marketName": "Oromia - Ginci"
+      },
+      {
+        "id": 391,
+        "marketName": "Oromia - Adaba"
+      },
+      {
+        "id": 13,
+        "marketName": "Oromia - Jimma Town"
+      },
+      {
+        "id": 253,
+        "marketName": "Oromia - Kone"
+      },
+      {
+        "id": 81,
+        "marketName": "Oromia - Dalo Sebro"
+      },
+      {
+        "id": 240,
+        "marketName": "Oromia - Hamde"
+      },
+      {
+        "id": 68,
+        "marketName": "Oromia - Harar"
+      },
+      {
+        "id": 287,
+        "marketName": "Oromia - Goma"
+      },
+      {
+        "id": 55,
+        "marketName": "Oromia - Sibusire"
+      },
+      {
+        "id": 397,
+        "marketName": "Oromia - Babicha"
+      },
+      {
+        "id": 260,
+        "marketName": "Oromia - bote"
+      },
+      {
+        "id": 93,
+        "marketName": "Oromia - Sokoru"
+      },
+      {
+        "id": 246,
+        "marketName": "Oromia - Agarfa"
+      },
+      {
+        "id": 74,
+        "marketName": "Oromia - Itaya"
+      },
+      {
+        "id": 39,
+        "marketName": "Oromia - Bishoftu"
+      },
+      {
+        "id": 293,
+        "marketName": "Oromia - Muke turi"
+      },
+      {
+        "id": 384,
+        "marketName": "Oromia - Ginir"
+      },
+      {
+        "id": 61,
+        "marketName": "Oromia - Bube"
+      },
+      {
+        "id": 403,
+        "marketName": "Oromia - Goro South West Shewa"
+      },
+      {
+        "id": 25,
+        "marketName": "Oromia - Bale Robe"
+      },
+      {
+        "id": 280,
+        "marketName": "Oromia - Obora"
+      },
+      {
+        "id": 45,
+        "marketName": "Oromia - Gojo"
+      },
+      {
+        "id": 390,
+        "marketName": "Oromia - Kokosaa"
+      },
+      {
+        "id": 12,
+        "marketName": "Oromia - Ambo Town"
+      },
+      {
+        "id": 252,
+        "marketName": "Oromia - Gechi"
+      },
+      {
+        "id": 80,
+        "marketName": "Oromia - Yabello"
+      },
+      {
+        "id": 239,
+        "marketName": "Oromia - Gobesa"
+      },
+      {
+        "id": 67,
+        "marketName": "Oromia - Harato"
+      },
+      {
+        "id": 286,
+        "marketName": "Oromia - Omo nada"
+      },
+      {
+        "id": 54,
+        "marketName": "Oromia - Burayu"
+      },
+      {
+        "id": 396,
+        "marketName": "Oromia - Sayo"
+      },
+      {
+        "id": 259,
+        "marketName": "Oromia - koka"
+      },
+      {
+        "id": 92,
+        "marketName": "Oromia - Agaro"
+      },
+      {
+        "id": 245,
+        "marketName": "Oromia - Sagure"
+      },
+      {
+        "id": 73,
+        "marketName": "Oromia - Robe Dida"
+      },
+      {
+        "id": 292,
+        "marketName": "Oromia - Mandida"
+      },
+      {
+        "id": 60,
+        "marketName": "Oromia - Najo"
+      },
+      {
+        "id": 402,
+        "marketName": "Oromia - Bantu"
+      },
+      {
+        "id": 200,
+        "marketName": "Oromia - Saka "
+      },
+      {
+        "id": 24,
+        "marketName": "Oromia - Meki "
+      },
+      {
+        "id": 266,
+        "marketName": "Oromia - Getema"
+      },
+      {
+        "id": 389,
+        "marketName": "Oromia - Asasa"
+      },
+      {
+        "id": 11,
+        "marketName": "Oromia - Weliso Town"
+      },
+      {
+        "id": 251,
+        "marketName": "Oromia - Moyale"
+      },
+      {
+        "id": 79,
+        "marketName": "Oromia - Bule Hora City Administration"
+      },
+      {
+        "id": 44,
+        "marketName": "Oromia - Olonkomi"
+      },
+      {
+        "id": 238,
+        "marketName": "Oromia - Kersa"
+      },
+      {
+        "id": 66,
+        "marketName": "Oromia - Tullu Wayu"
+      },
+      {
+        "id": 30,
+        "marketName": "Oromia - Shambu Town"
+      },
+      {
+        "id": 285,
+        "marketName": "Oromia - Chira"
+      },
+      {
+        "id": 53,
+        "marketName": "Oromia - Sabata "
+      },
+      {
+        "id": 395,
+        "marketName": "Oromia - Addis Alem Ejere"
+      },
+      {
+        "id": 258,
+        "marketName": "Oromia - Adulala"
+      },
+      {
+        "id": 91,
+        "marketName": "Oromia - Asandabo"
+      },
+      {
+        "id": 244,
+        "marketName": "Oromia - Ogolcho"
+      },
+      {
+        "id": 72,
+        "marketName": "Oromia - Bokoji"
+      },
+      {
+        "id": 291,
+        "marketName": "Oromia - Hambiso"
+      },
+      {
+        "id": 59,
+        "marketName": "Oromia - Gelila"
+      },
+      {
+        "id": 401,
+        "marketName": "Oromia - Tare"
+      },
+      {
+        "id": 265,
+        "marketName": "Oromia - Gute"
+      },
+      {
+        "id": 388,
+        "marketName": "Oromia - Kore"
+      },
+      {
+        "id": 10,
+        "marketName": "Oromia - Asella"
+      },
+      {
+        "id": 250,
+        "marketName": "Oromia - selka"
+      },
+      {
+        "id": 78,
+        "marketName": "Oromia - Negele Borana"
+      },
+      {
+        "id": 43,
+        "marketName": "Oromia - Bako"
+      },
+      {
+        "id": 237,
+        "marketName": "Oromia - Siltana"
+      },
+      {
+        "id": 65,
+        "marketName": "Oromia - Kombolcha-wellega"
+      },
+      {
+        "id": 284,
+        "marketName": "Oromia - Dimtu"
+      },
+      {
+        "id": 52,
+        "marketName": "Oromia - Kersa Malima"
+      },
+      {
+        "id": 394,
+        "marketName": "Oromia - Gudar"
+      },
+      {
+        "id": 257,
+        "marketName": "Oromia - walenchiti"
+      },
+      {
+        "id": 90,
+        "marketName": "Oromia - Metu"
+      },
+      {
+        "id": 243,
+        "marketName": "Oromia - Goleja"
+      },
+      {
+        "id": 71,
+        "marketName": "Oromia - Galamso"
+      },
+      {
+        "id": 290,
+        "marketName": "Oromia - Mikawa"
+      },
+      {
+        "id": 58,
+        "marketName": "Oromia - Goto 24"
+      },
+      {
+        "id": 400,
+        "marketName": "Oromia - Teji"
+      },
+      {
+        "id": 263,
+        "marketName": "Oromia - Ifa"
+      },
+      {
+        "id": 355,
+        "marketName": "Sidama - Kela"
+      },
+      {
+        "id": 236,
+        "marketName": "Sidama - Yirba"
+      },
+      {
+        "id": 361,
+        "marketName": "Sidama - Hantate "
+      },
+      {
+        "id": 360,
+        "marketName": "Sidama - Balela "
+      },
+      {
+        "id": 26,
+        "marketName": "Sidama - Hawassa "
+      },
+      {
+        "id": 359,
+        "marketName": "Sidama - Dore"
+      },
+      {
+        "id": 365,
+        "marketName": "Sidama - Haweela"
+      },
+      {
+        "id": 358,
+        "marketName": "Sidama - Sedetegna"
+      },
+      {
+        "id": 364,
+        "marketName": "Sidama - Bona 01"
+      },
+      {
+        "id": 111,
+        "marketName": "Sidama - Yaye"
+      },
+      {
+        "id": 357,
+        "marketName": "Sidama - Leku "
+      },
+      {
+        "id": 363,
+        "marketName": "Sidama - Kawado"
+      },
+      {
+        "id": 110,
+        "marketName": "Sidama - Daye"
+      },
+      {
+        "id": 356,
+        "marketName": "Sidama - Gudumalee"
+      },
+      {
+        "id": 362,
+        "marketName": "Sidama - Bokaso"
+      },
+      {
+        "id": 109,
+        "marketName": "Sidama - Aleta wondo"
+      },
+      {
+        "id": 116,
+        "marketName": "SNNP - Jinka"
+      },
+      {
+        "id": 342,
+        "marketName": "SNNP - Shinshicho "
+      },
+      {
+        "id": 28,
+        "marketName": "SNNP - Halaba"
+      },
+      {
+        "id": 102,
+        "marketName": "SNNP - Indebir"
+      },
+      {
+        "id": 123,
+        "marketName": "SNNP - Humbo"
+      },
+      {
+        "id": 329,
+        "marketName": "SNNP - Kela South Sodo"
+      },
+      {
+        "id": 108,
+        "marketName": "SNNP - Hadero"
+      },
+      {
+        "id": 348,
+        "marketName": "SNNP - Yergachefa"
+      },
+      {
+        "id": 335,
+        "marketName": "SNNP - Zaba"
+      },
+      {
+        "id": 115,
+        "marketName": "SNNP - Dalocha"
+      },
+      {
+        "id": 354,
+        "marketName": "SNNP - Gazer "
+      },
+      {
+        "id": 341,
+        "marketName": "SNNP - Doyogena "
+      },
+      {
+        "id": 27,
+        "marketName": "SNNP - Wolaita Soddo"
+      },
+      {
+        "id": 101,
+        "marketName": "SNNP - Butajira"
+      },
+      {
+        "id": 107,
+        "marketName": "SNNP - Durame"
+      },
+      {
+        "id": 347,
+        "marketName": "SNNP - Wonago"
+      },
+      {
+        "id": 334,
+        "marketName": "SNNP - Laha "
+      },
+      {
+        "id": 113,
+        "marketName": "SNNP - Gedeb"
+      },
+      {
+        "id": 114,
+        "marketName": "SNNP - Areka"
+      },
+      {
+        "id": 353,
+        "marketName": "SNNP - Guba "
+      },
+      {
+        "id": 340,
+        "marketName": "SNNP - Angacha "
+      },
+      {
+        "id": 100,
+        "marketName": "SNNP - Selamber"
+      },
+      {
+        "id": 121,
+        "marketName": "SNNP - Laska"
+      },
+      {
+        "id": 346,
+        "marketName": "SNNP - Bule"
+      },
+      {
+        "id": 333,
+        "marketName": "SNNP - Kemba "
+      },
+      {
+        "id": 19,
+        "marketName": "SNNP - Sawula"
+      },
+      {
+        "id": 112,
+        "marketName": "SNNP - Dilla"
+      },
+      {
+        "id": 352,
+        "marketName": "SNNP - Alemgebaya "
+      },
+      {
+        "id": 339,
+        "marketName": "SNNP - Bitena"
+      },
+      {
+        "id": 99,
+        "marketName": "SNNP - Arbaminchi"
+      },
+      {
+        "id": 119,
+        "marketName": "SNNP - Saja"
+      },
+      {
+        "id": 345,
+        "marketName": "SNNP - Bonosha "
+      },
+      {
+        "id": 18,
+        "marketName": "SNNP - Worabae"
+      },
+      {
+        "id": 332,
+        "marketName": "SNNP - Wacha "
+      },
+      {
+        "id": 351,
+        "marketName": "SNNP - Kerata "
+      },
+      {
+        "id": 338,
+        "marketName": "SNNP - Ufa Segno Gebeya"
+      },
+      {
+        "id": 118,
+        "marketName": "SNNP - Karat"
+      },
+      {
+        "id": 344,
+        "marketName": "SNNP - Habicho "
+      },
+      {
+        "id": 104,
+        "marketName": "SNNP - Shone"
+      },
+      {
+        "id": 17,
+        "marketName": "SNNP - Wolkite"
+      },
+      {
+        "id": 331,
+        "marketName": "SNNP - Bole"
+      },
+      {
+        "id": 350,
+        "marketName": "SNNP - Kibet "
+      },
+      {
+        "id": 337,
+        "marketName": "SNNP - Damot Gale Makesegno Gebeya"
+      },
+      {
+        "id": 343,
+        "marketName": "SNNP - Umacho "
+      },
+      {
+        "id": 103,
+        "marketName": "SNNP - Gimbicho"
+      },
+      {
+        "id": 16,
+        "marketName": "SNNP - Hosaena"
+      },
+      {
+        "id": 330,
+        "marketName": "SNNP - Gunechere"
+      },
+      {
+        "id": 349,
+        "marketName": "SNNP - Kochera"
+      },
+      {
+        "id": 336,
+        "marketName": "SNNP - Dede"
+      },
+      {
+        "id": 367,
+        "marketName": "South West - Gicha"
+      },
+      {
+        "id": 95,
+        "marketName": "South West - Mizan-aman"
+      },
+      {
+        "id": 122,
+        "marketName": "South West - Ameya"
+      },
+      {
+        "id": 366,
+        "marketName": "South West - Ufa "
+      },
+      {
+        "id": 372,
+        "marketName": "South West - Chida"
+      },
+      {
+        "id": 106,
+        "marketName": "South West - Chena"
+      },
+      {
+        "id": 371,
+        "marketName": "South West - Disa "
+      },
+      {
+        "id": 105,
+        "marketName": "South West - Bonga"
+      },
+      {
+        "id": 383,
+        "marketName": "South West - Jemu "
+      },
+      {
+        "id": 370,
+        "marketName": "South West - Esra Bali "
+      },
+      {
+        "id": 98,
+        "marketName": "South West - Gesa chere"
+      },
+      {
+        "id": 382,
+        "marketName": "South West - Bachuma "
+      },
+      {
+        "id": 369,
+        "marketName": "South West - Sez"
+      },
+      {
+        "id": 97,
+        "marketName": "South West - Tercha"
+      },
+      {
+        "id": 117,
+        "marketName": "South West - Masha"
+      },
+      {
+        "id": 368,
+        "marketName": "South West - Debere Work "
+      },
+      {
+        "id": 96,
+        "marketName": "South West - Biftu"
+      },
+      {
+        "id": 132,
+        "marketName": "Tigray - Shire-Endaselassie"
+      },
+      {
+        "id": 21,
+        "marketName": "Tigray - Maychew"
+      },
+      {
+        "id": 131,
+        "marketName": "Tigray - Sheraro"
+      },
+      {
+        "id": 20,
+        "marketName": "Tigray - Humera"
+      },
+      {
+        "id": 127,
+        "marketName": "Tigray - Enticho"
+      },
+      {
+        "id": 31,
+        "marketName": "Tigray - Mekele Town"
+      },
+      {
+        "id": 126,
+        "marketName": "Tigray - Abi-Adi"
+      },
+      {
+        "id": 37,
+        "marketName": "Tigray - Wukro"
+      },
+      {
+        "id": 125,
+        "marketName": "Tigray - Mehoni"
+      },
+      {
+        "id": 36,
+        "marketName": "Tigray - Hawzen"
+      },
+      {
+        "id": 134,
+        "marketName": "Tigray - Adi-Remets"
+      },
+      {
+        "id": 29,
+        "marketName": "Tigray - Aksum"
+      },
+      {
+        "id": 124,
+        "marketName": "Tigray - Alamata"
+      },
+      {
+        "id": 35,
+        "marketName": "Tigray - Adigrat"
+      },
+      {
+        "id": 133,
+        "marketName": "Tigray - Ketema Nigus"
+      }
+    ]
+  },
+  "/getMarketCrop/296/null": {
+    "status": 200,
+    "data": [
+      {
+        "id": 1,
+        "cropName": "Teff"
+      },
+      {
+        "id": 2,
+        "cropName": "Wheat"
+      },
+      {
+        "id": 3,
+        "cropName": "Maize"
+      },
+      {
+        "id": 4,
+        "cropName": "Sesame"
+      },
+      {
+        "id": 5,
+        "cropName": "Bean"
+      },
+      {
+        "id": 6,
+        "cropName": "Onion"
+      },
+      {
+        "id": 7,
+        "cropName": "Tomato"
+      },
+      {
+        "id": 8,
+        "cropName": "Potato"
+      },
+      {
+        "id": 15,
+        "cropName": "Garlic"
+      },
+      {
+        "id": 17,
+        "cropName": "Red Pepper"
+      }
+    ]
+  },
+  "/getMarketCropVariety/296/null": {
+    "status": 200,
+    "data": [
+      {
+        "marketPlaceId": 296,
+        "cropId": 1,
+        "id": 1,
+        "varietyName": "White Teff (Quintal)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 4,
+        "id": 4,
+        "varietyName": "White Sesame (Quintal)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 5,
+        "id": 6,
+        "varietyName": "White pea bean (Quintal)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 2,
+        "id": 8,
+        "varietyName": "White Wheat (Quintal)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 3,
+        "id": 9,
+        "varietyName": "White Maize (Quintal)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 6,
+        "id": 12,
+        "varietyName": "Onion (KG)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 7,
+        "id": 13,
+        "varietyName": "Tomato (KG)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 8,
+        "id": 14,
+        "varietyName": "Potato (KG)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 9,
+        "id": 15,
+        "varietyName": "Avocado (KG)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 10,
+        "id": 16,
+        "varietyName": "Mango (KG)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 11,
+        "id": 17,
+        "varietyName": "Raw Bananas (KG)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 12,
+        "id": 18,
+        "varietyName": "Malt Barely (Quintal)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 13,
+        "id": 19,
+        "varietyName": "Sorghum (Quintal)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 14,
+        "id": 20,
+        "varietyName": "Local Rice (Quintal)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 15,
+        "id": 21,
+        "varietyName": "Garlic (KG)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 16,
+        "id": 22,
+        "varietyName": "Soybean (Quintal)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 17,
+        "id": 23,
+        "varietyName": "Red Pepper (KG)"
+      },
+      {
+        "marketPlaceId": 296,
+        "cropId": 18,
+        "id": 24,
+        "varietyName": "Green Mung (Quintal)"
+      }
+    ]
+  },
+  "/getMarketTrend/296/1/null/null": {
+    "status": 200,
+    "data": [
+      {
+        "collectionDate": "2022/12/03",
+        "pmin": "4400.00",
+        "pmax": "5800.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2022/12/10",
+        "pmin": "4800.00",
+        "pmax": "5500.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2022/12/17",
+        "pmin": "4800.00",
+        "pmax": "5500.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2022/12/24",
+        "pmin": "4900.00",
+        "pmax": "5500.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2022/12/31",
+        "pmin": "5200.00",
+        "pmax": "5600.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/01/14",
+        "pmin": "5400.00",
+        "pmax": "6300.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/01/21",
+        "pmin": "5300.00",
+        "pmax": "5600.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/01/28",
+        "pmin": "5400.00",
+        "pmax": "5700.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/02/04",
+        "pmin": "5300.00",
+        "pmax": "5500.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/02/11",
+        "pmin": "5600.00",
+        "pmax": "6200.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/02/18",
+        "pmin": "5900.00",
+        "pmax": "6100.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/02/25",
+        "pmin": "6000.00",
+        "pmax": "6500.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/03/04",
+        "pmin": "6000.00",
+        "pmax": "6800.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/03/11",
+        "pmin": "6500.00",
+        "pmax": "7000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/03/18",
+        "pmin": "6200.00",
+        "pmax": "6700.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/03/25",
+        "pmin": "6700.00",
+        "pmax": "7400.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/04/01",
+        "pmin": "6500.00",
+        "pmax": "7000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/07/22",
+        "pmin": "8000.00",
+        "pmax": "8800.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/07/22",
+        "pmin": "8300.00",
+        "pmax": "8800.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/07/22",
+        "pmin": "8500.00",
+        "pmax": "9000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2023/07/29",
+        "pmin": "8500.00",
+        "pmax": "9100.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2025/08/30",
+        "pmin": "9500.00",
+        "pmax": "11500.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2025/09/06",
+        "pmin": "10500.00",
+        "pmax": "12000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2025/09/13",
+        "pmin": "10000.00",
+        "pmax": "11000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2025/09/20",
+        "pmin": "9500.00",
+        "pmax": "12000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2025/10/04",
+        "pmin": "9000.00",
+        "pmax": "10500.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2025/10/11",
+        "pmin": "9500.00",
+        "pmax": "11000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2025/10/18",
+        "pmin": "9500.00",
+        "pmax": "11000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2025/10/25",
+        "pmin": "10000.00",
+        "pmax": "12000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2025/11/01",
+        "pmin": "11000.00",
+        "pmax": "12000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2026/07/11",
+        "pmin": "11500.00",
+        "pmax": "13000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      },
+      {
+        "collectionDate": "2026/07/18",
+        "pmin": "11000.00",
+        "pmax": "14000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00"
+      }
+    ]
+  },
+  "/getMedianData/296/1/null/null": {
+    "status": 200,
+    "data": [
+      {
+        "id": 1,
+        "transactionType": "Producer Min",
+        "meanPrice": "7475.00",
+        "medianPrice": "6600.00",
+        "modePrice": "9500.00",
+        "rangePrice": "7100.00"
+      },
+      {
+        "id": 2,
+        "transactionType": "Producer Max",
+        "meanPrice": "8450.00",
+        "medianPrice": "7200.00",
+        "modePrice": "5500.00",
+        "rangePrice": "8500.00"
+      }
+    ]
+  },
+  "/getMarketTable/'296'/'1'/null/null/null": {
+    "status": 200,
+    "data": [
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "4400.00",
+        "pmax": "5800.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2022-12-03"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "4800.00",
+        "pmax": "5500.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2022-12-10"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "4800.00",
+        "pmax": "5500.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2022-12-17"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "4900.00",
+        "pmax": "5500.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2022-12-24"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "5200.00",
+        "pmax": "5600.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2022-12-31"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "5400.00",
+        "pmax": "6300.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-01-14"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "5300.00",
+        "pmax": "5600.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-01-21"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "5400.00",
+        "pmax": "5700.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-01-28"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "5300.00",
+        "pmax": "5500.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-02-04"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "5600.00",
+        "pmax": "6200.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-02-11"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "5900.00",
+        "pmax": "6100.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-02-18"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "6000.00",
+        "pmax": "6500.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-02-25"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "6000.00",
+        "pmax": "6800.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-03-04"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "6500.00",
+        "pmax": "7000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Under",
+        "collectionDate": "2023-03-11"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "6200.00",
+        "pmax": "6700.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-03-18"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "6700.00",
+        "pmax": "7400.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-03-25"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "6500.00",
+        "pmax": "7000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2023-04-01"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "8000.00",
+        "pmax": "8800.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Under",
+        "collectionDate": "2023-07-22"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "8300.00",
+        "pmax": "8800.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Under",
+        "collectionDate": "2023-07-22"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "8500.00",
+        "pmax": "9000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Under",
+        "collectionDate": "2023-07-22"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "8500.00",
+        "pmax": "9100.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Under",
+        "collectionDate": "2023-07-29"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "9500.00",
+        "pmax": "11500.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2025-08-30"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "10500.00",
+        "pmax": "12000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2025-09-06"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "10000.00",
+        "pmax": "11000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Under",
+        "collectionDate": "2025-09-13"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "9500.00",
+        "pmax": "12000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2025-09-20"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "9000.00",
+        "pmax": "10500.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2025-10-04"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "9500.00",
+        "pmax": "11000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2025-10-11"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "9500.00",
+        "pmax": "11000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2025-10-18"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "10000.00",
+        "pmax": "12000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Under",
+        "collectionDate": "2025-10-25"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "11000.00",
+        "pmax": "12000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Under",
+        "collectionDate": "2025-11-01"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "11500.00",
+        "pmax": "13000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2026-07-11"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "11000.00",
+        "pmax": "14000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "volume": "Sufficient",
+        "collectionDate": "2026-07-18"
+      }
+    ]
+  },
+  "/getCurrentMarketData/296/null": {
+    "status": 200,
+    "data": [
+      {
+        "cName": "Teff",
+        "varietyName": "White Teff (Quintal)",
+        "pmin": "11500.00",
+        "pmax": "13000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Sufficient"
+      },
+      {
+        "cName": "Sesame",
+        "varietyName": "White Sesame (Quintal)",
+        "pmin": "10000.00",
+        "pmax": "10000.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Under"
+      },
+      {
+        "cName": "Bean",
+        "varietyName": "White pea bean (Quintal)",
+        "pmin": "8000.00",
+        "pmax": "8500.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Under"
+      },
+      {
+        "cName": "Wheat",
+        "varietyName": "White Wheat (Quintal)",
+        "pmin": "6500.00",
+        "pmax": "6800.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Sufficient"
+      },
+      {
+        "cName": "Maize",
+        "varietyName": "White Maize (Quintal)",
+        "pmin": "3000.00",
+        "pmax": "3500.00",
+        "rmin": "3200.00",
+        "rmax": "3600.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Sufficient"
+      },
+      {
+        "cName": "Onion",
+        "varietyName": "Onion (KG)",
+        "pmin": "18.00",
+        "pmax": "25.00",
+        "rmin": "30.00",
+        "rmax": "40.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Sufficient"
+      },
+      {
+        "cName": "Tomato",
+        "varietyName": "Tomato (KG)",
+        "pmin": "0.00",
+        "pmax": "0.00",
+        "rmin": "70.00",
+        "rmax": "70.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Under"
+      },
+      {
+        "cName": "Potato",
+        "varietyName": "Potato (KG)",
+        "pmin": "30.00",
+        "pmax": "40.00",
+        "rmin": "35.00",
+        "rmax": "45.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Sufficient"
+      },
+      {
+        "cName": "Garlic",
+        "varietyName": "Garlic (KG)",
+        "pmin": "90.00",
+        "pmax": "130.00",
+        "rmin": "110.00",
+        "rmax": "150.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Under"
+      },
+      {
+        "cName": "Red Pepper",
+        "varietyName": "Red Pepper (KG)",
+        "pmin": "410.00",
+        "pmax": "620.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "volume": "Sufficient"
+      }
+    ]
+  },
+  "/getMarketComparison/'296,217'/1/null": {
+    "status": 200,
+    "data": [
+      {
+        "marketPlace": "Shewa Robit Kebele 02  Gebeya",
+        "varietyName": "White Teff",
+        "pmin": "0.00",
+        "pmax": "0.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "105.00",
+        "rmax": "110.00",
+        "collectionDate": "30 Apr 24"
+      },
+      {
+        "marketPlace": "Addis Alem",
+        "varietyName": "White Teff",
+        "pmin": "11500.00",
+        "pmax": "13000.00",
+        "wmin": "0.00",
+        "wmax": "0.00",
+        "rmin": "0.00",
+        "rmax": "0.00",
+        "collectionDate": "11 Jul 26"
+      }
+    ]
+  }
+}

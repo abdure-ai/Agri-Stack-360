@@ -1,0 +1,13 @@
+{
+  "last_retrained_at": "2026-10-07T02:12:28.152236",
+  "latest_data_date": "2026-10-05",
+  "total_observations": 20416,
+  "series_count": 97,
+  "active_model": "LightGBM_Quantile_Regression",
+  "artifacts": [
+    "models/lgbm/lgbm_q10.pkl",
+    "models/lgbm/lgbm_q50.pkl",
+    "models/lgbm/lgbm_q90.pkl",
+    "models/lgbm/lgbm_meta.pkl"
+  ]
+}

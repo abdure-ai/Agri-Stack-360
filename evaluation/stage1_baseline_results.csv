@@ -1,0 +1,97 @@
+crop,region,data_start,n_train_weeks,n_test_weeks,n_markets,stage2_eligible,mape_seasonal_naive,mape_rolling4w
+Avocado,Amhara,2022-12-03,161,32,39,False,57.17,10.78
+Avocado,Oromia,2022-12-19,158,33,58,False,33.35,8.91
+Avocado,SNNP,2023-01-14,155,32,41,False,22.54,10.66
+Avocado,Sidama,2023-01-25,151,32,11,False,315.58,36.23
+Avocado,South West,2023-01-10,155,29,11,False,39.21,24.79
+Avocado,Tigray,2023-08-19,117,23,5,False,40.07,27.35
+Banana,Amhara,2022-12-03,161,33,75,False,35.5,17.19
+Banana,Oromia,2022-12-17,159,33,104,False,29.32,13.17
+Banana,SNNP,2023-01-13,155,33,45,False,17.23,5.49
+Banana,Sidama,2023-01-18,148,33,11,False,20.4,9.86
+Banana,South West,2023-01-10,154,29,11,False,36.53,17.36
+Banana,Tigray,2024-01-22,54,19,3,False,34.65,11.36
+Bean,Amhara,2019-04-05,68,29,15,True,10.67,4.76
+Bean,Oromia,2019-05-11,225,33,40,True,21.58,11.57
+Bean,SNNP,2019-04-20,166,33,25,True,30.1,11.61
+Bean,Sidama,2019-04-22,118,33,11,True,15.6,12.63
+Bean,South West,2019-10-04,43,29,11,True,425.71,428.43
+Garlic,Amhara,2022-12-03,161,33,82,False,112.21,25.05
+Garlic,Oromia,2022-12-13,159,33,122,False,54.48,7.97
+Garlic,SNNP,2023-01-13,155,33,47,False,63.72,17.82
+Garlic,Sidama,2023-01-18,154,33,15,False,54.04,7.5
+Garlic,South West,2023-01-10,155,31,17,False,52.87,9.76
+Garlic,Tigray,2023-09-02,122,32,12,False,84.18,21.53
+Green Mung,SNNP,2023-02-04,64,25,9,False,35.98,24.08
+Local Rice,Amhara,2022-12-03,161,33,64,False,11.01,6.82
+Local Rice,Oromia,2022-12-17,159,33,57,False,6.12,7.52
+Local Rice,SNNP,2023-01-16,154,33,26,False,14.98,14.13
+Local Rice,Sidama,2023-02-07,145,31,9,False,348.03,311.09
+Local Rice,South West,2023-01-17,154,33,15,False,11.75,10.14
+Maize,Amhara,2019-03-30,353,33,83,True,31.12,15.89
+Maize,Oromia,2019-05-11,347,33,124,True,30.81,17.44
+Maize,SNNP,2019-04-20,350,33,49,True,34.29,25.59
+Maize,Sidama,2019-04-22,349,33,16,True,31.37,21.33
+Maize,South West,2019-10-26,323,31,17,True,32.7,18.88
+Maize,Tigray,2019-03-30,245,32,14,True,36.3,19.88
+Malt Barely,Amhara,2022-12-03,161,32,31,False,16.22,4.64
+Malt Barely,Oromia,2022-12-19,158,33,112,False,7.02,1.63
+Malt Barely,SNNP,2023-01-21,154,33,31,False,6.85,7.83
+Malt Barely,Sidama,2023-01-18,153,32,10,False,11.68,18.72
+Malt Barely,South West,2023-01-10,154,33,12,False,304.62,255.28
+Mango,Amhara,2022-12-03,157,32,51,False,35.28,19.26
+Mango,Oromia,2022-12-20,158,33,56,False,25.13,15.34
+Mango,SNNP,2023-01-16,154,33,33,False,33.62,28.8
+Mango,Sidama,2023-03-13,131,19,6,False,28.9,24.99
+Mango,South West,2023-01-23,105,17,8,False,50.02,29.39
+Onion,Amhara,2022-12-03,161,33,83,False,232.32,50.37
+Onion,Oromia,2022-12-17,159,33,126,False,35.42,38.52
+Onion,SNNP,2022-12-26,157,33,49,False,60.63,39.96
+Onion,Sidama,2023-01-16,154,33,16,False,39.58,38.31
+Onion,South West,2023-01-10,155,33,17,False,39.87,34.81
+Onion,Tigray,2023-08-28,122,32,12,False,45.17,43.49
+Pineapple,Oromia,2024-06-04,82,33,8,False,32.96,7.46
+Pineapple,SNNP,2024-12-21,54,32,7,False,56.31,33.14
+Pineapple,South West,2024-12-19,45,21,2,False,64.81,82.8
+Potato,Amhara,2022-12-03,161,32,84,False,74.24,31.12
+Potato,Oromia,2022-12-17,159,33,123,False,16.26,15.9
+Potato,SNNP,2023-01-13,155,33,49,False,11.31,16.07
+Potato,Sidama,2023-01-16,154,33,16,False,14.82,22.06
+Potato,South West,2023-01-16,154,29,17,False,21.08,14.93
+Potato,Tigray,2023-08-26,123,32,12,False,10.4,5.2
+Red Pepper,Amhara,2022-12-03,161,33,80,False,32.45,11.8
+Red Pepper,Oromia,2022-12-17,159,33,113,False,30.77,8.85
+Red Pepper,SNNP,2023-01-16,154,33,37,False,31.37,14.56
+Red Pepper,Sidama,2023-01-16,154,32,12,False,31.78,11.74
+Red Pepper,South West,2023-01-23,134,33,12,False,40.45,10.59
+Red Pepper,Tigray,2023-09-02,122,32,12,False,29.58,12.15
+Sesame,Amhara,2019-04-02,328,28,18,True,27.88,13.59
+Sesame,Oromia,2019-05-11,140,32,19,True,22.25,12.6
+Sesame,SNNP,2021-11-01,43,30,8,True,132.51,142.97
+Sorghum,Amhara,2022-12-03,161,32,51,False,8.42,7.35
+Sorghum,Oromia,2022-12-19,158,33,97,False,13.23,6.6
+Sorghum,SNNP,2023-01-16,154,32,36,False,21.78,15.57
+Sorghum,Sidama,2023-05-25,56,19,2,False,40.02,22.02
+Sorghum,South West,2023-01-10,155,33,15,False,18.65,32.4
+Sorghum,Tigray,2023-09-02,122,32,11,False,14.62,10.65
+Soybean,Oromia,2022-12-19,148,33,37,False,17.93,9.38
+Soybean,SNNP,2023-05-09,77,32,11,False,59.29,62.05
+Soybean,Sidama,2023-07-27,68,32,8,False,25.92,23.18
+Teff,Amhara,2019-03-30,353,33,83,True,2.96,3.51
+Teff,Oromia,2019-05-08,347,33,127,True,3.83,6.17
+Teff,SNNP,2019-04-20,350,33,49,True,5.23,7.89
+Teff,Sidama,2019-04-22,349,32,15,True,6.31,4.0
+Teff,South West,2019-10-04,326,29,17,True,13.24,9.78
+Teff,Tigray,2019-03-30,244,32,15,True,3.71,6.16
+Tomato,Amhara,2022-12-03,161,33,83,False,112.92,34.86
+Tomato,Oromia,2022-12-17,159,33,126,False,25.1,24.71
+Tomato,SNNP,2023-01-13,155,33,49,False,31.1,28.41
+Tomato,Sidama,2023-01-16,154,33,16,False,25.34,20.52
+Tomato,South West,2023-01-16,154,29,17,False,30.16,23.2
+Tomato,Tigray,2023-08-28,122,32,12,False,33.13,34.95
+Wheat,Amhara,2019-03-30,353,33,78,True,11.75,4.35
+Wheat,Oromia,2019-05-11,347,33,124,True,16.54,5.83
+Wheat,SNNP,2019-04-20,350,33,49,True,19.64,10.12
+Wheat,Sidama,2019-04-22,348,32,14,True,16.63,12.21
+Wheat,South West,2019-10-26,322,33,15,True,26.13,24.4
+Wheat,Tigray,2019-03-30,244,32,15,True,15.62,12.5

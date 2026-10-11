@@ -1,0 +1,7 @@
+key,crop,model_label,name_en,name_am,name_om,name_ti,pathogen,is_disease
+leaf_rust,wheat,Brown Rust,Leaf rust (brown rust),የቅጠል ዋግ,Waagii baalaa (waagii magaalaa),ዋግ ቆጽሊ (ቡናዊ ዋግ),Puccinia triticina,1
+yellow_rust,wheat,Yellow Rust,Stripe rust (yellow rust),ቢጫ ዋግ,Waagii keelloo (waagii sararaa),ብጫ ዋግ,Puccinia striiformis f. sp. tritici,1
+powdery_mildew,wheat,Powdery Mildew,Powdery mildew,ዱቄታማ ሻጋታ,Daakuu adii,ሓሙዳዊ ሻጋታ,Blumeria graminis f. sp. tritici,1
+septoria_tritici_blotch,wheat,Septoria,Septoria tritici blotch,ሴፕቶሪያ,Septooriyaa,ሴፕቶርያ,Zymoseptoria tritici,1
+healthy,wheat,Healthy,Healthy wheat,ጤናማ ስንዴ,Qamadii fayyaa qabu,ጥዑይ ስርናይ,,0
+invalid_image,wheat,Invalid,Not a clear wheat leaf photo,ግልጽ ያልሆነ ፎቶ,Suuraa baala qamadii ifaa hin taane,ንጹር ዘይኮነ ስእሊ ቆጽሊ ስርናይ,,0

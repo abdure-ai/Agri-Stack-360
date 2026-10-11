@@ -1,0 +1,32 @@
+# ── Secrets (never commit) ───────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ── Platform database: users, phone numbers, password hashes, encrypted AI keys ──
+agri_platform.db
+agri_platform.db-*
+*.db-shm
+*.db-wal
+*.db-journal
+
+# ── People's photos and data ─────────────────────────────────────────────────
+data/uploads/
+data/training/
+
+# ── Environments, builds, caches, logs ───────────────────────────────────────
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+frontend/dist/
+logs/
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

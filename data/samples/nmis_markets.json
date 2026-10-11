@@ -1,0 +1,1238 @@
+[
+  {
+    "id": 327,
+    "marketName": "Amhara - Amba Georgies"
+  },
+  {
+    "id": 229,
+    "marketName": "Amhara - Enjbara"
+  },
+  {
+    "id": 378,
+    "marketName": "Amhara - Yeduha"
+  },
+  {
+    "id": 216,
+    "marketName": "Amhara - Arerti Gebeya "
+  },
+  {
+    "id": 314,
+    "marketName": "Amhara - Kimer Dingay"
+  },
+  {
+    "id": 301,
+    "marketName": "Amhara - Fendika"
+  },
+  {
+    "id": 203,
+    "marketName": "Amhara - Shawura Gebeya"
+  },
+  {
+    "id": 320,
+    "marketName": "Amhara - Kelala"
+  },
+  {
+    "id": 222,
+    "marketName": "Amhara - Mekane Selam gebeya"
+  },
+  {
+    "id": 209,
+    "marketName": "Amhara - Dejen Gebeya"
+  },
+  {
+    "id": 1,
+    "marketName": "Amhara - Bahir Dar kebele 04"
+  },
+  {
+    "id": 307,
+    "marketName": "Amhara - Deneba"
+  },
+  {
+    "id": 326,
+    "marketName": "Amhara - Aykel"
+  },
+  {
+    "id": 228,
+    "marketName": "Amhara - Dangla "
+  },
+  {
+    "id": 377,
+    "marketName": "Amhara - Lumame"
+  },
+  {
+    "id": 215,
+    "marketName": "Amhara - Alem Ketema Kedame Gebeya"
+  },
+  {
+    "id": 313,
+    "marketName": "Amhara - Ebenat Ketema"
+  },
+  {
+    "id": 202,
+    "marketName": "Amhara - Debark Gebeya"
+  },
+  {
+    "id": 319,
+    "marketName": "Amhara - Deansa"
+  },
+  {
+    "id": 221,
+    "marketName": "Amhara - tenta Gebeya"
+  },
+  {
+    "id": 300,
+    "marketName": "Amhara - kelaji"
+  },
+  {
+    "id": 208,
+    "marketName": "Amhara - Estie Mekane Yesus Gebeya "
+  },
+  {
+    "id": 32,
+    "marketName": "Amhara - Gondar Kedamie  Gebeya "
+  },
+  {
+    "id": 306,
+    "marketName": "Amhara - Sela dengay"
+  },
+  {
+    "id": 325,
+    "marketName": "Amhara - Sanja"
+  },
+  {
+    "id": 227,
+    "marketName": "Amhara - Lalibela Ketema Gebeya"
+  },
+  {
+    "id": 376,
+    "marketName": "Amhara - Yejube"
+  },
+  {
+    "id": 214,
+    "marketName": "Amhara - Debere Birhan Kebele 08 Gebeya"
+  },
+  {
+    "id": 6,
+    "marketName": "Amhara - Debre Markos Huseta Gebeya"
+  },
+  {
+    "id": 312,
+    "marketName": "Amhara - Dera Amebesamie"
+  },
+  {
+    "id": 233,
+    "marketName": "Amhara - Bati Segno Gebeya"
+  },
+  {
+    "id": 201,
+    "marketName": "Amhara - Dabat Gebeya"
+  },
+  {
+    "id": 220,
+    "marketName": "Amhara - kombolcha kebele 03 Gebeya"
+  },
+  {
+    "id": 299,
+    "marketName": "Amhara - Liben"
+  },
+  {
+    "id": 318,
+    "marketName": "Amhara - Akeseta"
+  },
+  {
+    "id": 207,
+    "marketName": "Amhara - Wereta Arada Gebeya "
+  },
+  {
+    "id": 305,
+    "marketName": "Amhara - Meragna"
+  },
+  {
+    "id": 324,
+    "marketName": "Amhara - Delgie"
+  },
+  {
+    "id": 226,
+    "marketName": "Amhara - Meresa  Gebeya"
+  },
+  {
+    "id": 375,
+    "marketName": "Amhara - Amber"
+  },
+  {
+    "id": 213,
+    "marketName": "Amhara - Fenot selam Gebeya"
+  },
+  {
+    "id": 5,
+    "marketName": "Amhara - Debere Elias Gebeya"
+  },
+  {
+    "id": 311,
+    "marketName": "Amhara - Addis Zemen"
+  },
+  {
+    "id": 232,
+    "marketName": "Amhara - Kemise Hamus Gebeya "
+  },
+  {
+    "id": 381,
+    "marketName": "Amhara - Merto Lemariam"
+  },
+  {
+    "id": 219,
+    "marketName": "Amhara - Debresina Gebeya"
+  },
+  {
+    "id": 298,
+    "marketName": "Amhara - Durbete"
+  },
+  {
+    "id": 317,
+    "marketName": "Amhara - Salmen"
+  },
+  {
+    "id": 206,
+    "marketName": "Amhara - Wegeda Gebeya"
+  },
+  {
+    "id": 304,
+    "marketName": "Amhara - Zemereo"
+  },
+  {
+    "id": 323,
+    "marketName": "Amhara - Chuahit"
+  },
+  {
+    "id": 225,
+    "marketName": "Amhara - Woldia Gebeya"
+  },
+  {
+    "id": 374,
+    "marketName": "Amhara - Kuye"
+  },
+  {
+    "id": 212,
+    "marketName": "Amhara - Merawi Gebeya"
+  },
+  {
+    "id": 4,
+    "marketName": "Amhara - Bichena Gebeya"
+  },
+  {
+    "id": 310,
+    "marketName": "Amhara - Kobo ketema"
+  },
+  {
+    "id": 23,
+    "marketName": "Amhara - Kokit  Metema Gebeya"
+  },
+  {
+    "id": 231,
+    "marketName": "Amhara - Sekota makesego Gebeya"
+  },
+  {
+    "id": 380,
+    "marketName": "Amhara - Gunde woyin"
+  },
+  {
+    "id": 218,
+    "marketName": "Amhara - Mehal Meda"
+  },
+  {
+    "id": 297,
+    "marketName": "Amhara - Mehal Genet Gebeya"
+  },
+  {
+    "id": 316,
+    "marketName": "Amhara - Hayike"
+  },
+  {
+    "id": 205,
+    "marketName": "Amhara - Debretabor Segno Gebeya "
+  },
+  {
+    "id": 303,
+    "marketName": "Amhara - Shola gebeya"
+  },
+  {
+    "id": 322,
+    "marketName": "Amhara - Degolo"
+  },
+  {
+    "id": 224,
+    "marketName": "Amhara - Desse Robit Gebaya"
+  },
+  {
+    "id": 373,
+    "marketName": "Amhara - Amanuel"
+  },
+  {
+    "id": 211,
+    "marketName": "Amhara - Dembecha Gebeya"
+  },
+  {
+    "id": 3,
+    "marketName": "Amhara - Shindie Gebeya"
+  },
+  {
+    "id": 309,
+    "marketName": "Amhara - Enewari"
+  },
+  {
+    "id": 22,
+    "marketName": "Amhara - Adet Gebeya "
+  },
+  {
+    "id": 328,
+    "marketName": "Amhara - Genda wuha"
+  },
+  {
+    "id": 230,
+    "marketName": "Amhara - Chagini"
+  },
+  {
+    "id": 379,
+    "marketName": "Amhara - Debere Work"
+  },
+  {
+    "id": 217,
+    "marketName": "Amhara - Shewa Robit Kebele 02  Gebeya"
+  },
+  {
+    "id": 296,
+    "marketName": "Amhara - Addis Alem"
+  },
+  {
+    "id": 315,
+    "marketName": "Amhara - Nefas Mewucha"
+  },
+  {
+    "id": 204,
+    "marketName": "Amhara - Kola Diba"
+  },
+  {
+    "id": 302,
+    "marketName": "Amhara - Ginager"
+  },
+  {
+    "id": 321,
+    "marketName": "Amhara - Weyin Amba"
+  },
+  {
+    "id": 223,
+    "marketName": "Amhara - Wereyilu Segno Gebeya "
+  },
+  {
+    "id": 210,
+    "marketName": "Amhara - Motta Gebeya"
+  },
+  {
+    "id": 2,
+    "marketName": "Amhara - Bure Woreda"
+  },
+  {
+    "id": 308,
+    "marketName": "Amhara - Molalalie"
+  },
+  {
+    "id": 262,
+    "marketName": "Oromia - Uke"
+  },
+  {
+    "id": 391,
+    "marketName": "Oromia - Adaba"
+  },
+  {
+    "id": 57,
+    "marketName": "Oromia - Haro Limu"
+  },
+  {
+    "id": 41,
+    "marketName": "Oromia - Batu"
+  },
+  {
+    "id": 295,
+    "marketName": "Oromia - Hoja Dure"
+  },
+  {
+    "id": 8,
+    "marketName": "Oromia - Shashemene Town"
+  },
+  {
+    "id": 248,
+    "marketName": "Oromia - Dinsho"
+  },
+  {
+    "id": 76,
+    "marketName": "Oromia - Negelle Arsi"
+  },
+  {
+    "id": 282,
+    "marketName": "Oromia - Sakele"
+  },
+  {
+    "id": 397,
+    "marketName": "Oromia - Babicha"
+  },
+  {
+    "id": 235,
+    "marketName": "Oromia - Sheno"
+  },
+  {
+    "id": 63,
+    "marketName": "Oromia - Kake"
+  },
+  {
+    "id": 82,
+    "marketName": "Oromia - Gasara"
+  },
+  {
+    "id": 384,
+    "marketName": "Oromia - Ginir"
+  },
+  {
+    "id": 47,
+    "marketName": "Oromia - Ijaji"
+  },
+  {
+    "id": 14,
+    "marketName": "Oromia - Gimbi Town"
+  },
+  {
+    "id": 254,
+    "marketName": "Oromia - Ilu harer"
+  },
+  {
+    "id": 33,
+    "marketName": "Oromia - Bedele"
+  },
+  {
+    "id": 288,
+    "marketName": "Oromia - Yabu"
+  },
+  {
+    "id": 403,
+    "marketName": "Oromia - Goro South West Shewa"
+  },
+  {
+    "id": 241,
+    "marketName": "Oromia - Huruta"
+  },
+  {
+    "id": 69,
+    "marketName": "Oromia - Deder"
+  },
+  {
+    "id": 261,
+    "marketName": "Oromia - Metehara"
+  },
+  {
+    "id": 94,
+    "marketName": "Oromia - Wayu"
+  },
+  {
+    "id": 390,
+    "marketName": "Oromia - Kokosaa"
+  },
+  {
+    "id": 56,
+    "marketName": "Oromia - Gidda Ayana"
+  },
+  {
+    "id": 40,
+    "marketName": "Oromia - Mojo"
+  },
+  {
+    "id": 294,
+    "marketName": "Oromia - Sululta"
+  },
+  {
+    "id": 7,
+    "marketName": "Oromia - Adama City"
+  },
+  {
+    "id": 247,
+    "marketName": "Oromia - Goba"
+  },
+  {
+    "id": 75,
+    "marketName": "Oromia - Sire"
+  },
+  {
+    "id": 281,
+    "marketName": "Oromia - Dedu"
+  },
+  {
+    "id": 396,
+    "marketName": "Oromia - Sayo"
+  },
+  {
+    "id": 234,
+    "marketName": "Oromia - Fiche"
+  },
+  {
+    "id": 62,
+    "marketName": "Oromia - Dambi Dolo"
+  },
+  {
+    "id": 81,
+    "marketName": "Oromia - Dalo Sebro"
+  },
+  {
+    "id": 46,
+    "marketName": "Oromia - Ginci"
+  },
+  {
+    "id": 13,
+    "marketName": "Oromia - Jimma Town"
+  },
+  {
+    "id": 253,
+    "marketName": "Oromia - Kone"
+  },
+  {
+    "id": 287,
+    "marketName": "Oromia - Goma"
+  },
+  {
+    "id": 402,
+    "marketName": "Oromia - Bantu"
+  },
+  {
+    "id": 240,
+    "marketName": "Oromia - Hamde"
+  },
+  {
+    "id": 68,
+    "marketName": "Oromia - Harar"
+  },
+  {
+    "id": 260,
+    "marketName": "Oromia - bote"
+  },
+  {
+    "id": 93,
+    "marketName": "Oromia - Sokoru"
+  },
+  {
+    "id": 389,
+    "marketName": "Oromia - Asasa"
+  },
+  {
+    "id": 55,
+    "marketName": "Oromia - Sibusire"
+  },
+  {
+    "id": 39,
+    "marketName": "Oromia - Bishoftu"
+  },
+  {
+    "id": 293,
+    "marketName": "Oromia - Muke turi"
+  },
+  {
+    "id": 246,
+    "marketName": "Oromia - Agarfa"
+  },
+  {
+    "id": 74,
+    "marketName": "Oromia - Itaya"
+  },
+  {
+    "id": 25,
+    "marketName": "Oromia - Bale Robe"
+  },
+  {
+    "id": 280,
+    "marketName": "Oromia - Obora"
+  },
+  {
+    "id": 395,
+    "marketName": "Oromia - Addis Alem Ejere"
+  },
+  {
+    "id": 61,
+    "marketName": "Oromia - Bube"
+  },
+  {
+    "id": 80,
+    "marketName": "Oromia - Yabello"
+  },
+  {
+    "id": 45,
+    "marketName": "Oromia - Gojo"
+  },
+  {
+    "id": 12,
+    "marketName": "Oromia - Ambo Town"
+  },
+  {
+    "id": 252,
+    "marketName": "Oromia - Gechi"
+  },
+  {
+    "id": 286,
+    "marketName": "Oromia - Omo nada"
+  },
+  {
+    "id": 401,
+    "marketName": "Oromia - Tare"
+  },
+  {
+    "id": 239,
+    "marketName": "Oromia - Gobesa"
+  },
+  {
+    "id": 67,
+    "marketName": "Oromia - Harato"
+  },
+  {
+    "id": 259,
+    "marketName": "Oromia - koka"
+  },
+  {
+    "id": 92,
+    "marketName": "Oromia - Agaro"
+  },
+  {
+    "id": 388,
+    "marketName": "Oromia - Kore"
+  },
+  {
+    "id": 54,
+    "marketName": "Oromia - Burayu"
+  },
+  {
+    "id": 292,
+    "marketName": "Oromia - Mandida"
+  },
+  {
+    "id": 245,
+    "marketName": "Oromia - Sagure"
+  },
+  {
+    "id": 73,
+    "marketName": "Oromia - Robe Dida"
+  },
+  {
+    "id": 24,
+    "marketName": "Oromia - Meki "
+  },
+  {
+    "id": 266,
+    "marketName": "Oromia - Getema"
+  },
+  {
+    "id": 394,
+    "marketName": "Oromia - Gudar"
+  },
+  {
+    "id": 60,
+    "marketName": "Oromia - Najo"
+  },
+  {
+    "id": 200,
+    "marketName": "Oromia - Saka "
+  },
+  {
+    "id": 79,
+    "marketName": "Oromia - Bule Hora City Administration"
+  },
+  {
+    "id": 44,
+    "marketName": "Oromia - Olonkomi"
+  },
+  {
+    "id": 11,
+    "marketName": "Oromia - Weliso Town"
+  },
+  {
+    "id": 251,
+    "marketName": "Oromia - Moyale"
+  },
+  {
+    "id": 30,
+    "marketName": "Oromia - Shambu Town"
+  },
+  {
+    "id": 285,
+    "marketName": "Oromia - Chira"
+  },
+  {
+    "id": 400,
+    "marketName": "Oromia - Teji"
+  },
+  {
+    "id": 238,
+    "marketName": "Oromia - Kersa"
+  },
+  {
+    "id": 66,
+    "marketName": "Oromia - Tullu Wayu"
+  },
+  {
+    "id": 258,
+    "marketName": "Oromia - Adulala"
+  },
+  {
+    "id": 91,
+    "marketName": "Oromia - Asandabo"
+  },
+  {
+    "id": 387,
+    "marketName": "Oromia - Beltu"
+  },
+  {
+    "id": 53,
+    "marketName": "Oromia - Sabata "
+  },
+  {
+    "id": 291,
+    "marketName": "Oromia - Hambiso"
+  },
+  {
+    "id": 244,
+    "marketName": "Oromia - Ogolcho"
+  },
+  {
+    "id": 72,
+    "marketName": "Oromia - Bokoji"
+  },
+  {
+    "id": 265,
+    "marketName": "Oromia - Gute"
+  },
+  {
+    "id": 393,
+    "marketName": "Oromia - Silki Amba"
+  },
+  {
+    "id": 59,
+    "marketName": "Oromia - Gelila"
+  },
+  {
+    "id": 78,
+    "marketName": "Oromia - Negele Borana"
+  },
+  {
+    "id": 43,
+    "marketName": "Oromia - Bako"
+  },
+  {
+    "id": 10,
+    "marketName": "Oromia - Asella"
+  },
+  {
+    "id": 250,
+    "marketName": "Oromia - selka"
+  },
+  {
+    "id": 284,
+    "marketName": "Oromia - Dimtu"
+  },
+  {
+    "id": 399,
+    "marketName": "Oromia - Dilela"
+  },
+  {
+    "id": 237,
+    "marketName": "Oromia - Siltana"
+  },
+  {
+    "id": 65,
+    "marketName": "Oromia - Kombolcha-wellega"
+  },
+  {
+    "id": 90,
+    "marketName": "Oromia - Metu"
+  },
+  {
+    "id": 386,
+    "marketName": "Oromia - Micha"
+  },
+  {
+    "id": 52,
+    "marketName": "Oromia - Kersa Malima"
+  },
+  {
+    "id": 257,
+    "marketName": "Oromia - walenchiti"
+  },
+  {
+    "id": 290,
+    "marketName": "Oromia - Mikawa"
+  },
+  {
+    "id": 243,
+    "marketName": "Oromia - Goleja"
+  },
+  {
+    "id": 71,
+    "marketName": "Oromia - Galamso"
+  },
+  {
+    "id": 263,
+    "marketName": "Oromia - Ifa"
+  },
+  {
+    "id": 392,
+    "marketName": "Oromia - Goljota"
+  },
+  {
+    "id": 58,
+    "marketName": "Oromia - Goto 24"
+  },
+  {
+    "id": 77,
+    "marketName": "Oromia - Kofale"
+  },
+  {
+    "id": 42,
+    "marketName": "Oromia - Chafe Donsa"
+  },
+  {
+    "id": 9,
+    "marketName": "Oromia - Dodola "
+  },
+  {
+    "id": 249,
+    "marketName": "Oromia - Menna"
+  },
+  {
+    "id": 283,
+    "marketName": "Oromia - Wayu Jima Rare"
+  },
+  {
+    "id": 398,
+    "marketName": "Oromia - Gindo"
+  },
+  {
+    "id": 64,
+    "marketName": "Oromia - Finchaha"
+  },
+  {
+    "id": 83,
+    "marketName": "Oromia - Goro Bale"
+  },
+  {
+    "id": 385,
+    "marketName": "Oromia - Jara"
+  },
+  {
+    "id": 51,
+    "marketName": "Oromia - Tullo Bolo"
+  },
+  {
+    "id": 15,
+    "marketName": "Oromia - Nekemte Town"
+  },
+  {
+    "id": 255,
+    "marketName": "Oromia - Dambi"
+  },
+  {
+    "id": 34,
+    "marketName": "Oromia - Yanfa"
+  },
+  {
+    "id": 289,
+    "marketName": "Oromia - Bagi"
+  },
+  {
+    "id": 242,
+    "marketName": "Oromia - Adele"
+  },
+  {
+    "id": 70,
+    "marketName": "Oromia - Chiro"
+  },
+  {
+    "id": 359,
+    "marketName": "Sidama - Dore"
+  },
+  {
+    "id": 365,
+    "marketName": "Sidama - Haweela"
+  },
+  {
+    "id": 358,
+    "marketName": "Sidama - Sedetegna"
+  },
+  {
+    "id": 26,
+    "marketName": "Sidama - Hawassa "
+  },
+  {
+    "id": 364,
+    "marketName": "Sidama - Bona 01"
+  },
+  {
+    "id": 357,
+    "marketName": "Sidama - Leku "
+  },
+  {
+    "id": 363,
+    "marketName": "Sidama - Kawado"
+  },
+  {
+    "id": 356,
+    "marketName": "Sidama - Gudumalee"
+  },
+  {
+    "id": 111,
+    "marketName": "Sidama - Yaye"
+  },
+  {
+    "id": 362,
+    "marketName": "Sidama - Bokaso"
+  },
+  {
+    "id": 355,
+    "marketName": "Sidama - Kela"
+  },
+  {
+    "id": 110,
+    "marketName": "Sidama - Daye"
+  },
+  {
+    "id": 361,
+    "marketName": "Sidama - Hantate "
+  },
+  {
+    "id": 109,
+    "marketName": "Sidama - Aleta wondo"
+  },
+  {
+    "id": 360,
+    "marketName": "Sidama - Balela "
+  },
+  {
+    "id": 236,
+    "marketName": "Sidama - Yirba"
+  },
+  {
+    "id": 346,
+    "marketName": "SNNP - Bule"
+  },
+  {
+    "id": 115,
+    "marketName": "SNNP - Dalocha"
+  },
+  {
+    "id": 27,
+    "marketName": "SNNP - Wolaita Soddo"
+  },
+  {
+    "id": 333,
+    "marketName": "SNNP - Kemba "
+  },
+  {
+    "id": 101,
+    "marketName": "SNNP - Butajira"
+  },
+  {
+    "id": 352,
+    "marketName": "SNNP - Alemgebaya "
+  },
+  {
+    "id": 339,
+    "marketName": "SNNP - Bitena"
+  },
+  {
+    "id": 107,
+    "marketName": "SNNP - Durame"
+  },
+  {
+    "id": 345,
+    "marketName": "SNNP - Bonosha "
+  },
+  {
+    "id": 113,
+    "marketName": "SNNP - Gedeb"
+  },
+  {
+    "id": 114,
+    "marketName": "SNNP - Areka"
+  },
+  {
+    "id": 332,
+    "marketName": "SNNP - Wacha "
+  },
+  {
+    "id": 100,
+    "marketName": "SNNP - Selamber"
+  },
+  {
+    "id": 351,
+    "marketName": "SNNP - Kerata "
+  },
+  {
+    "id": 121,
+    "marketName": "SNNP - Laska"
+  },
+  {
+    "id": 338,
+    "marketName": "SNNP - Ufa Segno Gebeya"
+  },
+  {
+    "id": 19,
+    "marketName": "SNNP - Sawula"
+  },
+  {
+    "id": 344,
+    "marketName": "SNNP - Habicho "
+  },
+  {
+    "id": 112,
+    "marketName": "SNNP - Dilla"
+  },
+  {
+    "id": 331,
+    "marketName": "SNNP - Bole"
+  },
+  {
+    "id": 99,
+    "marketName": "SNNP - Arbaminchi"
+  },
+  {
+    "id": 350,
+    "marketName": "SNNP - Kibet "
+  },
+  {
+    "id": 119,
+    "marketName": "SNNP - Saja"
+  },
+  {
+    "id": 337,
+    "marketName": "SNNP - Damot Gale Makesegno Gebeya"
+  },
+  {
+    "id": 18,
+    "marketName": "SNNP - Worabae"
+  },
+  {
+    "id": 343,
+    "marketName": "SNNP - Umacho "
+  },
+  {
+    "id": 330,
+    "marketName": "SNNP - Gunechere"
+  },
+  {
+    "id": 349,
+    "marketName": "SNNP - Kochera"
+  },
+  {
+    "id": 118,
+    "marketName": "SNNP - Karat"
+  },
+  {
+    "id": 336,
+    "marketName": "SNNP - Dede"
+  },
+  {
+    "id": 104,
+    "marketName": "SNNP - Shone"
+  },
+  {
+    "id": 17,
+    "marketName": "SNNP - Wolkite"
+  },
+  {
+    "id": 342,
+    "marketName": "SNNP - Shinshicho "
+  },
+  {
+    "id": 329,
+    "marketName": "SNNP - Kela South Sodo"
+  },
+  {
+    "id": 348,
+    "marketName": "SNNP - Yergachefa"
+  },
+  {
+    "id": 335,
+    "marketName": "SNNP - Zaba"
+  },
+  {
+    "id": 103,
+    "marketName": "SNNP - Gimbicho"
+  },
+  {
+    "id": 354,
+    "marketName": "SNNP - Gazer "
+  },
+  {
+    "id": 16,
+    "marketName": "SNNP - Hosaena"
+  },
+  {
+    "id": 341,
+    "marketName": "SNNP - Doyogena "
+  },
+  {
+    "id": 347,
+    "marketName": "SNNP - Wonago"
+  },
+  {
+    "id": 116,
+    "marketName": "SNNP - Jinka"
+  },
+  {
+    "id": 28,
+    "marketName": "SNNP - Halaba"
+  },
+  {
+    "id": 334,
+    "marketName": "SNNP - Laha "
+  },
+  {
+    "id": 102,
+    "marketName": "SNNP - Indebir"
+  },
+  {
+    "id": 353,
+    "marketName": "SNNP - Guba "
+  },
+  {
+    "id": 123,
+    "marketName": "SNNP - Humbo"
+  },
+  {
+    "id": 340,
+    "marketName": "SNNP - Angacha "
+  },
+  {
+    "id": 108,
+    "marketName": "SNNP - Hadero"
+  },
+  {
+    "id": 95,
+    "marketName": "South West - Mizan-aman"
+  },
+  {
+    "id": 122,
+    "marketName": "South West - Ameya"
+  },
+  {
+    "id": 371,
+    "marketName": "South West - Disa "
+  },
+  {
+    "id": 383,
+    "marketName": "South West - Jemu "
+  },
+  {
+    "id": 106,
+    "marketName": "South West - Chena"
+  },
+  {
+    "id": 370,
+    "marketName": "South West - Esra Bali "
+  },
+  {
+    "id": 382,
+    "marketName": "South West - Bachuma "
+  },
+  {
+    "id": 105,
+    "marketName": "South West - Bonga"
+  },
+  {
+    "id": 369,
+    "marketName": "South West - Sez"
+  },
+  {
+    "id": 98,
+    "marketName": "South West - Gesa chere"
+  },
+  {
+    "id": 368,
+    "marketName": "South West - Debere Work "
+  },
+  {
+    "id": 97,
+    "marketName": "South West - Tercha"
+  },
+  {
+    "id": 117,
+    "marketName": "South West - Masha"
+  },
+  {
+    "id": 367,
+    "marketName": "South West - Gicha"
+  },
+  {
+    "id": 96,
+    "marketName": "South West - Biftu"
+  },
+  {
+    "id": 366,
+    "marketName": "South West - Ufa "
+  },
+  {
+    "id": 372,
+    "marketName": "South West - Chida"
+  },
+  {
+    "id": 21,
+    "marketName": "Tigray - Maychew"
+  },
+  {
+    "id": 132,
+    "marketName": "Tigray - Shire-Endaselassie"
+  },
+  {
+    "id": 20,
+    "marketName": "Tigray - Humera"
+  },
+  {
+    "id": 131,
+    "marketName": "Tigray - Sheraro"
+  },
+  {
+    "id": 127,
+    "marketName": "Tigray - Enticho"
+  },
+  {
+    "id": 31,
+    "marketName": "Tigray - Mekele Town"
+  },
+  {
+    "id": 126,
+    "marketName": "Tigray - Abi-Adi"
+  },
+  {
+    "id": 37,
+    "marketName": "Tigray - Wukro"
+  },
+  {
+    "id": 125,
+    "marketName": "Tigray - Mehoni"
+  },
+  {
+    "id": 36,
+    "marketName": "Tigray - Hawzen"
+  },
+  {
+    "id": 134,
+    "marketName": "Tigray - Adi-Remets"
+  },
+  {
+    "id": 29,
+    "marketName": "Tigray - Aksum"
+  },
+  {
+    "id": 124,
+    "marketName": "Tigray - Alamata"
+  },
+  {
+    "id": 35,
+    "marketName": "Tigray - Adigrat"
+  },
+  {
+    "id": 133,
+    "marketName": "Tigray - Ketema Nigus"
+  }
+]

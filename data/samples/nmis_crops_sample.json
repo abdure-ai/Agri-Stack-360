@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "cropName": "Teff"
+  },
+  {
+    "id": 2,
+    "cropName": "Wheat"
+  },
+  {
+    "id": 3,
+    "cropName": "Maize"
+  },
+  {
+    "id": 6,
+    "cropName": "Onion"
+  },
+  {
+    "id": 7,
+    "cropName": "Tomato"
+  },
+  {
+    "id": 8,
+    "cropName": "Potato"
+  },
+  {
+    "id": 9,
+    "cropName": "Avocado"
+  },
+  {
+    "id": 10,
+    "cropName": "Mango"
+  },
+  {
+    "id": 11,
+    "cropName": "Banana"
+  },
+  {
+    "id": 12,
+    "cropName": "Malt Barely"
+  },
+  {
+    "id": 13,
+    "cropName": "Sorghum"
+  },
+  {
+    "id": 14,
+    "cropName": "Local Rice"
+  },
+  {
+    "id": 15,
+    "cropName": "Garlic"
+  },
+  {
+    "id": 17,
+    "cropName": "Red Pepper"
+  }
+]

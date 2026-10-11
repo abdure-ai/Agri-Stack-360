@@ -1,0 +1,10 @@
+# Local text-to-speech service (serving/tts_api.py) — separate environment .venv-tts (Python 3.12):
+#   py -3.12 -m venv .venv-tts
+#   .venv-tts/Scripts/python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   .venv-tts/Scripts/python.exe -m pip install -r requirements-tts.txt
+# Models (downloaded on first use, ~150 MB each): facebook/mms-tts-orm, -amh, -tir — CC-BY-NC 4.0 (non-commercial).
+transformers>=4.40,<5
+fastapi
+uvicorn[standard]
+uroman
+numpy
