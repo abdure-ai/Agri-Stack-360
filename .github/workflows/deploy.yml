@@ -47,6 +47,9 @@ jobs:
             git reset --hard FETCH_HEAD   # compose file, nginx.conf; .env is untracked
             echo "Deploying in $(pwd)"
             [ -f .env ] || { echo "No .env in $(pwd): create it from .env.example"; exit 1; }
+            # Presentation site: switch demo mode on unless .env already says DEMO_MODE (set DEMO_MODE=0 there to turn
+            # it off; this line then leaves it alone). Remove this step before real users join.
+            grep -q '^DEMO_MODE=' .env || printf '\nDEMO_MODE=1\n' >> .env
             docker compose build api disease web   # api's image is shared by forecast, sync and telegram
             # First deploy only: create the database and load reference data (marker file on the state volume).
             if ! docker compose run --rm --no-deps --entrypoint sh api -c 'test -f /state/.setup-done'; then
