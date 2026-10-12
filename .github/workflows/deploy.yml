@@ -38,11 +38,13 @@ jobs:
           port: ${{ secrets.SSH_PORT || 22 }}
           envs: DEPLOY_PATH,REPO_URL
           command_timeout: 60m    # image builds run on the server
-          script_stop: true
           script: |
-            mkdir -p "${DEPLOY_PATH:-/opt/agristack}" && cd "${DEPLOY_PATH:-/opt/agristack}"
+            set -e
+            mkdir -p "${DEPLOY_PATH:-/opt/agristack}"
+            cd "${DEPLOY_PATH:-/opt/agristack}"
             [ -d .git ] || git init -q   # first deploy into a plain folder (e.g. one holding only .env)
-            git fetch -q "$REPO_URL" main && git reset --hard FETCH_HEAD   # compose file, Caddyfile; .env is untracked
+            git fetch -q "$REPO_URL" main
+            git reset --hard FETCH_HEAD   # compose file, nginx.conf; .env is untracked
             echo "Deploying in $(pwd)"
             [ -f .env ] || { echo "No .env in $(pwd): create it from .env.example"; exit 1; }
             docker compose build api disease web   # api's image is shared by forecast, sync and telegram
@@ -50,8 +52,8 @@ jobs:
             docker image prune -f
             # Wait up to 3 minutes for the API to answer through the web container's nginx.
             for i in $(seq 36); do
-              curl -fsS -o /dev/null http://127.0.0.1:7004/api/docs && break
-              [ "$i" = 36 ] && { docker compose ps; docker compose logs --tail 80 api; exit 1; }
+              if curl -fsS -o /dev/null http://127.0.0.1:7004/api/docs; then break; fi
+              if [ "$i" = 36 ]; then docker compose ps; docker compose logs --tail 80 api; exit 1; fi
               sleep 5
             done
             docker compose ps
