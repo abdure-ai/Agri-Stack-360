@@ -31,12 +31,13 @@ jobs:
         env:
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
           REPO_URL: https://github.com/${{ github.repository }}.git
+          TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}   # optional: runs the Telegram bot when set
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT || 22 }}
-          envs: DEPLOY_PATH,REPO_URL
+          envs: DEPLOY_PATH,REPO_URL,TG_TOKEN
           command_timeout: 60m    # image builds run on the server
           script: |
             set -e
@@ -50,6 +51,13 @@ jobs:
             # Presentation site: switch demo mode on unless .env already says DEMO_MODE (set DEMO_MODE=0 there to turn
             # it off; this line then leaves it alone). Remove this step before real users join.
             grep -q '^DEMO_MODE=' .env || printf '\nDEMO_MODE=1\n' >> .env
+            # Telegram bot: the TELEGRAM_BOT_TOKEN repository secret goes into .env (never printed), and the bot
+            # service (compose profile "telegram") is built and started with the others.
+            if [ -n "$TG_TOKEN" ]; then
+              sed -i '/^TELEGRAM_BOT_TOKEN=/d' .env
+              printf 'TELEGRAM_BOT_TOKEN=%s\n' "$TG_TOKEN" >> .env
+            fi
+            if grep -q '^TELEGRAM_BOT_TOKEN=.' .env; then export COMPOSE_PROFILES=telegram; echo "Telegram bot: on"; else echo "Telegram bot: off (no token)"; fi
             docker compose build api disease web   # api's image is shared by forecast, sync and telegram
             # First deploy only: create the database and load reference data (marker file on the state volume).
             if ! docker compose run --rm --no-deps --entrypoint sh api -c 'test -f /state/.setup-done'; then
