@@ -495,6 +495,9 @@ export const api = {
     request<TokenResponse>(BASE, "POST", "/auth/register", { body: data, auth: false }),
   /** Current user with fresh role and permissions. */
   me: () => platform.get<User>("/auth/me"),
+  demoAccounts: () =>
+    request<{ enabled: boolean; accounts: { role: string; phone: string; password: string; note?: string }[] }>(
+      BASE, "GET", "/auth/demo-accounts", { auth: false }),
 
   // ── Profile & farms ───────────────────────────────────────────────────────
   /** `area_pcode` (woreda, zone or region) sets the address; the server fills the names. */

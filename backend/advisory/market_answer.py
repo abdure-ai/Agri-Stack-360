@@ -87,16 +87,21 @@ OTHER_CROP_NAMES: dict[str, dict[str, str]] = {
     "sugarcane": {"en": "Sugarcane", "am": "ሸንኮራ", "om": "Shankoraa", "ti": "ሸንኮራ"},
 }
 
+# Only words that clearly mean price: "በስንት" / "ስንት ነው" / "meeqa" / "ክንደይ" / "how much" also mean
+# "how many" ("ስንዴን በስንት ቀን ልዩነት ማጠጣት አለብኝ?" is about irrigation, not price).
 PRICE_WORDS = {
-    "en": ["price", "cost", "how much", "birr", "etb", "market rate", "selling for", "sells for"],
-    "am": ["ዋጋ", "ስንት ብር", "ስንት ገባ", "ስንት ነው", "ብር ገባ", "ስንት ይሸጣል", "ስንት ደረሰ", "በስንት"],
-    "om": ["gatii", "gatiin", "meeqa", "qarshii", "hammam gurgurama"],
-    "ti": ["ዋጋ", "ክንደይ", "ብር", "ብኽንደይ"],
+    "en": ["price", "cost", "birr", "etb", "market rate", "selling for", "sells for", "sell for", "how much is"],
+    "am": ["ዋጋ", "ስንት ብር", "ብር ገባ", "ስንት ገባ", "ስንት ይሸጣል", "ብር"],
+    "om": ["gatii", "gatiin", "qarshii", "birrii", "meeqatti gurgurama", "hammam gurgurama"],
+    "ti": ["ዋጋ", "ብኽንደይ ይሽየጥ", "ክንደይ ይሽየጥ", "ብር"],
 }
+TOKEN_ONLY = {"ብር"}      # short: must stand alone, not inside "ብርድ" (frost) or "ብርቱካን" (orange)
 _ETHIOPIC = re.compile(r"[ሀ-᎟]")
 
 
 def _has(text: str, term: str) -> bool:
+    if term in TOKEN_ONLY:
+        return re.search(rf"(?<![ሀ-᎟]){term}(?![ሀ-᎟])", text) is not None
     if _ETHIOPIC.search(term):
         return term in text                              # Ethiopic: affixes attach, so match inside words
     return re.search(rf"\b{re.escape(term)}", text) is not None   # Latin: word start ("onions", "gatiin")

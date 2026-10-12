@@ -23,7 +23,7 @@
   "safety_reentry": "Do not enter the sprayed field for {hours} hours.",
   "safety_disposal": "Never reuse empty containers. Rinse them three times, pour the rinse water into the spray tank, and dispose of containers as your Development Agent advises.",
   "safety_poisoning": "If anyone feels sick after contact with a chemical, seek medical help immediately. Emergency contact: {emergency_contact}.",
-  "placeholder_warning": "Note: product and dose data in this demo are placeholders and have not been verified. Do not act on them.",
+  "placeholder_warning": "Doses are not shown: check the product against the current EAA register, follow the label, and ask your Development Agent before spraying.",
   "sources_label": "Sources",
   "market_source": "NMIS market price data",
   "farm_source": "Your farm information",
@@ -83,7 +83,7 @@
   "trust_reason_expired": "this batch has expired. Do not use it.",
   "trust_reason_possible_copy": "this code has been checked more often, or in more places, than expected. It may have been copied onto fake packs. Ask your Development Agent.",
   "trust_details": "Product: {product}\nSupplier: {org}\nBatch: {batch}",
-  "trust_placeholder": "(Pilot: product data are placeholders, not the official registered list.)",
+  "trust_placeholder": "(Product details from the MoA wheat manual; check the current EAA register.)",
   "expert_answer": "An agronomist ({da_name}) answered your question: {text}",
   "abc_message": "{org} (your ABC): {text}",
   "ngo_message": "{org}, {project}: {text}",
@@ -104,5 +104,6 @@
   "price_none": "There is no recent NMIS price for {crop}.",
   "unit_kg": "kg",
   "unit_quintal": "quintal",
-  "price_not_covered": "NMIS market data does not include {crop}, so I can't give its price. NMIS has prices for: {crops}. For {crop}, ask your Development Agent, your cooperative or traders at the local market. Whether selling now pays depends on the price you are offered and your costs."
+  "price_not_covered": "NMIS market data does not include {crop}, so I can't give its price. NMIS has prices for: {crops}. For {crop}, ask your Development Agent, your cooperative or traders at the local market. Whether selling now pays depends on the price you are offered and your costs.",
+  "emergency_fallback": "go to the nearest health centre"
 }

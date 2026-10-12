@@ -17,7 +17,6 @@ logs
 *.ipynb
 Hybrid_Prediction.py
 agri_platform.db*
-data/demo
 data/cache
 data/uploads
 data/training
@@ -26,7 +25,5 @@ serving/tts_api.py
 requirements-tts.txt
 requirements-dev.txt
 scripts/start_demo.ps1
-scripts/seed_advisory_demo.py
-scripts/seed_full_demo.py
 scripts/record_demo_answers.py
 scripts/smoke_test_api.py

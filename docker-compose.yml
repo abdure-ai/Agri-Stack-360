@@ -77,6 +77,14 @@ services:
     restart: unless-stopped
     logging: *logging
 
+  # Demo deployment only (DEMO_MODE=1 in .env): demo accounts and demo data, run once by the deploy
+  # workflow. Never on a site with real users: the demo passwords are public.
+  demo:
+    <<: *app
+    profiles: [demo]
+    restart: "no"
+    command: python scripts/demo_setup.py
+
   # One-time setup. Never run the demo seed scripts in production.
   setup:
     <<: *app

@@ -61,7 +61,9 @@
       "price_none",
       "unit_kg",
       "unit_quintal",
-      "price_not_covered"
+      "price_not_covered",
+      "placeholder_warning",
+      "emergency_fallback"
     ]
   },
   "dont_know": "Gaaffii kana qajeelfama raggaasifame irraa deebisuu hin dandeenye. Gaaffii kee Hojjetaa Misoomaa (DA) keetiif ergeera; inni/isheen siif deebisu.",
@@ -83,7 +85,7 @@
   "safety_reentry": "Maasii biifame sa'aatii {hours}f hin seenin.",
   "safety_disposal": "Qodaa duwwaa irra deebitee hin fayyadamin. Si'a sadii dhiqii bishaan ittiin dhiqame sana gara taankii biifituutti naqi; qodaawwan akka Hojjetaan Misoomaa kee gorsutti balleessi.",
   "safety_poisoning": "Namni kamiyyuu keemikaalaan wal qunnamee yoo dhukkubsate, battaluma gargaarsa yaalaa barbaadi. Bilbila balaa tasaa: {emergency_contact}.",
-  "placeholder_warning": "Hubachiisa: odeeffannoon oomishaa fi hammaa agarsiisa kana keessatti mirkanaa'ee hin jiru. Isaan irratti hundaa'uun hin hojjetin.",
+  "placeholder_warning": "Hammi hin mul'anne: oomisha galmee EAA ammaa waliin mirkaneessaa, moxxaa hordofaa, osoo hin biifin dura DA keessan gaafadhaa.",
   "sources_label": "Maddoota",
   "market_source": "Odeeffannoo gatii gabaa NMIS",
   "farm_source": "Odeeffannoo qonna keetii",
@@ -143,7 +145,7 @@
   "trust_reason_expired": "yeroon garee kanaa darbeera. Itti hin fayyadaminaa.",
   "trust_reason_possible_copy": "koodiin kun kan eegamuu ol yeroo baay'ee ykn bakka baay'eetti mirkanaa'eera. Paakeejii sobaa irratti garagalfamee ta'uu danda'a. Hojjetaa misoomaa keessan gaafadhaa.",
   "trust_details": "Oomisha: {product}\nDhiyeessaa: {org}\nGaree: {batch}",
-  "trust_placeholder": "(Yaalii: odeeffannoon oomishaa fakkeenya; tarree oomishaalee galmaa'anii ifaa miti.)",
+  "trust_placeholder": "(Odeeffannoon oomishaa maanuwaalii qamadii MoA irraa; galmee EAA ammaa mirkaneessaa.)",
   "expert_answer": "Ogeessi qonnaa ({da_name}) gaaffii keessaniif deebii kennaniiru: {text}",
   "abc_message": "{org} (ABC keessan): {text}",
   "ngo_message": "{org} (pirojektii {project}): {text}",
@@ -164,5 +166,6 @@
   "price_none": "{crop}f gatiin NMIS dhiyoo hin jiru.",
   "unit_kg": "kiiloo",
   "unit_quintal": "kuntaala",
-  "price_not_covered": "Odeeffannoon gabaa NMIS {crop} hin dabalatu; kanaaf gatii isaa isinitti himuu hin danda'u. NMIS gatii kan qabu: {crops}. {crop}f DA keessan, waldaa hojii gamtaa keessan ykn daldaltoota gabaa naannoo gaafadhaa. Amma gurguruun bu'aa qabaachuun isaa gatii isinii dhiyaatuu fi baasii keessan irratti hundaa'a."
+  "price_not_covered": "Odeeffannoon gabaa NMIS {crop} hin dabalatu; kanaaf gatii isaa isinitti himuu hin danda'u. NMIS gatii kan qabu: {crops}. {crop}f DA keessan, waldaa hojii gamtaa keessan ykn daldaltoota gabaa naannoo gaafadhaa. Amma gurguruun bu'aa qabaachuun isaa gatii isinii dhiyaatuu fi baasii keessan irratti hundaa'a.",
+  "emergency_fallback": "buufata fayyaa isinitti dhiyoo jirutti deemaa"
 }

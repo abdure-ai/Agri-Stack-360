@@ -61,4 +61,10 @@ jobs:
               if [ "$i" = 36 ]; then docker compose ps; docker compose logs --tail 80 api; exit 1; fi
               sleep 5
             done
+            # Demo site only: DEMO_MODE=1 in .env seeds the demo accounts and data once.
+            if grep -q '^DEMO_MODE=1' .env && \
+               ! docker compose run --rm --no-deps --entrypoint sh api -c 'test -f /state/.demo-seeded'; then
+              docker compose --profile demo run --rm demo
+              docker compose run --rm --no-deps --entrypoint sh api -c 'touch /state/.demo-seeded'
+            fi
             docker compose ps

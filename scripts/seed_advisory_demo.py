@@ -44,18 +44,46 @@ from backend.platform_db import get_platform_connection  # noqa: E402
 
 WOREDA = "ET031001"   # Dewa Cheffa
 PASSWORD = "demo1234"
-FARMER = {"phone": "0944000001", "name": "Demo Farmer (Dewa Cheffa)", "role": "farmer", "language": "am"}
-DA = {"phone": "0944000002", "name": "Demo DA (Dewa Cheffa)", "role": "agent", "language": "am"}
-NGO_STAFF = {"phone": "0944000011", "name": "Demo NGO staff", "role": "ngo_staff", "language": "en"}
-LENDER = {"phone": "0944000012", "name": "PLACEHOLDER Demo MFI officer", "role": "lender", "language": "en"}
-REGULATOR = {"phone": "0944000010", "name": "Demo regulator (EAA)", "role": "regulator", "language": "en"}
-FARM_MANAGER = {"phone": "0944000009", "name": "Demo farm manager", "role": "farm_manager", "language": "en"}
-ABC_MANAGER = {"phone": "0944000008", "name": "Demo ABC manager", "role": "abc_manager", "language": "am"}
-DEALER = {"phone": "0944000007", "name": "Demo shop staff (PLACEHOLDER)", "role": "agro_dealer", "language": "am"}
-AGRONOMIST = {"phone": "0944000006", "name": "Demo agronomist (content review)", "role": "agronomist", "language": "en"}
-SUPPLIER = {"phone": "0944000005", "name": "Demo supplier staff (PLACEHOLDER)", "role": "supplier", "language": "en"}
-GOV = {"phone": "0944000004", "name": "Demo woreda office (Dewa Cheffa)", "role": "government", "language": "am"}
-FARMER_2 = {"phone": "0944000003", "name": "Demo Farmer 2 (DA inbox demo)", "role": "farmer", "language": "am"}
+# Presentation accounts: fictional people with ordinary names (the sign-in page says the site holds sample records).
+FARMER = {"phone": "0944000001", "name": "Ahmed Ali Yimer", "role": "farmer", "language": "am"}
+DA = {"phone": "0944000002", "name": "Kedir Hussen", "role": "agent", "language": "am"}
+NGO_STAFF = {"phone": "0944000011", "name": "Hanna Tesfaye", "role": "ngo_staff", "language": "en"}
+LENDER = {"phone": "0944000012", "name": "Mekdes Alemu", "role": "lender", "language": "en"}
+REGULATOR = {"phone": "0944000010", "name": "Dawit Bekele", "role": "regulator", "language": "en"}
+FARM_MANAGER = {"phone": "0944000009", "name": "Solomon Girma", "role": "farm_manager", "language": "en"}
+ABC_MANAGER = {"phone": "0944000008", "name": "Mohammed Seid", "role": "abc_manager", "language": "am"}
+DEALER = {"phone": "0944000007", "name": "Fatuma Yimam", "role": "agro_dealer", "language": "am"}
+AGRONOMIST = {"phone": "0944000006", "name": "Tsegaye Mekonnen", "role": "agronomist", "language": "en"}
+SUPPLIER = {"phone": "0944000005", "name": "Yonas Haile", "role": "supplier", "language": "en"}
+GOV = {"phone": "0944000004", "name": "Zeineba Abdu", "role": "government", "language": "am"}
+FARMER_2 = {"phone": "0944000003", "name": "Amina Mohammed", "role": "farmer", "language": "am"}
+NEIGHBOURS = ["Hussen Ahmed", "Zeyneb Ali", "Yimer Seid", "Mariam Hassen"]
+
+# Organisations: (current name, earlier names it may still have in an existing database, note).
+ORG_SUPPLIER = ("Abay Agro-Inputs PLC", ("PLACEHOLDER Demo Supplier PLC",), "Crop protection and seed supplier")
+ORG_SHOP = ("Kemise Farmers' Agro Shop", ("PLACEHOLDER Demo Agro Shop",), "Agro-input retail shop")
+ORG_ABC = ("Dewa Cheffa Irrigated Wheat ABC", ("PLACEHOLDER Demo ABC (Dewa Cheffa)",), "Farmers' agribusiness company")
+ORG_ESTATE = ("Borkena Valley Farm PLC", ("PLACEHOLDER Demo Estate",), "Irrigated wheat farm")
+ORG_NGO = ("Rural Harvest Initiative", ("PLACEHOLDER Demo NGO",), "Agricultural development NGO")
+BATCH_1 = ("AB-2026-01", "DEMO-2026-01")      # current and earlier batch number
+PLOT = ("Irrigated wheat plot", "Demo irrigated wheat plot")
+PLOT_2 = ("Wheat plot by the canal", "Demo plot 2")
+
+
+def kebele(n: int) -> str:
+    return f"{n:02d} Kebele"
+
+
+def org_id_for(conn, org: tuple, type_: str) -> int:
+    """The organisation by its current or an earlier name (renamed if needed), else a new one."""
+    name, old, note = org
+    names = (name, *old)
+    row = conn.execute(f"SELECT id FROM organisations WHERE name IN ({','.join('?' * len(names))}) ORDER BY id",
+                       names).fetchone()
+    if row:
+        conn.execute("UPDATE organisations SET name=?, note=? WHERE id=?", (name, note, row[0]))
+        return row[0]
+    return conn.execute("INSERT INTO organisations (name, type, note) VALUES (?, ?, ?)", (name, type_, note)).lastrowid
 
 
 def upsert_user(conn, u: dict, chain: list) -> int:
@@ -83,7 +111,7 @@ def seed_outbreak(conn, chain, woreda) -> None:
         conn.execute("DELETE FROM diagnoses WHERE source='simulated' AND farmer_id IN "
                      "(SELECT id FROM users WHERE phone LIKE '094400010_')")
         for i, km in enumerate((2.0, 3.5, 5.0, 6.5), start=1):
-            neighbour = {"phone": f"09440001{i:02d}", "name": f"Demo neighbour {i} (simulated)", "role": "farmer",
+            neighbour = {"phone": f"09440001{i:02d}", "name": NEIGHBOURS[(i - 1) % len(NEIGHBOURS)], "role": "farmer",
                          "language": "am"}
             nid = upsert_user(conn, neighbour, chain)
             conn.execute("UPDATE users SET is_active=0 WHERE id=?", (nid,))   # cannot sign in
@@ -113,16 +141,18 @@ def seed_da_inbox(conn, chain, woreda, da_id: int) -> None:
         conn.execute(
             """INSERT INTO farmer_profiles (user_id, kebele, latitude, longitude, altitude_m, assigned_da_id, consent_data,
                                             consent_alerts, consent_recorded_at)
-               VALUES (?, 'PLACEHOLDER_VERIFY_KEBELE', ?, ?, ?, ?, 1, 1, CURRENT_TIMESTAMP)
+               VALUES (?, '03 Kebele', ?, ?, ?, ?, 1, 1, CURRENT_TIMESTAMP)
                ON CONFLICT(user_id) DO UPDATE SET assigned_da_id=excluded.assigned_da_id, altitude_m=excluded.altitude_m,
+                 kebele=excluded.kebele,
                  consent_data=1, consent_alerts=1, updated_at=CURRENT_TIMESTAMP""",
             (fid, woreda.latitude + 0.01, woreda.longitude, altitude, da_id))
         # A demo irrigated wheat plot (planted 50 days ago) so the ABC and DA screens have a crop to show.
-        farm = conn.execute("SELECT id FROM farms WHERE user_id=? AND field_name='Demo plot 2'", (fid,)).fetchone()
+        farm = conn.execute("SELECT id FROM farms WHERE user_id=? AND field_name IN (?, ?)", (fid, *PLOT_2)).fetchone()
         farm_id = farm[0] if farm else conn.execute(
             """INSERT INTO farms (user_id, field_name, crop_name, area_ha, planted_date, status, notes, irrigated)
-               VALUES (?, 'Demo plot 2', 'wheat', 0.75, date('now', '-50 days'), 'healthy', 'DEMO data', 1)""",
-            (fid,)).lastrowid
+               VALUES (?, ?, 'wheat', 0.75, date('now', '-50 days'), 'healthy', NULL, 1)""",
+            (fid, PLOT_2[0])).lastrowid
+        conn.execute("UPDATE farms SET field_name=?, notes=NULL WHERE id=?", (PLOT_2[0], farm_id))
         conn.execute("DELETE FROM crop_seasons WHERE farm_id=?", (farm_id,))
         conn.execute("INSERT INTO crop_seasons (farm_id, crop, planting_date, season, status) "
                      "VALUES (?, 'wheat', date('now', '-50 days'), 'irrigated', 'active')", (farm_id,))
@@ -147,7 +177,7 @@ def seed_da_inbox(conn, chain, woreda, da_id: int) -> None:
                            "VALUES (?, ?, 'app', 'en', ?)", (fid, fid, stamp(1))).lastrowid
         mid = conn.execute(
             """INSERT INTO messages (conversation_id, question, language, answer, confidence, escalated, created_at)
-               VALUES (?, 'DEMO: Can I keep my harvested wheat in plastic bags, or do I need hermetic bags?', 'en',
+               VALUES (?, 'Can I keep my harvested wheat in plastic bags, or do I need hermetic bags?', 'en',
                        'I could not answer this from the approved guidelines. Your question has been sent to your Development Agent.', 'low', 1, ?)""", (cid, stamp(1))).lastrowid
         conn.execute("INSERT INTO escalations (message_id, farmer_id, reason, assigned_to, created_at) "
                      "VALUES (?, ?, 'no_knowledge', ?, ?)", (mid, fid, da_id, stamp(1)))
@@ -162,19 +192,18 @@ def seed_abc(conn, chain, member_id: int) -> None:
     abc.ensure_schema(conn)
     with conn:
         mid = upsert_user(conn, ABC_MANAGER, chain)
-        row = conn.execute("SELECT id FROM organisations WHERE name=?", ("PLACEHOLDER Demo ABC (Dewa Cheffa)",)).fetchone()
-        org_id = row[0] if row else conn.execute(
-            "INSERT INTO organisations (name, type, note) VALUES (?, 'abc', 'DEMO ABC')",
-            ("PLACEHOLDER Demo ABC (Dewa Cheffa)",)).lastrowid
+        org_id = org_id_for(conn, ORG_ABC, "abc")
         conn.execute("UPDATE organisations SET status='active', woreda_pcode=? WHERE id=?", (chain[-1].pcode, org_id))
         conn.execute("INSERT OR IGNORE INTO organisation_members (org_id, user_id, member_role) VALUES (?,?, 'owner')", (org_id, mid))
         conn.execute("""INSERT INTO abc_members (org_id, farmer_id, status, invited_by, invited_at, joined_at)
                         VALUES (?, ?, 'active', ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
                         ON CONFLICT(org_id, farmer_id) DO UPDATE SET status='active'""", (org_id, member_id, mid))
         trader = conn.execute("SELECT id FROM users WHERE role='trader' AND is_active=1 ORDER BY id LIMIT 1").fetchone()
-        if trader and not conn.execute("SELECT 1 FROM buy_requests WHERE note LIKE 'DEMO%'").fetchone():
+        conn.execute("UPDATE buy_requests SET note='Clean, dry grain; delivery to Kombolcha' WHERE note='DEMO request'")
+        if trader and not conn.execute("SELECT 1 FROM buy_requests WHERE trader_id=? AND quantity_qt=50", (trader[0],)).fetchone():
             conn.execute("""INSERT INTO buy_requests (trader_id, crop, quantity_qt, region_pcode, note, created_at)
-                            VALUES (?, 'wheat', 50, ?, 'DEMO request', CURRENT_TIMESTAMP)""", (trader[0], chain[0].pcode))
+                            VALUES (?, 'wheat', 50, ?, 'Clean, dry grain; delivery to Kombolcha', CURRENT_TIMESTAMP)""",
+                         (trader[0], chain[0].pcode))
 
 
 def seed_input_trust(conn, chain) -> None:
@@ -184,34 +213,27 @@ def seed_input_trust(conn, chain) -> None:
     input_trust.ensure_schema(conn)
     with conn:
         uid = upsert_user(conn, SUPPLIER, chain)
-        row = conn.execute("SELECT id FROM organisations WHERE name=?", ("PLACEHOLDER Demo Supplier PLC",)).fetchone()
-        org_id = row[0] if row else conn.execute(
-            "INSERT INTO organisations (name, note) VALUES (?, ?)",
-            ("PLACEHOLDER Demo Supplier PLC", "DEMO organisation for the Input Trust pilot")).lastrowid
+        org_id = org_id_for(conn, ORG_SUPPLIER, "supplier")
         conn.execute("UPDATE organisations SET status='active' WHERE id=?", (org_id,))
         conn.execute("INSERT OR IGNORE INTO organisation_members (org_id, user_id, member_role) VALUES (?,?, 'owner')",
                      (org_id, uid))
         products = [r[0] for r in conn.execute(
-            "SELECT id FROM approved_products WHERE status='registered' AND product_name LIKE 'PLACEHOLDER_FUNGICIDE_%' "
-            "ORDER BY id LIMIT 2")]
+            "SELECT id FROM approved_products WHERE status='registered' AND category='fungicide' ORDER BY id LIMIT 2")]
         for pid in products:
             conn.execute("INSERT OR IGNORE INTO org_products (org_id, product_id) VALUES (?, ?)", (org_id, pid))
-        batch = conn.execute("SELECT code FROM code_batches WHERE org_id=? AND batch_number='DEMO-2026-01'",
-                             (org_id,)).fetchone()
+        conn.execute("UPDATE code_batches SET batch_number=? WHERE org_id=? AND batch_number=?", (*BATCH_1[:1], org_id, BATCH_1[1]))
+        batch = conn.execute("SELECT code FROM code_batches WHERE org_id=? AND batch_number=?", (org_id, BATCH_1[0])).fetchone()
         if not batch and products:
             code = input_trust.new_code(conn)
             conn.execute(
                 """INSERT INTO code_batches (org_id, product_id, batch_number, units, manufactured_on, expires_on, code,
-                                           created_by) VALUES (?, ?, 'DEMO-2026-01', 500, date('now', '-30 days'),
-                                           date('now', '+700 days'), ?, ?)""", (org_id, products[0], code, uid))
+                                           created_by) VALUES (?, ?, ?, 500, date('now', '-30 days'),
+                                           date('now', '+700 days'), ?, ?)""", (org_id, products[0], BATCH_1[0], code, uid))
             batch = (code,)
-        conn.execute("UPDATE code_batches SET status='active' WHERE org_id=? AND batch_number='DEMO-2026-01'", (org_id,))
+        conn.execute("UPDATE code_batches SET status='active' WHERE org_id=? AND batch_number=?", (org_id, BATCH_1[0]))
         # A verified demo shop in Dewa Cheffa selling the first placeholder product.
         did = upsert_user(conn, DEALER, chain)
-        row = conn.execute("SELECT id FROM organisations WHERE name=?", ("PLACEHOLDER Demo Agro Shop",)).fetchone()
-        shop_id = row[0] if row else conn.execute(
-            "INSERT INTO organisations (name, type, note) VALUES (?, 'agro_dealer', ?)",
-            ("PLACEHOLDER Demo Agro Shop", "DEMO shop for the Input Trust pilot")).lastrowid
+        shop_id = org_id_for(conn, ORG_SHOP, "agro_dealer")
         conn.execute("UPDATE organisations SET status='active', verified=1, verified_at=CURRENT_TIMESTAMP, woreda_pcode=? "
                      "WHERE id=?", (chain[-1].pcode, shop_id))
         conn.execute("INSERT OR IGNORE INTO organisation_members (org_id, user_id, member_role) VALUES (?,?, 'owner')",
@@ -219,7 +241,7 @@ def seed_input_trust(conn, chain) -> None:
         if products:
             conn.execute("INSERT OR REPLACE INTO shop_products (org_id, product_id, in_stock, updated_at) "
                          "VALUES (?, ?, 1, CURRENT_TIMESTAMP)", (shop_id, products[0]))
-    print(f"Input Trust demo: supplier {SUPPLIER['phone']}, batch DEMO-2026-01, code {batch[0] if batch else '-'} "
+    print(f"Input Trust demo: supplier {SUPPLIER['phone']}, batch {BATCH_1[0]}, code {batch[0] if batch else '-'} "
           "(try a typo of it to see a warning).")
 
 
@@ -230,14 +252,13 @@ def seed_estate(conn, chain) -> None:
     estate.ensure_schema(conn)
     with conn:
         uid = upsert_user(conn, FARM_MANAGER, chain)
-        row = conn.execute("SELECT id FROM organisations WHERE name=?", ("PLACEHOLDER Demo Estate",)).fetchone()
-        org_id = row[0] if row else conn.execute(
-            "INSERT INTO organisations (name, type, note) VALUES (?, 'commercial_farm', 'DEMO commercial farm')",
-            ("PLACEHOLDER Demo Estate",)).lastrowid
+        org_id = org_id_for(conn, ORG_ESTATE, "commercial_farm")
+        conn.execute("UPDATE estate_blocks SET name='Block A - North' WHERE org_id=? AND name='Block A (DEMO)'", (org_id,))
+        conn.execute("UPDATE estate_blocks SET name='Block B - River' WHERE org_id=? AND name='Block B (DEMO)'", (org_id,))
         conn.execute("UPDATE organisations SET status='active', woreda_pcode=? WHERE id=?", (chain[-1].pcode, org_id))
         conn.execute("INSERT OR IGNORE INTO organisation_members (org_id, user_id, member_role) VALUES (?,?, 'owner')", (org_id, uid))
         if not conn.execute("SELECT 1 FROM estate_blocks WHERE org_id=?", (org_id,)).fetchone():
-            for name, ha, days in (("Block A (DEMO)", 40, 40), ("Block B (DEMO)", 25, 20)):
+            for name, ha, days in (("Block A - North", 40, 40), ("Block B - River", 25, 20)):
                 conn.execute("""INSERT INTO estate_blocks (org_id, name, area_ha, crop, season, planting_date, woreda_pcode,
                                   status, created_at) VALUES (?, ?, ?, 'wheat', 'irrigated', date('now', ?), ?, 'active',
                                   CURRENT_TIMESTAMP)""", (org_id, name, ha, f"-{days} days", chain[-1].pcode))
@@ -251,15 +272,18 @@ def seed_ngo(conn, chain) -> None:
     ngo.ensure_schema(conn)
     with conn:
         uid = upsert_user(conn, NGO_STAFF, chain)
-        row = conn.execute("SELECT id FROM organisations WHERE name=?", ("PLACEHOLDER Demo NGO",)).fetchone()
-        org_id = row[0] if row else conn.execute(
-            "INSERT INTO organisations (name, type, note) VALUES (?, 'ngo', 'DEMO NGO')", ("PLACEHOLDER Demo NGO",)).lastrowid
+        org_id = org_id_for(conn, ORG_NGO, "ngo")
+        conn.execute("""UPDATE ngo_projects SET name='Wheat Rust Awareness Programme',
+                        description='Rust scouting and early-warning messages for irrigated wheat farmers'
+                        WHERE org_id=? AND name='Wheat rust awareness (DEMO)'""", (org_id,))
         conn.execute("UPDATE organisations SET status='active' WHERE id=?", (org_id,))
         conn.execute("INSERT OR IGNORE INTO organisation_members (org_id, user_id, member_role) VALUES (?,?, 'owner')", (org_id, uid))
         project = conn.execute("SELECT id FROM ngo_projects WHERE org_id=?", (org_id,)).fetchone()
         pid = project[0] if project else conn.execute(
             """INSERT INTO ngo_projects (org_id, name, description, start_date, created_at)
-               VALUES (?, 'Wheat rust awareness (DEMO)', 'DEMO project', date('now', '-60 days'), CURRENT_TIMESTAMP)""",
+               VALUES (?, 'Wheat Rust Awareness Programme',
+                       'Rust scouting and early-warning messages for irrigated wheat farmers', date('now', '-60 days'),
+                       CURRENT_TIMESTAMP)""",
             (org_id,)).lastrowid
         conn.execute("INSERT OR IGNORE INTO ngo_project_areas (project_id, woreda_pcode) VALUES (?, ?)", (pid, chain[-1].pcode))
     print(f"NGO demo: staff {NGO_STAFF['phone']}, project covering {chain[-1].name}.")
@@ -276,7 +300,7 @@ def seed_lender(conn, chain) -> None:
         farmer2 = conn.execute("SELECT id FROM users WHERE phone='0944000003' AND is_active=1").fetchone()
         if farmer2:
             conn.execute("""INSERT INTO credit_requests (lender_id, farmer_id, phone, purpose, requested_at)
-                            VALUES (?, ?, '0944000003', 'DEMO: input loan for the next season', datetime('now', 'localtime'))""",
+                            VALUES (?, ?, '0944000003', 'Input loan for the next season', datetime('now', 'localtime'))""",
                          (uid, farmer2[0]))
     print(f"Lender demo: {LENDER['phone']}" + (", waiting request to Demo Farmer 2." if farmer2 else "."))
 
@@ -326,23 +350,25 @@ def main() -> int:
         conn.execute(
             """INSERT INTO farmer_profiles (user_id, kebele, latitude, longitude, altitude_m, assigned_da_id,
                                             consent_data, consent_alerts, consent_recorded_at, alert_channel)
-               VALUES (?, 'PLACEHOLDER_VERIFY_KEBELE', ?, ?, NULL, ?, 1, 1, CURRENT_TIMESTAMP, 'app')
+               VALUES (?, '03 Kebele', ?, ?, NULL, ?, 1, 1, CURRENT_TIMESTAMP, 'app')
                ON CONFLICT(user_id) DO UPDATE SET latitude=excluded.latitude, longitude=excluded.longitude,
+                 kebele=excluded.kebele,
                  assigned_da_id=excluded.assigned_da_id, consent_data=1, consent_alerts=1,
                  updated_at=CURRENT_TIMESTAMP""",
             (farmer_id, woreda.latitude, woreda.longitude, da_id),
         )
-        farm = conn.execute("SELECT id FROM farms WHERE user_id=? AND field_name='Demo irrigated wheat plot'",
-                            (farmer_id,)).fetchone()
+        farm = conn.execute("SELECT id FROM farms WHERE user_id=? AND field_name IN (?, ?)",
+                            (farmer_id, *PLOT)).fetchone()
         planted = date.today() - timedelta(days=args.days_after_planting)
         if farm:
             farm_id = farm[0]
-            conn.execute("UPDATE farms SET planted_date=?, irrigated=1 WHERE id=?", (planted.isoformat(), farm_id))
+            conn.execute("UPDATE farms SET planted_date=?, irrigated=1, field_name=?, notes=NULL WHERE id=?",
+                         (planted.isoformat(), PLOT[0], farm_id))
         else:
             farm_id = conn.execute(
                 """INSERT INTO farms (user_id, field_name, crop_name, variety, area_ha, planted_date, status, notes, irrigated)
-                   VALUES (?, 'Demo irrigated wheat plot', 'wheat', NULL, 0.5, ?, 'healthy', 'DEMO data for the advisory pitch', 1)""",
-                (farmer_id, planted.isoformat()),
+                   VALUES (?, ?, 'wheat', NULL, 0.5, ?, 'healthy', NULL, 1)""",
+                (farmer_id, PLOT[0], planted.isoformat()),
             ).lastrowid
         conn.execute("DELETE FROM crop_seasons WHERE farm_id=?", (farm_id,))
         conn.execute(

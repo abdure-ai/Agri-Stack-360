@@ -50,7 +50,7 @@ export const ti: Record<MessageKey, string> = {
   "common.download": "ኣውርድ",
   "common.exportCsv": "CSV ኣውርድ",
   "common.viewAll": "ኩሉ ርአ",
-  "common.demoData": "ናይ መርኣዪ ሓበሬታ",
+  "common.demoData": "ኣመላኻቲ ሓበሬታ",  // draft – needs native review
   "common.toggleSidebar": "ናይ ጎኒ ዝርዝር ክፈት/ዕጾ",
   "common.mainNavigation": "ቀንዲ መምርሒ",
   "common.breadcrumb": "መንገዲ ገጽ",
@@ -187,7 +187,7 @@ export const ti: Record<MessageKey, string> = {
   "signin.missing": "ቁጽሪ ቴሌፎንኩምን መሕለፊ ቃልኩምን ኣእትዉ።",
   "signin.noAccount": "ሕሳብ የብልኩምን?",
   "signin.createOne": "ሓድሽ ክፈቱ",
-  "signin.demoAccounts": "ናይ መርኣዪ ሕሳባት",
+  "signin.demoAccounts": "ቅልጡፍ ምእታው",  // draft – needs native review
 
   // ── Sign up ────────────────────────────────────────────────────────────
   "signup.metaTitle": "ሕሳብ ክፈቱ",
@@ -477,12 +477,12 @@ export const ti: Record<MessageKey, string> = {
   "area.loadFailed": "ዝርዝር ቦታታት ክጽዓን ኣይከኣለን። ርክብኩም ኣረጋግጹ።",
 
   // ── Crop health ────────────────────────────────────────────────────────
-  "demo.title": "ናይ መርኣዪ ሓበሬታ — ዝተረጋገጸ ምኽሪ ኣይኮነን",
-  "demo.message": "ኣብዚ ዝርኣዩ {subject} ንመርኣዪ ጥራይ ዝቐረቡ ኣብነታት እዮም። ምስ ወግዓዊ ዝርዝር ምዝገባ ኣይተረጋገጹን። ኬሚካል ንምዕዳግ ወይ ንምንፍሕ ኣይትጠቐሙሎም — ሰራሕተኛ ልምዓትኩም ሕተቱ።",
+  "demo.title": "ኣመላኻቲ ሓበሬታ፦ ቅድሚ ምጥቃምኩም ኣረጋግጹ",  // draft – needs native review
+  "demo.message": "ኣብዚ ዝርኣዩ {subject} ኣመላኻቲ እዮም። ቅድሚ ምግዛእኩም ወይ ምንጻግኩም ምስ መለለዪ ፍርያትን ናይ ሕጂ መዝገብ EAA ኣረጋግጹ፤ ምስ ሰራሕተኛ ልምዓትኩም'ውን ተመኻኸሩ።",  // draft – needs native review
   "demo.subject.products": "ኣስማት ፍርያትን መጠናትን",
   "demo.subject.suppliers": "ኣቕረብቲ፣ ፍርያትን ዋጋታትን",
   "demo.subject.textDiagnosis": "ብጽሑፍ ዝተዋህቡ መርመራታት፣ ኣስማት ፍርያትን መጠናትን",
-  "demo.message.loans": "ኣብዚ ዝርአዩ ለቓሕቲ፣ ዓይነታት ልቓሕን መጠን ወለድን ንምርኣይ ጥራይ ዝቐረቡ ኣብነታት እዮም። ሓቀኛ ቅናሻት ኣይኮኑን። ቅድሚ ምምልካትኩም ባንኪኹም ወይ ትካል ንኡስ ፋይናንስ ሕተቱ።",  // draft – needs native review
+  "demo.message.loans": "ኣብዚ ዝርኣዩ ለቃሕቲ፣ ዓይነታት ልቓሕን መጠን ወለድን ኣመላኻቲ እዮም። ቅድሚ ምምልካትኩም ውዕሉ ምስ ባንኪ ወይ ትካል ማይክሮፋይናንስ ኣረጋግጹ።",  // draft – needs native review
   "photo.outOfStock": "ኣብ መኽዘን የለን",  // draft – needs native review
   "photo.sources": "ምንጭታት፦ {list}",  // draft – needs native review
   "unit.km": "ኪ.ሜ",  // draft – needs native review
@@ -506,7 +506,7 @@ export const ti: Record<MessageKey, string> = {
   "crop.goToProfile": "ናብ መግለጺ ርእሰይ ኪድ",
   "crop.checkField": "ግራት መርምሩ",
   "crop.mode.photo": "ብስእሊ ምምርማር",
-  "crop.mode.describe": "ብምግላጽ (መርኣዪ)",
+  "crop.mode.describe": "ግለጹ (ቤታ)",  // draft – needs native review
   "crop.whichField": "ኣየናይ ግራት?",
   "crop.whatDoYouSee": "እንታይ ትርእዩ?",
   "crop.describePlaceholder": "ቆጽሊ፣ ጉንዲ ወይ ፍረ ግለጹ፦ ሕብሪ፣ ነጠብጣብ፣ ካበይ ከም ዝጀመረ፣ ክንደይ ክፋል ግራት…",
@@ -519,7 +519,7 @@ export const ti: Record<MessageKey, string> = {
   "crop.risk": "ሓደጋ {level}",
   "crop.match": "{pct}% ተዛማዲ",
   "crop.signs": "ዝርኣዩ ምልክታት",
-  "crop.whatToDoDemo": "እንታይ ክትገብሩ ከም ዘለኩም (ኣብነት መርኣዪ)",
+  "crop.whatToDoDemo": "እንታይ ክትገብሩ (ቤታ)",  // draft – needs native review
   "crop.checkAgain": "ግራት ብ{date} ደጊምኩም መርምሩ።",
   "crop.guideOnly": "እዚ መምርሒ ጥራይ እዩ — ንኸቢድ ጸገማት ሰራሕተኛ ልምዓትኩም ደውሉ።",
   "crop.saved": "ኣብ ታሪኽ ተዓቂቡ",
@@ -558,11 +558,11 @@ export const ti: Record<MessageKey, string> = {
   "photo.hours": "{n} ሰዓት",
   "photo.reg": "ምዝገባ {n}",
   "photo.verified": "ዝተረጋገጸ",
-  "photo.placeholder": "ግዝያዊ — ዘይተረጋገጸ",
+  "photo.placeholder": "መዝገብ EAA ኣረጋግጹ",  // draft – needs native review
   "photo.ppe": "ክዳን መከላኸሊ፦ {items}",
   "photo.sponsored": "ብስፖንሰር",
   "photo.notChecked": "ክሳብ ሕጂ ብክኢላ ኣይተረጋገጸን",
-  "photo.notCheckedBody": "ዝርዝራት ፍርያትን መጠንን ወግዓዊ ዝርዝር ክሳብ ዝረጋገጽ ግዝያዊ እዮም። ቅድሚ ምዕዳግኩም ወይ ምንፋሕኩም ምስ ሰራሕተኛ ልምዓትኩም ኣረጋግጹ።",
+  "photo.notCheckedBody": "መጠናት ምስ መዝገብ EAA ክሳብ ዝረጋገጹ ኣይርኣዩን። መለለዪ ፍርያት ስዓቡ፤ ቅድሚ ምግዛእኩም ወይ ምንጻግኩም ምስ ሰራሕተኛ ልምዓትኩም ኣረጋግጹ።",  // draft – needs native review
   "photo.inField": "ኣብ ግራት እንታይ ክትገብሩ ኣለኩም",
   "photo.ifSpray": "ምንፋሕ እንተኣድለየ",
   "photo.approvedAI": "ዝተፈቕዱ ንጡፋት ንጥረ ነገራት፦ {list}። ዝተመዝገበ ፍርያት ንምርካብ ሰራሕተኛ ልምዓትኩም ሕተቱ።",
@@ -1234,8 +1234,8 @@ export const ti: Record<MessageKey, string> = {
   "reports.noData": "ኣብዚ ከባቢን እዋንን ንጥፈት የለን።",  // draft – needs native review
   "reports.map": "ቅድመ መጠንቀቕታ ለበዳ",  // draft – needs native review
   "reports.mapHint": "ኣብ ዝሓለፋ {n} መዓልትታት ዝተገብሩ ጸብጻባት ሕማም፣ ኣብ ማእከል ወረዳ ዝተቐመጡ (ኣብ ግራውቲ ኣይኮነን)። ዝዓበየት ነጥቢ ብዙሕ ጸብጻብ ማለት እዩ።",  // draft – needs native review
-  "reports.demo": "ሓበሬታ ምርኢት ኣእቱ",  // draft – needs native review
-  "reports.demoBadge": "ሓበሬታ ምርኢት ሓዊሱ",  // draft – needs native review
+  "reports.demo": "ኣብነታዊ መዛግብቲ ኣእቱ",  // draft – needs native review
+  "reports.demoBadge": "ኣብነታዊ መዛግብቲ የጠቓልል",  // draft – needs native review
   "reports.band.high": "10 ወይ ልዕሊኡ",  // draft – needs native review
   "reports.band.medium": "ካብ 5 ክሳብ 9",  // draft – needs native review
   "reports.band.low": "ትሕቲ 5",  // draft – needs native review
@@ -1255,7 +1255,7 @@ export const ti: Record<MessageKey, string> = {
   "perm.supplier_manage.desc": "ፍርያታት ምዝርዛር፣ ጉጅለታት ኮድን ምልክታትን ምፍጣር፣ ጉጅለታት ምምላስን ጸብጻባት ምርግጋጽ ምርኣይን።",  // draft – needs native review
   "perm.orgs_manage": "ትካላት ምምሕዳር",  // draft – needs native review
   "perm.orgs_manage.desc": "ትካላት ኣቕራቢ ምፍጣር፣ ተጠቀምቶም ምውሳኽን ምእጋድን።",  // draft – needs native review
-  "demo.message.trust": "ኣብዚ ዘለዉ ፍርያታት፣ ቁጽርታት ምዝገባን ኣቕረብትን ንፈተነ ዝተቐመጡ ኣብነታት እዮም። እቲ ወግዓዊ ዝርዝር ዝተመዝገቡ ፍርያታት ኣይኮኑን።",  // draft – needs native review
+  "demo.message.trust": "ዝርዝር ፍርያት ካብ ማንዋል ስርናይ ሚኒስትሪ ሕርሻ እዩ። ቁጽሪ ምዝገባ እቲ ወግዓዊ መዝገብ EAA ምስ ተራኸበ ይመጽእ።",  // draft – needs native review
   "trust.description": "ኣብ ማዕሸግ ዘርኢ፣ ማዳበርያ ወይ ኬሚካል ዘሎ QR ኮድ ቃኒኹም ወይ ኮዱ ጽሒፍኩም፣ ሓቀኛ ምዃኑ ፍለጡ።",  // draft – needs native review
   "trust.codeLabel": "ኮድ ፍርያት",  // draft – needs native review
   "trust.codePlaceholder": "ንኣብነት AB3D-EF7H-JK9M",  // draft – needs native review
@@ -1709,7 +1709,8 @@ export const ti: Record<MessageKey, string> = {
   "tips.cancel": "ግደፍ",  // draft – needs native review
 
   // ── Sign-in demo accounts ─────────────────────────────────────────────────
-  "signin.demoHint": "ንምእታው ሕሳብ ጠውቑ። ንመርኣዪ ጥራይ፦ ኣብ ናይ ሓቂ ስሪት ይሕባእ።",  // draft – needs native review
+  "signin.demoHint": "ናይ ምቕራብ ከባቢ ምስ ኣብነታዊ ሰባትን መዛግብትን። ንምእታው ሕሳብ ጠውቑ።",  // draft – needs native review
+  "signin.demoPassword": "ቃል ምሕላፍ",  // draft – needs native review
   "signin.demo.pitchFarmer": "ሓረስታይ መርኣዪ፣ ደዋ ጨፋ",  // draft – needs native review
   "signin.demo.farmerCases": "ጉዳያት DA ዘለዎ ሓረስታይ",  // draft – needs native review
   "signin.demo.oromiaFarmer": "ኣብ ኦሮሚያ ዘሎ ሓረስታይ (ኣፋን ኦሮሞ)",  // draft – needs native review

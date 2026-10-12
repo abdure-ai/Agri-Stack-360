@@ -28,7 +28,10 @@ def t(key: str, lang: str = "en", **values) -> str:
     if text is None:
         raise KeyError(f"Missing advisory message '{key}'")
     defaults = {"hotline": HOTLINE_8028,
-                "emergency_contact": env("ADVISORY_EMERGENCY_CONTACT", EMERGENCY_CONTACT_PLACEHOLDER)}
+                # Until a verified number is set, point to the nearest health centre (no placeholder text shown).
+                "emergency_contact": env("ADVISORY_EMERGENCY_CONTACT")
+                or _catalog(lang).get("emergency_fallback") or _catalog("en").get("emergency_fallback")
+                or EMERGENCY_CONTACT_PLACEHOLDER}
     return text.format(**{**defaults, **values})
 
 

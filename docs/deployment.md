@@ -198,6 +198,24 @@ Get the HTTPS certificate with Let's Encrypt (`certbot --nginx`).
 
 ---
 
+## 6a. Demo site (pitch only)
+
+For a public demo, add to the server's `.env`:
+
+```
+DEMO_MODE=1
+ADMIN_PASSWORD=<a new password of at least 10 characters, known only to you>
+```
+
+On the next deploy the workflow runs `scripts/demo_setup.py` once (marker `/state/.demo-seeded`). It adds the demo
+accounts and the demo data (40 DEMO farmers in 12 woredas with their activity) and sets the administrator
+`0900000001` password to `ADMIN_PASSWORD`. While `DEMO_MODE=1`, the sign-in page lists 14 demo accounts with their
+passwords for one-tap sign-in. The administrator is never listed.
+
+To re-seed later: `docker compose --profile demo run --rm demo`. After the demo, set `DEMO_MODE=0` and restart
+(`docker compose up -d`): the list disappears. Then disable or delete the demo accounts (Users page) before real
+users join, because their passwords are public.
+
 ## 7. Sizing (starting point)
 
 | Resource | Minimum | Notes |

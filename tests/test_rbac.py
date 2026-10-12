@@ -23,7 +23,8 @@ PUBLIC = {
     ("GET", "/api/geo/areas"), ("GET", "/api/geo/areas/{pcode}"), ("GET", "/api/geo/search"),
     ("GET", "/api/meta"), ("GET", "/api/varieties"), ("GET", "/api/markets"), ("GET", "/api/prices"),
     ("GET", "/api/summary"), ("GET", "/api/regional"), ("GET", "/api/spread"),
-    ("POST", "/api/beckn/search"),   # authenticated by the Beckn signature, not sign-in (tests/test_beckn.py)
+    ("POST", "/api/beckn/search"),
+    ("GET", "/api/auth/demo-accounts"),   # empty unless DEMO_MODE=1 (tests/test_demo_accounts.py)   # authenticated by the Beckn signature, not sign-in (tests/test_beckn.py)
 }
 
 

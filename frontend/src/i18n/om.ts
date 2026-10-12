@@ -50,7 +50,7 @@ export const om: Record<MessageKey, string> = {
   "common.download": "Buusi",
   "common.exportCsv": "CSV buusi",
   "common.viewAll": "Hunda ilaali",
-  "common.demoData": "Ragaa agarsiisaa",
+  "common.demoData": "Odeeffannoo agarsiisaa",  // draft – needs native review
   "common.toggleSidebar": "Tarree cinaa bani/cufi",
   "common.mainNavigation": "Qajeelcha ijoo",
   "common.breadcrumb": "Karaa fuulaa",
@@ -187,7 +187,7 @@ export const om: Record<MessageKey, string> = {
   "signin.missing": "Lakkoofsa bilbilaa fi jecha icciitii kee galchi.",
   "signin.noAccount": "Herrega hin qabduu?",
   "signin.createOne": "Haaraa bani",
-  "signin.demoAccounts": "Herrega agarsiisaa",
+  "signin.demoAccounts": "Seensa ariifataa",  // draft – needs native review
 
   // ── Sign up ────────────────────────────────────────────────────────────
   "signup.metaTitle": "Herrega bani",
@@ -477,12 +477,12 @@ export const om: Record<MessageKey, string> = {
   "area.loadFailed": "Tarree bakkeewwanii fe'uun hin danda'amne. Walqunnamtii kee mirkaneessi.",
 
   // ── Crop health ────────────────────────────────────────────────────────
-  "demo.title": "Ragaa agarsiisaa — gorsa mirkanaa'e miti",
-  "demo.message": "{subject} asitti mul'atan fakkeenya agarsiisaaf qofa. Tarree galmaa'e seeraa wajjin hin mirkanoofne. Keemikaala bituuf ykn biifuuf itti hin fayyadamin — Hojjetaa Misoomaa kee gaafadhu.",
+  "demo.title": "Odeeffannoo agarsiisaa: osoo hin fayyadamin dura mirkaneessaa",  // draft – needs native review
+  "demo.message": "{subject} asitti mul'atan agarsiisaa qofa. Osoo hin bitin ykn hin biifin dura moxxaa oomishaa fi galmee EAA ammaa waliin mirkaneessaa, DA keessan waliinis mari'adhaa.",  // draft – needs native review
   "demo.subject.products": "Maqaa oomishaa fi hamma",
   "demo.subject.suppliers": "Dhiyeessitoota, oomishaa fi gatii",
   "demo.subject.textDiagnosis": "Qorannoo barreeffamaan, maqaa oomishaa fi hamma",
-  "demo.message.loans": "Liqeessitoonni, gosoonni liqii fi dhalli liqii asitti mul'atan fakkeenya agarsiisaaf qofa. Dhiyeessii dhugaa miti. Osoo hin iyyatin dura baankii keessan ykn dhaabbata maayikiroo faayinaansii gaafadhaa.",  // draft – needs native review
+  "demo.message.loans": "Liqeessitoonni, gosoonni liqii fi dhalli asitti mul'atan agarsiisaa qofa. Osoo hin iyyatin dura haalawwan baankii ykn dhaabbata maaykiroofaayinaansii waliin mirkaneessaa.",  // draft – needs native review
   "photo.outOfStock": "kuusaa keessa hin jiru",  // draft – needs native review
   "photo.sources": "Maddoota: {list}",  // draft – needs native review
   "unit.km": "km",  // draft – needs native review
@@ -506,7 +506,7 @@ export const om: Record<MessageKey, string> = {
   "crop.goToProfile": "Gara Ibsa Kootti deemi",
   "crop.checkField": "Lafa qonnaa qoradhu",
   "crop.mode.photo": "Suuraan qorachuu",
-  "crop.mode.describe": "Ibsuun (agarsiisa)",
+  "crop.mode.describe": "Ibsi (beetaa)",  // draft – needs native review
   "crop.whichField": "Lafa qonnaa kami?",
   "crop.whatDoYouSee": "Maal argita?",
   "crop.describePlaceholder": "Baala, ulmii ykn firii ibsi: halluu, tuqaalee, eessaa akka jalqabe, hammam lafa qonnaa…",
@@ -519,7 +519,7 @@ export const om: Record<MessageKey, string> = {
   "crop.risk": "Balaa {level}",
   "crop.match": "%{pct} walsima",
   "crop.signs": "Mallattoolee ilaalamuu qaban",
-  "crop.whatToDoDemo": "Maal gochuu qabda (fakkeenya agarsiisaa)",
+  "crop.whatToDoDemo": "Maal gochuu qabdu (beetaa)",  // draft – needs native review
   "crop.checkAgain": "Lafa qonnaa {date} irra deebi'ii qoradhu.",
   "crop.guideOnly": "Kun qajeelfama qofa — rakkoo cimaaf hojjetaa misoomaa kee bilbili.",
   "crop.saved": "Seenaa keessatti olkaa'ameera",
@@ -558,11 +558,11 @@ export const om: Record<MessageKey, string> = {
   "photo.hours": "sa'aatii {n}",
   "photo.reg": "Galmee {n}",
   "photo.verified": "Mirkanaa'e",
-  "photo.placeholder": "Yeroof — hin mirkanoofne",
+  "photo.placeholder": "Galmee EAA mirkaneessi",  // draft – needs native review
   "photo.ppe": "Uffata eegumsaa: {items}",
   "photo.sponsored": "Deeggarsaan",
   "photo.notChecked": "Hanga ammaatti ogeessaan hin mirkanoofne",
-  "photo.notCheckedBody": "Odeeffannoon oomishaa fi hammaa hanga tarreen seeraa mirkanaa'utti yeroof qofa. Bituu ykn biifuu dura Hojjetaa Misoomaa kee wajjin mirkaneessi.",
+  "photo.notCheckedBody": "Hammi hanga galmee EAA waliin mirkanaa'utti hin mul'atu. Moxxaa oomishaa hordofaa; osoo hin bitin ykn hin biifin dura DA keessan waliin mirkaneessaa.",  // draft – needs native review
   "photo.inField": "Lafa qonnaa irratti maal gochuu qabda",
   "photo.ifSpray": "Biifuu yoo barbaachise",
   "photo.approvedAI": "Qabiyyeewwan hojii hayyamaman: {list}. Oomisha galmaa'e argachuuf Hojjetaa Misoomaa kee gaafadhu.",
@@ -1234,8 +1234,8 @@ export const om: Record<MessageKey, string> = {
   "reports.noData": "Naannoo fi yeroo kana keessatti sochiin hin jiru.",  // draft – needs native review
   "reports.map": "Akeekkachiisa duraa dhukkubaa",  // draft – needs native review
   "reports.mapHint": "Gabaasa dhukkubaa guyyoota {n} darban, giddu-gala aanaa irratti kaa'ame (qonna irratti miti). Tuqaan guddaan gabaasa baay'ee jechuudha.",  // draft – needs native review
-  "reports.demo": "Odeeffannoo agarsiisaa dabali",  // draft – needs native review
-  "reports.demoBadge": "odeeffannoo agarsiisaa of keessaa qaba",  // draft – needs native review
+  "reports.demo": "Galmeewwan fakkeenyaa dabaluu",  // draft – needs native review
+  "reports.demoBadge": "galmeewwan fakkeenyaa ni dabalata",  // draft – needs native review
   "reports.band.high": "10 fi isaa ol",  // draft – needs native review
   "reports.band.medium": "5 hanga 9",  // draft – needs native review
   "reports.band.low": "5 gadi",  // draft – needs native review
@@ -1255,7 +1255,7 @@ export const om: Record<MessageKey, string> = {
   "perm.supplier_manage.desc": "Oomishaalee tarreessuu, garee koodii fi mallattoo uumuu, garee deebisuu fi gabaasa mirkaneessaa arguu.",  // draft – needs native review
   "perm.orgs_manage": "Dhaabbilee bulchuu",  // draft – needs native review
   "perm.orgs_manage.desc": "Dhaabbilee dhiyeessaa uumuu, fayyadamtoota isaanii dabaluu fi dhorkuu.",  // draft – needs native review
-  "demo.message.trust": "Oomishaaleen, lakkoofsonni galmee fi dhiyeessitoonni asii fakkeenya yaaliif kaa'aman. Tarree oomishaalee galmaa'anii ifaa miti.",  // draft – needs native review
+  "demo.message.trust": "Tarreen oomishaa maanuwaalii qamadii MoA irraa fudhatame. Lakkoofsonni galmee galmeen EAA seera qabeessi yeroo walqabatu dhufu.",  // draft – needs native review
   "trust.description": "Koodii QR paakeejii sanyii, xaa'oo ykn keemikaalaa irra jiru sakatta'aa ykn koodii isaa barreessaa, dhugaa ta'uu isaa beekuuf.",  // draft – needs native review
   "trust.codeLabel": "Koodii oomishaa",  // draft – needs native review
   "trust.codePlaceholder": "fkn. AB3D-EF7H-JK9M",  // draft – needs native review
@@ -1709,7 +1709,8 @@ export const om: Record<MessageKey, string> = {
   "tips.cancel": "Dhiisi",  // draft – needs native review
 
   // ── Sign-in demo accounts ─────────────────────────────────────────────────
-  "signin.demoHint": "Seenuuf herrega tuqi. Agarsiisaaf qofa: gosa hojii dhugaa keessatti ni dhokata.",  // draft – needs native review
+  "signin.demoHint": "Naannoo dhiyeessaa namoota fi galmeewwan fakkeenyaa qabu. Seenuuf herrega tuqi.",  // draft – needs native review
+  "signin.demoPassword": "Jecha darbii",  // draft – needs native review
   "signin.demo.pitchFarmer": "Qonnaan bulaa agarsiisaa, Dawaa Caffaa",  // draft – needs native review
   "signin.demo.farmerCases": "Qonnaan bulaa dhimma DA qabu",  // draft – needs native review
   "signin.demo.oromiaFarmer": "Qonnaan bulaa Oromiyaa (Afaan Oromoo)",  // draft – needs native review

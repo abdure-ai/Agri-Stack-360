@@ -5,11 +5,12 @@ Real sources:   woredas and their centre points (eth_admin_boundaries), terrain 
                 one request), crop-calendar rules and the MoA knowledge base, NMIS market prices (already
                 in the platform), the real disease model for the demo photos, and the platform's own
                 engines for alerts, copy detection and tips.
-Labelled DEMO:  every person ("(DEMO)" in the name, phones 0945000xxx), farm, season, photo check
-                (source='simulated'), record and request. Products, shops and partners keep their
-                PLACEHOLDER names. Nothing here is a real farmer, yield, price or partner.
+Fictional:      every person (ordinary names, phones 0945000xxx), farm, season, photo check
+                (source='simulated' in the database), record and request. The sign-in page of a presentation
+                site says it holds sample people and records. Nothing here is a real farmer, yield or partner.
 
-Safe to run again: it removes what it made before (phones 0945000xxx and rows marked DEMO) first.
+Safe to run again: it removes what it made before (phones 0945000xxx and the presentation organisations'
+records) first.
 The pitch demo farmer (0944000001) is not touched.
 
     .venv/Scripts/python.exe scripts/seed_full_demo.py [--no-photos] [--no-elevation]
@@ -59,7 +60,18 @@ FIRST = {
 FATHER = ["Ali", "Mohammed", "Bekele", "Tadesse", "Ahmed", "Hussen", "Kebede", "Gutema", "Abdi", "Wolde", "Negash",
           "Teshome", "Dibaba", "Jemal", "Lemma", "Hailu", "Desta", "Yimer"]
 OTHER_CROPS = ["teff", "maize", "barley", "sorghum"]
-EXTRA_DAS = [("0945000201", "Demo DA Oromia (DEMO)", "ET040816"), ("0945000202", "Demo DA SNNP (DEMO)", "ET070403")]
+EXTRA_DAS = [("0945000201", "Gemechu Tola", "ET040816"), ("0945000202", "Tamirat Abebe", "ET070403")]
+# Presentation organisations (seed_advisory_demo.py), with earlier names an existing database may still have.
+ORG_NAMES = {
+    "supplier": ("Abay Agro-Inputs PLC", "PLACEHOLDER Demo Supplier PLC"),
+    "agro_dealer": ("Kemise Farmers' Agro Shop", "PLACEHOLDER Demo Agro Shop"),
+    "abc": ("Dewa Cheffa Irrigated Wheat ABC", "PLACEHOLDER Demo ABC (Dewa Cheffa)"),
+    "commercial_farm": ("Borkena Valley Farm PLC", "PLACEHOLDER Demo Estate"),
+    "ngo": ("Rural Harvest Initiative", "PLACEHOLDER Demo NGO"),
+}
+SECOND_PROJECT = ("Highland Wheat Septoria Pilot", "Highland wheat septoria pilot (DEMO)")
+BATCHES = ("AB-2026-02", "AB-2026-03", "DEMO-2026-02", "DEMO-2026-03")
+BUY_NOTES = ("Clean, dry grain; delivery to Dessie", "Clean, dry grain; moisture below 12.5%", "DEMO request: clean, dry grain")
 DEMO_PHOTOS = [ROOT / "data" / "demo" / "photos" / "leaf-rust.jpg", ROOT / "data" / "demo" / "photos" / "healthy-wheat.png"]
 
 
@@ -92,14 +104,14 @@ def cleanup(conn) -> None:
                     f"DELETE FROM escalations WHERE farmer_id IN ({marks})",
                     f"DELETE FROM credit_requests WHERE farmer_id IN ({marks})"):
             conn.execute(sql, ids)
-        conn.execute("DELETE FROM verifications WHERE id IN (SELECT verification_id FROM dealer_checks d JOIN organisations o "
-                     "ON o.id = d.org_id WHERE o.name LIKE 'PLACEHOLDER Demo%')")
-        conn.execute("DELETE FROM dealer_checks WHERE verification_id IS NULL")
-        conn.execute("DELETE FROM estate_scouting WHERE note LIKE 'DEMO%'")
-        conn.execute("DELETE FROM abc_contributions WHERE description LIKE 'DEMO%'")
-        conn.execute("DELETE FROM buy_requests WHERE note LIKE 'DEMO%'")
-        conn.execute("DELETE FROM code_batches WHERE batch_number LIKE 'DEMO-2026-0%' AND batch_number != 'DEMO-2026-01'")
-        conn.execute("DELETE FROM ngo_projects WHERE name = 'Highland wheat septoria pilot (DEMO)'")
+        shop, abc, estate = org(conn, "agro_dealer"), org(conn, "abc"), org(conn, "commercial_farm")
+        conn.execute("DELETE FROM verifications WHERE id IN (SELECT verification_id FROM dealer_checks WHERE org_id=?)", (shop,))
+        conn.execute("DELETE FROM dealer_checks WHERE org_id=? OR verification_id IS NULL", (shop,))
+        conn.execute("DELETE FROM estate_scouting WHERE block_id IN (SELECT id FROM estate_blocks WHERE org_id=?)", (estate,))
+        conn.execute("DELETE FROM abc_contributions WHERE org_id=?", (abc,))
+        conn.execute(f"DELETE FROM buy_requests WHERE note IN ({','.join('?' * len(BUY_NOTES))})", BUY_NOTES)
+        conn.execute(f"DELETE FROM code_batches WHERE batch_number IN ({','.join('?' * len(BATCHES))})", BATCHES)
+        conn.execute("DELETE FROM ngo_projects WHERE name IN (?, ?)", SECOND_PROJECT)
         conn.execute("DELETE FROM daily_tips WHERE origin = 'calendar' AND status = 'draft'")
     with conn:
         conn.execute(f"DELETE FROM users WHERE id IN ({marks})", ids)       # cascades to farms, seasons, alerts, ...
@@ -148,13 +160,14 @@ def seed_people(conn, online: bool) -> list[dict]:
         lat0, lon0 = centre[pcode]
         for _ in range(count):
             n += 1
-            name = f"{rng.choice(FIRST[lang])} {rng.choice(FATHER)} (DEMO)"
+            name = f"{rng.choice(FIRST[lang])} {rng.choice(FATHER)}"
             lat, lon = lat0 + rng.uniform(-0.04, 0.04), lon0 + rng.uniform(-0.04, 0.04)
             with conn:
                 uid = add_person(conn, f"{PHONE_PREFIX}{n:03d}", name, "farmer", pcode, lang)
                 conn.execute("""INSERT INTO farmer_profiles (user_id, kebele, latitude, longitude, altitude_m, assigned_da_id)
-                                VALUES (?, 'PLACEHOLDER_VERIFY_KEBELE', ?, ?, ?, ?)""",
-                             (uid, round(lat, 5), round(lon, 5), alt.get(pcode), das.get(pcode[:4])))
+                                VALUES (?, ?, ?, ?, ?, ?)""",
+                             (uid, f"{rng.randint(1, 12):02d} Kebele", round(lat, 5), round(lon, 5), alt.get(pcode),
+                              das.get(pcode[:4])))
             consent.set_consent(conn, uid, data=rng.random() < 0.9, alerts=rng.random() < 0.8,
                                 training=rng.random() < 0.5, by=das.get(pcode[:4]) or uid, method="da_verbal")
             area = round(rng.choice([0.25, 0.5, 0.5, 0.75, 1.0, 1.0, 1.25, 1.5, 2.0]), 2)
@@ -162,14 +175,14 @@ def seed_people(conn, online: bool) -> list[dict]:
             with conn:
                 farm = conn.execute(
                     """INSERT INTO farms (user_id, field_name, crop_name, area_ha, planted_date, status, notes, irrigated)
-                       VALUES (?, 'Main wheat plot (DEMO)', 'wheat', ?, ?, 'healthy', 'DEMO data', ?)""",
+                       VALUES (?, 'Main wheat plot', 'wheat', ?, ?, 'healthy', NULL, ?)""",
                     (uid, area, planted.isoformat(), int(kind == "irrigated"))).lastrowid
                 season = conn.execute(
                     "INSERT INTO crop_seasons (farm_id, crop, planting_date, season, status) VALUES (?, 'wheat', ?, ?, 'active')",
                     (farm, planted.isoformat(), kind)).lastrowid
                 if rng.random() < 0.6:
                     conn.execute("""INSERT INTO farms (user_id, field_name, crop_name, area_ha, status, notes)
-                                    VALUES (?, 'Second plot (DEMO)', ?, ?, 'healthy', 'DEMO data')""",
+                                    VALUES (?, 'Second plot', ?, ?, 'healthy', NULL)""",
                                  (uid, rng.choice(OTHER_CROPS), round(rng.choice([0.25, 0.5, 0.75]), 2)))
             farmers.append({"id": uid, "pcode": pcode, "kind": kind, "lat": lat, "lon": lon, "farm": farm,
                             "season": season, "area": area, "da": das.get(pcode[:4]), "lang": lang, "alt": alt.get(pcode)})
@@ -205,7 +218,7 @@ def seed_photo_checks(conn, farmers: list[dict]) -> None:
                     conn.execute("""INSERT INTO escalations (diagnosis_id, farmer_id, reason, assigned_to, status, resolution,
                                     created_at, resolved_at) VALUES (?,?,?,?,?,?,?,?)""",
                                  (did, f["id"], "low_confidence" if uncertain else "advice_failed", f["da"], status,
-                                  "DEMO: visited the plot and confirmed the advice." if status == "answered" else None,
+                                  "Visited the plot and confirmed the advice." if status == "answered" else None,
                                   stamp(when), stamp(when + timedelta(days=1)) if status == "answered" else None))
             diag += 1
     print(f"{diag} simulated photo checks (last 4 weeks) with DA cases for uncertain or worse results.")
@@ -214,7 +227,7 @@ def seed_photo_checks(conn, farmers: list[dict]) -> None:
 # ── Organisations ────────────────────────────────────────────────────────────
 
 def org(conn, type_: str) -> int | None:
-    return one(conn, "SELECT id FROM organisations WHERE type=? AND name LIKE 'PLACEHOLDER Demo%' ORDER BY id", (type_,))
+    return one(conn, "SELECT id FROM organisations WHERE type=? AND name IN (?, ?) ORDER BY id", (type_, *ORG_NAMES[type_]))
 
 
 def seed_input_trust(conn, farmers: list[dict]) -> None:
@@ -231,13 +244,13 @@ def seed_input_trust(conn, farmers: list[dict]) -> None:
             code = input_trust.new_code(conn)
             conn.execute("""INSERT INTO code_batches (org_id, product_id, batch_number, units, manufactured_on, expires_on, code,
                             created_by) VALUES (?,?,?,?,?,?,?,?)""",
-                         (supplier, pid, f"DEMO-2026-0{i}", rng.choice([500, 800, 1200]),
+                         (supplier, pid, f"AB-2026-0{i}", rng.choice([500, 800, 1200]),
                           (now.date() - timedelta(days=60)).isoformat(), (now.date() + timedelta(days=640)).isoformat(),
                           code, sup_user))
             codes.append(code)
     # Farmers check packs. Each batch is sold in up to 3 woredas (as a real batch would be); copies of the
     # third batch's label also turn up in Gonder Zuria, which the real engine flags as possible copies.
-    # The first batch (DEMO-2026-01, the code used in the live pitch demo) stays within its 3 woredas.
+    # The first batch (AB-2026-01, the code used in the live pitch demo) stays within its 3 woredas.
     sold_in = {0: {"ET031001", "ET031002", "ET031004"}, 1: {"ET040816", "ET041109", "ET041104"},
                2: {"ET041706", "ET041704", "ET070403"}}
     planned = []
@@ -259,8 +272,8 @@ def seed_input_trust(conn, farmers: list[dict]) -> None:
     with conn:
         for f in rng.sample(farmers, k=4):
             conn.execute("""INSERT INTO fake_reports (user_id, product_text, shop_text, note, woreda_pcode, created_at)
-                            VALUES (?, 'Fungicide pack with a smudged label (DEMO)', 'Weekly market stall (DEMO)',
-                                    'DEMO report: price far below others, no batch number', ?, ?)""",
+                            VALUES (?, 'Fungicide pack with a smudged label', 'Weekly market stall',
+                                    'Price far below other shops, no batch number on the pack', ?, ?)""",
                          (f["id"], f["pcode"], stamp(now - timedelta(days=rng.randint(1, 20)))))
     shop = org(conn, "agro_dealer")
     dealer = one(conn, "SELECT id FROM users WHERE phone='0944000007'")
@@ -296,25 +309,25 @@ def seed_abc(conn, farmers: list[dict]) -> None:
                                                        stamp(now - timedelta(days=25)) if status == "active" else None))
             if status == "active":
                 conn.execute("""INSERT INTO abc_contributions (org_id, farmer_id, kind, description, quantity, unit, recorded_by,
-                                created_at) VALUES (?,?, 'land', 'DEMO record: irrigated plot', ?, 'ha', ?, ?)""",
+                                created_at) VALUES (?,?, 'land', 'Irrigated plot', ?, 'ha', ?, ?)""",
                              (abc, f["id"], f["area"], manager, stamp(now - timedelta(days=24))))
                 conn.execute("""INSERT INTO abc_contributions (org_id, farmer_id, kind, description, quantity, unit, recorded_by,
-                                created_at) VALUES (?,?, 'labour', 'DEMO record: weeding and canal cleaning', ?, 'days', ?, ?)""",
+                                created_at) VALUES (?,?, 'labour', 'Weeding and canal cleaning', ?, 'days', ?, ?)""",
                              (abc, f["id"], rng.choice([4, 6, 8, 10]), manager, stamp(now - timedelta(days=20))))
         if trader:
-            for crop, qt, days in (("wheat", 250, 75), ("wheat", 120, 60)):
+            for (crop, qt, days), note in zip((("wheat", 250, 75), ("wheat", 120, 60)), BUY_NOTES[:2]):
                 rid = conn.execute("""INSERT INTO buy_requests (trader_id, crop, quantity_qt, region_pcode, needed_by, note,
-                                      created_at) VALUES (?,?,?, 'ET03', ?, 'DEMO request: clean, dry grain', ?)""",
-                                   (trader, crop, qt, (now.date() + timedelta(days=days)).isoformat(),
+                                      created_at) VALUES (?,?,?, 'ET03', ?, ?, ?)""",
+                                   (trader, crop, qt, (now.date() + timedelta(days=days)).isoformat(), note,
                                     stamp(now - timedelta(days=3)))).lastrowid
             conn.execute("""INSERT INTO buy_request_responses (request_id, org_id, quantity_qt, message, created_by, created_at)
-                            VALUES (?,?,?, 'DEMO: members expect to harvest in about 10 weeks; we can offer part of it.', ?, ?)""",
+                            VALUES (?,?,?, 'Our members expect to harvest in about 10 weeks; we can offer part of it.', ?, ?)""",
                          (rid, abc, 80, manager, stamp(now - timedelta(days=1))))
     print(f"ABC: {len(local)} members ({len(local) - 2} active), contributions, 2 buyer requests and an answer.")
 
 
 def seed_estate(conn) -> None:
-    blocks = [r[0] for r in conn.execute("SELECT id FROM estate_blocks WHERE name LIKE '%(DEMO)'")]
+    blocks = [r[0] for r in conn.execute("SELECT id FROM estate_blocks WHERE org_id=?", (org(conn, "commercial_farm"),))]
     manager = one(conn, "SELECT id FROM users WHERE phone='0944000009'")
     now = local_now()
     with conn:
@@ -322,7 +335,7 @@ def seed_estate(conn) -> None:
             for days in (20, 13, 6, 1):
                 sev = rng.choice(["none", "none", "low", "medium"])
                 conn.execute("""INSERT INTO estate_scouting (block_id, disease_key, severity, incidence_pct, note, recorded_by,
-                                created_at) VALUES (?,?,?,?, 'DEMO scouting walk', ?, ?)""",
+                                created_at) VALUES (?,?,?,?, 'Field walk', ?, ?)""",
                              (b, None if sev == "none" else rng.choice(["leaf_rust", "powdery_mildew"]), sev,
                               0 if sev == "none" else rng.choice([2, 5, 8, 12]), manager, stamp(now - timedelta(days=days))))
     print(f"Commercial farm: {len(blocks) * 4} scouting records.")
@@ -337,7 +350,8 @@ def seed_ngo(conn) -> None:
         for pcode in ("ET031002", "ET030407"):
             conn.execute("INSERT OR IGNORE INTO ngo_project_areas (project_id, woreda_pcode) VALUES (?,?)", (pid, pcode))
         second = conn.execute("""INSERT INTO ngo_projects (org_id, name, description, start_date, created_at)
-                                 VALUES (?, 'Highland wheat septoria pilot (DEMO)', 'DEMO project', date('now', '-45 days'),
+                                 VALUES (?, 'Highland Wheat Septoria Pilot',
+                                         'Septoria scouting and resistant-variety demonstrations', date('now', '-45 days'),
                                  CURRENT_TIMESTAMP)""", (ngo,)).lastrowid
         for pcode in ("ET040816", "ET041109", "ET041104"):
             conn.execute("INSERT OR IGNORE INTO ngo_project_areas (project_id, woreda_pcode) VALUES (?,?)", (second, pcode))
@@ -354,7 +368,7 @@ def seed_lender(conn, farmers: list[dict]) -> None:
         for f, status in ((a, "approved"), (b, "declined"), (c, "pending")):
             phone = one(conn, "SELECT phone FROM users WHERE id=?", (f["id"],))
             conn.execute("""INSERT INTO credit_requests (lender_id, farmer_id, phone, purpose, status, requested_at, decided_at,
-                            expires_at) VALUES (?,?,?, 'DEMO: input loan for the next season', ?, ?, ?, ?)""",
+                            expires_at) VALUES (?,?,?, 'Input loan for the next season', ?, ?, ?, ?)""",
                          (lender, f["id"], phone, status, stamp(now - timedelta(days=4)),
                           stamp(now - timedelta(days=3)) if status != "pending" else None,
                           stamp(now + timedelta(days=27)) if status == "approved" else None))

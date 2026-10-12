@@ -61,7 +61,9 @@
       "price_none",
       "unit_kg",
       "unit_quintal",
-      "price_not_covered"
+      "price_not_covered",
+      "placeholder_warning",
+      "emergency_fallback"
     ]
   },
   "dont_know": "ይህንን ጥያቄ ከጸደቁት መመሪያዎች መመለስ አልቻልኩም። ጥያቄዎን ለልማት ጣቢያ ሰራተኛዎ (DA) ልኬዋለሁ፤ እርሳቸው መልስ ይሰጡዎታል።",
@@ -83,7 +85,7 @@
   "safety_reentry": "የተረጨውን ማሳ ለ{hours} ሰዓታት አይግቡበት።",
   "safety_disposal": "ባዶ እቃዎችን በድጋሚ አይጠቀሙ። ሶስት ጊዜ አጥበው የማጠቢያውን ውሃ ወደ መርጫው ማጠራቀሚያ ያፍሱ፤ እቃዎቹን የልማት ጣቢያ ሰራተኛዎ እንደሚመክሩት ያስወግዱ።",
   "safety_poisoning": "ከኬሚካል ጋር ከተነካካ በኋላ ማንም ቢታመም ወዲያውኑ የህክምና እርዳታ ይፈልጉ። የአደጋ ጊዜ ስልክ፦ {emergency_contact}።",
-  "placeholder_warning": "ማሳሰቢያ፦ በዚህ ማሳያ ያሉ የምርት እና የመጠን መረጃዎች ገና ያልተረጋገጡ ናቸው። በእነሱ ላይ ተመስርተው አይስሩ።",
+  "placeholder_warning": "መጠኖች አልታዩም፤ ምርቱን ከወቅታዊው የEAA መዝገብ ጋር ያረጋግጡ፣ መለያውን ይከተሉ፣ ከመርጨትዎ በፊት የልማት ጣቢያ ሰራተኛዎን ይጠይቁ።",
   "sources_label": "ምንጮች",
   "market_source": "የNMIS የገበያ ዋጋ መረጃ",
   "farm_source": "የእርሻዎ መረጃ",
@@ -143,7 +145,7 @@
   "trust_reason_expired": "የዚህ ስብስብ የአገልግሎት ጊዜ አልፏል። አይጠቀሙበት።",
   "trust_reason_possible_copy": "ይህ ኮድ ከሚጠበቀው በላይ ብዙ ጊዜ ወይም በብዙ ቦታዎች ተረጋግጧል። በሀሰተኛ እሽጎች ላይ ተገልብጦ ሊሆን ይችላል። የልማት ሰራተኛዎን ይጠይቁ።",
   "trust_details": "ምርት፦ {product}\nአቅራቢ፦ {org}\nስብስብ፦ {batch}",
-  "trust_placeholder": "(ሙከራ፦ የምርት መረጃዎቹ ምሳሌዎች ናቸው፤ ይፋዊው የተመዘገቡ ምርቶች ዝርዝር አይደሉም።)",
+  "trust_placeholder": "(የምርቱ ዝርዝር ከግብርና ሚኒስቴር የስንዴ ማኑዋል የተወሰደ ነው፤ ወቅታዊውን የEAA መዝገብ ያረጋግጡ።)",
   "expert_answer": "የግብርና ባለሙያ ({da_name}) ለጥያቄዎ መልስ ሰጥተዋል፦ {text}",
   "abc_message": "{org} (የእርስዎ ABC)፦ {text}",
   "ngo_message": "{org}፣ {project}፦ {text}",
@@ -164,5 +166,6 @@
   "price_none": "ለ{crop} የቅርብ ጊዜ የNMIS ዋጋ የለም።",
   "unit_kg": "ኪሎ",
   "unit_quintal": "ኩንታል",
-  "price_not_covered": "የNMIS የገበያ መረጃ {crop}ን አያካትትም፤ ስለዚህ ዋጋውን ልነግርዎ አልችልም። NMIS ዋጋ ያለው ለ፦ {crops}። ለ{crop} የልማት ጣቢያ ሰራተኛዎን፣ የህብረት ስራ ማህበርዎን ወይም በአካባቢው ገበያ ያሉ ነጋዴዎችን ይጠይቁ። አሁን መሸጥ ያዋጣ እንደሆነ በሚቀርብልዎ ዋጋና በወጪዎ ይወሰናል።"
+  "price_not_covered": "የNMIS የገበያ መረጃ {crop}ን አያካትትም፤ ስለዚህ ዋጋውን ልነግርዎ አልችልም። NMIS ዋጋ ያለው ለ፦ {crops}። ለ{crop} የልማት ጣቢያ ሰራተኛዎን፣ የህብረት ስራ ማህበርዎን ወይም በአካባቢው ገበያ ያሉ ነጋዴዎችን ይጠይቁ። አሁን መሸጥ ያዋጣ እንደሆነ በሚቀርብልዎ ዋጋና በወጪዎ ይወሰናል።",
+  "emergency_fallback": "በአቅራቢያዎ ወዳለው ጤና ጣቢያ ይሂዱ"
 }

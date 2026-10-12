@@ -127,7 +127,7 @@ def test_injection_text_flagged(lex):
 def test_poisoning_gets_fixed_message(conn, lex):
     p = pre_check(conn, "My son swallowed some fungicide, what should I do?", "en", lex)
     assert p.kind == "poisoning" and "seek medical help immediately" in p.message
-    assert "PLACEHOLDER_VERIFY_EMERGENCY_CONTACT" in p.message
+    assert "nearest health centre" in p.message          # no verified emergency number configured yet
     assert pre_check(conn, "ልጄ መርዝ ዋጠ", "am", lex).kind == "poisoning"
 
 

@@ -10,12 +10,14 @@ import { EyeCloseIcon, EyeIcon } from "@/icons";
 import type { MessageKey } from "@/i18n/core";
 import { useI18n } from "@/i18n/I18nProvider";
 import { roleLabel } from "@/utils/constants";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import AuthLayout from "./AuthLayout";
 
-/** Demo logins (scripts/seed_advisory_demo.py + seed_full_demo.py). One tap signs in. */
-const DEMO_ACCOUNTS: { role: string; phone: string; password: string; note?: MessageKey }[] = [
+type DemoAccount = { role: string; phone: string; password: string; note?: MessageKey };
+
+/** Local development fallback; a demo server sends its own list (GET /auth/demo-accounts, DEMO_MODE=1). */
+const DEV_DEMO_ACCOUNTS: DemoAccount[] = [
   { role: "farmer", phone: "0944000001", password: "demo1234", note: "signin.demo.pitchFarmer" },
   { role: "farmer", phone: "0944000003", password: "demo1234", note: "signin.demo.farmerCases" },
   { role: "farmer", phone: "0945000023", password: "demo1234", note: "signin.demo.oromiaFarmer" },
@@ -33,9 +35,8 @@ const DEMO_ACCOUNTS: { role: string; phone: string; password: string; note?: Mes
   { role: "admin", phone: "0900000001", password: "admin123" },
 ];
 
-// Shown in development and demo builds; a production build hides it unless VITE_DEMO_LOGINS=1.
-const SHOW_DEMO_LOGINS =
-  import.meta.env.VITE_DEMO_LOGINS === "1" || (import.meta.env.DEV && import.meta.env.VITE_DEMO_LOGINS !== "0");
+// Local development shows the fallback list unless VITE_DEMO_LOGINS=0; a deployed site shows the server's list.
+const DEV_LIST = import.meta.env.DEV && import.meta.env.VITE_DEMO_LOGINS !== "0";
 
 export default function SignIn() {
   const { saveAuth } = useAuth();
@@ -49,6 +50,20 @@ export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [demo, setDemo] = useState<DemoAccount[]>(DEV_LIST ? DEV_DEMO_ACCOUNTS : []);
+
+  useEffect(() => {
+    let live = true;
+    api
+      .demoAccounts()
+      .then((r) => {
+        if (live && r.enabled && r.accounts.length) setDemo(r.accounts as DemoAccount[]);
+      })
+      .catch(() => undefined);
+    return () => {
+      live = false;
+    };
+  }, []);
 
   async function signIn(phoneValue: string, passwordValue: string) {
     setBusy(true);
@@ -134,14 +149,14 @@ export default function SignIn() {
             </Link>
           </p>
 
-          {SHOW_DEMO_LOGINS && (
+          {demo.length > 0 && (
             <div className="mt-8 rounded-xl border border-dashed border-gray-300 p-4 dark:border-gray-700">
               <p className="text-theme-xs font-medium tracking-wide text-gray-500 uppercase dark:text-gray-400">
                 {t("signin.demoAccounts")}
               </p>
               <p className="mb-3 text-theme-xs text-gray-500 dark:text-gray-400">{t("signin.demoHint")}</p>
               <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-                {DEMO_ACCOUNTS.map((a) => (
+                {demo.map((a) => (
                   <button
                     key={a.phone}
                     type="button"
@@ -155,7 +170,10 @@ export default function SignIn() {
                   >
                     <span className="block font-medium text-gray-800 dark:text-white/90">{roleLabel(a.role)}</span>
                     {a.note && <span className="block text-gray-600 dark:text-gray-300">{t(a.note)}</span>}
-                    <span className="text-gray-500 dark:text-gray-400">{a.phone}</span>
+                    <span className="block font-mono text-gray-500 dark:text-gray-400">{a.phone}</span>
+                    <span className="block font-mono text-gray-500 dark:text-gray-400">
+                      {t("signin.demoPassword")}: {a.password}
+                    </span>
                   </button>
                 ))}
               </div>

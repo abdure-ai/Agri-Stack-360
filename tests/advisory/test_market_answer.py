@@ -18,13 +18,19 @@ from tests.conftest import add_user
     ("Gatiin qullubbii meeqa?", ["Onion"]),
     ("ዋጋ ስርናይ ክንደይ እዩ?", ["Wheat"]),
     ("What is the price of teff and maize?", ["Teff", "Maize"]),
+    ("ጤፍ በኩንታል ስንት ብር ነው?", ["Teff"]),
+    ("How much is teff?", ["Teff"]),
 ])
 def test_price_questions_are_recognised(question, crops):
     assert ma.crops_in(question) == crops and ma.is_price_question(question)
 
 
 @pytest.mark.parametrize("question", ["How do I control yellow rust on wheat?", "ስንዴ መቼ ልዝራ?",
-                                      "Qamadii yoom facaasuu qaba?", "What is the price of fertilizer?"])
+                                      "Qamadii yoom facaasuu qaba?", "What is the price of fertilizer?",
+                                      # "how many / how much" questions that are not about price
+                                      "ስንዴን በስንት ቀን ልዩነት ማጠጣት አለብኝ?", "ስንዴ በሄክታር ስንት ኩንታል ዘር ያስፈልጋል?",
+                                      "Qamadii guyyaa meeqa booda bishaan obaasuu qaba?", "ስርናይ ክንደይ ማይ የድሊ?",
+                                      "How much water does wheat need?", "ብርድ ስንዴን ይጎዳል?"])
 def test_other_questions_are_not_price_answers(question):
     assert not (ma.crops_in(question) and ma.is_price_question(question))
 

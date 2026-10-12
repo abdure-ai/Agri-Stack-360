@@ -61,7 +61,9 @@
       "price_none",
       "unit_kg",
       "unit_quintal",
-      "price_not_covered"
+      "price_not_covered",
+      "placeholder_warning",
+      "emergency_fallback"
     ]
   },
   "dont_know": "ካብቶም ዝተፈቕዱ መምርሒታት መልሲ ናይዚ ኣይፈልጥን። ሕቶኹም ናብ ሰራሕተኛ ልምዓትኩም ሰዲደዮ ኣለኹ፣ ንሱ ክምልሰልኩም እዩ።",
@@ -83,7 +85,7 @@
   "safety_reentry": "ናብቲ ዝተነፍሐ ግራት ን{hours} ሰዓታት ኣይትእተዉ።",
   "safety_disposal": "ባዶ መያዝያታት ደጊምኩም ኣይትጠቐሙ። ሰለስተ ግዜ ሓጺብኩም ነቲ ማይ ናብ መንፈሒ ኣፍስስዎ፣ መያዝያታት ከም ዝመኽረኩም ሰራሕተኛ ልምዓት ኣወግድዎም።",
   "safety_poisoning": "ሓደ ሰብ ምስ ኬሚካል ድሕሪ ምትንኻፉ እንተሓሚሙ፣ ብቕጽበት ሕክምና ድለዩ። ቁጽሪ ህጹጽ ረድኤት፦ {emergency_contact}።",
-  "placeholder_warning": "መዘኻኸሪ፦ ኣብዚ መርኣዪ ዘሎ ሓበሬታ ፍርያትን መጠንን ግዝያዊ እዩ፣ ኣይተረጋገጸን። ኣብኡ ተመስሪትኩም ኣይትስርሑ።",
+  "placeholder_warning": "መጠናት ኣይተራእዩን፦ ፍርያት ምስ ናይ ሕጂ መዝገብ EAA ኣረጋግጹ፣ መለለዪ ስዓቡ፣ ቅድሚ ምንጻግኩም ሰራሕተኛ ልምዓትኩም ሕተቱ።",
   "sources_label": "ምንጭታት",
   "market_source": "ሓበሬታ ዋጋ ዕዳጋ NMIS",
   "farm_source": "ሓበሬታ ግራትኩም",
@@ -143,7 +145,7 @@
   "trust_reason_expired": "ግዜ ናይዚ ጉጅለ ሓሊፉ። ኣይትጠቐሙሉ።",
   "trust_reason_possible_copy": "እዚ ኮድ ካብቲ ዝጽበ ንላዕሊ ብዙሕ ግዜ ወይ ኣብ ብዙሓት ቦታታት ተረጋጊጹ። ኣብ ናይ ሓሶት ማዕሸጋት ተቐዲሑ ክኸውን ይኽእል። ሰራሕተኛ ልምዓትኩም ሕተቱ።",
   "trust_details": "ፍርያት፦ {product}\nኣቕራቢ፦ {org}\nጉጅለ፦ {batch}",
-  "trust_placeholder": "(ፈተነ፦ ሓበሬታ ፍርያት ኣብነታት እዩ፤ እቲ ወግዓዊ ዝርዝር ዝተመዝገቡ ፍርያታት ኣይኮነን።)",
+  "trust_placeholder": "(ዝርዝር ፍርያት ካብ ማንዋል ስርናይ ሚኒስትሪ ሕርሻ እዩ፤ ናይ ሕጂ መዝገብ EAA ኣረጋግጹ።)",
   "expert_answer": "ክኢላ ሕርሻ ({da_name}) ንሕቶኹም መልሲ ሂቦም፦ {text}",
   "abc_message": "{org} (ናይኹም ABC)፦ {text}",
   "ngo_message": "{org}፣ {project}፦ {text}",
@@ -164,5 +166,6 @@
   "price_none": "ን{crop} ናይ ቀረባ እዋን ዋጋ NMIS የለን።",
   "unit_kg": "ኪሎ",
   "unit_quintal": "ኩንታል",
-  "price_not_covered": "ሓበሬታ ዕዳጋ NMIS {crop} ኣየጠቓልልን፤ ስለዚ ዋጋኡ ክነግረኩም ኣይክእልን። NMIS ዋጋ ዘለዎ ን፦ {crops}። ን{crop} ሰራሕተኛ ልምዓትኩም፣ ማሕበር ሕብረት ስራሕኩም ወይ ኣብ ከባቢ ዕዳጋ ዘለዉ ነጋዶ ሕተቱ። ሕጂ ምሻጥ ዘዋጽእ እንተኾይኑ ብዝቐርበልኩም ዋጋን ብወጻኢኹምን ይውሰን።"
+  "price_not_covered": "ሓበሬታ ዕዳጋ NMIS {crop} ኣየጠቓልልን፤ ስለዚ ዋጋኡ ክነግረኩም ኣይክእልን። NMIS ዋጋ ዘለዎ ን፦ {crops}። ን{crop} ሰራሕተኛ ልምዓትኩም፣ ማሕበር ሕብረት ስራሕኩም ወይ ኣብ ከባቢ ዕዳጋ ዘለዉ ነጋዶ ሕተቱ። ሕጂ ምሻጥ ዘዋጽእ እንተኾይኑ ብዝቐርበልኩም ዋጋን ብወጻኢኹምን ይውሰን።",
+  "emergency_fallback": "ናብ ዝቐረበኩም ጣቢያ ጥዕና ኪዱ"
 }

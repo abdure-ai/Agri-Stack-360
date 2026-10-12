@@ -131,6 +131,16 @@ async def refresh(req: RefreshRequest):
         raise HTTPException(401, "Invalid or expired refresh token")
 
 
+@router.get("/demo-accounts")
+async def demo_accounts():
+    """Demo deployment only (DEMO_MODE=1): one-tap demo sign-ins for the sign-in page. Never the admin."""
+    from backend import demo
+    from backend.platform_db import get_platform_connection
+
+    accounts = demo.listed_accounts(get_platform_connection())
+    return {"enabled": bool(accounts), "accounts": accounts}
+
+
 @router.get("/me")
 async def me(user: dict = Depends(get_current_user)):
     """Current user and permissions. The frontend calls this on load, so role

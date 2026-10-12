@@ -50,7 +50,7 @@ export const am: Record<MessageKey, string> = {
   "common.download": "አውርድ",
   "common.exportCsv": "CSV አውርድ",
   "common.viewAll": "ሁሉንም ይመልከቱ",
-  "common.demoData": "የማሳያ መረጃ",
+  "common.demoData": "አመላካች መረጃ",  // draft – needs native review
   "common.toggleSidebar": "የጎን ዝርዝሩን ክፈት/ዝጋ",
   "common.mainNavigation": "ዋና ማውጫ",
   "common.breadcrumb": "የገጽ መንገድ",
@@ -187,7 +187,7 @@ export const am: Record<MessageKey, string> = {
   "signin.missing": "ስልክ ቁጥርዎን እና የይለፍ ቃልዎን ያስገቡ።",
   "signin.noAccount": "መለያ የለዎትም?",
   "signin.createOne": "አዲስ ይክፈቱ",
-  "signin.demoAccounts": "የማሳያ መለያዎች",
+  "signin.demoAccounts": "ፈጣን መግቢያ",  // draft – needs native review
 
   // ── Sign up ────────────────────────────────────────────────────────────
   "signup.metaTitle": "መለያ ይክፈቱ",
@@ -477,12 +477,12 @@ export const am: Record<MessageKey, string> = {
   "area.loadFailed": "የአካባቢዎችን ዝርዝር መጫን አልተቻለም። ግንኙነትዎን ያረጋግጡ።",
 
   // ── Crop health ────────────────────────────────────────────────────────
-  "demo.title": "የማሳያ መረጃ — የተረጋገጠ ምክር አይደለም",
-  "demo.message": "እዚህ የሚታዩት {subject} ለማሳያ ብቻ የቀረቡ ምሳሌዎች ናቸው። ከተመዘገቡት ኦፊሴላዊ ዝርዝር ጋር አልተረጋገጡም። ኬሚካል ለመግዛት ወይም ለመርጨት አይጠቀሙባቸው — የልማት ጣቢያ ሰራተኛዎን ይጠይቁ።",
+  "demo.title": "አመላካች መረጃ፦ ከመጠቀምዎ በፊት ያረጋግጡ",  // draft – needs native review
+  "demo.message": "እዚህ የሚታዩት {subject} አመላካች ናቸው። ከመግዛትዎ ወይም ከመርጨትዎ በፊት ከምርቱ መለያና ከወቅታዊው የEAA መዝገብ ጋር ያረጋግጡ፤ ከልማት ጣቢያ ሰራተኛዎም ጋር ይመካከሩ።",  // draft – needs native review
   "demo.subject.products": "የምርት ስሞች እና መጠኖች",
   "demo.subject.suppliers": "አቅራቢዎች፣ ምርቶች እና ዋጋዎች",
   "demo.subject.textDiagnosis": "በጽሑፍ የተሰጡ ምርመራዎች፣ የምርት ስሞች እና መጠኖች",
-  "demo.message.loans": "እዚህ የሚታዩት አበዳሪዎች፣ የብድር ዓይነቶች እና የወለድ መጠኖች ለማሳያ ብቻ የቀረቡ ምሳሌዎች ናቸው። እውነተኛ ቅናሾች አይደሉም። ከማመልከትዎ በፊት ባንክዎን ወይም የጥቃቅን ፋይናንስ ተቋምዎን ይጠይቁ።",  // draft – needs native review
+  "demo.message.loans": "እዚህ የሚታዩት አበዳሪዎች፣ የብድር ዓይነቶችና የወለድ መጠኖች አመላካች ናቸው። ከማመልከትዎ በፊት ውሉን ከባንኩ ወይም ከጥቃቅን ፋይናንስ ተቋሙ ጋር ያረጋግጡ።",  // draft – needs native review
   "photo.outOfStock": "ክምችት የለም",  // draft – needs native review
   "photo.sources": "ምንጮች፦ {list}",  // draft – needs native review
   "unit.km": "ኪ.ሜ",  // draft – needs native review
@@ -506,7 +506,7 @@ export const am: Record<MessageKey, string> = {
   "crop.goToProfile": "ወደ መገለጫዬ ሂድ",
   "crop.checkField": "ማሳ ይመርምሩ",
   "crop.mode.photo": "በፎቶ መመርመር",
-  "crop.mode.describe": "በመግለጽ (ማሳያ)",
+  "crop.mode.describe": "ይግለጹ (ቤታ)",  // draft – needs native review
   "crop.whichField": "የትኛው ማሳ?",
   "crop.whatDoYouSee": "ምን ያያሉ?",
   "crop.describePlaceholder": "ቅጠሉን፣ አገዳውን ወይም ፍሬውን ይግለጹ፦ ቀለም፣ ነጠብጣብ፣ ከየት እንደጀመረ፣ ምን ያህል የማሳው ክፍል…",
@@ -519,7 +519,7 @@ export const am: Record<MessageKey, string> = {
   "crop.risk": "{level} ስጋት",
   "crop.match": "{pct}% ተዛማጅ",
   "crop.signs": "የሚታዩ ምልክቶች",
-  "crop.whatToDoDemo": "ምን ማድረግ እንዳለብዎ (የማሳያ ምሳሌ)",
+  "crop.whatToDoDemo": "ምን ማድረግ እንዳለብዎ (ቤታ)",  // draft – needs native review
   "crop.checkAgain": "ማሳውን በ{date} እንደገና ይመርምሩ።",
   "crop.guideOnly": "ይህ መመሪያ ብቻ ነው — ለከባድ ችግሮች የልማት ጣቢያ ሰራተኛዎን ይደውሉ።",
   "crop.saved": "በታሪክ ተቀምጧል",
@@ -558,11 +558,11 @@ export const am: Record<MessageKey, string> = {
   "photo.hours": "{n} ሰዓት",
   "photo.reg": "ምዝገባ {n}",
   "photo.verified": "የተረጋገጠ",
-  "photo.placeholder": "ጊዜያዊ — ያልተረጋገጠ",
+  "photo.placeholder": "የEAA መዝገብን ያረጋግጡ",  // draft – needs native review
   "photo.ppe": "የመከላከያ ልብስ፦ {items}",
   "photo.sponsored": "ስፖንሰር የተደረገ",
   "photo.notChecked": "ገና በባለሙያ አልተረጋገጠም",
-  "photo.notCheckedBody": "የምርትና የመጠን ዝርዝሮች ኦፊሴላዊ ዝርዝሩ እስኪረጋገጥ ድረስ ጊዜያዊ ናቸው። ከመግዛትዎ ወይም ከመርጨትዎ በፊት ከልማት ጣቢያ ሰራተኛዎ ጋር ያረጋግጡ።",
+  "photo.notCheckedBody": "መጠኖች ከEAA መዝገብ ጋር እስኪረጋገጡ ድረስ አይታዩም። የምርቱን መለያ ይከተሉ፤ ከመግዛትዎ ወይም ከመርጨትዎ በፊት ከልማት ጣቢያ ሰራተኛዎ ጋር ያረጋግጡ።",  // draft – needs native review
   "photo.inField": "በማሳው ላይ ምን ማድረግ አለብዎት",
   "photo.ifSpray": "መርጨት ካስፈለገ",
   "photo.approvedAI": "የተፈቀዱ ንቁ ንጥረ ነገሮች፦ {list}። የተመዘገበ ምርት ለማግኘት የልማት ጣቢያ ሰራተኛዎን ይጠይቁ።",
@@ -1234,8 +1234,8 @@ export const am: Record<MessageKey, string> = {
   "reports.noData": "በዚህ አካባቢና ጊዜ ምንም እንቅስቃሴ የለም።",  // draft – needs native review
   "reports.map": "የወረርሽኝ ቅድመ ማስጠንቀቂያ",  // draft – needs native review
   "reports.mapHint": "ባለፉት {n} ቀናት የተደረጉ የበሽታ ሪፖርቶች፣ በወረዳው መሀል ላይ የተቀመጡ (በእርሻዎቹ ላይ አይደለም)። ትልቅ ነጥብ ብዙ ሪፖርት ማለት ነው።",  // draft – needs native review
-  "reports.demo": "የማሳያ መረጃን አካት",  // draft – needs native review
-  "reports.demoBadge": "የማሳያ መረጃን ያካትታል",  // draft – needs native review
+  "reports.demo": "ናሙና መዛግብትን አካት",  // draft – needs native review
+  "reports.demoBadge": "ናሙና መዛግብትን ያካትታል",  // draft – needs native review
   "reports.band.high": "10 ወይም ከዚያ በላይ",  // draft – needs native review
   "reports.band.medium": "ከ5 እስከ 9",  // draft – needs native review
   "reports.band.low": "ከ5 በታች",  // draft – needs native review
@@ -1255,7 +1255,7 @@ export const am: Record<MessageKey, string> = {
   "perm.supplier_manage.desc": "ምርቶችን መዘርዘር፣ የኮድ ስብስቦችና መለያዎችን መፍጠር፣ ስብስቦችን መመለስ እና የማረጋገጫ ሪፖርቶችን ማየት።",  // draft – needs native review
   "perm.orgs_manage": "ድርጅቶችን ማስተዳደር",  // draft – needs native review
   "perm.orgs_manage.desc": "የአቅራቢ ድርጅቶችን መፍጠር፣ ተጠቃሚዎቻቸውን መጨመር እና ማገድ።",  // draft – needs native review
-  "demo.message.trust": "እዚህ ያሉት ምርቶች፣ የምዝገባ ቁጥሮችና አቅራቢዎች ለሙከራው የተቀመጡ ምሳሌዎች ናቸው። ይፋዊው የተመዘገቡ ምርቶች ዝርዝር አይደሉም።",  // draft – needs native review
+  "demo.message.trust": "የምርት ዝርዝሩ ከግብርና ሚኒስቴር የስንዴ ማኑዋል የተወሰደ ነው። የምዝገባ ቁጥሮች ይፋዊው የEAA መዝገብ ሲገናኝ ይመጣሉ።",  // draft – needs native review
   "trust.description": "በዘር፣ በማዳበሪያ ወይም በኬሚካል እሽግ ላይ ያለውን QR ኮድ ይቃኙ ወይም ኮዱን ይጻፉ፤ ትክክለኛ መሆኑን ይወቁ።",  // draft – needs native review
   "trust.codeLabel": "የምርት ኮድ",  // draft – needs native review
   "trust.codePlaceholder": "ለምሳሌ AB3D-EF7H-JK9M",  // draft – needs native review
@@ -1709,7 +1709,8 @@ export const am: Record<MessageKey, string> = {
   "tips.cancel": "ተው",  // draft – needs native review
 
   // ── Sign-in demo accounts ─────────────────────────────────────────────────
-  "signin.demoHint": "ለመግባት መለያ ይንኩ። ለማሳያ ብቻ፦ በእውነተኛው ስሪት ይደበቃል።",  // draft – needs native review
+  "signin.demoHint": "የማቅረቢያ አካባቢ፤ ናሙና ሰዎችና መዛግብት ይዟል። ለመግባት መለያ ይንኩ።",  // draft – needs native review
+  "signin.demoPassword": "የይለፍ ቃል",  // draft – needs native review
   "signin.demo.pitchFarmer": "የማሳያው አርሶ አደር፣ ደዋ ጨፋ",  // draft – needs native review
   "signin.demo.farmerCases": "የልማት ሰራተኛ ጉዳዮች ያሉት አርሶ አደር",  // draft – needs native review
   "signin.demo.oromiaFarmer": "በኦሮሚያ ያለ አርሶ አደር (አፋን ኦሮሞ)",  // draft – needs native review
