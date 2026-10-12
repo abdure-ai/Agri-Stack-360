@@ -1748,4 +1748,11 @@ export const ti: Record<MessageKey, string> = {
 
   // ── DeepSeek key list ─────────────────────────────────────────────────────
   "aikeys.noneHintDeepseek": "ሓደ ክሳብ እትውስኹ፣ DeepSeek ክጥቀመሉ ዝኽእል ኣብ ፋይል .env ናይ ኣገልጋሊ ዘሎ DEEPSEEK_API_KEY ጥራይ እዩ፣ እንተተቐሚጡ።",  // draft – needs native review
+
+  // ── Sidebar groups ────────────────────────────────────────────────────────
+  "nav.group.farming": "ሕርሻ",  // draft – needs native review
+  "nav.group.extension": "ስራሕ ኤክስቴንሽን",  // draft – needs native review
+  "nav.group.partners": "መእተዊ መሻርኽቲ",  // draft – needs native review
+  "nav.group.contentAi": "ትሕዝቶን AI",  // draft – needs native review
+  "nav.group.system": "ስርዓት",  // draft – needs native review
 };

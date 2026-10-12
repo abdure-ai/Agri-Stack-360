@@ -1748,4 +1748,11 @@ export const am: Record<MessageKey, string> = {
 
   // ── DeepSeek key list ─────────────────────────────────────────────────────
   "aikeys.noneHintDeepseek": "አንድ እስኪጨምሩ ድረስ DeepSeek ሊጠቀም የሚችለው በአገልጋዩ .env ፋይል ውስጥ ያለውን DEEPSEEK_API_KEY ብቻ ነው፣ ከተቀመጠ።",  // draft – needs native review
+
+  // ── Sidebar groups ────────────────────────────────────────────────────────
+  "nav.group.farming": "እርሻ",  // draft – needs native review
+  "nav.group.extension": "የኤክስቴንሽን ስራ",  // draft – needs native review
+  "nav.group.partners": "የአጋሮች መግቢያዎች",  // draft – needs native review
+  "nav.group.contentAi": "ይዘትና AI",  // draft – needs native review
+  "nav.group.system": "ስርዓት",  // draft – needs native review
 };

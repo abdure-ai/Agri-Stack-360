@@ -1748,4 +1748,11 @@ export const om: Record<MessageKey, string> = {
 
   // ── DeepSeek key list ─────────────────────────────────────────────────────
   "aikeys.noneHintDeepseek": "Hanga tokko dabaltanitti, DeepSeek DEEPSEEK_API_KEY faayilii .env tajaajilaa keessa jiru qofa fayyadamuu danda'a, yoo kaa'ame.",  // draft – needs native review
+
+  // ── Sidebar groups ────────────────────────────────────────────────────────
+  "nav.group.farming": "Qonna",  // draft – needs native review
+  "nav.group.extension": "Hojii ekisteenshinii",  // draft – needs native review
+  "nav.group.partners": "Seensa michootaa",  // draft – needs native review
+  "nav.group.contentAi": "Qabiyyee fi AI",  // draft – needs native review
+  "nav.group.system": "Sirna",  // draft – needs native review
 };

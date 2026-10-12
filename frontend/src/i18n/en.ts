@@ -1746,6 +1746,13 @@ export const en = {
 
   // ── DeepSeek key list ─────────────────────────────────────────────────────
   "aikeys.noneHintDeepseek": "Until you add one, DeepSeek can only use DEEPSEEK_API_KEY from the server's .env file, if it is set.",
+
+  // ── Sidebar groups ────────────────────────────────────────────────────────
+  "nav.group.farming": "Farming",
+  "nav.group.extension": "Extension work",
+  "nav.group.partners": "Partner portals",
+  "nav.group.contentAi": "Content & AI",
+  "nav.group.system": "System",
 } satisfies Record<string, string>;
 
 export type MessageKey = keyof typeof en;
