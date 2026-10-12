@@ -19,8 +19,8 @@ router = APIRouter()
 
 SETUP_MESSAGE = (
     "The chat assistant is not configured yet. "
-    "To enable it: get a free API key from https://aistudio.google.com/app/apikey "
-    "and add it on the AI API Keys admin page (or set GEMINI_API_KEY in the .env file)."
+    "To enable it: add a Gemini key (https://aistudio.google.com/app/apikey) or a DeepSeek key "
+    "(https://platform.deepseek.com) on the AI API Keys admin page, or set GEMINI_API_KEY / DEEPSEEK_API_KEY in .env."
 )
 
 
@@ -115,36 +115,19 @@ async def chat(
     _user: dict = Depends(require_permission(P.ADVISORY_USE)),  # signed-in users only: each call spends Gemini quota
 ) -> ChatResponse:
     try:
-        from google.genai import types
+        from backend.advisory.providers import ChatTurn, ProviderError
+        from backend.advisory.registry import generate_text
 
-        from backend.ai_keys import call_gemini
-        from backend.advisory.providers import ProviderError
-
-        system_prompt = _build_system_prompt()
-
-        gemini_history = []
-        for msg in request.history[-10:]:
-            role = "model" if msg.role == "assistant" else "user"
-            gemini_history.append(
-                types.Content(role=role, parts=[types.Part(text=msg.content)])
-            )
-
-        def send(client):
-            chat_session = client.chats.create(
-                model="gemini-3.6-flash",
-                config=types.GenerateContentConfig(system_instruction=system_prompt),
-                history=gemini_history,
-            )
-            return chat_session.send_message(request.message)
-
-        # Key pool: retries busy errors and moves past exhausted keys. Blocking: run off the event loop.
+        history = [ChatTurn("assistant" if m.role == "assistant" else "user", m.content) for m in request.history[-10:]]
+        # Selected AI engine (Gemini or DeepSeek, key pools with rotation). Blocking: run off the event loop.
         try:
-            response = await asyncio.to_thread(call_gemini, send)
+            reply = await asyncio.to_thread(generate_text, request.message, system=_build_system_prompt(),
+                                            history=history, temperature=0.7)
         except ProviderError as exc:
-            if "No Gemini API key" in str(exc):
+            if "API key is available" in str(exc):
                 return ChatResponse(reply=SETUP_MESSAGE)
             raise
-        return ChatResponse(reply=response.text.strip())
+        return ChatResponse(reply=reply.strip())
 
     except Exception as exc:
         err = str(exc)

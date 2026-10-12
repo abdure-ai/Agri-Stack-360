@@ -88,7 +88,7 @@ async def compare_suppliers(req: CompareRequest, user: dict = Depends(require_pe
         summary_lines.append(f"- {s['name']} ({s['region']}, {s.get('distance_km','?')}km, rating {s['rating']}): {prod_summary}")
 
     try:
-        from backend.ai_keys import call_gemini
+        from backend.advisory.registry import generate_text
 
         context_note = f"Context: {req.context}" if req.context else ""
         prompt = (
@@ -98,11 +98,9 @@ async def compare_suppliers(req: CompareRequest, user: dict = Depends(require_pe
             + "\n\nWrite 2–3 sentences recommending which supplier to choose and why. "
             f"Consider price, distance, and product availability. Be direct and practical."
         )
-        # Run the blocking SDK call off the event loop so other requests are not held up
-        response = await asyncio.to_thread(
-            call_gemini, lambda client: client.models.generate_content(model="gemini-3.6-flash", contents=prompt)
-        )
-        return {"comparison": response.text.strip(), "suppliers": suppliers}
+        # Selected AI engine (Gemini or DeepSeek); blocking, so off the event loop
+        comparison = await asyncio.to_thread(generate_text, prompt)
+        return {"comparison": comparison.strip(), "suppliers": suppliers}
     except Exception as e:
         return {
             "comparison": f"Could not get AI comparison. Best rated: {suppliers[0]['name']}.",

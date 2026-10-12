@@ -161,15 +161,11 @@ def explanation_prompt(disease: dict, crop: str, description: str) -> str:
 async def _get_ai_explanation(disease: dict, crop: str, description: str) -> str:
     """Call Gemini to produce a plain-language explanation."""
     try:
-        from backend.ai_keys import call_gemini
+        from backend.advisory.registry import generate_text
 
         prompt = explanation_prompt(disease, crop, description)
-
-        # Run the blocking SDK call off the event loop so other requests are not held up
-        response = await asyncio.to_thread(
-            call_gemini, lambda client: client.models.generate_content(model="gemini-3.6-flash", contents=prompt)
-        )
-        return response.text.strip()
+        # Selected AI engine (Gemini or DeepSeek); blocking, so off the event loop
+        return (await asyncio.to_thread(generate_text, prompt)).strip()
     except Exception:
         return f"{disease['disease']} has been detected on your {crop}. Follow the recommended treatment promptly to protect your harvest."
 

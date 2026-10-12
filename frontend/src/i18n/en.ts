@@ -959,7 +959,7 @@ export const en = {
   // ── AI API keys (admin) ────────────────────────────────────────────────
   "nav.aiKeys": "AI API Keys",
   "aikeys.meta": "Gemini API keys the platform rotates through",
-  "aikeys.description": "Add several Gemini API keys. When one runs out of quota or is rejected, the platform switches to the next key automatically.",
+  "aikeys.description": "Add Gemini and DeepSeek API keys and choose which AI writes the answers. When a key runs out of quota or credit, or is rejected, the platform switches to the next key automatically.",
   "aikeys.add": "Add key",
   "aikeys.usableNow": "Keys usable now",
   "aikeys.nextFree": "Next key frees up",
@@ -999,7 +999,7 @@ export const en = {
   "aikeys.deleteBody": "\"{label}\" (•••• {last4}) will be removed from the platform.",
   "aikeys.deleted": "\"{label}\" was deleted.",
   "aikeys.addTitle": "Add a Gemini API key",
-  "aikeys.addHint": "Create a key at aistudio.google.com/apikey. Keys from different Google projects have separate quotas.",
+  "aikeys.addHint": "Choose the provider, then paste the key.",
   "aikeys.labelPlaceholder": "e.g. Project 2 (free tier)",
   "aikeys.apiKey": "API key",
   "aikeys.storedEncrypted": "The key is stored encrypted and is never shown again; only its last 4 characters are displayed.",
@@ -1718,6 +1718,33 @@ export const en = {
   "tips.savePublish": "Save and publish",
   "tips.saveDraft": "Save as draft",
   "tips.manage": "Write or approve tips",
+
+  // ── AI engine choice (Gemini / DeepSeek) ──────────────────────────────────
+  "aikeys.engine.title": "Engine for written answers",
+  "aikeys.engine.description": "Choose which AI writes the advisor's answers, the daily tips and the short explanations. The rules stay the same: answers only from the guidelines, with citations, and no personal data is sent.",
+  "aikeys.engine.geminiHint": "Also used for voice and the knowledge-base search. Free tier available.",
+  "aikeys.engine.deepseekHint": "Text only, paid per use from prepaid credit. Data is processed on DeepSeek's servers in China; it receives the same anonymised text as Gemini.",
+  "aikeys.engine.inUse": "In use",
+  "aikeys.engine.use": "Use this",
+  "aikeys.engine.keys": "{n} usable key(s)",
+  "aikeys.engine.fallbackOn": "If the chosen engine fails, the other one answers when it has a usable key (switch on the Advisory settings page).",
+  "aikeys.engine.fallbackOff": "The fallback to the other engine is off (Advisory settings page).",
+  "aikeys.engine.geminiOnly": "Voice and the knowledge-base search always use Gemini, so keep at least one Gemini key.",
+  "aikeys.engine.saved": "{name} now writes the answers.",
+  "aikeys.engine.noKey": "{name} is chosen but has no usable key yet. Add one; until then the other engine answers if the fallback is on.",
+  "aikeys.providerKeys": "{name} keys",
+  "aikeys.provider": "Provider",
+  "aikeys.getGemini": "Create a key at aistudio.google.com/apikey. Keys from different Google projects have separate quotas.",
+  "aikeys.getDeepseek": "Create a key at platform.deepseek.com (API keys) and top up credit there. A key without credit is skipped.",
+  "settings.llm_fallback": "Use the other AI engine if the chosen one fails",
+  "settings.llm_fallback.hint": "On: when the chosen engine (Gemini or DeepSeek) has no key, no credit or is down, the other one answers if it has a usable key. The engine itself is chosen on the AI API Keys page.",
+  "settings.daily_tips_auto": "Draft daily tips every morning",
+  "settings.daily_tips_auto.hint": "On: each morning the system drafts tomorrow's tips for review. Nothing is published until an agronomist or admin approves it.",
+  "settings.daily_tips_per_day": "Tips drafted per day",
+  "settings.daily_tips_per_day.hint": "Each AI draft uses one AI request.",
+
+  // ── DeepSeek key list ─────────────────────────────────────────────────────
+  "aikeys.noneHintDeepseek": "Until you add one, DeepSeek can only use DEEPSEEK_API_KEY from the server's .env file, if it is set.",
 } satisfies Record<string, string>;
 
 export type MessageKey = keyof typeof en;

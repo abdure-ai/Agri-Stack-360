@@ -1482,8 +1482,11 @@ export interface KnowledgeHit {
 
 export type AiKeyStatus = "unknown" | "ok" | "quota" | "rate_limited" | "invalid" | "error";
 
+export type AiProvider = "gemini" | "deepseek";
+
 export interface AiKey {
   id: number;
+  provider: AiProvider;
   label: string;
   key_last4: string;
   priority: number;
@@ -1496,9 +1499,27 @@ export interface AiKey {
   created_at: string;
 }
 
+export interface AiEnvKey {
+  configured: boolean;
+  variable?: string;
+  key_last4?: string;
+  status?: AiKeyStatus;
+  cooldown_until?: string | null;
+  last_error?: string | null;
+}
+
+export interface AiEngine {
+  /** Engine for written answers; voice and knowledge-base search always use Gemini. */
+  llm_provider: AiProvider;
+  llm_fallback: boolean;
+  models: Record<AiProvider, string>;
+}
+
 export interface AiKeyList {
   keys: AiKey[];
-  env_key: { configured: boolean; key_last4?: string; status?: AiKeyStatus; cooldown_until?: string | null; last_error?: string | null };
+  providers: Record<AiProvider, { env_key: AiEnvKey; usable_now: number; next_available_at: string | null }>;
+  engine: AiEngine;
+  env_key: AiEnvKey;
   usable_now: number;
   next_available_at: string | null;
   model: string;

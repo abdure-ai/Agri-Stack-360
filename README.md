@@ -33,8 +33,9 @@ personal data is sent to the AI (`tests/advisory/test_privacy.py`).
 | Web app (React 19, Vite, Tailwind) | 5173 | `frontend/` |
 | Telegram bot (optional) | — | `backend/telegram_bot.py` |
 
-AI: Google Gemini (answers, embeddings, speech) through an admin-managed key pool; the advisor only answers from
-the ingested MoA documents (`data/knowledge/moa`).
+AI: written answers by Google Gemini or DeepSeek (an admin chooses on the AI API Keys page, with automatic
+fallback to the other); embeddings and speech always by Gemini. Keys sit in an admin-managed, encrypted pool. The
+advisor only answers from the ingested MoA documents (`data/knowledge/moa`).
 
 ## Run it (Windows)
 
@@ -67,6 +68,7 @@ Tests: `.venv\Scripts\python -m pytest tests -q`. Frontend checks: `cd frontend;
 
 ## Documentation
 
+- `docs/deployment.md`: production deployment: folders per service, data to back up, settings, go-live checklist
 - `docs/checklist-audit.md`: what is built, per role, with evidence and open items
 - `docs/agri-stack-advisory-module-spec.md`: advisory module specification
 - `docs/mobile/`: Flutter guide for the Farmer + DA app, OpenAPI contract, translation files

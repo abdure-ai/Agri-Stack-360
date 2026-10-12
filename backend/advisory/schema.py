@@ -277,7 +277,10 @@ DEFAULT_SETTINGS = {
                                 "1 = every dose must come from dosage_rules. Pesticide doses are database-only either way."),
     "daily_tips_auto": ("1", "1 = draft tomorrow's agricultural tips every morning for review (nothing is published "
                              "until an agronomist or admin approves it)."),
-    "daily_tips_per_day": ("3", "How many tips to draft per day (each AI draft uses one Gemini request)."),
+    "daily_tips_per_day": ("3", "How many tips to draft per day (each AI draft uses one AI request)."),
+    "llm_provider": ("gemini", "Engine for written answers: gemini or deepseek (changed on the AI API Keys page)."),
+    "llm_fallback": ("1", "1 = when the chosen AI engine fails (no key, no credit, down), use the other one if it has a "
+                          "usable key."),
 }
 
 # Allowed values for the admin settings screen: (type, min, max). Product limits that keep the
@@ -294,6 +297,7 @@ SETTING_LIMITS = {
     "strict_dose_policy": ("bool", 0, 1),
     "daily_tips_auto": ("bool", 0, 1),
     "daily_tips_per_day": ("int", 1, 5),
+    "llm_fallback": ("bool", 0, 1),
 }
 
 # Columns added to existing tables (SQLite has no ADD COLUMN IF NOT EXISTS).

@@ -15,13 +15,19 @@ import { Modal } from "@/components/ui/modal";
 import { Table, TableBody, TableCell, TableHeader, TableRow } from "@/components/ui/table";
 import { errorMessage, useAsync } from "@/hooks/useAsync";
 import { tr, type MessageKey } from "@/i18n/core";
-import type { AiKey, AiKeyStatus } from "@/types/api";
+import type { AiKey, AiKeyStatus, AiProvider } from "@/types/api";
 import { formatDateTime } from "@/utils/formatters";
-import { ArrowDown, ArrowUp, CircleCheck, Clock, KeySquare, Plus, RotateCcw, Trash2, Zap } from "lucide-react";
+import { cn } from "@/utils";
+import { ArrowDown, ArrowUp, Bot, CircleCheck, Clock, KeySquare, Plus, RotateCcw, Trash2, Zap } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
 const TH = "px-4 py-3 text-start text-theme-xs font-medium text-gray-500 dark:text-gray-400";
 const TD = "px-4 py-3.5 text-theme-sm text-gray-600 dark:text-gray-400";
+
+const PROVIDERS: { id: AiProvider; name: string; hint: MessageKey }[] = [
+  { id: "gemini", name: "Google Gemini", hint: "aikeys.engine.geminiHint" },
+  { id: "deepseek", name: "DeepSeek", hint: "aikeys.engine.deepseekHint" },
+];
 
 const STATUS: Record<AiKeyStatus, { color: "success" | "warning" | "error" | "light" | "info"; label: MessageKey }> = {
   unknown: { color: "light", label: "aikeys.status.unknown" },
@@ -67,9 +73,29 @@ export default function AiKeys() {
   const [busy, setBusy] = useState<string | null>(null);
   const [notice, setNotice] = useState<{ variant: "success" | "error" | "warning"; message: string } | null>(null);
   const [deleting, setDeleting] = useState<AiKey | null>(null);
+  const [provider, setProvider] = useState<AiProvider>("gemini");
 
-  const keys = data.data?.keys ?? [];
-  const env = data.data?.env_key;
+  const keys = (data.data?.keys ?? []).filter((k) => (k.provider ?? "gemini") === provider);
+  const pool = data.data?.providers?.[provider];
+  const env = pool?.env_key;
+  const engine = data.data?.engine;
+
+  async function chooseEngine(p: AiProvider) {
+    setBusy("engine");
+    setNotice(null);
+    try {
+      const r = await api.aiSetEngine(p);
+      const name = PROVIDERS.find((x) => x.id === p)?.name ?? p;
+      // Without a key, the warning under the engine choice says what to do; no second message here.
+      if (r.warning !== "no_key") setNotice({ variant: "success", message: tr("aikeys.engine.saved", { name }) });
+      setProvider(p);
+      data.reload();
+    } catch (e) {
+      setNotice({ variant: "error", message: errorMessage(e) });
+    } finally {
+      setBusy(null);
+    }
+  }
 
   async function run(tag: string, fn: () => Promise<unknown>, success?: string) {
     setBusy(tag);
@@ -140,25 +166,89 @@ export default function AiKeys() {
         </Card>
       ) : (
         <div className="space-y-6">
+          {engine && (
+            <Card
+              title={tr("aikeys.engine.title")}
+              description={tr("aikeys.engine.description")}
+              icon={<Bot className="size-5" />}
+              accent="teal"
+            >
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {PROVIDERS.map((p) => {
+                  const active = engine.llm_provider === p.id;
+                  const usable = data.data?.providers?.[p.id]?.usable_now ?? 0;
+                  return (
+                    <button
+                      key={p.id}
+                      type="button"
+                      disabled={!!busy || active}
+                      onClick={() => void chooseEngine(p.id)}
+                      className={cn(
+                        "rounded-xl border-2 p-4 text-start transition",
+                        active
+                          ? "border-brand-500 bg-brand-50 dark:bg-brand-500/10"
+                          : "border-gray-200 hover:border-brand-300 dark:border-gray-800 dark:hover:border-brand-700",
+                      )}
+                    >
+                      <span className="flex items-center justify-between gap-2">
+                        <span className="font-semibold text-gray-800 dark:text-white/90">{p.name}</span>
+                        {active ? (
+                          <Badge size="sm" color="success">
+                            {tr("aikeys.engine.inUse")}
+                          </Badge>
+                        ) : (
+                          <span className="text-theme-xs text-brand-500">{tr("aikeys.engine.use")}</span>
+                        )}
+                      </span>
+                      <span className="mt-1 block text-theme-xs text-gray-500 dark:text-gray-400">
+                        {engine.models[p.id]} · {tr("aikeys.engine.keys", { n: usable })}
+                      </span>
+                      <span className="mt-1 block text-theme-xs text-gray-500 dark:text-gray-400">{tr(p.hint)}</span>
+                    </button>
+                  );
+                })}
+              </div>
+              <p className="mt-3 text-theme-xs text-gray-500 dark:text-gray-400">
+                {tr(engine.llm_fallback ? "aikeys.engine.fallbackOn" : "aikeys.engine.fallbackOff")} {tr("aikeys.engine.geminiOnly")}
+              </p>
+            </Card>
+          )}
+
+          <div className="flex gap-2" role="tablist">
+            {PROVIDERS.map((p) => (
+              <Button
+                key={p.id}
+                size="sm"
+                variant={provider === p.id ? "primary" : "outline"}
+                onClick={() => setProvider(p.id)}
+              >
+                {tr("aikeys.providerKeys", { name: p.name })}
+              </Button>
+            ))}
+          </div>
+
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6">
             <StatCard
               label={tr("aikeys.usableNow")}
-              value={String(data.data?.usable_now ?? 0)}
+              value={String(pool?.usable_now ?? 0)}
               icon={<CircleCheck className="size-6" />}
-              accent={data.data?.usable_now ? "green" : "rose"}
-              tone={data.data?.usable_now ? "success" : "error"}
+              accent={pool?.usable_now ? "green" : "rose"}
+              tone={pool?.usable_now ? "success" : "error"}
             />
             <StatCard
               label={tr("aikeys.nextFree")}
-              value={data.data?.next_available_at ? formatDateTime(data.data.next_available_at) : "—"}
+              value={pool?.next_available_at ? formatDateTime(pool.next_available_at) : "—"}
               icon={<Clock className="size-6" />}
               accent="amber"
             />
-            <StatCard label={tr("aikeys.model")} value={data.data?.model ?? "—"} icon={<Zap className="size-6" />} accent="violet" />
+            <StatCard label={tr("aikeys.model")} value={engine?.models[provider] ?? "—"} icon={<Zap className="size-6" />} accent="violet" />
           </div>
 
-          {data.data && !data.data.usable_now && (
+          {data.data && !pool?.usable_now && provider === "gemini" && (
             <Alert variant="error" title={tr("aikeys.noneUsable")} message={tr("aikeys.noneUsableHint")} />
+          )}
+          {data.data && !pool?.usable_now && provider === "deepseek" && engine?.llm_provider === "deepseek" && (
+            <Alert variant="warning" message={tr("aikeys.engine.noKey", { name: "DeepSeek" })} />
           )}
 
           <Card
@@ -172,7 +262,7 @@ export default function AiKeys() {
               <EmptyState
                 icon={<KeySquare className="size-6" />}
                 title={tr("aikeys.none")}
-                description={tr("aikeys.noneHint")}
+                description={tr(provider === "gemini" ? "aikeys.noneHint" : "aikeys.noneHintDeepseek")}
                 action={<Button onClick={() => setAdding(true)}>{tr("aikeys.add")}</Button>}
               />
             ) : (
@@ -269,11 +359,13 @@ export default function AiKeys() {
             <Card title={tr("aikeys.envTitle")} description={tr("aikeys.envHint")} icon={<KeySquare className="size-5" />} accent="amber">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-4">
-                  <span className="font-mono text-sm text-gray-700 dark:text-gray-300">GEMINI_API_KEY •••• {env.key_last4}</span>
+                  <span className="font-mono text-sm text-gray-700 dark:text-gray-300">
+                    {env.variable ?? "GEMINI_API_KEY"} •••• {env.key_last4}
+                  </span>
                   <StatusBadge status={env.status ?? "unknown"} until={env.cooldown_until} />
                 </div>
                 {coolingUntil(env.cooldown_until) || env.status === "invalid" ? (
-                  <Button size="xs" variant="ghost" startIcon={<RotateCcw className="size-4" />} onClick={() => void run("env", () => api.aiKeyResetEnv())}>
+                  <Button size="xs" variant="ghost" startIcon={<RotateCcw className="size-4" />} onClick={() => void run("env", () => api.aiKeyResetEnv(provider))}>
                     {tr("aikeys.reset")}
                   </Button>
                 ) : null}
@@ -287,10 +379,12 @@ export default function AiKeys() {
 
       {adding && (
         <AddKeyModal
+          initialProvider={provider}
           onClose={() => setAdding(false)}
           onAdded={(k) => {
             setAdding(false);
             setNotice({ variant: "success", message: tr("aikeys.added", { label: k.label }) });
+            setProvider(k.provider);
             data.reload();
           }}
         />
@@ -314,7 +408,16 @@ export default function AiKeys() {
   );
 }
 
-function AddKeyModal({ onClose, onAdded }: { onClose: () => void; onAdded: (k: AiKey) => void }) {
+function AddKeyModal({
+  initialProvider,
+  onClose,
+  onAdded,
+}: {
+  initialProvider: AiProvider;
+  onClose: () => void;
+  onAdded: (k: AiKey) => void;
+}) {
+  const [provider, setProvider] = useState<AiProvider>(initialProvider);
   const [label, setLabel] = useState("");
   const [key, setKey] = useState("");
   const [busy, setBusy] = useState(false);
@@ -329,7 +432,7 @@ function AddKeyModal({ onClose, onAdded }: { onClose: () => void; onAdded: (k: A
     setBusy(true);
     setError(null);
     try {
-      onAdded(await api.aiKeyAdd({ label: label.trim(), api_key: key.trim() }));
+      onAdded(await api.aiKeyAdd({ provider, label: label.trim(), api_key: key.trim() }));
     } catch (err) {
       setError(errorMessage(err));
     } finally {
@@ -346,6 +449,25 @@ function AddKeyModal({ onClose, onAdded }: { onClose: () => void; onAdded: (k: A
         </div>
         {error && <Alert variant="error" message={error} />}
         <div>
+          <Label>{tr("aikeys.provider")}</Label>
+          <div className="flex gap-2">
+            {PROVIDERS.map((p) => (
+              <Button
+                key={p.id}
+                type="button"
+                size="sm"
+                variant={provider === p.id ? "primary" : "outline"}
+                onClick={() => setProvider(p.id)}
+              >
+                {p.name}
+              </Button>
+            ))}
+          </div>
+          <p className="mt-1.5 text-theme-xs text-gray-500 dark:text-gray-400">
+            {tr(provider === "gemini" ? "aikeys.getGemini" : "aikeys.getDeepseek")}
+          </p>
+        </div>
+        <div>
           <Label htmlFor="ak-label">{tr("aikeys.label")}</Label>
           <Input id="ak-label" value={label} onChange={(e) => setLabel(e.target.value)} placeholder={tr("aikeys.labelPlaceholder")} />
         </div>
@@ -357,7 +479,7 @@ function AddKeyModal({ onClose, onAdded }: { onClose: () => void; onAdded: (k: A
             autoComplete="off"
             value={key}
             onChange={(e) => setKey(e.target.value)}
-            placeholder="AIza… / AQ.…"
+            placeholder={provider === "gemini" ? "AIza… / AQ.…" : "sk-…"}
           />
           <p className="mt-1.5 text-theme-xs text-gray-500 dark:text-gray-400">{tr("aikeys.storedEncrypted")}</p>
         </div>

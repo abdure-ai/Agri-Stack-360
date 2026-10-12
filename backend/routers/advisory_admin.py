@@ -35,7 +35,9 @@ def _setting_out(row: dict) -> dict:
 
 @router.get("/advisory-settings")
 async def list_settings(_user=Depends(_advisory_admin)):
-    return [_setting_out(r) for r in pquery("SELECT key, value, description FROM advisory_settings ORDER BY key")]
+    # llm_provider is chosen on the AI API Keys page, next to the keys it needs.
+    return [_setting_out(r) for r in pquery("SELECT key, value, description FROM advisory_settings "
+                                            "WHERE key != 'llm_provider' ORDER BY key")]
 
 
 class SettingUpdate(BaseModel):

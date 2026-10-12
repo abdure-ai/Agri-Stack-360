@@ -961,7 +961,7 @@ export const ti: Record<MessageKey, string> = {
   // ── AI API keys (admin) ────────────────────────────────────────────────
   "nav.aiKeys": "መፍትሕታት AI",
   "aikeys.meta": "መድረኽ ብተራ ዝጥቀመሎም መፍትሕታት API Gemini",
-  "aikeys.description": "ብዙሓት መፍትሕታት API Gemini ወስኹ። ሓደ ኮታኡ ምስ ወድአ ወይ ምስ ተነጸገ፣ መድረኽ ባዕሉ ናብቲ ዝቕጽል መፍትሕ ይቕይር።",
+  "aikeys.description": "መፍትሕታት API Gemini ከምኡ'ውን DeepSeek ወስኹን ኣየናይ AI መልስታት ከም ዝጽሕፍ ምረጹን። ሓደ መፍትሕ ደረቱ ወይ ሕሳቡ ምስ ተወድአ ወይ ምስ ተነጸገ፣ እቲ መድረኽ ባዕሉ ናብ ዝቕጽል መፍትሕ ይቕይር።",  // draft – needs native review
   "aikeys.add": "መፍትሕ ወስኽ",
   "aikeys.usableNow": "ሕጂ ዝሰርሑ መፍትሕታት",
   "aikeys.nextFree": "ዝቕጽል መፍትሕ ዝናጻሉ",
@@ -1001,7 +1001,7 @@ export const ti: Record<MessageKey, string> = {
   "aikeys.deleteBody": "\"{label}\" (•••• {last4}) ካብ መድረኽ ክድምሰስ እዩ።",
   "aikeys.deleted": "\"{label}\" ተደምሲሱ።",
   "aikeys.addTitle": "መፍትሕ API Gemini ወስኹ",
-  "aikeys.addHint": "መፍትሕ ኣብ aistudio.google.com/apikey ፍጠሩ። ካብ ዝተፈላለዩ ፕሮጀክታት Google ዝመጹ መፍትሕታት ዝተፈላለየ ኮታ ኣለዎም።",
+  "aikeys.addHint": "ኣቕራቢ ምረጹ፣ ድሕሪኡ መፍትሕ ለጥፉ።",  // draft – needs native review
   "aikeys.labelPlaceholder": "ንኣብነት ፕሮጀክት 2 (ብነጻ)",
   "aikeys.apiKey": "መፍትሕ API",
   "aikeys.storedEncrypted": "እቲ መፍትሕ ተመስጢሩ ይዕቀብ፣ ደጊሙ ኣይርአን፤ ዝርኣያ ናይ መወዳእታ 4 ፊደላት ጥራይ እየን።",
@@ -1720,4 +1720,31 @@ export const ti: Record<MessageKey, string> = {
   "tips.savePublish": "ዓቅብን ሕተምን",  // draft – needs native review
   "tips.saveDraft": "ከም ንድፊ ዓቅብ",  // draft – needs native review
   "tips.manage": "ምኽሪ ጽሓፍ ወይ ኣጽድቕ",  // draft – needs native review
+
+  // ── AI engine choice (Gemini / DeepSeek) ──────────────────────────────────
+  "aikeys.engine.title": "ሞተር ጽሑፋዊ መልስታት",  // draft – needs native review
+  "aikeys.engine.description": "ኣየናይ AI መልስታት ኣማኻሪ፣ ዕለታዊ ምኽርታትን ሓጸርቲ መብርሂታትን ከም ዝጽሕፍ ምረጹ። ሕግታት ኣይቅየሩን፦ መልስታት ካብ መምርሒታት ጥራይ፣ ምስ ምንጪ፣ ውልቃዊ ሓበሬታ ኣይለኣኽን።",  // draft – needs native review
+  "aikeys.engine.geminiHint": "ንድምጽን ንድለያ መኽዘን ፍልጠትን'ውን ይውዕል። ናጻ ደረጃ ኣለዎ።",  // draft – needs native review
+  "aikeys.engine.deepseekHint": "ጽሑፍ ጥራይ፤ ብቕድመ ክፍሊት ሕሳብ ብኣጠቓቕማ ይኽፈል። ሓበሬታ ኣብ ቻይና ዘለዉ ኣገልገልቲ DeepSeek ይስራሕ፤ ነቲ ንGemini ዝለኣኽ ተመሳሳሊ ስም-ኣልቦ ጽሑፍ ይቕበል።",  // draft – needs native review
+  "aikeys.engine.inUse": "ኣብ ጥቕሚ",  // draft – needs native review
+  "aikeys.engine.use": "እዚ ተጠቐም",  // draft – needs native review
+  "aikeys.engine.keys": "{n} ዝሰርሕ መፍትሕ",  // draft – needs native review
+  "aikeys.engine.fallbackOn": "እቲ ዝተመርጸ ሞተር እንተዘይሰሪሑ፣ እቲ ካልእ ዝሰርሕ መፍትሕ እንተሃልይዎ ይምልስ (ኣብ ገጽ ቅጥዒታት ምኽሪ ይቕየር)።",  // draft – needs native review
+  "aikeys.engine.fallbackOff": "ናብ ካልእ ሞተር ምቕያር ጠፊኡ ኣሎ (ገጽ ቅጥዒታት ምኽሪ)።",  // draft – needs native review
+  "aikeys.engine.geminiOnly": "ድምጽን ድለያ መኽዘን ፍልጠትን ኩሉ ግዜ Gemini ይጥቀሙ፤ ስለዚ እንተወሓደ ሓደ መፍትሕ Gemini ሓልዉ።",  // draft – needs native review
+  "aikeys.engine.saved": "ሕጂ {name} መልስታት ይጽሕፍ።",  // draft – needs native review
+  "aikeys.engine.noKey": "{name} ተመሪጹ ግን ክሳብ ሕጂ ዝሰርሕ መፍትሕ የብሉን። መፍትሕ ወስኹ፤ ክሳብ ሽዑ ምቕያር እንተተወሊዑ እቲ ካልእ ሞተር ይምልስ።",  // draft – needs native review
+  "aikeys.providerKeys": "መፍትሕታት {name}",  // draft – needs native review
+  "aikeys.provider": "ኣቕራቢ",  // draft – needs native review
+  "aikeys.getGemini": "ኣብ aistudio.google.com/apikey መፍትሕ ፍጠሩ። ካብ ዝተፈላለዩ ፕሮጀክታት Google ዝመጹ መፍትሕታት ዝተፈላለየ ደረት ኣለዎም።",  // draft – needs native review
+  "aikeys.getDeepseek": "ኣብ platform.deepseek.com (API keys) መፍትሕ ፍጠሩን ኣብኡ ሕሳብ መልኡን። ሕሳብ ዘይብሉ መፍትሕ ይሕለፍ።",  // draft – needs native review
+  "settings.llm_fallback": "እቲ ዝተመርጸ ሞተር AI እንተዘይሰሪሑ እቲ ካልእ ተጠቐም",  // draft – needs native review
+  "settings.llm_fallback.hint": "ተወሊዑ፦ እቲ ዝተመርጸ ሞተር (Gemini ወይ DeepSeek) መፍትሕ ወይ ሕሳብ እንተዘይብሉ ወይ እንተተቛሪጹ፣ እቲ ካልእ ዝሰርሕ መፍትሕ እንተሃልይዎ ይምልስ። ሞተር ኣብ ገጽ መፍትሕታት AI API ይምረጽ።",  // draft – needs native review
+  "settings.daily_tips_auto": "ኩሉ ንግሆ ዕለታዊ ምኽርታት ኣዳሉ",  // draft – needs native review
+  "settings.daily_tips_auto.hint": "ተወሊዑ፦ ኩሉ ንግሆ እቲ ስርዓት ናይ ጽባሕ ምኽርታት ንገምጋም የዳሉ። ኣግሮኖሚስት ወይ ኣመሓዳሪ ክሳብ ዘጽድቕ ዋላ ሓንቲ ኣይሕተምን።",  // draft – needs native review
+  "settings.daily_tips_per_day": "ብመዓልቲ ዝዳለዉ ምኽርታት",  // draft – needs native review
+  "settings.daily_tips_per_day.hint": "ነፍሲ ወከፍ ንድፊ AI ሓደ ሕቶ AI ይጥቀም።",  // draft – needs native review
+
+  // ── DeepSeek key list ─────────────────────────────────────────────────────
+  "aikeys.noneHintDeepseek": "ሓደ ክሳብ እትውስኹ፣ DeepSeek ክጥቀመሉ ዝኽእል ኣብ ፋይል .env ናይ ኣገልጋሊ ዘሎ DEEPSEEK_API_KEY ጥራይ እዩ፣ እንተተቐሚጡ።",  // draft – needs native review
 };

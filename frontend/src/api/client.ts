@@ -9,6 +9,8 @@ import type {
   AdminArea,
   AiKey,
   AiKeyList,
+  AiEngine,
+  AiProvider,
   AdminStats,
   AdvisoryAlert,
   AdvisoryDiagnosis,
@@ -469,13 +471,17 @@ export const api = {
 
   // ── AI API keys (admin) ──────────────────────────────────────────────────
   aiKeys: () => platform.get<AiKeyList>("/admin/ai-keys"),
-  aiKeyAdd: (data: { label: string; api_key: string; priority?: number }) => platform.post<AiKey>("/admin/ai-keys", data),
+  aiKeyAdd: (data: { provider: AiProvider; label: string; api_key: string; priority?: number }) =>
+    platform.post<AiKey>("/admin/ai-keys", data),
+  aiSetEngine: (llm_provider: AiProvider) =>
+    platform.put<AiEngine & { warning: "no_key" | null }>("/admin/ai-keys/engine", { llm_provider }),
   aiKeyUpdate: (id: number, patch: Partial<Pick<AiKey, "label" | "enabled" | "priority">>) =>
     platform.patch<AiKey>(`/admin/ai-keys/${id}`, patch),
   aiKeyTest: (id: number) =>
     platform.post<{ ok: boolean; status: string; message: string | null; key: AiKey }>(`/admin/ai-keys/${id}/test`),
   aiKeyReset: (id: number) => platform.post<AiKey>(`/admin/ai-keys/${id}/reset`),
-  aiKeyResetEnv: () => platform.post<AiKeyList["env_key"]>("/admin/ai-keys/env/reset"),
+  aiKeyResetEnv: (provider: AiProvider = "gemini") =>
+    platform.post<AiKeyList["env_key"]>(`/admin/ai-keys/env/reset?provider=${provider}`),
   aiKeyDelete: (id: number) => platform.del<unknown>(`/admin/ai-keys/${id}`),
 
   // ── Ethiopian administrative areas (public) ───────────────────────────────

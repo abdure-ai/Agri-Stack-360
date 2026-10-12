@@ -961,7 +961,7 @@ export const om: Record<MessageKey, string> = {
   // ── AI API keys (admin) ────────────────────────────────────────────────
   "nav.aiKeys": "Furtuuwwan AI",
   "aikeys.meta": "Furtuuwwan API Gemini waltajjiin walduraa duubaan fayyadamu",
-  "aikeys.description": "Furtuuwwan API Gemini hedduu dabali. Tokko yoo kooteen isaa dhume ykn didame, waltajjiin ofumaan gara furtuu itti aanutti jijjiira.",
+  "aikeys.description": "Furtuuwwan API Gemini fi DeepSeek dabalaatii AI kamtu deebii akka barreessu filadhaa. Furtuun tokko daangaa ykn herrega yoo xumure ykn yoo didame, platformichi ofumaan gara furtuu itti aanutti jijjiira.",  // draft – needs native review
   "aikeys.add": "Furtuu dabali",
   "aikeys.usableNow": "Furtuuwwan amma hojjetan",
   "aikeys.nextFree": "Furtuun itti aanu kan bilisa ta'u",
@@ -1001,7 +1001,7 @@ export const om: Record<MessageKey, string> = {
   "aikeys.deleteBody": "\"{label}\" (•••• {last4}) waltajjii irraa ni haqama.",
   "aikeys.deleted": "\"{label}\" haqameera.",
   "aikeys.addTitle": "Furtuu API Gemini dabali",
-  "aikeys.addHint": "Furtuu aistudio.google.com/apikey irratti uumi. Furtuuwwan pirojektoota Google adda addaa irraa kootee adda addaa qabu.",
+  "aikeys.addHint": "Dhiyeessaa filadhaa, achiis furtuu maxxansaa.",  // draft – needs native review
   "aikeys.labelPlaceholder": "fkn. Pirojektii 2 (bilisa)",
   "aikeys.apiKey": "Furtuu API",
   "aikeys.storedEncrypted": "Furtuun icciitiin olkaa'ama, deebi'ee hin mul'atu; qubee dhumaa 4 qofatu mul'ata.",
@@ -1720,4 +1720,31 @@ export const om: Record<MessageKey, string> = {
   "tips.savePublish": "Kuusii maxxansi",  // draft – needs native review
   "tips.saveDraft": "Akka wixineetti kuusi",  // draft – needs native review
   "tips.manage": "Gorsa barreessi ykn raggaasisi",  // draft – needs native review
+
+  // ── AI engine choice (Gemini / DeepSeek) ──────────────────────────────────
+  "aikeys.engine.title": "Motora deebii barreeffamaa",  // draft – needs native review
+  "aikeys.engine.description": "AI kamtu deebii gorsaa, gorsa guyyaa fi ibsa gaggabaabaa akka barreessu filadhaa. Seeronni hin jijjiiraman: deebiin qajeelfama qofa irraa, madda waliin, odeeffannoon dhuunfaa hin ergamu.",  // draft – needs native review
+  "aikeys.engine.geminiHint": "Sagaleef fi barbaacha kuusaa beekumsaatiifis ni oola. Sadarkaa bilisaa qaba.",  // draft – needs native review
+  "aikeys.engine.deepseekHint": "Barreeffama qofa; kaffaltii dursaatiin itti fayyadama irratti kaffalama. Odeeffannoon tajaajiltoota DeepSeek Chaayinaa keessa jiran irratti hojjetama; barreeffama maqaa malee kan Gemini argatu wal fakkaatu argata.",  // draft – needs native review
+  "aikeys.engine.inUse": "Hojii irra jira",  // draft – needs native review
+  "aikeys.engine.use": "Kana fayyadami",  // draft – needs native review
+  "aikeys.engine.keys": "Furtuu hojjetu {n}",  // draft – needs native review
+  "aikeys.engine.fallbackOn": "Motorri filatame yoo hin hojjenne, kan biraa furtuu hojjetu yoo qabaate ni deebisa (fuula qindaa'ina gorsaa irratti jijjiirama).",  // draft – needs native review
+  "aikeys.engine.fallbackOff": "Gara motora biraatti jijjiiruun dhaabbateera (fuula qindaa'ina gorsaa).",  // draft – needs native review
+  "aikeys.engine.geminiOnly": "Sagaleen fi barbaachi kuusaa beekumsaa yeroo hunda Gemini fayyadamu; kanaaf yoo xiqqaate furtuu Gemini tokko qabaadhaa.",  // draft – needs native review
+  "aikeys.engine.saved": "Amma {name} deebii barreessa.",  // draft – needs native review
+  "aikeys.engine.noKey": "{name} filatameera garuu ammallee furtuu hojjetu hin qabu. Furtuu dabalaa; hanga sanaatti jijjiirraan yoo banaa ta'e motorri biraa ni deebisa.",  // draft – needs native review
+  "aikeys.providerKeys": "Furtuuwwan {name}",  // draft – needs native review
+  "aikeys.provider": "Dhiyeessaa",  // draft – needs native review
+  "aikeys.getGemini": "aistudio.google.com/apikey irratti furtuu uumaa. Furtuuwwan pirojektii Google adda addaa irraa daangaa adda addaa qabu.",  // draft – needs native review
+  "aikeys.getDeepseek": "platform.deepseek.com (API keys) irratti furtuu uumaatii achumatti herrega guutaa. Furtuun herrega hin qabne ni darbama.",  // draft – needs native review
+  "settings.llm_fallback": "Motorri AI filatame yoo hin hojjenne kan biraa fayyadami",  // draft – needs native review
+  "settings.llm_fallback.hint": "Banaa: motorri filatame (Gemini ykn DeepSeek) furtuu ykn herrega yoo hin qabaanne ykn yoo cite, kan biraa furtuu hojjetu yoo qabaate ni deebisa. Motorri fuula furtuuwwan AI API irratti filatama.",  // draft – needs native review
+  "settings.daily_tips_auto": "Ganama ganama gorsa guyyaa qopheessi",  // draft – needs native review
+  "settings.daily_tips_auto.hint": "Banaa: ganama ganama sirnichi gorsa boruu gamaaggamaaf qopheessa. Hanga agroonoomistiin ykn bulchaan raggaasisutti homtuu hin maxxanfamu.",  // draft – needs native review
+  "settings.daily_tips_per_day": "Gorsa guyyaatti qophaa'u",  // draft – needs native review
+  "settings.daily_tips_per_day.hint": "Wixineen AI tokko gaaffii AI tokko fayyadama.",  // draft – needs native review
+
+  // ── DeepSeek key list ─────────────────────────────────────────────────────
+  "aikeys.noneHintDeepseek": "Hanga tokko dabaltanitti, DeepSeek DEEPSEEK_API_KEY faayilii .env tajaajilaa keessa jiru qofa fayyadamuu danda'a, yoo kaa'ame.",  // draft – needs native review
 };

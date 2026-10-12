@@ -961,7 +961,7 @@ export const am: Record<MessageKey, string> = {
   // ── AI API keys (admin) ────────────────────────────────────────────────
   "nav.aiKeys": "የAI ቁልፎች",
   "aikeys.meta": "መድረኩ በዙር የሚጠቀምባቸው የGemini API ቁልፎች",
-  "aikeys.description": "በርካታ የGemini API ቁልፎችን ይጨምሩ። አንዱ ኮታው ሲያልቅ ወይም ውድቅ ሲደረግ መድረኩ በራሱ ወደሚቀጥለው ቁልፍ ይቀይራል።",
+  "aikeys.description": "የGemini እና የDeepSeek API ቁልፎችን ይጨምሩና መልሶቹን የትኛው AI እንደሚጽፍ ይምረጡ። አንድ ቁልፍ ገደቡ ወይም ሂሳቡ ሲያልቅ ወይም ውድቅ ሲሆን፣ መድረኩ በራሱ ወደ ቀጣዩ ቁልፍ ይቀይራል።",  // draft – needs native review
   "aikeys.add": "ቁልፍ ጨምር",
   "aikeys.usableNow": "አሁን የሚሰሩ ቁልፎች",
   "aikeys.nextFree": "ቀጣዩ ቁልፍ የሚለቀቅበት",
@@ -1001,7 +1001,7 @@ export const am: Record<MessageKey, string> = {
   "aikeys.deleteBody": "\"{label}\" (•••• {last4}) ከመድረኩ ይሰረዛል።",
   "aikeys.deleted": "\"{label}\" ተሰርዟል።",
   "aikeys.addTitle": "የGemini API ቁልፍ ይጨምሩ",
-  "aikeys.addHint": "ቁልፍ በaistudio.google.com/apikey ይፍጠሩ። ከተለያዩ የGoogle ፕሮጀክቶች የሚመጡ ቁልፎች የተለያየ ኮታ አላቸው።",
+  "aikeys.addHint": "አቅራቢውን ይምረጡ፣ ከዚያ ቁልፉን ይለጥፉ።",  // draft – needs native review
   "aikeys.labelPlaceholder": "ለምሳሌ ፕሮጀክት 2 (ነጻ)",
   "aikeys.apiKey": "API ቁልፍ",
   "aikeys.storedEncrypted": "ቁልፉ ተመስጥሮ ይቀመጣል እና ዳግም አይታይም፤ የሚታዩት የመጨረሻዎቹ 4 ፊደላት ብቻ ናቸው።",
@@ -1720,4 +1720,31 @@ export const am: Record<MessageKey, string> = {
   "tips.savePublish": "አስቀምጥና አትም",  // draft – needs native review
   "tips.saveDraft": "በረቂቅ አስቀምጥ",  // draft – needs native review
   "tips.manage": "ምክር ጻፍ ወይም አጽድቅ",  // draft – needs native review
+
+  // ── AI engine choice (Gemini / DeepSeek) ──────────────────────────────────
+  "aikeys.engine.title": "የጽሑፍ መልሶች ሞተር",  // draft – needs native review
+  "aikeys.engine.description": "የአማካሪውን መልሶች፣ ዕለታዊ ምክሮችንና አጫጭር ማብራሪያዎችን የትኛው AI እንደሚጽፍ ይምረጡ። ደንቦቹ አይቀየሩም፦ መልሶች ከመመሪያዎቹ ብቻ፣ ከምንጭ ጋር፣ የግል መረጃ አይላክም።",  // draft – needs native review
+  "aikeys.engine.geminiHint": "ለድምፅና ለእውቀት ቋት ፍለጋም ያገለግላል። ነፃ ደረጃ አለው።",  // draft – needs native review
+  "aikeys.engine.deepseekHint": "ጽሑፍ ብቻ፤ በቅድመ ክፍያ ሂሳብ በአጠቃቀም ይከፈላል። መረጃው በቻይና በሚገኙ የDeepSeek አገልጋዮች ይሰራል፤ ለGemini የሚላከውን ተመሳሳይ ስም-አልባ ጽሑፍ ይቀበላል።",  // draft – needs native review
+  "aikeys.engine.inUse": "በጥቅም ላይ",  // draft – needs native review
+  "aikeys.engine.use": "ይህን ተጠቀም",  // draft – needs native review
+  "aikeys.engine.keys": "{n} የሚሰሩ ቁልፍ(ፎች)",  // draft – needs native review
+  "aikeys.engine.fallbackOn": "የተመረጠው ሞተር ካልሰራ፣ ሌላው የሚሰራ ቁልፍ ካለው ይመልሳል (በምክር ቅንብሮች ገጽ ላይ ይቀየራል)።",  // draft – needs native review
+  "aikeys.engine.fallbackOff": "ወደ ሌላው ሞተር መቀየር ጠፍቷል (የምክር ቅንብሮች ገጽ)።",  // draft – needs native review
+  "aikeys.engine.geminiOnly": "ድምፅና የእውቀት ቋት ፍለጋ ሁልጊዜ Geminiን ይጠቀማሉ፤ ስለዚህ ቢያንስ አንድ የGemini ቁልፍ ያስቀምጡ።",  // draft – needs native review
+  "aikeys.engine.saved": "አሁን መልሶቹን {name} ይጽፋል።",  // draft – needs native review
+  "aikeys.engine.noKey": "{name} ተመርጧል ነገር ግን እስካሁን የሚሰራ ቁልፍ የለውም። ቁልፍ ይጨምሩ፤ እስከዚያው መቀየሩ ከበራ ሌላው ሞተር ይመልሳል።",  // draft – needs native review
+  "aikeys.providerKeys": "የ{name} ቁልፎች",  // draft – needs native review
+  "aikeys.provider": "አቅራቢ",  // draft – needs native review
+  "aikeys.getGemini": "በaistudio.google.com/apikey ቁልፍ ይፍጠሩ። ከተለያዩ የGoogle ፕሮጀክቶች የተገኙ ቁልፎች የተለያየ ገደብ አላቸው።",  // draft – needs native review
+  "aikeys.getDeepseek": "በplatform.deepseek.com (API keys) ቁልፍ ይፍጠሩና እዚያው ሂሳብ ይሙሉ። ሂሳብ የሌለው ቁልፍ ይዘለላል።",  // draft – needs native review
+  "settings.llm_fallback": "የተመረጠው AI ሞተር ካልሰራ ሌላውን ተጠቀም",  // draft – needs native review
+  "settings.llm_fallback.hint": "በርቷል፦ የተመረጠው ሞተር (Gemini ወይም DeepSeek) ቁልፍ ወይም ሂሳብ ከሌለው ወይም ከተቋረጠ፣ ሌላው የሚሰራ ቁልፍ ካለው ይመልሳል። ሞተሩ የሚመረጠው በAI API ቁልፎች ገጽ ላይ ነው።",  // draft – needs native review
+  "settings.daily_tips_auto": "በየማለዳው ዕለታዊ ምክሮችን አርቅቅ",  // draft – needs native review
+  "settings.daily_tips_auto.hint": "በርቷል፦ በየማለዳው ስርዓቱ የነገውን ምክሮች ለግምገማ ያረቅቃል። አግሮኖሚስት ወይም አስተዳዳሪ እስኪያጸድቅ ድረስ ምንም አይታተምም።",  // draft – needs native review
+  "settings.daily_tips_per_day": "በቀን የሚረቀቁ ምክሮች",  // draft – needs native review
+  "settings.daily_tips_per_day.hint": "እያንዳንዱ የAI ረቂቅ አንድ የAI ጥያቄ ይጠቀማል።",  // draft – needs native review
+
+  // ── DeepSeek key list ─────────────────────────────────────────────────────
+  "aikeys.noneHintDeepseek": "አንድ እስኪጨምሩ ድረስ DeepSeek ሊጠቀም የሚችለው በአገልጋዩ .env ፋይል ውስጥ ያለውን DEEPSEEK_API_KEY ብቻ ነው፣ ከተቀመጠ።",  // draft – needs native review
 };

@@ -359,6 +359,20 @@ daily tips and an expert approves them; a separate opt-in for keeping photos for
 **Verification:** 311 backend tests pass; frontend typecheck, lint and build pass; live: one AI tip drafted from the
 real knowledge base (cited, 4 languages); demo seed run twice (idempotent), every portal checked with its demo login.
 
+## 5l. 2026-10-12: selectable AI engine (Gemini or DeepSeek)
+
+- Admin → AI API Keys: **Engine for written answers** (Gemini or DeepSeek). It covers the advisor, the daily tips, the
+  Telegram answers and the short AI explanations (credit score, crop health, suppliers, chat). Voice and the
+  knowledge-base search always use Gemini (DeepSeek has no speech or embeddings), so a Gemini key stays needed.
+- DeepSeek keys sit in the same encrypted pool (provider per key, rotation, cooldown when out of credit or rate
+  limited, test button); `DEEPSEEK_API_KEY` in `.env` is the last fallback. Setting `llm_fallback` (on by default):
+  if the chosen engine fails, the other answers when it has a usable key.
+- Same guardrails and privacy for both: the same anonymised prompt, citation checks, no pesticide doses. DeepSeek
+  processes data in China (stated on the page).
+- Code: `backend/advisory/adapters/deepseek.py`, `backend/advisory/registry.py` (`text_llm`, `FallbackLLM`),
+  `backend/ai_keys.py` (`call_pool`), `backend/routers/ai_keys_admin.py`. Tests `tests/advisory/test_deepseek.py`;
+  317 backend tests pass.
+
 ## 6. Summary of gaps
 
 | Role / area | Done | Partial | Missing |
