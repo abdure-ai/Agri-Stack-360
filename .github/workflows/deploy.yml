@@ -90,16 +90,18 @@ jobs:
           REGISTRY: ${{ env.REGISTRY }}
           TAG: ${{ github.sha }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          REPO_URL: https://github.com/${{ github.repository }}.git
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT || 22 }}
-          envs: GHCR_USER,GHCR_TOKEN,REGISTRY,TAG,DEPLOY_PATH
+          envs: GHCR_USER,GHCR_TOKEN,REGISTRY,TAG,DEPLOY_PATH,REPO_URL
           script_stop: true
           script: |
-            cd "${DEPLOY_PATH:-/opt/agristack}"
-            git fetch origin main && git reset --hard origin/main   # compose file, Caddyfile; .env is untracked
+            mkdir -p "${DEPLOY_PATH:-/opt/agristack}" && cd "${DEPLOY_PATH:-/opt/agristack}"
+            [ -d .git ] || git init -q   # first deploy into a plain folder (e.g. one holding only .env)
+            git fetch -q "$REPO_URL" main && git reset --hard FETCH_HEAD   # compose file, Caddyfile; .env is untracked
             echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
             export REGISTRY TAG
             docker compose pull api forecast sync disease web
