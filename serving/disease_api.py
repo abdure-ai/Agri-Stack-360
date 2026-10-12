@@ -20,12 +20,20 @@ Each request returns two predictions:
   with_conditions  the farm's real conditions
 so the advisory can show how much local conditions changed the result, and
 treat disagreement as uncertainty.
+
+The model file was saved on Windows, where Keras 2.13 stores each layer's weights under a path joined with
+backslashes ("_layer_checkpoint_dependencies\conv2d"). Keras on Linux looks for "/" paths, finds no weights
+and refuses to load ("expected 2 variables, but received 0"). portable_model_file() writes a copy with "/"
+paths when the service runs on Linux; on Windows the original file is used as it is.
 """
 
 from __future__ import annotations
 
 import io
 import json
+import os
+import tempfile
+import zipfile
 from pathlib import Path
 from typing import Optional
 
@@ -51,13 +59,50 @@ async def _report_error(request, exc: Exception):
     return JSONResponse({"detail": f"{type(exc).__name__}: {str(exc)[:300]}"}, status_code=500)
 
 
+WEIGHTS = "model.weights.h5"
+
+
+def portable_model_file(path: Path, sep: str = os.sep) -> Path:
+    """The .keras file itself, or (on a "/" system) a copy whose weight paths use "/" instead of backslashes."""
+    if sep == "\\":
+        return path
+    with zipfile.ZipFile(path) as z:
+        files = {name: z.read(name) for name in z.namelist()}
+    if WEIGHTS not in files:
+        return path
+    import h5py
+
+    src = h5py.File(io.BytesIO(files[WEIGHTS]), "r")
+    top = list(src.keys())
+    if not any("\\" in name for name in top):
+        src.close()
+        return path
+    buf = io.BytesIO()
+    with h5py.File(buf, "w") as dst:
+        for k, v in src.attrs.items():
+            dst.attrs[k] = v
+        for name in top:
+            target = name.replace("\\", "/")
+            parent = target.rsplit("/", 1)[0] if "/" in target else ""
+            if parent:
+                dst.require_group(parent)
+            src.copy(src[name], dst, name=target)
+    src.close()
+    files[WEIGHTS] = buf.getvalue()
+    out = Path(tempfile.mkdtemp(prefix="disease-model-")) / path.name
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_STORED) as z:
+        for name, data in files.items():
+            z.writestr(name, data)
+    return out
+
+
 def model():
     global _model, _load_error
     if _model is None:
         try:
             import tensorflow as tf  # imported lazily so /health answers while TF loads
 
-            _model = tf.keras.models.load_model(str(ROOT / META["model_file"]))
+            _model = tf.keras.models.load_model(str(portable_model_file(ROOT / META["model_file"])))
             _load_error = None
         except Exception as e:
             _load_error = f"{type(e).__name__}: {str(e)[:300]}"

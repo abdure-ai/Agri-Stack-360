@@ -37,3 +37,21 @@ def test_credit_explanation_does_not_block(monkeypatch):
     financial._explanations.clear()
     text = asyncio.run(financial._get_score_explanation(70, {"id": 1, "region": "Amhara"}, [], []))
     assert "Your credit score of 70" in text          # the standard text, right away
+
+
+def test_model_file_gets_linux_weight_paths():
+    """Saved on Windows: weight paths use backslashes, which Keras on Linux cannot find."""
+    h5py = pytest.importorskip("h5py")
+    import io
+    import zipfile
+    from pathlib import Path
+
+    from serving import disease_api
+
+    original = Path(disease_api.ROOT) / disease_api.META["model_file"]
+    assert disease_api.portable_model_file(original, sep="\\") == original
+    fixed = disease_api.portable_model_file(original, sep="/")
+    with zipfile.ZipFile(fixed) as z, h5py.File(io.BytesIO(z.read("model.weights.h5")), "r") as f:
+        names = []
+        f.visit(names.append)
+    assert names and not any("\\" in n for n in names) and "_layer_checkpoint_dependencies/conv2d/vars/0" in names
