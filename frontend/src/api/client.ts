@@ -142,7 +142,7 @@ function authHeaders(): Record<string, string> {
 
 function withParams(url: string, params?: Params): string {
   if (!params) return url;
-  const u = new URL(url);
+  const u = new URL(url, window.location.href);   // base URLs may be relative (/api) in the Docker build
   for (const [k, v] of Object.entries(params)) {
     if (v !== null && v !== undefined && v !== "") u.searchParams.set(k, String(v));
   }

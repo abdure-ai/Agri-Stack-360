@@ -7,8 +7,8 @@
 #              SSH_PORT        optional, default 22
 #              DEPLOY_PATH     optional, default /opt/agristack
 #
-# One-time on the server: create .env in DEPLOY_PATH (see deployment.md, include DOMAIN), and after the
-# first deploy run
+# One-time on the server: create .env in DEPLOY_PATH (see deployment.md), point your Caddy site at
+# 127.0.0.1:7004, and after the first deploy run
 #   docker compose --profile setup run --rm setup
 name: Deploy
 
@@ -43,9 +43,11 @@ jobs:
             mkdir -p "${DEPLOY_PATH:-/opt/agristack}" && cd "${DEPLOY_PATH:-/opt/agristack}"
             [ -d .git ] || git init -q   # first deploy into a plain folder (e.g. one holding only .env)
             git fetch -q "$REPO_URL" main && git reset --hard FETCH_HEAD   # compose file, Caddyfile; .env is untracked
+            echo "Deploying in $(pwd)"
+            [ -f .env ] || { echo "No .env in $(pwd): create it from .env.example"; exit 1; }
             docker compose build api disease web   # api's image is shared by forecast, sync and telegram
             docker compose up -d --remove-orphans
             docker image prune -f
             sleep 20
             docker compose ps
-            curl -fsS -o /dev/null "https://$(grep -E '^DOMAIN=' .env | cut -d= -f2 | cut -d'#' -f1 | tr -d ' ')/api/docs"
+            curl -fsS -o /dev/null http://127.0.0.1:7004/api/docs   # through the web container's nginx

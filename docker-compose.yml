@@ -1,13 +1,13 @@
 # Production deployment of Agri-Stack 360 (see deployment.md).
 #
-#   cp .env.example .env     # fill in section 4 of deployment.md, plus DOMAIN
+#   cp .env.example .env     # fill in section 4 of deployment.md
 #   docker compose build
 #   docker compose --profile setup run --rm setup     # once: database, boundaries, seed data, knowledge base
 #   docker compose up -d
 #
 # Ports: api 7000, forecast 7001, sync 7002, disease 7003, web 7004 (all inside the Docker network).
-# Only the web app is published, on 127.0.0.1:7004: put your HTTPS reverse proxy in front of it, or start the
-# bundled Caddy (ports 80/443) with --profile caddy.
+# Only the web app is published, on 127.0.0.1:7004: put your HTTPS reverse proxy (e.g. Caddy) in front of it.
+# The web app calls /api, /forecast and /sync on its own origin, so it works under any domain.
 
 x-app: &app
   build:
@@ -70,28 +70,10 @@ services:
     build:
       context: .
       dockerfile: deploy/Dockerfile.web
-      args:
-        PUBLIC_URL: https://${DOMAIN:?set DOMAIN in .env}
     image: ${REGISTRY:-}agristack-web:${TAG:-latest}
     depends_on: [api, forecast, sync]
     ports:
       - "127.0.0.1:7004:7004"   # point your host's HTTPS reverse proxy here
-    restart: unless-stopped
-    logging: *logging
-
-  caddy:
-    image: caddy:2-alpine
-    profiles: [caddy]       # only if nothing else on the host terminates HTTPS
-    ports:
-      - "80:80"
-      - "443:443"
-    environment:
-      DOMAIN: ${DOMAIN}
-    volumes:
-      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy_data:/data
-      - caddy_config:/config
-    depends_on: [web]
     restart: unless-stopped
     logging: *logging
 
@@ -126,5 +108,3 @@ services:
 
 volumes:
   state:
-  caddy_data:
-  caddy_config:
