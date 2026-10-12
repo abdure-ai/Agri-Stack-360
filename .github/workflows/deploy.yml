@@ -48,6 +48,10 @@ jobs:
             docker compose build api disease web   # api's image is shared by forecast, sync and telegram
             docker compose up -d --remove-orphans
             docker image prune -f
-            sleep 20
+            # Wait up to 3 minutes for the API to answer through the web container's nginx.
+            for i in $(seq 36); do
+              curl -fsS -o /dev/null http://127.0.0.1:7004/api/docs && break
+              [ "$i" = 36 ] && { docker compose ps; docker compose logs --tail 80 api; exit 1; }
+              sleep 5
+            done
             docker compose ps
-            curl -fsS -o /dev/null http://127.0.0.1:7004/api/docs   # through the web container's nginx
