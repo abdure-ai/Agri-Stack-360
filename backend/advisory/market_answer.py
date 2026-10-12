@@ -59,6 +59,34 @@ CROP_NAMES: dict[str, dict[str, str]] = {
     "Teff": {"am": "ጤፍ", "om": "Xaafii", "ti": "ጣፍ"}, "Tomato": {"am": "ቲማቲም", "om": "Timaatima", "ti": "ኮሚደረ"},
     "Wheat": {"am": "ስንዴ", "om": "Qamadii", "ti": "ስርናይ"},
 }
+# Crops farmers ask about that NMIS does not report: answered with "no NMIS price", not escalated.
+OTHER_CROP_TERMS: dict[str, dict[str, list[str]]] = {
+    "coffee": {"en": ["coffee"], "am": ["ቡና"], "om": ["buna", "bunna"], "ti": ["ቡን"]},
+    "khat": {"en": ["khat", "chat"], "am": ["ጫት"], "om": ["jimaa", "caatii"], "ti": ["ጫት"]},
+    "enset": {"en": ["enset", "ensete"], "am": ["እንሰት"], "om": ["warqee"], "ti": ["እንሰት"]},
+    "chickpea": {"en": ["chickpea"], "am": ["ሽምብራ"], "om": ["shumbura", "shimbira"], "ti": ["ሽምብራ", "ዓይኒ ዓተር"]},
+    "lentil": {"en": ["lentil"], "am": ["ምስር"], "om": ["misira"], "ti": ["ብርስን"]},
+    "faba_bean": {"en": ["faba bean", "broad bean"], "am": ["ባቄላ"], "om": ["baaqelaa"], "ti": ["ባልደንጓ"]},
+    "linseed": {"en": ["linseed", "flax"], "am": ["ተልባ"], "om": ["talbaa"], "ti": ["ተልባ"]},
+    "niger_seed": {"en": ["niger seed", "noug"], "am": ["ኑግ"], "om": ["nuugii"], "ti": ["ኑግ"]},
+    "groundnut": {"en": ["groundnut", "peanut"], "am": ["ኦቾሎኒ"], "om": ["ocholoonii"], "ti": ["ኦቾሎኒ"]},
+    "cabbage": {"en": ["cabbage", "kale"], "am": ["ጎመን"], "om": ["raafuu"], "ti": ["ካውሎ"]},
+    "sugarcane": {"en": ["sugarcane", "sugar cane"], "am": ["ሸንኮራ"], "om": ["shankoraa"], "ti": ["ሸንኮራ"]},
+}
+OTHER_CROP_NAMES: dict[str, dict[str, str]] = {
+    "coffee": {"en": "Coffee", "am": "ቡና", "om": "Buna", "ti": "ቡን"},
+    "khat": {"en": "Khat", "am": "ጫት", "om": "Jimaa", "ti": "ጫት"},
+    "enset": {"en": "Enset", "am": "እንሰት", "om": "Warqee", "ti": "እንሰት"},
+    "chickpea": {"en": "Chickpea", "am": "ሽምብራ", "om": "Shumbura", "ti": "ሽምብራ"},
+    "lentil": {"en": "Lentil", "am": "ምስር", "om": "Misira", "ti": "ብርስን"},
+    "faba_bean": {"en": "Faba bean", "am": "ባቄላ", "om": "Baaqelaa", "ti": "ባልደንጓ"},
+    "linseed": {"en": "Linseed", "am": "ተልባ", "om": "Talbaa", "ti": "ተልባ"},
+    "niger_seed": {"en": "Niger seed", "am": "ኑግ", "om": "Nuugii", "ti": "ኑግ"},
+    "groundnut": {"en": "Groundnut", "am": "ኦቾሎኒ", "om": "Ocholoonii", "ti": "ኦቾሎኒ"},
+    "cabbage": {"en": "Cabbage", "am": "ጎመን", "om": "Raafuu", "ti": "ካውሎ"},
+    "sugarcane": {"en": "Sugarcane", "am": "ሸንኮራ", "om": "Shankoraa", "ti": "ሸንኮራ"},
+}
+
 PRICE_WORDS = {
     "en": ["price", "cost", "how much", "birr", "etb", "market rate", "selling for", "sells for"],
     "am": ["ዋጋ", "ስንት ብር", "ስንት ገባ", "ስንት ነው", "ብር ገባ", "ስንት ይሸጣል", "ስንት ደረሰ", "በስንት"],
@@ -74,11 +102,11 @@ def _has(text: str, term: str) -> bool:
     return re.search(rf"\b{re.escape(term)}", text) is not None   # Latin: word start ("onions", "gatiin")
 
 
-def crops_in(question: str) -> list[str]:
-    """NMIS crops named in the question, in order of first mention."""
+def crops_in(question: str, lexicon: dict[str, dict[str, list[str]]] | None = None) -> list[str]:
+    """Crops named in the question (NMIS crops by default), in order of first mention."""
     text = question.lower()
-    terms = sorted(((term.lower(), crop) for crop, by_lang in CROP_TERMS.items() for words in by_lang.values()
-                    for term in words), key=lambda x: -len(x[0]))
+    terms = sorted(((term.lower(), crop) for crop, by_lang in (lexicon or CROP_TERMS).items()
+                    for words in by_lang.values() for term in words), key=lambda x: -len(x[0]))
     found: dict[str, int] = {}
     for term, crop in terms:
         if crop in found:
@@ -93,6 +121,19 @@ def crops_in(question: str) -> list[str]:
 def is_price_question(question: str) -> bool:
     text = question.lower()
     return any(_has(text, w.lower()) for words in PRICE_WORDS.values() for w in words)
+
+
+def other_crops_in(question: str) -> list[str]:
+    """Crops NMIS does not report (coffee, khat, ...) named in the question."""
+    return crops_in(question, OTHER_CROP_TERMS)
+
+
+def not_covered(crops: list[str], lang: str) -> dict:
+    """'NMIS has no price for coffee; prices exist for: ...' (no escalation: a DA can't look it up either)."""
+    sep = "፣ " if lang in ("am", "ti") else ", "
+    names = sep.join(OTHER_CROP_NAMES[c].get(lang) or OTHER_CROP_NAMES[c]["en"] for c in crops)
+    available = sep.join(sorted(crop_name(c, lang) for c in CROP_TERMS))
+    return {"text": t("price_not_covered", lang, crop=names, crops=available), "sources": [], "as_of": None}
 
 
 def crop_name(crop: str, lang: str) -> str:

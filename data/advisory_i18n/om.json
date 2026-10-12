@@ -60,7 +60,8 @@
       "price_note",
       "price_none",
       "unit_kg",
-      "unit_quintal"
+      "unit_quintal",
+      "price_not_covered"
     ]
   },
   "dont_know": "Gaaffii kana qajeelfama raggaasifame irraa deebisuu hin dandeenye. Gaaffii kee Hojjetaa Misoomaa (DA) keetiif ergeera; inni/isheen siif deebisu.",
@@ -162,5 +163,6 @@
   "price_note": "Kunneen gabaasa gabaati (giddugaleessa gatii daldalaa gadi aanaa fi ol aanaa). Gatiin akka qulqullinaa fi guyyaatti ni garaagarama; osoo hin gurgurin dura gabaa irratti mirkaneeffadhaa. Tilmaamni waadaa miti.",
   "price_none": "{crop}f gatiin NMIS dhiyoo hin jiru.",
   "unit_kg": "kiiloo",
-  "unit_quintal": "kuntaala"
+  "unit_quintal": "kuntaala",
+  "price_not_covered": "Odeeffannoon gabaa NMIS {crop} hin dabalatu; kanaaf gatii isaa isinitti himuu hin danda'u. NMIS gatii kan qabu: {crops}. {crop}f DA keessan, waldaa hojii gamtaa keessan ykn daldaltoota gabaa naannoo gaafadhaa. Amma gurguruun bu'aa qabaachuun isaa gatii isinii dhiyaatuu fi baasii keessan irratti hundaa'a."
 }

@@ -103,5 +103,6 @@
   "price_note": "These are market reports (the average of the lowest and highest retail price). Prices change with quality and day: check at the market before you sell. A forecast is not a promise.",
   "price_none": "There is no recent NMIS price for {crop}.",
   "unit_kg": "kg",
-  "unit_quintal": "quintal"
+  "unit_quintal": "quintal",
+  "price_not_covered": "NMIS market data does not include {crop}, so I can't give its price. NMIS has prices for: {crops}. For {crop}, ask your Development Agent, your cooperative or traders at the local market. Whether selling now pays depends on the price you are offered and your costs."
 }

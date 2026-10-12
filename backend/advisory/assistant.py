@@ -226,9 +226,12 @@ def _price_answer(conn: sqlite3.Connection, question: str, lang: str, user: dict
     from backend.advisory import market_answer, registry
     from backend.advisory.calendar import farmer_point
 
-    crops = market_answer.crops_in(question)
-    if not crops or not market_answer.is_price_question(question):
+    if not market_answer.is_price_question(question):
         return None
+    crops = market_answer.crops_in(question)
+    if not crops:
+        others = market_answer.other_crops_in(question)
+        return market_answer.not_covered(others, lang) if others else None
     subject = farmer_id or user.get("id")
     try:
         lat, lon, _ = farmer_point(conn, subject) if subject else (None, None, None)

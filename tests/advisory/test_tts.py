@@ -75,3 +75,23 @@ def test_no_engine_available(engines):
 def test_pcm_is_wrapped_in_wav():
     wav = tts.pcm_to_wav(b"\x00\x00" * 100, 24000)
     assert wav[:4] == b"RIFF" and wav[8:12] == b"WAVE"
+
+
+def test_gemini_gets_only_the_text_no_spoken_instruction(monkeypatch):
+    """An instruction in front of the text ("Read this aloud in Amharic...") was read out loud."""
+    from types import SimpleNamespace
+
+    from backend import ai_keys
+    from backend.advisory import tts
+
+    sent = []
+
+    def fake_call(fn):
+        client = SimpleNamespace(models=SimpleNamespace(generate_content=lambda **kw: sent.append(kw) or SimpleNamespace(
+            candidates=[SimpleNamespace(content=SimpleNamespace(parts=[SimpleNamespace(
+                inline_data=SimpleNamespace(data=b"\x00\x00" * 10, mime_type="audio/L16;rate=24000"))]))])))
+        return fn(client)
+
+    monkeypatch.setattr(ai_keys, "call_gemini", fake_call)
+    audio = tts._gemini("ስንዴውን አረም ያስወግዱ።", "am")
+    assert sent[0]["contents"] == "ስንዴውን አረም ያስወግዱ።" and audio[:4] == b"RIFF"

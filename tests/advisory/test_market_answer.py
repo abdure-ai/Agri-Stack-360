@@ -73,3 +73,23 @@ def test_ask_answers_prices_without_the_ai(platform, monkeypatch):
     assert r.kind == "answer" and not r.escalated and "market_price" in r.guardrail_flags
     assert "112 ብር" in r.answer
     assert platform.execute("SELECT COUNT(*) FROM escalations").fetchone()[0] == 0
+
+
+def test_crops_without_nmis_prices_get_an_honest_answer_not_an_escalation(platform):
+    add_user(platform, 1, phone="0933000001")
+    q = "ቡና ስንት ብር ይሸጣል አሁን ጊዜ ጅማ ቡና መሸጥ ያዋጣል?"
+    assert ma.crops_in(q) == [] and ma.other_crops_in(q) == ["coffee"]
+
+    class NoAI:
+        name = "none"
+
+        def generate(self, *a, **k):
+            raise AssertionError("no AI call")
+
+    r = ask(platform, user={"id": 1, "role": "farmer", "language": "am"}, question=q, farmer_id=1, llm=NoAI(),
+            embedder=None, build_ctx=lambda fid: None, language="am")
+    assert r.kind == "answer" and not r.escalated
+    assert "ቡና" in r.answer and "ጤፍ" in r.answer and "ቀይ ሽንኩርት" in r.answer      # lists what NMIS does have
+    assert platform.execute("SELECT COUNT(*) FROM escalations").fetchone()[0] == 0
+    assert ma.other_crops_in("Gatiin bunaa meeqa?") == ["coffee"]
+    assert ma.crops_in("የአኩሪ አተር ዋጋ") == ["Soybean"]

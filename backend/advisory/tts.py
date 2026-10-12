@@ -11,6 +11,10 @@ pilot, to be replaced by a commercially licensed voice before commercial launch.
 
 Audio is cached by language + text under data/cache/tts/, so a repeated answer plays
 instantly and recorded demo answers can be read aloud offline.
+
+Gemini gets the text only: an instruction in front of it ("Read this aloud in Amharic...") was
+sometimes spoken out loud, and this voice model accepts no separate instruction. The language
+comes from the text itself.
 """
 
 from __future__ import annotations
@@ -31,6 +35,7 @@ from backend.advisory.providers import ProviderError
 log = logging.getLogger(__name__)
 
 CACHE_DIR = ROOT / "data" / "cache" / "tts"
+CACHE_VERSION = "v2"     # v1 clips could contain the spoken instruction; they are no longer used
 MAX_CHARS = 1500
 ENGINES = {"am": ("gemini", "mms"), "ti": ("gemini", "mms"), "en": ("gemini",), "om": ("mms",)}
 GEMINI_VOICE = {"am": "Kore", "ti": "Kore", "en": "Kore"}
@@ -54,7 +59,7 @@ def clean_for_speech(text: str) -> str:
 
 
 def _cache_path(lang: str, text: str):
-    return CACHE_DIR / f"{hashlib.sha256(f'{lang}|{text}'.encode('utf-8')).hexdigest()[:32]}.wav"
+    return CACHE_DIR / f"{hashlib.sha256(f'{CACHE_VERSION}|{lang}|{text}'.encode('utf-8')).hexdigest()[:32]}.wav"
 
 
 def pcm_to_wav(pcm: bytes, rate: int = 24000) -> bytes:
@@ -73,13 +78,12 @@ def _gemini(text: str, lang: str) -> bytes:
     from backend.ai_keys import call_gemini
 
     model = env("ADVISORY_TTS_MODEL", "gemini-3.8-flash-tts")
-    prompt = f"Read this aloud in {LANGUAGE_NAMES[lang]}, calmly and clearly, for a farmer:\n{text}"
     config = types.GenerateContentConfig(
         response_modalities=["AUDIO"],
         speech_config=types.SpeechConfig(voice_config=types.VoiceConfig(
             prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name=GEMINI_VOICE.get(lang, "Kore")))),
     )
-    resp = call_gemini(lambda client: client.models.generate_content(model=model, contents=prompt, config=config))
+    resp = call_gemini(lambda client: client.models.generate_content(model=model, contents=text, config=config))
     part = resp.candidates[0].content.parts[0].inline_data
     data, mime = part.data, (part.mime_type or "")
     if data[:4] == b"RIFF":
