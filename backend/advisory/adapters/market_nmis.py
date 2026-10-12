@@ -190,6 +190,20 @@ class NMISMarket:
                             "distance_km": round(admin_areas.distance_km(latitude, longitude, m[3], m[4]), 1)})
         return sorted(out, key=lambda x: x["distance_km"])[:n]
 
+    def recent_markets(self, crop: str, region: str | None = None, n: int = 3) -> list[dict]:
+        """Markets (in a region, or anywhere) that reported this crop most recently; no distances."""
+        since = (self.today - timedelta(days=self.max_age_days)).isoformat()
+        rows = nmis_query(
+            f"""SELECT m.id AS market_id, m.market_name AS market, m.region AS region, MAX(p.collection_date) AS last
+                FROM prices p JOIN varieties v ON v.id = p.variety_id JOIN crops c ON c.id = v.crop_id
+                JOIN markets m ON m.id = p.market_id
+                WHERE lower(c.crop_name) = lower(?) AND p.collection_date >= ? AND p.price_retail_min IS NOT NULL
+                  {"AND lower(m.region) = lower(?)" if region else ""}
+                GROUP BY m.id ORDER BY last DESC, m.market_name LIMIT ?""",
+            (crop, since, *([region] if region else []), n))
+        return [{"market_id": r["market_id"], "market": r["market"], "region": r["region"], "method": "region",
+                 "distance_km": None} for r in rows]
+
     def quote(self, crop: str, market: dict) -> MarketQuote:
         rows = nmis_query(
             """SELECT p.collection_date AS d, AVG((p.price_retail_min + p.price_retail_max) / 2.0) AS price, MAX(v.unit) AS unit

@@ -87,5 +87,21 @@
   "expert_answer": "An agronomist ({da_name}) answered your question: {text}",
   "abc_message": "{org} (your ABC): {text}",
   "ngo_message": "{org}, {project}: {text}",
-  "tg_no_tip": "No tip has been published for today yet. Try again later."
+  "tg_no_tip": "No tip has been published for today yet. Try again later.",
+  "price_intro": "{crop}: latest NMIS retail prices {where}:",
+  "price_where_near": "at the markets nearest to you",
+  "price_where_region": "in {region}",
+  "price_where_country": "at the markets that reported most recently",
+  "price_line": "• {market}{distance}: {price} birr per {unit}, week of {date}{trend}",
+  "price_distance": " ({km} km)",
+  "price_trend_rising": ", rising",
+  "price_trend_falling": ", falling",
+  "price_trend_stable": ", steady",
+  "price_forecast_up": "Forecast for {region} for the next 4 weeks: up about {pct}%.",
+  "price_forecast_down": "Forecast for {region} for the next 4 weeks: down about {pct}%.",
+  "price_forecast_flat": "Forecast for {region} for the next 4 weeks: about the same.",
+  "price_note": "These are market reports (the average of the lowest and highest retail price). Prices change with quality and day: check at the market before you sell. A forecast is not a promise.",
+  "price_none": "There is no recent NMIS price for {crop}.",
+  "unit_kg": "kg",
+  "unit_quintal": "quintal"
 }

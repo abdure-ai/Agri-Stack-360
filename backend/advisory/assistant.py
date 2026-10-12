@@ -221,6 +221,26 @@ def _dont_know(lang: str, farmer_id: int | None, conn: sqlite3.Connection) -> st
 
 # ── Main entry point ──────────────────────────────────────────────────────────
 
+def _price_answer(conn: sqlite3.Connection, question: str, lang: str, user: dict, farmer_id: int | None) -> dict | None:
+    """A price question about an NMIS crop, answered from the price data; None for any other question."""
+    from backend.advisory import market_answer, registry
+    from backend.advisory.calendar import farmer_point
+
+    crops = market_answer.crops_in(question)
+    if not crops or not market_answer.is_price_question(question):
+        return None
+    subject = farmer_id or user.get("id")
+    try:
+        lat, lon, _ = farmer_point(conn, subject) if subject else (None, None, None)
+        row = conn.execute("SELECT region FROM users WHERE id=?", (subject,)).fetchone() if subject else None
+        region = (row[0] if row else None) or user.get("region")
+        return market_answer.answer(conn, crops=crops, lang=lang, point=(lat, lon), region=region,
+                                    market=registry.market(conn))
+    except Exception:          # price database problems: fall back to the normal advisor
+        log.exception("market price answer failed")
+        return None
+
+
 def ask(conn: sqlite3.Connection, *, user: dict, question: str, farmer_id: int | None, llm, embedder,
         build_ctx: Callable[[int], FarmerContext], language: str | None = None,
         conversation_id: int | None = None, channel: str = "app", now: datetime | None = None) -> AskResult:
@@ -238,6 +258,12 @@ def ask(conn: sqlite3.Connection, *, user: dict, question: str, farmer_id: int |
         return finish(AskResult(0, conv_id, pre.kind, lang, pre.message, confidence="high",
                                 escalated=pre.escalate_reason is not None, escalation_reason=pre.escalate_reason,
                                 guardrail_flags=pre.flags))
+
+    # "How much is onion?": answered from NMIS market data, no AI call (backend/advisory/market_answer.py).
+    price = _price_answer(conn, question, lang, user, farmer_id)
+    if price:
+        return finish(AskResult(0, conv_id, "answer", lang, price["text"], price["sources"], "high", False, None,
+                                pre.flags + ["market_price"]))
 
     ctx = None
     if farmer_id:
