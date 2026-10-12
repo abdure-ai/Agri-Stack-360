@@ -7,9 +7,9 @@
 #              SSH_PORT        optional, default 22
 #              DEPLOY_PATH     optional, default /opt/agristack
 #
-# One-time on the server: create .env in DEPLOY_PATH (see deployment.md), point your Caddy site at
-# 127.0.0.1:7004, and after the first deploy run
-#   docker compose --profile setup run --rm setup
+# One-time on the server: create .env in DEPLOY_PATH (see deployment.md) and point your Caddy site at
+# 127.0.0.1:7004. The first deploy runs the setup service (database, boundaries, seed data, knowledge base)
+# and leaves /state/.setup-done so later deploys skip it.
 name: Deploy
 
 on:
@@ -48,6 +48,11 @@ jobs:
             echo "Deploying in $(pwd)"
             [ -f .env ] || { echo "No .env in $(pwd): create it from .env.example"; exit 1; }
             docker compose build api disease web   # api's image is shared by forecast, sync and telegram
+            # First deploy only: create the database and load reference data (marker file on the state volume).
+            if ! docker compose run --rm --no-deps --entrypoint sh api -c 'test -f /state/.setup-done'; then
+              docker compose --profile setup run --rm setup
+              docker compose run --rm --no-deps --entrypoint sh api -c 'touch /state/.setup-done'
+            fi
             docker compose up -d --remove-orphans
             docker image prune -f
             # Wait up to 3 minutes for the API to answer through the web container's nginx.
