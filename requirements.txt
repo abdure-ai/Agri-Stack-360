@@ -4,6 +4,7 @@
 
 # ── Core data ──────────────────────────────────────────────────────────────
 pandas==3.0.1
+openpyxl>=3.1         # pandas' .xlsx reader (admin boundaries import)
 numpy==2.4.2
 scipy==1.17.1
 
