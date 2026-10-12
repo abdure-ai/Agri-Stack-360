@@ -1,0 +1,64 @@
+# Deploy to the production server over SSH: pull main there, build the images on the server, restart.
+#
+# Repository settings needed (Settings -> Secrets and variables -> Actions):
+#   Secrets:   SSH_HOST        server address
+#              SSH_USER        deploy user (must be in the docker group)
+#              SSH_PASSWORD    password for that user
+#              SSH_PORT        optional, default 22
+#              DEPLOY_PATH     optional, default /opt/agristack
+#
+# One-time on the server: create .env in DEPLOY_PATH (see deployment.md) and point your Caddy site at
+# 127.0.0.1:7004. The first deploy runs the setup service (database, boundaries, seed data, knowledge base)
+# and leaves /state/.setup-done so later deploys skip it.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.2.0
+        env:
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          REPO_URL: https://github.com/${{ github.repository }}.git
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          envs: DEPLOY_PATH,REPO_URL
+          command_timeout: 60m    # image builds run on the server
+          script: |
+            set -e
+            mkdir -p "${DEPLOY_PATH:-/opt/agristack}"
+            cd "${DEPLOY_PATH:-/opt/agristack}"
+            [ -d .git ] || git init -q   # first deploy into a plain folder (e.g. one holding only .env)
+            git fetch -q "$REPO_URL" main
+            git reset --hard FETCH_HEAD   # compose file, nginx.conf; .env is untracked
+            echo "Deploying in $(pwd)"
+            [ -f .env ] || { echo "No .env in $(pwd): create it from .env.example"; exit 1; }
+            docker compose build api disease web   # api's image is shared by forecast, sync and telegram
+            # First deploy only: create the database and load reference data (marker file on the state volume).
+            if ! docker compose run --rm --no-deps --entrypoint sh api -c 'test -f /state/.setup-done'; then
+              docker compose --profile setup run --rm setup
+              docker compose run --rm --no-deps --entrypoint sh api -c 'touch /state/.setup-done'
+            fi
+            docker compose up -d --remove-orphans
+            docker image prune -f
+            # Wait up to 3 minutes for the API to answer through the web container's nginx.
+            for i in $(seq 36); do
+              if curl -fsS -o /dev/null http://127.0.0.1:7004/api/docs; then break; fi
+              if [ "$i" = 36 ]; then docker compose ps; docker compose logs --tail 80 api; exit 1; fi
+              sleep 5
+            done
+            docker compose ps

@@ -1,0 +1,16 @@
+# Builds the web app, then serves it with nginx. With PUBLIC_URL unset the app calls /api, /forecast and
+# /sync on its own origin, so the image works under any domain.
+FROM node:20-alpine AS build
+WORKDIR /build
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm ci
+COPY frontend/ ./
+ARG PUBLIC_URL
+ENV VITE_API_URL=${PUBLIC_URL}/api \
+    VITE_FORECAST_URL=${PUBLIC_URL}/forecast \
+    VITE_SYNC_URL=${PUBLIC_URL}/sync
+RUN npm run build
+
+FROM nginx:1.27-alpine
+COPY --from=build /build/dist /usr/share/nginx/html
+COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf

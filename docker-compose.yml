@@ -1,0 +1,110 @@
+# Production deployment of Agri-Stack 360 (see deployment.md).
+#
+#   cp .env.example .env     # fill in section 4 of deployment.md
+#   docker compose build
+#   docker compose --profile setup run --rm setup     # once: database, boundaries, seed data, knowledge base
+#   docker compose up -d
+#
+# Ports: api 7000, forecast 7001, sync 7002, disease 7003, web 7004 (all inside the Docker network).
+# Only the web app is published, on 127.0.0.1:7004: put your HTTPS reverse proxy (e.g. Caddy) in front of it.
+# The web app calls /api, /forecast and /sync on its own origin, so it works under any domain.
+
+x-app: &app
+  build:
+    context: .
+    dockerfile: deploy/Dockerfile.app
+  image: ${REGISTRY:-}agristack-app:${TAG:-latest}
+  env_file: .env
+  environment: &app-env
+    STATE_DIR: /state
+    NMIS_MODEL_DIR: /state/models/lgbm
+    NMIS_MODEL_REGISTRY: /state/models/model_registry.json
+    NMIS_PRICES_DB: /state/nmis_prices.db
+    NMIS_PLATFORM_DB: /state/agri_platform.db
+    NMIS_SYNC_LOG_DIR: /state/logs/sync
+    NMIS_CSV_EXPORT: /state/exports/nmis_prices.csv
+    ADVISORY_DISEASE_URL: http://disease:7003
+    ADVISORY_FORECAST_URL: http://forecast:7001
+    ADVISORY_OFFLINE: "0"
+  volumes:
+    - state:/state
+  restart: unless-stopped
+  logging: &logging
+    driver: json-file
+    options: { max-size: "10m", max-file: "10" }   # log rotation
+
+services:
+  api:
+    <<: *app
+    command: python -m uvicorn backend.main:app --host 0.0.0.0 --port 7000   # one worker: runs the hourly alert engine
+    depends_on: [forecast, disease]
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:7000/api/docs"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  forecast:
+    <<: *app
+    command: python -m uvicorn serving.predict_api:app --host 0.0.0.0 --port 7001
+
+  sync:
+    <<: *app
+    command: python -m uvicorn scraper.api:app --host 0.0.0.0 --port 7002
+
+  disease:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.disease
+    image: ${REGISTRY:-}agristack-disease:${TAG:-latest}
+    env_file: .env          # needs JWT_SECRET_KEY (shared with the platform API)
+    restart: unless-stopped
+    logging: *logging
+
+  telegram:
+    <<: *app
+    command: python -m backend.telegram_bot
+    profiles: [telegram]    # enable with: docker compose --profile telegram up -d
+
+  web:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.web
+    image: ${REGISTRY:-}agristack-web:${TAG:-latest}
+    depends_on: [api, forecast, sync]
+    ports:
+      - "127.0.0.1:7004:7004"   # point your host's HTTPS reverse proxy here
+    restart: unless-stopped
+    logging: *logging
+
+  # One-time setup. Never run the demo seed scripts in production.
+  setup:
+    <<: *app
+    profiles: [setup]
+    restart: "no"
+    command: >
+      sh -c "python -m backend.db_init &&
+             python scripts/import_admin_boundaries.py &&
+             python scripts/load_advisory_seed.py &&
+             python scripts/ingest_knowledge.py"
+
+  # Daily backup of the databases and photos into ./backups (copy these off the server, encrypted).
+  backup:
+    <<: *app
+    profiles: [backup]
+    restart: "no"
+    volumes:
+      - state:/state:ro
+      - ./backups:/backup
+    entrypoint: ["sh", "-c"]
+    command:
+      - |
+        apt-get update -qq && apt-get install -y -qq sqlite3 >/dev/null
+        d=$$(date +%F)
+        sqlite3 /state/agri_platform.db ".backup /backup/agri_platform-$$d.db"
+        sqlite3 /state/nmis_prices.db   ".backup /backup/nmis_prices-$$d.db"
+        tar czf /backup/uploads-training-$$d.tgz -C /state uploads training
+        find /backup -type f -mtime +30 -delete
+
+volumes:
+  state:

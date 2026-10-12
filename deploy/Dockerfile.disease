@@ -1,0 +1,14 @@
+# Disease model: the .keras file needs TensorFlow 2.13, which needs Python <= 3.11.
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY requirements-disease.txt .
+RUN pip install --no-cache-dir -r requirements-disease.txt
+
+COPY backend/ backend/
+COPY serving/ serving/
+COPY New_model_with_dropout_256_20_32.keras .
+
+ENV PYTHONUNBUFFERED=1
+EXPOSE 7003
+CMD ["python", "-m", "uvicorn", "serving.disease_api:app", "--host", "0.0.0.0", "--port", "7003"]

@@ -4,8 +4,9 @@
 #   .venv-disease\Scripts\python -m pip install -r requirements-disease.txt
 tensorflow-cpu==2.13.1
 pillow
-fastapi
+fastapi==0.103.2       # TF 2.13 caps typing-extensions<4.6: newer FastAPI and Pydantic 2 need more
 uvicorn
+pydantic<2
 python-multipart
 python-jose[cryptography]
 bcrypt
