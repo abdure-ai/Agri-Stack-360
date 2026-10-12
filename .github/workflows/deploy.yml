@@ -4,7 +4,7 @@
 #   Variables: DOMAIN          public host name, e.g. agristack.example (baked into the web build)
 #   Secrets:   SSH_HOST        server address
 #              SSH_USER        deploy user (must be in the docker group)
-#              SSH_KEY         private key for that user
+#              SSH_PASSWORD    password for that user
 #              SSH_PORT        optional, default 22
 #              DEPLOY_PATH     optional, default /opt/agristack
 #              GHCR_PULL_TOKEN a personal access token with read:packages (the server uses it to pull)
@@ -93,7 +93,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT || 22 }}
           envs: GHCR_USER,GHCR_TOKEN,REGISTRY,TAG,DEPLOY_PATH
           script_stop: true
