@@ -58,3 +58,17 @@ def test_old_diseases_table_gets_tigrinya_column():
                                name_am TEXT, name_om TEXT, pathogen TEXT, is_disease INTEGER NOT NULL DEFAULT 1);""")
     ensure_schema(c)
     assert "name_ti" in {r[1] for r in c.execute("PRAGMA table_info(diseases)")}
+
+
+def test_answer_language_follows_the_script_of_the_question():
+    from backend.advisory.languages import answer_language
+
+    q_am = "የስንዴ ቅጠሌ ላይ ቢጫ መስመር አለ። ምን ላድርግ?"
+    assert answer_language(q_am, "en") == "am"            # app sent its screen language
+    assert answer_language(q_am, "om") == "am"
+    assert answer_language(q_am, "ti") == "ti"            # same script: the request decides
+    assert answer_language(q_am, None) == "am"
+    assert answer_language("How do I control yellow rust on wheat?", "am") == "en"
+    assert answer_language("Akkamittan dhukkuba qamadii to'achuu danda'a?", "am") == "om"
+    assert answer_language("How do I control yellow rust on wheat?", "om") == "om"   # same script
+    assert answer_language("ok", "am") == "am"            # too short to tell: keep the request

@@ -25,7 +25,7 @@ from backend.advisory.guardrails import build_lexicon, check_answer, pre_check, 
 from backend.advisory.i18n import t
 from backend.advisory.knowledge.query_terms import expand as expand_query
 from backend.advisory.knowledge.search import Hit, search
-from backend.advisory.languages import LANGUAGE_NAMES, SUPPORTED, detect_language
+from backend.advisory.languages import LANGUAGE_NAMES, SUPPORTED, answer_language, detect_language
 from backend.advisory.providers import ChatTurn, ProviderError
 
 MAX_SOURCES = 5
@@ -250,7 +250,7 @@ def ask(conn: sqlite3.Connection, *, user: dict, question: str, farmer_id: int |
         conversation_id: int | None = None, channel: str = "app", now: datetime | None = None) -> AskResult:
     now = now or local_now()
     question = question.strip()
-    lang = language if language in SUPPORTED else detect_language(question, preferred=user.get("language"))
+    lang = answer_language(question, language, preferred=user.get("language"))
     conv_id = _conversation(conn, user["id"], conversation_id, farmer_id, channel, lang)
     lexicon = build_lexicon(conn)
 

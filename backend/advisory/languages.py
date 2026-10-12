@@ -54,6 +54,21 @@ def detect_language(text: str, preferred: str | None = None) -> str:
     return preferred if preferred in ("om", "en") else "en"
 
 
+def answer_language(question: str, requested: str | None, preferred: str | None = None) -> str:
+    """Language to answer in. A requested language is used unless the question is written in the other script:
+    an app that always sends its screen language ("en") must not answer an Amharic question in English.
+    Within one script the request decides (am vs ti, en vs om)."""
+    if requested not in SUPPORTED:
+        return detect_language(question, preferred=preferred)
+    ethiopic = _ethiopic_ratio(question) >= 0.5
+    latin = bool(re.search(r"[a-zA-Z]{3,}", question)) and _ethiopic_ratio(question) < 0.2
+    if ethiopic and requested in ("en", "om"):
+        return detect_language(question, preferred=preferred if preferred in ("am", "ti") else None)
+    if latin and requested in ("am", "ti"):
+        return detect_language(question, preferred=preferred if preferred in ("en", "om") else None)
+    return requested
+
+
 def document_language(text: str) -> str:
     """'am' for Ge'ez-script documents, else 'en' (documents are not in Afaan Oromo yet)."""
     r = _ethiopic_ratio(text)

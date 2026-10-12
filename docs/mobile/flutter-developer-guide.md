@@ -284,7 +284,10 @@ show that clearly.
 - Four interface languages: `en`, `am` (Amharic), `om` (Afaan Oromoo) and `ti` (Tigrinya). Use the ARB files from
   section 2 with `flutter_localizations`. Default to the user's `language` from `/auth/me`, and let them change it
   in the app (save it with `PUT /users/profile {language}`).
-- Pass `language` to the advisory, alerts, tips and DA calls so the server answers in the same language.
+- Pass `language` to the alerts, tips and DA calls (the screen language). For **`POST /advisory/ask`**, leave
+  `language` out (or `null`) so the server answers in the language the question is written in; send it only when
+  the user explicitly picks an answer language. (The server also corrects a screen language that clearly doesn't
+  match the question's script, e.g. an Amharic question with `"en"`.)
 - Amharic and Tigrinya use the Ethiopic script. Bundle **Noto Sans Ethiopic** and test on low-end Android phones.
 - Many am/om/ti strings are still drafts (`x-draft`). Native speakers will review them, so don't edit them in the
   app; changes go back into the web files and are exported again.
@@ -371,4 +374,5 @@ show that clearly.
 |---|---|
 | 2026-10-11 | First version |
 | 2026-10-11 | Admins can publish tips (web); demo accounts updated (Oromia farmer, admin); debug-only demo-login picker (4); 9 new and 1 changed texts in the ARB files. API contract for the app unchanged |
+| 2026-10-12 | `/advisory/ask`: don't send the screen language; the answer follows the question's language (10). Server fixed too |
 
