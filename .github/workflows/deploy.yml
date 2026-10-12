@@ -48,4 +48,4 @@ jobs:
             docker image prune -f
             sleep 20
             docker compose ps
-            curl -fsS -o /dev/null "https://$(grep -E '^DOMAIN=' .env | cut -d= -f2 | tr -d ' ')/api/docs"
+            curl -fsS -o /dev/null "https://$(grep -E '^DOMAIN=' .env | cut -d= -f2 | cut -d'#' -f1 | tr -d ' ')/api/docs"
