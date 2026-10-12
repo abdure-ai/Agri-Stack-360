@@ -157,3 +157,25 @@ def test_stop_unlinks(bot, platform):
     _link(bot)
     bot.handle(msg("/stop"))
     assert platform.execute("SELECT COUNT(*) FROM telegram_links").fetchone()[0] == 0
+
+
+def test_voice_when_speech_service_is_unavailable(bot):
+    from backend.advisory.providers import ProviderError
+
+    _link(bot)
+    bot.api.files["v2"] = b"audio"
+
+    def busy(audio, mime, lang):
+        raise ProviderError("Gemini quota exhausted on every key (quota).")
+
+    bot.transcribe_fn = busy
+    bot.handle(msg(voice={"file_id": "v2", "mime_type": "audio/ogg"}))
+    assert bot.api.sent[-1][1] == tg.t("tg_voice_unavailable", "en")
+    assert not bot.calls["ask"]
+
+
+def test_more_audio_formats_are_accepted():
+    from backend.advisory import stt
+
+    for mime in ("audio/x-m4a", "audio/opus", "audio/mp3"):
+        assert stt.MIME_ALIASES[mime] in stt.AUDIO_TYPES

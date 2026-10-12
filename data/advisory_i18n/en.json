@@ -105,5 +105,6 @@
   "unit_kg": "kg",
   "unit_quintal": "quintal",
   "price_not_covered": "NMIS market data does not include {crop}, so I can't give its price. NMIS has prices for: {crops}. For {crop}, ask your Development Agent, your cooperative or traders at the local market. Whether selling now pays depends on the price you are offered and your costs.",
-  "emergency_fallback": "go to the nearest health centre"
+  "emergency_fallback": "go to the nearest health centre",
+  "tg_voice_unavailable": "Voice questions aren't available right now. Please type your question."
 }

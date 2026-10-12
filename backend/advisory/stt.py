@@ -24,6 +24,10 @@ ENGINES = {"am": ("gemini",), "ti": ("gemini",), "en": ("gemini",), "om": ("gemi
 VERIFIED_QUALITY = {"en"}
 LANGUAGE = {"am": ("Amharic", "Ge'ez (Ethiopic) script"), "ti": ("Tigrinya", "Ge'ez (Ethiopic) script"),
             "om": ("Afaan Oromoo", "Latin script (Qubee)"), "en": ("English", "Latin script")}
+# Other names phones and apps use for the same formats (m4a = MP4 audio, opus files are OGG).
+MIME_ALIASES = {"audio/x-m4a": "audio/mp4", "audio/m4a": "audio/mp4", "audio/opus": "audio/ogg",
+                "audio/x-opus+ogg": "audio/ogg", "audio/mp3": "audio/mpeg", "audio/x-wav": "audio/wav",
+                "audio/wave": "audio/wav", "audio/vnd.wave": "audio/wav", "audio/x-aac": "audio/aac"}
 AUDIO_TYPES = {"audio/webm", "audio/ogg", "audio/mp4", "audio/mpeg", "audio/wav", "audio/x-wav", "audio/aac"}
 
 
@@ -81,6 +85,7 @@ def transcribe(audio: bytes, mime: str, lang: str) -> Transcript:
     if len(audio) > MAX_BYTES:
         raise ValueError("The recording is too long. Keep the question under a minute.")
     base = (mime or "").split(";")[0].strip().lower()
+    base = MIME_ALIASES.get(base, base)
     if base not in AUDIO_TYPES:
         raise ValueError("Unsupported audio format.")
     engines = [e for e in ENGINES[lang] if not (e == "gemini" and offline())]

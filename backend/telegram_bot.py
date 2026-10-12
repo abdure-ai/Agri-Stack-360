@@ -28,6 +28,7 @@ import requests
 
 from backend.advisory.config import env
 from backend.advisory.i18n import t
+from backend.advisory.providers import ProviderError
 
 log = logging.getLogger("telegram_bot")
 
@@ -185,6 +186,9 @@ class Bot:
                     text = self.transcribe_fn(audio, voice.get("mime_type") or "audio/ogg", lang)
                 except ValueError:
                     return self.api.send(chat_id, t("tg_voice_failed", lang))
+                except ProviderError:           # speech service busy / out of quota: say so, ask for text
+                    log.warning("telegram voice: speech-to-text unavailable")
+                    return self.api.send(chat_id, t("tg_voice_unavailable", lang))
                 self.api.send(chat_id, t("tg_heard", lang, text=text))
             if text:
                 return self.api.send(chat_id, self._answer_text(chat_id, user, text, lang, link["conversation_id"]))

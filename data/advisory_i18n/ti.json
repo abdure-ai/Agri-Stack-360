@@ -63,7 +63,8 @@
       "unit_quintal",
       "price_not_covered",
       "placeholder_warning",
-      "emergency_fallback"
+      "emergency_fallback",
+      "tg_voice_unavailable"
     ]
   },
   "dont_know": "ካብቶም ዝተፈቕዱ መምርሒታት መልሲ ናይዚ ኣይፈልጥን። ሕቶኹም ናብ ሰራሕተኛ ልምዓትኩም ሰዲደዮ ኣለኹ፣ ንሱ ክምልሰልኩም እዩ።",
@@ -167,5 +168,6 @@
   "unit_kg": "ኪሎ",
   "unit_quintal": "ኩንታል",
   "price_not_covered": "ሓበሬታ ዕዳጋ NMIS {crop} ኣየጠቓልልን፤ ስለዚ ዋጋኡ ክነግረኩም ኣይክእልን። NMIS ዋጋ ዘለዎ ን፦ {crops}። ን{crop} ሰራሕተኛ ልምዓትኩም፣ ማሕበር ሕብረት ስራሕኩም ወይ ኣብ ከባቢ ዕዳጋ ዘለዉ ነጋዶ ሕተቱ። ሕጂ ምሻጥ ዘዋጽእ እንተኾይኑ ብዝቐርበልኩም ዋጋን ብወጻኢኹምን ይውሰን።",
-  "emergency_fallback": "ናብ ዝቐረበኩም ጣቢያ ጥዕና ኪዱ"
+  "emergency_fallback": "ናብ ዝቐረበኩም ጣቢያ ጥዕና ኪዱ",
+  "tg_voice_unavailable": "ናይ ድምጺ ሕቶታት ሕጂ ኣይርከቡን። በጃኹም ሕቶኹም ብጽሑፍ ስደዱ።"
 }

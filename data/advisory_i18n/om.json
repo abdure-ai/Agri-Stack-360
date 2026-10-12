@@ -63,7 +63,8 @@
       "unit_quintal",
       "price_not_covered",
       "placeholder_warning",
-      "emergency_fallback"
+      "emergency_fallback",
+      "tg_voice_unavailable"
     ]
   },
   "dont_know": "Gaaffii kana qajeelfama raggaasifame irraa deebisuu hin dandeenye. Gaaffii kee Hojjetaa Misoomaa (DA) keetiif ergeera; inni/isheen siif deebisu.",
@@ -167,5 +168,6 @@
   "unit_kg": "kiiloo",
   "unit_quintal": "kuntaala",
   "price_not_covered": "Odeeffannoon gabaa NMIS {crop} hin dabalatu; kanaaf gatii isaa isinitti himuu hin danda'u. NMIS gatii kan qabu: {crops}. {crop}f DA keessan, waldaa hojii gamtaa keessan ykn daldaltoota gabaa naannoo gaafadhaa. Amma gurguruun bu'aa qabaachuun isaa gatii isinii dhiyaatuu fi baasii keessan irratti hundaa'a.",
-  "emergency_fallback": "buufata fayyaa isinitti dhiyoo jirutti deemaa"
+  "emergency_fallback": "buufata fayyaa isinitti dhiyoo jirutti deemaa",
+  "tg_voice_unavailable": "Gaaffiin sagaleen amma hin jiru. Maaloo gaaffii keessan barreessaa ergaa."
 }

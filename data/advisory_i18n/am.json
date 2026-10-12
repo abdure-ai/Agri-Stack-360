@@ -63,7 +63,8 @@
       "unit_quintal",
       "price_not_covered",
       "placeholder_warning",
-      "emergency_fallback"
+      "emergency_fallback",
+      "tg_voice_unavailable"
     ]
   },
   "dont_know": "ይህንን ጥያቄ ከጸደቁት መመሪያዎች መመለስ አልቻልኩም። ጥያቄዎን ለልማት ጣቢያ ሰራተኛዎ (DA) ልኬዋለሁ፤ እርሳቸው መልስ ይሰጡዎታል።",
@@ -167,5 +168,6 @@
   "unit_kg": "ኪሎ",
   "unit_quintal": "ኩንታል",
   "price_not_covered": "የNMIS የገበያ መረጃ {crop}ን አያካትትም፤ ስለዚህ ዋጋውን ልነግርዎ አልችልም። NMIS ዋጋ ያለው ለ፦ {crops}። ለ{crop} የልማት ጣቢያ ሰራተኛዎን፣ የህብረት ስራ ማህበርዎን ወይም በአካባቢው ገበያ ያሉ ነጋዴዎችን ይጠይቁ። አሁን መሸጥ ያዋጣ እንደሆነ በሚቀርብልዎ ዋጋና በወጪዎ ይወሰናል።",
-  "emergency_fallback": "በአቅራቢያዎ ወዳለው ጤና ጣቢያ ይሂዱ"
+  "emergency_fallback": "በአቅራቢያዎ ወዳለው ጤና ጣቢያ ይሂዱ",
+  "tg_voice_unavailable": "የድምፅ ጥያቄዎች አሁን አይገኙም። እባክዎ ጥያቄዎን በጽሑፍ ይላኩ።"
 }
