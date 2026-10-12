@@ -39,14 +39,29 @@ MAX_IMAGE_BYTES = 10 * 1024 * 1024
 
 app = FastAPI(title="Wheat Disease Model", version="1.0.0", docs_url="/docs")
 _model = None
+_load_error: str | None = None
+
+
+@app.exception_handler(Exception)
+async def _report_error(request, exc: Exception):
+    """Unexpected failure: say what it was (type and message), so the platform and the app can show it.
+    No request data is echoed back."""
+    from fastapi.responses import JSONResponse
+
+    return JSONResponse({"detail": f"{type(exc).__name__}: {str(exc)[:300]}"}, status_code=500)
 
 
 def model():
-    global _model
+    global _model, _load_error
     if _model is None:
-        import tensorflow as tf  # imported lazily so /health answers while TF loads
+        try:
+            import tensorflow as tf  # imported lazily so /health answers while TF loads
 
-        _model = tf.keras.models.load_model(str(ROOT / META["model_file"]))
+            _model = tf.keras.models.load_model(str(ROOT / META["model_file"]))
+            _load_error = None
+        except Exception as e:
+            _load_error = f"{type(e).__name__}: {str(e)[:300]}"
+            raise RuntimeError(f"Model could not be loaded ({_load_error})") from e
     return _model
 
 
@@ -78,8 +93,15 @@ def summarise(probs: np.ndarray) -> dict:
 
 
 @app.get("/health")
-def health():
-    return {"status": "ok", "model_loaded": _model is not None}
+def health(load: bool = False):
+    """?load=true also loads the model, so a deploy can check it before users do."""
+    if load and _model is None:
+        try:
+            model()
+        except RuntimeError:
+            pass
+    return {"status": "ok" if _load_error is None else "error", "model_loaded": _model is not None,
+            "load_error": _load_error}
 
 
 @app.get("/metadata")

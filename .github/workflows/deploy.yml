@@ -64,6 +64,8 @@ jobs:
               if [ "$i" = 36 ]; then docker compose ps; docker compose logs --tail 80 api; exit 1; fi
               sleep 5
             done
+            # Load the disease model now (the first photo check is then fast) and show whether it loads.
+            docker compose exec -T disease python -c "import urllib.request; print('disease model:', urllib.request.urlopen('http://localhost:7003/health?load=true', timeout=300).read().decode())" || echo "disease model: health check failed"
             # Demo site only: DEMO_MODE=1 in .env seeds the demo accounts and data once.
             if grep -q '^DEMO_MODE=1' .env && \
                ! docker compose run --rm --no-deps --entrypoint sh api -c 'test -f /state/.demo-seeded'; then

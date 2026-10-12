@@ -75,6 +75,7 @@ def _compute_credit_score(user: dict) -> tuple[int, list[dict], list[dict]]:
 # The explanation only changes when the score or its factors change, and the Gemini key is on
 # a small daily free quota shared with the advisory module, so cache it for a day per user.
 _EXPLANATION_TTL_SECONDS = 24 * 3600
+EXPLANATION_WAIT_SECONDS = 6      # the app gives up after 20 s; AI keys may be rate limited for longer
 _explanations: dict[tuple, tuple[float, str]] = {}
 
 
@@ -83,7 +84,17 @@ async def _get_score_explanation(score: int, user: dict, positive: list, risks: 
     hit = _explanations.get(key)
     if hit and time.monotonic() - hit[0] < _EXPLANATION_TTL_SECONDS:
         return hit[1]
-    text = await _generate_score_explanation(score, user, positive, risks)
+    task = asyncio.ensure_future(_generate_score_explanation(score, user, positive, risks))
+
+    def _keep(t: asyncio.Task) -> None:       # a slow answer still fills the cache for the next visit
+        if not t.cancelled() and t.exception() is None and t.result():
+            _explanations[key] = (time.monotonic(), t.result())
+
+    task.add_done_callback(_keep)
+    try:
+        text = await asyncio.wait_for(asyncio.shield(task), timeout=EXPLANATION_WAIT_SECONDS)
+    except asyncio.TimeoutError:
+        text = None                           # the score shows now, with the standard explanation
     if text is not None:
         _explanations[key] = (time.monotonic(), text)
         return text

@@ -59,7 +59,11 @@ class DiseaseServiceClient:
         if r.status_code == 400:
             raise ValueError(r.json().get("detail", "The file is not a readable image."))
         if r.status_code != 200:
-            raise ProviderError(f"Disease model service error {r.status_code}: {r.text[:200]}")
+            try:
+                detail = r.json().get("detail") or r.text
+            except ValueError:
+                detail = r.text
+            raise ProviderError(f"Disease model service error {r.status_code}: {str(detail)[:300]}")
         body = r.json()
         return DualPrediction(
             model_version=body["model_version"],

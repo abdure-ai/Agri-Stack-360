@@ -117,6 +117,22 @@ app.include_router(beckn_router,       prefix="/api")   # signed network request
 
 
 @app.on_event("startup")
+def _warm_market_metadata():
+    """The crop/market lists take ~10 s to build from the price table; do it before the first request."""
+    import threading
+
+    def warm():
+        try:
+            from backend.routers.meta import _get_meta
+
+            _get_meta()
+        except Exception:
+            pass
+
+    threading.Thread(target=warm, name="warm-meta", daemon=True).start()
+
+
+@app.on_event("startup")
 def _start_advisory_alerts():
     """Hourly alert cycle (outbreaks, due follow-ups) on its own database connection."""
     import sqlite3

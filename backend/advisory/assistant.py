@@ -23,6 +23,7 @@ from backend.advisory.config import local_now, setting_int
 from backend.advisory.context import FarmerContext
 from backend.advisory.guardrails import build_lexicon, check_answer, pre_check, safety_block
 from backend.advisory.i18n import t
+from backend.advisory.knowledge.query_terms import expand as expand_query
 from backend.advisory.knowledge.search import Hit, search
 from backend.advisory.languages import LANGUAGE_NAMES, SUPPORTED, detect_language
 from backend.advisory.providers import ChatTurn, ProviderError
@@ -279,6 +280,7 @@ def ask(conn: sqlite3.Connection, *, user: dict, question: str, farmer_id: int |
     query = question
     if history and len(question.split()) < 6:     # short follow-up: include the previous question
         query = f"{history[-2].content} {question}"
+    query = expand_query(query, lang)              # the manuals are in Amharic: add the Amharic farming words
     hits = search(conn, query, k=MAX_SOURCES, crop=crops[0] if len(crops) == 1 else None, embedder=embedder)
     if not hits and crops:
         hits = search(conn, query, k=MAX_SOURCES, embedder=embedder)
