@@ -22,12 +22,13 @@ const ETHIOPIA: LatLngExpression = [9.1, 40.4];
 const ZOOM_BY_LEVEL = [6, 7, 8, 10];
 const DISEASE_COLORS = ["#f04438", "#f79009", "#7a5af8", "#ee46bc", "#0ba5ec"];
 const BAND_RADIUS = { low: 7, medium: 11, high: 16 } as const;
-const LAYER_ORDER: MapLayerName[] = ["disease", "markets", "shops", "farms"];
+const LAYER_ORDER: MapLayerName[] = ["disease", "markets", "shops", "farms", "abcs"];
 const LAYER_COLOR: Record<MapLayerName, string> = {
   disease: "#f04438",
   markets: "#12b76a",
   shops: "#2e90fa",
   farms: "#7a5af8",
+  abcs: "#0e9384",
 };
 
 type Level = 1 | 2 | 3;
@@ -157,7 +158,7 @@ function CountMarker({ w }: { w: MapFarmCount }) {
 }
 
 function Layers({ data, on }: { data: MapLayers; on: Record<MapLayerName, boolean> }) {
-  const { disease, markets, shops, farms } = data.layers;
+  const { disease, markets, shops, farms, abcs } = data.layers;
   const diseaseKeys = useMemo(() => [...new Set((disease?.hotspots ?? []).map((h) => h.disease_key))], [disease]);
   return (
     <>
@@ -245,6 +246,17 @@ function Layers({ data, on }: { data: MapLayers; on: Record<MapLayerName, boolea
         </CircleMarker>
       ))}
 
+      {on.abcs && abcs?.abcs.map((a) => (
+        <CircleMarker key={`abc-${a.org_id}`} center={[a.latitude, a.longitude]} radius={11}
+          pathOptions={{ color: a.alerts.length ? "#f79009" : "#0e9384", weight: 3, fillColor: "#0e9384", fillOpacity: 0.85 }}>
+          <Popup>
+            <PopupTitle>{a.name}</PopupTitle>
+            <PopupLine>{a.woreda ?? "—"} · {tr(`abc.status.${a.status}` as MessageKey)}</PopupLine>
+            <PopupLine>{tr("pf.membersShort", { n: a.members })} · {tr("pf.capitalShort", { paid: formatETB(a.capital_paid_etb) })}</PopupLine>
+            {!!a.alerts.length && <PopupLine>{a.alerts.map((x) => tr(`pf.alert.${x}` as MessageKey)).join(", ")}</PopupLine>}
+          </Popup>
+        </CircleMarker>
+      ))}
       {on.disease && disease?.hotspots.map((h) => (
         <CircleMarker
           key={`${h.pcode}-${h.disease_key}`}
@@ -308,7 +320,7 @@ export default function MapPage() {
   const { lang } = useI18n();
   const [crop, setCrop] = useState("Wheat");
   const [days, setDays] = useState("30");
-  const [on, setOn] = useState<Record<MapLayerName, boolean>>({ disease: true, markets: true, shops: true, farms: true });
+  const [on, setOn] = useState<Record<MapLayerName, boolean>>({ disease: true, markets: true, shops: true, farms: true, abcs: true });
   const crops = useAsync(() => api.mapCrops(), []);
   const data = useAsync(
     () => api.mapLayers({ layers: LAYER_ORDER.join(","), crop, days: Number(days), language: lang }),
@@ -330,6 +342,7 @@ export default function MapPage() {
     markets: data.data?.layers.markets?.markets.filter((m) => m.price_etb).length,
     shops: data.data?.layers.shops?.shops.length,
     farms: own ? (own.mode === "counts" ? own.woredas.length : own.farmers.length) : undefined,
+    abcs: data.data?.layers.abcs?.abcs.length,
   };
 
   return (

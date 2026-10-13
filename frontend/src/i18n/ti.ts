@@ -2470,4 +2470,43 @@ export const ti: Record<MessageKey, string> = {
   "myabc.say.weight": "ክብደት ድምጽኹም {pct} እዩ።",  // draft – needs native review
   "myabc.say.meeting": "ዝቕጽል ኣኼባ፦ {title}፣ {date}።",  // draft – needs native review
   "abcInv.openMyAbc": "ናተይ ABC ክፈት፦ ኣክሲዮናት፣ ሒሳብ፣ ትእዛዛትን ቆጸራታትን →",  // draft – needs native review
+
+  // ── ABC portfolio (A10) ───────────────────────────────────────────────────
+  "role.ati_officer": "ክኢላ ፕሮግራም ABC ATI",  // draft – needs native review
+  "nav.abcPortfolio": "ፖርትፎልዮ ABC",  // draft – needs native review
+  "map.layer.abcs": "ABCታት",  // draft – needs native review
+  "pf.description": "ኩሎም እትቆጻጸርዎም ABCታት፦ ኩነታት፣ ኣባላት፣ ካፒታል፣ ማሽነሪን መጠንቀቕታ ምትእስሳርን። ቁጽርታት ጥራይ፣ ሽም ኣባላት ፈጺሙ ኣይርአን።",  // draft – needs native review
+  "pf.export": "CSV ኣውጽእ",  // draft – needs native review
+  "pf.abcs": "ABCታት",  // draft – needs native review
+  "pf.registered": "ዝተመዝገቡ",  // draft – needs native review
+  "pf.members": "ኣባላት",  // draft – needs native review
+  "pf.capitalPaid": "ዝተኸፍለ ካፒታል",  // draft – needs native review
+  "pf.withAlerts": "መጠንቀቕታ ዘለዎም",  // draft – needs native review
+  "pf.list": "ABCታት",  // draft – needs native review
+  "pf.listHint": "ደረታት ካብ ኣብ ስራሕ ዘለዉ ሕግታት ABC ይውሰዱ፤ ካብ 5 ዝወሓዱ ቁጽርታት <5 ተባሂሎም ይርኣዩ።",  // draft – needs native review
+  "pf.none": "ኣብ ከባቢኹም ገና ABC የለን።",  // draft – needs native review
+  "pf.col.abc": "ABC",  // draft – needs native review
+  "pf.col.status": "ኩነታት",  // draft – needs native review
+  "pf.col.members": "ኣባላት",  // draft – needs native review
+  "pf.col.inclusion": "ደቂ ኣንስትዮ · መንእሰያት",  // draft – needs native review
+  "pf.col.capital": "ካፒታል",  // draft – needs native review
+  "pf.col.machinery": "ማሽነሪ (30 መዓልቲ)",  // draft – needs native review
+  "pf.col.alerts": "ምትእስሳር",  // draft – needs native review
+  "pf.membersOf": "ካብ {min} {n}",  // draft – needs native review
+  "pf.inclusion": "{women}% ደቂ ኣንስትዮ · {youth}% መንእሰያት",  // draft – needs native review
+  "pf.capital": "ካብ ቃል ዝተኣትወ {pledged} {paid} ተኸፊሉ",  // draft – needs native review
+  "pf.subscribed": "ካብ ዝቐረቡ ኣክሲዮናት {pct}%",  // draft – needs native review
+  "pf.machinery": "{n} ማሽናት · {ha} ሄክታር · {pct}% ተጠቒሙ",  // draft – needs native review
+  "pf.lastGA": "ናይ መወዳእታ ጉባኤ {date}",  // draft – needs native review
+  "pf.noAlerts": "መጠንቀቕታ የለን",  // draft – needs native review
+  "pf.notRecorded": "ገና ኣይተመዝገበን",  // draft – needs native review
+  "pf.alert.members_below_minimum": "ኣባላት ትሕቲ ዝተሓተ",  // draft – needs native review
+  "pf.alert.capital_below_minimum": "ዝተኸፍለ ካፒታል ትሕቲ ዝተሓተ",  // draft – needs native review
+  "pf.alert.overdue_pledges": "ዝሓለፎም ክፍሊታት ኣክሲዮን",  // draft – needs native review
+  "pf.alert.no_assembly_12_months": "ኣብ 12 ኣዋርሕ ሓፈሻዊ ጉባኤ የለን",  // draft – needs native review
+  "pf.alert.minutes_unapproved": "ቃለ ጉባኤ ኣይጸደቐን",  // draft – needs native review
+  "pf.alert.stock_blocked": "መኽዘን እታወት ብምርግጋጽ ፍርያት ተኣጊዱ",  // draft – needs native review
+  "pf.alert.machinery_out_of_service": "ማሽነሪ ካብ ኣገልግሎት ወጻኢ",  // draft – needs native review
+  "pf.membersShort": "{n} ኣባላት",  // draft – needs native review
+  "pf.capitalShort": "{paid} ካፒታል ተኸፊሉ",  // draft – needs native review
 };

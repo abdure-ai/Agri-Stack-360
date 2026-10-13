@@ -10419,5 +10419,182 @@
   "abcInvOpenMyAbc": "Open My ABC: shares, account, orders and bookings →",
   "@abcInvOpenMyAbc": {
     "description": "web key: abcInv.openMyAbc"
+  },
+  "roleAtiOfficer": "ATI ABC programme officer",
+  "@roleAtiOfficer": {
+    "description": "web key: role.ati_officer"
+  },
+  "navAbcPortfolio": "ABC portfolio",
+  "@navAbcPortfolio": {
+    "description": "web key: nav.abcPortfolio"
+  },
+  "mapLayerAbcs": "ABCs",
+  "@mapLayerAbcs": {
+    "description": "web key: map.layer.abcs"
+  },
+  "pfDescription": "All ABCs you oversee: status, members, capital, machinery and compliance alerts. Counts only, never member names.",
+  "@pfDescription": {
+    "description": "web key: pf.description"
+  },
+  "pfExport": "Export CSV",
+  "@pfExport": {
+    "description": "web key: pf.export"
+  },
+  "pfAbcs": "ABCs",
+  "@pfAbcs": {
+    "description": "web key: pf.abcs"
+  },
+  "pfRegistered": "Registered",
+  "@pfRegistered": {
+    "description": "web key: pf.registered"
+  },
+  "pfMembers": "Members",
+  "@pfMembers": {
+    "description": "web key: pf.members"
+  },
+  "pfCapitalPaid": "Capital paid",
+  "@pfCapitalPaid": {
+    "description": "web key: pf.capitalPaid"
+  },
+  "pfWithAlerts": "With alerts",
+  "@pfWithAlerts": {
+    "description": "web key: pf.withAlerts"
+  },
+  "pfList": "ABCs",
+  "@pfList": {
+    "description": "web key: pf.list"
+  },
+  "pfListHint": "Thresholds come from the ABC rules in force; counts under 5 are shown as <5.",
+  "@pfListHint": {
+    "description": "web key: pf.listHint"
+  },
+  "pfNone": "No ABCs in your area yet.",
+  "@pfNone": {
+    "description": "web key: pf.none"
+  },
+  "pfColAbc": "ABC",
+  "@pfColAbc": {
+    "description": "web key: pf.col.abc"
+  },
+  "pfColStatus": "Status",
+  "@pfColStatus": {
+    "description": "web key: pf.col.status"
+  },
+  "pfColMembers": "Members",
+  "@pfColMembers": {
+    "description": "web key: pf.col.members"
+  },
+  "pfColInclusion": "Women · youth",
+  "@pfColInclusion": {
+    "description": "web key: pf.col.inclusion"
+  },
+  "pfColCapital": "Capital",
+  "@pfColCapital": {
+    "description": "web key: pf.col.capital"
+  },
+  "pfColMachinery": "Machinery (30 days)",
+  "@pfColMachinery": {
+    "description": "web key: pf.col.machinery"
+  },
+  "pfColAlerts": "Compliance",
+  "@pfColAlerts": {
+    "description": "web key: pf.col.alerts"
+  },
+  "pfMembersOf": "{n} of {min}",
+  "@pfMembersOf": {
+    "description": "web key: pf.membersOf",
+    "placeholders": {
+      "n": {},
+      "min": {}
+    }
+  },
+  "pfInclusion": "{women}% women · {youth}% youth",
+  "@pfInclusion": {
+    "description": "web key: pf.inclusion",
+    "placeholders": {
+      "women": {},
+      "youth": {}
+    }
+  },
+  "pfCapital": "Paid {paid} of {pledged} pledged",
+  "@pfCapital": {
+    "description": "web key: pf.capital",
+    "placeholders": {
+      "paid": {},
+      "pledged": {}
+    }
+  },
+  "pfSubscribed": "{pct}% of shares offered",
+  "@pfSubscribed": {
+    "description": "web key: pf.subscribed",
+    "placeholders": {
+      "pct": {}
+    }
+  },
+  "pfMachinery": "{n} machines · {ha} ha · {pct}% used",
+  "@pfMachinery": {
+    "description": "web key: pf.machinery",
+    "placeholders": {
+      "n": {},
+      "ha": {},
+      "pct": {}
+    }
+  },
+  "pfLastGA": "Last assembly {date}",
+  "@pfLastGA": {
+    "description": "web key: pf.lastGA",
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "pfNoAlerts": "No alerts",
+  "@pfNoAlerts": {
+    "description": "web key: pf.noAlerts"
+  },
+  "pfNotRecorded": "not recorded yet",
+  "@pfNotRecorded": {
+    "description": "web key: pf.notRecorded"
+  },
+  "pfAlertMembersBelowMinimum": "Members below the minimum",
+  "@pfAlertMembersBelowMinimum": {
+    "description": "web key: pf.alert.members_below_minimum"
+  },
+  "pfAlertCapitalBelowMinimum": "Paid capital below the minimum",
+  "@pfAlertCapitalBelowMinimum": {
+    "description": "web key: pf.alert.capital_below_minimum"
+  },
+  "pfAlertOverduePledges": "Overdue share payments",
+  "@pfAlertOverduePledges": {
+    "description": "web key: pf.alert.overdue_pledges"
+  },
+  "pfAlertNoAssembly12Months": "No general assembly in 12 months",
+  "@pfAlertNoAssembly12Months": {
+    "description": "web key: pf.alert.no_assembly_12_months"
+  },
+  "pfAlertMinutesUnapproved": "Minutes not approved",
+  "@pfAlertMinutesUnapproved": {
+    "description": "web key: pf.alert.minutes_unapproved"
+  },
+  "pfAlertStockBlocked": "Input stock blocked by the product check",
+  "@pfAlertStockBlocked": {
+    "description": "web key: pf.alert.stock_blocked"
+  },
+  "pfAlertMachineryOutOfService": "Machinery out of service",
+  "@pfAlertMachineryOutOfService": {
+    "description": "web key: pf.alert.machinery_out_of_service"
+  },
+  "pfMembersShort": "{n} members",
+  "@pfMembersShort": {
+    "description": "web key: pf.membersShort",
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "pfCapitalShort": "{paid} capital paid",
+  "@pfCapitalShort": {
+    "description": "web key: pf.capitalShort",
+    "placeholders": {
+      "paid": {}
+    }
   }
 }

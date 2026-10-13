@@ -248,7 +248,18 @@ def seed_abc_team(conn) -> int:
     seed_abc_finance(conn, org)
     seed_abc_inputs(conn, org)
     seed_abc_machinery(conn, org)
+    seed_ati_officer(conn)
     return n
+
+
+def seed_ati_officer(conn) -> None:
+    """Demo account for the ATI ABC programme officer (A10 portfolio, read-only): 0944000013 / demo1234."""
+    from backend.auth import hash_password
+
+    if conn.execute("SELECT 1 FROM users WHERE phone='0944000013'").fetchone():
+        return
+    conn.execute("""INSERT INTO users (phone, name, password_hash, role, language, region)
+                    VALUES ('0944000013', 'Selamawit Getachew', ?, 'ati_officer', 'en', NULL)""", (hash_password("demo1234"),))
 
 
 def seed_abc_machinery(conn, org: int) -> None:

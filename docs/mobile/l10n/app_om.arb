@@ -11820,5 +11820,219 @@
   "@abcInvOpenMyAbc": {
     "description": "web key: abcInv.openMyAbc",
     "x-draft": true
+  },
+  "roleAtiOfficer": "Ogeessa sagantaa ABC ATI",
+  "@roleAtiOfficer": {
+    "description": "web key: role.ati_officer",
+    "x-draft": true
+  },
+  "navAbcPortfolio": "Poortifooliyoo ABC",
+  "@navAbcPortfolio": {
+    "description": "web key: nav.abcPortfolio",
+    "x-draft": true
+  },
+  "mapLayerAbcs": "ABCwwan",
+  "@mapLayerAbcs": {
+    "description": "web key: map.layer.abcs",
+    "x-draft": true
+  },
+  "pfDescription": "ABC hunda isin to'attan: haala, miseensota, kaappitaala, maashinii fi akeekkachiisa seeraa. Lakkoofsa qofa, maqaan miseensaa gonkumaa hin mul'atu.",
+  "@pfDescription": {
+    "description": "web key: pf.description",
+    "x-draft": true
+  },
+  "pfExport": "CSV baasi",
+  "@pfExport": {
+    "description": "web key: pf.export",
+    "x-draft": true
+  },
+  "pfAbcs": "ABCwwan",
+  "@pfAbcs": {
+    "description": "web key: pf.abcs",
+    "x-draft": true
+  },
+  "pfRegistered": "Galmaa'an",
+  "@pfRegistered": {
+    "description": "web key: pf.registered",
+    "x-draft": true
+  },
+  "pfMembers": "Miseensota",
+  "@pfMembers": {
+    "description": "web key: pf.members",
+    "x-draft": true
+  },
+  "pfCapitalPaid": "Kaappitaala kaffalame",
+  "@pfCapitalPaid": {
+    "description": "web key: pf.capitalPaid",
+    "x-draft": true
+  },
+  "pfWithAlerts": "Akeekkachiisa qaban",
+  "@pfWithAlerts": {
+    "description": "web key: pf.withAlerts",
+    "x-draft": true
+  },
+  "pfList": "ABCwwan",
+  "@pfList": {
+    "description": "web key: pf.list",
+    "x-draft": true
+  },
+  "pfListHint": "Daangaaleen seerota ABC hojii irra jiran irraa fudhatamu; lakkoofsi 5 gadii <5 jedhamee mul'ata.",
+  "@pfListHint": {
+    "description": "web key: pf.listHint",
+    "x-draft": true
+  },
+  "pfNone": "Naannoo keessan keessa ABCn ammallee hin jiru.",
+  "@pfNone": {
+    "description": "web key: pf.none",
+    "x-draft": true
+  },
+  "pfColAbc": "ABC",
+  "@pfColAbc": {
+    "description": "web key: pf.col.abc",
+    "x-draft": true
+  },
+  "pfColStatus": "Haala",
+  "@pfColStatus": {
+    "description": "web key: pf.col.status",
+    "x-draft": true
+  },
+  "pfColMembers": "Miseensota",
+  "@pfColMembers": {
+    "description": "web key: pf.col.members",
+    "x-draft": true
+  },
+  "pfColInclusion": "Dubartoota · dargaggoota",
+  "@pfColInclusion": {
+    "description": "web key: pf.col.inclusion",
+    "x-draft": true
+  },
+  "pfColCapital": "Kaappitaala",
+  "@pfColCapital": {
+    "description": "web key: pf.col.capital",
+    "x-draft": true
+  },
+  "pfColMachinery": "Maashinii (guyyaa 30)",
+  "@pfColMachinery": {
+    "description": "web key: pf.col.machinery",
+    "x-draft": true
+  },
+  "pfColAlerts": "Seeraaf ajajamuu",
+  "@pfColAlerts": {
+    "description": "web key: pf.col.alerts",
+    "x-draft": true
+  },
+  "pfMembersOf": "{min} keessaa {n}",
+  "@pfMembersOf": {
+    "description": "web key: pf.membersOf",
+    "placeholders": {
+      "min": {},
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "pfInclusion": "{women}% dubartoota · {youth}% dargaggoota",
+  "@pfInclusion": {
+    "description": "web key: pf.inclusion",
+    "placeholders": {
+      "women": {},
+      "youth": {}
+    },
+    "x-draft": true
+  },
+  "pfCapital": "Waadaa {pledged} keessaa {paid} kaffalame",
+  "@pfCapital": {
+    "description": "web key: pf.capital",
+    "placeholders": {
+      "pledged": {},
+      "paid": {}
+    },
+    "x-draft": true
+  },
+  "pfSubscribed": "Aksiyoona dhiyaatan keessaa {pct}%",
+  "@pfSubscribed": {
+    "description": "web key: pf.subscribed",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "pfMachinery": "Maashinii {n} · hektaara {ha} · {pct}% fayyadame",
+  "@pfMachinery": {
+    "description": "web key: pf.machinery",
+    "placeholders": {
+      "n": {},
+      "ha": {},
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "pfLastGA": "Walgahii dhumaa {date}",
+  "@pfLastGA": {
+    "description": "web key: pf.lastGA",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "pfNoAlerts": "Akeekkachiisni hin jiru",
+  "@pfNoAlerts": {
+    "description": "web key: pf.noAlerts",
+    "x-draft": true
+  },
+  "pfNotRecorded": "ammallee hin galmoofne",
+  "@pfNotRecorded": {
+    "description": "web key: pf.notRecorded",
+    "x-draft": true
+  },
+  "pfAlertMembersBelowMinimum": "Miseensonni xiqqaa gadi",
+  "@pfAlertMembersBelowMinimum": {
+    "description": "web key: pf.alert.members_below_minimum",
+    "x-draft": true
+  },
+  "pfAlertCapitalBelowMinimum": "Kaappitaalli kaffalame xiqqaa gadi",
+  "@pfAlertCapitalBelowMinimum": {
+    "description": "web key: pf.alert.capital_below_minimum",
+    "x-draft": true
+  },
+  "pfAlertOverduePledges": "Kaffaltii aksiyoonaa yeroon darbe",
+  "@pfAlertOverduePledges": {
+    "description": "web key: pf.alert.overdue_pledges",
+    "x-draft": true
+  },
+  "pfAlertNoAssembly12Months": "Ji'oota 12 keessatti walgahiin waliigalaa hin jiru",
+  "@pfAlertNoAssembly12Months": {
+    "description": "web key: pf.alert.no_assembly_12_months",
+    "x-draft": true
+  },
+  "pfAlertMinutesUnapproved": "Galmeen walgahii hin mirkanoofne",
+  "@pfAlertMinutesUnapproved": {
+    "description": "web key: pf.alert.minutes_unapproved",
+    "x-draft": true
+  },
+  "pfAlertStockBlocked": "Kuusaan galtee qorannoo oomishaatiin dhorkame",
+  "@pfAlertStockBlocked": {
+    "description": "web key: pf.alert.stock_blocked",
+    "x-draft": true
+  },
+  "pfAlertMachineryOutOfService": "Maashiniin tajaajila ala",
+  "@pfAlertMachineryOutOfService": {
+    "description": "web key: pf.alert.machinery_out_of_service",
+    "x-draft": true
+  },
+  "pfMembersShort": "Miseensota {n}",
+  "@pfMembersShort": {
+    "description": "web key: pf.membersShort",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "pfCapitalShort": "Kaappitaala {paid} kaffalame",
+  "@pfCapitalShort": {
+    "description": "web key: pf.capitalShort",
+    "placeholders": {
+      "paid": {}
+    },
+    "x-draft": true
   }
 }

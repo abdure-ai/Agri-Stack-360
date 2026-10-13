@@ -11820,5 +11820,219 @@
   "@abcInvOpenMyAbc": {
     "description": "web key: abcInv.openMyAbc",
     "x-draft": true
+  },
+  "roleAtiOfficer": "ክኢላ ፕሮግራም ABC ATI",
+  "@roleAtiOfficer": {
+    "description": "web key: role.ati_officer",
+    "x-draft": true
+  },
+  "navAbcPortfolio": "ፖርትፎልዮ ABC",
+  "@navAbcPortfolio": {
+    "description": "web key: nav.abcPortfolio",
+    "x-draft": true
+  },
+  "mapLayerAbcs": "ABCታት",
+  "@mapLayerAbcs": {
+    "description": "web key: map.layer.abcs",
+    "x-draft": true
+  },
+  "pfDescription": "ኩሎም እትቆጻጸርዎም ABCታት፦ ኩነታት፣ ኣባላት፣ ካፒታል፣ ማሽነሪን መጠንቀቕታ ምትእስሳርን። ቁጽርታት ጥራይ፣ ሽም ኣባላት ፈጺሙ ኣይርአን።",
+  "@pfDescription": {
+    "description": "web key: pf.description",
+    "x-draft": true
+  },
+  "pfExport": "CSV ኣውጽእ",
+  "@pfExport": {
+    "description": "web key: pf.export",
+    "x-draft": true
+  },
+  "pfAbcs": "ABCታት",
+  "@pfAbcs": {
+    "description": "web key: pf.abcs",
+    "x-draft": true
+  },
+  "pfRegistered": "ዝተመዝገቡ",
+  "@pfRegistered": {
+    "description": "web key: pf.registered",
+    "x-draft": true
+  },
+  "pfMembers": "ኣባላት",
+  "@pfMembers": {
+    "description": "web key: pf.members",
+    "x-draft": true
+  },
+  "pfCapitalPaid": "ዝተኸፍለ ካፒታል",
+  "@pfCapitalPaid": {
+    "description": "web key: pf.capitalPaid",
+    "x-draft": true
+  },
+  "pfWithAlerts": "መጠንቀቕታ ዘለዎም",
+  "@pfWithAlerts": {
+    "description": "web key: pf.withAlerts",
+    "x-draft": true
+  },
+  "pfList": "ABCታት",
+  "@pfList": {
+    "description": "web key: pf.list",
+    "x-draft": true
+  },
+  "pfListHint": "ደረታት ካብ ኣብ ስራሕ ዘለዉ ሕግታት ABC ይውሰዱ፤ ካብ 5 ዝወሓዱ ቁጽርታት <5 ተባሂሎም ይርኣዩ።",
+  "@pfListHint": {
+    "description": "web key: pf.listHint",
+    "x-draft": true
+  },
+  "pfNone": "ኣብ ከባቢኹም ገና ABC የለን።",
+  "@pfNone": {
+    "description": "web key: pf.none",
+    "x-draft": true
+  },
+  "pfColAbc": "ABC",
+  "@pfColAbc": {
+    "description": "web key: pf.col.abc",
+    "x-draft": true
+  },
+  "pfColStatus": "ኩነታት",
+  "@pfColStatus": {
+    "description": "web key: pf.col.status",
+    "x-draft": true
+  },
+  "pfColMembers": "ኣባላት",
+  "@pfColMembers": {
+    "description": "web key: pf.col.members",
+    "x-draft": true
+  },
+  "pfColInclusion": "ደቂ ኣንስትዮ · መንእሰያት",
+  "@pfColInclusion": {
+    "description": "web key: pf.col.inclusion",
+    "x-draft": true
+  },
+  "pfColCapital": "ካፒታል",
+  "@pfColCapital": {
+    "description": "web key: pf.col.capital",
+    "x-draft": true
+  },
+  "pfColMachinery": "ማሽነሪ (30 መዓልቲ)",
+  "@pfColMachinery": {
+    "description": "web key: pf.col.machinery",
+    "x-draft": true
+  },
+  "pfColAlerts": "ምትእስሳር",
+  "@pfColAlerts": {
+    "description": "web key: pf.col.alerts",
+    "x-draft": true
+  },
+  "pfMembersOf": "ካብ {min} {n}",
+  "@pfMembersOf": {
+    "description": "web key: pf.membersOf",
+    "placeholders": {
+      "min": {},
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "pfInclusion": "{women}% ደቂ ኣንስትዮ · {youth}% መንእሰያት",
+  "@pfInclusion": {
+    "description": "web key: pf.inclusion",
+    "placeholders": {
+      "women": {},
+      "youth": {}
+    },
+    "x-draft": true
+  },
+  "pfCapital": "ካብ ቃል ዝተኣትወ {pledged} {paid} ተኸፊሉ",
+  "@pfCapital": {
+    "description": "web key: pf.capital",
+    "placeholders": {
+      "pledged": {},
+      "paid": {}
+    },
+    "x-draft": true
+  },
+  "pfSubscribed": "ካብ ዝቐረቡ ኣክሲዮናት {pct}%",
+  "@pfSubscribed": {
+    "description": "web key: pf.subscribed",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "pfMachinery": "{n} ማሽናት · {ha} ሄክታር · {pct}% ተጠቒሙ",
+  "@pfMachinery": {
+    "description": "web key: pf.machinery",
+    "placeholders": {
+      "n": {},
+      "ha": {},
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "pfLastGA": "ናይ መወዳእታ ጉባኤ {date}",
+  "@pfLastGA": {
+    "description": "web key: pf.lastGA",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "pfNoAlerts": "መጠንቀቕታ የለን",
+  "@pfNoAlerts": {
+    "description": "web key: pf.noAlerts",
+    "x-draft": true
+  },
+  "pfNotRecorded": "ገና ኣይተመዝገበን",
+  "@pfNotRecorded": {
+    "description": "web key: pf.notRecorded",
+    "x-draft": true
+  },
+  "pfAlertMembersBelowMinimum": "ኣባላት ትሕቲ ዝተሓተ",
+  "@pfAlertMembersBelowMinimum": {
+    "description": "web key: pf.alert.members_below_minimum",
+    "x-draft": true
+  },
+  "pfAlertCapitalBelowMinimum": "ዝተኸፍለ ካፒታል ትሕቲ ዝተሓተ",
+  "@pfAlertCapitalBelowMinimum": {
+    "description": "web key: pf.alert.capital_below_minimum",
+    "x-draft": true
+  },
+  "pfAlertOverduePledges": "ዝሓለፎም ክፍሊታት ኣክሲዮን",
+  "@pfAlertOverduePledges": {
+    "description": "web key: pf.alert.overdue_pledges",
+    "x-draft": true
+  },
+  "pfAlertNoAssembly12Months": "ኣብ 12 ኣዋርሕ ሓፈሻዊ ጉባኤ የለን",
+  "@pfAlertNoAssembly12Months": {
+    "description": "web key: pf.alert.no_assembly_12_months",
+    "x-draft": true
+  },
+  "pfAlertMinutesUnapproved": "ቃለ ጉባኤ ኣይጸደቐን",
+  "@pfAlertMinutesUnapproved": {
+    "description": "web key: pf.alert.minutes_unapproved",
+    "x-draft": true
+  },
+  "pfAlertStockBlocked": "መኽዘን እታወት ብምርግጋጽ ፍርያት ተኣጊዱ",
+  "@pfAlertStockBlocked": {
+    "description": "web key: pf.alert.stock_blocked",
+    "x-draft": true
+  },
+  "pfAlertMachineryOutOfService": "ማሽነሪ ካብ ኣገልግሎት ወጻኢ",
+  "@pfAlertMachineryOutOfService": {
+    "description": "web key: pf.alert.machinery_out_of_service",
+    "x-draft": true
+  },
+  "pfMembersShort": "{n} ኣባላት",
+  "@pfMembersShort": {
+    "description": "web key: pf.membersShort",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "pfCapitalShort": "{paid} ካፒታል ተኸፊሉ",
+  "@pfCapitalShort": {
+    "description": "web key: pf.capitalShort",
+    "placeholders": {
+      "paid": {}
+    },
+    "x-draft": true
   }
 }

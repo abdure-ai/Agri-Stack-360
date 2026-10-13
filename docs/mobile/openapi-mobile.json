@@ -3172,7 +3172,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "default": "disease,markets,shops,farms",
+              "default": "disease,markets,shops,farms,abcs",
               "title": "Layers"
             }
           },

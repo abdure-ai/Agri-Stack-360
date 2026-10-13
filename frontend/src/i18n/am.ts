@@ -2470,4 +2470,43 @@ export const am: Record<MessageKey, string> = {
   "myabc.say.weight": "የድምፅ ክብደትዎ {pct} ነው።",  // draft – needs native review
   "myabc.say.meeting": "ቀጣይ ስብሰባ፦ {title}፣ {date}።",  // draft – needs native review
   "abcInv.openMyAbc": "የእኔ ABCን ክፈት፦ አክሲዮኖች፣ ሂሳብ፣ ትዕዛዞችና ቀጠሮዎች →",  // draft – needs native review
+
+  // ── ABC portfolio (A10) ───────────────────────────────────────────────────
+  "role.ati_officer": "የATI የABC ፕሮግራም ባለሙያ",  // draft – needs native review
+  "nav.abcPortfolio": "የABC ፖርትፎሊዮ",  // draft – needs native review
+  "map.layer.abcs": "ABCዎች",  // draft – needs native review
+  "pf.description": "የሚቆጣጠሯቸው ሁሉም ABCዎች፦ ሁኔታ፣ አባላት፣ ካፒታል፣ ማሽነሪና የመመሪያ ተገዢነት ማስጠንቀቂያዎች። ቁጥሮች ብቻ፣ የአባላት ስም ፈጽሞ አይታይም።",  // draft – needs native review
+  "pf.export": "CSV ላክ",  // draft – needs native review
+  "pf.abcs": "ABCዎች",  // draft – needs native review
+  "pf.registered": "የተመዘገቡ",  // draft – needs native review
+  "pf.members": "አባላት",  // draft – needs native review
+  "pf.capitalPaid": "የተከፈለ ካፒታል",  // draft – needs native review
+  "pf.withAlerts": "ማስጠንቀቂያ ያላቸው",  // draft – needs native review
+  "pf.list": "ABCዎች",  // draft – needs native review
+  "pf.listHint": "ገደቦቹ በሥራ ላይ ካሉ የABC ደንቦች ይወሰዳሉ፤ ከ5 በታች ቁጥሮች <5 ተብለው ይታያሉ።",  // draft – needs native review
+  "pf.none": "በአካባቢዎ ገና ABC የለም።",  // draft – needs native review
+  "pf.col.abc": "ABC",  // draft – needs native review
+  "pf.col.status": "ሁኔታ",  // draft – needs native review
+  "pf.col.members": "አባላት",  // draft – needs native review
+  "pf.col.inclusion": "ሴቶች · ወጣቶች",  // draft – needs native review
+  "pf.col.capital": "ካፒታል",  // draft – needs native review
+  "pf.col.machinery": "ማሽነሪ (30 ቀናት)",  // draft – needs native review
+  "pf.col.alerts": "ተገዢነት",  // draft – needs native review
+  "pf.membersOf": "ከ{min} {n}",  // draft – needs native review
+  "pf.inclusion": "{women}% ሴቶች · {youth}% ወጣቶች",  // draft – needs native review
+  "pf.capital": "ቃል ከተገባው {pledged} {paid} ተከፍሏል",  // draft – needs native review
+  "pf.subscribed": "ከቀረቡት አክሲዮኖች {pct}%",  // draft – needs native review
+  "pf.machinery": "{n} ማሽኖች · {ha} ሄክታር · {pct}% ጥቅም",  // draft – needs native review
+  "pf.lastGA": "የመጨረሻ ጉባኤ {date}",  // draft – needs native review
+  "pf.noAlerts": "ማስጠንቀቂያ የለም",  // draft – needs native review
+  "pf.notRecorded": "ገና አልተመዘገበም",  // draft – needs native review
+  "pf.alert.members_below_minimum": "አባላት ከዝቅተኛው በታች",  // draft – needs native review
+  "pf.alert.capital_below_minimum": "የተከፈለ ካፒታል ከዝቅተኛው በታች",  // draft – needs native review
+  "pf.alert.overdue_pledges": "ያለፈባቸው የአክሲዮን ክፍያዎች",  // draft – needs native review
+  "pf.alert.no_assembly_12_months": "በ12 ወራት ጠቅላላ ጉባኤ የለም",  // draft – needs native review
+  "pf.alert.minutes_unapproved": "ቃለ ጉባኤ አልጸደቀም",  // draft – needs native review
+  "pf.alert.stock_blocked": "የግብዓት ክምችት በምርት ማረጋገጫ ታግዷል",  // draft – needs native review
+  "pf.alert.machinery_out_of_service": "ማሽነሪ ከአገልግሎት ውጭ",  // draft – needs native review
+  "pf.membersShort": "{n} አባላት",  // draft – needs native review
+  "pf.capitalShort": "{paid} ካፒታል ተከፍሏል",  // draft – needs native review
 };

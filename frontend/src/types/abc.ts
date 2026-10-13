@@ -519,3 +519,25 @@ export interface MyAbcSummary {
   agreement: { uploaded: boolean; version: number | null; signed: { method: string; signed_at: string } | null };
   official_record_note: string;
 }
+
+// ── Portfolio (A10) ──────────────────────────────────────────────────────────
+
+export type AbcAlert = "members_below_minimum" | "capital_below_minimum" | "overdue_pledges" | "no_assembly_12_months"
+  | "minutes_unapproved" | "stock_blocked" | "machinery_out_of_service";
+
+export interface AbcPortfolioRow {
+  org_id: number; name: string; abc_type: AbcType; status: AbcStatus; woreda: string | null; zone: string | null; region: string | null;
+  members: number | string; members_min: number; women_percent: number | null; youth_percent: number | null;
+  capital_pledged_etb: number; capital_paid_etb: number; capital_min_etb: number; shares_issued: number; subscribed_percent: number | null;
+  machines: number; machine_hours_30d: number; machine_hectares_30d: number; machine_utilisation_percent: number | null;
+  stock_blocked_lots: number; overdue_pledges: number | string; last_general_assembly: string | null; alerts: AbcAlert[];
+  inclusion_recorded?: number;
+}
+
+export interface AbcPortfolio {
+  area: string | null;
+  abcs: AbcPortfolioRow[];
+  totals: { abcs: number; by_status: Record<string, number>; members: number | string; capital_paid_etb: number;
+    capital_pledged_etb: number; machines: number; machine_hectares_30d: number; with_alerts: number };
+  official_record_note: string;
+}

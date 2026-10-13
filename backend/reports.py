@@ -36,6 +36,8 @@ def user_scope(user: dict) -> str | None:
     """P-code prefix this user may report on; None = whole country."""
     if has_permission(user["role"], P.FARMS_MANAGE_ALL):
         return None
+    if user["role"] == "ati_officer":         # national ABC programme: the whole country
+        return None
     if user["role"] == "government":
         return user.get("woreda_pcode") or user.get("zone_pcode") or user.get("region_pcode") or None
     if not user.get("region_pcode"):

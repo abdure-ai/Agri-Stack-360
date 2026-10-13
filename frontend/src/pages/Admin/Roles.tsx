@@ -28,6 +28,7 @@ const ROLE_ICONS: Record<Role, LucideIcon> = {
   regulator: Scale,
   ngo_staff: HeartHandshake,
   lender: Banknote,
+  ati_officer: Landmark,
   admin: ShieldCheck,
 };
 

@@ -21,6 +21,7 @@ Roles
   ngo_staff — NGO / development project staff: projects, project areas, advisory messages, impact reports
   regulator — EAA staff: registered-product list (import), counterfeit map, code issuance (read-only)
   farm_manager — manager or agronomist of a commercial farm: blocks, scouting, alerts, exports
+  ati_officer — ATI ABC programme officer: read-only portfolio of all ABCs (aggregates, no member identities)
   abc_manager — manager of a farmer agribusiness company (ABC): members who accepted, contributions,
            planning, member messages, buyer requests
   agro_dealer — staff of a retail input shop: shop profile, stock flags, checks at sale
@@ -33,7 +34,7 @@ from __future__ import annotations
 from typing import Iterable, Mapping
 
 ROLES: tuple[str, ...] = ("farmer", "agent", "agronomist", "trader", "government", "supplier", "agro_dealer",
-                          "abc_manager", "farm_manager", "regulator", "ngo_staff", "lender", "admin")
+                          "abc_manager", "farm_manager", "regulator", "ngo_staff", "lender", "ati_officer", "admin")
 
 # Roles anyone may choose on the public sign-up form. Agents get access to
 # other farmers' data in their region and admins to everything, so those
@@ -76,6 +77,7 @@ class P:
     DEALER_MANAGE = "dealer:manage"            # own agro-dealer shop: profile, products in stock, checks at sale
     REPORTS_READ = "reports:read"              # aggregated area reports (no individual farmers)
     AUDIT_READ = "audit:read"                  # read the audit log (admin actions, access to farmer data)
+    ABC_PORTFOLIO = "abc:portfolio"            # read-only ABC portfolio (ATI: all ABCs; government: own area)
     DA_WORK = "da:work"                        # DA Copilot: my farmers, visit list, escalation inbox,
                                                # verify diagnoses, register farmers (with consent)
 
@@ -97,6 +99,7 @@ ROLE_DESCRIPTIONS: Mapping[str, str] = {
     "farm_manager": "Manager or agronomist of a commercial farm. Keeps the farm's blocks, scouting records and harvest plan.",
     "abc_manager": "Manager of a farmer agribusiness company (ABC). Works with members who accepted: contributions, crop planning, messages and buyer requests.",
     "agro_dealer": "Staff of a retail input shop. Keeps the shop profile and products in stock, and checks product codes at sale.",
+    "ati_officer": "ATI ABC programme officer. Sees every ABC's formation status, members, capital, machinery use and compliance alerts, never individual members.",
     "government": "Woreda, regional bureau, ATI or MoA staff. Sees aggregated reports and outbreak maps for their area, never individual farmers.",
     "admin": "Runs the platform. Has every permission, including managing users, roles and data sync.",
 }
@@ -159,6 +162,8 @@ PERMISSION_INFO: Mapping[str, tuple[str, str, str]] = {
                      "Aggregated figures for their area: farmers reached, photo checks by disease, outbreaks, alerts. Small numbers are hidden."),
     P.AUDIT_READ: ("Administration", "Read the audit log",
                    "See who changed what in administration, and who opened farmers' data."),
+    P.ABC_PORTFOLIO: ("Market & advice", "See the ABC portfolio",
+                      "ABCs in their area (ATI: all): status, members, capital, machinery and compliance alerts, without member names."),
     P.DA_WORK: ("Farms & crop health", "Work as a Development Agent",
                 "See my farmers and visit list, answer escalated questions, verify diagnoses and register farmers."),
 }
@@ -188,7 +193,8 @@ ROLE_PERMISSIONS: Mapping[str, frozenset[str]] = {
     }),
     # Read-only: market data and aggregated reports. No advisor (it answers about one's own farm).
     "agronomist": frozenset(_EVERYONE | {P.KNOWLEDGE_MANAGE, P.CONTENT_REVIEW}),
-    "government": frozenset({P.MARKET_READ, P.PROFILE_MANAGE, P.REPORTS_READ}),
+    "government": frozenset({P.MARKET_READ, P.PROFILE_MANAGE, P.REPORTS_READ, P.ABC_PORTFOLIO}),
+    "ati_officer": frozenset({P.MARKET_READ, P.PROFILE_MANAGE, P.REPORTS_READ, P.ABC_PORTFOLIO}),
     "supplier": frozenset({P.MARKET_READ, P.PROFILE_MANAGE, P.SUPPLIER_MANAGE}),
     "agro_dealer": frozenset({P.MARKET_READ, P.PROFILE_MANAGE, P.INPUTS_VERIFY, P.DEALER_MANAGE}),
     "abc_manager": frozenset({P.MARKET_READ, P.PROFILE_MANAGE, P.ABC_MANAGE}),

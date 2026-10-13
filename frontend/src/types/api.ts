@@ -14,6 +14,7 @@ export type Role =
   | "regulator"
   | "ngo_staff"
   | "lender"
+  | "ati_officer"
   | "admin";
 export type PriceLevel = "retail" | "wholesale" | "producer";
 
@@ -52,6 +53,7 @@ export type Permission =
   | "abc:member"
   /** Member (shareholder) of at least one ABC: shows "My ABC". */
   | "abc:shareholder"
+  | "abc:portfolio"
   | "trade:request"
   | "estate:manage"
   | "registry:manage"

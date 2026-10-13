@@ -68,7 +68,7 @@ async def _farms(conn, user: dict) -> dict:
 
 
 @router.get("/layers")
-async def layers(layers: str = "disease,markets,shops,farms", crop: str = "Wheat",
+async def layers(layers: str = "disease,markets,shops,farms,abcs", crop: str = "Wheat",
                  days: int = Query(30, ge=1, le=365), language: str | None = None,
                  user: dict = Depends(get_current_user)):
     conn = get_platform_connection()
@@ -85,6 +85,8 @@ async def layers(layers: str = "disease,markets,shops,farms", crop: str = "Wheat
         out["shops"] = await asyncio.to_thread(maps.shops_layer, conn, user, days, now)
     if "farms" in wanted:
         out["farms"] = await _farms(conn, user)
+    if "abcs" in wanted:
+        out["abcs"] = await asyncio.to_thread(maps.abcs_layer, conn, user)
     return {"available": allowed, "scope": _scope(conn, user), "layers": out}
 
 

@@ -6,7 +6,7 @@ import type { Role } from "@/types/api";
 /** Regions covered by the NMIS market data (matches backend auth_router.REGIONS). */
 export const REGIONS = ["Oromia", "Amhara", "SNNP", "Sidama", "South West", "Tigray"];
 
-export const ROLES: Role[] = ["farmer", "agent", "agronomist", "trader", "government", "supplier", "agro_dealer", "abc_manager", "farm_manager", "regulator", "ngo_staff", "lender", "admin"];
+export const ROLES: Role[] = ["farmer", "agent", "agronomist", "trader", "government", "supplier", "agro_dealer", "abc_manager", "farm_manager", "regulator", "ngo_staff", "lender", "ati_officer", "admin"];
 
 /** Permission label / description in the interface language; falls back to the server's English text. */
 export function permLabel(name: string, fallback?: string): string {

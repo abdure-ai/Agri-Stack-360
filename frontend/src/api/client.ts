@@ -12,7 +12,7 @@ import type { AbcCompany, AbcDocKind, AbcDocument, AbcFormation, AbcHistoryEntry
   AbcSharePayment, AbcSharesOverview, PayMethod, AbcMeeting, AbcMeetingRow, AbcQuorum, AbcTally, AbcWeights,
   MyAbcVote, AbcFinanceSummary, AbcLedgerEntry, AbcMemberAccount, AbcStatement, AbcInputPlan, AbcPlannable,
   AbcPurchaseOrder, AbcStockLot, AbcSupplier, MyAbcOrder, AbcBooking, AbcJob, AbcMachine, MyAbcBooking,
-  MyAbcSummary } from "@/types/abc";
+  MyAbcSummary, AbcPortfolio } from "@/types/abc";
 import type {
   AdminArea,
   AiKey,
@@ -502,6 +502,8 @@ export const api = {
   abcMaintenance: (orgId: number, machineId: number, data: Record<string, unknown>) =>
     platform.post<unknown>(`/abc/machinery/${machineId}/maintenance?org_id=${orgId}`, data),
   myAbcBookings: () => platform.get<MyAbcBooking[]>("/abc/my/bookings"),
+  abcPortfolio: (area?: string | null) => platform.get<AbcPortfolio>("/abc/portfolio", { area: area || undefined }),
+  abcPortfolioCsv: () => getBlob(BASE, "/abc/portfolio.csv"),
   myAbcCompanies: () => platform.get<{ org_id: number; name: string; status: string }[]>("/abc/my/companies"),
   myAbcSummary: (orgId: number) => platform.get<MyAbcSummary>("/abc/my/summary", { org_id: orgId }),
   myAbcBook: (data: { org_id: number; service: string; farm_id?: number | null; area_ha?: number | null; requested_date: string }) =>

@@ -11820,5 +11820,219 @@
   "@abcInvOpenMyAbc": {
     "description": "web key: abcInv.openMyAbc",
     "x-draft": true
+  },
+  "roleAtiOfficer": "የATI የABC ፕሮግራም ባለሙያ",
+  "@roleAtiOfficer": {
+    "description": "web key: role.ati_officer",
+    "x-draft": true
+  },
+  "navAbcPortfolio": "የABC ፖርትፎሊዮ",
+  "@navAbcPortfolio": {
+    "description": "web key: nav.abcPortfolio",
+    "x-draft": true
+  },
+  "mapLayerAbcs": "ABCዎች",
+  "@mapLayerAbcs": {
+    "description": "web key: map.layer.abcs",
+    "x-draft": true
+  },
+  "pfDescription": "የሚቆጣጠሯቸው ሁሉም ABCዎች፦ ሁኔታ፣ አባላት፣ ካፒታል፣ ማሽነሪና የመመሪያ ተገዢነት ማስጠንቀቂያዎች። ቁጥሮች ብቻ፣ የአባላት ስም ፈጽሞ አይታይም።",
+  "@pfDescription": {
+    "description": "web key: pf.description",
+    "x-draft": true
+  },
+  "pfExport": "CSV ላክ",
+  "@pfExport": {
+    "description": "web key: pf.export",
+    "x-draft": true
+  },
+  "pfAbcs": "ABCዎች",
+  "@pfAbcs": {
+    "description": "web key: pf.abcs",
+    "x-draft": true
+  },
+  "pfRegistered": "የተመዘገቡ",
+  "@pfRegistered": {
+    "description": "web key: pf.registered",
+    "x-draft": true
+  },
+  "pfMembers": "አባላት",
+  "@pfMembers": {
+    "description": "web key: pf.members",
+    "x-draft": true
+  },
+  "pfCapitalPaid": "የተከፈለ ካፒታል",
+  "@pfCapitalPaid": {
+    "description": "web key: pf.capitalPaid",
+    "x-draft": true
+  },
+  "pfWithAlerts": "ማስጠንቀቂያ ያላቸው",
+  "@pfWithAlerts": {
+    "description": "web key: pf.withAlerts",
+    "x-draft": true
+  },
+  "pfList": "ABCዎች",
+  "@pfList": {
+    "description": "web key: pf.list",
+    "x-draft": true
+  },
+  "pfListHint": "ገደቦቹ በሥራ ላይ ካሉ የABC ደንቦች ይወሰዳሉ፤ ከ5 በታች ቁጥሮች <5 ተብለው ይታያሉ።",
+  "@pfListHint": {
+    "description": "web key: pf.listHint",
+    "x-draft": true
+  },
+  "pfNone": "በአካባቢዎ ገና ABC የለም።",
+  "@pfNone": {
+    "description": "web key: pf.none",
+    "x-draft": true
+  },
+  "pfColAbc": "ABC",
+  "@pfColAbc": {
+    "description": "web key: pf.col.abc",
+    "x-draft": true
+  },
+  "pfColStatus": "ሁኔታ",
+  "@pfColStatus": {
+    "description": "web key: pf.col.status",
+    "x-draft": true
+  },
+  "pfColMembers": "አባላት",
+  "@pfColMembers": {
+    "description": "web key: pf.col.members",
+    "x-draft": true
+  },
+  "pfColInclusion": "ሴቶች · ወጣቶች",
+  "@pfColInclusion": {
+    "description": "web key: pf.col.inclusion",
+    "x-draft": true
+  },
+  "pfColCapital": "ካፒታል",
+  "@pfColCapital": {
+    "description": "web key: pf.col.capital",
+    "x-draft": true
+  },
+  "pfColMachinery": "ማሽነሪ (30 ቀናት)",
+  "@pfColMachinery": {
+    "description": "web key: pf.col.machinery",
+    "x-draft": true
+  },
+  "pfColAlerts": "ተገዢነት",
+  "@pfColAlerts": {
+    "description": "web key: pf.col.alerts",
+    "x-draft": true
+  },
+  "pfMembersOf": "ከ{min} {n}",
+  "@pfMembersOf": {
+    "description": "web key: pf.membersOf",
+    "placeholders": {
+      "min": {},
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "pfInclusion": "{women}% ሴቶች · {youth}% ወጣቶች",
+  "@pfInclusion": {
+    "description": "web key: pf.inclusion",
+    "placeholders": {
+      "women": {},
+      "youth": {}
+    },
+    "x-draft": true
+  },
+  "pfCapital": "ቃል ከተገባው {pledged} {paid} ተከፍሏል",
+  "@pfCapital": {
+    "description": "web key: pf.capital",
+    "placeholders": {
+      "pledged": {},
+      "paid": {}
+    },
+    "x-draft": true
+  },
+  "pfSubscribed": "ከቀረቡት አክሲዮኖች {pct}%",
+  "@pfSubscribed": {
+    "description": "web key: pf.subscribed",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "pfMachinery": "{n} ማሽኖች · {ha} ሄክታር · {pct}% ጥቅም",
+  "@pfMachinery": {
+    "description": "web key: pf.machinery",
+    "placeholders": {
+      "n": {},
+      "ha": {},
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "pfLastGA": "የመጨረሻ ጉባኤ {date}",
+  "@pfLastGA": {
+    "description": "web key: pf.lastGA",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "pfNoAlerts": "ማስጠንቀቂያ የለም",
+  "@pfNoAlerts": {
+    "description": "web key: pf.noAlerts",
+    "x-draft": true
+  },
+  "pfNotRecorded": "ገና አልተመዘገበም",
+  "@pfNotRecorded": {
+    "description": "web key: pf.notRecorded",
+    "x-draft": true
+  },
+  "pfAlertMembersBelowMinimum": "አባላት ከዝቅተኛው በታች",
+  "@pfAlertMembersBelowMinimum": {
+    "description": "web key: pf.alert.members_below_minimum",
+    "x-draft": true
+  },
+  "pfAlertCapitalBelowMinimum": "የተከፈለ ካፒታል ከዝቅተኛው በታች",
+  "@pfAlertCapitalBelowMinimum": {
+    "description": "web key: pf.alert.capital_below_minimum",
+    "x-draft": true
+  },
+  "pfAlertOverduePledges": "ያለፈባቸው የአክሲዮን ክፍያዎች",
+  "@pfAlertOverduePledges": {
+    "description": "web key: pf.alert.overdue_pledges",
+    "x-draft": true
+  },
+  "pfAlertNoAssembly12Months": "በ12 ወራት ጠቅላላ ጉባኤ የለም",
+  "@pfAlertNoAssembly12Months": {
+    "description": "web key: pf.alert.no_assembly_12_months",
+    "x-draft": true
+  },
+  "pfAlertMinutesUnapproved": "ቃለ ጉባኤ አልጸደቀም",
+  "@pfAlertMinutesUnapproved": {
+    "description": "web key: pf.alert.minutes_unapproved",
+    "x-draft": true
+  },
+  "pfAlertStockBlocked": "የግብዓት ክምችት በምርት ማረጋገጫ ታግዷል",
+  "@pfAlertStockBlocked": {
+    "description": "web key: pf.alert.stock_blocked",
+    "x-draft": true
+  },
+  "pfAlertMachineryOutOfService": "ማሽነሪ ከአገልግሎት ውጭ",
+  "@pfAlertMachineryOutOfService": {
+    "description": "web key: pf.alert.machinery_out_of_service",
+    "x-draft": true
+  },
+  "pfMembersShort": "{n} አባላት",
+  "@pfMembersShort": {
+    "description": "web key: pf.membersShort",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "pfCapitalShort": "{paid} ካፒታል ተከፍሏል",
+  "@pfCapitalShort": {
+    "description": "web key: pf.capitalShort",
+    "placeholders": {
+      "paid": {}
+    },
+    "x-draft": true
   }
 }

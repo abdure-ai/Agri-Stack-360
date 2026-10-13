@@ -91,6 +91,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { name: "nav.supplier", path: "/supplier", icon: <Factory className={ICON} strokeWidth={1.5} />, permissions: ["supplier:manage"] },
       { name: "nav.dealer", path: "/dealer", icon: <ShoppingBasket className={ICON} strokeWidth={1.5} />, permissions: ["dealer:manage"] },
       { name: "nav.abc", path: "/abc", icon: <Handshake className={ICON} strokeWidth={1.5} />, permissions: ["abc:manage", "abc:member"] },
+      { name: "nav.abcPortfolio", path: "/abc-portfolio", icon: <Building2 className={ICON} strokeWidth={1.5} />, permissions: ["abc:portfolio"] },
       { name: "nav.estate", path: "/estate", icon: <Tractor className={ICON} strokeWidth={1.5} />, permissions: ["estate:manage"] },
       { name: "nav.ngo", path: "/ngo", icon: <HeartHandshake className={ICON} strokeWidth={1.5} />, permissions: ["ngo:manage"] },
       { name: "nav.regulator", path: "/regulator", icon: <Scale className={ICON} strokeWidth={1.5} />, permissions: ["registry:manage"] },

@@ -1,6 +1,6 @@
 // Map layers (backend/routers/maps.py).
 
-export type MapLayerName = "disease" | "markets" | "shops" | "farms";
+export type MapLayerName = "disease" | "markets" | "shops" | "farms" | "abcs";
 
 export interface MapHotspot {
   pcode: string;
@@ -96,5 +96,7 @@ export interface MapLayers {
     farms?:
       | { mode: "own" | "farmers"; farmers: MapFarmer[] }
       | { mode: "counts"; woredas: MapFarmCount[] };
+    abcs?: { abcs: { org_id: number; name: string; abc_type: string; status: string; woreda: string | null; latitude: number;
+      longitude: number; members: number | string; capital_paid_etb: number; alerts: string[] }[] };
   };
 }

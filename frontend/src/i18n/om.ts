@@ -2470,4 +2470,43 @@ export const om: Record<MessageKey, string> = {
   "myabc.say.weight": "Ulfaatinni sagalee keessan {pct} dha.",  // draft – needs native review
   "myabc.say.meeting": "Walgahii itti aanu: {title}, {date}.",  // draft – needs native review
   "abcInv.openMyAbc": "ABC koo bani: aksiyoona, herrega, ajajaa fi beellama →",  // draft – needs native review
+
+  // ── ABC portfolio (A10) ───────────────────────────────────────────────────
+  "role.ati_officer": "Ogeessa sagantaa ABC ATI",  // draft – needs native review
+  "nav.abcPortfolio": "Poortifooliyoo ABC",  // draft – needs native review
+  "map.layer.abcs": "ABCwwan",  // draft – needs native review
+  "pf.description": "ABC hunda isin to'attan: haala, miseensota, kaappitaala, maashinii fi akeekkachiisa seeraa. Lakkoofsa qofa, maqaan miseensaa gonkumaa hin mul'atu.",  // draft – needs native review
+  "pf.export": "CSV baasi",  // draft – needs native review
+  "pf.abcs": "ABCwwan",  // draft – needs native review
+  "pf.registered": "Galmaa'an",  // draft – needs native review
+  "pf.members": "Miseensota",  // draft – needs native review
+  "pf.capitalPaid": "Kaappitaala kaffalame",  // draft – needs native review
+  "pf.withAlerts": "Akeekkachiisa qaban",  // draft – needs native review
+  "pf.list": "ABCwwan",  // draft – needs native review
+  "pf.listHint": "Daangaaleen seerota ABC hojii irra jiran irraa fudhatamu; lakkoofsi 5 gadii <5 jedhamee mul'ata.",  // draft – needs native review
+  "pf.none": "Naannoo keessan keessa ABCn ammallee hin jiru.",  // draft – needs native review
+  "pf.col.abc": "ABC",  // draft – needs native review
+  "pf.col.status": "Haala",  // draft – needs native review
+  "pf.col.members": "Miseensota",  // draft – needs native review
+  "pf.col.inclusion": "Dubartoota · dargaggoota",  // draft – needs native review
+  "pf.col.capital": "Kaappitaala",  // draft – needs native review
+  "pf.col.machinery": "Maashinii (guyyaa 30)",  // draft – needs native review
+  "pf.col.alerts": "Seeraaf ajajamuu",  // draft – needs native review
+  "pf.membersOf": "{min} keessaa {n}",  // draft – needs native review
+  "pf.inclusion": "{women}% dubartoota · {youth}% dargaggoota",  // draft – needs native review
+  "pf.capital": "Waadaa {pledged} keessaa {paid} kaffalame",  // draft – needs native review
+  "pf.subscribed": "Aksiyoona dhiyaatan keessaa {pct}%",  // draft – needs native review
+  "pf.machinery": "Maashinii {n} · hektaara {ha} · {pct}% fayyadame",  // draft – needs native review
+  "pf.lastGA": "Walgahii dhumaa {date}",  // draft – needs native review
+  "pf.noAlerts": "Akeekkachiisni hin jiru",  // draft – needs native review
+  "pf.notRecorded": "ammallee hin galmoofne",  // draft – needs native review
+  "pf.alert.members_below_minimum": "Miseensonni xiqqaa gadi",  // draft – needs native review
+  "pf.alert.capital_below_minimum": "Kaappitaalli kaffalame xiqqaa gadi",  // draft – needs native review
+  "pf.alert.overdue_pledges": "Kaffaltii aksiyoonaa yeroon darbe",  // draft – needs native review
+  "pf.alert.no_assembly_12_months": "Ji'oota 12 keessatti walgahiin waliigalaa hin jiru",  // draft – needs native review
+  "pf.alert.minutes_unapproved": "Galmeen walgahii hin mirkanoofne",  // draft – needs native review
+  "pf.alert.stock_blocked": "Kuusaan galtee qorannoo oomishaatiin dhorkame",  // draft – needs native review
+  "pf.alert.machinery_out_of_service": "Maashiniin tajaajila ala",  // draft – needs native review
+  "pf.membersShort": "Miseensota {n}",  // draft – needs native review
+  "pf.capitalShort": "Kaappitaala {paid} kaffalame",  // draft – needs native review
 };

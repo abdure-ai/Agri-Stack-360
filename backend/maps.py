@@ -22,7 +22,7 @@ from backend import reports
 from backend.database import query as nmis_query
 from backend.permissions import P, has_permission
 
-LAYERS = ("disease", "markets", "shops", "farms")
+LAYERS = ("disease", "markets", "shops", "farms", "abcs")
 MARKET_MAX_AGE_DAYS = 120
 
 
@@ -44,7 +44,19 @@ def available(user: dict) -> list[str]:
         out.append("shops")
     if _can(user, P.FARMS_MANAGE_OWN, P.DA_WORK, P.FARMS_MANAGE_ALL, P.REPORTS_READ):
         out.append("farms")
+    if _can(user, P.ABC_PORTFOLIO):
+        out.append("abcs")
     return out
+
+
+def abcs_layer(conn: sqlite3.Connection, user: dict) -> dict:
+    """ABCs at their woreda centre with status, members and compliance alerts (backend/abc_portfolio.py)."""
+    from backend import abc_portfolio
+
+    rows = abc_portfolio.portfolio(conn, user)["abcs"]
+    keep = ("org_id", "name", "abc_type", "status", "woreda", "latitude", "longitude", "members", "capital_paid_etb",
+            "alerts")
+    return {"abcs": [{k: r[k] for k in keep} for r in rows if r["latitude"] is not None]}
 
 
 def area_scope(user: dict) -> str | None:

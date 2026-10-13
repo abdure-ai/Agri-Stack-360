@@ -1,7 +1,7 @@
 # ABC module: audit, spec review and Pilot MVP plan
 
 Response to `docs/agri-stack-abc-module-spec.md` (Section 0: "audit what exists, propose a plan for the Pilot MVP,
-no code until approved"). Status: **approved 2026-10-13; building A1 → A10, each milestone pushed when done** (decisions in section 4).
+no code until approved"). Status: **Pilot MVP built 2026-10-13: A1 → A10 done, tested and live** (decisions in section 4, what was built in section 5).
 
 ---
 
@@ -99,3 +99,25 @@ traceability, loans, insurance, USSD/IVR, subscriptions, payment integrations.
 3. **National ID:** encrypted with a server key in `.env`, last 4 digits shown, every full view audited, never exported.
 4. **Start:** now; each milestone is pushed (and so deployed) when done.
 5. **Order:** A1 → A10 as listed.
+
+## 5. What was built (2026-10-13)
+
+| # | Milestone | Where | Tests |
+|---|---|---|---|
+| A1 | Rules table, per-ABC roles, profile, audit with before/after | ABC office → Company; Admin → ABC rules | test_abc_company.py |
+| A2 | Readiness checklist, recognition, documents, agreement signatures, registration | ABC office → Formation; Profile (members sign) | test_abc_formation.py |
+| A3 | Member registry, consent, encrypted ID, CSV import, inclusion counts | ABC office → Members | test_abc_members.py |
+| A4 | Shares, pledges, payments, certificates, cap / minimum / upfront / deadline rules, transfers, board approvals | ABC office → Shares | test_abc_shares.py |
+| A5 | Voting weights, meetings, notices, weighted quorum and votes, minutes | ABC office → Meetings & votes | test_abc_governance.py |
+| A6 | Ledger, board approval above the limit, member accounts, receipts, Excel export | ABC office → Finance | test_abc_finance.py |
+| A7 | Demand from cited rates, member orders, suppliers, purchase orders, checked receipt, stock, issue | ABC office → Inputs & stock | test_abc_inputs.py |
+| A8 | Machinery register, bookings, job log charged to accounts, maintenance, utilisation | ABC office → Machinery | test_abc_machinery.py |
+| A9 | My ABC for members (web + mobile API, read-aloud) | My ABC | test_abc_my.py |
+| A10 | ATI / government portfolio with compliance alerts, CSV, map layer; role `ati_officer` | ABC portfolio; Map | test_abc_portfolio.py |
+
+Demo (presentation site): ABC team roles, member registry, sample share capital, a scheduled general assembly, sample
+books, a Tilt demand plan, a tractor and pump with two bookings; ATI officer 0944000013 / demo1234.
+
+Still open (Phase 2 or user decisions): in-kind valuation (directive), produce intake and payments, sales contracts,
+dividends, annual report and business-plan builder, SMS provider, legal review of every draft rule
+(PLACEHOLDER_VERIFY), native review of the Amharic, Afaan Oromoo and Tigrinya texts.

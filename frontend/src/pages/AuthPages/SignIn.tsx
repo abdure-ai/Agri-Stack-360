@@ -32,6 +32,7 @@ const DEV_DEMO_ACCOUNTS: DemoAccount[] = [
   { role: "regulator", phone: "0944000010", password: "demo1234" },
   { role: "ngo_staff", phone: "0944000011", password: "demo1234" },
   { role: "lender", phone: "0944000012", password: "demo1234" },
+  { role: "ati_officer", phone: "0944000013", password: "demo1234" },
   { role: "admin", phone: "0900000001", password: "admin123" },
 ];
 
