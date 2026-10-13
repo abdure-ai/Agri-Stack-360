@@ -1873,4 +1873,88 @@ export const ti: Record<MessageKey, string> = {
   "map.disease.scans": "{n} ምርመራታት ስእሊ፣ እቲ ናይ መወዳእታ {date}",  // draft – needs native review
   "map.disease.note": "ብወረዳ ዝተቖጽረ፤ ቦታታት ግራውቲ ፈጺሞም ኣይርኣዩን።",  // draft – needs native review
   "map.legend.dashed": "ነጠብጣብ መስመር፦ ግምታዊ ቦታ።",  // draft – needs native review
+
+  // ── ABC company core (A1) ─────────────────────────────────────────────────
+  "nav.abcRules": "ሕግታት ABC",  // draft – needs native review
+  "abc.saved": "ተዓቂቡ።",  // draft – needs native review
+  "abc.pickCompany": "ትካል",  // draft – needs native review
+  "abc.tab.company": "ትካል",  // draft – needs native review
+  "abc.role.organizing_committee": "ኣወሃሃዲት ኮሚቴ",  // draft – needs native review
+  "abc.role.general_manager": "ዋና ኣመሓዳሪ",  // draft – needs native review
+  "abc.role.chair": "ኣቦ መንበር ቦርድ",  // draft – needs native review
+  "abc.role.board_member": "ኣባል ቦርድ",  // draft – needs native review
+  "abc.role.secretary": "ጸሓፊ",  // draft – needs native review
+  "abc.role.accountant": "ሒሳብ ሹም",  // draft – needs native review
+  "abc.role.store_keeper": "ሓላፊ መኽዘን",  // draft – needs native review
+  "abc.role.machinery_coordinator": "ኣወሃሃዲ ማሽነሪ",  // draft – needs native review
+  "abc.role.agronomist": "ኣግሮኖሚስት ABC",  // draft – needs native review
+  "abc.role.auditor": "ኦዲተር",  // draft – needs native review
+  "abc.rule.min_founding_members": "ዝተሓተ መስረቲ ኣባላት",  // draft – needs native review
+  "abc.rule.share_value_min_etb": "ዝተሓተ ዋጋ ሓንቲ ኣክሲዮን",  // draft – needs native review
+  "abc.rule.min_shares_per_member": "ንሓደ ኣባል ዝተሓተ ኣክሲዮን",  // draft – needs native review
+  "abc.rule.min_paid_capital_etb": "ዝተሓተ ዝተኸፍለ ካፒታል",  // draft – needs native review
+  "abc.rule.registration_paid_fraction": "ቅድሚ ምዝገባ ዝኽፈል (ካብ ዝተኣወጀ ካፒታል)",  // draft – needs native review
+  "abc.rule.pledge_upfront_fraction": "ቃል ክኣቱ ዝኽፈል (ተወሳኺ ኣክሲዮን)",  // draft – needs native review
+  "abc.rule.pledge_deadline_years": "ግዜ ንምኽፋል ቃል ዝተኣትወሎም ኣክሲዮናት",  // draft – needs native review
+  "abc.rule.max_ownership_fraction": "ንሓደ ኣባል ዝለዓለ ዋንነት",  // draft – needs native review
+  "abc.rule.committee_min": "ኣወሃሃዲት ኮሚቴ፦ ዝተሓተ",  // draft – needs native review
+  "abc.rule.committee_max": "ኣወሃሃዲት ኮሚቴ፦ ዝለዓለ",  // draft – needs native review
+  "abc.rule.business_plan_years_min": "መደብ ንግዲ፦ ዝተሓተ ዓመታት",  // draft – needs native review
+  "abc.rule.business_plan_years_max": "መደብ ንግዲ፦ ዝለዓለ ዓመታት",  // draft – needs native review
+  "abc.rule.voting_land_factor": "ክብደት ድምጺ፦ ግደ መሬት",  // draft – needs native review
+  "abc.rule.voting_production_factor": "ክብደት ድምጺ፦ ግደ ፍርያት",  // draft – needs native review
+  "abc.unit.members": "ኣባላት",  // draft – needs native review
+  "abc.unit.shares": "ኣክሲዮናት",  // draft – needs native review
+  "abc.unit.years": "ዓመታት",  // draft – needs native review
+  "abc.ruleVerified": "ዝተረጋገጸ",  // draft – needs native review
+  "abc.rulePlatform": "ናይ መድረኽ ንቡር",  // draft – needs native review
+  "abc.ruleDraft": "ንድፊ፦ ኣረጋግጹ",  // draft – needs native review
+  "abc.ruleSince": "ካብ {date}",  // draft – needs native review
+  "abc.since": "ካብ {date}",  // draft – needs native review
+  "abc.company.profile": "መግለጺ ትካል",  // draft – needs native review
+  "abc.company.type": "ዓይነት ABC",  // draft – needs native review
+  "abc.company.kebele": "ቀበሌ",  // draft – needs native review
+  "abc.company.fiscalYear": "ዓመተ ባጀት ዝጅምር",  // draft – needs native review
+  "abc.company.declaredCapital": "ዝተኣወጀ ካፒታል (ብር)",  // draft – needs native review
+  "abc.company.approvalLimit": "ፍቓድ ቦርድ ዘድልዮ ካብ (ብር) ንላዕሊ",  // draft – needs native review
+  "abc.company.approvalLimitHint": "ካብዚ መጠን ንላዕሊ ዝኾኑ ዕድጊታትን መሸጣታትን ፍቓድ ቦርድ የድልዮም።",  // draft – needs native review
+  "abc.company.exitPolicy": "ፖሊሲ ምውጻእን ምምላስን ኣባል",  // draft – needs native review
+  "abc.company.rules": "ኣብ ስራሕ ዘለዉ ሕጋዊ ሕግታት",  // draft – needs native review
+  "abc.company.rulesHint": "ብኣመሓዳሪ ካብ ሕግን መምርሒታትን ዝውሰኑ፤ ንድፍታት ክረጋገጹ ኣለዎም።",  // draft – needs native review
+  "abc.company.team": "ጉጅለን ተራታትን",  // draft – needs native review
+  "abc.company.teamHint": "ነፍሲ ወከፍ ተራ ኣብዚ ABC ናይ ገዛእ ርእሱ መሰል ይህብ። ሓደ ሰብ ብዙሕ ተራታት፣ ኣብ ካልኦት ABC እውን ተራ ክህልዎ ይኽእል።",  // draft – needs native review
+  "abc.company.noTeam": "ገና ተራ ኣይተዋህበን።",  // draft – needs native review
+  "abc.company.phone": "ተሌፎን",  // draft – needs native review
+  "abc.company.role": "ተራ",  // draft – needs native review
+  "abc.company.addRole": "ተራ ሃብ",  // draft – needs native review
+  "abc.company.history": "ታሪኽ",  // draft – needs native review
+  "abc.company.noHistory": "ገና ዝተመዝገበ ለውጢ የለን።",  // draft – needs native review
+  "abc.status.formation": "ኣብ ምምስራት",  // draft – needs native review
+  "abc.status.registered": "ዝተመዝገበ",  // draft – needs native review
+  "abc.status.suspended": "ዝተኣገደ",  // draft – needs native review
+  "abc.status.dissolved": "ዝፈረሰ",  // draft – needs native review
+  "abc.type.all": "ኩሎም ዓይነታት",  // draft – needs native review
+  "abc.type.crop_grain": "ሰብል / እኽሊ",  // draft – needs native review
+  "abc.type.horticulture": "ኣሕምልቲ",  // draft – needs native review
+  "abc.type.fruit": "ፍረታት",  // draft – needs native review
+  "abc.type.livestock": "እንስሳ",  // draft – needs native review
+  "abc.type.mixed": "ሕውስዋስ",  // draft – needs native review
+  "abc.fy.hamle": "1 ሓምለ (ዓመተ ባጀት ኢትዮጵያ)",  // draft – needs native review
+  "abc.fy.meskerem": "1 መስከረም (ሓድሽ ዓመት ኢትዮጵያ)",  // draft – needs native review
+  "abc.fy.january": "1 ጥሪ",  // draft – needs native review
+  "abc.action.abc.profile.update": "መግለጺ ትካል ተቐይሩ",  // draft – needs native review
+  "abc.action.abc.role.add": "ተራ ተዋሂቡ",  // draft – needs native review
+  "abc.action.abc.role.remove": "ተራ ተሰሪዙ",  // draft – needs native review
+  "abc.rules.description": "ሕጋዊ ቁጽርታት ንABC (ዝተሓተ ኣባላት፣ ዋጋ ኣክሲዮን፣ ዶብ ዋንነት…)። ዋጋ ካብ ሓንቲ ዕለት ምስ ምንጩ ቀይሩ፤ እቲ ዝነበረ ዋጋ ከም ታሪኽ ይዕቀብ።",  // draft – needs native review
+  "abc.rules.all": "ኩሎም ሕግታትን ታሪኾምን",  // draft – needs native review
+  "abc.rules.new": "ሓድሽ ዋጋ",  // draft – needs native review
+  "abc.rules.newHint": "ካብ ዝሰራዕኩምዋ ዕለት ይሰርሕ። ሕጊ፣ መምርሒ ወይ ውሳነ ምስ ዓንቀጹ ጥቐሱ።",  // draft – needs native review
+  "abc.rules.rule": "ሕጊ",  // draft – needs native review
+  "abc.rules.value": "ዋጋ",  // draft – needs native review
+  "abc.rules.from": "ዝሰርሓሉ ዕለት",  // draft – needs native review
+  "abc.rules.source": "ምንጪ",  // draft – needs native review
+  "abc.rules.sourceHint": "ንኣብነት መምርሒ ቁ. …፣ ዓንቀጽ …",  // draft – needs native review
+  "abc.rules.status": "ተረጋጊጹ?",  // draft – needs native review
+  "abc.rules.save": "ሓድሽ ዋጋ ዓቅብ",  // draft – needs native review
+  "abc.rules.added": "ተዓቂቡ። ሓድሽ ዋጋ ካብ ዕለቱ ይሰርሕ።",  // draft – needs native review
 };

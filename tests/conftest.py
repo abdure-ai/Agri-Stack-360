@@ -28,6 +28,9 @@ def platform(monkeypatch):
     from backend.routers import abc
 
     abc.ensure_schema(conn)
+    from backend import abc_company
+
+    abc_company.ensure_schema(conn)
     from backend.routers import estate
 
     estate.ensure_schema(conn)

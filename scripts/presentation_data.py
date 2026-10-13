@@ -9,6 +9,8 @@ Run by scripts/demo_setup.py on a presentation site (DEMO_MODE=1), after the dem
     it (Tilt 250 EC, p. 14), and the knapsack mix only where it follows from that. No registration numbers
     (the manual has none). The products stay "not checked against the EAA register", so the app says to
     check the register and follow the label; the label is final.
+  - ABC team (milestone A1): the demo ABC gets a general manager, chair, board members and a secretary from its
+    member farmers, and a sample company profile (type, kebele, declared capital, board approval limit).
   - Agro-dealer shops: sample shops near the pitch woreda (Dewa Cheffa) carrying these products, each with a
     SAMPLE price per pack (price_is_sample = 1, shown as "sample price"). A price a dealer enters replaces it.
   - Treatment protocols: practices and symptoms from the same manual (pp. 33-36) and the Production Package
@@ -161,9 +163,10 @@ def main() -> int:
                               verification_status=excluded.verification_status""",
                          (key, json.dumps(p["practices"]), json.dumps(p["ais"]), p["scouting"], p["source"], PLACEHOLDER))
         shops = seed_shops(conn, ids)
+        abc_roles = seed_abc_team(conn)
     print(f"Products: {len(ids)} fungicides from the MoA wheat manual (p. 36) with the manual's rates; "
           f"{len(PROTOCOLS)} treatment protocols from the manual; {len(banned)} pilot example removed; "
-          f"{shops} sample shops with sample prices.")
+          f"{shops} sample shops with sample prices; {abc_roles} ABC team roles.")
     return 0
 
 
@@ -199,6 +202,35 @@ def seed_shops(conn, product_ids: list[int]) -> int:
                                price_is_sample = CASE WHEN {keep} THEN 0 ELSE 1 END""",
                          (oid, pid, price, pack))
     return len(SHOPS)
+
+
+# Demo ABC team: (phone, role). Phones are the demo accounts (DEMO_MODE sign-in page).
+ABC_NAME = "Dewa Cheffa Irrigated Wheat ABC"
+ABC_TEAM = [("0944000008", "general_manager"), ("0944000003", "chair"), ("0945000001", "board_member"),
+            ("0945000002", "board_member"), ("0945000003", "secretary")]
+ABC_PROFILE = {"abc_type": "crop_grain", "kebele": "Kemise 01", "fiscal_year_start": "hamle",
+               "declared_capital_etb": 1_500_000, "board_approval_limit_etb": 100_000}
+
+
+def seed_abc_team(conn) -> int:
+    from backend import abc_company
+
+    abc_company.ensure_schema(conn)
+    row = conn.execute("SELECT id FROM organisations WHERE name=? AND type='abc'", (ABC_NAME,)).fetchone()
+    if not row:
+        return 0
+    org = row[0]
+    abc_company.profile(conn, org)
+    conn.execute(f"UPDATE abc_profiles SET {', '.join(f'{k}=?' for k in ABC_PROFILE)} WHERE org_id=?",
+                 (*ABC_PROFILE.values(), org))
+    n = 0
+    for phone, role in ABC_TEAM:
+        u = conn.execute("SELECT id FROM users WHERE phone=?", (phone,)).fetchone()
+        if u:
+            conn.execute("INSERT OR IGNORE INTO abc_roles (org_id, user_id, role, since) VALUES (?,?,?, '2026-09-01 09:00:00')",
+                         (org, u[0], role))
+            n += 1
+    return n
 
 
 if __name__ == "__main__":

@@ -28,8 +28,10 @@ import {
   Users,
 } from "lucide-react";
 import { useState, type FormEvent } from "react";
+import { useAuth } from "@/context/AuthContext";
+import CompanyTab from "./CompanyTab";
 
-type Tab = "members" | "contributions" | "planning" | "messages" | "buyers";
+type Tab = "company" | "members" | "contributions" | "planning" | "messages" | "buyers";
 
 function saveBlob(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
@@ -41,10 +43,16 @@ function saveBlob(blob: Blob, filename: string) {
   URL.revokeObjectURL(url);
 }
 
-/** ABC manager: members who accepted, contributions, crop planning, messages to members, buyer requests. */
+/** ABC workspace. Everyone with a role in the ABC: company (profile, rules, team, history). ABC managers also:
+ *  members who accepted, contributions, crop planning, messages to members, buyer requests. */
 export default function AbcPortal() {
-  const overview = useAsync(() => api.abcOverview(), []);
-  const [tab, setTab] = useState<Tab>("members");
+  const { user, can } = useAuth();
+  const companies = user?.abc_companies ?? [];
+  const [orgId, setOrgId] = useState<number | null>(companies[0]?.org_id ?? null);
+  const company = useAsync(() => api.abcCompany(orgId), [orgId]);
+  const isManager = can("abc:manage");
+  const overview = useAsync(() => (isManager ? api.abcOverview() : Promise.resolve(null)), [isManager]);
+  const [tab, setTab] = useState<Tab>("company");
   const ov = overview.data;
 
   return (
@@ -54,9 +62,9 @@ export default function AbcPortal() {
         description={tr("abc.description")}
       />
       <PageHeader
-        title={ov?.org.name ?? tr("nav.abc")}
+        title={company.data?.org.name ?? ov?.org.name ?? tr("nav.abc")}
         description={tr("abc.description")}
-        actions={
+        actions={isManager && (
           <Button
             size="sm"
             variant="outline"
@@ -67,9 +75,23 @@ export default function AbcPortal() {
           >
             {tr("abc.report")}
           </Button>
-        }
+        )}
       />
-      {overview.loading ? (
+      {companies.length > 1 && (
+        <div className="mb-4 max-w-sm">
+          <Label htmlFor="abc-pick">{tr("abc.pickCompany")}</Label>
+          <Select id="abc-pick" value={String(orgId ?? "")} onChange={(v) => setOrgId(Number(v))}
+            options={companies.map((c) => ({ value: String(c.org_id), label: c.name }))} />
+        </div>
+      )}
+      {tab === "company" && (company.loading ? (
+        <LoadingState />
+      ) : company.error || !company.data ? (
+        <ErrorState message={company.error} onRetry={company.reload} />
+      ) : null)}
+      {!isManager ? (
+        company.data && tab === "company" && <CompanyTab c={company.data} onChanged={company.reload} />
+      ) : overview.loading ? (
         <LoadingState />
       ) : overview.error || !ov ? (
         <ErrorState message={overview.error} onRetry={overview.reload} />
@@ -107,6 +129,7 @@ export default function AbcPortal() {
             value={tab}
             onChange={setTab}
             tabs={[
+              { id: "company", label: tr("abc.tab.company") },
               { id: "members", label: tr("abc.tab.members") },
               { id: "contributions", label: tr("abc.tab.contributions") },
               { id: "planning", label: tr("abc.tab.planning") },
@@ -114,6 +137,7 @@ export default function AbcPortal() {
               { id: "buyers", label: tr("abc.tab.buyers") },
             ]}
           />
+          {tab === "company" && company.data && <CompanyTab c={company.data} onChanged={company.reload} />}
           {tab === "members" && <Members ov={ov} onChanged={overview.reload} />}
           {tab === "contributions" && (
             <Contributions ov={ov} onChanged={overview.reload} />

@@ -141,6 +141,18 @@ def user_payload(user: dict, extra: tuple[str, ...] = ()) -> dict:
     """User fields safe to send to the browser, plus their permissions."""
     out = {k: user.get(k) for k in PUBLIC_USER_FIELDS + extra}
     out["permissions"] = sorted_permissions(user.get("role"))
+    if user.get("id"):
+        # Roles inside ABCs (per company, any platform role: a farmer can be a board member). "abc:member"
+        # only shows the ABC screens; every ABC request is checked per company on the server.
+        from backend import abc_company
+        from backend.platform_db import get_platform_connection
+
+        try:
+            out["abc_companies"] = abc_company.my_abcs(get_platform_connection(), user)
+        except Exception:      # table not created yet (first start)
+            out["abc_companies"] = []
+        if out["abc_companies"]:
+            out["permissions"] = sorted({*out["permissions"], "abc:member"})
     return out
 
 

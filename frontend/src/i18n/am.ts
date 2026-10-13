@@ -1873,4 +1873,88 @@ export const am: Record<MessageKey, string> = {
   "map.disease.scans": "{n} የፎቶ ምርመራዎች፣ የመጨረሻው {date}",  // draft – needs native review
   "map.disease.note": "በወረዳ ደረጃ የተቆጠረ፤ የእርሻ ቦታዎች ፈጽሞ አይታዩም።",  // draft – needs native review
   "map.legend.dashed": "ነጠብጣብ መስመር፦ ግምታዊ ቦታ።",  // draft – needs native review
+
+  // ── ABC company core (A1) ─────────────────────────────────────────────────
+  "nav.abcRules": "የABC ደንቦች",  // draft – needs native review
+  "abc.saved": "ተቀምጧል።",  // draft – needs native review
+  "abc.pickCompany": "ኩባንያ",  // draft – needs native review
+  "abc.tab.company": "ኩባንያ",  // draft – needs native review
+  "abc.role.organizing_committee": "አደራጅ ኮሚቴ",  // draft – needs native review
+  "abc.role.general_manager": "ዋና ሥራ አስኪያጅ",  // draft – needs native review
+  "abc.role.chair": "የቦርድ ሰብሳቢ",  // draft – needs native review
+  "abc.role.board_member": "የቦርድ አባል",  // draft – needs native review
+  "abc.role.secretary": "ፀሐፊ",  // draft – needs native review
+  "abc.role.accountant": "ሂሳብ ሹም",  // draft – needs native review
+  "abc.role.store_keeper": "ግምጃ ቤት ኃላፊ",  // draft – needs native review
+  "abc.role.machinery_coordinator": "የማሽነሪ አስተባባሪ",  // draft – needs native review
+  "abc.role.agronomist": "የABC አግሮኖሚስት",  // draft – needs native review
+  "abc.role.auditor": "ኦዲተር",  // draft – needs native review
+  "abc.rule.min_founding_members": "ዝቅተኛ መስራች አባላት",  // draft – needs native review
+  "abc.rule.share_value_min_etb": "የአንድ አክሲዮን ዝቅተኛ ዋጋ",  // draft – needs native review
+  "abc.rule.min_shares_per_member": "ለአንድ አባል ዝቅተኛ አክሲዮን",  // draft – needs native review
+  "abc.rule.min_paid_capital_etb": "ዝቅተኛ የተከፈለ ካፒታል",  // draft – needs native review
+  "abc.rule.registration_paid_fraction": "ከምዝገባ በፊት የሚከፈል (ከታወጀው ካፒታል)",  // draft – needs native review
+  "abc.rule.pledge_upfront_fraction": "ቃል ሲገባ የሚከፈል (ተጨማሪ አክሲዮን)",  // draft – needs native review
+  "abc.rule.pledge_deadline_years": "ቃል የተገቡ አክሲዮኖችን ለመክፈል ጊዜ",  // draft – needs native review
+  "abc.rule.max_ownership_fraction": "ለአንድ አባል ከፍተኛ ባለቤትነት",  // draft – needs native review
+  "abc.rule.committee_min": "አደራጅ ኮሚቴ፦ ዝቅተኛ",  // draft – needs native review
+  "abc.rule.committee_max": "አደራጅ ኮሚቴ፦ ከፍተኛ",  // draft – needs native review
+  "abc.rule.business_plan_years_min": "የንግድ ዕቅድ፦ ዝቅተኛ ዓመታት",  // draft – needs native review
+  "abc.rule.business_plan_years_max": "የንግድ ዕቅድ፦ ከፍተኛ ዓመታት",  // draft – needs native review
+  "abc.rule.voting_land_factor": "የድምፅ ክብደት፦ የመሬት ድርሻ",  // draft – needs native review
+  "abc.rule.voting_production_factor": "የድምፅ ክብደት፦ የምርት ድርሻ",  // draft – needs native review
+  "abc.unit.members": "አባላት",  // draft – needs native review
+  "abc.unit.shares": "አክሲዮኖች",  // draft – needs native review
+  "abc.unit.years": "ዓመታት",  // draft – needs native review
+  "abc.ruleVerified": "የተረጋገጠ",  // draft – needs native review
+  "abc.rulePlatform": "የመድረኩ ነባሪ",  // draft – needs native review
+  "abc.ruleDraft": "ረቂቅ፦ ያረጋግጡ",  // draft – needs native review
+  "abc.ruleSince": "ከ{date} ጀምሮ",  // draft – needs native review
+  "abc.since": "ከ{date} ጀምሮ",  // draft – needs native review
+  "abc.company.profile": "የኩባንያ መገለጫ",  // draft – needs native review
+  "abc.company.type": "የABC ዓይነት",  // draft – needs native review
+  "abc.company.kebele": "ቀበሌ",  // draft – needs native review
+  "abc.company.fiscalYear": "የበጀት ዓመት የሚጀምረው",  // draft – needs native review
+  "abc.company.declaredCapital": "የታወጀ ካፒታል (ብር)",  // draft – needs native review
+  "abc.company.approvalLimit": "የቦርድ ፈቃድ የሚያስፈልገው ከ (ብር) በላይ",  // draft – needs native review
+  "abc.company.approvalLimitHint": "ከዚህ መጠን በላይ ግዢዎችና ሽያጮች የቦርድ ፈቃድ ያስፈልጋቸዋል።",  // draft – needs native review
+  "abc.company.exitPolicy": "የአባል መውጫና ተመላሽ ፖሊሲ",  // draft – needs native review
+  "abc.company.rules": "በሥራ ላይ ያሉ ሕጋዊ ደንቦች",  // draft – needs native review
+  "abc.company.rulesHint": "ከሕጉና ከመመሪያዎች በአስተዳዳሪው የሚወሰኑ፤ ረቂቆች መረጋገጥ አለባቸው።",  // draft – needs native review
+  "abc.company.team": "ቡድንና ሚናዎች",  // draft – needs native review
+  "abc.company.teamHint": "እያንዳንዱ ሚና በዚህ ABC የራሱ መብት ይሰጣል። አንድ ሰው ብዙ ሚናዎች፣ በሌሎች ABCዎችም ሚና ሊኖረው ይችላል።",  // draft – needs native review
+  "abc.company.noTeam": "ገና ሚና አልተሰጠም።",  // draft – needs native review
+  "abc.company.phone": "ስልክ",  // draft – needs native review
+  "abc.company.role": "ሚና",  // draft – needs native review
+  "abc.company.addRole": "ሚና ስጥ",  // draft – needs native review
+  "abc.company.history": "ታሪክ",  // draft – needs native review
+  "abc.company.noHistory": "ገና የተመዘገበ ለውጥ የለም።",  // draft – needs native review
+  "abc.status.formation": "በምሥረታ ላይ",  // draft – needs native review
+  "abc.status.registered": "የተመዘገበ",  // draft – needs native review
+  "abc.status.suspended": "የታገደ",  // draft – needs native review
+  "abc.status.dissolved": "የፈረሰ",  // draft – needs native review
+  "abc.type.all": "ሁሉም ዓይነቶች",  // draft – needs native review
+  "abc.type.crop_grain": "ሰብል / እህል",  // draft – needs native review
+  "abc.type.horticulture": "አትክልት",  // draft – needs native review
+  "abc.type.fruit": "ፍራፍሬ",  // draft – needs native review
+  "abc.type.livestock": "እንስሳት",  // draft – needs native review
+  "abc.type.mixed": "ድብልቅ",  // draft – needs native review
+  "abc.fy.hamle": "ሐምሌ 1 (የኢትዮጵያ በጀት ዓመት)",  // draft – needs native review
+  "abc.fy.meskerem": "መስከረም 1 (የኢትዮጵያ አዲስ ዓመት)",  // draft – needs native review
+  "abc.fy.january": "ጥር 1 (ጎርጎሮሳዊ)",  // draft – needs native review
+  "abc.action.abc.profile.update": "የኩባንያ መገለጫ ተቀይሯል",  // draft – needs native review
+  "abc.action.abc.role.add": "ሚና ተሰጥቷል",  // draft – needs native review
+  "abc.action.abc.role.remove": "ሚና ተነስቷል",  // draft – needs native review
+  "abc.rules.description": "ለABCዎች ሕጋዊ ቁጥሮች (ዝቅተኛ አባላት፣ የአክሲዮን ዋጋ፣ የባለቤትነት ገደብ…)። ዋጋን ከአንድ ቀን ጀምሮ ከምንጩ ጋር ይቀይሩ፤ የቀድሞው ዋጋ በታሪክነት ይቀመጣል።",  // draft – needs native review
+  "abc.rules.all": "ሁሉም ደንቦችና ታሪካቸው",  // draft – needs native review
+  "abc.rules.new": "አዲስ ዋጋ",  // draft – needs native review
+  "abc.rules.newHint": "ካስቀመጡት ቀን ጀምሮ ይሠራል። ሕጉን፣ መመሪያውን ወይም ውሳኔውን ከአንቀጹ ጋር ይጥቀሱ።",  // draft – needs native review
+  "abc.rules.rule": "ደንብ",  // draft – needs native review
+  "abc.rules.value": "ዋጋ",  // draft – needs native review
+  "abc.rules.from": "የሚሠራበት ቀን",  // draft – needs native review
+  "abc.rules.source": "ምንጭ",  // draft – needs native review
+  "abc.rules.sourceHint": "ለምሳሌ መመሪያ ቁጥር …፣ አንቀጽ …",  // draft – needs native review
+  "abc.rules.status": "ተረጋግጧል?",  // draft – needs native review
+  "abc.rules.save": "አዲሱን ዋጋ አስቀምጥ",  // draft – needs native review
+  "abc.rules.added": "ተቀምጧል። አዲሱ ዋጋ ከቀኑ ጀምሮ ይሠራል።",  // draft – needs native review
 };

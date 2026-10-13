@@ -89,7 +89,7 @@ export const NAV_GROUPS: NavGroup[] = [
     items: [
       { name: "nav.supplier", path: "/supplier", icon: <Factory className={ICON} strokeWidth={1.5} />, permissions: ["supplier:manage"] },
       { name: "nav.dealer", path: "/dealer", icon: <ShoppingBasket className={ICON} strokeWidth={1.5} />, permissions: ["dealer:manage"] },
-      { name: "nav.abc", path: "/abc", icon: <Handshake className={ICON} strokeWidth={1.5} />, permissions: ["abc:manage"] },
+      { name: "nav.abc", path: "/abc", icon: <Handshake className={ICON} strokeWidth={1.5} />, permissions: ["abc:manage", "abc:member"] },
       { name: "nav.estate", path: "/estate", icon: <Tractor className={ICON} strokeWidth={1.5} />, permissions: ["estate:manage"] },
       { name: "nav.ngo", path: "/ngo", icon: <HeartHandshake className={ICON} strokeWidth={1.5} />, permissions: ["ngo:manage"] },
       { name: "nav.regulator", path: "/regulator", icon: <Scale className={ICON} strokeWidth={1.5} />, permissions: ["registry:manage"] },
@@ -125,6 +125,7 @@ export const NAV_GROUPS: NavGroup[] = [
     items: [
       { name: "nav.dataSync", path: "/admin/data-sync", icon: <DataBaseIcon className={ICON} />, permissions: ["sync:manage"] },
       { name: "nav.orgs", path: "/admin/orgs", icon: <Building2 className={ICON} strokeWidth={1.5} />, permissions: ["orgs:manage"] },
+      { name: "nav.abcRules", path: "/admin/abc-rules", icon: <Scale className={ICON} strokeWidth={1.5} />, permissions: ["orgs:manage"] },
       { name: "nav.auditLog", path: "/admin/audit-log", icon: <ScrollText className={ICON} strokeWidth={1.5} />, permissions: ["audit:read"] },
     ],
   },

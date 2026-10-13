@@ -7,6 +7,7 @@
 
 import type { LivestockImportResult, LivestockPrices, LivestockSummary } from "@/types/livestock";
 import type { MapLayers } from "@/types/map";
+import type { AbcCompany, AbcHistoryEntry, AbcProfile, AbcRole, AbcRule, AbcTeamMember } from "@/types/abc";
 import type {
   AdminArea,
   AiKey,
@@ -394,6 +395,17 @@ export const api = {
 
   // ── ABC (abc:manage) and buy requests (trade:request) ─────────────────────
   abcOverview: () => platform.get<AbcOverview>("/abc/overview"),
+  abcCompany: (orgId?: number | null) => platform.get<AbcCompany>("/abc/company", { org_id: orgId ?? undefined }),
+  abcUpdateCompany: (orgId: number, data: Partial<AbcProfile>) =>
+    platform.put<AbcProfile>(`/abc/company?org_id=${orgId}`, data),
+  abcAddTeam: (orgId: number, phone: string, role: AbcRole) =>
+    platform.post<AbcTeamMember[]>(`/abc/team?org_id=${orgId}`, { phone, role }),
+  abcRemoveTeam: (orgId: number, userId: number, role: AbcRole) =>
+    platform.del<unknown>(`/abc/team/${userId}/${role}?org_id=${orgId}`),
+  abcHistory: (orgId: number) => platform.get<AbcHistoryEntry[]>("/abc/history", { org_id: orgId }),
+  abcAllRules: () => platform.get<AbcRule[]>("/admin/abc-rules"),
+  abcAddRule: (data: { key: string; abc_type: string; value: number; unit?: string | null; effective_from: string;
+    source: string; verification_status: string; note?: string | null }) => platform.post<AbcRule>("/admin/abc-rules", data),
   abcInvite: (phone: string) => platform.post<{ farmer_id: number; status: string }>("/abc/members", { phone }),
   abcRemoveMember: (farmerId: number) => platform.del<unknown>(`/abc/members/${farmerId}`),
   abcContributions: () => platform.get<AbcContribution[]>("/abc/contributions"),

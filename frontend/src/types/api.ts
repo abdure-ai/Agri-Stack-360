@@ -48,6 +48,8 @@ export type Permission =
   | "content:review"
   | "dealer:manage"
   | "abc:manage"
+  /** Has a role inside at least one ABC (shows the ABC screens; checked per company on the server). */
+  | "abc:member"
   | "trade:request"
   | "estate:manage"
   | "registry:manage"
@@ -69,6 +71,8 @@ export interface User {
   woreda_pcode?: string | null;
   /** Missing only on sessions stored before RBAC; refreshed from /auth/me. */
   permissions?: Permission[];
+  /** ABCs this person works in, with their roles there (any platform role: a farmer can be a board member). */
+  abc_companies?: import("./abc").AbcCompanyRef[];
 }
 
 export interface RoleInfo {

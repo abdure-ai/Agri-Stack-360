@@ -15,6 +15,7 @@ import Home from "@/pages/Dashboard/Home";
 import Financial from "@/pages/Financial/Financial";
 import InputSuppliers from "@/pages/Inputs/InputSuppliers";
 import Livestock from "@/pages/Market/Livestock";
+import AbcRules from "@/pages/Admin/AbcRules";
 import MarketIntel from "@/pages/Market/MarketIntel";
 import AdvisorySettings from "@/pages/Admin/AdvisorySettings";
 import AuditLog from "@/pages/Admin/AuditLog";
@@ -124,7 +125,7 @@ export default function App() {
             <Route element={<RequirePermission any={["estate:manage"]} />}>
               <Route path="/estate" element={<EstatePortal />} />
             </Route>
-            <Route element={<RequirePermission any={["abc:manage"]} />}>
+            <Route element={<RequirePermission any={["abc:manage", "abc:member"]} />}>
               <Route path="/abc" element={<AbcPortal />} />
             </Route>
             <Route element={<RequirePermission any={["dealer:manage"]} />}>
@@ -136,6 +137,7 @@ export default function App() {
             </Route>
             <Route element={<RequirePermission any={["orgs:manage"]} />}>
               <Route path="/admin/orgs" element={<Organisations />} />
+              <Route path="/admin/abc-rules" element={<AbcRules />} />
             </Route>
             <Route element={<RequirePermission any={["reports:read"]} />}>
               <Route path="/reports" element={<AreaReports />} />

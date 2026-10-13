@@ -1873,4 +1873,88 @@ export const om: Record<MessageKey, string> = {
   "map.disease.scans": "Qorannoo suuraa {n}, isa dhumaa {date}",  // draft – needs native review
   "map.disease.note": "Aanaan lakkaa'ame; bakki lafa qonnaa gonkumaa hin mul'atu.",  // draft – needs native review
   "map.legend.dashed": "Sarara cita'aa: bakka tilmaamaa.",  // draft – needs native review
+
+  // ── ABC company core (A1) ─────────────────────────────────────────────────
+  "nav.abcRules": "Seerota ABC",  // draft – needs native review
+  "abc.saved": "Olkaa'ameera.",  // draft – needs native review
+  "abc.pickCompany": "Dhaabbata",  // draft – needs native review
+  "abc.tab.company": "Dhaabbata",  // draft – needs native review
+  "abc.role.organizing_committee": "Koree qindeessaa",  // draft – needs native review
+  "abc.role.general_manager": "Hoji gaggeessaa olaanaa",  // draft – needs native review
+  "abc.role.chair": "Itti gaafatamaa boordii",  // draft – needs native review
+  "abc.role.board_member": "Miseensa boordii",  // draft – needs native review
+  "abc.role.secretary": "Barreessaa",  // draft – needs native review
+  "abc.role.accountant": "Herregaa",  // draft – needs native review
+  "abc.role.store_keeper": "Eegduu kuusaa",  // draft – needs native review
+  "abc.role.machinery_coordinator": "Qindeessaa maashinii",  // draft – needs native review
+  "abc.role.agronomist": "Ogeessa qonnaa ABC",  // draft – needs native review
+  "abc.role.auditor": "Odiitara",  // draft – needs native review
+  "abc.rule.min_founding_members": "Miseensota hundeessitoota xiqqaa",  // draft – needs native review
+  "abc.rule.share_value_min_etb": "Gatii aksiyoona tokkoo xiqqaa",  // draft – needs native review
+  "abc.rule.min_shares_per_member": "Aksiyoona miseensa tokkoof xiqqaa",  // draft – needs native review
+  "abc.rule.min_paid_capital_etb": "Kaappitaala kaffalame xiqqaa",  // draft – needs native review
+  "abc.rule.registration_paid_fraction": "Galmee dura kan kaffalamu (kaappitaala labsame irraa)",  // draft – needs native review
+  "abc.rule.pledge_upfront_fraction": "Yeroo waadaa galan kan kaffalamu (aksiyoona dabalataa)",  // draft – needs native review
+  "abc.rule.pledge_deadline_years": "Yeroo aksiyoona waadaa galame kaffaluu",  // draft – needs native review
+  "abc.rule.max_ownership_fraction": "Abbummaa miseensa tokkoo olaanaa",  // draft – needs native review
+  "abc.rule.committee_min": "Koree qindeessaa: xiqqaa",  // draft – needs native review
+  "abc.rule.committee_max": "Koree qindeessaa: olaanaa",  // draft – needs native review
+  "abc.rule.business_plan_years_min": "Karoora daldalaa: waggoota xiqqaa",  // draft – needs native review
+  "abc.rule.business_plan_years_max": "Karoora daldalaa: waggoota olaanaa",  // draft – needs native review
+  "abc.rule.voting_land_factor": "Ulfaatina sagalee: qooda lafaa",  // draft – needs native review
+  "abc.rule.voting_production_factor": "Ulfaatina sagalee: qooda oomishaa",  // draft – needs native review
+  "abc.unit.members": "miseensota",  // draft – needs native review
+  "abc.unit.shares": "aksiyoonota",  // draft – needs native review
+  "abc.unit.years": "waggoota",  // draft – needs native review
+  "abc.ruleVerified": "Mirkanaa'e",  // draft – needs native review
+  "abc.rulePlatform": "Durtii waltajjii",  // draft – needs native review
+  "abc.ruleDraft": "Wixinee: mirkaneessaa",  // draft – needs native review
+  "abc.ruleSince": "{date} irraa",  // draft – needs native review
+  "abc.since": "{date} irraa",  // draft – needs native review
+  "abc.company.profile": "Ibsa dhaabbataa",  // draft – needs native review
+  "abc.company.type": "Gosa ABC",  // draft – needs native review
+  "abc.company.kebele": "Ganda",  // draft – needs native review
+  "abc.company.fiscalYear": "Waggaan baajataa kan jalqabu",  // draft – needs native review
+  "abc.company.declaredCapital": "Kaappitaala labsame (qarshii)",  // draft – needs native review
+  "abc.company.approvalLimit": "Hayyama boordii kan barbaachisu (qarshii) ol",  // draft – needs native review
+  "abc.company.approvalLimitHint": "Bittaa fi gurgurtaan hamma kanaa ol hayyama boordii barbaada.",  // draft – needs native review
+  "abc.company.exitPolicy": "Imaammata ba'uu fi deebisuu miseensaa",  // draft – needs native review
+  "abc.company.rules": "Seerota seeraa hojii irra jiran",  // draft – needs native review
+  "abc.company.rulesHint": "Bulchaan seeraa fi qajeelfamoota irraa kan murteessu; wixineen mirkanaa'uu qabu.",  // draft – needs native review
+  "abc.company.team": "Garee fi gahee",  // draft – needs native review
+  "abc.company.teamHint": "Gaheen tokkoon tokkoon ABC kana keessatti mirga mataa isaa kenna. Namni tokko gahee hedduu, ABC biroo keessattis gahee qabaachuu danda'a.",  // draft – needs native review
+  "abc.company.noTeam": "Gaheen ammallee hin kennamne.",  // draft – needs native review
+  "abc.company.phone": "Bilbila",  // draft – needs native review
+  "abc.company.role": "Gahee",  // draft – needs native review
+  "abc.company.addRole": "Gahee kenni",  // draft – needs native review
+  "abc.company.history": "Seenaa",  // draft – needs native review
+  "abc.company.noHistory": "Jijjiiramni galmaa'e ammallee hin jiru.",  // draft – needs native review
+  "abc.status.formation": "Hundeeffama irra",  // draft – needs native review
+  "abc.status.registered": "Galmaa'e",  // draft – needs native review
+  "abc.status.suspended": "Dhaabbate",  // draft – needs native review
+  "abc.status.dissolved": "Diigame",  // draft – needs native review
+  "abc.type.all": "Gosoota hunda",  // draft – needs native review
+  "abc.type.crop_grain": "Midhaan / qonna",  // draft – needs native review
+  "abc.type.horticulture": "Kuduraa",  // draft – needs native review
+  "abc.type.fruit": "Fuduraa",  // draft – needs native review
+  "abc.type.livestock": "Horii",  // draft – needs native review
+  "abc.type.mixed": "Makaa",  // draft – needs native review
+  "abc.fy.hamle": "Adoolessa 1 (bara baajata Itoophiyaa)",  // draft – needs native review
+  "abc.fy.meskerem": "Fulbaana 1 (bara haaraa Itoophiyaa)",  // draft – needs native review
+  "abc.fy.january": "Amajjii 1",  // draft – needs native review
+  "abc.action.abc.profile.update": "Ibsi dhaabbataa jijjiirame",  // draft – needs native review
+  "abc.action.abc.role.add": "Gaheen kenname",  // draft – needs native review
+  "abc.action.abc.role.remove": "Gaheen kaafame",  // draft – needs native review
+  "abc.rules.description": "Lakkoofsota seeraa ABCf (miseensota xiqqaa, gatii aksiyoonaa, daangaa abbummaa…). Gatii guyyaa tokko irraa madda isaa waliin jijjiiraa: gatiin durii akka seenaatti hafa.",  // draft – needs native review
+  "abc.rules.all": "Seerota hunda fi seenaa isaanii",  // draft – needs native review
+  "abc.rules.new": "Gatii haaraa",  // draft – needs native review
+  "abc.rules.newHint": "Guyyaa kaa'tan irraa hojii irra oola. Seera, qajeelfama ykn murtee keewwata isaa waliin caqasaa.",  // draft – needs native review
+  "abc.rules.rule": "Seera",  // draft – needs native review
+  "abc.rules.value": "Gatii",  // draft – needs native review
+  "abc.rules.from": "Kan hojii irra oolu irraa",  // draft – needs native review
+  "abc.rules.source": "Madda",  // draft – needs native review
+  "abc.rules.sourceHint": "fkn. Qajeelfama Lakk. …, keewwata …",  // draft – needs native review
+  "abc.rules.status": "Mirkanaa'eeraa?",  // draft – needs native review
+  "abc.rules.save": "Gatii haaraa olkaa'i",  // draft – needs native review
+  "abc.rules.added": "Olkaa'ameera. Gatiin haaraan guyyaa isaa irraa hojii irra oola.",  // draft – needs native review
 };
