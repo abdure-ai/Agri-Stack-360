@@ -6567,7 +6567,7 @@
     "description": "web key: outlook.none",
     "x-draft": true
   },
-  "navAbc": "ABC koo",
+  "navAbc": "Waajjira ABC",
   "@navAbc": {
     "description": "web key: nav.abc",
     "x-draft": true
@@ -6687,7 +6687,7 @@
     "description": "web key: abc.waiting",
     "x-draft": true
   },
-  "abcContributionsNote": "Gumaacha qooddattootaa (lafa, horii, humna). Galmee ABC'n qabu, sanada seeraa miti.",
+  "abcContributionsNote": "Gumaacha qooda qabeeyyii (lafa, horii, humna). Gatii: qajeelfama tilmaama ministeeraa eeggachaa jira. Galmee ABCn qabatu, sanada seeraa miti.",
   "@abcContributionsNote": {
     "description": "web key: abc.contributionsNote",
     "x-draft": true
@@ -9475,6 +9475,2350 @@
     "placeholders": {
       "date": {}
     },
+    "x-draft": true
+  },
+  "abcRegTitle": "Galmee miseensotaa",
+  "@abcRegTitle": {
+    "description": "web key: abc.reg.title",
+    "x-draft": true
+  },
+  "abcRegHint": "Miseensotaa fi affeerraa {n}. Lafa, hayyama fi bal'ina argachuuf miseensa tuqaa.",
+  "@abcRegHint": {
+    "description": "web key: abc.reg.hint",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcRegNone": "Miseensi ammallee hin jiru.",
+  "@abcRegNone": {
+    "description": "web key: abc.reg.none",
+    "x-draft": true
+  },
+  "abcRegMembers": "Miseensota",
+  "@abcRegMembers": {
+    "description": "web key: abc.reg.members",
+    "x-draft": true
+  },
+  "abcRegWomen": "Dubartoota",
+  "@abcRegWomen": {
+    "description": "web key: abc.reg.women",
+    "x-draft": true
+  },
+  "abcRegYouth": "Dargaggoota (15-29)",
+  "@abcRegYouth": {
+    "description": "web key: abc.reg.youth",
+    "x-draft": true
+  },
+  "abcRegUnknown": "Kan hin galmoofne",
+  "@abcRegUnknown": {
+    "description": "web key: abc.reg.unknown",
+    "x-draft": true
+  },
+  "abcRegPlots": "Lafa {n}, hektaara {ha}",
+  "@abcRegPlots": {
+    "description": "web key: abc.reg.plots",
+    "placeholders": {
+      "n": {},
+      "ha": {}
+    },
+    "x-draft": true
+  },
+  "abcRegStatusInvited": "Affeerame",
+  "@abcRegStatusInvited": {
+    "description": "web key: abc.reg.status.invited",
+    "x-draft": true
+  },
+  "abcRegStatusActive": "Miseensa",
+  "@abcRegStatusActive": {
+    "description": "web key: abc.reg.status.active",
+    "x-draft": true
+  },
+  "abcRegConsentLine": "Hayyama: {method}, {by}n {date} galmeesse.",
+  "@abcRegConsentLine": {
+    "description": "web key: abc.reg.consentLine",
+    "placeholders": {
+      "method": {},
+      "by": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcRegIrrigated": "jallisiin",
+  "@abcRegIrrigated": {
+    "description": "web key: abc.reg.irrigated",
+    "x-draft": true
+  },
+  "abcRegNoPlots": "Miseensi kun lafa hin galmeessine.",
+  "@abcRegNoPlots": {
+    "description": "web key: abc.reg.noPlots",
+    "x-draft": true
+  },
+  "abcRegGender": "Saala",
+  "@abcRegGender": {
+    "description": "web key: abc.reg.gender",
+    "x-draft": true
+  },
+  "abcRegAge": "Garee umurii",
+  "@abcRegAge": {
+    "description": "web key: abc.reg.age",
+    "x-draft": true
+  },
+  "abcRegIdReason": "Lakkoofsa eenyummaa guutuu maaliif barbaaddu? (galmee odiitii keessatti galmaa'a)",
+  "@abcRegIdReason": {
+    "description": "web key: abc.reg.idReason",
+    "x-draft": true
+  },
+  "abcRegShowId": "Eenyummaa guutuu agarsiisi",
+  "@abcRegShowId": {
+    "description": "web key: abc.reg.showId",
+    "x-draft": true
+  },
+  "abcRegRemoveReason": "Sababa miseensi itti ba'u (seenaa keessatti olkaa'ama):",
+  "@abcRegRemoveReason": {
+    "description": "web key: abc.reg.removeReason",
+    "x-draft": true
+  },
+  "abcRegRemove": "Miseensi ni ba'a",
+  "@abcRegRemove": {
+    "description": "web key: abc.reg.remove",
+    "x-draft": true
+  },
+  "abcRegInvited": "Affeerraan ergameera: qonnaan bulaan appii keessatti fudhata.",
+  "@abcRegInvited": {
+    "description": "web key: abc.reg.invited",
+    "x-draft": true
+  },
+  "abcRegCreated": "Herregni uumameera, miseensis dabalameera. PIN yeroo qonnaan bulaaf kennaa.",
+  "@abcRegCreated": {
+    "description": "web key: abc.reg.created",
+    "x-draft": true
+  },
+  "abcRegAdded": "Miseensi dabalameera.",
+  "@abcRegAdded": {
+    "description": "web key: abc.reg.added",
+    "x-draft": true
+  },
+  "abcRegEnrol": "Miseensa galmeessi",
+  "@abcRegEnrol": {
+    "description": "web key: abc.reg.enrol",
+    "x-draft": true
+  },
+  "abcRegEnrolHint": "Qonnaan bulaa jiru: bilbila qofa. Qonnaan bulaa haaraa: maqaa, aanaa fi PIN yeroo dabalataan.",
+  "@abcRegEnrolHint": {
+    "description": "web key: abc.reg.enrolHint",
+    "x-draft": true
+  },
+  "abcRegConsent": "Hayyama",
+  "@abcRegConsent": {
+    "description": "web key: abc.reg.consent",
+    "x-draft": true
+  },
+  "abcRegNewHint": "Qonnaan bulaa herrega hin qabneef qofa:",
+  "@abcRegNewHint": {
+    "description": "web key: abc.reg.newHint",
+    "x-draft": true
+  },
+  "abcRegName": "Maqaa guutuu",
+  "@abcRegName": {
+    "description": "web key: abc.reg.name",
+    "x-draft": true
+  },
+  "abcRegPin": "PIN yeroo (lakkoofsa 6+)",
+  "@abcRegPin": {
+    "description": "web key: abc.reg.pin",
+    "x-draft": true
+  },
+  "abcRegIdType": "Gosa eenyummaa",
+  "@abcRegIdType": {
+    "description": "web key: abc.reg.idType",
+    "x-draft": true
+  },
+  "abcRegIdNumber": "Lakkoofsa eenyummaa (filannoo)",
+  "@abcRegIdNumber": {
+    "description": "web key: abc.reg.idNumber",
+    "x-draft": true
+  },
+  "abcRegIdHint": "Iccitiin olkaa'ama; lakkoofsota 4 dhumaa qofatu mul'ata.",
+  "@abcRegIdHint": {
+    "description": "web key: abc.reg.idHint",
+    "x-draft": true
+  },
+  "abcRegEnrolButton": "Galmeessi",
+  "@abcRegEnrolButton": {
+    "description": "web key: abc.reg.enrolButton",
+    "x-draft": true
+  },
+  "abcRegImport": "Miseensota galchi (CSV)",
+  "@abcRegImport": {
+    "description": "web key: abc.reg.import",
+    "x-draft": true
+  },
+  "abcRegImportHint": "Miseensota baay'eef, fkn. waldaa jijjiiruuf. Dursa faayilii mirkaneessaa; hanga galchitanitti homtuu hin olkaa'amu.",
+  "@abcRegImportHint": {
+    "description": "web key: abc.reg.importHint",
+    "x-draft": true
+  },
+  "abcRegCheck": "Faayilii mirkaneessi",
+  "@abcRegCheck": {
+    "description": "web key: abc.reg.check",
+    "x-draft": true
+  },
+  "abcRegImportButton": "Miseensota {n} galchi",
+  "@abcRegImportButton": {
+    "description": "web key: abc.reg.importButton",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcRegCheckResult": "Tarree {rows}: {ok} qophaa'e (herrega haaraa {created}), {errors} rakkoo qaban.",
+  "@abcRegCheckResult": {
+    "description": "web key: abc.reg.checkResult",
+    "placeholders": {
+      "rows": {},
+      "ok": {},
+      "created": {},
+      "errors": {}
+    },
+    "x-draft": true
+  },
+  "abcRegImportResult": "Tarree {rows} keessaa {ok} galfame (herrega haaraa {created}); {errors} dhiifame.",
+  "@abcRegImportResult": {
+    "description": "web key: abc.reg.importResult",
+    "placeholders": {
+      "rows": {},
+      "ok": {},
+      "created": {},
+      "errors": {}
+    },
+    "x-draft": true
+  },
+  "abcRegLine": "Tarree {line}",
+  "@abcRegLine": {
+    "description": "web key: abc.reg.line",
+    "placeholders": {
+      "line": {}
+    },
+    "x-draft": true
+  },
+  "abcGenderFemale": "Dubartii",
+  "@abcGenderFemale": {
+    "description": "web key: abc.gender.female",
+    "x-draft": true
+  },
+  "abcGenderMale": "Dhiira",
+  "@abcGenderMale": {
+    "description": "web key: abc.gender.male",
+    "x-draft": true
+  },
+  "abcConsentApp": "appii keessatti (affeerraa)",
+  "@abcConsentApp": {
+    "description": "web key: abc.consent.app",
+    "x-draft": true
+  },
+  "abcConsentSpoken": "afaaniin, hojjetaan galmeesse",
+  "@abcConsentSpoken": {
+    "description": "web key: abc.consent.spoken",
+    "x-draft": true
+  },
+  "abcConsentPaper": "unka waraqaa mallattaa'e",
+  "@abcConsentPaper": {
+    "description": "web key: abc.consent.paper",
+    "x-draft": true
+  },
+  "abcIdTypeFayda": "Faayidaa (eenyummaa biyyaalessaa)",
+  "@abcIdTypeFayda": {
+    "description": "web key: abc.idType.fayda",
+    "x-draft": true
+  },
+  "abcIdTypeKebeleId": "Eenyummaa gandaa",
+  "@abcIdTypeKebeleId": {
+    "description": "web key: abc.idType.kebele_id",
+    "x-draft": true
+  },
+  "abcIdTypeOther": "Eenyummaa biraa",
+  "@abcIdTypeOther": {
+    "description": "web key: abc.idType.other",
+    "x-draft": true
+  },
+  "abcTabShares": "Aksiyoona",
+  "@abcTabShares": {
+    "description": "web key: abc.tab.shares",
+    "x-draft": true
+  },
+  "ruleShareValueMin": "Aksiyoonni tokko yoo xiqqaate qarshii {minimum} ta'uu qaba (seerota ABC).",
+  "@ruleShareValueMin": {
+    "description": "web key: rule.share_value_min",
+    "placeholders": {
+      "minimum": {}
+    },
+    "x-draft": true
+  },
+  "ruleMinShares": "Waadaan jalqabaa miseensaa yoo xiqqaate aksiyoona {minimum} ta'uu qaba.",
+  "@ruleMinShares": {
+    "description": "web key: rule.min_shares",
+    "placeholders": {
+      "minimum": {}
+    },
+    "x-draft": true
+  },
+  "ruleOwnershipCap": "Miseensi kamiyyuu aksiyoona {offered} dhiyaatan keessaa {percent}% ol ({limit}) qabaachuu hin danda'u. Kun {after} taasisa.",
+  "@ruleOwnershipCap": {
+    "description": "web key: rule.ownership_cap",
+    "placeholders": {
+      "offered": {},
+      "percent": {},
+      "limit": {},
+      "after": {}
+    },
+    "x-draft": true
+  },
+  "rulePledgeUpfront": "Aksiyoonni dabalataa yeroo waadaa galan yoo xiqqaate {percent}% kaffalamuu qaba: qarshii {amount}.",
+  "@rulePledgeUpfront": {
+    "description": "web key: rule.pledge_upfront",
+    "placeholders": {
+      "percent": {},
+      "amount": {}
+    },
+    "x-draft": true
+  },
+  "abcShSetup": "Kaappitaala aksiyoonaa",
+  "@abcShSetup": {
+    "description": "web key: abc.sh.setup",
+    "x-draft": true
+  },
+  "abcShRulesLine": "Seerota hojii irra jiran: miseensa tokkoof yoo xiqqaate aksiyoona {min}, tokkoon tokkoon {cap}% hin caalle, aksiyoona dabalataa irratti {upfront}% dursaan, kan hafe waggoota {years} keessatti.",
+  "@abcShRulesLine": {
+    "description": "web key: abc.sh.rulesLine",
+    "placeholders": {
+      "min": {},
+      "cap": {},
+      "upfront": {},
+      "years": {}
+    },
+    "x-draft": true
+  },
+  "abcShPledgedShares": "Aksiyoona waadaa galame",
+  "@abcShPledgedShares": {
+    "description": "web key: abc.sh.pledgedShares",
+    "x-draft": true
+  },
+  "abcShIssuedShares": "Aksiyoona kenname",
+  "@abcShIssuedShares": {
+    "description": "web key: abc.sh.issuedShares",
+    "x-draft": true
+  },
+  "abcShPaidTotal": "Kaffalame",
+  "@abcShPaidTotal": {
+    "description": "web key: abc.sh.paidTotal",
+    "x-draft": true
+  },
+  "abcShSubscribed": "Aksiyoona dhiyaatan keessaa",
+  "@abcShSubscribed": {
+    "description": "web key: abc.sh.subscribed",
+    "x-draft": true
+  },
+  "abcShShareValue": "Gatii aksiyoona tokkoo (qarshii)",
+  "@abcShShareValue": {
+    "description": "web key: abc.sh.shareValue",
+    "x-draft": true
+  },
+  "abcShSharesOffered": "Aksiyoona dhiyaatan",
+  "@abcShSharesOffered": {
+    "description": "web key: abc.sh.sharesOffered",
+    "x-draft": true
+  },
+  "abcShCapLine": "Daangaa abbummaa: miseensa tokkoof aksiyoona {n}.",
+  "@abcShCapLine": {
+    "description": "web key: abc.sh.capLine",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcShSetFirst": "Dursa gatii aksiyoonaa fi baay'ina aksiyoona dhiyaatanii kaa'aa.",
+  "@abcShSetFirst": {
+    "description": "web key: abc.sh.setFirst",
+    "x-draft": true
+  },
+  "abcShMembers": "Aksiyoona miseensotaa",
+  "@abcShMembers": {
+    "description": "web key: abc.sh.members",
+    "x-draft": true
+  },
+  "abcShMembersHint": "Waadaa ykn kaffaltii galmeessuuf miseensa tuqaa. Aksiyoonni akkuma kaffalamaniin kennamu.",
+  "@abcShMembersHint": {
+    "description": "web key: abc.sh.membersHint",
+    "x-draft": true
+  },
+  "abcShMemberLine": "Aksiyoona {held} qabame · {pledged} waadaa · kaffalame {paid} · hafe {owed}",
+  "@abcShMemberLine": {
+    "description": "web key: abc.sh.memberLine",
+    "placeholders": {
+      "held": {},
+      "pledged": {},
+      "paid": {},
+      "owed": {}
+    },
+    "x-draft": true
+  },
+  "abcShKindMinimum": "Waadaa xiqqaa",
+  "@abcShKindMinimum": {
+    "description": "web key: abc.sh.kind.minimum",
+    "x-draft": true
+  },
+  "abcShKindExtra": "Waadaa dabalataa",
+  "@abcShKindExtra": {
+    "description": "web key: abc.sh.kind.extra",
+    "x-draft": true
+  },
+  "abcShSharesN": "Aksiyoona {n}",
+  "@abcShSharesN": {
+    "description": "web key: abc.sh.sharesN",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcShDueOn": "hanga {date} kaffalaa",
+  "@abcShDueOn": {
+    "description": "web key: abc.sh.dueOn",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcShPaidOwed": "Kaffalame {paid} · ammallee hafe {owed}",
+  "@abcShPaidOwed": {
+    "description": "web key: abc.sh.paidOwed",
+    "placeholders": {
+      "paid": {},
+      "owed": {}
+    },
+    "x-draft": true
+  },
+  "abcShAmount": "Hamma (qarshii)",
+  "@abcShAmount": {
+    "description": "web key: abc.sh.amount",
+    "x-draft": true
+  },
+  "abcShMethod": "Karaa kaffaltii",
+  "@abcShMethod": {
+    "description": "web key: abc.sh.method",
+    "x-draft": true
+  },
+  "abcShReference": "Lakkoofsa wabii",
+  "@abcShReference": {
+    "description": "web key: abc.sh.reference",
+    "x-draft": true
+  },
+  "abcShRecordPayment": "Kaffaltii galmeessi",
+  "@abcShRecordPayment": {
+    "description": "web key: abc.sh.recordPayment",
+    "x-draft": true
+  },
+  "abcShPaid": "Kaffaltiin galmaa'eera; nageessi miseensaaf ergameera.",
+  "@abcShPaid": {
+    "description": "web key: abc.sh.paid",
+    "x-draft": true
+  },
+  "abcShMinimumShares": "Waadaa xiqqaa (aksiyoona)",
+  "@abcShMinimumShares": {
+    "description": "web key: abc.sh.minimumShares",
+    "x-draft": true
+  },
+  "abcShExtraShares": "Aksiyoona dabalataa",
+  "@abcShExtraShares": {
+    "description": "web key: abc.sh.extraShares",
+    "x-draft": true
+  },
+  "abcShAddPledge": "Waadaa galmeessi",
+  "@abcShAddPledge": {
+    "description": "web key: abc.sh.addPledge",
+    "x-draft": true
+  },
+  "abcShPledged": "Waadaan galmaa'eera.",
+  "@abcShPledged": {
+    "description": "web key: abc.sh.pledged",
+    "x-draft": true
+  },
+  "abcShMinimumHint": "Waadaa jalqabaa: yoo xiqqaate aksiyoona {n}; guutummaatti kaffalamuu qaba.",
+  "@abcShMinimumHint": {
+    "description": "web key: abc.sh.minimumHint",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcShExtraHint": "Aksiyoona dabalataa: amma yoo xiqqaate {pct}% kaffalaa, kan hafe waggoota {years} keessatti.",
+  "@abcShExtraHint": {
+    "description": "web key: abc.sh.extraHint",
+    "placeholders": {
+      "pct": {},
+      "years": {}
+    },
+    "x-draft": true
+  },
+  "abcShPrintCertificate": "Waraqaa ragaa aksiyoonaa maxxansi",
+  "@abcShPrintCertificate": {
+    "description": "web key: abc.sh.printCertificate",
+    "x-draft": true
+  },
+  "abcShCertificate": "Waraqaa ragaa aksiyoonaa",
+  "@abcShCertificate": {
+    "description": "web key: abc.sh.certificate",
+    "x-draft": true
+  },
+  "abcShCertFor": "Miseensa: {name} (lakk. miseensaa {no})",
+  "@abcShCertFor": {
+    "description": "web key: abc.sh.certFor",
+    "placeholders": {
+      "name": {},
+      "no": {}
+    },
+    "x-draft": true
+  },
+  "abcShCertHeld": "Aksiyoona qabame: {n}, gatii aksiyoona tokkoo: {value}",
+  "@abcShCertHeld": {
+    "description": "web key: abc.sh.certHeld",
+    "placeholders": {
+      "n": {},
+      "value": {}
+    },
+    "x-draft": true
+  },
+  "abcShCertNo": "Lakk. ragaa",
+  "@abcShCertNo": {
+    "description": "web key: abc.sh.certNo",
+    "x-draft": true
+  },
+  "abcShShares": "Aksiyoona",
+  "@abcShShares": {
+    "description": "web key: abc.sh.shares",
+    "x-draft": true
+  },
+  "abcShApprovals": "Hayyama boordii",
+  "@abcShApprovals": {
+    "description": "web key: abc.sh.approvals",
+    "x-draft": true
+  },
+  "abcShApprovalsHint": "Miseensi boordii biraa murteessa: namni gaafate gaaffii isaa mataa isaa mirkaneessuu hin danda'u.",
+  "@abcShApprovalsHint": {
+    "description": "web key: abc.sh.approvalsHint",
+    "x-draft": true
+  },
+  "abcShTransferLine": "Aksiyoona {shares} dabarsuu: {from} → {to}",
+  "@abcShTransferLine": {
+    "description": "web key: abc.sh.transferLine",
+    "placeholders": {
+      "shares": {},
+      "from": {},
+      "to": {}
+    },
+    "x-draft": true
+  },
+  "abcApprPending": "Eeggachaa",
+  "@abcApprPending": {
+    "description": "web key: abc.appr.pending",
+    "x-draft": true
+  },
+  "abcApprApproved": "Mirkanaa'e",
+  "@abcApprApproved": {
+    "description": "web key: abc.appr.approved",
+    "x-draft": true
+  },
+  "abcApprRejected": "Didame",
+  "@abcApprRejected": {
+    "description": "web key: abc.appr.rejected",
+    "x-draft": true
+  },
+  "abcApprApprove": "Mirkaneessi",
+  "@abcApprApprove": {
+    "description": "web key: abc.appr.approve",
+    "x-draft": true
+  },
+  "abcApprReject": "Didi",
+  "@abcApprReject": {
+    "description": "web key: abc.appr.reject",
+    "x-draft": true
+  },
+  "abcShTransfer": "Aksiyoona dabarsuu",
+  "@abcShTransfer": {
+    "description": "web key: abc.sh.transfer",
+    "x-draft": true
+  },
+  "abcShTransferHint": "Miseensota gidduutti (gurgurtaa, dhaala, ba'uu). Boordiin mirkaneessuu qaba.",
+  "@abcShTransferHint": {
+    "description": "web key: abc.sh.transferHint",
+    "x-draft": true
+  },
+  "abcShFrom": "Irraa",
+  "@abcShFrom": {
+    "description": "web key: abc.sh.from",
+    "x-draft": true
+  },
+  "abcShTo": "Gara",
+  "@abcShTo": {
+    "description": "web key: abc.sh.to",
+    "x-draft": true
+  },
+  "abcShReason": "Sababa",
+  "@abcShReason": {
+    "description": "web key: abc.sh.reason",
+    "x-draft": true
+  },
+  "abcShReasonHint": "gurgurtaa, dhaala, ba'uu…",
+  "@abcShReasonHint": {
+    "description": "web key: abc.sh.reasonHint",
+    "x-draft": true
+  },
+  "abcShAskApproval": "Boordii gaafadhu",
+  "@abcShAskApproval": {
+    "description": "web key: abc.sh.askApproval",
+    "x-draft": true
+  },
+  "abcShTransferSent": "Mirkaneessaaf boordiif ergameera.",
+  "@abcShTransferSent": {
+    "description": "web key: abc.sh.transferSent",
+    "x-draft": true
+  },
+  "abcShPayments": "Kaffaltii fi nagaheewwan",
+  "@abcShPayments": {
+    "description": "web key: abc.sh.payments",
+    "x-draft": true
+  },
+  "abcShReverse": "Haqi",
+  "@abcShReverse": {
+    "description": "web key: abc.sh.reverse",
+    "x-draft": true
+  },
+  "abcShReverseReason": "Sababa kaffaltii kana haquu (fkn. dabarsi hin milkoofne):",
+  "@abcShReverseReason": {
+    "description": "web key: abc.sh.reverseReason",
+    "x-draft": true
+  },
+  "abcShReminders": "Yaadachiisa kaffaltii ergi",
+  "@abcShReminders": {
+    "description": "web key: abc.sh.reminders",
+    "x-draft": true
+  },
+  "abcShRemindersSent": "Yaadachiisni {n} ergameera (waadaa guyyaa 30 keessatti ga'u ykn darban).",
+  "@abcShRemindersSent": {
+    "description": "web key: abc.sh.remindersSent",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcFlagOverdue": "Kaffaltiin turee",
+  "@abcFlagOverdue": {
+    "description": "web key: abc.flag.overdue",
+    "x-draft": true
+  },
+  "abcFlagDueSoon": "Dhiyootti ga'a",
+  "@abcFlagDueSoon": {
+    "description": "web key: abc.flag.due_soon",
+    "x-draft": true
+  },
+  "abcFlagMinimumUnpaid": "Xiqqaan guutummaatti hin kaffalamne",
+  "@abcFlagMinimumUnpaid": {
+    "description": "web key: abc.flag.minimum_unpaid",
+    "x-draft": true
+  },
+  "abcFlagNoMinimum": "Waadaan ammallee hin jiru",
+  "@abcFlagNoMinimum": {
+    "description": "web key: abc.flag.no_minimum",
+    "x-draft": true
+  },
+  "abcFlagOverCap": "Daangaa abbummaa ol",
+  "@abcFlagOverCap": {
+    "description": "web key: abc.flag.over_cap",
+    "x-draft": true
+  },
+  "abcPayCash": "Maallaqa callaa",
+  "@abcPayCash": {
+    "description": "web key: abc.pay.cash",
+    "x-draft": true
+  },
+  "abcPayBank": "Baankii",
+  "@abcPayBank": {
+    "description": "web key: abc.pay.bank",
+    "x-draft": true
+  },
+  "abcPayTelebirr": "telebirr",
+  "@abcPayTelebirr": {
+    "description": "web key: abc.pay.telebirr",
+    "x-draft": true
+  },
+  "abcPayMpesa": "M-Pesa",
+  "@abcPayMpesa": {
+    "description": "web key: abc.pay.mpesa",
+    "x-draft": true
+  },
+  "abcPayOther": "Kan biraa",
+  "@abcPayOther": {
+    "description": "web key: abc.pay.other",
+    "x-draft": true
+  },
+  "abcActionAbcSharePledge": "Aksiyoonni waadaa galame",
+  "@abcActionAbcSharePledge": {
+    "description": "web key: abc.action.abc.share.pledge",
+    "x-draft": true
+  },
+  "abcActionAbcSharePayment": "Kaffaltiin aksiyoonaa galmaa'e",
+  "@abcActionAbcSharePayment": {
+    "description": "web key: abc.action.abc.share.payment",
+    "x-draft": true
+  },
+  "abcActionAbcSharePaymentReverse": "Kaffaltiin aksiyoonaa haqame",
+  "@abcActionAbcSharePaymentReverse": {
+    "description": "web key: abc.action.abc.share.payment_reverse",
+    "x-draft": true
+  },
+  "abcActionAbcShareTransferRequest": "Dabarsi aksiyoonaa gaafatame",
+  "@abcActionAbcShareTransferRequest": {
+    "description": "web key: abc.action.abc.share.transfer_request",
+    "x-draft": true
+  },
+  "abcActionAbcApprovalDecide": "Murtii boordii",
+  "@abcActionAbcApprovalDecide": {
+    "description": "web key: abc.action.abc.approval.decide",
+    "x-draft": true
+  },
+  "abcActionAbcDocumentUpload": "Galmeen fe'ame",
+  "@abcActionAbcDocumentUpload": {
+    "description": "web key: abc.action.abc.document.upload",
+    "x-draft": true
+  },
+  "abcActionAbcFormationRecognition": "Beekamtiin galmaa'e",
+  "@abcActionAbcFormationRecognition": {
+    "description": "web key: abc.action.abc.formation.recognition",
+    "x-draft": true
+  },
+  "abcActionAbcAgreementSign": "Waliigalteen hundeeffamaa mallattaa'e",
+  "@abcActionAbcAgreementSign": {
+    "description": "web key: abc.action.abc.agreement.sign",
+    "x-draft": true
+  },
+  "abcActionAbcRegistration": "Galmeen galmaa'e",
+  "@abcActionAbcRegistration": {
+    "description": "web key: abc.action.abc.registration",
+    "x-draft": true
+  },
+  "abcActionAbcMemberEnrol": "Miseensi galmaa'e",
+  "@abcActionAbcMemberEnrol": {
+    "description": "web key: abc.action.abc.member.enrol",
+    "x-draft": true
+  },
+  "abcActionAbcMemberUpdate": "Bal'inni miseensaa jijjiirame",
+  "@abcActionAbcMemberUpdate": {
+    "description": "web key: abc.action.abc.member.update",
+    "x-draft": true
+  },
+  "abcActionAbcMemberIdView": "Lakkoofsi eenyummaa guutuun ilaalame",
+  "@abcActionAbcMemberIdView": {
+    "description": "web key: abc.action.abc.member.id_view",
+    "x-draft": true
+  },
+  "abcActionAbcMemberImport": "Miseensonni galfaman",
+  "@abcActionAbcMemberImport": {
+    "description": "web key: abc.action.abc.member.import",
+    "x-draft": true
+  },
+  "abcActionAbcMemberRemove": "Miseensi ba'e",
+  "@abcActionAbcMemberRemove": {
+    "description": "web key: abc.action.abc.member.remove",
+    "x-draft": true
+  },
+  "abcTabMeetings": "Walgahii fi sagalee",
+  "@abcTabMeetings": {
+    "description": "web key: abc.tab.meetings",
+    "x-draft": true
+  },
+  "abcRuleQuorumFraction": "Koorama (qooda ulfaatina sagalee / boordii argame)",
+  "@abcRuleQuorumFraction": {
+    "description": "web key: abc.rule.quorum_fraction",
+    "x-draft": true
+  },
+  "abcRuleMotionPassFraction": "Murteen kan darbu (qooda eeyyee + lakki ulfaatinaan) ol yoo ta'e",
+  "@abcRuleMotionPassFraction": {
+    "description": "web key: abc.rule.motion_pass_fraction",
+    "x-draft": true
+  },
+  "abcVoteWeights": "Ulfaatina sagalee",
+  "@abcVoteWeights": {
+    "description": "web key: abc.vote.weights",
+    "x-draft": true
+  },
+  "abcVoteFormula": "Ulfaatina = {land} × qooda lafaa + {prod} × qooda oomishaa (seerota ABC).",
+  "@abcVoteFormula": {
+    "description": "web key: abc.vote.formula",
+    "placeholders": {
+      "land": {},
+      "prod": {}
+    },
+    "x-draft": true
+  },
+  "abcVoteLandOnly": "Waqtii kanaaf oomishni hin galmoofne: ulfaatinni qooda lafaa qofa.",
+  "@abcVoteLandOnly": {
+    "description": "web key: abc.vote.landOnly",
+    "x-draft": true
+  },
+  "abcVoteEqual": "Lafni ykn oomishni ammallee hin galmoofne: miseensonni hundi ulfaatina walqixa qabu.",
+  "@abcVoteEqual": {
+    "description": "web key: abc.vote.equal",
+    "x-draft": true
+  },
+  "abcVoteSeason": "Waqtii",
+  "@abcVoteSeason": {
+    "description": "web key: abc.vote.season",
+    "x-draft": true
+  },
+  "abcVoteNewSeason": "Waqtii haaraa (oomisha galmeessuuf)",
+  "@abcVoteNewSeason": {
+    "description": "web key: abc.vote.newSeason",
+    "x-draft": true
+  },
+  "abcVoteLand": "Lafa",
+  "@abcVoteLand": {
+    "description": "web key: abc.vote.land",
+    "x-draft": true
+  },
+  "abcVoteProduction": "Oomisha",
+  "@abcVoteProduction": {
+    "description": "web key: abc.vote.production",
+    "x-draft": true
+  },
+  "abcVoteWeight": "Ulfaatina",
+  "@abcVoteWeight": {
+    "description": "web key: abc.vote.weight",
+    "x-draft": true
+  },
+  "abcVoteWeightsHint": "Lafa: lafa miseensotaa galmaa'e. Oomisha: kan ABCn waqtichaaf galmeesse (hanga galii oomishaatti tilmaama). Walgahiin ulfaatina yeroo karoorfame dhaabbate fayyadama.",
+  "@abcVoteWeightsHint": {
+    "description": "web key: abc.vote.weightsHint",
+    "x-draft": true
+  },
+  "abcMeetList": "Walgahiiwwan",
+  "@abcMeetList": {
+    "description": "web key: abc.meet.list",
+    "x-draft": true
+  },
+  "abcMeetNone": "Walgahiin ammallee hin jiru.",
+  "@abcMeetNone": {
+    "description": "web key: abc.meet.none",
+    "x-draft": true
+  },
+  "abcMeetNew": "Walgahii karoorsi",
+  "@abcMeetNew": {
+    "description": "web key: abc.meet.new",
+    "x-draft": true
+  },
+  "abcMeetNewHint": "Walgahiin waliigalaa ulfaatina sagalee amma dhaabsa. Achiis beeksisa ergaa.",
+  "@abcMeetNewHint": {
+    "description": "web key: abc.meet.newHint",
+    "x-draft": true
+  },
+  "abcMeetKind": "Gosa",
+  "@abcMeetKind": {
+    "description": "web key: abc.meet.kind",
+    "x-draft": true
+  },
+  "abcMeetKindGeneralAssembly": "Walgahii waliigalaa",
+  "@abcMeetKindGeneralAssembly": {
+    "description": "web key: abc.meet.kind.general_assembly",
+    "x-draft": true
+  },
+  "abcMeetKindBoard": "Walgahii boordii",
+  "@abcMeetKindBoard": {
+    "description": "web key: abc.meet.kind.board",
+    "x-draft": true
+  },
+  "abcMeetWhen": "Guyyaa fi sa'aatii",
+  "@abcMeetWhen": {
+    "description": "web key: abc.meet.when",
+    "x-draft": true
+  },
+  "abcMeetPlace": "Bakka",
+  "@abcMeetPlace": {
+    "description": "web key: abc.meet.place",
+    "x-draft": true
+  },
+  "abcMeetAgenda": "Ajandaa",
+  "@abcMeetAgenda": {
+    "description": "web key: abc.meet.agenda",
+    "x-draft": true
+  },
+  "abcMeetAgendaHint": "Sarara tokkotti dhimma tokko",
+  "@abcMeetAgendaHint": {
+    "description": "web key: abc.meet.agendaHint",
+    "x-draft": true
+  },
+  "abcMeetCreate": "Karoorsi",
+  "@abcMeetCreate": {
+    "description": "web key: abc.meet.create",
+    "x-draft": true
+  },
+  "abcMeetStatusScheduled": "Karoorfame",
+  "@abcMeetStatusScheduled": {
+    "description": "web key: abc.meet.status.scheduled",
+    "x-draft": true
+  },
+  "abcMeetStatusHeld": "Gaggeeffame",
+  "@abcMeetStatusHeld": {
+    "description": "web key: abc.meet.status.held",
+    "x-draft": true
+  },
+  "abcMeetStatusCancelled": "Haqame",
+  "@abcMeetStatusCancelled": {
+    "description": "web key: abc.meet.status.cancelled",
+    "x-draft": true
+  },
+  "abcMeetSendNotice": "Filattootaaf beeksisa ergi",
+  "@abcMeetSendNotice": {
+    "description": "web key: abc.meet.sendNotice",
+    "x-draft": true
+  },
+  "abcMeetNoticeAgain": "Beeksisa irra deebi'ii ergi",
+  "@abcMeetNoticeAgain": {
+    "description": "web key: abc.meet.noticeAgain",
+    "x-draft": true
+  },
+  "abcMeetNoticeSent": "Beeksisni appii fi Telegram irratti ergameera.",
+  "@abcMeetNoticeSent": {
+    "description": "web key: abc.meet.noticeSent",
+    "x-draft": true
+  },
+  "abcMeetCancel": "Walgahii haqi",
+  "@abcMeetCancel": {
+    "description": "web key: abc.meet.cancel",
+    "x-draft": true
+  },
+  "abcMeetAttendance": "Argama",
+  "@abcMeetAttendance": {
+    "description": "web key: abc.meet.attendance",
+    "x-draft": true
+  },
+  "abcMeetQuorumBadge": "Koorama {pct} (barbaachisu {need})",
+  "@abcMeetQuorumBadge": {
+    "description": "web key: abc.meet.quorumBadge",
+    "placeholders": {
+      "pct": {},
+      "need": {}
+    },
+    "x-draft": true
+  },
+  "abcMeetQuorumLine": "Kan argame: filattoota {eligible} keessaa {present} ({pct} ulfaatina sagalee).",
+  "@abcMeetQuorumLine": {
+    "description": "web key: abc.meet.quorumLine",
+    "placeholders": {
+      "eligible": {},
+      "present": {},
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "abcMeetSaveAttendance": "Argama olkaa'i",
+  "@abcMeetSaveAttendance": {
+    "description": "web key: abc.meet.saveAttendance",
+    "x-draft": true
+  },
+  "abcMeetMotions": "Yaada murtee",
+  "@abcMeetMotions": {
+    "description": "web key: abc.meet.motions",
+    "x-draft": true
+  },
+  "abcMeetNoMotions": "Yaadni murtee ammallee hin jiru.",
+  "@abcMeetNoMotions": {
+    "description": "web key: abc.meet.noMotions",
+    "x-draft": true
+  },
+  "abcMeetNewMotion": "Yaada murtee haaraa",
+  "@abcMeetNewMotion": {
+    "description": "web key: abc.meet.newMotion",
+    "x-draft": true
+  },
+  "abcMeetAddMotion": "Dabali",
+  "@abcMeetAddMotion": {
+    "description": "web key: abc.meet.addMotion",
+    "x-draft": true
+  },
+  "abcMeetMinutes": "Galmee walgahii",
+  "@abcMeetMinutes": {
+    "description": "web key: abc.meet.minutes",
+    "x-draft": true
+  },
+  "abcMeetSaveMinutes": "Wixinee olkaa'i",
+  "@abcMeetSaveMinutes": {
+    "description": "web key: abc.meet.saveMinutes",
+    "x-draft": true
+  },
+  "abcMeetApproveMinutes": "Galmee walgahii mirkaneessi",
+  "@abcMeetApproveMinutes": {
+    "description": "web key: abc.meet.approveMinutes",
+    "x-draft": true
+  },
+  "abcMeetApprovedBy": "{name}n {date} mirkanaa'e.",
+  "@abcMeetApprovedBy": {
+    "description": "web key: abc.meet.approvedBy",
+    "placeholders": {
+      "name": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcMeetPrint": "Galmee walgahii maxxansi",
+  "@abcMeetPrint": {
+    "description": "web key: abc.meet.print",
+    "x-draft": true
+  },
+  "abcMotionYes": "Eeyyee",
+  "@abcMotionYes": {
+    "description": "web key: abc.motion.yes",
+    "x-draft": true
+  },
+  "abcMotionNo": "Lakki",
+  "@abcMotionNo": {
+    "description": "web key: abc.motion.no",
+    "x-draft": true
+  },
+  "abcMotionAbstain": "Of qusachuu",
+  "@abcMotionAbstain": {
+    "description": "web key: abc.motion.abstain",
+    "x-draft": true
+  },
+  "abcMotionTally": "Eeyyee {yes} ({ny}) · Lakki {no} ({nn}) · Of qusachuu {abstain} ({na})",
+  "@abcMotionTally": {
+    "description": "web key: abc.motion.tally",
+    "placeholders": {
+      "yes": {},
+      "ny": {},
+      "no": {},
+      "nn": {},
+      "abstain": {},
+      "na": {}
+    },
+    "x-draft": true
+  },
+  "abcMotionSaveVotes": "Sagalee olkaa'i",
+  "@abcMotionSaveVotes": {
+    "description": "web key: abc.motion.saveVotes",
+    "x-draft": true
+  },
+  "abcMotionClose": "Sagalee kennuu cufi",
+  "@abcMotionClose": {
+    "description": "web key: abc.motion.close",
+    "x-draft": true
+  },
+  "abcMotionResultOpen": "Banaa",
+  "@abcMotionResultOpen": {
+    "description": "web key: abc.motion.result.open",
+    "x-draft": true
+  },
+  "abcMotionResultPassed": "Darbe",
+  "@abcMotionResultPassed": {
+    "description": "web key: abc.motion.result.passed",
+    "x-draft": true
+  },
+  "abcMotionResultFailed": "Hin darbine",
+  "@abcMotionResultFailed": {
+    "description": "web key: abc.motion.result.failed",
+    "x-draft": true
+  },
+  "abcMotionResultNoQuorum": "Kooramni hin guutamne",
+  "@abcMotionResultNoQuorum": {
+    "description": "web key: abc.motion.result.no_quorum",
+    "x-draft": true
+  },
+  "abcActionAbcProductionRecord": "Oomishni galmaa'e",
+  "@abcActionAbcProductionRecord": {
+    "description": "web key: abc.action.abc.production.record",
+    "x-draft": true
+  },
+  "abcActionAbcVotingSnapshot": "Ulfaatinni sagalee dhaabbate",
+  "@abcActionAbcVotingSnapshot": {
+    "description": "web key: abc.action.abc.voting.snapshot",
+    "x-draft": true
+  },
+  "abcActionAbcMeetingCreate": "Walgahiin karoorfame",
+  "@abcActionAbcMeetingCreate": {
+    "description": "web key: abc.action.abc.meeting.create",
+    "x-draft": true
+  },
+  "abcActionAbcMeetingNotice": "Beeksisni walgahii ergame",
+  "@abcActionAbcMeetingNotice": {
+    "description": "web key: abc.action.abc.meeting.notice",
+    "x-draft": true
+  },
+  "abcActionAbcMeetingAttendance": "Argamni galmaa'e",
+  "@abcActionAbcMeetingAttendance": {
+    "description": "web key: abc.action.abc.meeting.attendance",
+    "x-draft": true
+  },
+  "abcActionAbcMeetingCancel": "Walgahiin haqame",
+  "@abcActionAbcMeetingCancel": {
+    "description": "web key: abc.action.abc.meeting.cancel",
+    "x-draft": true
+  },
+  "abcActionAbcMotionCreate": "Yaadni murtee dabalame",
+  "@abcActionAbcMotionCreate": {
+    "description": "web key: abc.action.abc.motion.create",
+    "x-draft": true
+  },
+  "abcActionAbcMotionVotes": "Sagaleen galfame",
+  "@abcActionAbcMotionVotes": {
+    "description": "web key: abc.action.abc.motion.votes",
+    "x-draft": true
+  },
+  "abcActionAbcMotionClose": "Sagalee kennuun cufame",
+  "@abcActionAbcMotionClose": {
+    "description": "web key: abc.action.abc.motion.close",
+    "x-draft": true
+  },
+  "abcActionAbcMinutesDraft": "Galmeen walgahii wixinfame",
+  "@abcActionAbcMinutesDraft": {
+    "description": "web key: abc.action.abc.minutes.draft",
+    "x-draft": true
+  },
+  "abcActionAbcMinutesApprove": "Galmeen walgahii mirkanaa'e",
+  "@abcActionAbcMinutesApprove": {
+    "description": "web key: abc.action.abc.minutes.approve",
+    "x-draft": true
+  },
+  "abcActionAbcVoteConfirm": "Miseensi sagalee isaa mirkaneesse",
+  "@abcActionAbcVoteConfirm": {
+    "description": "web key: abc.action.abc.vote.confirm",
+    "x-draft": true
+  },
+  "abcInvVoteRecorded": "\"{meeting}\" irratti sagaleen keessan \"{motion}\" irratti akkasitti galmaa'e: {choice}. Sirrii dhaa?",
+  "@abcInvVoteRecorded": {
+    "description": "web key: abcInv.voteRecorded",
+    "placeholders": {
+      "meeting": {},
+      "motion": {},
+      "choice": {}
+    },
+    "x-draft": true
+  },
+  "abcInvVoteCorrect": "Eeyyee, sirrii dha",
+  "@abcInvVoteCorrect": {
+    "description": "web key: abcInv.voteCorrect",
+    "x-draft": true
+  },
+  "abcInvVoteWrong": "Lakki, dogoggora",
+  "@abcInvVoteWrong": {
+    "description": "web key: abcInv.voteWrong",
+    "x-draft": true
+  },
+  "abcTabFinance": "Faayinaansii",
+  "@abcTabFinance": {
+    "description": "web key: abc.tab.finance",
+    "x-draft": true
+  },
+  "abcFinNote": "Galmee herregaa salphaa ABCf. Gorsa gibiraa miti: herregaaf baasaa.",
+  "@abcFinNote": {
+    "description": "web key: abc.fin.note",
+    "x-draft": true
+  },
+  "abcFinExport": "Gara Excel baasi",
+  "@abcFinExport": {
+    "description": "web key: abc.fin.export",
+    "x-draft": true
+  },
+  "abcFinShareCapital": "Kaappitaala aksiyoonaa argame",
+  "@abcFinShareCapital": {
+    "description": "web key: abc.fin.shareCapital",
+    "x-draft": true
+  },
+  "abcFinIncome": "Galii",
+  "@abcFinIncome": {
+    "description": "web key: abc.fin.income",
+    "x-draft": true
+  },
+  "abcFinExpenses": "Baasii",
+  "@abcFinExpenses": {
+    "description": "web key: abc.fin.expenses",
+    "x-draft": true
+  },
+  "abcFinAssets": "Qabeenya bitame",
+  "@abcFinAssets": {
+    "description": "web key: abc.fin.assets",
+    "x-draft": true
+  },
+  "abcFinLoans": "Liqii hin kaffalamne",
+  "@abcFinLoans": {
+    "description": "web key: abc.fin.loans",
+    "x-draft": true
+  },
+  "abcFinCash": "Maallaqa (tilmaama)",
+  "@abcFinCash": {
+    "description": "web key: abc.fin.cash",
+    "x-draft": true
+  },
+  "abcFinMembersOwe": "Miseensonni ABCf liqii qaban",
+  "@abcFinMembersOwe": {
+    "description": "web key: abc.fin.membersOwe",
+    "x-draft": true
+  },
+  "abcFinPending": "Boordii eeggachaa",
+  "@abcFinPending": {
+    "description": "web key: abc.fin.pending",
+    "x-draft": true
+  },
+  "abcFinLedger": "Galmee herregaa",
+  "@abcFinLedger": {
+    "description": "web key: abc.fin.ledger",
+    "x-draft": true
+  },
+  "abcFinLimitHint": "Baasiiwwanii fi bittaan {limit} ol murtee boordii eeggatu.",
+  "@abcFinLimitHint": {
+    "description": "web key: abc.fin.limitHint",
+    "placeholders": {
+      "limit": {}
+    },
+    "x-draft": true
+  },
+  "abcFinNoLimit": "Daangaan hayyama boordii hin kaa'amne (Dhaabbata).",
+  "@abcFinNoLimit": {
+    "description": "web key: abc.fin.noLimit",
+    "x-draft": true
+  },
+  "abcFinKind": "Gosa",
+  "@abcFinKind": {
+    "description": "web key: abc.fin.kind",
+    "x-draft": true
+  },
+  "abcFinKindIncome": "Galii",
+  "@abcFinKindIncome": {
+    "description": "web key: abc.fin.kind.income",
+    "x-draft": true
+  },
+  "abcFinKindExpense": "Baasii",
+  "@abcFinKindExpense": {
+    "description": "web key: abc.fin.kind.expense",
+    "x-draft": true
+  },
+  "abcFinKindAsset": "Bittaa qabeenyaa",
+  "@abcFinKindAsset": {
+    "description": "web key: abc.fin.kind.asset",
+    "x-draft": true
+  },
+  "abcFinKindLiability": "Liqii",
+  "@abcFinKindLiability": {
+    "description": "web key: abc.fin.kind.liability",
+    "x-draft": true
+  },
+  "abcFinCategory": "Ramaddii",
+  "@abcFinCategory": {
+    "description": "web key: abc.fin.category",
+    "x-draft": true
+  },
+  "abcFinCategoryHint": "boba'aa, mindaa, gurgurtaa…",
+  "@abcFinCategoryHint": {
+    "description": "web key: abc.fin.categoryHint",
+    "x-draft": true
+  },
+  "abcFinDirection": "Liqii",
+  "@abcFinDirection": {
+    "description": "web key: abc.fin.direction",
+    "x-draft": true
+  },
+  "abcFinLoanIn": "Argame",
+  "@abcFinLoanIn": {
+    "description": "web key: abc.fin.loanIn",
+    "x-draft": true
+  },
+  "abcFinLoanOut": "Deebi'e",
+  "@abcFinLoanOut": {
+    "description": "web key: abc.fin.loanOut",
+    "x-draft": true
+  },
+  "abcFinCounterparty": "Kan kaffalameef / irraa argame",
+  "@abcFinCounterparty": {
+    "description": "web key: abc.fin.counterparty",
+    "x-draft": true
+  },
+  "abcFinDescription": "Ibsa",
+  "@abcFinDescription": {
+    "description": "web key: abc.fin.description",
+    "x-draft": true
+  },
+  "abcFinAdd": "Galmeessi",
+  "@abcFinAdd": {
+    "description": "web key: abc.fin.add",
+    "x-draft": true
+  },
+  "abcFinPosted": "Galmaa'eera.",
+  "@abcFinPosted": {
+    "description": "web key: abc.fin.posted",
+    "x-draft": true
+  },
+  "abcFinSentToBoard": "Daangaa hayyamaa ol: boordiif ergameera. Yeroo mirkanaa'u lakkaa'ama.",
+  "@abcFinSentToBoard": {
+    "description": "web key: abc.fin.sentToBoard",
+    "x-draft": true
+  },
+  "abcFinStatusPending": "Boordii eeggachaa",
+  "@abcFinStatusPending": {
+    "description": "web key: abc.fin.status.pending",
+    "x-draft": true
+  },
+  "abcFinStatusRejected": "Boordiin didame",
+  "@abcFinStatusRejected": {
+    "description": "web key: abc.fin.status.rejected",
+    "x-draft": true
+  },
+  "abcFinStatusVoid": "Haqame",
+  "@abcFinStatusVoid": {
+    "description": "web key: abc.fin.status.void",
+    "x-draft": true
+  },
+  "abcFinStatusPosted": "Galmaa'e",
+  "@abcFinStatusPosted": {
+    "description": "web key: abc.fin.status.posted",
+    "x-draft": true
+  },
+  "abcFinVoid": "Haqi",
+  "@abcFinVoid": {
+    "description": "web key: abc.fin.void",
+    "x-draft": true
+  },
+  "abcFinVoidReason": "Kun maaliif haqama? (seenaa keessatti olkaa'ama)",
+  "@abcFinVoidReason": {
+    "description": "web key: abc.fin.voidReason",
+    "x-draft": true
+  },
+  "abcFinNoEntries": "Galmeen ammallee hin jiru.",
+  "@abcFinNoEntries": {
+    "description": "web key: abc.fin.noEntries",
+    "x-draft": true
+  },
+  "abcFinAccounts": "Herrega miseensotaa",
+  "@abcFinAccounts": {
+    "description": "web key: abc.fin.accounts",
+    "x-draft": true
+  },
+  "abcFinAccountsHint": "Kan tokkoon tokkoon miseensaa ABCf qabu (liqii galtee, tajaajila) kan deebise hir'isee.",
+  "@abcFinAccountsHint": {
+    "description": "web key: abc.fin.accountsHint",
+    "x-draft": true
+  },
+  "abcFinAccountLine": "Liqii {credit} · tajaajila {services} · deebi'e {repaid}",
+  "@abcFinAccountLine": {
+    "description": "web key: abc.fin.accountLine",
+    "placeholders": {
+      "credit": {},
+      "services": {},
+      "repaid": {}
+    },
+    "x-draft": true
+  },
+  "abcFinNoTxns": "Daldalli ammallee hin jiru.",
+  "@abcFinNoTxns": {
+    "description": "web key: abc.fin.noTxns",
+    "x-draft": true
+  },
+  "abcFinReceiptSent": "Deebiin galmaa'eera; nageessi miseensaaf ergameera.",
+  "@abcFinReceiptSent": {
+    "description": "web key: abc.fin.receiptSent",
+    "x-draft": true
+  },
+  "abcFinPrintStatement": "Ibsa maxxansi",
+  "@abcFinPrintStatement": {
+    "description": "web key: abc.fin.printStatement",
+    "x-draft": true
+  },
+  "abcFinStatement": "Ibsa herrega miseensaa",
+  "@abcFinStatement": {
+    "description": "web key: abc.fin.statement",
+    "x-draft": true
+  },
+  "abcFinStatementLine": "Liqii ABCf hafe: {balance}. Aksiyoona qabame: {shares}.",
+  "@abcFinStatementLine": {
+    "description": "web key: abc.fin.statementLine",
+    "placeholders": {
+      "balance": {},
+      "shares": {}
+    },
+    "x-draft": true
+  },
+  "abcFinWhat": "Maal",
+  "@abcFinWhat": {
+    "description": "web key: abc.fin.what",
+    "x-draft": true
+  },
+  "abcFinEffect": "Jijjiirama",
+  "@abcFinEffect": {
+    "description": "web key: abc.fin.effect",
+    "x-draft": true
+  },
+  "abcFinBalance": "Hafe",
+  "@abcFinBalance": {
+    "description": "web key: abc.fin.balance",
+    "x-draft": true
+  },
+  "abcTxnInputCredit": "Galtee liqiidhaan",
+  "@abcTxnInputCredit": {
+    "description": "web key: abc.txn.input_credit",
+    "x-draft": true
+  },
+  "abcTxnServiceCharge": "Kaffaltii tajaajilaa",
+  "@abcTxnServiceCharge": {
+    "description": "web key: abc.txn.service_charge",
+    "x-draft": true
+  },
+  "abcTxnRepayment": "Deebii",
+  "@abcTxnRepayment": {
+    "description": "web key: abc.txn.repayment",
+    "x-draft": true
+  },
+  "abcTxnProduceDeduction": "Kaffaltii oomishaa irraa hir'ifame",
+  "@abcTxnProduceDeduction": {
+    "description": "web key: abc.txn.produce_deduction",
+    "x-draft": true
+  },
+  "abcTxnAdjustment": "Sirreeffama",
+  "@abcTxnAdjustment": {
+    "description": "web key: abc.txn.adjustment",
+    "x-draft": true
+  },
+  "abcActionAbcLedgerAdd": "Galmeen herregaa galmaa'e",
+  "@abcActionAbcLedgerAdd": {
+    "description": "web key: abc.action.abc.ledger.add",
+    "x-draft": true
+  },
+  "abcActionAbcLedgerVoid": "Galmeen herregaa haqame",
+  "@abcActionAbcLedgerVoid": {
+    "description": "web key: abc.action.abc.ledger.void",
+    "x-draft": true
+  },
+  "abcActionAbcMemberAccountAdd": "Galmee herrega miseensaa",
+  "@abcActionAbcMemberAccountAdd": {
+    "description": "web key: abc.action.abc.member_account.add",
+    "x-draft": true
+  },
+  "abcActionAbcMemberAccountVoid": "Galmeen herrega miseensaa haqame",
+  "@abcActionAbcMemberAccountVoid": {
+    "description": "web key: abc.action.abc.member_account.void",
+    "x-draft": true
+  },
+  "abcTabInputs": "Galtee fi kuusaa",
+  "@abcTabInputs": {
+    "description": "web key: abc.tab.inputs",
+    "x-draft": true
+  },
+  "abcInpNewPlan": "Fedhii galtee karoorsi",
+  "@abcInpNewPlan": {
+    "description": "web key: abc.inp.newPlan",
+    "x-draft": true
+  },
+  "abcInpNewPlanHint": "Hammi miseensa tokkoo = hammam hektaaraan caqafame × lafa midhaan sanaa. Hammi caqafame yoo hin jiraanne hammi hin kennamu.",
+  "@abcInpNewPlanHint": {
+    "description": "web key: abc.inp.newPlanHint",
+    "x-draft": true
+  },
+  "abcInpProduct": "Oomisha (galmaa'e)",
+  "@abcInpProduct": {
+    "description": "web key: abc.inp.product",
+    "x-draft": true
+  },
+  "abcInpNoRate": "hammi caqafame hin jiru",
+  "@abcInpNoRate": {
+    "description": "web key: abc.inp.noRate",
+    "x-draft": true
+  },
+  "abcInpNoProducts": "Midhaan kanaaf oomishni galmaa'e hammam qabu ammallee hin jiru.",
+  "@abcInpNoProducts": {
+    "description": "web key: abc.inp.noProducts",
+    "x-draft": true
+  },
+  "abcInpCreatePlan": "Karoora uumi",
+  "@abcInpCreatePlan": {
+    "description": "web key: abc.inp.createPlan",
+    "x-draft": true
+  },
+  "abcInpPlanCreated": "Karoorri uumameera: miseensonni ajaja isaanii appii keessatti mirkaneessuu danda'u.",
+  "@abcInpPlanCreated": {
+    "description": "web key: abc.inp.planCreated",
+    "x-draft": true
+  },
+  "abcInpPlans": "Karoora fedhii",
+  "@abcInpPlans": {
+    "description": "web key: abc.inp.plans",
+    "x-draft": true
+  },
+  "abcInpPlansHint": "Ajaja miseensotaa ilaaluu fi dhiyeessaa irraa bituuf karoora tuqaa.",
+  "@abcInpPlansHint": {
+    "description": "web key: abc.inp.plansHint",
+    "x-draft": true
+  },
+  "abcInpNoPlans": "Karoorri ammallee hin jiru.",
+  "@abcInpNoPlans": {
+    "description": "web key: abc.inp.noPlans",
+    "x-draft": true
+  },
+  "abcInpRateLine": "Hektaaraan {rate} · {source}",
+  "@abcInpRateLine": {
+    "description": "web key: abc.inp.rateLine",
+    "placeholders": {
+      "rate": {},
+      "source": {}
+    },
+    "x-draft": true
+  },
+  "abcInpNoRateLine": "Hammi caqafame hin jiru: hammi hin herregamu. Hojjetaa misoomaa gaafadhaa.",
+  "@abcInpNoRateLine": {
+    "description": "web key: abc.inp.noRateLine",
+    "x-draft": true
+  },
+  "abcInpTotals": "Miseensota {members} · hektaara {ha} · yaadame {suggested} · mirkanaa'e {confirmed} ({n})",
+  "@abcInpTotals": {
+    "description": "web key: abc.inp.totals",
+    "placeholders": {
+      "members": {},
+      "ha": {},
+      "suggested": {},
+      "confirmed": {},
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcInpSuggested": "Yaadame",
+  "@abcInpSuggested": {
+    "description": "web key: abc.inp.suggested",
+    "x-draft": true
+  },
+  "abcInpConfirmed": "Mirkanaa'e",
+  "@abcInpConfirmed": {
+    "description": "web key: abc.inp.confirmed",
+    "x-draft": true
+  },
+  "abcInpStatusSuggested": "Miseensa eeggachaa",
+  "@abcInpStatusSuggested": {
+    "description": "web key: abc.inp.status.suggested",
+    "x-draft": true
+  },
+  "abcInpStatusConfirmed": "Mirkanaa'e",
+  "@abcInpStatusConfirmed": {
+    "description": "web key: abc.inp.status.confirmed",
+    "x-draft": true
+  },
+  "abcInpStatusDeclined": "Hin barbaachisu",
+  "@abcInpStatusDeclined": {
+    "description": "web key: abc.inp.status.declined",
+    "x-draft": true
+  },
+  "abcInpStatusDelivered": "Ga'eera",
+  "@abcInpStatusDelivered": {
+    "description": "web key: abc.inp.status.delivered",
+    "x-draft": true
+  },
+  "abcInpByMember": "appii keessatti",
+  "@abcInpByMember": {
+    "description": "web key: abc.inp.by.member",
+    "x-draft": true
+  },
+  "abcInpByStaff": "hojjetaan",
+  "@abcInpByStaff": {
+    "description": "web key: abc.inp.by.staff",
+    "x-draft": true
+  },
+  "abcInpConfirmForMember": "Miseensi qaamaan walii gale",
+  "@abcInpConfirmForMember": {
+    "description": "web key: abc.inp.confirmForMember",
+    "x-draft": true
+  },
+  "abcInpBuy": "Dhiyeessaa irraa bitadhu",
+  "@abcInpBuy": {
+    "description": "web key: abc.inp.buy",
+    "x-draft": true
+  },
+  "abcInpQty": "Hamma",
+  "@abcInpQty": {
+    "description": "web key: abc.inp.qty",
+    "x-draft": true
+  },
+  "abcInpUnitPrice": "Gatii tokkoo (qarshii)",
+  "@abcInpUnitPrice": {
+    "description": "web key: abc.inp.unitPrice",
+    "x-draft": true
+  },
+  "abcInpCreatePO": "Ajaja bittaa uumi",
+  "@abcInpCreatePO": {
+    "description": "web key: abc.inp.createPO",
+    "x-draft": true
+  },
+  "abcInpPoCreated": "Ajajni bittaa uumameera (daangaa ol yoo ta'e boordii eeggata).",
+  "@abcInpPoCreated": {
+    "description": "web key: abc.inp.poCreated",
+    "x-draft": true
+  },
+  "abcInpNeutral": "Suuqiiwwan kan dhiyoo irraa jalqabee tarreeffamu; mallattoo fi gatiin ni mul'atu malee tartiiba hin jijjiiran.",
+  "@abcInpNeutral": {
+    "description": "web key: abc.inp.neutral",
+    "x-draft": true
+  },
+  "abcInpPos": "Ajaja bittaa",
+  "@abcInpPos": {
+    "description": "web key: abc.inp.pos",
+    "x-draft": true
+  },
+  "abcInpPoPending": "Boordii eeggachaa",
+  "@abcInpPoPending": {
+    "description": "web key: abc.inp.po.pending",
+    "x-draft": true
+  },
+  "abcInpPoApproved": "Mirkanaa'e",
+  "@abcInpPoApproved": {
+    "description": "web key: abc.inp.po.approved",
+    "x-draft": true
+  },
+  "abcInpPoRejected": "Didame",
+  "@abcInpPoRejected": {
+    "description": "web key: abc.inp.po.rejected",
+    "x-draft": true
+  },
+  "abcInpPoReceived": "Fudhatame",
+  "@abcInpPoReceived": {
+    "description": "web key: abc.inp.po.received",
+    "x-draft": true
+  },
+  "abcInpPoCancelled": "Haqame",
+  "@abcInpPoCancelled": {
+    "description": "web key: abc.inp.po.cancelled",
+    "x-draft": true
+  },
+  "abcInpReceive": "Fudhu",
+  "@abcInpReceive": {
+    "description": "web key: abc.inp.receive",
+    "x-draft": true
+  },
+  "abcInpReceived": "Fudhatameera: koodiin qorannoo oomishaa darbeera.",
+  "@abcInpReceived": {
+    "description": "web key: abc.inp.received",
+    "x-draft": true
+  },
+  "abcInpQuarantined": "Fudhatame garuu dhorkame: {reason}. Miseensotaaf kennamuu hin danda'u.",
+  "@abcInpQuarantined": {
+    "description": "web key: abc.inp.quarantined",
+    "placeholders": {
+      "reason": {}
+    },
+    "x-draft": true
+  },
+  "abcInpReceiveHint": "Koodii qodaa tokkoon tokkoon irratti jiru barreessaa ykn iskaanii godhaa: kan qorannoo darbe qofatu kennama.",
+  "@abcInpReceiveHint": {
+    "description": "web key: abc.inp.receiveHint",
+    "x-draft": true
+  },
+  "abcInpReasonOk": "darbe",
+  "@abcInpReasonOk": {
+    "description": "web key: abc.inp.reason.ok",
+    "x-draft": true
+  },
+  "abcInpReasonNoCode": "koodiin hin kennamne: dursa qodaa mirkaneessaa",
+  "@abcInpReasonNoCode": {
+    "description": "web key: abc.inp.reason.no_code",
+    "x-draft": true
+  },
+  "abcInpReasonDuplicateInAbc": "koodiin kun duraan ABCn fudhatameera (garagalcha ta'uu danda'a)",
+  "@abcInpReasonDuplicateInAbc": {
+    "description": "web key: abc.inp.reason.duplicate_in_abc",
+    "x-draft": true
+  },
+  "abcInpReasonUnknownCode": "koodii hin beekamne",
+  "@abcInpReasonUnknownCode": {
+    "description": "web key: abc.inp.reason.unknown_code",
+    "x-draft": true
+  },
+  "abcInpReasonPossibleCopy": "garagalcha ta'uu danda'a (yeroo baay'ee mul'ate)",
+  "@abcInpReasonPossibleCopy": {
+    "description": "web key: abc.inp.reason.possible_copy",
+    "x-draft": true
+  },
+  "abcInpReasonRecalled": "baachiin deebi'e",
+  "@abcInpReasonRecalled": {
+    "description": "web key: abc.inp.reason.recalled",
+    "x-draft": true
+  },
+  "abcInpReasonExpired": "yeroon darbe",
+  "@abcInpReasonExpired": {
+    "description": "web key: abc.inp.reason.expired",
+    "x-draft": true
+  },
+  "abcInpReasonNotRegistered": "oomishni hin galmoofne",
+  "@abcInpReasonNotRegistered": {
+    "description": "web key: abc.inp.reason.not_registered",
+    "x-draft": true
+  },
+  "abcInpReasonSupplierSuspended": "dhiyeessaan dhorkame",
+  "@abcInpReasonSupplierSuspended": {
+    "description": "web key: abc.inp.reason.supplier_suspended",
+    "x-draft": true
+  },
+  "abcInpReasonOtherProduct": "koodiin kun kan oomisha biraa ti",
+  "@abcInpReasonOtherProduct": {
+    "description": "web key: abc.inp.reason.other_product",
+    "x-draft": true
+  },
+  "abcInpStock": "Kuusaa",
+  "@abcInpStock": {
+    "description": "web key: abc.inp.stock",
+    "x-draft": true
+  },
+  "abcInpNoStock": "Kuusaan ammallee hin jiru.",
+  "@abcInpNoStock": {
+    "description": "web key: abc.inp.noStock",
+    "x-draft": true
+  },
+  "abcInpLotAvailable": "Ni argama",
+  "@abcInpLotAvailable": {
+    "description": "web key: abc.inp.lot.available",
+    "x-draft": true
+  },
+  "abcInpLotQuarantined": "Dhorkame",
+  "@abcInpLotQuarantined": {
+    "description": "web key: abc.inp.lot.quarantined",
+    "x-draft": true
+  },
+  "abcInpLotExpired": "Yeroon darbe",
+  "@abcInpLotExpired": {
+    "description": "web key: abc.inp.lot.expired",
+    "x-draft": true
+  },
+  "abcInpLotExpiresSoon": "Dhiyootti yeroon darba",
+  "@abcInpLotExpiresSoon": {
+    "description": "web key: abc.inp.lot.expiresSoon",
+    "x-draft": true
+  },
+  "abcInpLotEmpty": "Xumurame",
+  "@abcInpLotEmpty": {
+    "description": "web key: abc.inp.lot.empty",
+    "x-draft": true
+  },
+  "abcInpRelease": "Qorannoo qaamaa booda gadhiisi",
+  "@abcInpRelease": {
+    "description": "web key: abc.inp.release",
+    "x-draft": true
+  },
+  "abcInpReleaseReason": "Kuusaan kun akkamitti mirkanaa'e? (seenaa keessatti olkaa'ama)",
+  "@abcInpReleaseReason": {
+    "description": "web key: abc.inp.releaseReason",
+    "x-draft": true
+  },
+  "abcInpPayment": "Kaffaltii",
+  "@abcInpPayment": {
+    "description": "web key: abc.inp.payment",
+    "x-draft": true
+  },
+  "abcInpOnCredit": "Liqiidhaan",
+  "@abcInpOnCredit": {
+    "description": "web key: abc.inp.onCredit",
+    "x-draft": true
+  },
+  "abcInpIssue": "Kenni",
+  "@abcInpIssue": {
+    "description": "web key: abc.inp.issue",
+    "x-draft": true
+  },
+  "abcInpIssued": "Kennameera; liqiidhaan yoo ta'e herrega miseensaatti dabalameera.",
+  "@abcInpIssued": {
+    "description": "web key: abc.inp.issued",
+    "x-draft": true
+  },
+  "abcInvOrderSuggested": "{org} {product} karoorsa: lafa keessan hektaara {ha}f {qty} {unit}. Ni barbaadduu?",
+  "@abcInvOrderSuggested": {
+    "description": "web key: abcInv.orderSuggested",
+    "placeholders": {
+      "org": {},
+      "product": {},
+      "ha": {},
+      "qty": {},
+      "unit": {}
+    },
+    "x-draft": true
+  },
+  "abcInvOrderConfirm": "Eeyyee, kana ajaji",
+  "@abcInvOrderConfirm": {
+    "description": "web key: abcInv.orderConfirm",
+    "x-draft": true
+  },
+  "abcInvOrderChange": "Hamma biraa",
+  "@abcInvOrderChange": {
+    "description": "web key: abcInv.orderChange",
+    "x-draft": true
+  },
+  "abcInvOrderOther": "Hammam barbaaddu ({unit})?",
+  "@abcInvOrderOther": {
+    "description": "web key: abcInv.orderOther",
+    "placeholders": {
+      "unit": {}
+    },
+    "x-draft": true
+  },
+  "abcInvOrderDecline": "Hin barbaachisu",
+  "@abcInvOrderDecline": {
+    "description": "web key: abcInv.orderDecline",
+    "x-draft": true
+  },
+  "abcActionAbcInputPlan": "Fedhiin galtee karoorfame",
+  "@abcActionAbcInputPlan": {
+    "description": "web key: abc.action.abc.input.plan",
+    "x-draft": true
+  },
+  "abcActionAbcInputOrderConfirm": "Ajajni galtee mirkanaa'e",
+  "@abcActionAbcInputOrderConfirm": {
+    "description": "web key: abc.action.abc.input.order_confirm",
+    "x-draft": true
+  },
+  "abcActionAbcInputPoCreate": "Ajajni bittaa uumame",
+  "@abcActionAbcInputPoCreate": {
+    "description": "web key: abc.action.abc.input.po_create",
+    "x-draft": true
+  },
+  "abcActionAbcStockReceive": "Kuusaan fudhatame",
+  "@abcActionAbcStockReceive": {
+    "description": "web key: abc.action.abc.stock.receive",
+    "x-draft": true
+  },
+  "abcActionAbcStockRelease": "Kuusaan dhorkame gadhiifame",
+  "@abcActionAbcStockRelease": {
+    "description": "web key: abc.action.abc.stock.release",
+    "x-draft": true
+  },
+  "abcActionAbcStockIssue": "Galteen miseensaaf kenname",
+  "@abcActionAbcStockIssue": {
+    "description": "web key: abc.action.abc.stock.issue",
+    "x-draft": true
+  },
+  "abcTabMachinery": "Maashinii",
+  "@abcTabMachinery": {
+    "description": "web key: abc.tab.machinery",
+    "x-draft": true
+  },
+  "abcMacRegister": "Galmee maashinii",
+  "@abcMacRegister": {
+    "description": "web key: abc.mac.register",
+    "x-draft": true
+  },
+  "abcMacNone": "Maashiniin ammallee hin jiru.",
+  "@abcMacNone": {
+    "description": "web key: abc.mac.none",
+    "x-draft": true
+  },
+  "abcMacAdd": "Maashinii dabali",
+  "@abcMacAdd": {
+    "description": "web key: abc.mac.add",
+    "x-draft": true
+  },
+  "abcMacAdded": "Maashiniin dabalameera.",
+  "@abcMacAdded": {
+    "description": "web key: abc.mac.added",
+    "x-draft": true
+  },
+  "abcMacName": "Maqaa",
+  "@abcMacName": {
+    "description": "web key: abc.mac.name",
+    "x-draft": true
+  },
+  "abcMacKind": "Gosa",
+  "@abcMacKind": {
+    "description": "web key: abc.mac.kind",
+    "x-draft": true
+  },
+  "abcMacOwnership": "Abbaa",
+  "@abcMacOwnership": {
+    "description": "web key: abc.mac.ownership",
+    "x-draft": true
+  },
+  "abcMacReg": "Lakk. galmee",
+  "@abcMacReg": {
+    "description": "web key: abc.mac.reg",
+    "x-draft": true
+  },
+  "abcMacPerHa": "Gatii hektaaraan (qarshii)",
+  "@abcMacPerHa": {
+    "description": "web key: abc.mac.perHa",
+    "x-draft": true
+  },
+  "abcMacPerHour": "Gatii sa'aatiin (qarshii)",
+  "@abcMacPerHour": {
+    "description": "web key: abc.mac.perHour",
+    "x-draft": true
+  },
+  "abcMacHours": "Sa'aatii torbaniin",
+  "@abcMacHours": {
+    "description": "web key: abc.mac.hours",
+    "x-draft": true
+  },
+  "abcMacKindTractor": "Traaktara",
+  "@abcMacKindTractor": {
+    "description": "web key: abc.mac.kind.tractor",
+    "x-draft": true
+  },
+  "abcMacKindCombine": "Kombaayinarii",
+  "@abcMacKindCombine": {
+    "description": "web key: abc.mac.kind.combine",
+    "x-draft": true
+  },
+  "abcMacKindThresher": "Maashinii midhaan tumu",
+  "@abcMacKindThresher": {
+    "description": "web key: abc.mac.kind.thresher",
+    "x-draft": true
+  },
+  "abcMacKindTruck": "Konkolaataa fe'umsaa",
+  "@abcMacKindTruck": {
+    "description": "web key: abc.mac.kind.truck",
+    "x-draft": true
+  },
+  "abcMacKindPump": "Paampii bishaanii",
+  "@abcMacKindPump": {
+    "description": "web key: abc.mac.kind.pump",
+    "x-draft": true
+  },
+  "abcMacKindPlanter": "Maashinii facaasuu",
+  "@abcMacKindPlanter": {
+    "description": "web key: abc.mac.kind.planter",
+    "x-draft": true
+  },
+  "abcMacKindSprayer": "Facaasaa",
+  "@abcMacKindSprayer": {
+    "description": "web key: abc.mac.kind.sprayer",
+    "x-draft": true
+  },
+  "abcMacKindOther": "Kan biraa",
+  "@abcMacKindOther": {
+    "description": "web key: abc.mac.kind.other",
+    "x-draft": true
+  },
+  "abcMacOwnAbc": "Kan ABC",
+  "@abcMacOwnAbc": {
+    "description": "web key: abc.mac.own.abc",
+    "x-draft": true
+  },
+  "abcMacOwnAtiProvided": "ATIn kan dhiyaate",
+  "@abcMacOwnAtiProvided": {
+    "description": "web key: abc.mac.own.ati_provided",
+    "x-draft": true
+  },
+  "abcMacOwnRented": "Kan kireeffame",
+  "@abcMacOwnRented": {
+    "description": "web key: abc.mac.own.rented",
+    "x-draft": true
+  },
+  "abcMacCondGood": "Gaarii",
+  "@abcMacCondGood": {
+    "description": "web key: abc.mac.cond.good",
+    "x-draft": true
+  },
+  "abcMacCondNeedsRepair": "Suphaa barbaada",
+  "@abcMacCondNeedsRepair": {
+    "description": "web key: abc.mac.cond.needs_repair",
+    "x-draft": true
+  },
+  "abcMacCondOutOfService": "Tajaajila ala",
+  "@abcMacCondOutOfService": {
+    "description": "web key: abc.mac.cond.out_of_service",
+    "x-draft": true
+  },
+  "abcMacCondition": "Haala",
+  "@abcMacCondition": {
+    "description": "web key: abc.mac.condition",
+    "x-draft": true
+  },
+  "abcMacServiceDue": "Suphaan ga'eera",
+  "@abcMacServiceDue": {
+    "description": "web key: abc.mac.serviceDue",
+    "x-draft": true
+  },
+  "abcMacUtil": "{pct}% fayyadame · {available} keessaa {hours} h · hektaara {ha} (guyyaa 30)",
+  "@abcMacUtil": {
+    "description": "web key: abc.mac.util",
+    "placeholders": {
+      "pct": {},
+      "available": {},
+      "hours": {},
+      "ha": {}
+    },
+    "x-draft": true
+  },
+  "abcMacLastService": "Suphaa dhumaa {date}",
+  "@abcMacLastService": {
+    "description": "web key: abc.mac.lastService",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcMacNoService": "Suphaan hin galmoofne",
+  "@abcMacNoService": {
+    "description": "web key: abc.mac.noService",
+    "x-draft": true
+  },
+  "abcMacNextService": "itti aanu {date}",
+  "@abcMacNextService": {
+    "description": "web key: abc.mac.nextService",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcMacWork": "Hojii hojjetame",
+  "@abcMacWork": {
+    "description": "web key: abc.mac.work",
+    "x-draft": true
+  },
+  "abcMacCost": "Baasii (qarshii)",
+  "@abcMacCost": {
+    "description": "web key: abc.mac.cost",
+    "x-draft": true
+  },
+  "abcMacNext": "Suphaa itti aanu",
+  "@abcMacNext": {
+    "description": "web key: abc.mac.next",
+    "x-draft": true
+  },
+  "abcMacAddService": "Suphaa galmeessi",
+  "@abcMacAddService": {
+    "description": "web key: abc.mac.addService",
+    "x-draft": true
+  },
+  "abcMacBookings": "Beellama tajaajilaa",
+  "@abcMacBookings": {
+    "description": "web key: abc.mac.bookings",
+    "x-draft": true
+  },
+  "abcMacBookingsHint": "Tartiiba imalaatiin: guyyaan, achiis gandaan, achiis fageenya waajjira ABC irraa.",
+  "@abcMacBookingsHint": {
+    "description": "web key: abc.mac.bookingsHint",
+    "x-draft": true
+  },
+  "abcMacNoBookings": "Beellamni banaan hin jiru.",
+  "@abcMacNoBookings": {
+    "description": "web key: abc.mac.noBookings",
+    "x-draft": true
+  },
+  "abcMacChooseMachine": "Maashinii",
+  "@abcMacChooseMachine": {
+    "description": "web key: abc.mac.chooseMachine",
+    "x-draft": true
+  },
+  "abcMacSchedule": "Beellami",
+  "@abcMacSchedule": {
+    "description": "web key: abc.mac.schedule",
+    "x-draft": true
+  },
+  "abcMacHoursWorked": "Sa'aatii",
+  "@abcMacHoursWorked": {
+    "description": "web key: abc.mac.hoursWorked",
+    "x-draft": true
+  },
+  "abcMacOperator": "Oogaa",
+  "@abcMacOperator": {
+    "description": "web key: abc.mac.operator",
+    "x-draft": true
+  },
+  "abcMacFuel": "Boba'aa (L)",
+  "@abcMacFuel": {
+    "description": "web key: abc.mac.fuel",
+    "x-draft": true
+  },
+  "abcMacFuelCost": "Baasii boba'aa",
+  "@abcMacFuelCost": {
+    "description": "web key: abc.mac.fuelCost",
+    "x-draft": true
+  },
+  "abcMacDone": "Hojiin xumurame",
+  "@abcMacDone": {
+    "description": "web key: abc.mac.done",
+    "x-draft": true
+  },
+  "abcMacJobLogged": "Hojiin galmaa'eera; kaffaltiin herrega miseensaatti dabalameera.",
+  "@abcMacJobLogged": {
+    "description": "web key: abc.mac.jobLogged",
+    "x-draft": true
+  },
+  "abcMacJobs": "Galmee hojii",
+  "@abcMacJobs": {
+    "description": "web key: abc.mac.jobs",
+    "x-draft": true
+  },
+  "abcMacStatusRequested": "Gaafatame",
+  "@abcMacStatusRequested": {
+    "description": "web key: abc.mac.status.requested",
+    "x-draft": true
+  },
+  "abcMacStatusScheduled": "Beellamame",
+  "@abcMacStatusScheduled": {
+    "description": "web key: abc.mac.status.scheduled",
+    "x-draft": true
+  },
+  "abcMacStatusDone": "Xumurame",
+  "@abcMacStatusDone": {
+    "description": "web key: abc.mac.status.done",
+    "x-draft": true
+  },
+  "abcMacStatusCancelled": "Haqame",
+  "@abcMacStatusCancelled": {
+    "description": "web key: abc.mac.status.cancelled",
+    "x-draft": true
+  },
+  "abcMacSvcPloughing": "Qotuu",
+  "@abcMacSvcPloughing": {
+    "description": "web key: abc.mac.svc.ploughing",
+    "x-draft": true
+  },
+  "abcMacSvcPlanting": "Facaasuu",
+  "@abcMacSvcPlanting": {
+    "description": "web key: abc.mac.svc.planting",
+    "x-draft": true
+  },
+  "abcMacSvcSpraying": "Facaasuu (qoricha)",
+  "@abcMacSvcSpraying": {
+    "description": "web key: abc.mac.svc.spraying",
+    "x-draft": true
+  },
+  "abcMacSvcHarvesting": "Sassaabuu",
+  "@abcMacSvcHarvesting": {
+    "description": "web key: abc.mac.svc.harvesting",
+    "x-draft": true
+  },
+  "abcMacSvcThreshing": "Tumuu",
+  "@abcMacSvcThreshing": {
+    "description": "web key: abc.mac.svc.threshing",
+    "x-draft": true
+  },
+  "abcMacSvcTransport": "Geejjiba",
+  "@abcMacSvcTransport": {
+    "description": "web key: abc.mac.svc.transport",
+    "x-draft": true
+  },
+  "abcMacSvcOther": "Kan biraa",
+  "@abcMacSvcOther": {
+    "description": "web key: abc.mac.svc.other",
+    "x-draft": true
+  },
+  "abcInvBook": "Tajaajila maashinii gaafadhu",
+  "@abcInvBook": {
+    "description": "web key: abcInv.book",
+    "x-draft": true
+  },
+  "abcInvBookSend": "Gaaffii ergi",
+  "@abcInvBookSend": {
+    "description": "web key: abcInv.bookSend",
+    "x-draft": true
+  },
+  "abcActionAbcMachineAdd": "Maashiniin dabalame",
+  "@abcActionAbcMachineAdd": {
+    "description": "web key: abc.action.abc.machine.add",
+    "x-draft": true
+  },
+  "abcActionAbcMachineUpdate": "Maashiniin jijjiirame",
+  "@abcActionAbcMachineUpdate": {
+    "description": "web key: abc.action.abc.machine.update",
+    "x-draft": true
+  },
+  "abcActionAbcMachineJob": "Hojiin maashinii galmaa'e",
+  "@abcActionAbcMachineJob": {
+    "description": "web key: abc.action.abc.machine.job",
+    "x-draft": true
+  },
+  "abcActionAbcMachineMaintenance": "Maashiniin suphame",
+  "@abcActionAbcMachineMaintenance": {
+    "description": "web key: abc.action.abc.machine.maintenance",
+    "x-draft": true
+  },
+  "abcActionAbcBookingRequest": "Tajaajilli gaafatame",
+  "@abcActionAbcBookingRequest": {
+    "description": "web key: abc.action.abc.booking.request",
+    "x-draft": true
+  },
+  "abcActionAbcBookingSchedule": "Tajaajilli beellamame",
+  "@abcActionAbcBookingSchedule": {
+    "description": "web key: abc.action.abc.booking.schedule",
+    "x-draft": true
+  },
+  "abcActionAbcBookingCancel": "Beellamni haqame",
+  "@abcActionAbcBookingCancel": {
+    "description": "web key: abc.action.abc.booking.cancel",
+    "x-draft": true
+  },
+  "navMyAbc": "ABC koo",
+  "@navMyAbc": {
+    "description": "web key: nav.myAbc",
+    "x-draft": true
+  },
+  "myabcDescription": "Aksiyoona, kaffaltii, herrega, ajaja galtee, beellama maashinii fi walgahii ABC keessan keessatti.",
+  "@myabcDescription": {
+    "description": "web key: myabc.description",
+    "x-draft": true
+  },
+  "myabcNone": "Ammallee miseensa ABC miti.",
+  "@myabcNone": {
+    "description": "web key: myabc.none",
+    "x-draft": true
+  },
+  "myabcMemberNo": "Lakk. miseensaa {no}",
+  "@myabcMemberNo": {
+    "description": "web key: myabc.memberNo",
+    "placeholders": {
+      "no": {}
+    },
+    "x-draft": true
+  },
+  "myabcShares": "Aksiyoona koo",
+  "@myabcShares": {
+    "description": "web key: myabc.shares",
+    "x-draft": true
+  },
+  "myabcOwedShares": "Aksiyoona irratti kan hafe",
+  "@myabcOwedShares": {
+    "description": "web key: myabc.owedShares",
+    "x-draft": true
+  },
+  "myabcBalance": "ABCf kan qabu",
+  "@myabcBalance": {
+    "description": "web key: myabc.balance",
+    "x-draft": true
+  },
+  "myabcWeight": "Ulfaatina sagalee koo",
+  "@myabcWeight": {
+    "description": "web key: myabc.weight",
+    "x-draft": true
+  },
+  "myabcVotes": "Sagalee keessan galmaa'e mirkaneessaa",
+  "@myabcVotes": {
+    "description": "web key: myabc.votes",
+    "x-draft": true
+  },
+  "myabcShareValue": "Aksiyoonni tokko {value} dha.",
+  "@myabcShareValue": {
+    "description": "web key: myabc.shareValue",
+    "placeholders": {
+      "value": {}
+    },
+    "x-draft": true
+  },
+  "myabcNoShares": "Waadaan ammallee hin jiru. Waajjira ABC gaafadhaa.",
+  "@myabcNoShares": {
+    "description": "web key: myabc.noShares",
+    "x-draft": true
+  },
+  "myabcCertificates": "Ragaalee: {list}",
+  "@myabcCertificates": {
+    "description": "web key: myabc.certificates",
+    "placeholders": {
+      "list": {}
+    },
+    "x-draft": true
+  },
+  "myabcAccount": "Herrega koo",
+  "@myabcAccount": {
+    "description": "web key: myabc.account",
+    "x-draft": true
+  },
+  "myabcWeightLine": "Ulfaatinni keessan {pct}: lafa hektaara {land} fi oomisha kuntaala {prod} ({label}).",
+  "@myabcWeightLine": {
+    "description": "web key: myabc.weightLine",
+    "placeholders": {
+      "pct": {},
+      "land": {},
+      "prod": {},
+      "label": {}
+    },
+    "x-draft": true
+  },
+  "myabcMeetings": "Walgahii dhufan",
+  "@myabcMeetings": {
+    "description": "web key: myabc.meetings",
+    "x-draft": true
+  },
+  "myabcNoMeetings": "Walgahiin karoorfame hin jiru.",
+  "@myabcNoMeetings": {
+    "description": "web key: myabc.noMeetings",
+    "x-draft": true
+  },
+  "myabcOrders": "Ajaja galtee",
+  "@myabcOrders": {
+    "description": "web key: myabc.orders",
+    "x-draft": true
+  },
+  "myabcNoOrders": "Ajajni galtee hin jiru.",
+  "@myabcNoOrders": {
+    "description": "web key: myabc.noOrders",
+    "x-draft": true
+  },
+  "myabcService": "Tajaajila",
+  "@myabcService": {
+    "description": "web key: myabc.service",
+    "x-draft": true
+  },
+  "myabcPlot": "Lafa",
+  "@myabcPlot": {
+    "description": "web key: myabc.plot",
+    "x-draft": true
+  },
+  "myabcPlots": "Lafa koo",
+  "@myabcPlots": {
+    "description": "web key: myabc.plots",
+    "x-draft": true
+  },
+  "myabcBooked": "Gaaffiin ABCf ergameera.",
+  "@myabcBooked": {
+    "description": "web key: myabc.booked",
+    "x-draft": true
+  },
+  "myabcSayShares": "{org} keessatti aksiyoona {n} qabdu.",
+  "@myabcSayShares": {
+    "description": "web key: myabc.say.shares",
+    "placeholders": {
+      "org": {},
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "myabcSayOwedShares": "Aksiyoona keessan irratti ammallee {amount} kaffaluu qabdu.",
+  "@myabcSayOwedShares": {
+    "description": "web key: myabc.say.owedShares",
+    "placeholders": {
+      "amount": {}
+    },
+    "x-draft": true
+  },
+  "myabcSayOwe": "ABCf {amount} liqii qabdu.",
+  "@myabcSayOwe": {
+    "description": "web key: myabc.say.owe",
+    "placeholders": {
+      "amount": {}
+    },
+    "x-draft": true
+  },
+  "myabcSayNothingOwed": "ABCf liqii hin qabdan.",
+  "@myabcSayNothingOwed": {
+    "description": "web key: myabc.say.nothingOwed",
+    "x-draft": true
+  },
+  "myabcSayWeight": "Ulfaatinni sagalee keessan {pct} dha.",
+  "@myabcSayWeight": {
+    "description": "web key: myabc.say.weight",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "myabcSayMeeting": "Walgahii itti aanu: {title}, {date}.",
+  "@myabcSayMeeting": {
+    "description": "web key: myabc.say.meeting",
+    "placeholders": {
+      "title": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcInvOpenMyAbc": "ABC koo bani: aksiyoona, herrega, ajajaa fi beellama →",
+  "@abcInvOpenMyAbc": {
+    "description": "web key: abcInv.openMyAbc",
     "x-draft": true
   }
 }

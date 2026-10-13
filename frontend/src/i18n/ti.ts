@@ -1455,7 +1455,7 @@ export const ti: Record<MessageKey, string> = {
   "outlook.none": "ነዚ ሰብል ክሳብ ሕጂ ዝተመዝገበ ወቕቲ ሰብል የለን።",  // draft – needs native review
 
   // ── ABC and buy requests ──────────────────────────────────────────────────
-  "nav.abc": "ናተይ ABC",  // draft – needs native review
+  "nav.abc": "ቤት ጽሕፈት ABC",  // draft – needs native review
   "role.abc_manager": "ኣካያዲ ስራሕ ABC",  // draft – needs native review
   "role.abc_manager.desc": "ኣካያዲ ስራሕ ናይ ሓረስቶት ትካል ንግዲ ሕርሻ (ABC)። ምስቶም ዝተቐበሉ ኣባላት ይሰርሕ፦ ወፈያታት፣ መደብ ሰብል፣ መልእኽትታትን ሕቶታት ዓደግትን።",  // draft – needs native review
   "perm.abc_manage": "ናይ ገዛእ ርእሱ ABC ምምሕዳር",  // draft – needs native review
@@ -2439,4 +2439,35 @@ export const ti: Record<MessageKey, string> = {
   "abc.action.abc.booking.request": "ኣገልግሎት ተሓቲቱ",  // draft – needs native review
   "abc.action.abc.booking.schedule": "ኣገልግሎት ተቖጺሩ",  // draft – needs native review
   "abc.action.abc.booking.cancel": "ቆጸራ ተሰሪዙ",  // draft – needs native review
+
+  // ── My ABC (A9) ───────────────────────────────────────────────────────────
+  "nav.myAbc": "ናተይ ABC",  // draft – needs native review
+  "myabc.description": "ኣብ ABCኹም ዘለዉኹም ኣክሲዮናት፣ ክፍሊታት፣ ሒሳብ፣ ትእዛዛት እታወት፣ ቆጸራታት ማሽነሪን ኣኼባታትን።",  // draft – needs native review
+  "myabc.none": "ገና ኣባል ABC ኣይኮንኩምን።",  // draft – needs native review
+  "myabc.memberNo": "ቁጽሪ ኣባል {no}",  // draft – needs native review
+  "myabc.shares": "ኣክሲዮናተይ",  // draft – needs native review
+  "myabc.owedShares": "ኣብ ኣክሲዮን ዝተረፈኒ",  // draft – needs native review
+  "myabc.balance": "ንABC ዘለኒ",  // draft – needs native review
+  "myabc.weight": "ክብደት ድምጸይ",  // draft – needs native review
+  "myabc.votes": "ዝተመዝገቡ ድምጽታትኩም ኣረጋግጹ",  // draft – needs native review
+  "myabc.shareValue": "ሓንቲ ኣክሲዮን {value} እያ።",  // draft – needs native review
+  "myabc.noShares": "ገና ቃል የለን። ንቤት ጽሕፈት ABC ሕተቱ።",  // draft – needs native review
+  "myabc.certificates": "ምስክር ወረቐታት፦ {list}",  // draft – needs native review
+  "myabc.account": "ሒሳበይ",  // draft – needs native review
+  "myabc.weightLine": "ክብደትኩም {pct} እዩ፦ {land} ሄክታር መሬትን {prod} ኩንታል ፍርያትን ({label})።",  // draft – needs native review
+  "myabc.meetings": "ዝመጽኡ ኣኼባታት",  // draft – needs native review
+  "myabc.noMeetings": "ዝተመደበ ኣኼባ የለን።",  // draft – needs native review
+  "myabc.orders": "ትእዛዛት እታወት",  // draft – needs native review
+  "myabc.noOrders": "ትእዛዝ እታወት የለን።",  // draft – needs native review
+  "myabc.service": "ኣገልግሎት",  // draft – needs native review
+  "myabc.plot": "ግራት",  // draft – needs native review
+  "myabc.plots": "ግራውተይ",  // draft – needs native review
+  "myabc.booked": "ሕቶ ናብ ABC ተላኢኹ።",  // draft – needs native review
+  "myabc.say.shares": "ኣብ {org} {n} ኣክሲዮናት ኣለዉኹም።",  // draft – needs native review
+  "myabc.say.owedShares": "ኣብ ኣክሲዮናትኩም ገና {amount} ክትከፍሉ ኣለኩም።",  // draft – needs native review
+  "myabc.say.owe": "ንABC {amount} ዕዳ ኣለኩም።",  // draft – needs native review
+  "myabc.say.nothingOwed": "ንABC ዋላ ሓንቲ ዕዳ የብልኩምን።",  // draft – needs native review
+  "myabc.say.weight": "ክብደት ድምጽኹም {pct} እዩ።",  // draft – needs native review
+  "myabc.say.meeting": "ዝቕጽል ኣኼባ፦ {title}፣ {date}።",  // draft – needs native review
+  "abcInv.openMyAbc": "ናተይ ABC ክፈት፦ ኣክሲዮናት፣ ሒሳብ፣ ትእዛዛትን ቆጸራታትን →",  // draft – needs native review
 };

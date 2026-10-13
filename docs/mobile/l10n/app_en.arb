@@ -6133,7 +6133,7 @@
   "@outlookNone": {
     "description": "web key: outlook.none"
   },
-  "navAbc": "My ABC",
+  "navAbc": "ABC office",
   "@navAbc": {
     "description": "web key: nav.abc"
   },
@@ -6229,7 +6229,7 @@
   "@abcWaiting": {
     "description": "web key: abc.waiting"
   },
-  "abcContributionsNote": "Shareholder contributions (land, livestock, labour). A record kept by the ABC, not a legal document.",
+  "abcContributionsNote": "Shareholder contributions (land, livestock, labour). Value: pending the ministerial valuation directive. A record kept by the ABC, not a legal document.",
   "@abcContributionsNote": {
     "description": "web key: abc.contributionsNote"
   },
@@ -8503,5 +8503,1921 @@
     "placeholders": {
       "date": {}
     }
+  },
+  "abcRegTitle": "Member registry",
+  "@abcRegTitle": {
+    "description": "web key: abc.reg.title"
+  },
+  "abcRegHint": "{n} members and invitations. Click a member for plots, consent and details.",
+  "@abcRegHint": {
+    "description": "web key: abc.reg.hint",
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "abcRegNone": "No members yet.",
+  "@abcRegNone": {
+    "description": "web key: abc.reg.none"
+  },
+  "abcRegMembers": "Members",
+  "@abcRegMembers": {
+    "description": "web key: abc.reg.members"
+  },
+  "abcRegWomen": "Women",
+  "@abcRegWomen": {
+    "description": "web key: abc.reg.women"
+  },
+  "abcRegYouth": "Youth (15-29)",
+  "@abcRegYouth": {
+    "description": "web key: abc.reg.youth"
+  },
+  "abcRegUnknown": "Not recorded",
+  "@abcRegUnknown": {
+    "description": "web key: abc.reg.unknown"
+  },
+  "abcRegPlots": "{n} plots, {ha} ha",
+  "@abcRegPlots": {
+    "description": "web key: abc.reg.plots",
+    "placeholders": {
+      "n": {},
+      "ha": {}
+    }
+  },
+  "abcRegStatusInvited": "Invited",
+  "@abcRegStatusInvited": {
+    "description": "web key: abc.reg.status.invited"
+  },
+  "abcRegStatusActive": "Member",
+  "@abcRegStatusActive": {
+    "description": "web key: abc.reg.status.active"
+  },
+  "abcRegConsentLine": "Consent: {method}, recorded by {by} on {date}.",
+  "@abcRegConsentLine": {
+    "description": "web key: abc.reg.consentLine",
+    "placeholders": {
+      "method": {},
+      "by": {},
+      "date": {}
+    }
+  },
+  "abcRegIrrigated": "irrigated",
+  "@abcRegIrrigated": {
+    "description": "web key: abc.reg.irrigated"
+  },
+  "abcRegNoPlots": "No plots recorded by this member.",
+  "@abcRegNoPlots": {
+    "description": "web key: abc.reg.noPlots"
+  },
+  "abcRegGender": "Gender",
+  "@abcRegGender": {
+    "description": "web key: abc.reg.gender"
+  },
+  "abcRegAge": "Age group",
+  "@abcRegAge": {
+    "description": "web key: abc.reg.age"
+  },
+  "abcRegIdReason": "Why do you need the full ID number? (recorded in the audit log)",
+  "@abcRegIdReason": {
+    "description": "web key: abc.reg.idReason"
+  },
+  "abcRegShowId": "Show full ID",
+  "@abcRegShowId": {
+    "description": "web key: abc.reg.showId"
+  },
+  "abcRegRemoveReason": "Reason the member leaves (kept in the history):",
+  "@abcRegRemoveReason": {
+    "description": "web key: abc.reg.removeReason"
+  },
+  "abcRegRemove": "Member leaves",
+  "@abcRegRemove": {
+    "description": "web key: abc.reg.remove"
+  },
+  "abcRegInvited": "Invitation sent: the farmer accepts in the app.",
+  "@abcRegInvited": {
+    "description": "web key: abc.reg.invited"
+  },
+  "abcRegCreated": "Account created and member added. Give the farmer the temporary PIN.",
+  "@abcRegCreated": {
+    "description": "web key: abc.reg.created"
+  },
+  "abcRegAdded": "Member added.",
+  "@abcRegAdded": {
+    "description": "web key: abc.reg.added"
+  },
+  "abcRegEnrol": "Enrol a member",
+  "@abcRegEnrol": {
+    "description": "web key: abc.reg.enrol"
+  },
+  "abcRegEnrolHint": "Existing farmer: phone only. New farmer: also name, woreda and a temporary PIN.",
+  "@abcRegEnrolHint": {
+    "description": "web key: abc.reg.enrolHint"
+  },
+  "abcRegConsent": "Consent",
+  "@abcRegConsent": {
+    "description": "web key: abc.reg.consent"
+  },
+  "abcRegNewHint": "Only for a farmer without an account:",
+  "@abcRegNewHint": {
+    "description": "web key: abc.reg.newHint"
+  },
+  "abcRegName": "Full name",
+  "@abcRegName": {
+    "description": "web key: abc.reg.name"
+  },
+  "abcRegPin": "Temporary PIN (6+ digits)",
+  "@abcRegPin": {
+    "description": "web key: abc.reg.pin"
+  },
+  "abcRegIdType": "ID type",
+  "@abcRegIdType": {
+    "description": "web key: abc.reg.idType"
+  },
+  "abcRegIdNumber": "ID number (optional)",
+  "@abcRegIdNumber": {
+    "description": "web key: abc.reg.idNumber"
+  },
+  "abcRegIdHint": "Stored encrypted; only the last 4 digits are shown.",
+  "@abcRegIdHint": {
+    "description": "web key: abc.reg.idHint"
+  },
+  "abcRegEnrolButton": "Enrol",
+  "@abcRegEnrolButton": {
+    "description": "web key: abc.reg.enrolButton"
+  },
+  "abcRegImport": "Import members (CSV)",
+  "@abcRegImport": {
+    "description": "web key: abc.reg.import"
+  },
+  "abcRegImportHint": "For many members, e.g. converting a cooperative. Check the file first; nothing is saved until you import.",
+  "@abcRegImportHint": {
+    "description": "web key: abc.reg.importHint"
+  },
+  "abcRegCheck": "Check file",
+  "@abcRegCheck": {
+    "description": "web key: abc.reg.check"
+  },
+  "abcRegImportButton": "Import {n} members",
+  "@abcRegImportButton": {
+    "description": "web key: abc.reg.importButton",
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "abcRegCheckResult": "{rows} rows: {ok} ready ({created} new accounts), {errors} with problems.",
+  "@abcRegCheckResult": {
+    "description": "web key: abc.reg.checkResult",
+    "placeholders": {
+      "rows": {},
+      "ok": {},
+      "created": {},
+      "errors": {}
+    }
+  },
+  "abcRegImportResult": "Imported {ok} of {rows} rows ({created} new accounts); {errors} skipped.",
+  "@abcRegImportResult": {
+    "description": "web key: abc.reg.importResult",
+    "placeholders": {
+      "ok": {},
+      "rows": {},
+      "created": {},
+      "errors": {}
+    }
+  },
+  "abcRegLine": "Line {line}",
+  "@abcRegLine": {
+    "description": "web key: abc.reg.line",
+    "placeholders": {
+      "line": {}
+    }
+  },
+  "abcGenderFemale": "Female",
+  "@abcGenderFemale": {
+    "description": "web key: abc.gender.female"
+  },
+  "abcGenderMale": "Male",
+  "@abcGenderMale": {
+    "description": "web key: abc.gender.male"
+  },
+  "abcConsentApp": "in the app (invitation)",
+  "@abcConsentApp": {
+    "description": "web key: abc.consent.app"
+  },
+  "abcConsentSpoken": "spoken, recorded by staff",
+  "@abcConsentSpoken": {
+    "description": "web key: abc.consent.spoken"
+  },
+  "abcConsentPaper": "signed paper form",
+  "@abcConsentPaper": {
+    "description": "web key: abc.consent.paper"
+  },
+  "abcIdTypeFayda": "Fayda (national ID)",
+  "@abcIdTypeFayda": {
+    "description": "web key: abc.idType.fayda"
+  },
+  "abcIdTypeKebeleId": "Kebele ID",
+  "@abcIdTypeKebeleId": {
+    "description": "web key: abc.idType.kebele_id"
+  },
+  "abcIdTypeOther": "Other ID",
+  "@abcIdTypeOther": {
+    "description": "web key: abc.idType.other"
+  },
+  "abcTabShares": "Shares",
+  "@abcTabShares": {
+    "description": "web key: abc.tab.shares"
+  },
+  "ruleShareValueMin": "A share must be worth at least {minimum} birr (ABC rules).",
+  "@ruleShareValueMin": {
+    "description": "web key: rule.share_value_min",
+    "placeholders": {
+      "minimum": {}
+    }
+  },
+  "ruleMinShares": "A member's first pledge must be at least {minimum} shares.",
+  "@ruleMinShares": {
+    "description": "web key: rule.min_shares",
+    "placeholders": {
+      "minimum": {}
+    }
+  },
+  "ruleOwnershipCap": "No member may hold more than {percent}% of the {offered} shares offered ({limit} shares). This would make {after}.",
+  "@ruleOwnershipCap": {
+    "description": "web key: rule.ownership_cap",
+    "placeholders": {
+      "percent": {},
+      "offered": {},
+      "limit": {},
+      "after": {}
+    }
+  },
+  "rulePledgeUpfront": "Extra shares need at least {percent}% paid at pledge: {amount} birr.",
+  "@rulePledgeUpfront": {
+    "description": "web key: rule.pledge_upfront",
+    "placeholders": {
+      "percent": {},
+      "amount": {}
+    }
+  },
+  "abcShSetup": "Share capital",
+  "@abcShSetup": {
+    "description": "web key: abc.sh.setup"
+  },
+  "abcShRulesLine": "Rules in force: at least {min} shares per member, at most {cap}% each, {upfront}% upfront on extra shares, the rest within {years} years.",
+  "@abcShRulesLine": {
+    "description": "web key: abc.sh.rulesLine",
+    "placeholders": {
+      "min": {},
+      "cap": {},
+      "upfront": {},
+      "years": {}
+    }
+  },
+  "abcShPledgedShares": "Pledged shares",
+  "@abcShPledgedShares": {
+    "description": "web key: abc.sh.pledgedShares"
+  },
+  "abcShIssuedShares": "Issued shares",
+  "@abcShIssuedShares": {
+    "description": "web key: abc.sh.issuedShares"
+  },
+  "abcShPaidTotal": "Paid",
+  "@abcShPaidTotal": {
+    "description": "web key: abc.sh.paidTotal"
+  },
+  "abcShSubscribed": "Of shares offered",
+  "@abcShSubscribed": {
+    "description": "web key: abc.sh.subscribed"
+  },
+  "abcShShareValue": "Value of one share (birr)",
+  "@abcShShareValue": {
+    "description": "web key: abc.sh.shareValue"
+  },
+  "abcShSharesOffered": "Shares offered",
+  "@abcShSharesOffered": {
+    "description": "web key: abc.sh.sharesOffered"
+  },
+  "abcShCapLine": "Ownership cap: {n} shares per member.",
+  "@abcShCapLine": {
+    "description": "web key: abc.sh.capLine",
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "abcShSetFirst": "Set the share value and the number of shares offered first.",
+  "@abcShSetFirst": {
+    "description": "web key: abc.sh.setFirst"
+  },
+  "abcShMembers": "Members' shares",
+  "@abcShMembers": {
+    "description": "web key: abc.sh.members"
+  },
+  "abcShMembersHint": "Click a member to record a pledge or a payment. Shares are issued as they are paid for.",
+  "@abcShMembersHint": {
+    "description": "web key: abc.sh.membersHint"
+  },
+  "abcShMemberLine": "{held} shares held · {pledged} pledged · paid {paid} · owed {owed}",
+  "@abcShMemberLine": {
+    "description": "web key: abc.sh.memberLine",
+    "placeholders": {
+      "held": {},
+      "pledged": {},
+      "paid": {},
+      "owed": {}
+    }
+  },
+  "abcShKindMinimum": "Minimum pledge",
+  "@abcShKindMinimum": {
+    "description": "web key: abc.sh.kind.minimum"
+  },
+  "abcShKindExtra": "Extra pledge",
+  "@abcShKindExtra": {
+    "description": "web key: abc.sh.kind.extra"
+  },
+  "abcShSharesN": "{n} shares",
+  "@abcShSharesN": {
+    "description": "web key: abc.sh.sharesN",
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "abcShDueOn": "pay by {date}",
+  "@abcShDueOn": {
+    "description": "web key: abc.sh.dueOn",
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "abcShPaidOwed": "Paid {paid} · still owed {owed}",
+  "@abcShPaidOwed": {
+    "description": "web key: abc.sh.paidOwed",
+    "placeholders": {
+      "paid": {},
+      "owed": {}
+    }
+  },
+  "abcShAmount": "Amount (birr)",
+  "@abcShAmount": {
+    "description": "web key: abc.sh.amount"
+  },
+  "abcShMethod": "Paid by",
+  "@abcShMethod": {
+    "description": "web key: abc.sh.method"
+  },
+  "abcShReference": "Reference",
+  "@abcShReference": {
+    "description": "web key: abc.sh.reference"
+  },
+  "abcShRecordPayment": "Record payment",
+  "@abcShRecordPayment": {
+    "description": "web key: abc.sh.recordPayment"
+  },
+  "abcShPaid": "Payment recorded; the receipt was sent to the member.",
+  "@abcShPaid": {
+    "description": "web key: abc.sh.paid"
+  },
+  "abcShMinimumShares": "Minimum pledge (shares)",
+  "@abcShMinimumShares": {
+    "description": "web key: abc.sh.minimumShares"
+  },
+  "abcShExtraShares": "Extra shares",
+  "@abcShExtraShares": {
+    "description": "web key: abc.sh.extraShares"
+  },
+  "abcShAddPledge": "Record pledge",
+  "@abcShAddPledge": {
+    "description": "web key: abc.sh.addPledge"
+  },
+  "abcShPledged": "Pledge recorded.",
+  "@abcShPledged": {
+    "description": "web key: abc.sh.pledged"
+  },
+  "abcShMinimumHint": "First pledge: at least {n} shares; it must be paid in full.",
+  "@abcShMinimumHint": {
+    "description": "web key: abc.sh.minimumHint",
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "abcShExtraHint": "Extra shares: pay at least {pct}% now, the rest within {years} years.",
+  "@abcShExtraHint": {
+    "description": "web key: abc.sh.extraHint",
+    "placeholders": {
+      "pct": {},
+      "years": {}
+    }
+  },
+  "abcShPrintCertificate": "Print share certificate",
+  "@abcShPrintCertificate": {
+    "description": "web key: abc.sh.printCertificate"
+  },
+  "abcShCertificate": "Share certificate",
+  "@abcShCertificate": {
+    "description": "web key: abc.sh.certificate"
+  },
+  "abcShCertFor": "Member: {name} (member no. {no})",
+  "@abcShCertFor": {
+    "description": "web key: abc.sh.certFor",
+    "placeholders": {
+      "name": {},
+      "no": {}
+    }
+  },
+  "abcShCertHeld": "Shares held: {n}, value of one share: {value}",
+  "@abcShCertHeld": {
+    "description": "web key: abc.sh.certHeld",
+    "placeholders": {
+      "n": {},
+      "value": {}
+    }
+  },
+  "abcShCertNo": "Certificate no.",
+  "@abcShCertNo": {
+    "description": "web key: abc.sh.certNo"
+  },
+  "abcShShares": "Shares",
+  "@abcShShares": {
+    "description": "web key: abc.sh.shares"
+  },
+  "abcShApprovals": "Board approvals",
+  "@abcShApprovals": {
+    "description": "web key: abc.sh.approvals"
+  },
+  "abcShApprovalsHint": "Another board member decides: the person who asked cannot approve their own request.",
+  "@abcShApprovalsHint": {
+    "description": "web key: abc.sh.approvalsHint"
+  },
+  "abcShTransferLine": "Transfer {shares} shares: {from} → {to}",
+  "@abcShTransferLine": {
+    "description": "web key: abc.sh.transferLine",
+    "placeholders": {
+      "shares": {},
+      "from": {},
+      "to": {}
+    }
+  },
+  "abcApprPending": "Waiting",
+  "@abcApprPending": {
+    "description": "web key: abc.appr.pending"
+  },
+  "abcApprApproved": "Approved",
+  "@abcApprApproved": {
+    "description": "web key: abc.appr.approved"
+  },
+  "abcApprRejected": "Rejected",
+  "@abcApprRejected": {
+    "description": "web key: abc.appr.rejected"
+  },
+  "abcApprApprove": "Approve",
+  "@abcApprApprove": {
+    "description": "web key: abc.appr.approve"
+  },
+  "abcApprReject": "Reject",
+  "@abcApprReject": {
+    "description": "web key: abc.appr.reject"
+  },
+  "abcShTransfer": "Transfer shares",
+  "@abcShTransfer": {
+    "description": "web key: abc.sh.transfer"
+  },
+  "abcShTransferHint": "Between members (sale, inheritance, exit). The board must approve.",
+  "@abcShTransferHint": {
+    "description": "web key: abc.sh.transferHint"
+  },
+  "abcShFrom": "From",
+  "@abcShFrom": {
+    "description": "web key: abc.sh.from"
+  },
+  "abcShTo": "To",
+  "@abcShTo": {
+    "description": "web key: abc.sh.to"
+  },
+  "abcShReason": "Reason",
+  "@abcShReason": {
+    "description": "web key: abc.sh.reason"
+  },
+  "abcShReasonHint": "sale, inheritance, exit…",
+  "@abcShReasonHint": {
+    "description": "web key: abc.sh.reasonHint"
+  },
+  "abcShAskApproval": "Ask the board",
+  "@abcShAskApproval": {
+    "description": "web key: abc.sh.askApproval"
+  },
+  "abcShTransferSent": "Sent to the board for approval.",
+  "@abcShTransferSent": {
+    "description": "web key: abc.sh.transferSent"
+  },
+  "abcShPayments": "Payments and receipts",
+  "@abcShPayments": {
+    "description": "web key: abc.sh.payments"
+  },
+  "abcShReverse": "Reverse",
+  "@abcShReverse": {
+    "description": "web key: abc.sh.reverse"
+  },
+  "abcShReverseReason": "Reason for reversing this payment (e.g. bounced transfer):",
+  "@abcShReverseReason": {
+    "description": "web key: abc.sh.reverseReason"
+  },
+  "abcShReminders": "Send payment reminders",
+  "@abcShReminders": {
+    "description": "web key: abc.sh.reminders"
+  },
+  "abcShRemindersSent": "{n} reminders sent (pledges due within 30 days or overdue).",
+  "@abcShRemindersSent": {
+    "description": "web key: abc.sh.remindersSent",
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "abcFlagOverdue": "Payment overdue",
+  "@abcFlagOverdue": {
+    "description": "web key: abc.flag.overdue"
+  },
+  "abcFlagDueSoon": "Due soon",
+  "@abcFlagDueSoon": {
+    "description": "web key: abc.flag.due_soon"
+  },
+  "abcFlagMinimumUnpaid": "Minimum not fully paid",
+  "@abcFlagMinimumUnpaid": {
+    "description": "web key: abc.flag.minimum_unpaid"
+  },
+  "abcFlagNoMinimum": "No pledge yet",
+  "@abcFlagNoMinimum": {
+    "description": "web key: abc.flag.no_minimum"
+  },
+  "abcFlagOverCap": "Over the ownership cap",
+  "@abcFlagOverCap": {
+    "description": "web key: abc.flag.over_cap"
+  },
+  "abcPayCash": "Cash",
+  "@abcPayCash": {
+    "description": "web key: abc.pay.cash"
+  },
+  "abcPayBank": "Bank",
+  "@abcPayBank": {
+    "description": "web key: abc.pay.bank"
+  },
+  "abcPayTelebirr": "telebirr",
+  "@abcPayTelebirr": {
+    "description": "web key: abc.pay.telebirr"
+  },
+  "abcPayMpesa": "M-Pesa",
+  "@abcPayMpesa": {
+    "description": "web key: abc.pay.mpesa"
+  },
+  "abcPayOther": "Other",
+  "@abcPayOther": {
+    "description": "web key: abc.pay.other"
+  },
+  "abcActionAbcSharePledge": "Shares pledged",
+  "@abcActionAbcSharePledge": {
+    "description": "web key: abc.action.abc.share.pledge"
+  },
+  "abcActionAbcSharePayment": "Share payment recorded",
+  "@abcActionAbcSharePayment": {
+    "description": "web key: abc.action.abc.share.payment"
+  },
+  "abcActionAbcSharePaymentReverse": "Share payment reversed",
+  "@abcActionAbcSharePaymentReverse": {
+    "description": "web key: abc.action.abc.share.payment_reverse"
+  },
+  "abcActionAbcShareTransferRequest": "Share transfer requested",
+  "@abcActionAbcShareTransferRequest": {
+    "description": "web key: abc.action.abc.share.transfer_request"
+  },
+  "abcActionAbcApprovalDecide": "Board decision",
+  "@abcActionAbcApprovalDecide": {
+    "description": "web key: abc.action.abc.approval.decide"
+  },
+  "abcActionAbcDocumentUpload": "Document uploaded",
+  "@abcActionAbcDocumentUpload": {
+    "description": "web key: abc.action.abc.document.upload"
+  },
+  "abcActionAbcFormationRecognition": "Recognition recorded",
+  "@abcActionAbcFormationRecognition": {
+    "description": "web key: abc.action.abc.formation.recognition"
+  },
+  "abcActionAbcAgreementSign": "Founding agreement signed",
+  "@abcActionAbcAgreementSign": {
+    "description": "web key: abc.action.abc.agreement.sign"
+  },
+  "abcActionAbcRegistration": "Registration recorded",
+  "@abcActionAbcRegistration": {
+    "description": "web key: abc.action.abc.registration"
+  },
+  "abcActionAbcMemberEnrol": "Member enrolled",
+  "@abcActionAbcMemberEnrol": {
+    "description": "web key: abc.action.abc.member.enrol"
+  },
+  "abcActionAbcMemberUpdate": "Member details changed",
+  "@abcActionAbcMemberUpdate": {
+    "description": "web key: abc.action.abc.member.update"
+  },
+  "abcActionAbcMemberIdView": "Full ID number viewed",
+  "@abcActionAbcMemberIdView": {
+    "description": "web key: abc.action.abc.member.id_view"
+  },
+  "abcActionAbcMemberImport": "Members imported",
+  "@abcActionAbcMemberImport": {
+    "description": "web key: abc.action.abc.member.import"
+  },
+  "abcActionAbcMemberRemove": "Member left",
+  "@abcActionAbcMemberRemove": {
+    "description": "web key: abc.action.abc.member.remove"
+  },
+  "abcTabMeetings": "Meetings & votes",
+  "@abcTabMeetings": {
+    "description": "web key: abc.tab.meetings"
+  },
+  "abcRuleQuorumFraction": "Quorum (share of voting weight / board present)",
+  "@abcRuleQuorumFraction": {
+    "description": "web key: abc.rule.quorum_fraction"
+  },
+  "abcRuleMotionPassFraction": "Motion passes with more than (share of weighted yes + no)",
+  "@abcRuleMotionPassFraction": {
+    "description": "web key: abc.rule.motion_pass_fraction"
+  },
+  "abcVoteWeights": "Voting weights",
+  "@abcVoteWeights": {
+    "description": "web key: abc.vote.weights"
+  },
+  "abcVoteFormula": "Weight = {land} × share of land + {prod} × share of production (ABC rules).",
+  "@abcVoteFormula": {
+    "description": "web key: abc.vote.formula",
+    "placeholders": {
+      "land": {},
+      "prod": {}
+    }
+  },
+  "abcVoteLandOnly": "No production recorded for this season: the weight is the share of land only.",
+  "@abcVoteLandOnly": {
+    "description": "web key: abc.vote.landOnly"
+  },
+  "abcVoteEqual": "No land or production recorded yet: every member has the same weight.",
+  "@abcVoteEqual": {
+    "description": "web key: abc.vote.equal"
+  },
+  "abcVoteSeason": "Season",
+  "@abcVoteSeason": {
+    "description": "web key: abc.vote.season"
+  },
+  "abcVoteNewSeason": "New season (to record production)",
+  "@abcVoteNewSeason": {
+    "description": "web key: abc.vote.newSeason"
+  },
+  "abcVoteLand": "Land",
+  "@abcVoteLand": {
+    "description": "web key: abc.vote.land"
+  },
+  "abcVoteProduction": "Production",
+  "@abcVoteProduction": {
+    "description": "web key: abc.vote.production"
+  },
+  "abcVoteWeight": "Weight",
+  "@abcVoteWeight": {
+    "description": "web key: abc.vote.weight"
+  },
+  "abcVoteWeightsHint": "Land: the members' registered plots. Production: what the ABC recorded for the season (estimate until produce intake). An assembly uses the weights frozen when it was scheduled.",
+  "@abcVoteWeightsHint": {
+    "description": "web key: abc.vote.weightsHint"
+  },
+  "abcMeetList": "Meetings",
+  "@abcMeetList": {
+    "description": "web key: abc.meet.list"
+  },
+  "abcMeetNone": "No meetings yet.",
+  "@abcMeetNone": {
+    "description": "web key: abc.meet.none"
+  },
+  "abcMeetNew": "Schedule a meeting",
+  "@abcMeetNew": {
+    "description": "web key: abc.meet.new"
+  },
+  "abcMeetNewHint": "A general assembly freezes the voting weights now. Send the notice afterwards.",
+  "@abcMeetNewHint": {
+    "description": "web key: abc.meet.newHint"
+  },
+  "abcMeetKind": "Kind",
+  "@abcMeetKind": {
+    "description": "web key: abc.meet.kind"
+  },
+  "abcMeetKindGeneralAssembly": "General assembly",
+  "@abcMeetKindGeneralAssembly": {
+    "description": "web key: abc.meet.kind.general_assembly"
+  },
+  "abcMeetKindBoard": "Board meeting",
+  "@abcMeetKindBoard": {
+    "description": "web key: abc.meet.kind.board"
+  },
+  "abcMeetWhen": "Date and time",
+  "@abcMeetWhen": {
+    "description": "web key: abc.meet.when"
+  },
+  "abcMeetPlace": "Place",
+  "@abcMeetPlace": {
+    "description": "web key: abc.meet.place"
+  },
+  "abcMeetAgenda": "Agenda",
+  "@abcMeetAgenda": {
+    "description": "web key: abc.meet.agenda"
+  },
+  "abcMeetAgendaHint": "One item per line",
+  "@abcMeetAgendaHint": {
+    "description": "web key: abc.meet.agendaHint"
+  },
+  "abcMeetCreate": "Schedule",
+  "@abcMeetCreate": {
+    "description": "web key: abc.meet.create"
+  },
+  "abcMeetStatusScheduled": "Scheduled",
+  "@abcMeetStatusScheduled": {
+    "description": "web key: abc.meet.status.scheduled"
+  },
+  "abcMeetStatusHeld": "Held",
+  "@abcMeetStatusHeld": {
+    "description": "web key: abc.meet.status.held"
+  },
+  "abcMeetStatusCancelled": "Cancelled",
+  "@abcMeetStatusCancelled": {
+    "description": "web key: abc.meet.status.cancelled"
+  },
+  "abcMeetSendNotice": "Send notice to voters",
+  "@abcMeetSendNotice": {
+    "description": "web key: abc.meet.sendNotice"
+  },
+  "abcMeetNoticeAgain": "Send notice again",
+  "@abcMeetNoticeAgain": {
+    "description": "web key: abc.meet.noticeAgain"
+  },
+  "abcMeetNoticeSent": "Notice sent in the app and on Telegram.",
+  "@abcMeetNoticeSent": {
+    "description": "web key: abc.meet.noticeSent"
+  },
+  "abcMeetCancel": "Cancel meeting",
+  "@abcMeetCancel": {
+    "description": "web key: abc.meet.cancel"
+  },
+  "abcMeetAttendance": "Attendance",
+  "@abcMeetAttendance": {
+    "description": "web key: abc.meet.attendance"
+  },
+  "abcMeetQuorumBadge": "Quorum {pct} (need {need})",
+  "@abcMeetQuorumBadge": {
+    "description": "web key: abc.meet.quorumBadge",
+    "placeholders": {
+      "pct": {},
+      "need": {}
+    }
+  },
+  "abcMeetQuorumLine": "Present: {present} of {eligible} voters ({pct} of the voting weight).",
+  "@abcMeetQuorumLine": {
+    "description": "web key: abc.meet.quorumLine",
+    "placeholders": {
+      "present": {},
+      "eligible": {},
+      "pct": {}
+    }
+  },
+  "abcMeetSaveAttendance": "Save attendance",
+  "@abcMeetSaveAttendance": {
+    "description": "web key: abc.meet.saveAttendance"
+  },
+  "abcMeetMotions": "Motions",
+  "@abcMeetMotions": {
+    "description": "web key: abc.meet.motions"
+  },
+  "abcMeetNoMotions": "No motions yet.",
+  "@abcMeetNoMotions": {
+    "description": "web key: abc.meet.noMotions"
+  },
+  "abcMeetNewMotion": "New motion",
+  "@abcMeetNewMotion": {
+    "description": "web key: abc.meet.newMotion"
+  },
+  "abcMeetAddMotion": "Add",
+  "@abcMeetAddMotion": {
+    "description": "web key: abc.meet.addMotion"
+  },
+  "abcMeetMinutes": "Minutes",
+  "@abcMeetMinutes": {
+    "description": "web key: abc.meet.minutes"
+  },
+  "abcMeetSaveMinutes": "Save draft",
+  "@abcMeetSaveMinutes": {
+    "description": "web key: abc.meet.saveMinutes"
+  },
+  "abcMeetApproveMinutes": "Approve minutes",
+  "@abcMeetApproveMinutes": {
+    "description": "web key: abc.meet.approveMinutes"
+  },
+  "abcMeetApprovedBy": "Approved by {name} on {date}.",
+  "@abcMeetApprovedBy": {
+    "description": "web key: abc.meet.approvedBy",
+    "placeholders": {
+      "name": {},
+      "date": {}
+    }
+  },
+  "abcMeetPrint": "Print minutes",
+  "@abcMeetPrint": {
+    "description": "web key: abc.meet.print"
+  },
+  "abcMotionYes": "Yes",
+  "@abcMotionYes": {
+    "description": "web key: abc.motion.yes"
+  },
+  "abcMotionNo": "No",
+  "@abcMotionNo": {
+    "description": "web key: abc.motion.no"
+  },
+  "abcMotionAbstain": "Abstain",
+  "@abcMotionAbstain": {
+    "description": "web key: abc.motion.abstain"
+  },
+  "abcMotionTally": "Yes {yes} ({ny}) · No {no} ({nn}) · Abstain {abstain} ({na})",
+  "@abcMotionTally": {
+    "description": "web key: abc.motion.tally",
+    "placeholders": {
+      "yes": {},
+      "ny": {},
+      "no": {},
+      "nn": {},
+      "abstain": {},
+      "na": {}
+    }
+  },
+  "abcMotionSaveVotes": "Save votes",
+  "@abcMotionSaveVotes": {
+    "description": "web key: abc.motion.saveVotes"
+  },
+  "abcMotionClose": "Close voting",
+  "@abcMotionClose": {
+    "description": "web key: abc.motion.close"
+  },
+  "abcMotionResultOpen": "Open",
+  "@abcMotionResultOpen": {
+    "description": "web key: abc.motion.result.open"
+  },
+  "abcMotionResultPassed": "Passed",
+  "@abcMotionResultPassed": {
+    "description": "web key: abc.motion.result.passed"
+  },
+  "abcMotionResultFailed": "Not passed",
+  "@abcMotionResultFailed": {
+    "description": "web key: abc.motion.result.failed"
+  },
+  "abcMotionResultNoQuorum": "No quorum",
+  "@abcMotionResultNoQuorum": {
+    "description": "web key: abc.motion.result.no_quorum"
+  },
+  "abcActionAbcProductionRecord": "Production recorded",
+  "@abcActionAbcProductionRecord": {
+    "description": "web key: abc.action.abc.production.record"
+  },
+  "abcActionAbcVotingSnapshot": "Voting weights frozen",
+  "@abcActionAbcVotingSnapshot": {
+    "description": "web key: abc.action.abc.voting.snapshot"
+  },
+  "abcActionAbcMeetingCreate": "Meeting scheduled",
+  "@abcActionAbcMeetingCreate": {
+    "description": "web key: abc.action.abc.meeting.create"
+  },
+  "abcActionAbcMeetingNotice": "Meeting notice sent",
+  "@abcActionAbcMeetingNotice": {
+    "description": "web key: abc.action.abc.meeting.notice"
+  },
+  "abcActionAbcMeetingAttendance": "Attendance recorded",
+  "@abcActionAbcMeetingAttendance": {
+    "description": "web key: abc.action.abc.meeting.attendance"
+  },
+  "abcActionAbcMeetingCancel": "Meeting cancelled",
+  "@abcActionAbcMeetingCancel": {
+    "description": "web key: abc.action.abc.meeting.cancel"
+  },
+  "abcActionAbcMotionCreate": "Motion added",
+  "@abcActionAbcMotionCreate": {
+    "description": "web key: abc.action.abc.motion.create"
+  },
+  "abcActionAbcMotionVotes": "Votes entered",
+  "@abcActionAbcMotionVotes": {
+    "description": "web key: abc.action.abc.motion.votes"
+  },
+  "abcActionAbcMotionClose": "Voting closed",
+  "@abcActionAbcMotionClose": {
+    "description": "web key: abc.action.abc.motion.close"
+  },
+  "abcActionAbcMinutesDraft": "Minutes drafted",
+  "@abcActionAbcMinutesDraft": {
+    "description": "web key: abc.action.abc.minutes.draft"
+  },
+  "abcActionAbcMinutesApprove": "Minutes approved",
+  "@abcActionAbcMinutesApprove": {
+    "description": "web key: abc.action.abc.minutes.approve"
+  },
+  "abcActionAbcVoteConfirm": "Member checked their vote",
+  "@abcActionAbcVoteConfirm": {
+    "description": "web key: abc.action.abc.vote.confirm"
+  },
+  "abcInvVoteRecorded": "At \"{meeting}\" your vote on \"{motion}\" was recorded as: {choice}. Is that right?",
+  "@abcInvVoteRecorded": {
+    "description": "web key: abcInv.voteRecorded",
+    "placeholders": {
+      "meeting": {},
+      "motion": {},
+      "choice": {}
+    }
+  },
+  "abcInvVoteCorrect": "Yes, correct",
+  "@abcInvVoteCorrect": {
+    "description": "web key: abcInv.voteCorrect"
+  },
+  "abcInvVoteWrong": "No, that is wrong",
+  "@abcInvVoteWrong": {
+    "description": "web key: abcInv.voteWrong"
+  },
+  "abcTabFinance": "Finance",
+  "@abcTabFinance": {
+    "description": "web key: abc.tab.finance"
+  },
+  "abcFinNote": "Simple single-entry books for the ABC. Not tax advice: export for the accountant.",
+  "@abcFinNote": {
+    "description": "web key: abc.fin.note"
+  },
+  "abcFinExport": "Export to Excel",
+  "@abcFinExport": {
+    "description": "web key: abc.fin.export"
+  },
+  "abcFinShareCapital": "Share capital received",
+  "@abcFinShareCapital": {
+    "description": "web key: abc.fin.shareCapital"
+  },
+  "abcFinIncome": "Income",
+  "@abcFinIncome": {
+    "description": "web key: abc.fin.income"
+  },
+  "abcFinExpenses": "Expenses",
+  "@abcFinExpenses": {
+    "description": "web key: abc.fin.expenses"
+  },
+  "abcFinAssets": "Assets bought",
+  "@abcFinAssets": {
+    "description": "web key: abc.fin.assets"
+  },
+  "abcFinLoans": "Loans outstanding",
+  "@abcFinLoans": {
+    "description": "web key: abc.fin.loans"
+  },
+  "abcFinCash": "Cash (estimate)",
+  "@abcFinCash": {
+    "description": "web key: abc.fin.cash"
+  },
+  "abcFinMembersOwe": "Members owe the ABC",
+  "@abcFinMembersOwe": {
+    "description": "web key: abc.fin.membersOwe"
+  },
+  "abcFinPending": "Waiting for the board",
+  "@abcFinPending": {
+    "description": "web key: abc.fin.pending"
+  },
+  "abcFinLedger": "Ledger",
+  "@abcFinLedger": {
+    "description": "web key: abc.fin.ledger"
+  },
+  "abcFinLimitHint": "Expenses and purchases above {limit} wait for a board decision.",
+  "@abcFinLimitHint": {
+    "description": "web key: abc.fin.limitHint",
+    "placeholders": {
+      "limit": {}
+    }
+  },
+  "abcFinNoLimit": "No board approval limit set (Company tab).",
+  "@abcFinNoLimit": {
+    "description": "web key: abc.fin.noLimit"
+  },
+  "abcFinKind": "Kind",
+  "@abcFinKind": {
+    "description": "web key: abc.fin.kind"
+  },
+  "abcFinKindIncome": "Income",
+  "@abcFinKindIncome": {
+    "description": "web key: abc.fin.kind.income"
+  },
+  "abcFinKindExpense": "Expense",
+  "@abcFinKindExpense": {
+    "description": "web key: abc.fin.kind.expense"
+  },
+  "abcFinKindAsset": "Asset purchase",
+  "@abcFinKindAsset": {
+    "description": "web key: abc.fin.kind.asset"
+  },
+  "abcFinKindLiability": "Loan",
+  "@abcFinKindLiability": {
+    "description": "web key: abc.fin.kind.liability"
+  },
+  "abcFinCategory": "Category",
+  "@abcFinCategory": {
+    "description": "web key: abc.fin.category"
+  },
+  "abcFinCategoryHint": "fuel, salaries, sales…",
+  "@abcFinCategoryHint": {
+    "description": "web key: abc.fin.categoryHint"
+  },
+  "abcFinDirection": "Loan",
+  "@abcFinDirection": {
+    "description": "web key: abc.fin.direction"
+  },
+  "abcFinLoanIn": "Received",
+  "@abcFinLoanIn": {
+    "description": "web key: abc.fin.loanIn"
+  },
+  "abcFinLoanOut": "Repaid",
+  "@abcFinLoanOut": {
+    "description": "web key: abc.fin.loanOut"
+  },
+  "abcFinCounterparty": "Paid to / received from",
+  "@abcFinCounterparty": {
+    "description": "web key: abc.fin.counterparty"
+  },
+  "abcFinDescription": "Description",
+  "@abcFinDescription": {
+    "description": "web key: abc.fin.description"
+  },
+  "abcFinAdd": "Record",
+  "@abcFinAdd": {
+    "description": "web key: abc.fin.add"
+  },
+  "abcFinPosted": "Recorded.",
+  "@abcFinPosted": {
+    "description": "web key: abc.fin.posted"
+  },
+  "abcFinSentToBoard": "Above the approval limit: sent to the board. It counts once approved.",
+  "@abcFinSentToBoard": {
+    "description": "web key: abc.fin.sentToBoard"
+  },
+  "abcFinStatusPending": "Waiting for the board",
+  "@abcFinStatusPending": {
+    "description": "web key: abc.fin.status.pending"
+  },
+  "abcFinStatusRejected": "Rejected by the board",
+  "@abcFinStatusRejected": {
+    "description": "web key: abc.fin.status.rejected"
+  },
+  "abcFinStatusVoid": "Voided",
+  "@abcFinStatusVoid": {
+    "description": "web key: abc.fin.status.void"
+  },
+  "abcFinStatusPosted": "Recorded",
+  "@abcFinStatusPosted": {
+    "description": "web key: abc.fin.status.posted"
+  },
+  "abcFinVoid": "Void",
+  "@abcFinVoid": {
+    "description": "web key: abc.fin.void"
+  },
+  "abcFinVoidReason": "Why is this entry voided? (kept in the history)",
+  "@abcFinVoidReason": {
+    "description": "web key: abc.fin.voidReason"
+  },
+  "abcFinNoEntries": "No entries yet.",
+  "@abcFinNoEntries": {
+    "description": "web key: abc.fin.noEntries"
+  },
+  "abcFinAccounts": "Member accounts",
+  "@abcFinAccounts": {
+    "description": "web key: abc.fin.accounts"
+  },
+  "abcFinAccountsHint": "What each member owes the ABC (input credit, services) less what they paid back.",
+  "@abcFinAccountsHint": {
+    "description": "web key: abc.fin.accountsHint"
+  },
+  "abcFinAccountLine": "Credit {credit} · services {services} · repaid {repaid}",
+  "@abcFinAccountLine": {
+    "description": "web key: abc.fin.accountLine",
+    "placeholders": {
+      "credit": {},
+      "services": {},
+      "repaid": {}
+    }
+  },
+  "abcFinNoTxns": "No transactions yet.",
+  "@abcFinNoTxns": {
+    "description": "web key: abc.fin.noTxns"
+  },
+  "abcFinReceiptSent": "Repayment recorded; the receipt was sent to the member.",
+  "@abcFinReceiptSent": {
+    "description": "web key: abc.fin.receiptSent"
+  },
+  "abcFinPrintStatement": "Print statement",
+  "@abcFinPrintStatement": {
+    "description": "web key: abc.fin.printStatement"
+  },
+  "abcFinStatement": "Member statement",
+  "@abcFinStatement": {
+    "description": "web key: abc.fin.statement"
+  },
+  "abcFinStatementLine": "Balance owed to the ABC: {balance}. Shares held: {shares}.",
+  "@abcFinStatementLine": {
+    "description": "web key: abc.fin.statementLine",
+    "placeholders": {
+      "balance": {},
+      "shares": {}
+    }
+  },
+  "abcFinWhat": "What",
+  "@abcFinWhat": {
+    "description": "web key: abc.fin.what"
+  },
+  "abcFinEffect": "Change",
+  "@abcFinEffect": {
+    "description": "web key: abc.fin.effect"
+  },
+  "abcFinBalance": "Balance",
+  "@abcFinBalance": {
+    "description": "web key: abc.fin.balance"
+  },
+  "abcTxnInputCredit": "Input on credit",
+  "@abcTxnInputCredit": {
+    "description": "web key: abc.txn.input_credit"
+  },
+  "abcTxnServiceCharge": "Service charge",
+  "@abcTxnServiceCharge": {
+    "description": "web key: abc.txn.service_charge"
+  },
+  "abcTxnRepayment": "Repayment",
+  "@abcTxnRepayment": {
+    "description": "web key: abc.txn.repayment"
+  },
+  "abcTxnProduceDeduction": "Deducted from produce payment",
+  "@abcTxnProduceDeduction": {
+    "description": "web key: abc.txn.produce_deduction"
+  },
+  "abcTxnAdjustment": "Adjustment",
+  "@abcTxnAdjustment": {
+    "description": "web key: abc.txn.adjustment"
+  },
+  "abcActionAbcLedgerAdd": "Ledger entry recorded",
+  "@abcActionAbcLedgerAdd": {
+    "description": "web key: abc.action.abc.ledger.add"
+  },
+  "abcActionAbcLedgerVoid": "Ledger entry voided",
+  "@abcActionAbcLedgerVoid": {
+    "description": "web key: abc.action.abc.ledger.void"
+  },
+  "abcActionAbcMemberAccountAdd": "Member account entry",
+  "@abcActionAbcMemberAccountAdd": {
+    "description": "web key: abc.action.abc.member_account.add"
+  },
+  "abcActionAbcMemberAccountVoid": "Member account entry voided",
+  "@abcActionAbcMemberAccountVoid": {
+    "description": "web key: abc.action.abc.member_account.void"
+  },
+  "abcTabInputs": "Inputs & stock",
+  "@abcTabInputs": {
+    "description": "web key: abc.tab.inputs"
+  },
+  "abcInpNewPlan": "Plan input demand",
+  "@abcInpNewPlan": {
+    "description": "web key: abc.inp.newPlan"
+  },
+  "abcInpNewPlanHint": "Each member's quantity = the cited rate per hectare × their area under the crop. Without a cited rate there is no quantity.",
+  "@abcInpNewPlanHint": {
+    "description": "web key: abc.inp.newPlanHint"
+  },
+  "abcInpProduct": "Product (registered)",
+  "@abcInpProduct": {
+    "description": "web key: abc.inp.product"
+  },
+  "abcInpNoRate": "no cited rate",
+  "@abcInpNoRate": {
+    "description": "web key: abc.inp.noRate"
+  },
+  "abcInpNoProducts": "No registered product with a rate for this crop yet.",
+  "@abcInpNoProducts": {
+    "description": "web key: abc.inp.noProducts"
+  },
+  "abcInpCreatePlan": "Create plan",
+  "@abcInpCreatePlan": {
+    "description": "web key: abc.inp.createPlan"
+  },
+  "abcInpPlanCreated": "Plan created: members can confirm their order in the app.",
+  "@abcInpPlanCreated": {
+    "description": "web key: abc.inp.planCreated"
+  },
+  "abcInpPlans": "Demand plans",
+  "@abcInpPlans": {
+    "description": "web key: abc.inp.plans"
+  },
+  "abcInpPlansHint": "Click a plan to see members' orders and to buy from a supplier.",
+  "@abcInpPlansHint": {
+    "description": "web key: abc.inp.plansHint"
+  },
+  "abcInpNoPlans": "No plans yet.",
+  "@abcInpNoPlans": {
+    "description": "web key: abc.inp.noPlans"
+  },
+  "abcInpRateLine": "Rate {rate} per ha · {source}",
+  "@abcInpRateLine": {
+    "description": "web key: abc.inp.rateLine",
+    "placeholders": {
+      "rate": {},
+      "source": {}
+    }
+  },
+  "abcInpNoRateLine": "No cited rate: quantities are not calculated. Ask your Development Agent.",
+  "@abcInpNoRateLine": {
+    "description": "web key: abc.inp.noRateLine"
+  },
+  "abcInpTotals": "{members} members · {ha} ha · suggested {suggested} · confirmed {confirmed} ({n})",
+  "@abcInpTotals": {
+    "description": "web key: abc.inp.totals",
+    "placeholders": {
+      "members": {},
+      "ha": {},
+      "suggested": {},
+      "confirmed": {},
+      "n": {}
+    }
+  },
+  "abcInpSuggested": "Suggested",
+  "@abcInpSuggested": {
+    "description": "web key: abc.inp.suggested"
+  },
+  "abcInpConfirmed": "Confirmed",
+  "@abcInpConfirmed": {
+    "description": "web key: abc.inp.confirmed"
+  },
+  "abcInpStatusSuggested": "Waiting for the member",
+  "@abcInpStatusSuggested": {
+    "description": "web key: abc.inp.status.suggested"
+  },
+  "abcInpStatusConfirmed": "Confirmed",
+  "@abcInpStatusConfirmed": {
+    "description": "web key: abc.inp.status.confirmed"
+  },
+  "abcInpStatusDeclined": "Not needed",
+  "@abcInpStatusDeclined": {
+    "description": "web key: abc.inp.status.declined"
+  },
+  "abcInpStatusDelivered": "Delivered",
+  "@abcInpStatusDelivered": {
+    "description": "web key: abc.inp.status.delivered"
+  },
+  "abcInpByMember": "in the app",
+  "@abcInpByMember": {
+    "description": "web key: abc.inp.by.member"
+  },
+  "abcInpByStaff": "by staff",
+  "@abcInpByStaff": {
+    "description": "web key: abc.inp.by.staff"
+  },
+  "abcInpConfirmForMember": "Member agreed in person",
+  "@abcInpConfirmForMember": {
+    "description": "web key: abc.inp.confirmForMember"
+  },
+  "abcInpBuy": "Buy from a supplier",
+  "@abcInpBuy": {
+    "description": "web key: abc.inp.buy"
+  },
+  "abcInpQty": "Quantity",
+  "@abcInpQty": {
+    "description": "web key: abc.inp.qty"
+  },
+  "abcInpUnitPrice": "Price per unit (birr)",
+  "@abcInpUnitPrice": {
+    "description": "web key: abc.inp.unitPrice"
+  },
+  "abcInpCreatePO": "Create purchase order",
+  "@abcInpCreatePO": {
+    "description": "web key: abc.inp.createPO"
+  },
+  "abcInpPoCreated": "Purchase order created (above the limit it waits for the board).",
+  "@abcInpPoCreated": {
+    "description": "web key: abc.inp.poCreated"
+  },
+  "abcInpNeutral": "Shops are listed nearest first; the badge and price are shown but never change the order.",
+  "@abcInpNeutral": {
+    "description": "web key: abc.inp.neutral"
+  },
+  "abcInpPos": "Purchase orders",
+  "@abcInpPos": {
+    "description": "web key: abc.inp.pos"
+  },
+  "abcInpPoPending": "Waiting for the board",
+  "@abcInpPoPending": {
+    "description": "web key: abc.inp.po.pending"
+  },
+  "abcInpPoApproved": "Approved",
+  "@abcInpPoApproved": {
+    "description": "web key: abc.inp.po.approved"
+  },
+  "abcInpPoRejected": "Rejected",
+  "@abcInpPoRejected": {
+    "description": "web key: abc.inp.po.rejected"
+  },
+  "abcInpPoReceived": "Received",
+  "@abcInpPoReceived": {
+    "description": "web key: abc.inp.po.received"
+  },
+  "abcInpPoCancelled": "Cancelled",
+  "@abcInpPoCancelled": {
+    "description": "web key: abc.inp.po.cancelled"
+  },
+  "abcInpReceive": "Receive",
+  "@abcInpReceive": {
+    "description": "web key: abc.inp.receive"
+  },
+  "abcInpReceived": "Received: the code passed the product check.",
+  "@abcInpReceived": {
+    "description": "web key: abc.inp.received"
+  },
+  "abcInpQuarantined": "Received but blocked: {reason}. It cannot be issued to members.",
+  "@abcInpQuarantined": {
+    "description": "web key: abc.inp.quarantined",
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "abcInpReceiveHint": "Type or scan the code on each pack: only packs that pass the product check can be issued.",
+  "@abcInpReceiveHint": {
+    "description": "web key: abc.inp.receiveHint"
+  },
+  "abcInpReasonOk": "passed",
+  "@abcInpReasonOk": {
+    "description": "web key: abc.inp.reason.ok"
+  },
+  "abcInpReasonNoCode": "no code given: check the pack first",
+  "@abcInpReasonNoCode": {
+    "description": "web key: abc.inp.reason.no_code"
+  },
+  "abcInpReasonDuplicateInAbc": "this code was already received by the ABC (possible copy)",
+  "@abcInpReasonDuplicateInAbc": {
+    "description": "web key: abc.inp.reason.duplicate_in_abc"
+  },
+  "abcInpReasonUnknownCode": "unknown code",
+  "@abcInpReasonUnknownCode": {
+    "description": "web key: abc.inp.reason.unknown_code"
+  },
+  "abcInpReasonPossibleCopy": "possible copy (seen too often)",
+  "@abcInpReasonPossibleCopy": {
+    "description": "web key: abc.inp.reason.possible_copy"
+  },
+  "abcInpReasonRecalled": "batch recalled",
+  "@abcInpReasonRecalled": {
+    "description": "web key: abc.inp.reason.recalled"
+  },
+  "abcInpReasonExpired": "expired",
+  "@abcInpReasonExpired": {
+    "description": "web key: abc.inp.reason.expired"
+  },
+  "abcInpReasonNotRegistered": "product not registered",
+  "@abcInpReasonNotRegistered": {
+    "description": "web key: abc.inp.reason.not_registered"
+  },
+  "abcInpReasonSupplierSuspended": "supplier suspended",
+  "@abcInpReasonSupplierSuspended": {
+    "description": "web key: abc.inp.reason.supplier_suspended"
+  },
+  "abcInpReasonOtherProduct": "the code belongs to another product",
+  "@abcInpReasonOtherProduct": {
+    "description": "web key: abc.inp.reason.other_product"
+  },
+  "abcInpStock": "Stock",
+  "@abcInpStock": {
+    "description": "web key: abc.inp.stock"
+  },
+  "abcInpNoStock": "No stock yet.",
+  "@abcInpNoStock": {
+    "description": "web key: abc.inp.noStock"
+  },
+  "abcInpLotAvailable": "Available",
+  "@abcInpLotAvailable": {
+    "description": "web key: abc.inp.lot.available"
+  },
+  "abcInpLotQuarantined": "Blocked",
+  "@abcInpLotQuarantined": {
+    "description": "web key: abc.inp.lot.quarantined"
+  },
+  "abcInpLotExpired": "Expired",
+  "@abcInpLotExpired": {
+    "description": "web key: abc.inp.lot.expired"
+  },
+  "abcInpLotExpiresSoon": "Expires soon",
+  "@abcInpLotExpiresSoon": {
+    "description": "web key: abc.inp.lot.expiresSoon"
+  },
+  "abcInpLotEmpty": "None left",
+  "@abcInpLotEmpty": {
+    "description": "web key: abc.inp.lot.empty"
+  },
+  "abcInpRelease": "Release after a physical check",
+  "@abcInpRelease": {
+    "description": "web key: abc.inp.release"
+  },
+  "abcInpReleaseReason": "How was this stock checked? (kept in the history)",
+  "@abcInpReleaseReason": {
+    "description": "web key: abc.inp.releaseReason"
+  },
+  "abcInpPayment": "Payment",
+  "@abcInpPayment": {
+    "description": "web key: abc.inp.payment"
+  },
+  "abcInpOnCredit": "On credit",
+  "@abcInpOnCredit": {
+    "description": "web key: abc.inp.onCredit"
+  },
+  "abcInpIssue": "Issue",
+  "@abcInpIssue": {
+    "description": "web key: abc.inp.issue"
+  },
+  "abcInpIssued": "Issued; on credit it was added to the member's account.",
+  "@abcInpIssued": {
+    "description": "web key: abc.inp.issued"
+  },
+  "abcInvOrderSuggested": "{org} plans {product}: {qty} {unit} for your {ha} ha. Do you want it?",
+  "@abcInvOrderSuggested": {
+    "description": "web key: abcInv.orderSuggested",
+    "placeholders": {
+      "org": {},
+      "product": {},
+      "qty": {},
+      "unit": {},
+      "ha": {}
+    }
+  },
+  "abcInvOrderConfirm": "Yes, order this",
+  "@abcInvOrderConfirm": {
+    "description": "web key: abcInv.orderConfirm"
+  },
+  "abcInvOrderChange": "Different amount",
+  "@abcInvOrderChange": {
+    "description": "web key: abcInv.orderChange"
+  },
+  "abcInvOrderOther": "How much do you want ({unit})?",
+  "@abcInvOrderOther": {
+    "description": "web key: abcInv.orderOther",
+    "placeholders": {
+      "unit": {}
+    }
+  },
+  "abcInvOrderDecline": "Not needed",
+  "@abcInvOrderDecline": {
+    "description": "web key: abcInv.orderDecline"
+  },
+  "abcActionAbcInputPlan": "Input demand planned",
+  "@abcActionAbcInputPlan": {
+    "description": "web key: abc.action.abc.input.plan"
+  },
+  "abcActionAbcInputOrderConfirm": "Input order confirmed",
+  "@abcActionAbcInputOrderConfirm": {
+    "description": "web key: abc.action.abc.input.order_confirm"
+  },
+  "abcActionAbcInputPoCreate": "Purchase order created",
+  "@abcActionAbcInputPoCreate": {
+    "description": "web key: abc.action.abc.input.po_create"
+  },
+  "abcActionAbcStockReceive": "Stock received",
+  "@abcActionAbcStockReceive": {
+    "description": "web key: abc.action.abc.stock.receive"
+  },
+  "abcActionAbcStockRelease": "Blocked stock released",
+  "@abcActionAbcStockRelease": {
+    "description": "web key: abc.action.abc.stock.release"
+  },
+  "abcActionAbcStockIssue": "Input issued to a member",
+  "@abcActionAbcStockIssue": {
+    "description": "web key: abc.action.abc.stock.issue"
+  },
+  "abcTabMachinery": "Machinery",
+  "@abcTabMachinery": {
+    "description": "web key: abc.tab.machinery"
+  },
+  "abcMacRegister": "Machinery register",
+  "@abcMacRegister": {
+    "description": "web key: abc.mac.register"
+  },
+  "abcMacNone": "No machines yet.",
+  "@abcMacNone": {
+    "description": "web key: abc.mac.none"
+  },
+  "abcMacAdd": "Add machine",
+  "@abcMacAdd": {
+    "description": "web key: abc.mac.add"
+  },
+  "abcMacAdded": "Machine added.",
+  "@abcMacAdded": {
+    "description": "web key: abc.mac.added"
+  },
+  "abcMacName": "Name",
+  "@abcMacName": {
+    "description": "web key: abc.mac.name"
+  },
+  "abcMacKind": "Kind",
+  "@abcMacKind": {
+    "description": "web key: abc.mac.kind"
+  },
+  "abcMacOwnership": "Owner",
+  "@abcMacOwnership": {
+    "description": "web key: abc.mac.ownership"
+  },
+  "abcMacReg": "Registration no.",
+  "@abcMacReg": {
+    "description": "web key: abc.mac.reg"
+  },
+  "abcMacPerHa": "Rate per ha (birr)",
+  "@abcMacPerHa": {
+    "description": "web key: abc.mac.perHa"
+  },
+  "abcMacPerHour": "Rate per hour (birr)",
+  "@abcMacPerHour": {
+    "description": "web key: abc.mac.perHour"
+  },
+  "abcMacHours": "Hours per week",
+  "@abcMacHours": {
+    "description": "web key: abc.mac.hours"
+  },
+  "abcMacKindTractor": "Tractor",
+  "@abcMacKindTractor": {
+    "description": "web key: abc.mac.kind.tractor"
+  },
+  "abcMacKindCombine": "Combine harvester",
+  "@abcMacKindCombine": {
+    "description": "web key: abc.mac.kind.combine"
+  },
+  "abcMacKindThresher": "Thresher",
+  "@abcMacKindThresher": {
+    "description": "web key: abc.mac.kind.thresher"
+  },
+  "abcMacKindTruck": "Truck",
+  "@abcMacKindTruck": {
+    "description": "web key: abc.mac.kind.truck"
+  },
+  "abcMacKindPump": "Water pump",
+  "@abcMacKindPump": {
+    "description": "web key: abc.mac.kind.pump"
+  },
+  "abcMacKindPlanter": "Planter",
+  "@abcMacKindPlanter": {
+    "description": "web key: abc.mac.kind.planter"
+  },
+  "abcMacKindSprayer": "Sprayer",
+  "@abcMacKindSprayer": {
+    "description": "web key: abc.mac.kind.sprayer"
+  },
+  "abcMacKindOther": "Other",
+  "@abcMacKindOther": {
+    "description": "web key: abc.mac.kind.other"
+  },
+  "abcMacOwnAbc": "ABC's own",
+  "@abcMacOwnAbc": {
+    "description": "web key: abc.mac.own.abc"
+  },
+  "abcMacOwnAtiProvided": "Provided by ATI",
+  "@abcMacOwnAtiProvided": {
+    "description": "web key: abc.mac.own.ati_provided"
+  },
+  "abcMacOwnRented": "Rented",
+  "@abcMacOwnRented": {
+    "description": "web key: abc.mac.own.rented"
+  },
+  "abcMacCondGood": "Good",
+  "@abcMacCondGood": {
+    "description": "web key: abc.mac.cond.good"
+  },
+  "abcMacCondNeedsRepair": "Needs repair",
+  "@abcMacCondNeedsRepair": {
+    "description": "web key: abc.mac.cond.needs_repair"
+  },
+  "abcMacCondOutOfService": "Out of service",
+  "@abcMacCondOutOfService": {
+    "description": "web key: abc.mac.cond.out_of_service"
+  },
+  "abcMacCondition": "Condition",
+  "@abcMacCondition": {
+    "description": "web key: abc.mac.condition"
+  },
+  "abcMacServiceDue": "Service due",
+  "@abcMacServiceDue": {
+    "description": "web key: abc.mac.serviceDue"
+  },
+  "abcMacUtil": "{pct}% used · {hours} of {available} h · {ha} ha (30 days)",
+  "@abcMacUtil": {
+    "description": "web key: abc.mac.util",
+    "placeholders": {
+      "pct": {},
+      "hours": {},
+      "available": {},
+      "ha": {}
+    }
+  },
+  "abcMacLastService": "Last service {date}",
+  "@abcMacLastService": {
+    "description": "web key: abc.mac.lastService",
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "abcMacNoService": "No service recorded",
+  "@abcMacNoService": {
+    "description": "web key: abc.mac.noService"
+  },
+  "abcMacNextService": "next {date}",
+  "@abcMacNextService": {
+    "description": "web key: abc.mac.nextService",
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "abcMacWork": "Work done",
+  "@abcMacWork": {
+    "description": "web key: abc.mac.work"
+  },
+  "abcMacCost": "Cost (birr)",
+  "@abcMacCost": {
+    "description": "web key: abc.mac.cost"
+  },
+  "abcMacNext": "Next service",
+  "@abcMacNext": {
+    "description": "web key: abc.mac.next"
+  },
+  "abcMacAddService": "Record service",
+  "@abcMacAddService": {
+    "description": "web key: abc.mac.addService"
+  },
+  "abcMacBookings": "Service bookings",
+  "@abcMacBookings": {
+    "description": "web key: abc.mac.bookings"
+  },
+  "abcMacBookingsHint": "In route order: by day, then kebele, then distance from the ABC office.",
+  "@abcMacBookingsHint": {
+    "description": "web key: abc.mac.bookingsHint"
+  },
+  "abcMacNoBookings": "No open bookings.",
+  "@abcMacNoBookings": {
+    "description": "web key: abc.mac.noBookings"
+  },
+  "abcMacChooseMachine": "Machine",
+  "@abcMacChooseMachine": {
+    "description": "web key: abc.mac.chooseMachine"
+  },
+  "abcMacSchedule": "Schedule",
+  "@abcMacSchedule": {
+    "description": "web key: abc.mac.schedule"
+  },
+  "abcMacHoursWorked": "Hours",
+  "@abcMacHoursWorked": {
+    "description": "web key: abc.mac.hoursWorked"
+  },
+  "abcMacOperator": "Operator",
+  "@abcMacOperator": {
+    "description": "web key: abc.mac.operator"
+  },
+  "abcMacFuel": "Fuel (L)",
+  "@abcMacFuel": {
+    "description": "web key: abc.mac.fuel"
+  },
+  "abcMacFuelCost": "Fuel cost",
+  "@abcMacFuelCost": {
+    "description": "web key: abc.mac.fuelCost"
+  },
+  "abcMacDone": "Job done",
+  "@abcMacDone": {
+    "description": "web key: abc.mac.done"
+  },
+  "abcMacJobLogged": "Job recorded; the charge was added to the member's account.",
+  "@abcMacJobLogged": {
+    "description": "web key: abc.mac.jobLogged"
+  },
+  "abcMacJobs": "Job log",
+  "@abcMacJobs": {
+    "description": "web key: abc.mac.jobs"
+  },
+  "abcMacStatusRequested": "Requested",
+  "@abcMacStatusRequested": {
+    "description": "web key: abc.mac.status.requested"
+  },
+  "abcMacStatusScheduled": "Scheduled",
+  "@abcMacStatusScheduled": {
+    "description": "web key: abc.mac.status.scheduled"
+  },
+  "abcMacStatusDone": "Done",
+  "@abcMacStatusDone": {
+    "description": "web key: abc.mac.status.done"
+  },
+  "abcMacStatusCancelled": "Cancelled",
+  "@abcMacStatusCancelled": {
+    "description": "web key: abc.mac.status.cancelled"
+  },
+  "abcMacSvcPloughing": "Ploughing",
+  "@abcMacSvcPloughing": {
+    "description": "web key: abc.mac.svc.ploughing"
+  },
+  "abcMacSvcPlanting": "Planting",
+  "@abcMacSvcPlanting": {
+    "description": "web key: abc.mac.svc.planting"
+  },
+  "abcMacSvcSpraying": "Spraying",
+  "@abcMacSvcSpraying": {
+    "description": "web key: abc.mac.svc.spraying"
+  },
+  "abcMacSvcHarvesting": "Harvesting",
+  "@abcMacSvcHarvesting": {
+    "description": "web key: abc.mac.svc.harvesting"
+  },
+  "abcMacSvcThreshing": "Threshing",
+  "@abcMacSvcThreshing": {
+    "description": "web key: abc.mac.svc.threshing"
+  },
+  "abcMacSvcTransport": "Transport",
+  "@abcMacSvcTransport": {
+    "description": "web key: abc.mac.svc.transport"
+  },
+  "abcMacSvcOther": "Other",
+  "@abcMacSvcOther": {
+    "description": "web key: abc.mac.svc.other"
+  },
+  "abcInvBook": "Request a machinery service",
+  "@abcInvBook": {
+    "description": "web key: abcInv.book"
+  },
+  "abcInvBookSend": "Send request",
+  "@abcInvBookSend": {
+    "description": "web key: abcInv.bookSend"
+  },
+  "abcActionAbcMachineAdd": "Machine added",
+  "@abcActionAbcMachineAdd": {
+    "description": "web key: abc.action.abc.machine.add"
+  },
+  "abcActionAbcMachineUpdate": "Machine changed",
+  "@abcActionAbcMachineUpdate": {
+    "description": "web key: abc.action.abc.machine.update"
+  },
+  "abcActionAbcMachineJob": "Machinery job recorded",
+  "@abcActionAbcMachineJob": {
+    "description": "web key: abc.action.abc.machine.job"
+  },
+  "abcActionAbcMachineMaintenance": "Machine serviced",
+  "@abcActionAbcMachineMaintenance": {
+    "description": "web key: abc.action.abc.machine.maintenance"
+  },
+  "abcActionAbcBookingRequest": "Service requested",
+  "@abcActionAbcBookingRequest": {
+    "description": "web key: abc.action.abc.booking.request"
+  },
+  "abcActionAbcBookingSchedule": "Service scheduled",
+  "@abcActionAbcBookingSchedule": {
+    "description": "web key: abc.action.abc.booking.schedule"
+  },
+  "abcActionAbcBookingCancel": "Booking cancelled",
+  "@abcActionAbcBookingCancel": {
+    "description": "web key: abc.action.abc.booking.cancel"
+  },
+  "navMyAbc": "My ABC",
+  "@navMyAbc": {
+    "description": "web key: nav.myAbc"
+  },
+  "myabcDescription": "Your shares, payments, account, input orders, machinery bookings and meetings in your ABC.",
+  "@myabcDescription": {
+    "description": "web key: myabc.description"
+  },
+  "myabcNone": "You are not a member of an ABC yet.",
+  "@myabcNone": {
+    "description": "web key: myabc.none"
+  },
+  "myabcMemberNo": "Member no. {no}",
+  "@myabcMemberNo": {
+    "description": "web key: myabc.memberNo",
+    "placeholders": {
+      "no": {}
+    }
+  },
+  "myabcShares": "My shares",
+  "@myabcShares": {
+    "description": "web key: myabc.shares"
+  },
+  "myabcOwedShares": "Still to pay on shares",
+  "@myabcOwedShares": {
+    "description": "web key: myabc.owedShares"
+  },
+  "myabcBalance": "I owe the ABC",
+  "@myabcBalance": {
+    "description": "web key: myabc.balance"
+  },
+  "myabcWeight": "My voting weight",
+  "@myabcWeight": {
+    "description": "web key: myabc.weight"
+  },
+  "myabcVotes": "Check your recorded votes",
+  "@myabcVotes": {
+    "description": "web key: myabc.votes"
+  },
+  "myabcShareValue": "One share is worth {value}.",
+  "@myabcShareValue": {
+    "description": "web key: myabc.shareValue",
+    "placeholders": {
+      "value": {}
+    }
+  },
+  "myabcNoShares": "No pledge yet. Ask the ABC office.",
+  "@myabcNoShares": {
+    "description": "web key: myabc.noShares"
+  },
+  "myabcCertificates": "Certificates: {list}",
+  "@myabcCertificates": {
+    "description": "web key: myabc.certificates",
+    "placeholders": {
+      "list": {}
+    }
+  },
+  "myabcAccount": "My account",
+  "@myabcAccount": {
+    "description": "web key: myabc.account"
+  },
+  "myabcWeightLine": "Your weight is {pct}: {land} ha of land and {prod} qt of production ({label}).",
+  "@myabcWeightLine": {
+    "description": "web key: myabc.weightLine",
+    "placeholders": {
+      "pct": {},
+      "land": {},
+      "prod": {},
+      "label": {}
+    }
+  },
+  "myabcMeetings": "Upcoming meetings",
+  "@myabcMeetings": {
+    "description": "web key: myabc.meetings"
+  },
+  "myabcNoMeetings": "No meetings planned.",
+  "@myabcNoMeetings": {
+    "description": "web key: myabc.noMeetings"
+  },
+  "myabcOrders": "Input orders",
+  "@myabcOrders": {
+    "description": "web key: myabc.orders"
+  },
+  "myabcNoOrders": "No input orders.",
+  "@myabcNoOrders": {
+    "description": "web key: myabc.noOrders"
+  },
+  "myabcService": "Service",
+  "@myabcService": {
+    "description": "web key: myabc.service"
+  },
+  "myabcPlot": "Plot",
+  "@myabcPlot": {
+    "description": "web key: myabc.plot"
+  },
+  "myabcPlots": "My plots",
+  "@myabcPlots": {
+    "description": "web key: myabc.plots"
+  },
+  "myabcBooked": "Request sent to the ABC.",
+  "@myabcBooked": {
+    "description": "web key: myabc.booked"
+  },
+  "myabcSayShares": "You hold {n} shares in {org}.",
+  "@myabcSayShares": {
+    "description": "web key: myabc.say.shares",
+    "placeholders": {
+      "n": {},
+      "org": {}
+    }
+  },
+  "myabcSayOwedShares": "You still have {amount} to pay on your shares.",
+  "@myabcSayOwedShares": {
+    "description": "web key: myabc.say.owedShares",
+    "placeholders": {
+      "amount": {}
+    }
+  },
+  "myabcSayOwe": "You owe the ABC {amount}.",
+  "@myabcSayOwe": {
+    "description": "web key: myabc.say.owe",
+    "placeholders": {
+      "amount": {}
+    }
+  },
+  "myabcSayNothingOwed": "You owe the ABC nothing.",
+  "@myabcSayNothingOwed": {
+    "description": "web key: myabc.say.nothingOwed"
+  },
+  "myabcSayWeight": "Your voting weight is {pct}.",
+  "@myabcSayWeight": {
+    "description": "web key: myabc.say.weight",
+    "placeholders": {
+      "pct": {}
+    }
+  },
+  "myabcSayMeeting": "Next meeting: {title}, {date}.",
+  "@myabcSayMeeting": {
+    "description": "web key: myabc.say.meeting",
+    "placeholders": {
+      "title": {},
+      "date": {}
+    }
+  },
+  "abcInvOpenMyAbc": "Open My ABC: shares, account, orders and bookings →",
+  "@abcInvOpenMyAbc": {
+    "description": "web key: abcInv.openMyAbc"
   }
 }

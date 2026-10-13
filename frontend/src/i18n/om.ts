@@ -1455,7 +1455,7 @@ export const om: Record<MessageKey, string> = {
   "outlook.none": "Midhaan kanaaf ammaaf waqtiin midhaanii galmaa'e hin jiru.",  // draft – needs native review
 
   // ── ABC and buy requests ──────────────────────────────────────────────────
-  "nav.abc": "ABC koo",  // draft – needs native review
+  "nav.abc": "Waajjira ABC",  // draft – needs native review
   "role.abc_manager": "Hoji gaggeessaa ABC",  // draft – needs native review
   "role.abc_manager.desc": "Hoji gaggeessaa dhaabbata daldala qonnaa qonnaan bultootaa (ABC). Miseensota fudhatan waliin hojjeta: gumaacha, karoora midhaanii, ergaa fi gaaffii bittootaa.",  // draft – needs native review
   "perm.abc_manage": "ABC ofii bulchuu",  // draft – needs native review
@@ -2439,4 +2439,35 @@ export const om: Record<MessageKey, string> = {
   "abc.action.abc.booking.request": "Tajaajilli gaafatame",  // draft – needs native review
   "abc.action.abc.booking.schedule": "Tajaajilli beellamame",  // draft – needs native review
   "abc.action.abc.booking.cancel": "Beellamni haqame",  // draft – needs native review
+
+  // ── My ABC (A9) ───────────────────────────────────────────────────────────
+  "nav.myAbc": "ABC koo",  // draft – needs native review
+  "myabc.description": "Aksiyoona, kaffaltii, herrega, ajaja galtee, beellama maashinii fi walgahii ABC keessan keessatti.",  // draft – needs native review
+  "myabc.none": "Ammallee miseensa ABC miti.",  // draft – needs native review
+  "myabc.memberNo": "Lakk. miseensaa {no}",  // draft – needs native review
+  "myabc.shares": "Aksiyoona koo",  // draft – needs native review
+  "myabc.owedShares": "Aksiyoona irratti kan hafe",  // draft – needs native review
+  "myabc.balance": "ABCf kan qabu",  // draft – needs native review
+  "myabc.weight": "Ulfaatina sagalee koo",  // draft – needs native review
+  "myabc.votes": "Sagalee keessan galmaa'e mirkaneessaa",  // draft – needs native review
+  "myabc.shareValue": "Aksiyoonni tokko {value} dha.",  // draft – needs native review
+  "myabc.noShares": "Waadaan ammallee hin jiru. Waajjira ABC gaafadhaa.",  // draft – needs native review
+  "myabc.certificates": "Ragaalee: {list}",  // draft – needs native review
+  "myabc.account": "Herrega koo",  // draft – needs native review
+  "myabc.weightLine": "Ulfaatinni keessan {pct}: lafa hektaara {land} fi oomisha kuntaala {prod} ({label}).",  // draft – needs native review
+  "myabc.meetings": "Walgahii dhufan",  // draft – needs native review
+  "myabc.noMeetings": "Walgahiin karoorfame hin jiru.",  // draft – needs native review
+  "myabc.orders": "Ajaja galtee",  // draft – needs native review
+  "myabc.noOrders": "Ajajni galtee hin jiru.",  // draft – needs native review
+  "myabc.service": "Tajaajila",  // draft – needs native review
+  "myabc.plot": "Lafa",  // draft – needs native review
+  "myabc.plots": "Lafa koo",  // draft – needs native review
+  "myabc.booked": "Gaaffiin ABCf ergameera.",  // draft – needs native review
+  "myabc.say.shares": "{org} keessatti aksiyoona {n} qabdu.",  // draft – needs native review
+  "myabc.say.owedShares": "Aksiyoona keessan irratti ammallee {amount} kaffaluu qabdu.",  // draft – needs native review
+  "myabc.say.owe": "ABCf {amount} liqii qabdu.",  // draft – needs native review
+  "myabc.say.nothingOwed": "ABCf liqii hin qabdan.",  // draft – needs native review
+  "myabc.say.weight": "Ulfaatinni sagalee keessan {pct} dha.",  // draft – needs native review
+  "myabc.say.meeting": "Walgahii itti aanu: {title}, {date}.",  // draft – needs native review
+  "abcInv.openMyAbc": "ABC koo bani: aksiyoona, herrega, ajajaa fi beellama →",  // draft – needs native review
 };

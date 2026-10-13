@@ -16,6 +16,7 @@ import Financial from "@/pages/Financial/Financial";
 import InputSuppliers from "@/pages/Inputs/InputSuppliers";
 import Livestock from "@/pages/Market/Livestock";
 import AbcRules from "@/pages/Admin/AbcRules";
+import MyAbc from "@/pages/Abc/MyAbc";
 import MarketIntel from "@/pages/Market/MarketIntel";
 import AdvisorySettings from "@/pages/Admin/AdvisorySettings";
 import AuditLog from "@/pages/Admin/AuditLog";
@@ -74,6 +75,7 @@ export default function App() {
             <Route path="/market" element={<MarketIntel />} />
             <Route path="/livestock" element={<Livestock />} />
             <Route path="/map" element={<Suspense fallback={<LoadingState />}><MapPage /></Suspense>} />
+            <Route path="/my-abc" element={<MyAbc />} />
             <Route path="/advisory" element={<Advisory />} />
             <Route path="/tips" element={<TipsPage />} />
             <Route path="/profile" element={<Profile />} />

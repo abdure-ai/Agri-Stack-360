@@ -42,6 +42,7 @@ from backend.routers.abc_governance import router as abc_governance_router
 from backend.routers.abc_finance import router as abc_finance_router
 from backend.routers.abc_inputs import router as abc_inputs_router
 from backend.routers.abc_machinery import router as abc_machinery_router
+from backend.routers.abc_my import router as abc_my_router
 from backend import ai_keys
 from backend import admin_areas, audit, erasure, input_trust, platform_db, tips, training_data
 from backend.advisory.schema import ensure_schema
@@ -143,6 +144,7 @@ app.include_router(abc_governance_router, prefix="/api")
 app.include_router(abc_finance_router, prefix="/api")
 app.include_router(abc_inputs_router, prefix="/api")
 app.include_router(abc_machinery_router, prefix="/api")
+app.include_router(abc_my_router, prefix="/api")
 app.include_router(beckn_router,       prefix="/api")   # signed network requests, off unless BECKN_ENABLED=1
 
 

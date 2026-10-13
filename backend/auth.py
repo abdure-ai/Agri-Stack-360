@@ -153,6 +153,12 @@ def user_payload(user: dict, extra: tuple[str, ...] = ()) -> dict:
             out["abc_companies"] = []
         if out["abc_companies"]:
             out["permissions"] = sorted({*out["permissions"], "abc:member"})
+        try:                   # shareholder of at least one ABC: shows "My ABC"
+            if get_platform_connection().execute("SELECT 1 FROM abc_members WHERE farmer_id=? AND status='active' LIMIT 1",
+                                                 (user["id"],)).fetchone():
+                out["permissions"] = sorted({*out["permissions"], "abc:shareholder"})
+        except Exception:
+            pass
     return out
 
 

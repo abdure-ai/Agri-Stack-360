@@ -50,6 +50,8 @@ export type Permission =
   | "abc:manage"
   /** Has a role inside at least one ABC (shows the ABC screens; checked per company on the server). */
   | "abc:member"
+  /** Member (shareholder) of at least one ABC: shows "My ABC". */
+  | "abc:shareholder"
   | "trade:request"
   | "estate:manage"
   | "registry:manage"

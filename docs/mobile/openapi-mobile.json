@@ -3376,6 +3376,389 @@
         }
       }
     },
+    "/api/abc/my/votes": {
+      "get": {
+        "tags": [
+          "abc-governance"
+        ],
+        "summary": "My Votes",
+        "operationId": "my_votes_api_abc_my_votes_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/abc/my/votes/{vote_id}/confirm": {
+      "post": {
+        "tags": [
+          "abc-governance"
+        ],
+        "summary": "Confirm",
+        "operationId": "confirm_api_abc_my_votes__vote_id__confirm_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "vote_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Vote Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend__routers__abc_governance__ConfirmIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/abc/my/statement": {
+      "get": {
+        "tags": [
+          "abc-finance"
+        ],
+        "summary": "My Statement",
+        "operationId": "my_statement_api_abc_my_statement_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "org_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Org Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/abc/my/orders": {
+      "get": {
+        "tags": [
+          "abc-inputs"
+        ],
+        "summary": "My Orders",
+        "operationId": "my_orders_api_abc_my_orders_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/abc/my/orders/{order_id}/confirm": {
+      "post": {
+        "tags": [
+          "abc-inputs"
+        ],
+        "summary": "My Confirm",
+        "operationId": "my_confirm_api_abc_my_orders__order_id__confirm_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "order_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Order Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend__routers__abc_inputs__ConfirmIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/abc/my/bookings": {
+      "get": {
+        "tags": [
+          "abc-machinery"
+        ],
+        "summary": "My Bookings",
+        "operationId": "my_bookings_api_abc_my_bookings_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "abc-machinery"
+        ],
+        "summary": "My Book",
+        "operationId": "my_book_api_abc_my_bookings_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MyBookingIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/abc/my/bookings/{booking_id}/cancel": {
+      "post": {
+        "tags": [
+          "abc-machinery"
+        ],
+        "summary": "My Cancel",
+        "operationId": "my_cancel_api_abc_my_bookings__booking_id__cancel_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "booking_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Booking Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/abc/my/companies": {
+      "get": {
+        "tags": [
+          "abc-my"
+        ],
+        "summary": "Companies",
+        "operationId": "companies_api_abc_my_companies_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/abc/my/summary": {
+      "get": {
+        "tags": [
+          "abc-my"
+        ],
+        "summary": "Summary",
+        "operationId": "summary_api_abc_my_summary_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "org_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Org Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/health": {
       "get": {
         "summary": "Health",
@@ -4008,6 +4391,75 @@
           "price_level_coverage"
         ],
         "title": "MetaResponse"
+      },
+      "MyBookingIn": {
+        "properties": {
+          "org_id": {
+            "type": "integer",
+            "title": "Org Id"
+          },
+          "service": {
+            "type": "string",
+            "enum": [
+              "ploughing",
+              "planting",
+              "spraying",
+              "harvesting",
+              "threshing",
+              "transport",
+              "other"
+            ],
+            "title": "Service"
+          },
+          "farm_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Farm Id"
+          },
+          "area_ha": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 10000.0,
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area Ha"
+          },
+          "requested_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Requested Date"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 300
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "org_id",
+          "service",
+          "requested_date"
+        ],
+        "title": "MyBookingIn"
       },
       "NoteRequest": {
         "properties": {
@@ -4855,6 +5307,36 @@
           "unit"
         ],
         "title": "VarietyItem"
+      },
+      "backend__routers__abc_governance__ConfirmIn": {
+        "properties": {
+          "correct": {
+            "type": "boolean",
+            "title": "Correct",
+            "default": true
+          }
+        },
+        "type": "object",
+        "title": "ConfirmIn"
+      },
+      "backend__routers__abc_inputs__ConfirmIn": {
+        "properties": {
+          "qty": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 10000000.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Qty"
+          }
+        },
+        "type": "object",
+        "title": "ConfirmIn"
       },
       "backend__routers__da__VerifyRequest": {
         "properties": {

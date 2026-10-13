@@ -1453,7 +1453,7 @@ export const en = {
   "outlook.none": "No crop seasons recorded for this crop yet.",
 
   // ── ABC and buy requests ──────────────────────────────────────────────────
-  "nav.abc": "My ABC",
+  "nav.abc": "ABC office",
   "role.abc_manager": "ABC manager",
   "role.abc_manager.desc": "Manager of a farmer agribusiness company (ABC). Works with members who accepted: contributions, crop planning, messages and buyer requests.",
   "perm.abc_manage": "Manage own ABC",
@@ -2437,6 +2437,37 @@ export const en = {
   "abc.action.abc.booking.request": "Service requested",
   "abc.action.abc.booking.schedule": "Service scheduled",
   "abc.action.abc.booking.cancel": "Booking cancelled",
+
+  // ── My ABC (A9) ───────────────────────────────────────────────────────────
+  "nav.myAbc": "My ABC",
+  "myabc.description": "Your shares, payments, account, input orders, machinery bookings and meetings in your ABC.",
+  "myabc.none": "You are not a member of an ABC yet.",
+  "myabc.memberNo": "Member no. {no}",
+  "myabc.shares": "My shares",
+  "myabc.owedShares": "Still to pay on shares",
+  "myabc.balance": "I owe the ABC",
+  "myabc.weight": "My voting weight",
+  "myabc.votes": "Check your recorded votes",
+  "myabc.shareValue": "One share is worth {value}.",
+  "myabc.noShares": "No pledge yet. Ask the ABC office.",
+  "myabc.certificates": "Certificates: {list}",
+  "myabc.account": "My account",
+  "myabc.weightLine": "Your weight is {pct}: {land} ha of land and {prod} qt of production ({label}).",
+  "myabc.meetings": "Upcoming meetings",
+  "myabc.noMeetings": "No meetings planned.",
+  "myabc.orders": "Input orders",
+  "myabc.noOrders": "No input orders.",
+  "myabc.service": "Service",
+  "myabc.plot": "Plot",
+  "myabc.plots": "My plots",
+  "myabc.booked": "Request sent to the ABC.",
+  "myabc.say.shares": "You hold {n} shares in {org}.",
+  "myabc.say.owedShares": "You still have {amount} to pay on your shares.",
+  "myabc.say.owe": "You owe the ABC {amount}.",
+  "myabc.say.nothingOwed": "You owe the ABC nothing.",
+  "myabc.say.weight": "Your voting weight is {pct}.",
+  "myabc.say.meeting": "Next meeting: {title}, {date}.",
+  "abcInv.openMyAbc": "Open My ABC: shares, account, orders and bookings →",
 } satisfies Record<string, string>;
 
 export type MessageKey = keyof typeof en;

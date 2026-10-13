@@ -136,6 +136,7 @@ The server checks every permission again on every request. Hiding a screen is fo
 | Map | `GET /map/layers`, `GET /map/crops`, boundary files `/geo/eth_adm{1,2,3}.json` (see 8.11) |
 | Credit | `GET /financial/profile`, `GET /financial/loan-products` |
 | Requests to me | `GET /users/credit-requests`, `POST /users/credit-requests/{id}/approve\|decline\|revoke`; `GET /users/abc-invitations`, `POST /users/abc-invitations/{org_id}/accept\|decline\|leave` |
+| My ABC | `GET /abc/my/summary`, see 8.12 |
 | ABC membership | `GET /users/abc-invitations` (accept/decline/leave), `GET /abc/my/memberships`, `GET /abc/my/agreement/file?org_id=`, `POST /abc/my/agreement/sign?org_id=` (read, then confirm the founding agreement) |
 | Profile and privacy | `GET/PUT /users/profile`, `GET/PUT /users/consent`, `GET /users/my-data`, `GET/POST /users/my-data/erase-request`, `POST …/erase-request/cancel` |
 
@@ -316,6 +317,22 @@ layers}`. Only the layers this user may see are in `layers`; build the layer swi
   OCHA (CC BY-IGO)". Follow the OSM tile usage policy (set a User-Agent, no bulk downloads); for heavy use, a tile
   provider with a key.
 
+### 8.12 My ABC (members of a farmer agribusiness company)
+
+Show a "My ABC" screen when `GET /auth/me` has the permission `abc:shareholder`.
+
+- `GET /abc/my/companies` → the member's ABCs; `GET /abc/my/summary?org_id=` → everything on one screen:
+  `shares_held`, `certificates[]`, `pledges[]` (`owed_etb`, `due_on`, `overdue`), `owed_on_shares_etb`,
+  `share_payments[]` (receipts), `voting_weight` (`weight` 0-1, `land_ha`, `production_qt`), `plots[]`, `orders[]`,
+  `bookings[]`, `account` (`balance_etb` > 0 = the member owes the ABC; `transactions[]`), `meetings[]`,
+  `votes_to_confirm[]`, `agreement`. Only the member's own records.
+- Actions: input order `POST /abc/my/orders/{id}/confirm {qty}` (`qty: 0` = not needed); machinery request
+  `POST /abc/my/bookings {org_id, service, farm_id?, area_ha?, requested_date}` and `POST /abc/my/bookings/{id}/cancel`;
+  vote check `POST /abc/my/votes/{id}/confirm {correct}`; founding agreement (see table in 6).
+- Receipts, payment reminders and meeting notices arrive as ordinary alerts (`GET /advisory/alerts`), message keys
+  `abc_share_receipt`, `abc_member_receipt`, `abc_share_due`, `abc_share_overdue`, `abc_meeting_notice`.
+- Offer read-aloud of the summary (`POST /advisory/tts`), as on the web. Texts: `myabc.*`, `abc.*`.
+
 ## 9. Offline (required)
 
 Many farmers have no signal in the field. The web app already behaves like this; the mobile app must match it.
@@ -444,3 +461,4 @@ show that clearly.
 | 2026-10-13 | Treatment chain (8.3, 8.7): rates from the MoA manual with the amount for the plot, nearest shops with price, verified-seller badge and phone, pack check against the plan (`diagnosis_id`). New fields only; nothing removed |
 | 2026-10-13 | New: map (6, 8.11): `/map/layers`, `/map/crops`, boundary files; `map.*` texts. Nothing existing changed |
 | 2026-10-13 | ABC membership (6): read and confirm the founding agreement (`/abc/my/*`); `abcInv.*` texts. Nothing existing changed |
+| 2026-10-13 | New: My ABC (8.12) for ABC members: summary, orders, machinery bookings, vote checks. Nothing existing changed |

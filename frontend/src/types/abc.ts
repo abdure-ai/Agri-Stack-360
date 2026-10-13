@@ -496,3 +496,26 @@ export interface MyAbcBooking {
   id: number; service: string; area_ha: number | null; requested_date: string; scheduled_date: string | null;
   status: AbcBooking["status"]; machine: string | null; field_name: string | null; org_id: number; org: string;
 }
+
+// ── My ABC (A9) ──────────────────────────────────────────────────────────────
+
+export interface MyAbcSummary {
+  org: { id: number; name: string; phone: string | null };
+  status: AbcStatus;
+  member_no: number | null;
+  share_value_etb: number | null;
+  shares_held: number;
+  certificates: AbcCertificate[];
+  pledges: { id: number; kind: "minimum" | "extra"; shares: number; due_on: string | null; paid_etb: number; owed_etb: number; overdue: boolean }[];
+  owed_on_shares_etb: number;
+  share_payments: AbcSharePayment[];
+  voting_weight: { weight: number; land_ha: number; production_qt: number; snapshot: string; as_of: string } | null;
+  plots: { id: number; field_name: string; crop_name: string | null; area_ha: number | null; irrigated: number | null; active_season: string | null }[];
+  orders: MyAbcOrder[];
+  bookings: AbcBooking[];
+  account: { balance_etb: number; transactions: AbcMemberTxn[] };
+  meetings: { id: number; kind: "general_assembly" | "board"; title: string; scheduled_at: string; location: string | null; agenda: string[] }[];
+  votes_to_confirm: MyAbcVote[];
+  agreement: { uploaded: boolean; version: number | null; signed: { method: string; signed_at: string } | null };
+  official_record_note: string;
+}

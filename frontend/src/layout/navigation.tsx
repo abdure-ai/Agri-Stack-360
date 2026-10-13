@@ -65,6 +65,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { name: "nav.map", path: "/map", icon: <MapIcon className={ICON} strokeWidth={1.5} /> },
       { name: "nav.advisory", path: "/advisory", icon: <AiIcon className={ICON} /> },
       { name: "nav.tips", path: "/tips", icon: <Lightbulb className={ICON} strokeWidth={1.5} /> },
+      { name: "nav.myAbc", path: "/my-abc", icon: <Handshake className={ICON} strokeWidth={1.5} />, permissions: ["abc:shareholder"] },
     ],
   },
   {

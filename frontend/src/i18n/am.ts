@@ -1455,7 +1455,7 @@ export const am: Record<MessageKey, string> = {
   "outlook.none": "ለዚህ ሰብል እስካሁን የተመዘገበ የሰብል ወቅት የለም።",  // draft – needs native review
 
   // ── ABC and buy requests ──────────────────────────────────────────────────
-  "nav.abc": "የእኔ ABC",  // draft – needs native review
+  "nav.abc": "የABC ጽሕፈት ቤት",  // draft – needs native review
   "role.abc_manager": "የABC ሥራ አስኪያጅ",  // draft – needs native review
   "role.abc_manager.desc": "የአርሶ አደሮች የግብርና ንግድ ኩባንያ (ABC) ሥራ አስኪያጅ። ከተቀበሉ አባላት ጋር ይሰራል፦ መዋጮዎች፣ የሰብል ዕቅድ፣ መልእክቶችና የገዢዎች ጥያቄዎች።",  // draft – needs native review
   "perm.abc_manage": "የራስን ABC ማስተዳደር",  // draft – needs native review
@@ -2439,4 +2439,35 @@ export const am: Record<MessageKey, string> = {
   "abc.action.abc.booking.request": "አገልግሎት ተጠይቋል",  // draft – needs native review
   "abc.action.abc.booking.schedule": "የአገልግሎት ቀጠሮ ተይዟል",  // draft – needs native review
   "abc.action.abc.booking.cancel": "ቀጠሮ ተሰርዟል",  // draft – needs native review
+
+  // ── My ABC (A9) ───────────────────────────────────────────────────────────
+  "nav.myAbc": "የእኔ ABC",  // draft – needs native review
+  "myabc.description": "በABCዎ ውስጥ ያሉዎት አክሲዮኖች፣ ክፍያዎች፣ ሂሳብ፣ የግብዓት ትዕዛዞች፣ የማሽነሪ ቀጠሮዎችና ስብሰባዎች።",  // draft – needs native review
+  "myabc.none": "ገና የABC አባል አይደሉም።",  // draft – needs native review
+  "myabc.memberNo": "የአባል ቁጥር {no}",  // draft – needs native review
+  "myabc.shares": "አክሲዮኖቼ",  // draft – needs native review
+  "myabc.owedShares": "በአክሲዮን ላይ የሚቀረኝ",  // draft – needs native review
+  "myabc.balance": "ለABC ያለብኝ",  // draft – needs native review
+  "myabc.weight": "የድምፅ ክብደቴ",  // draft – needs native review
+  "myabc.votes": "የተመዘገቡ ድምፆችዎን ያረጋግጡ",  // draft – needs native review
+  "myabc.shareValue": "አንድ አክሲዮን {value} ነው።",  // draft – needs native review
+  "myabc.noShares": "ገና ቃል የለም። የABC ቢሮን ይጠይቁ።",  // draft – needs native review
+  "myabc.certificates": "የምስክር ወረቀቶች፦ {list}",  // draft – needs native review
+  "myabc.account": "ሂሳቤ",  // draft – needs native review
+  "myabc.weightLine": "ክብደትዎ {pct} ነው፦ {land} ሄክታር መሬትና {prod} ኩንታል ምርት ({label})።",  // draft – needs native review
+  "myabc.meetings": "የሚመጡ ስብሰባዎች",  // draft – needs native review
+  "myabc.noMeetings": "የታቀደ ስብሰባ የለም።",  // draft – needs native review
+  "myabc.orders": "የግብዓት ትዕዛዞች",  // draft – needs native review
+  "myabc.noOrders": "የግብዓት ትዕዛዝ የለም።",  // draft – needs native review
+  "myabc.service": "አገልግሎት",  // draft – needs native review
+  "myabc.plot": "ማሳ",  // draft – needs native review
+  "myabc.plots": "ማሳዎቼ",  // draft – needs native review
+  "myabc.booked": "ጥያቄው ለABC ተልኳል።",  // draft – needs native review
+  "myabc.say.shares": "በ{org} {n} አክሲዮኖች አሉዎት።",  // draft – needs native review
+  "myabc.say.owedShares": "በአክሲዮኖችዎ ላይ ገና {amount} መክፈል አለብዎት።",  // draft – needs native review
+  "myabc.say.owe": "ለABC {amount} ዕዳ አለብዎት።",  // draft – needs native review
+  "myabc.say.nothingOwed": "ለABC ምንም ዕዳ የለብዎትም።",  // draft – needs native review
+  "myabc.say.weight": "የድምፅ ክብደትዎ {pct} ነው።",  // draft – needs native review
+  "myabc.say.meeting": "ቀጣይ ስብሰባ፦ {title}፣ {date}።",  // draft – needs native review
+  "abcInv.openMyAbc": "የእኔ ABCን ክፈት፦ አክሲዮኖች፣ ሂሳብ፣ ትዕዛዞችና ቀጠሮዎች →",  // draft – needs native review
 };

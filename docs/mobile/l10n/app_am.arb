@@ -6567,7 +6567,7 @@
     "description": "web key: outlook.none",
     "x-draft": true
   },
-  "navAbc": "የእኔ ABC",
+  "navAbc": "የABC ጽሕፈት ቤት",
   "@navAbc": {
     "description": "web key: nav.abc",
     "x-draft": true
@@ -6687,7 +6687,7 @@
     "description": "web key: abc.waiting",
     "x-draft": true
   },
-  "abcContributionsNote": "የባለአክሲዮን መዋጮዎች (መሬት፣ እንስሳት፣ ጉልበት)። በABC የሚያዝ መዝገብ ነው፤ ሕጋዊ ሰነድ አይደለም።",
+  "abcContributionsNote": "የባለአክሲዮኖች መዋጮ (መሬት፣ እንስሳት፣ ጉልበት)። ዋጋ፦ የሚኒስቴሩን የግምት መመሪያ በመጠባበቅ ላይ። በABC የሚያዝ መዝገብ ነው፣ ሕጋዊ ሰነድ አይደለም።",
   "@abcContributionsNote": {
     "description": "web key: abc.contributionsNote",
     "x-draft": true
@@ -9475,6 +9475,2350 @@
     "placeholders": {
       "date": {}
     },
+    "x-draft": true
+  },
+  "abcRegTitle": "የአባላት መዝገብ",
+  "@abcRegTitle": {
+    "description": "web key: abc.reg.title",
+    "x-draft": true
+  },
+  "abcRegHint": "{n} አባላትና ግብዣዎች። ለማሳዎች፣ ፈቃድና ዝርዝር አባሉን ይጫኑ።",
+  "@abcRegHint": {
+    "description": "web key: abc.reg.hint",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcRegNone": "ገና አባል የለም።",
+  "@abcRegNone": {
+    "description": "web key: abc.reg.none",
+    "x-draft": true
+  },
+  "abcRegMembers": "አባላት",
+  "@abcRegMembers": {
+    "description": "web key: abc.reg.members",
+    "x-draft": true
+  },
+  "abcRegWomen": "ሴቶች",
+  "@abcRegWomen": {
+    "description": "web key: abc.reg.women",
+    "x-draft": true
+  },
+  "abcRegYouth": "ወጣቶች (15-29)",
+  "@abcRegYouth": {
+    "description": "web key: abc.reg.youth",
+    "x-draft": true
+  },
+  "abcRegUnknown": "ያልተመዘገበ",
+  "@abcRegUnknown": {
+    "description": "web key: abc.reg.unknown",
+    "x-draft": true
+  },
+  "abcRegPlots": "{n} ማሳዎች፣ {ha} ሄክታር",
+  "@abcRegPlots": {
+    "description": "web key: abc.reg.plots",
+    "placeholders": {
+      "n": {},
+      "ha": {}
+    },
+    "x-draft": true
+  },
+  "abcRegStatusInvited": "ተጋብዟል",
+  "@abcRegStatusInvited": {
+    "description": "web key: abc.reg.status.invited",
+    "x-draft": true
+  },
+  "abcRegStatusActive": "አባል",
+  "@abcRegStatusActive": {
+    "description": "web key: abc.reg.status.active",
+    "x-draft": true
+  },
+  "abcRegConsentLine": "ፈቃድ፦ {method}፣ በ{by} በ{date} ተመዝግቧል።",
+  "@abcRegConsentLine": {
+    "description": "web key: abc.reg.consentLine",
+    "placeholders": {
+      "method": {},
+      "by": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcRegIrrigated": "በመስኖ",
+  "@abcRegIrrigated": {
+    "description": "web key: abc.reg.irrigated",
+    "x-draft": true
+  },
+  "abcRegNoPlots": "ይህ አባል ማሳ አልመዘገበም።",
+  "@abcRegNoPlots": {
+    "description": "web key: abc.reg.noPlots",
+    "x-draft": true
+  },
+  "abcRegGender": "ፆታ",
+  "@abcRegGender": {
+    "description": "web key: abc.reg.gender",
+    "x-draft": true
+  },
+  "abcRegAge": "የዕድሜ ክልል",
+  "@abcRegAge": {
+    "description": "web key: abc.reg.age",
+    "x-draft": true
+  },
+  "abcRegIdReason": "ሙሉ የመታወቂያ ቁጥር ለምን ያስፈልግዎታል? (በኦዲት መዝገብ ይመዘገባል)",
+  "@abcRegIdReason": {
+    "description": "web key: abc.reg.idReason",
+    "x-draft": true
+  },
+  "abcRegShowId": "ሙሉ መታወቂያ አሳይ",
+  "@abcRegShowId": {
+    "description": "web key: abc.reg.showId",
+    "x-draft": true
+  },
+  "abcRegRemoveReason": "አባሉ የሚወጣበት ምክንያት (በታሪክ ይቀመጣል)፦",
+  "@abcRegRemoveReason": {
+    "description": "web key: abc.reg.removeReason",
+    "x-draft": true
+  },
+  "abcRegRemove": "አባሉ ይወጣል",
+  "@abcRegRemove": {
+    "description": "web key: abc.reg.remove",
+    "x-draft": true
+  },
+  "abcRegInvited": "ግብዣ ተልኳል፤ ገበሬው በመተግበሪያው ይቀበላል።",
+  "@abcRegInvited": {
+    "description": "web key: abc.reg.invited",
+    "x-draft": true
+  },
+  "abcRegCreated": "አካውንት ተፈጥሯል፣ አባሉም ተጨምሯል። ጊዜያዊውን ፒን ለገበሬው ይስጡ።",
+  "@abcRegCreated": {
+    "description": "web key: abc.reg.created",
+    "x-draft": true
+  },
+  "abcRegAdded": "አባል ተጨምሯል።",
+  "@abcRegAdded": {
+    "description": "web key: abc.reg.added",
+    "x-draft": true
+  },
+  "abcRegEnrol": "አባል መዝግብ",
+  "@abcRegEnrol": {
+    "description": "web key: abc.reg.enrol",
+    "x-draft": true
+  },
+  "abcRegEnrolHint": "ያለ ገበሬ፦ ስልክ ብቻ። አዲስ ገበሬ፦ ስም፣ ወረዳና ጊዜያዊ ፒን ጭምር።",
+  "@abcRegEnrolHint": {
+    "description": "web key: abc.reg.enrolHint",
+    "x-draft": true
+  },
+  "abcRegConsent": "ፈቃድ",
+  "@abcRegConsent": {
+    "description": "web key: abc.reg.consent",
+    "x-draft": true
+  },
+  "abcRegNewHint": "አካውንት ለሌለው ገበሬ ብቻ፦",
+  "@abcRegNewHint": {
+    "description": "web key: abc.reg.newHint",
+    "x-draft": true
+  },
+  "abcRegName": "ሙሉ ስም",
+  "@abcRegName": {
+    "description": "web key: abc.reg.name",
+    "x-draft": true
+  },
+  "abcRegPin": "ጊዜያዊ ፒን (6+ አሃዝ)",
+  "@abcRegPin": {
+    "description": "web key: abc.reg.pin",
+    "x-draft": true
+  },
+  "abcRegIdType": "የመታወቂያ ዓይነት",
+  "@abcRegIdType": {
+    "description": "web key: abc.reg.idType",
+    "x-draft": true
+  },
+  "abcRegIdNumber": "የመታወቂያ ቁጥር (አማራጭ)",
+  "@abcRegIdNumber": {
+    "description": "web key: abc.reg.idNumber",
+    "x-draft": true
+  },
+  "abcRegIdHint": "ተመስጥሮ ይቀመጣል፤ የመጨረሻዎቹ 4 አሃዞች ብቻ ይታያሉ።",
+  "@abcRegIdHint": {
+    "description": "web key: abc.reg.idHint",
+    "x-draft": true
+  },
+  "abcRegEnrolButton": "መዝግብ",
+  "@abcRegEnrolButton": {
+    "description": "web key: abc.reg.enrolButton",
+    "x-draft": true
+  },
+  "abcRegImport": "አባላትን አስገባ (CSV)",
+  "@abcRegImport": {
+    "description": "web key: abc.reg.import",
+    "x-draft": true
+  },
+  "abcRegImportHint": "ለብዙ አባላት፣ ለምሳሌ ማህበርን ሲቀይሩ። መጀመሪያ ፋይሉን ያረጋግጡ፤ እስኪያስገቡ ድረስ ምንም አይቀመጥም።",
+  "@abcRegImportHint": {
+    "description": "web key: abc.reg.importHint",
+    "x-draft": true
+  },
+  "abcRegCheck": "ፋይሉን አረጋግጥ",
+  "@abcRegCheck": {
+    "description": "web key: abc.reg.check",
+    "x-draft": true
+  },
+  "abcRegImportButton": "{n} አባላትን አስገባ",
+  "@abcRegImportButton": {
+    "description": "web key: abc.reg.importButton",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcRegCheckResult": "{rows} ረድፎች፦ {ok} ዝግጁ ({created} አዳዲስ አካውንቶች)፣ {errors} ችግር ያለባቸው።",
+  "@abcRegCheckResult": {
+    "description": "web key: abc.reg.checkResult",
+    "placeholders": {
+      "rows": {},
+      "ok": {},
+      "created": {},
+      "errors": {}
+    },
+    "x-draft": true
+  },
+  "abcRegImportResult": "ከ{rows} ረድፎች {ok} ገብተዋል ({created} አዳዲስ አካውንቶች)፤ {errors} ተዘልለዋል።",
+  "@abcRegImportResult": {
+    "description": "web key: abc.reg.importResult",
+    "placeholders": {
+      "rows": {},
+      "ok": {},
+      "created": {},
+      "errors": {}
+    },
+    "x-draft": true
+  },
+  "abcRegLine": "ረድፍ {line}",
+  "@abcRegLine": {
+    "description": "web key: abc.reg.line",
+    "placeholders": {
+      "line": {}
+    },
+    "x-draft": true
+  },
+  "abcGenderFemale": "ሴት",
+  "@abcGenderFemale": {
+    "description": "web key: abc.gender.female",
+    "x-draft": true
+  },
+  "abcGenderMale": "ወንድ",
+  "@abcGenderMale": {
+    "description": "web key: abc.gender.male",
+    "x-draft": true
+  },
+  "abcConsentApp": "በመተግበሪያው (ግብዣ)",
+  "@abcConsentApp": {
+    "description": "web key: abc.consent.app",
+    "x-draft": true
+  },
+  "abcConsentSpoken": "በቃል፣ በሠራተኛ የተመዘገበ",
+  "@abcConsentSpoken": {
+    "description": "web key: abc.consent.spoken",
+    "x-draft": true
+  },
+  "abcConsentPaper": "የተፈረመ የወረቀት ቅጽ",
+  "@abcConsentPaper": {
+    "description": "web key: abc.consent.paper",
+    "x-draft": true
+  },
+  "abcIdTypeFayda": "ፋይዳ (ብሔራዊ መታወቂያ)",
+  "@abcIdTypeFayda": {
+    "description": "web key: abc.idType.fayda",
+    "x-draft": true
+  },
+  "abcIdTypeKebeleId": "የቀበሌ መታወቂያ",
+  "@abcIdTypeKebeleId": {
+    "description": "web key: abc.idType.kebele_id",
+    "x-draft": true
+  },
+  "abcIdTypeOther": "ሌላ መታወቂያ",
+  "@abcIdTypeOther": {
+    "description": "web key: abc.idType.other",
+    "x-draft": true
+  },
+  "abcTabShares": "አክሲዮኖች",
+  "@abcTabShares": {
+    "description": "web key: abc.tab.shares",
+    "x-draft": true
+  },
+  "ruleShareValueMin": "አንድ አክሲዮን ቢያንስ {minimum} ብር መሆን አለበት (የABC ደንቦች)።",
+  "@ruleShareValueMin": {
+    "description": "web key: rule.share_value_min",
+    "placeholders": {
+      "minimum": {}
+    },
+    "x-draft": true
+  },
+  "ruleMinShares": "የአንድ አባል የመጀመሪያ ቃል ቢያንስ {minimum} አክሲዮኖች መሆን አለበት።",
+  "@ruleMinShares": {
+    "description": "web key: rule.min_shares",
+    "placeholders": {
+      "minimum": {}
+    },
+    "x-draft": true
+  },
+  "ruleOwnershipCap": "ማንም አባል ከቀረቡት {offered} አክሲዮኖች ከ{percent}% በላይ ({limit} አክሲዮኖች) መያዝ አይችልም። ይህ {after} ያደርገዋል።",
+  "@ruleOwnershipCap": {
+    "description": "web key: rule.ownership_cap",
+    "placeholders": {
+      "offered": {},
+      "percent": {},
+      "limit": {},
+      "after": {}
+    },
+    "x-draft": true
+  },
+  "rulePledgeUpfront": "ተጨማሪ አክሲዮኖች ቃል ሲገባ ቢያንስ {percent}% መከፈል አለባቸው፦ {amount} ብር።",
+  "@rulePledgeUpfront": {
+    "description": "web key: rule.pledge_upfront",
+    "placeholders": {
+      "percent": {},
+      "amount": {}
+    },
+    "x-draft": true
+  },
+  "abcShSetup": "የአክሲዮን ካፒታል",
+  "@abcShSetup": {
+    "description": "web key: abc.sh.setup",
+    "x-draft": true
+  },
+  "abcShRulesLine": "በሥራ ላይ ያሉ ደንቦች፦ ለአንድ አባል ቢያንስ {min} አክሲዮኖች፣ ለእያንዳንዱ ቢበዛ {cap}%፣ በተጨማሪ አክሲዮኖች {upfront}% ቅድሚያ፣ ቀሪው በ{years} ዓመታት ውስጥ።",
+  "@abcShRulesLine": {
+    "description": "web key: abc.sh.rulesLine",
+    "placeholders": {
+      "min": {},
+      "cap": {},
+      "upfront": {},
+      "years": {}
+    },
+    "x-draft": true
+  },
+  "abcShPledgedShares": "ቃል የተገቡ አክሲዮኖች",
+  "@abcShPledgedShares": {
+    "description": "web key: abc.sh.pledgedShares",
+    "x-draft": true
+  },
+  "abcShIssuedShares": "የተሰጡ አክሲዮኖች",
+  "@abcShIssuedShares": {
+    "description": "web key: abc.sh.issuedShares",
+    "x-draft": true
+  },
+  "abcShPaidTotal": "የተከፈለ",
+  "@abcShPaidTotal": {
+    "description": "web key: abc.sh.paidTotal",
+    "x-draft": true
+  },
+  "abcShSubscribed": "ከቀረቡት አክሲዮኖች",
+  "@abcShSubscribed": {
+    "description": "web key: abc.sh.subscribed",
+    "x-draft": true
+  },
+  "abcShShareValue": "የአንድ አክሲዮን ዋጋ (ብር)",
+  "@abcShShareValue": {
+    "description": "web key: abc.sh.shareValue",
+    "x-draft": true
+  },
+  "abcShSharesOffered": "የቀረቡ አክሲዮኖች",
+  "@abcShSharesOffered": {
+    "description": "web key: abc.sh.sharesOffered",
+    "x-draft": true
+  },
+  "abcShCapLine": "የባለቤትነት ገደብ፦ ለአንድ አባል {n} አክሲዮኖች።",
+  "@abcShCapLine": {
+    "description": "web key: abc.sh.capLine",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcShSetFirst": "መጀመሪያ የአክሲዮን ዋጋና የቀረቡትን አክሲዮኖች ብዛት ያስቀምጡ።",
+  "@abcShSetFirst": {
+    "description": "web key: abc.sh.setFirst",
+    "x-draft": true
+  },
+  "abcShMembers": "የአባላት አክሲዮኖች",
+  "@abcShMembers": {
+    "description": "web key: abc.sh.members",
+    "x-draft": true
+  },
+  "abcShMembersHint": "ቃል ወይም ክፍያ ለመመዝገብ አባሉን ይጫኑ። አክሲዮኖች በተከፈሉ መጠን ይሰጣሉ።",
+  "@abcShMembersHint": {
+    "description": "web key: abc.sh.membersHint",
+    "x-draft": true
+  },
+  "abcShMemberLine": "{held} አክሲዮኖች ተይዘዋል · {pledged} ቃል ተገብቷል · የተከፈለ {paid} · ቀሪ {owed}",
+  "@abcShMemberLine": {
+    "description": "web key: abc.sh.memberLine",
+    "placeholders": {
+      "held": {},
+      "pledged": {},
+      "paid": {},
+      "owed": {}
+    },
+    "x-draft": true
+  },
+  "abcShKindMinimum": "ዝቅተኛ ቃል",
+  "@abcShKindMinimum": {
+    "description": "web key: abc.sh.kind.minimum",
+    "x-draft": true
+  },
+  "abcShKindExtra": "ተጨማሪ ቃል",
+  "@abcShKindExtra": {
+    "description": "web key: abc.sh.kind.extra",
+    "x-draft": true
+  },
+  "abcShSharesN": "{n} አክሲዮኖች",
+  "@abcShSharesN": {
+    "description": "web key: abc.sh.sharesN",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcShDueOn": "እስከ {date} ይክፈል",
+  "@abcShDueOn": {
+    "description": "web key: abc.sh.dueOn",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcShPaidOwed": "የተከፈለ {paid} · ቀሪ {owed}",
+  "@abcShPaidOwed": {
+    "description": "web key: abc.sh.paidOwed",
+    "placeholders": {
+      "paid": {},
+      "owed": {}
+    },
+    "x-draft": true
+  },
+  "abcShAmount": "መጠን (ብር)",
+  "@abcShAmount": {
+    "description": "web key: abc.sh.amount",
+    "x-draft": true
+  },
+  "abcShMethod": "የክፍያ መንገድ",
+  "@abcShMethod": {
+    "description": "web key: abc.sh.method",
+    "x-draft": true
+  },
+  "abcShReference": "ማጣቀሻ ቁጥር",
+  "@abcShReference": {
+    "description": "web key: abc.sh.reference",
+    "x-draft": true
+  },
+  "abcShRecordPayment": "ክፍያ መዝግብ",
+  "@abcShRecordPayment": {
+    "description": "web key: abc.sh.recordPayment",
+    "x-draft": true
+  },
+  "abcShPaid": "ክፍያው ተመዝግቧል፤ ደረሰኙ ለአባሉ ተልኳል።",
+  "@abcShPaid": {
+    "description": "web key: abc.sh.paid",
+    "x-draft": true
+  },
+  "abcShMinimumShares": "ዝቅተኛ ቃል (አክሲዮኖች)",
+  "@abcShMinimumShares": {
+    "description": "web key: abc.sh.minimumShares",
+    "x-draft": true
+  },
+  "abcShExtraShares": "ተጨማሪ አክሲዮኖች",
+  "@abcShExtraShares": {
+    "description": "web key: abc.sh.extraShares",
+    "x-draft": true
+  },
+  "abcShAddPledge": "ቃል መዝግብ",
+  "@abcShAddPledge": {
+    "description": "web key: abc.sh.addPledge",
+    "x-draft": true
+  },
+  "abcShPledged": "ቃሉ ተመዝግቧል።",
+  "@abcShPledged": {
+    "description": "web key: abc.sh.pledged",
+    "x-draft": true
+  },
+  "abcShMinimumHint": "የመጀመሪያ ቃል፦ ቢያንስ {n} አክሲዮኖች፤ ሙሉ በሙሉ መከፈል አለበት።",
+  "@abcShMinimumHint": {
+    "description": "web key: abc.sh.minimumHint",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcShExtraHint": "ተጨማሪ አክሲዮኖች፦ አሁን ቢያንስ {pct}% ይክፈሉ፣ ቀሪውን በ{years} ዓመታት ውስጥ።",
+  "@abcShExtraHint": {
+    "description": "web key: abc.sh.extraHint",
+    "placeholders": {
+      "pct": {},
+      "years": {}
+    },
+    "x-draft": true
+  },
+  "abcShPrintCertificate": "የአክሲዮን ምስክር ወረቀት አትም",
+  "@abcShPrintCertificate": {
+    "description": "web key: abc.sh.printCertificate",
+    "x-draft": true
+  },
+  "abcShCertificate": "የአክሲዮን ምስክር ወረቀት",
+  "@abcShCertificate": {
+    "description": "web key: abc.sh.certificate",
+    "x-draft": true
+  },
+  "abcShCertFor": "አባል፦ {name} (የአባል ቁጥር {no})",
+  "@abcShCertFor": {
+    "description": "web key: abc.sh.certFor",
+    "placeholders": {
+      "name": {},
+      "no": {}
+    },
+    "x-draft": true
+  },
+  "abcShCertHeld": "የተያዙ አክሲዮኖች፦ {n}፣ የአንድ አክሲዮን ዋጋ፦ {value}",
+  "@abcShCertHeld": {
+    "description": "web key: abc.sh.certHeld",
+    "placeholders": {
+      "n": {},
+      "value": {}
+    },
+    "x-draft": true
+  },
+  "abcShCertNo": "የምስክር ወረቀት ቁጥር",
+  "@abcShCertNo": {
+    "description": "web key: abc.sh.certNo",
+    "x-draft": true
+  },
+  "abcShShares": "አክሲዮኖች",
+  "@abcShShares": {
+    "description": "web key: abc.sh.shares",
+    "x-draft": true
+  },
+  "abcShApprovals": "የቦርድ ፈቃዶች",
+  "@abcShApprovals": {
+    "description": "web key: abc.sh.approvals",
+    "x-draft": true
+  },
+  "abcShApprovalsHint": "ሌላ የቦርድ አባል ይወስናል፤ የጠየቀው ሰው የራሱን ጥያቄ ማጽደቅ አይችልም።",
+  "@abcShApprovalsHint": {
+    "description": "web key: abc.sh.approvalsHint",
+    "x-draft": true
+  },
+  "abcShTransferLine": "{shares} አክሲዮኖችን ማስተላለፍ፦ {from} → {to}",
+  "@abcShTransferLine": {
+    "description": "web key: abc.sh.transferLine",
+    "placeholders": {
+      "shares": {},
+      "from": {},
+      "to": {}
+    },
+    "x-draft": true
+  },
+  "abcApprPending": "በመጠባበቅ ላይ",
+  "@abcApprPending": {
+    "description": "web key: abc.appr.pending",
+    "x-draft": true
+  },
+  "abcApprApproved": "ጸድቋል",
+  "@abcApprApproved": {
+    "description": "web key: abc.appr.approved",
+    "x-draft": true
+  },
+  "abcApprRejected": "ውድቅ ተደርጓል",
+  "@abcApprRejected": {
+    "description": "web key: abc.appr.rejected",
+    "x-draft": true
+  },
+  "abcApprApprove": "አጽድቅ",
+  "@abcApprApprove": {
+    "description": "web key: abc.appr.approve",
+    "x-draft": true
+  },
+  "abcApprReject": "ውድቅ አድርግ",
+  "@abcApprReject": {
+    "description": "web key: abc.appr.reject",
+    "x-draft": true
+  },
+  "abcShTransfer": "አክሲዮኖችን ማስተላለፍ",
+  "@abcShTransfer": {
+    "description": "web key: abc.sh.transfer",
+    "x-draft": true
+  },
+  "abcShTransferHint": "በአባላት መካከል (ሽያጭ፣ ውርስ፣ መውጣት)። ቦርዱ ማጽደቅ አለበት።",
+  "@abcShTransferHint": {
+    "description": "web key: abc.sh.transferHint",
+    "x-draft": true
+  },
+  "abcShFrom": "ከ",
+  "@abcShFrom": {
+    "description": "web key: abc.sh.from",
+    "x-draft": true
+  },
+  "abcShTo": "ወደ",
+  "@abcShTo": {
+    "description": "web key: abc.sh.to",
+    "x-draft": true
+  },
+  "abcShReason": "ምክንያት",
+  "@abcShReason": {
+    "description": "web key: abc.sh.reason",
+    "x-draft": true
+  },
+  "abcShReasonHint": "ሽያጭ፣ ውርስ፣ መውጣት…",
+  "@abcShReasonHint": {
+    "description": "web key: abc.sh.reasonHint",
+    "x-draft": true
+  },
+  "abcShAskApproval": "ቦርዱን ጠይቅ",
+  "@abcShAskApproval": {
+    "description": "web key: abc.sh.askApproval",
+    "x-draft": true
+  },
+  "abcShTransferSent": "ለቦርዱ ፈቃድ ተልኳል።",
+  "@abcShTransferSent": {
+    "description": "web key: abc.sh.transferSent",
+    "x-draft": true
+  },
+  "abcShPayments": "ክፍያዎችና ደረሰኞች",
+  "@abcShPayments": {
+    "description": "web key: abc.sh.payments",
+    "x-draft": true
+  },
+  "abcShReverse": "ሰርዝ",
+  "@abcShReverse": {
+    "description": "web key: abc.sh.reverse",
+    "x-draft": true
+  },
+  "abcShReverseReason": "ይህን ክፍያ የሚሰርዙበት ምክንያት (ለምሳሌ ያልተሳካ ዝውውር)፦",
+  "@abcShReverseReason": {
+    "description": "web key: abc.sh.reverseReason",
+    "x-draft": true
+  },
+  "abcShReminders": "የክፍያ ማስታወሻዎችን ላክ",
+  "@abcShReminders": {
+    "description": "web key: abc.sh.reminders",
+    "x-draft": true
+  },
+  "abcShRemindersSent": "{n} ማስታወሻዎች ተልከዋል (በ30 ቀናት ውስጥ የሚደርሱ ወይም ያለፈባቸው ቃሎች)።",
+  "@abcShRemindersSent": {
+    "description": "web key: abc.sh.remindersSent",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcFlagOverdue": "ክፍያ ዘግይቷል",
+  "@abcFlagOverdue": {
+    "description": "web key: abc.flag.overdue",
+    "x-draft": true
+  },
+  "abcFlagDueSoon": "በቅርቡ ይደርሳል",
+  "@abcFlagDueSoon": {
+    "description": "web key: abc.flag.due_soon",
+    "x-draft": true
+  },
+  "abcFlagMinimumUnpaid": "ዝቅተኛው ሙሉ አልተከፈለም",
+  "@abcFlagMinimumUnpaid": {
+    "description": "web key: abc.flag.minimum_unpaid",
+    "x-draft": true
+  },
+  "abcFlagNoMinimum": "ገና ቃል የለም",
+  "@abcFlagNoMinimum": {
+    "description": "web key: abc.flag.no_minimum",
+    "x-draft": true
+  },
+  "abcFlagOverCap": "ከባለቤትነት ገደብ በላይ",
+  "@abcFlagOverCap": {
+    "description": "web key: abc.flag.over_cap",
+    "x-draft": true
+  },
+  "abcPayCash": "ጥሬ ገንዘብ",
+  "@abcPayCash": {
+    "description": "web key: abc.pay.cash",
+    "x-draft": true
+  },
+  "abcPayBank": "ባንክ",
+  "@abcPayBank": {
+    "description": "web key: abc.pay.bank",
+    "x-draft": true
+  },
+  "abcPayTelebirr": "ቴሌብር",
+  "@abcPayTelebirr": {
+    "description": "web key: abc.pay.telebirr",
+    "x-draft": true
+  },
+  "abcPayMpesa": "ኤም-ፔሳ",
+  "@abcPayMpesa": {
+    "description": "web key: abc.pay.mpesa",
+    "x-draft": true
+  },
+  "abcPayOther": "ሌላ",
+  "@abcPayOther": {
+    "description": "web key: abc.pay.other",
+    "x-draft": true
+  },
+  "abcActionAbcSharePledge": "አክሲዮን ቃል ተገብቷል",
+  "@abcActionAbcSharePledge": {
+    "description": "web key: abc.action.abc.share.pledge",
+    "x-draft": true
+  },
+  "abcActionAbcSharePayment": "የአክሲዮን ክፍያ ተመዝግቧል",
+  "@abcActionAbcSharePayment": {
+    "description": "web key: abc.action.abc.share.payment",
+    "x-draft": true
+  },
+  "abcActionAbcSharePaymentReverse": "የአክሲዮን ክፍያ ተሰርዟል",
+  "@abcActionAbcSharePaymentReverse": {
+    "description": "web key: abc.action.abc.share.payment_reverse",
+    "x-draft": true
+  },
+  "abcActionAbcShareTransferRequest": "የአክሲዮን ማስተላለፍ ተጠይቋል",
+  "@abcActionAbcShareTransferRequest": {
+    "description": "web key: abc.action.abc.share.transfer_request",
+    "x-draft": true
+  },
+  "abcActionAbcApprovalDecide": "የቦርድ ውሳኔ",
+  "@abcActionAbcApprovalDecide": {
+    "description": "web key: abc.action.abc.approval.decide",
+    "x-draft": true
+  },
+  "abcActionAbcDocumentUpload": "ሰነድ ተጭኗል",
+  "@abcActionAbcDocumentUpload": {
+    "description": "web key: abc.action.abc.document.upload",
+    "x-draft": true
+  },
+  "abcActionAbcFormationRecognition": "እውቅና ተመዝግቧል",
+  "@abcActionAbcFormationRecognition": {
+    "description": "web key: abc.action.abc.formation.recognition",
+    "x-draft": true
+  },
+  "abcActionAbcAgreementSign": "የመመሥረቻ ስምምነት ተፈርሟል",
+  "@abcActionAbcAgreementSign": {
+    "description": "web key: abc.action.abc.agreement.sign",
+    "x-draft": true
+  },
+  "abcActionAbcRegistration": "ምዝገባ ተመዝግቧል",
+  "@abcActionAbcRegistration": {
+    "description": "web key: abc.action.abc.registration",
+    "x-draft": true
+  },
+  "abcActionAbcMemberEnrol": "አባል ተመዝግቧል",
+  "@abcActionAbcMemberEnrol": {
+    "description": "web key: abc.action.abc.member.enrol",
+    "x-draft": true
+  },
+  "abcActionAbcMemberUpdate": "የአባል ዝርዝር ተቀይሯል",
+  "@abcActionAbcMemberUpdate": {
+    "description": "web key: abc.action.abc.member.update",
+    "x-draft": true
+  },
+  "abcActionAbcMemberIdView": "ሙሉ የመታወቂያ ቁጥር ታይቷል",
+  "@abcActionAbcMemberIdView": {
+    "description": "web key: abc.action.abc.member.id_view",
+    "x-draft": true
+  },
+  "abcActionAbcMemberImport": "አባላት ገብተዋል",
+  "@abcActionAbcMemberImport": {
+    "description": "web key: abc.action.abc.member.import",
+    "x-draft": true
+  },
+  "abcActionAbcMemberRemove": "አባል ወጥቷል",
+  "@abcActionAbcMemberRemove": {
+    "description": "web key: abc.action.abc.member.remove",
+    "x-draft": true
+  },
+  "abcTabMeetings": "ስብሰባዎችና ድምፆች",
+  "@abcTabMeetings": {
+    "description": "web key: abc.tab.meetings",
+    "x-draft": true
+  },
+  "abcRuleQuorumFraction": "ምልዓተ ጉባኤ (የድምፅ ክብደት / የተገኙ የቦርድ አባላት ድርሻ)",
+  "@abcRuleQuorumFraction": {
+    "description": "web key: abc.rule.quorum_fraction",
+    "x-draft": true
+  },
+  "abcRuleMotionPassFraction": "ውሳኔ የሚያልፈው ከ (የክብደት አዎ + አይ ድርሻ) በላይ ሲሆን",
+  "@abcRuleMotionPassFraction": {
+    "description": "web key: abc.rule.motion_pass_fraction",
+    "x-draft": true
+  },
+  "abcVoteWeights": "የድምፅ ክብደቶች",
+  "@abcVoteWeights": {
+    "description": "web key: abc.vote.weights",
+    "x-draft": true
+  },
+  "abcVoteFormula": "ክብደት = {land} × የመሬት ድርሻ + {prod} × የምርት ድርሻ (የABC ደንቦች)።",
+  "@abcVoteFormula": {
+    "description": "web key: abc.vote.formula",
+    "placeholders": {
+      "land": {},
+      "prod": {}
+    },
+    "x-draft": true
+  },
+  "abcVoteLandOnly": "ለዚህ ወቅት ምርት አልተመዘገበም፤ ክብደቱ የመሬት ድርሻ ብቻ ነው።",
+  "@abcVoteLandOnly": {
+    "description": "web key: abc.vote.landOnly",
+    "x-draft": true
+  },
+  "abcVoteEqual": "ገና መሬትም ምርትም አልተመዘገበም፤ ሁሉም አባላት እኩል ክብደት አላቸው።",
+  "@abcVoteEqual": {
+    "description": "web key: abc.vote.equal",
+    "x-draft": true
+  },
+  "abcVoteSeason": "ወቅት",
+  "@abcVoteSeason": {
+    "description": "web key: abc.vote.season",
+    "x-draft": true
+  },
+  "abcVoteNewSeason": "አዲስ ወቅት (ምርት ለመመዝገብ)",
+  "@abcVoteNewSeason": {
+    "description": "web key: abc.vote.newSeason",
+    "x-draft": true
+  },
+  "abcVoteLand": "መሬት",
+  "@abcVoteLand": {
+    "description": "web key: abc.vote.land",
+    "x-draft": true
+  },
+  "abcVoteProduction": "ምርት",
+  "@abcVoteProduction": {
+    "description": "web key: abc.vote.production",
+    "x-draft": true
+  },
+  "abcVoteWeight": "ክብደት",
+  "@abcVoteWeight": {
+    "description": "web key: abc.vote.weight",
+    "x-draft": true
+  },
+  "abcVoteWeightsHint": "መሬት፦ የአባላቱ የተመዘገቡ ማሳዎች። ምርት፦ ABC ለወቅቱ የመዘገበው (ምርት ገቢ እስኪጀመር ግምት)። ጠቅላላ ጉባኤ ሲታቀድ የተቆለፉትን ክብደቶች ይጠቀማል።",
+  "@abcVoteWeightsHint": {
+    "description": "web key: abc.vote.weightsHint",
+    "x-draft": true
+  },
+  "abcMeetList": "ስብሰባዎች",
+  "@abcMeetList": {
+    "description": "web key: abc.meet.list",
+    "x-draft": true
+  },
+  "abcMeetNone": "ገና ስብሰባ የለም።",
+  "@abcMeetNone": {
+    "description": "web key: abc.meet.none",
+    "x-draft": true
+  },
+  "abcMeetNew": "ስብሰባ አቅድ",
+  "@abcMeetNew": {
+    "description": "web key: abc.meet.new",
+    "x-draft": true
+  },
+  "abcMeetNewHint": "ጠቅላላ ጉባኤ የድምፅ ክብደቶቹን አሁን ይቆልፋል። ከዚያ ማስታወቂያውን ይላኩ።",
+  "@abcMeetNewHint": {
+    "description": "web key: abc.meet.newHint",
+    "x-draft": true
+  },
+  "abcMeetKind": "ዓይነት",
+  "@abcMeetKind": {
+    "description": "web key: abc.meet.kind",
+    "x-draft": true
+  },
+  "abcMeetKindGeneralAssembly": "ጠቅላላ ጉባኤ",
+  "@abcMeetKindGeneralAssembly": {
+    "description": "web key: abc.meet.kind.general_assembly",
+    "x-draft": true
+  },
+  "abcMeetKindBoard": "የቦርድ ስብሰባ",
+  "@abcMeetKindBoard": {
+    "description": "web key: abc.meet.kind.board",
+    "x-draft": true
+  },
+  "abcMeetWhen": "ቀንና ሰዓት",
+  "@abcMeetWhen": {
+    "description": "web key: abc.meet.when",
+    "x-draft": true
+  },
+  "abcMeetPlace": "ቦታ",
+  "@abcMeetPlace": {
+    "description": "web key: abc.meet.place",
+    "x-draft": true
+  },
+  "abcMeetAgenda": "አጀንዳ",
+  "@abcMeetAgenda": {
+    "description": "web key: abc.meet.agenda",
+    "x-draft": true
+  },
+  "abcMeetAgendaHint": "በአንድ መስመር አንድ ጉዳይ",
+  "@abcMeetAgendaHint": {
+    "description": "web key: abc.meet.agendaHint",
+    "x-draft": true
+  },
+  "abcMeetCreate": "አቅድ",
+  "@abcMeetCreate": {
+    "description": "web key: abc.meet.create",
+    "x-draft": true
+  },
+  "abcMeetStatusScheduled": "ታቅዷል",
+  "@abcMeetStatusScheduled": {
+    "description": "web key: abc.meet.status.scheduled",
+    "x-draft": true
+  },
+  "abcMeetStatusHeld": "ተካሂዷል",
+  "@abcMeetStatusHeld": {
+    "description": "web key: abc.meet.status.held",
+    "x-draft": true
+  },
+  "abcMeetStatusCancelled": "ተሰርዟል",
+  "@abcMeetStatusCancelled": {
+    "description": "web key: abc.meet.status.cancelled",
+    "x-draft": true
+  },
+  "abcMeetSendNotice": "ለመራጮች ማስታወቂያ ላክ",
+  "@abcMeetSendNotice": {
+    "description": "web key: abc.meet.sendNotice",
+    "x-draft": true
+  },
+  "abcMeetNoticeAgain": "ማስታወቂያ እንደገና ላክ",
+  "@abcMeetNoticeAgain": {
+    "description": "web key: abc.meet.noticeAgain",
+    "x-draft": true
+  },
+  "abcMeetNoticeSent": "ማስታወቂያው በመተግበሪያውና በቴሌግራም ተልኳል።",
+  "@abcMeetNoticeSent": {
+    "description": "web key: abc.meet.noticeSent",
+    "x-draft": true
+  },
+  "abcMeetCancel": "ስብሰባውን ሰርዝ",
+  "@abcMeetCancel": {
+    "description": "web key: abc.meet.cancel",
+    "x-draft": true
+  },
+  "abcMeetAttendance": "ተገኝነት",
+  "@abcMeetAttendance": {
+    "description": "web key: abc.meet.attendance",
+    "x-draft": true
+  },
+  "abcMeetQuorumBadge": "ምልዓተ ጉባኤ {pct} (የሚያስፈልግ {need})",
+  "@abcMeetQuorumBadge": {
+    "description": "web key: abc.meet.quorumBadge",
+    "placeholders": {
+      "pct": {},
+      "need": {}
+    },
+    "x-draft": true
+  },
+  "abcMeetQuorumLine": "የተገኙ፦ ከ{eligible} መራጮች {present} (ከድምፅ ክብደቱ {pct})።",
+  "@abcMeetQuorumLine": {
+    "description": "web key: abc.meet.quorumLine",
+    "placeholders": {
+      "eligible": {},
+      "present": {},
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "abcMeetSaveAttendance": "ተገኝነቱን አስቀምጥ",
+  "@abcMeetSaveAttendance": {
+    "description": "web key: abc.meet.saveAttendance",
+    "x-draft": true
+  },
+  "abcMeetMotions": "ውሳኔ ሀሳቦች",
+  "@abcMeetMotions": {
+    "description": "web key: abc.meet.motions",
+    "x-draft": true
+  },
+  "abcMeetNoMotions": "ገና ውሳኔ ሀሳብ የለም።",
+  "@abcMeetNoMotions": {
+    "description": "web key: abc.meet.noMotions",
+    "x-draft": true
+  },
+  "abcMeetNewMotion": "አዲስ ውሳኔ ሀሳብ",
+  "@abcMeetNewMotion": {
+    "description": "web key: abc.meet.newMotion",
+    "x-draft": true
+  },
+  "abcMeetAddMotion": "ጨምር",
+  "@abcMeetAddMotion": {
+    "description": "web key: abc.meet.addMotion",
+    "x-draft": true
+  },
+  "abcMeetMinutes": "ቃለ ጉባኤ",
+  "@abcMeetMinutes": {
+    "description": "web key: abc.meet.minutes",
+    "x-draft": true
+  },
+  "abcMeetSaveMinutes": "ረቂቁን አስቀምጥ",
+  "@abcMeetSaveMinutes": {
+    "description": "web key: abc.meet.saveMinutes",
+    "x-draft": true
+  },
+  "abcMeetApproveMinutes": "ቃለ ጉባኤውን አጽድቅ",
+  "@abcMeetApproveMinutes": {
+    "description": "web key: abc.meet.approveMinutes",
+    "x-draft": true
+  },
+  "abcMeetApprovedBy": "በ{name} በ{date} ጸድቋል።",
+  "@abcMeetApprovedBy": {
+    "description": "web key: abc.meet.approvedBy",
+    "placeholders": {
+      "name": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcMeetPrint": "ቃለ ጉባኤውን አትም",
+  "@abcMeetPrint": {
+    "description": "web key: abc.meet.print",
+    "x-draft": true
+  },
+  "abcMotionYes": "አዎ",
+  "@abcMotionYes": {
+    "description": "web key: abc.motion.yes",
+    "x-draft": true
+  },
+  "abcMotionNo": "አይ",
+  "@abcMotionNo": {
+    "description": "web key: abc.motion.no",
+    "x-draft": true
+  },
+  "abcMotionAbstain": "ድምፀ ተአቅቦ",
+  "@abcMotionAbstain": {
+    "description": "web key: abc.motion.abstain",
+    "x-draft": true
+  },
+  "abcMotionTally": "አዎ {yes} ({ny}) · አይ {no} ({nn}) · ድምፀ ተአቅቦ {abstain} ({na})",
+  "@abcMotionTally": {
+    "description": "web key: abc.motion.tally",
+    "placeholders": {
+      "yes": {},
+      "ny": {},
+      "no": {},
+      "nn": {},
+      "abstain": {},
+      "na": {}
+    },
+    "x-draft": true
+  },
+  "abcMotionSaveVotes": "ድምፆቹን አስቀምጥ",
+  "@abcMotionSaveVotes": {
+    "description": "web key: abc.motion.saveVotes",
+    "x-draft": true
+  },
+  "abcMotionClose": "ድምፅ መስጠቱን ዝጋ",
+  "@abcMotionClose": {
+    "description": "web key: abc.motion.close",
+    "x-draft": true
+  },
+  "abcMotionResultOpen": "ክፍት",
+  "@abcMotionResultOpen": {
+    "description": "web key: abc.motion.result.open",
+    "x-draft": true
+  },
+  "abcMotionResultPassed": "አልፏል",
+  "@abcMotionResultPassed": {
+    "description": "web key: abc.motion.result.passed",
+    "x-draft": true
+  },
+  "abcMotionResultFailed": "አላለፈም",
+  "@abcMotionResultFailed": {
+    "description": "web key: abc.motion.result.failed",
+    "x-draft": true
+  },
+  "abcMotionResultNoQuorum": "ምልዓተ ጉባኤ የለም",
+  "@abcMotionResultNoQuorum": {
+    "description": "web key: abc.motion.result.no_quorum",
+    "x-draft": true
+  },
+  "abcActionAbcProductionRecord": "ምርት ተመዝግቧል",
+  "@abcActionAbcProductionRecord": {
+    "description": "web key: abc.action.abc.production.record",
+    "x-draft": true
+  },
+  "abcActionAbcVotingSnapshot": "የድምፅ ክብደቶች ተቆልፈዋል",
+  "@abcActionAbcVotingSnapshot": {
+    "description": "web key: abc.action.abc.voting.snapshot",
+    "x-draft": true
+  },
+  "abcActionAbcMeetingCreate": "ስብሰባ ታቅዷል",
+  "@abcActionAbcMeetingCreate": {
+    "description": "web key: abc.action.abc.meeting.create",
+    "x-draft": true
+  },
+  "abcActionAbcMeetingNotice": "የስብሰባ ማስታወቂያ ተልኳል",
+  "@abcActionAbcMeetingNotice": {
+    "description": "web key: abc.action.abc.meeting.notice",
+    "x-draft": true
+  },
+  "abcActionAbcMeetingAttendance": "ተገኝነት ተመዝግቧል",
+  "@abcActionAbcMeetingAttendance": {
+    "description": "web key: abc.action.abc.meeting.attendance",
+    "x-draft": true
+  },
+  "abcActionAbcMeetingCancel": "ስብሰባ ተሰርዟል",
+  "@abcActionAbcMeetingCancel": {
+    "description": "web key: abc.action.abc.meeting.cancel",
+    "x-draft": true
+  },
+  "abcActionAbcMotionCreate": "ውሳኔ ሀሳብ ተጨምሯል",
+  "@abcActionAbcMotionCreate": {
+    "description": "web key: abc.action.abc.motion.create",
+    "x-draft": true
+  },
+  "abcActionAbcMotionVotes": "ድምፆች ገብተዋል",
+  "@abcActionAbcMotionVotes": {
+    "description": "web key: abc.action.abc.motion.votes",
+    "x-draft": true
+  },
+  "abcActionAbcMotionClose": "ድምፅ መስጠት ተዘግቷል",
+  "@abcActionAbcMotionClose": {
+    "description": "web key: abc.action.abc.motion.close",
+    "x-draft": true
+  },
+  "abcActionAbcMinutesDraft": "ቃለ ጉባኤ ተረቅቋል",
+  "@abcActionAbcMinutesDraft": {
+    "description": "web key: abc.action.abc.minutes.draft",
+    "x-draft": true
+  },
+  "abcActionAbcMinutesApprove": "ቃለ ጉባኤ ጸድቋል",
+  "@abcActionAbcMinutesApprove": {
+    "description": "web key: abc.action.abc.minutes.approve",
+    "x-draft": true
+  },
+  "abcActionAbcVoteConfirm": "አባሉ ድምፁን አረጋግጧል",
+  "@abcActionAbcVoteConfirm": {
+    "description": "web key: abc.action.abc.vote.confirm",
+    "x-draft": true
+  },
+  "abcInvVoteRecorded": "በ\"{meeting}\" ስብሰባ \"{motion}\" ላይ ድምፅዎ እንደዚህ ተመዝግቧል፦ {choice}። ትክክል ነው?",
+  "@abcInvVoteRecorded": {
+    "description": "web key: abcInv.voteRecorded",
+    "placeholders": {
+      "meeting": {},
+      "motion": {},
+      "choice": {}
+    },
+    "x-draft": true
+  },
+  "abcInvVoteCorrect": "አዎ፣ ትክክል ነው",
+  "@abcInvVoteCorrect": {
+    "description": "web key: abcInv.voteCorrect",
+    "x-draft": true
+  },
+  "abcInvVoteWrong": "አይ፣ ስህተት ነው",
+  "@abcInvVoteWrong": {
+    "description": "web key: abcInv.voteWrong",
+    "x-draft": true
+  },
+  "abcTabFinance": "ፋይናንስ",
+  "@abcTabFinance": {
+    "description": "web key: abc.tab.finance",
+    "x-draft": true
+  },
+  "abcFinNote": "ለABC ቀላል የሂሳብ መዝገብ። የግብር ምክር አይደለም፤ ለሂሳብ ባለሙያው ያውጡ።",
+  "@abcFinNote": {
+    "description": "web key: abc.fin.note",
+    "x-draft": true
+  },
+  "abcFinExport": "ወደ ኤክሴል ላክ",
+  "@abcFinExport": {
+    "description": "web key: abc.fin.export",
+    "x-draft": true
+  },
+  "abcFinShareCapital": "የተቀበለ የአክሲዮን ካፒታል",
+  "@abcFinShareCapital": {
+    "description": "web key: abc.fin.shareCapital",
+    "x-draft": true
+  },
+  "abcFinIncome": "ገቢ",
+  "@abcFinIncome": {
+    "description": "web key: abc.fin.income",
+    "x-draft": true
+  },
+  "abcFinExpenses": "ወጪ",
+  "@abcFinExpenses": {
+    "description": "web key: abc.fin.expenses",
+    "x-draft": true
+  },
+  "abcFinAssets": "የተገዙ ንብረቶች",
+  "@abcFinAssets": {
+    "description": "web key: abc.fin.assets",
+    "x-draft": true
+  },
+  "abcFinLoans": "ያልተከፈሉ ብድሮች",
+  "@abcFinLoans": {
+    "description": "web key: abc.fin.loans",
+    "x-draft": true
+  },
+  "abcFinCash": "ጥሬ ገንዘብ (ግምት)",
+  "@abcFinCash": {
+    "description": "web key: abc.fin.cash",
+    "x-draft": true
+  },
+  "abcFinMembersOwe": "አባላት ለABC ያለባቸው",
+  "@abcFinMembersOwe": {
+    "description": "web key: abc.fin.membersOwe",
+    "x-draft": true
+  },
+  "abcFinPending": "የቦርድ ውሳኔ በመጠባበቅ",
+  "@abcFinPending": {
+    "description": "web key: abc.fin.pending",
+    "x-draft": true
+  },
+  "abcFinLedger": "የሂሳብ መዝገብ",
+  "@abcFinLedger": {
+    "description": "web key: abc.fin.ledger",
+    "x-draft": true
+  },
+  "abcFinLimitHint": "ከ{limit} በላይ የሆኑ ወጪዎችና ግዢዎች የቦርድ ውሳኔ ይጠብቃሉ።",
+  "@abcFinLimitHint": {
+    "description": "web key: abc.fin.limitHint",
+    "placeholders": {
+      "limit": {}
+    },
+    "x-draft": true
+  },
+  "abcFinNoLimit": "የቦርድ ፈቃድ ገደብ አልተቀመጠም (የኩባንያ ትር)።",
+  "@abcFinNoLimit": {
+    "description": "web key: abc.fin.noLimit",
+    "x-draft": true
+  },
+  "abcFinKind": "ዓይነት",
+  "@abcFinKind": {
+    "description": "web key: abc.fin.kind",
+    "x-draft": true
+  },
+  "abcFinKindIncome": "ገቢ",
+  "@abcFinKindIncome": {
+    "description": "web key: abc.fin.kind.income",
+    "x-draft": true
+  },
+  "abcFinKindExpense": "ወጪ",
+  "@abcFinKindExpense": {
+    "description": "web key: abc.fin.kind.expense",
+    "x-draft": true
+  },
+  "abcFinKindAsset": "የንብረት ግዢ",
+  "@abcFinKindAsset": {
+    "description": "web key: abc.fin.kind.asset",
+    "x-draft": true
+  },
+  "abcFinKindLiability": "ብድር",
+  "@abcFinKindLiability": {
+    "description": "web key: abc.fin.kind.liability",
+    "x-draft": true
+  },
+  "abcFinCategory": "ምድብ",
+  "@abcFinCategory": {
+    "description": "web key: abc.fin.category",
+    "x-draft": true
+  },
+  "abcFinCategoryHint": "ነዳጅ፣ ደመወዝ፣ ሽያጭ…",
+  "@abcFinCategoryHint": {
+    "description": "web key: abc.fin.categoryHint",
+    "x-draft": true
+  },
+  "abcFinDirection": "ብድር",
+  "@abcFinDirection": {
+    "description": "web key: abc.fin.direction",
+    "x-draft": true
+  },
+  "abcFinLoanIn": "የተቀበልነው",
+  "@abcFinLoanIn": {
+    "description": "web key: abc.fin.loanIn",
+    "x-draft": true
+  },
+  "abcFinLoanOut": "የመለስነው",
+  "@abcFinLoanOut": {
+    "description": "web key: abc.fin.loanOut",
+    "x-draft": true
+  },
+  "abcFinCounterparty": "የተከፈለው ለ / የተቀበልነው ከ",
+  "@abcFinCounterparty": {
+    "description": "web key: abc.fin.counterparty",
+    "x-draft": true
+  },
+  "abcFinDescription": "መግለጫ",
+  "@abcFinDescription": {
+    "description": "web key: abc.fin.description",
+    "x-draft": true
+  },
+  "abcFinAdd": "መዝግብ",
+  "@abcFinAdd": {
+    "description": "web key: abc.fin.add",
+    "x-draft": true
+  },
+  "abcFinPosted": "ተመዝግቧል።",
+  "@abcFinPosted": {
+    "description": "web key: abc.fin.posted",
+    "x-draft": true
+  },
+  "abcFinSentToBoard": "ከፈቃድ ገደቡ በላይ፦ ለቦርዱ ተልኳል። ሲጸድቅ ይቆጠራል።",
+  "@abcFinSentToBoard": {
+    "description": "web key: abc.fin.sentToBoard",
+    "x-draft": true
+  },
+  "abcFinStatusPending": "ቦርድ በመጠባበቅ",
+  "@abcFinStatusPending": {
+    "description": "web key: abc.fin.status.pending",
+    "x-draft": true
+  },
+  "abcFinStatusRejected": "በቦርዱ ውድቅ ሆኗል",
+  "@abcFinStatusRejected": {
+    "description": "web key: abc.fin.status.rejected",
+    "x-draft": true
+  },
+  "abcFinStatusVoid": "ተሰርዟል",
+  "@abcFinStatusVoid": {
+    "description": "web key: abc.fin.status.void",
+    "x-draft": true
+  },
+  "abcFinStatusPosted": "ተመዝግቧል",
+  "@abcFinStatusPosted": {
+    "description": "web key: abc.fin.status.posted",
+    "x-draft": true
+  },
+  "abcFinVoid": "ሰርዝ",
+  "@abcFinVoid": {
+    "description": "web key: abc.fin.void",
+    "x-draft": true
+  },
+  "abcFinVoidReason": "ይህ ለምን ይሰረዛል? (በታሪክ ይቀመጣል)",
+  "@abcFinVoidReason": {
+    "description": "web key: abc.fin.voidReason",
+    "x-draft": true
+  },
+  "abcFinNoEntries": "ገና ምዝገባ የለም።",
+  "@abcFinNoEntries": {
+    "description": "web key: abc.fin.noEntries",
+    "x-draft": true
+  },
+  "abcFinAccounts": "የአባላት ሂሳብ",
+  "@abcFinAccounts": {
+    "description": "web key: abc.fin.accounts",
+    "x-draft": true
+  },
+  "abcFinAccountsHint": "እያንዳንዱ አባል ለABC ያለበት (የግብዓት ብድር፣ አገልግሎት) ከመለሰው ተቀንሶ።",
+  "@abcFinAccountsHint": {
+    "description": "web key: abc.fin.accountsHint",
+    "x-draft": true
+  },
+  "abcFinAccountLine": "ብድር {credit} · አገልግሎት {services} · የተመለሰ {repaid}",
+  "@abcFinAccountLine": {
+    "description": "web key: abc.fin.accountLine",
+    "placeholders": {
+      "credit": {},
+      "services": {},
+      "repaid": {}
+    },
+    "x-draft": true
+  },
+  "abcFinNoTxns": "ገና ግብይት የለም።",
+  "@abcFinNoTxns": {
+    "description": "web key: abc.fin.noTxns",
+    "x-draft": true
+  },
+  "abcFinReceiptSent": "ክፍያው ተመዝግቧል፤ ደረሰኙ ለአባሉ ተልኳል።",
+  "@abcFinReceiptSent": {
+    "description": "web key: abc.fin.receiptSent",
+    "x-draft": true
+  },
+  "abcFinPrintStatement": "መግለጫውን አትም",
+  "@abcFinPrintStatement": {
+    "description": "web key: abc.fin.printStatement",
+    "x-draft": true
+  },
+  "abcFinStatement": "የአባል የሂሳብ መግለጫ",
+  "@abcFinStatement": {
+    "description": "web key: abc.fin.statement",
+    "x-draft": true
+  },
+  "abcFinStatementLine": "ለABC ያለ ቀሪ ዕዳ፦ {balance}። የተያዙ አክሲዮኖች፦ {shares}።",
+  "@abcFinStatementLine": {
+    "description": "web key: abc.fin.statementLine",
+    "placeholders": {
+      "balance": {},
+      "shares": {}
+    },
+    "x-draft": true
+  },
+  "abcFinWhat": "ምን",
+  "@abcFinWhat": {
+    "description": "web key: abc.fin.what",
+    "x-draft": true
+  },
+  "abcFinEffect": "ለውጥ",
+  "@abcFinEffect": {
+    "description": "web key: abc.fin.effect",
+    "x-draft": true
+  },
+  "abcFinBalance": "ቀሪ",
+  "@abcFinBalance": {
+    "description": "web key: abc.fin.balance",
+    "x-draft": true
+  },
+  "abcTxnInputCredit": "በብድር የተሰጠ ግብዓት",
+  "@abcTxnInputCredit": {
+    "description": "web key: abc.txn.input_credit",
+    "x-draft": true
+  },
+  "abcTxnServiceCharge": "የአገልግሎት ክፍያ",
+  "@abcTxnServiceCharge": {
+    "description": "web key: abc.txn.service_charge",
+    "x-draft": true
+  },
+  "abcTxnRepayment": "ክፍያ (መመለስ)",
+  "@abcTxnRepayment": {
+    "description": "web key: abc.txn.repayment",
+    "x-draft": true
+  },
+  "abcTxnProduceDeduction": "ከምርት ክፍያ የተቀነሰ",
+  "@abcTxnProduceDeduction": {
+    "description": "web key: abc.txn.produce_deduction",
+    "x-draft": true
+  },
+  "abcTxnAdjustment": "ማስተካከያ",
+  "@abcTxnAdjustment": {
+    "description": "web key: abc.txn.adjustment",
+    "x-draft": true
+  },
+  "abcActionAbcLedgerAdd": "የሂሳብ ምዝገባ ተደርጓል",
+  "@abcActionAbcLedgerAdd": {
+    "description": "web key: abc.action.abc.ledger.add",
+    "x-draft": true
+  },
+  "abcActionAbcLedgerVoid": "የሂሳብ ምዝገባ ተሰርዟል",
+  "@abcActionAbcLedgerVoid": {
+    "description": "web key: abc.action.abc.ledger.void",
+    "x-draft": true
+  },
+  "abcActionAbcMemberAccountAdd": "የአባል ሂሳብ ምዝገባ",
+  "@abcActionAbcMemberAccountAdd": {
+    "description": "web key: abc.action.abc.member_account.add",
+    "x-draft": true
+  },
+  "abcActionAbcMemberAccountVoid": "የአባል ሂሳብ ምዝገባ ተሰርዟል",
+  "@abcActionAbcMemberAccountVoid": {
+    "description": "web key: abc.action.abc.member_account.void",
+    "x-draft": true
+  },
+  "abcTabInputs": "ግብዓትና ክምችት",
+  "@abcTabInputs": {
+    "description": "web key: abc.tab.inputs",
+    "x-draft": true
+  },
+  "abcInpNewPlan": "የግብዓት ፍላጎት አቅድ",
+  "@abcInpNewPlan": {
+    "description": "web key: abc.inp.newPlan",
+    "x-draft": true
+  },
+  "abcInpNewPlanHint": "የእያንዳንዱ አባል መጠን = በሄክታር የተጠቀሰው መጠን × በሰብሉ ያለው ማሳ። የተጠቀሰ መጠን ከሌለ መጠን አይሰጥም።",
+  "@abcInpNewPlanHint": {
+    "description": "web key: abc.inp.newPlanHint",
+    "x-draft": true
+  },
+  "abcInpProduct": "ምርት (የተመዘገበ)",
+  "@abcInpProduct": {
+    "description": "web key: abc.inp.product",
+    "x-draft": true
+  },
+  "abcInpNoRate": "የተጠቀሰ መጠን የለም",
+  "@abcInpNoRate": {
+    "description": "web key: abc.inp.noRate",
+    "x-draft": true
+  },
+  "abcInpNoProducts": "ለዚህ ሰብል መጠን ያለው የተመዘገበ ምርት ገና የለም።",
+  "@abcInpNoProducts": {
+    "description": "web key: abc.inp.noProducts",
+    "x-draft": true
+  },
+  "abcInpCreatePlan": "ዕቅድ ፍጠር",
+  "@abcInpCreatePlan": {
+    "description": "web key: abc.inp.createPlan",
+    "x-draft": true
+  },
+  "abcInpPlanCreated": "ዕቅዱ ተፈጥሯል፤ አባላት ትዕዛዛቸውን በመተግበሪያው ማረጋገጥ ይችላሉ።",
+  "@abcInpPlanCreated": {
+    "description": "web key: abc.inp.planCreated",
+    "x-draft": true
+  },
+  "abcInpPlans": "የፍላጎት ዕቅዶች",
+  "@abcInpPlans": {
+    "description": "web key: abc.inp.plans",
+    "x-draft": true
+  },
+  "abcInpPlansHint": "የአባላትን ትዕዛዝ ለማየትና ከአቅራቢ ለመግዛት ዕቅዱን ይጫኑ።",
+  "@abcInpPlansHint": {
+    "description": "web key: abc.inp.plansHint",
+    "x-draft": true
+  },
+  "abcInpNoPlans": "ገና ዕቅድ የለም።",
+  "@abcInpNoPlans": {
+    "description": "web key: abc.inp.noPlans",
+    "x-draft": true
+  },
+  "abcInpRateLine": "በሄክታር {rate} · {source}",
+  "@abcInpRateLine": {
+    "description": "web key: abc.inp.rateLine",
+    "placeholders": {
+      "rate": {},
+      "source": {}
+    },
+    "x-draft": true
+  },
+  "abcInpNoRateLine": "የተጠቀሰ መጠን የለም፤ መጠኑ አይሰላም። የልማት ሰራተኛዎን ይጠይቁ።",
+  "@abcInpNoRateLine": {
+    "description": "web key: abc.inp.noRateLine",
+    "x-draft": true
+  },
+  "abcInpTotals": "{members} አባላት · {ha} ሄክታር · የተጠቆመ {suggested} · የተረጋገጠ {confirmed} ({n})",
+  "@abcInpTotals": {
+    "description": "web key: abc.inp.totals",
+    "placeholders": {
+      "members": {},
+      "ha": {},
+      "suggested": {},
+      "confirmed": {},
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcInpSuggested": "የተጠቆመ",
+  "@abcInpSuggested": {
+    "description": "web key: abc.inp.suggested",
+    "x-draft": true
+  },
+  "abcInpConfirmed": "የተረጋገጠ",
+  "@abcInpConfirmed": {
+    "description": "web key: abc.inp.confirmed",
+    "x-draft": true
+  },
+  "abcInpStatusSuggested": "አባሉን በመጠባበቅ",
+  "@abcInpStatusSuggested": {
+    "description": "web key: abc.inp.status.suggested",
+    "x-draft": true
+  },
+  "abcInpStatusConfirmed": "ተረጋግጧል",
+  "@abcInpStatusConfirmed": {
+    "description": "web key: abc.inp.status.confirmed",
+    "x-draft": true
+  },
+  "abcInpStatusDeclined": "አያስፈልግም",
+  "@abcInpStatusDeclined": {
+    "description": "web key: abc.inp.status.declined",
+    "x-draft": true
+  },
+  "abcInpStatusDelivered": "ደርሷል",
+  "@abcInpStatusDelivered": {
+    "description": "web key: abc.inp.status.delivered",
+    "x-draft": true
+  },
+  "abcInpByMember": "በመተግበሪያው",
+  "@abcInpByMember": {
+    "description": "web key: abc.inp.by.member",
+    "x-draft": true
+  },
+  "abcInpByStaff": "በሠራተኛ",
+  "@abcInpByStaff": {
+    "description": "web key: abc.inp.by.staff",
+    "x-draft": true
+  },
+  "abcInpConfirmForMember": "አባሉ በአካል ተስማምቷል",
+  "@abcInpConfirmForMember": {
+    "description": "web key: abc.inp.confirmForMember",
+    "x-draft": true
+  },
+  "abcInpBuy": "ከአቅራቢ ግዛ",
+  "@abcInpBuy": {
+    "description": "web key: abc.inp.buy",
+    "x-draft": true
+  },
+  "abcInpQty": "መጠን",
+  "@abcInpQty": {
+    "description": "web key: abc.inp.qty",
+    "x-draft": true
+  },
+  "abcInpUnitPrice": "ዋጋ በአንድ (ብር)",
+  "@abcInpUnitPrice": {
+    "description": "web key: abc.inp.unitPrice",
+    "x-draft": true
+  },
+  "abcInpCreatePO": "የግዢ ትዕዛዝ ፍጠር",
+  "@abcInpCreatePO": {
+    "description": "web key: abc.inp.createPO",
+    "x-draft": true
+  },
+  "abcInpPoCreated": "የግዢ ትዕዛዝ ተፈጥሯል (ከገደቡ በላይ ከሆነ ቦርዱን ይጠብቃል)።",
+  "@abcInpPoCreated": {
+    "description": "web key: abc.inp.poCreated",
+    "x-draft": true
+  },
+  "abcInpNeutral": "ሱቆች ቅርብ ከሆነው ጀምሮ ይዘረዘራሉ፤ ምልክቱና ዋጋው ይታያሉ እንጂ ቅደም ተከተሉን አይለውጡም።",
+  "@abcInpNeutral": {
+    "description": "web key: abc.inp.neutral",
+    "x-draft": true
+  },
+  "abcInpPos": "የግዢ ትዕዛዞች",
+  "@abcInpPos": {
+    "description": "web key: abc.inp.pos",
+    "x-draft": true
+  },
+  "abcInpPoPending": "ቦርዱን በመጠባበቅ",
+  "@abcInpPoPending": {
+    "description": "web key: abc.inp.po.pending",
+    "x-draft": true
+  },
+  "abcInpPoApproved": "ጸድቋል",
+  "@abcInpPoApproved": {
+    "description": "web key: abc.inp.po.approved",
+    "x-draft": true
+  },
+  "abcInpPoRejected": "ውድቅ ሆኗል",
+  "@abcInpPoRejected": {
+    "description": "web key: abc.inp.po.rejected",
+    "x-draft": true
+  },
+  "abcInpPoReceived": "ደርሷል",
+  "@abcInpPoReceived": {
+    "description": "web key: abc.inp.po.received",
+    "x-draft": true
+  },
+  "abcInpPoCancelled": "ተሰርዟል",
+  "@abcInpPoCancelled": {
+    "description": "web key: abc.inp.po.cancelled",
+    "x-draft": true
+  },
+  "abcInpReceive": "ተቀበል",
+  "@abcInpReceive": {
+    "description": "web key: abc.inp.receive",
+    "x-draft": true
+  },
+  "abcInpReceived": "ተቀብለናል፤ ኮዱ የምርት ማረጋገጫውን አልፏል።",
+  "@abcInpReceived": {
+    "description": "web key: abc.inp.received",
+    "x-draft": true
+  },
+  "abcInpQuarantined": "ተቀብለናል ግን ታግዷል፦ {reason}። ለአባላት ሊሰጥ አይችልም።",
+  "@abcInpQuarantined": {
+    "description": "web key: abc.inp.quarantined",
+    "placeholders": {
+      "reason": {}
+    },
+    "x-draft": true
+  },
+  "abcInpReceiveHint": "በእያንዳንዱ ማሸጊያ ያለውን ኮድ ይጻፉ ወይም ይቃኙ፤ ማረጋገጫውን ያለፉ ብቻ ሊሰጡ ይችላሉ።",
+  "@abcInpReceiveHint": {
+    "description": "web key: abc.inp.receiveHint",
+    "x-draft": true
+  },
+  "abcInpReasonOk": "አልፏል",
+  "@abcInpReasonOk": {
+    "description": "web key: abc.inp.reason.ok",
+    "x-draft": true
+  },
+  "abcInpReasonNoCode": "ኮድ አልተሰጠም፤ መጀመሪያ ማሸጊያውን ያረጋግጡ",
+  "@abcInpReasonNoCode": {
+    "description": "web key: abc.inp.reason.no_code",
+    "x-draft": true
+  },
+  "abcInpReasonDuplicateInAbc": "ይህ ኮድ ቀደም ሲል በABC ተቀብሏል (ሊኮረጅ ይችላል)",
+  "@abcInpReasonDuplicateInAbc": {
+    "description": "web key: abc.inp.reason.duplicate_in_abc",
+    "x-draft": true
+  },
+  "abcInpReasonUnknownCode": "ያልታወቀ ኮድ",
+  "@abcInpReasonUnknownCode": {
+    "description": "web key: abc.inp.reason.unknown_code",
+    "x-draft": true
+  },
+  "abcInpReasonPossibleCopy": "ሊኮረጅ ይችላል (በጣም ብዙ ጊዜ ታይቷል)",
+  "@abcInpReasonPossibleCopy": {
+    "description": "web key: abc.inp.reason.possible_copy",
+    "x-draft": true
+  },
+  "abcInpReasonRecalled": "ስብስቡ ተመልሷል",
+  "@abcInpReasonRecalled": {
+    "description": "web key: abc.inp.reason.recalled",
+    "x-draft": true
+  },
+  "abcInpReasonExpired": "ጊዜው አልፏል",
+  "@abcInpReasonExpired": {
+    "description": "web key: abc.inp.reason.expired",
+    "x-draft": true
+  },
+  "abcInpReasonNotRegistered": "ምርቱ አልተመዘገበም",
+  "@abcInpReasonNotRegistered": {
+    "description": "web key: abc.inp.reason.not_registered",
+    "x-draft": true
+  },
+  "abcInpReasonSupplierSuspended": "አቅራቢው ታግዷል",
+  "@abcInpReasonSupplierSuspended": {
+    "description": "web key: abc.inp.reason.supplier_suspended",
+    "x-draft": true
+  },
+  "abcInpReasonOtherProduct": "ኮዱ የሌላ ምርት ነው",
+  "@abcInpReasonOtherProduct": {
+    "description": "web key: abc.inp.reason.other_product",
+    "x-draft": true
+  },
+  "abcInpStock": "ክምችት",
+  "@abcInpStock": {
+    "description": "web key: abc.inp.stock",
+    "x-draft": true
+  },
+  "abcInpNoStock": "ገና ክምችት የለም።",
+  "@abcInpNoStock": {
+    "description": "web key: abc.inp.noStock",
+    "x-draft": true
+  },
+  "abcInpLotAvailable": "ይገኛል",
+  "@abcInpLotAvailable": {
+    "description": "web key: abc.inp.lot.available",
+    "x-draft": true
+  },
+  "abcInpLotQuarantined": "ታግዷል",
+  "@abcInpLotQuarantined": {
+    "description": "web key: abc.inp.lot.quarantined",
+    "x-draft": true
+  },
+  "abcInpLotExpired": "ጊዜው አልፏል",
+  "@abcInpLotExpired": {
+    "description": "web key: abc.inp.lot.expired",
+    "x-draft": true
+  },
+  "abcInpLotExpiresSoon": "በቅርቡ ጊዜው ያልፋል",
+  "@abcInpLotExpiresSoon": {
+    "description": "web key: abc.inp.lot.expiresSoon",
+    "x-draft": true
+  },
+  "abcInpLotEmpty": "አልቋል",
+  "@abcInpLotEmpty": {
+    "description": "web key: abc.inp.lot.empty",
+    "x-draft": true
+  },
+  "abcInpRelease": "በአካል ከተረጋገጠ በኋላ ልቀቅ",
+  "@abcInpRelease": {
+    "description": "web key: abc.inp.release",
+    "x-draft": true
+  },
+  "abcInpReleaseReason": "ይህ ክምችት እንዴት ተረጋገጠ? (በታሪክ ይቀመጣል)",
+  "@abcInpReleaseReason": {
+    "description": "web key: abc.inp.releaseReason",
+    "x-draft": true
+  },
+  "abcInpPayment": "ክፍያ",
+  "@abcInpPayment": {
+    "description": "web key: abc.inp.payment",
+    "x-draft": true
+  },
+  "abcInpOnCredit": "በብድር",
+  "@abcInpOnCredit": {
+    "description": "web key: abc.inp.onCredit",
+    "x-draft": true
+  },
+  "abcInpIssue": "ስጥ",
+  "@abcInpIssue": {
+    "description": "web key: abc.inp.issue",
+    "x-draft": true
+  },
+  "abcInpIssued": "ተሰጥቷል፤ በብድር ከሆነ ወደ አባሉ ሂሳብ ተጨምሯል።",
+  "@abcInpIssued": {
+    "description": "web key: abc.inp.issued",
+    "x-draft": true
+  },
+  "abcInvOrderSuggested": "{org} {product} ያቅዳል፦ ለ{ha} ሄክታር ማሳዎ {qty} {unit}። ይፈልጋሉ?",
+  "@abcInvOrderSuggested": {
+    "description": "web key: abcInv.orderSuggested",
+    "placeholders": {
+      "org": {},
+      "product": {},
+      "ha": {},
+      "qty": {},
+      "unit": {}
+    },
+    "x-draft": true
+  },
+  "abcInvOrderConfirm": "አዎ፣ ይህን አዝዝ",
+  "@abcInvOrderConfirm": {
+    "description": "web key: abcInv.orderConfirm",
+    "x-draft": true
+  },
+  "abcInvOrderChange": "ሌላ መጠን",
+  "@abcInvOrderChange": {
+    "description": "web key: abcInv.orderChange",
+    "x-draft": true
+  },
+  "abcInvOrderOther": "ምን ያህል ይፈልጋሉ ({unit})?",
+  "@abcInvOrderOther": {
+    "description": "web key: abcInv.orderOther",
+    "placeholders": {
+      "unit": {}
+    },
+    "x-draft": true
+  },
+  "abcInvOrderDecline": "አያስፈልገኝም",
+  "@abcInvOrderDecline": {
+    "description": "web key: abcInv.orderDecline",
+    "x-draft": true
+  },
+  "abcActionAbcInputPlan": "የግብዓት ፍላጎት ታቅዷል",
+  "@abcActionAbcInputPlan": {
+    "description": "web key: abc.action.abc.input.plan",
+    "x-draft": true
+  },
+  "abcActionAbcInputOrderConfirm": "የግብዓት ትዕዛዝ ተረጋግጧል",
+  "@abcActionAbcInputOrderConfirm": {
+    "description": "web key: abc.action.abc.input.order_confirm",
+    "x-draft": true
+  },
+  "abcActionAbcInputPoCreate": "የግዢ ትዕዛዝ ተፈጥሯል",
+  "@abcActionAbcInputPoCreate": {
+    "description": "web key: abc.action.abc.input.po_create",
+    "x-draft": true
+  },
+  "abcActionAbcStockReceive": "ክምችት ገብቷል",
+  "@abcActionAbcStockReceive": {
+    "description": "web key: abc.action.abc.stock.receive",
+    "x-draft": true
+  },
+  "abcActionAbcStockRelease": "የታገደ ክምችት ተለቋል",
+  "@abcActionAbcStockRelease": {
+    "description": "web key: abc.action.abc.stock.release",
+    "x-draft": true
+  },
+  "abcActionAbcStockIssue": "ግብዓት ለአባል ተሰጥቷል",
+  "@abcActionAbcStockIssue": {
+    "description": "web key: abc.action.abc.stock.issue",
+    "x-draft": true
+  },
+  "abcTabMachinery": "ማሽነሪ",
+  "@abcTabMachinery": {
+    "description": "web key: abc.tab.machinery",
+    "x-draft": true
+  },
+  "abcMacRegister": "የማሽነሪ መዝገብ",
+  "@abcMacRegister": {
+    "description": "web key: abc.mac.register",
+    "x-draft": true
+  },
+  "abcMacNone": "ገና ማሽን የለም።",
+  "@abcMacNone": {
+    "description": "web key: abc.mac.none",
+    "x-draft": true
+  },
+  "abcMacAdd": "ማሽን ጨምር",
+  "@abcMacAdd": {
+    "description": "web key: abc.mac.add",
+    "x-draft": true
+  },
+  "abcMacAdded": "ማሽኑ ተጨምሯል።",
+  "@abcMacAdded": {
+    "description": "web key: abc.mac.added",
+    "x-draft": true
+  },
+  "abcMacName": "ስም",
+  "@abcMacName": {
+    "description": "web key: abc.mac.name",
+    "x-draft": true
+  },
+  "abcMacKind": "ዓይነት",
+  "@abcMacKind": {
+    "description": "web key: abc.mac.kind",
+    "x-draft": true
+  },
+  "abcMacOwnership": "ባለቤት",
+  "@abcMacOwnership": {
+    "description": "web key: abc.mac.ownership",
+    "x-draft": true
+  },
+  "abcMacReg": "የምዝገባ ቁጥር",
+  "@abcMacReg": {
+    "description": "web key: abc.mac.reg",
+    "x-draft": true
+  },
+  "abcMacPerHa": "ዋጋ በሄክታር (ብር)",
+  "@abcMacPerHa": {
+    "description": "web key: abc.mac.perHa",
+    "x-draft": true
+  },
+  "abcMacPerHour": "ዋጋ በሰዓት (ብር)",
+  "@abcMacPerHour": {
+    "description": "web key: abc.mac.perHour",
+    "x-draft": true
+  },
+  "abcMacHours": "ሰዓት በሳምንት",
+  "@abcMacHours": {
+    "description": "web key: abc.mac.hours",
+    "x-draft": true
+  },
+  "abcMacKindTractor": "ትራክተር",
+  "@abcMacKindTractor": {
+    "description": "web key: abc.mac.kind.tractor",
+    "x-draft": true
+  },
+  "abcMacKindCombine": "ኮምባይነር",
+  "@abcMacKindCombine": {
+    "description": "web key: abc.mac.kind.combine",
+    "x-draft": true
+  },
+  "abcMacKindThresher": "መውቂያ ማሽን",
+  "@abcMacKindThresher": {
+    "description": "web key: abc.mac.kind.thresher",
+    "x-draft": true
+  },
+  "abcMacKindTruck": "የጭነት መኪና",
+  "@abcMacKindTruck": {
+    "description": "web key: abc.mac.kind.truck",
+    "x-draft": true
+  },
+  "abcMacKindPump": "የውሃ ፓምፕ",
+  "@abcMacKindPump": {
+    "description": "web key: abc.mac.kind.pump",
+    "x-draft": true
+  },
+  "abcMacKindPlanter": "መዝሪያ ማሽን",
+  "@abcMacKindPlanter": {
+    "description": "web key: abc.mac.kind.planter",
+    "x-draft": true
+  },
+  "abcMacKindSprayer": "መርጫ",
+  "@abcMacKindSprayer": {
+    "description": "web key: abc.mac.kind.sprayer",
+    "x-draft": true
+  },
+  "abcMacKindOther": "ሌላ",
+  "@abcMacKindOther": {
+    "description": "web key: abc.mac.kind.other",
+    "x-draft": true
+  },
+  "abcMacOwnAbc": "የABC ንብረት",
+  "@abcMacOwnAbc": {
+    "description": "web key: abc.mac.own.abc",
+    "x-draft": true
+  },
+  "abcMacOwnAtiProvided": "በATI የቀረበ",
+  "@abcMacOwnAtiProvided": {
+    "description": "web key: abc.mac.own.ati_provided",
+    "x-draft": true
+  },
+  "abcMacOwnRented": "የተከራየ",
+  "@abcMacOwnRented": {
+    "description": "web key: abc.mac.own.rented",
+    "x-draft": true
+  },
+  "abcMacCondGood": "ጥሩ",
+  "@abcMacCondGood": {
+    "description": "web key: abc.mac.cond.good",
+    "x-draft": true
+  },
+  "abcMacCondNeedsRepair": "ጥገና ያስፈልገዋል",
+  "@abcMacCondNeedsRepair": {
+    "description": "web key: abc.mac.cond.needs_repair",
+    "x-draft": true
+  },
+  "abcMacCondOutOfService": "ከአገልግሎት ውጭ",
+  "@abcMacCondOutOfService": {
+    "description": "web key: abc.mac.cond.out_of_service",
+    "x-draft": true
+  },
+  "abcMacCondition": "ሁኔታ",
+  "@abcMacCondition": {
+    "description": "web key: abc.mac.condition",
+    "x-draft": true
+  },
+  "abcMacServiceDue": "ጥገና ደርሷል",
+  "@abcMacServiceDue": {
+    "description": "web key: abc.mac.serviceDue",
+    "x-draft": true
+  },
+  "abcMacUtil": "{pct}% ጥቅም ላይ · ከ{available} {hours} ሰዓት · {ha} ሄክታር (30 ቀናት)",
+  "@abcMacUtil": {
+    "description": "web key: abc.mac.util",
+    "placeholders": {
+      "pct": {},
+      "available": {},
+      "hours": {},
+      "ha": {}
+    },
+    "x-draft": true
+  },
+  "abcMacLastService": "የመጨረሻ ጥገና {date}",
+  "@abcMacLastService": {
+    "description": "web key: abc.mac.lastService",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcMacNoService": "ጥገና አልተመዘገበም",
+  "@abcMacNoService": {
+    "description": "web key: abc.mac.noService",
+    "x-draft": true
+  },
+  "abcMacNextService": "ቀጣይ {date}",
+  "@abcMacNextService": {
+    "description": "web key: abc.mac.nextService",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcMacWork": "የተሠራ ሥራ",
+  "@abcMacWork": {
+    "description": "web key: abc.mac.work",
+    "x-draft": true
+  },
+  "abcMacCost": "ወጪ (ብር)",
+  "@abcMacCost": {
+    "description": "web key: abc.mac.cost",
+    "x-draft": true
+  },
+  "abcMacNext": "ቀጣይ ጥገና",
+  "@abcMacNext": {
+    "description": "web key: abc.mac.next",
+    "x-draft": true
+  },
+  "abcMacAddService": "ጥገና መዝግብ",
+  "@abcMacAddService": {
+    "description": "web key: abc.mac.addService",
+    "x-draft": true
+  },
+  "abcMacBookings": "የአገልግሎት ቀጠሮዎች",
+  "@abcMacBookings": {
+    "description": "web key: abc.mac.bookings",
+    "x-draft": true
+  },
+  "abcMacBookingsHint": "በጉዞ ቅደም ተከተል፦ በቀን፣ ከዚያ በቀበሌ፣ ከዚያ ከABC ቢሮ ባለው ርቀት።",
+  "@abcMacBookingsHint": {
+    "description": "web key: abc.mac.bookingsHint",
+    "x-draft": true
+  },
+  "abcMacNoBookings": "ክፍት ቀጠሮ የለም።",
+  "@abcMacNoBookings": {
+    "description": "web key: abc.mac.noBookings",
+    "x-draft": true
+  },
+  "abcMacChooseMachine": "ማሽን",
+  "@abcMacChooseMachine": {
+    "description": "web key: abc.mac.chooseMachine",
+    "x-draft": true
+  },
+  "abcMacSchedule": "ቀጠሮ ስጥ",
+  "@abcMacSchedule": {
+    "description": "web key: abc.mac.schedule",
+    "x-draft": true
+  },
+  "abcMacHoursWorked": "ሰዓት",
+  "@abcMacHoursWorked": {
+    "description": "web key: abc.mac.hoursWorked",
+    "x-draft": true
+  },
+  "abcMacOperator": "ኦፕሬተር",
+  "@abcMacOperator": {
+    "description": "web key: abc.mac.operator",
+    "x-draft": true
+  },
+  "abcMacFuel": "ነዳጅ (ሊ)",
+  "@abcMacFuel": {
+    "description": "web key: abc.mac.fuel",
+    "x-draft": true
+  },
+  "abcMacFuelCost": "የነዳጅ ወጪ",
+  "@abcMacFuelCost": {
+    "description": "web key: abc.mac.fuelCost",
+    "x-draft": true
+  },
+  "abcMacDone": "ሥራው ተጠናቋል",
+  "@abcMacDone": {
+    "description": "web key: abc.mac.done",
+    "x-draft": true
+  },
+  "abcMacJobLogged": "ሥራው ተመዝግቧል፤ ክፍያው ወደ አባሉ ሂሳብ ተጨምሯል።",
+  "@abcMacJobLogged": {
+    "description": "web key: abc.mac.jobLogged",
+    "x-draft": true
+  },
+  "abcMacJobs": "የሥራ መዝገብ",
+  "@abcMacJobs": {
+    "description": "web key: abc.mac.jobs",
+    "x-draft": true
+  },
+  "abcMacStatusRequested": "ተጠይቋል",
+  "@abcMacStatusRequested": {
+    "description": "web key: abc.mac.status.requested",
+    "x-draft": true
+  },
+  "abcMacStatusScheduled": "ቀጠሮ ተይዟል",
+  "@abcMacStatusScheduled": {
+    "description": "web key: abc.mac.status.scheduled",
+    "x-draft": true
+  },
+  "abcMacStatusDone": "ተጠናቋል",
+  "@abcMacStatusDone": {
+    "description": "web key: abc.mac.status.done",
+    "x-draft": true
+  },
+  "abcMacStatusCancelled": "ተሰርዟል",
+  "@abcMacStatusCancelled": {
+    "description": "web key: abc.mac.status.cancelled",
+    "x-draft": true
+  },
+  "abcMacSvcPloughing": "ማረስ",
+  "@abcMacSvcPloughing": {
+    "description": "web key: abc.mac.svc.ploughing",
+    "x-draft": true
+  },
+  "abcMacSvcPlanting": "መዝራት",
+  "@abcMacSvcPlanting": {
+    "description": "web key: abc.mac.svc.planting",
+    "x-draft": true
+  },
+  "abcMacSvcSpraying": "መርጨት",
+  "@abcMacSvcSpraying": {
+    "description": "web key: abc.mac.svc.spraying",
+    "x-draft": true
+  },
+  "abcMacSvcHarvesting": "መሰብሰብ",
+  "@abcMacSvcHarvesting": {
+    "description": "web key: abc.mac.svc.harvesting",
+    "x-draft": true
+  },
+  "abcMacSvcThreshing": "መውቃት",
+  "@abcMacSvcThreshing": {
+    "description": "web key: abc.mac.svc.threshing",
+    "x-draft": true
+  },
+  "abcMacSvcTransport": "ማጓጓዝ",
+  "@abcMacSvcTransport": {
+    "description": "web key: abc.mac.svc.transport",
+    "x-draft": true
+  },
+  "abcMacSvcOther": "ሌላ",
+  "@abcMacSvcOther": {
+    "description": "web key: abc.mac.svc.other",
+    "x-draft": true
+  },
+  "abcInvBook": "የማሽነሪ አገልግሎት ጠይቅ",
+  "@abcInvBook": {
+    "description": "web key: abcInv.book",
+    "x-draft": true
+  },
+  "abcInvBookSend": "ጥያቄ ላክ",
+  "@abcInvBookSend": {
+    "description": "web key: abcInv.bookSend",
+    "x-draft": true
+  },
+  "abcActionAbcMachineAdd": "ማሽን ተጨምሯል",
+  "@abcActionAbcMachineAdd": {
+    "description": "web key: abc.action.abc.machine.add",
+    "x-draft": true
+  },
+  "abcActionAbcMachineUpdate": "ማሽን ተቀይሯል",
+  "@abcActionAbcMachineUpdate": {
+    "description": "web key: abc.action.abc.machine.update",
+    "x-draft": true
+  },
+  "abcActionAbcMachineJob": "የማሽን ሥራ ተመዝግቧል",
+  "@abcActionAbcMachineJob": {
+    "description": "web key: abc.action.abc.machine.job",
+    "x-draft": true
+  },
+  "abcActionAbcMachineMaintenance": "ማሽን ተጠግኗል",
+  "@abcActionAbcMachineMaintenance": {
+    "description": "web key: abc.action.abc.machine.maintenance",
+    "x-draft": true
+  },
+  "abcActionAbcBookingRequest": "አገልግሎት ተጠይቋል",
+  "@abcActionAbcBookingRequest": {
+    "description": "web key: abc.action.abc.booking.request",
+    "x-draft": true
+  },
+  "abcActionAbcBookingSchedule": "የአገልግሎት ቀጠሮ ተይዟል",
+  "@abcActionAbcBookingSchedule": {
+    "description": "web key: abc.action.abc.booking.schedule",
+    "x-draft": true
+  },
+  "abcActionAbcBookingCancel": "ቀጠሮ ተሰርዟል",
+  "@abcActionAbcBookingCancel": {
+    "description": "web key: abc.action.abc.booking.cancel",
+    "x-draft": true
+  },
+  "navMyAbc": "የእኔ ABC",
+  "@navMyAbc": {
+    "description": "web key: nav.myAbc",
+    "x-draft": true
+  },
+  "myabcDescription": "በABCዎ ውስጥ ያሉዎት አክሲዮኖች፣ ክፍያዎች፣ ሂሳብ፣ የግብዓት ትዕዛዞች፣ የማሽነሪ ቀጠሮዎችና ስብሰባዎች።",
+  "@myabcDescription": {
+    "description": "web key: myabc.description",
+    "x-draft": true
+  },
+  "myabcNone": "ገና የABC አባል አይደሉም።",
+  "@myabcNone": {
+    "description": "web key: myabc.none",
+    "x-draft": true
+  },
+  "myabcMemberNo": "የአባል ቁጥር {no}",
+  "@myabcMemberNo": {
+    "description": "web key: myabc.memberNo",
+    "placeholders": {
+      "no": {}
+    },
+    "x-draft": true
+  },
+  "myabcShares": "አክሲዮኖቼ",
+  "@myabcShares": {
+    "description": "web key: myabc.shares",
+    "x-draft": true
+  },
+  "myabcOwedShares": "በአክሲዮን ላይ የሚቀረኝ",
+  "@myabcOwedShares": {
+    "description": "web key: myabc.owedShares",
+    "x-draft": true
+  },
+  "myabcBalance": "ለABC ያለብኝ",
+  "@myabcBalance": {
+    "description": "web key: myabc.balance",
+    "x-draft": true
+  },
+  "myabcWeight": "የድምፅ ክብደቴ",
+  "@myabcWeight": {
+    "description": "web key: myabc.weight",
+    "x-draft": true
+  },
+  "myabcVotes": "የተመዘገቡ ድምፆችዎን ያረጋግጡ",
+  "@myabcVotes": {
+    "description": "web key: myabc.votes",
+    "x-draft": true
+  },
+  "myabcShareValue": "አንድ አክሲዮን {value} ነው።",
+  "@myabcShareValue": {
+    "description": "web key: myabc.shareValue",
+    "placeholders": {
+      "value": {}
+    },
+    "x-draft": true
+  },
+  "myabcNoShares": "ገና ቃል የለም። የABC ቢሮን ይጠይቁ።",
+  "@myabcNoShares": {
+    "description": "web key: myabc.noShares",
+    "x-draft": true
+  },
+  "myabcCertificates": "የምስክር ወረቀቶች፦ {list}",
+  "@myabcCertificates": {
+    "description": "web key: myabc.certificates",
+    "placeholders": {
+      "list": {}
+    },
+    "x-draft": true
+  },
+  "myabcAccount": "ሂሳቤ",
+  "@myabcAccount": {
+    "description": "web key: myabc.account",
+    "x-draft": true
+  },
+  "myabcWeightLine": "ክብደትዎ {pct} ነው፦ {land} ሄክታር መሬትና {prod} ኩንታል ምርት ({label})።",
+  "@myabcWeightLine": {
+    "description": "web key: myabc.weightLine",
+    "placeholders": {
+      "pct": {},
+      "land": {},
+      "prod": {},
+      "label": {}
+    },
+    "x-draft": true
+  },
+  "myabcMeetings": "የሚመጡ ስብሰባዎች",
+  "@myabcMeetings": {
+    "description": "web key: myabc.meetings",
+    "x-draft": true
+  },
+  "myabcNoMeetings": "የታቀደ ስብሰባ የለም።",
+  "@myabcNoMeetings": {
+    "description": "web key: myabc.noMeetings",
+    "x-draft": true
+  },
+  "myabcOrders": "የግብዓት ትዕዛዞች",
+  "@myabcOrders": {
+    "description": "web key: myabc.orders",
+    "x-draft": true
+  },
+  "myabcNoOrders": "የግብዓት ትዕዛዝ የለም።",
+  "@myabcNoOrders": {
+    "description": "web key: myabc.noOrders",
+    "x-draft": true
+  },
+  "myabcService": "አገልግሎት",
+  "@myabcService": {
+    "description": "web key: myabc.service",
+    "x-draft": true
+  },
+  "myabcPlot": "ማሳ",
+  "@myabcPlot": {
+    "description": "web key: myabc.plot",
+    "x-draft": true
+  },
+  "myabcPlots": "ማሳዎቼ",
+  "@myabcPlots": {
+    "description": "web key: myabc.plots",
+    "x-draft": true
+  },
+  "myabcBooked": "ጥያቄው ለABC ተልኳል።",
+  "@myabcBooked": {
+    "description": "web key: myabc.booked",
+    "x-draft": true
+  },
+  "myabcSayShares": "በ{org} {n} አክሲዮኖች አሉዎት።",
+  "@myabcSayShares": {
+    "description": "web key: myabc.say.shares",
+    "placeholders": {
+      "org": {},
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "myabcSayOwedShares": "በአክሲዮኖችዎ ላይ ገና {amount} መክፈል አለብዎት።",
+  "@myabcSayOwedShares": {
+    "description": "web key: myabc.say.owedShares",
+    "placeholders": {
+      "amount": {}
+    },
+    "x-draft": true
+  },
+  "myabcSayOwe": "ለABC {amount} ዕዳ አለብዎት።",
+  "@myabcSayOwe": {
+    "description": "web key: myabc.say.owe",
+    "placeholders": {
+      "amount": {}
+    },
+    "x-draft": true
+  },
+  "myabcSayNothingOwed": "ለABC ምንም ዕዳ የለብዎትም።",
+  "@myabcSayNothingOwed": {
+    "description": "web key: myabc.say.nothingOwed",
+    "x-draft": true
+  },
+  "myabcSayWeight": "የድምፅ ክብደትዎ {pct} ነው።",
+  "@myabcSayWeight": {
+    "description": "web key: myabc.say.weight",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "myabcSayMeeting": "ቀጣይ ስብሰባ፦ {title}፣ {date}።",
+  "@myabcSayMeeting": {
+    "description": "web key: myabc.say.meeting",
+    "placeholders": {
+      "title": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcInvOpenMyAbc": "የእኔ ABCን ክፈት፦ አክሲዮኖች፣ ሂሳብ፣ ትዕዛዞችና ቀጠሮዎች →",
+  "@abcInvOpenMyAbc": {
+    "description": "web key: abcInv.openMyAbc",
     "x-draft": true
   }
 }
