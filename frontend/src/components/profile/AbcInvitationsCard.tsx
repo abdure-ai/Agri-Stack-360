@@ -12,6 +12,7 @@ import { Handshake } from "lucide-react";
 export default function AbcInvitationsCard() {
   const list = useAsync(() => api.myAbcInvitations(), []);
   const memberships = useAsync(() => api.myAbcMemberships(), []);
+  const votes = useAsync(() => api.myAbcVotes(), []);
   const [error, setError] = useState<string | null>(null);
   if (!list.data?.length) return null;
   const agreementOf = (orgId: number) => memberships.data?.find((m) => m.org_id === orgId);
@@ -47,6 +48,17 @@ export default function AbcInvitationsCard() {
       description={tr("abcInv.hint")}
     >
       {error && <Alert className="mb-3" variant="error" message={error} />}
+      {votes.data?.filter((v) => !v.confirmed_at).map((v) => (
+        <div key={v.id} className="mb-3 rounded-lg bg-brand-50 p-3 text-sm dark:bg-brand-500/10">
+          <p className="text-gray-800 dark:text-white/90">
+            {tr("abcInv.voteRecorded", { meeting: v.meeting, motion: v.motion, choice: tr(`abc.motion.${v.choice}`) })}
+          </p>
+          <span className="mt-2 flex flex-wrap gap-2">
+            <Button size="xs" onClick={async () => { await api.confirmMyAbcVote(v.id, true); votes.reload(); }}>{tr("abcInv.voteCorrect")}</Button>
+            <Button size="xs" variant="outline" onClick={async () => { await api.confirmMyAbcVote(v.id, false); votes.reload(); }}>{tr("abcInv.voteWrong")}</Button>
+          </span>
+        </div>
+      ))}
       <ul className="divide-y divide-gray-100 dark:divide-gray-800">
         {list.data.map((i) => (
           <li

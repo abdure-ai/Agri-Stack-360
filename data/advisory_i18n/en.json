@@ -134,5 +134,7 @@
   "cited_dose_warning": "Spray rates are from the MoA wheat manual (page cited). Before spraying, check that the product is in the current EAA register, follow the rate on the product label (the label is final), and ask your Development Agent.",
   "abc_share_receipt": "{org}: payment received, receipt {receipt}, {amount} birr. Shares issued now: {issued}. You hold {held} shares.",
   "abc_share_due": "{org}: {amount} birr is still owed on your pledged shares; the last day to pay is {date}.",
-  "abc_share_overdue": "{org}: the deadline {date} for your pledged shares has passed and {amount} birr is still owed. Please talk to the ABC office."
+  "abc_share_overdue": "{org}: the deadline {date} for your pledged shares has passed and {amount} birr is still owed. Please talk to the ABC office.",
+  "abc_meeting_notice": "{org}: general assembly \"{title}\" on {when} at {place}. Agenda: {agenda}. Your vote counts by your land and production.",
+  "abc_meeting_notice_board": "{org}: board meeting \"{title}\" on {when} at {place}. Agenda: {agenda}."
 }

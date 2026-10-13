@@ -277,3 +277,80 @@ export interface AbcApproval {
   decided_at: string | null;
   note: string | null;
 }
+
+// ── Voting and meetings (A5) ─────────────────────────────────────────────────
+
+export interface AbcWeights {
+  season: string | null;
+  land_factor: number;
+  production_factor: number;
+  land_only: boolean;
+  equal_weights: boolean;
+  total_land_ha: number;
+  total_production_qt: number;
+  members: { farmer_id: number; name: string; member_no: number | null; land_ha: number; production_qt: number; weight: number }[];
+  seasons: string[];
+  snapshots: { id: number; label: string; season: string | null; land_only: number; created_at: string }[];
+  can_record: boolean;
+  can_meet: boolean;
+}
+
+export interface AbcMeetingRow {
+  id: number;
+  kind: "general_assembly" | "board";
+  title: string;
+  scheduled_at: string;
+  location: string | null;
+  status: "scheduled" | "held" | "cancelled";
+  notice_sent_at: string | null;
+  minutes_status: "none" | "draft" | "approved";
+}
+
+export interface AbcQuorum {
+  eligible: number;
+  present: number;
+  present_weight: number;
+  total_weight: number;
+  fraction: number;
+  need: number;
+  met: boolean;
+}
+
+export interface AbcTally {
+  motion_id: number;
+  weights: { yes: number; no: number; abstain: number };
+  counts: { yes: number; no: number; abstain: number };
+  pass_fraction: number;
+  would_pass: boolean;
+  quorum: AbcQuorum;
+  status: "open" | "closed";
+  result: "passed" | "failed" | "no_quorum" | null;
+}
+
+export interface AbcMeeting extends AbcMeetingRow {
+  agenda: string[];
+  snapshot_id: number | null;
+  minutes: string | null;
+  minutes_approved_by_name: string | null;
+  minutes_approved_at: string | null;
+  voters: { user_id: number; name: string; weight: number; present: boolean }[];
+  quorum: AbcQuorum;
+  motions: { id: number; title: string; text: string | null; status: "open" | "closed"; result: AbcTally["result"]; tally: AbcTally;
+    votes: Record<string, { choice: "yes" | "no" | "abstain"; confirmed_at: string | null; disputed: number }> }[];
+  can_meet: boolean;
+  can_approve: boolean;
+  official_record_note: string;
+}
+
+export interface MyAbcVote {
+  id: number;
+  choice: "yes" | "no" | "abstain";
+  weight: number;
+  entered_at: string;
+  confirmed_at: string | null;
+  disputed: number;
+  motion: string;
+  meeting: string;
+  scheduled_at: string;
+  org: string;
+}

@@ -2164,4 +2164,76 @@ export const am: Record<MessageKey, string> = {
   "abc.action.abc.member.id_view": "ሙሉ የመታወቂያ ቁጥር ታይቷል",  // draft – needs native review
   "abc.action.abc.member.import": "አባላት ገብተዋል",  // draft – needs native review
   "abc.action.abc.member.remove": "አባል ወጥቷል",  // draft – needs native review
+
+  // ── ABC voting & meetings (A5) ────────────────────────────────────────────
+  "abc.tab.meetings": "ስብሰባዎችና ድምፆች",  // draft – needs native review
+  "abc.rule.quorum_fraction": "ምልዓተ ጉባኤ (የድምፅ ክብደት / የተገኙ የቦርድ አባላት ድርሻ)",  // draft – needs native review
+  "abc.rule.motion_pass_fraction": "ውሳኔ የሚያልፈው ከ (የክብደት አዎ + አይ ድርሻ) በላይ ሲሆን",  // draft – needs native review
+  "abc.vote.weights": "የድምፅ ክብደቶች",  // draft – needs native review
+  "abc.vote.formula": "ክብደት = {land} × የመሬት ድርሻ + {prod} × የምርት ድርሻ (የABC ደንቦች)።",  // draft – needs native review
+  "abc.vote.landOnly": "ለዚህ ወቅት ምርት አልተመዘገበም፤ ክብደቱ የመሬት ድርሻ ብቻ ነው።",  // draft – needs native review
+  "abc.vote.equal": "ገና መሬትም ምርትም አልተመዘገበም፤ ሁሉም አባላት እኩል ክብደት አላቸው።",  // draft – needs native review
+  "abc.vote.season": "ወቅት",  // draft – needs native review
+  "abc.vote.newSeason": "አዲስ ወቅት (ምርት ለመመዝገብ)",  // draft – needs native review
+  "abc.vote.land": "መሬት",  // draft – needs native review
+  "abc.vote.production": "ምርት",  // draft – needs native review
+  "abc.vote.weight": "ክብደት",  // draft – needs native review
+  "abc.vote.weightsHint": "መሬት፦ የአባላቱ የተመዘገቡ ማሳዎች። ምርት፦ ABC ለወቅቱ የመዘገበው (ምርት ገቢ እስኪጀመር ግምት)። ጠቅላላ ጉባኤ ሲታቀድ የተቆለፉትን ክብደቶች ይጠቀማል።",  // draft – needs native review
+  "abc.meet.list": "ስብሰባዎች",  // draft – needs native review
+  "abc.meet.none": "ገና ስብሰባ የለም።",  // draft – needs native review
+  "abc.meet.new": "ስብሰባ አቅድ",  // draft – needs native review
+  "abc.meet.newHint": "ጠቅላላ ጉባኤ የድምፅ ክብደቶቹን አሁን ይቆልፋል። ከዚያ ማስታወቂያውን ይላኩ።",  // draft – needs native review
+  "abc.meet.kind": "ዓይነት",  // draft – needs native review
+  "abc.meet.kind.general_assembly": "ጠቅላላ ጉባኤ",  // draft – needs native review
+  "abc.meet.kind.board": "የቦርድ ስብሰባ",  // draft – needs native review
+  "abc.meet.when": "ቀንና ሰዓት",  // draft – needs native review
+  "abc.meet.place": "ቦታ",  // draft – needs native review
+  "abc.meet.agenda": "አጀንዳ",  // draft – needs native review
+  "abc.meet.agendaHint": "በአንድ መስመር አንድ ጉዳይ",  // draft – needs native review
+  "abc.meet.create": "አቅድ",  // draft – needs native review
+  "abc.meet.status.scheduled": "ታቅዷል",  // draft – needs native review
+  "abc.meet.status.held": "ተካሂዷል",  // draft – needs native review
+  "abc.meet.status.cancelled": "ተሰርዟል",  // draft – needs native review
+  "abc.meet.sendNotice": "ለመራጮች ማስታወቂያ ላክ",  // draft – needs native review
+  "abc.meet.noticeAgain": "ማስታወቂያ እንደገና ላክ",  // draft – needs native review
+  "abc.meet.noticeSent": "ማስታወቂያው በመተግበሪያውና በቴሌግራም ተልኳል።",  // draft – needs native review
+  "abc.meet.cancel": "ስብሰባውን ሰርዝ",  // draft – needs native review
+  "abc.meet.attendance": "ተገኝነት",  // draft – needs native review
+  "abc.meet.quorumBadge": "ምልዓተ ጉባኤ {pct} (የሚያስፈልግ {need})",  // draft – needs native review
+  "abc.meet.quorumLine": "የተገኙ፦ ከ{eligible} መራጮች {present} (ከድምፅ ክብደቱ {pct})።",  // draft – needs native review
+  "abc.meet.saveAttendance": "ተገኝነቱን አስቀምጥ",  // draft – needs native review
+  "abc.meet.motions": "ውሳኔ ሀሳቦች",  // draft – needs native review
+  "abc.meet.noMotions": "ገና ውሳኔ ሀሳብ የለም።",  // draft – needs native review
+  "abc.meet.newMotion": "አዲስ ውሳኔ ሀሳብ",  // draft – needs native review
+  "abc.meet.addMotion": "ጨምር",  // draft – needs native review
+  "abc.meet.minutes": "ቃለ ጉባኤ",  // draft – needs native review
+  "abc.meet.saveMinutes": "ረቂቁን አስቀምጥ",  // draft – needs native review
+  "abc.meet.approveMinutes": "ቃለ ጉባኤውን አጽድቅ",  // draft – needs native review
+  "abc.meet.approvedBy": "በ{name} በ{date} ጸድቋል።",  // draft – needs native review
+  "abc.meet.print": "ቃለ ጉባኤውን አትም",  // draft – needs native review
+  "abc.motion.yes": "አዎ",  // draft – needs native review
+  "abc.motion.no": "አይ",  // draft – needs native review
+  "abc.motion.abstain": "ድምፀ ተአቅቦ",  // draft – needs native review
+  "abc.motion.tally": "አዎ {yes} ({ny}) · አይ {no} ({nn}) · ድምፀ ተአቅቦ {abstain} ({na})",  // draft – needs native review
+  "abc.motion.saveVotes": "ድምፆቹን አስቀምጥ",  // draft – needs native review
+  "abc.motion.close": "ድምፅ መስጠቱን ዝጋ",  // draft – needs native review
+  "abc.motion.result.open": "ክፍት",  // draft – needs native review
+  "abc.motion.result.passed": "አልፏል",  // draft – needs native review
+  "abc.motion.result.failed": "አላለፈም",  // draft – needs native review
+  "abc.motion.result.no_quorum": "ምልዓተ ጉባኤ የለም",  // draft – needs native review
+  "abc.action.abc.production.record": "ምርት ተመዝግቧል",  // draft – needs native review
+  "abc.action.abc.voting.snapshot": "የድምፅ ክብደቶች ተቆልፈዋል",  // draft – needs native review
+  "abc.action.abc.meeting.create": "ስብሰባ ታቅዷል",  // draft – needs native review
+  "abc.action.abc.meeting.notice": "የስብሰባ ማስታወቂያ ተልኳል",  // draft – needs native review
+  "abc.action.abc.meeting.attendance": "ተገኝነት ተመዝግቧል",  // draft – needs native review
+  "abc.action.abc.meeting.cancel": "ስብሰባ ተሰርዟል",  // draft – needs native review
+  "abc.action.abc.motion.create": "ውሳኔ ሀሳብ ተጨምሯል",  // draft – needs native review
+  "abc.action.abc.motion.votes": "ድምፆች ገብተዋል",  // draft – needs native review
+  "abc.action.abc.motion.close": "ድምፅ መስጠት ተዘግቷል",  // draft – needs native review
+  "abc.action.abc.minutes.draft": "ቃለ ጉባኤ ተረቅቋል",  // draft – needs native review
+  "abc.action.abc.minutes.approve": "ቃለ ጉባኤ ጸድቋል",  // draft – needs native review
+  "abc.action.abc.vote.confirm": "አባሉ ድምፁን አረጋግጧል",  // draft – needs native review
+  "abcInv.voteRecorded": "በ\"{meeting}\" ስብሰባ \"{motion}\" ላይ ድምፅዎ እንደዚህ ተመዝግቧል፦ {choice}። ትክክል ነው?",  // draft – needs native review
+  "abcInv.voteCorrect": "አዎ፣ ትክክል ነው",  // draft – needs native review
+  "abcInv.voteWrong": "አይ፣ ስህተት ነው",  // draft – needs native review
 };

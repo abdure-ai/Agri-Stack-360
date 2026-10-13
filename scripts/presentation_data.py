@@ -244,7 +244,28 @@ def seed_abc_team(conn) -> int:
             n += 1
     conn.commit()
     seed_abc_shares(conn, org)
+    seed_abc_meeting(conn, org)
     return n
+
+
+def seed_abc_meeting(conn, org: int) -> None:
+    """A sample general assembly (A5) with an agenda; weights from land only (no production is invented)."""
+    from datetime import datetime
+
+    from backend import abc_company, abc_governance
+
+    abc_governance.ensure_schema(conn)
+    if conn.execute("SELECT 1 FROM abc_meetings WHERE org_id=?", (org,)).fetchone():
+        return
+    gm = conn.execute("SELECT * FROM users WHERE phone='0944000008'").fetchone()
+    if not gm:
+        return
+    actor = dict(zip([d[1] for d in conn.execute("PRAGMA table_info(users)")], gm))
+    ctx = abc_company.abc_for(conn, actor, org, "meetings")
+    abc_governance.create_meeting(conn, ctx, actor, kind="general_assembly", title="Annual general assembly 2019 E.C.",
+                                  scheduled_at=datetime(2026, 11, 7, 9, 0), location="Kemise town hall",
+                                  agenda=["Report of the organizing committee", "Share capital collected so far",
+                                          "Election of the board", "Irrigation schedule for the dry season"])
 
 
 def seed_abc_shares(conn, org: int) -> None:

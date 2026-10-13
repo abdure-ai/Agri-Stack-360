@@ -2164,4 +2164,76 @@ export const om: Record<MessageKey, string> = {
   "abc.action.abc.member.id_view": "Lakkoofsi eenyummaa guutuun ilaalame",  // draft – needs native review
   "abc.action.abc.member.import": "Miseensonni galfaman",  // draft – needs native review
   "abc.action.abc.member.remove": "Miseensi ba'e",  // draft – needs native review
+
+  // ── ABC voting & meetings (A5) ────────────────────────────────────────────
+  "abc.tab.meetings": "Walgahii fi sagalee",  // draft – needs native review
+  "abc.rule.quorum_fraction": "Koorama (qooda ulfaatina sagalee / boordii argame)",  // draft – needs native review
+  "abc.rule.motion_pass_fraction": "Murteen kan darbu (qooda eeyyee + lakki ulfaatinaan) ol yoo ta'e",  // draft – needs native review
+  "abc.vote.weights": "Ulfaatina sagalee",  // draft – needs native review
+  "abc.vote.formula": "Ulfaatina = {land} × qooda lafaa + {prod} × qooda oomishaa (seerota ABC).",  // draft – needs native review
+  "abc.vote.landOnly": "Waqtii kanaaf oomishni hin galmoofne: ulfaatinni qooda lafaa qofa.",  // draft – needs native review
+  "abc.vote.equal": "Lafni ykn oomishni ammallee hin galmoofne: miseensonni hundi ulfaatina walqixa qabu.",  // draft – needs native review
+  "abc.vote.season": "Waqtii",  // draft – needs native review
+  "abc.vote.newSeason": "Waqtii haaraa (oomisha galmeessuuf)",  // draft – needs native review
+  "abc.vote.land": "Lafa",  // draft – needs native review
+  "abc.vote.production": "Oomisha",  // draft – needs native review
+  "abc.vote.weight": "Ulfaatina",  // draft – needs native review
+  "abc.vote.weightsHint": "Lafa: lafa miseensotaa galmaa'e. Oomisha: kan ABCn waqtichaaf galmeesse (hanga galii oomishaatti tilmaama). Walgahiin ulfaatina yeroo karoorfame dhaabbate fayyadama.",  // draft – needs native review
+  "abc.meet.list": "Walgahiiwwan",  // draft – needs native review
+  "abc.meet.none": "Walgahiin ammallee hin jiru.",  // draft – needs native review
+  "abc.meet.new": "Walgahii karoorsi",  // draft – needs native review
+  "abc.meet.newHint": "Walgahiin waliigalaa ulfaatina sagalee amma dhaabsa. Achiis beeksisa ergaa.",  // draft – needs native review
+  "abc.meet.kind": "Gosa",  // draft – needs native review
+  "abc.meet.kind.general_assembly": "Walgahii waliigalaa",  // draft – needs native review
+  "abc.meet.kind.board": "Walgahii boordii",  // draft – needs native review
+  "abc.meet.when": "Guyyaa fi sa'aatii",  // draft – needs native review
+  "abc.meet.place": "Bakka",  // draft – needs native review
+  "abc.meet.agenda": "Ajandaa",  // draft – needs native review
+  "abc.meet.agendaHint": "Sarara tokkotti dhimma tokko",  // draft – needs native review
+  "abc.meet.create": "Karoorsi",  // draft – needs native review
+  "abc.meet.status.scheduled": "Karoorfame",  // draft – needs native review
+  "abc.meet.status.held": "Gaggeeffame",  // draft – needs native review
+  "abc.meet.status.cancelled": "Haqame",  // draft – needs native review
+  "abc.meet.sendNotice": "Filattootaaf beeksisa ergi",  // draft – needs native review
+  "abc.meet.noticeAgain": "Beeksisa irra deebi'ii ergi",  // draft – needs native review
+  "abc.meet.noticeSent": "Beeksisni appii fi Telegram irratti ergameera.",  // draft – needs native review
+  "abc.meet.cancel": "Walgahii haqi",  // draft – needs native review
+  "abc.meet.attendance": "Argama",  // draft – needs native review
+  "abc.meet.quorumBadge": "Koorama {pct} (barbaachisu {need})",  // draft – needs native review
+  "abc.meet.quorumLine": "Kan argame: filattoota {eligible} keessaa {present} ({pct} ulfaatina sagalee).",  // draft – needs native review
+  "abc.meet.saveAttendance": "Argama olkaa'i",  // draft – needs native review
+  "abc.meet.motions": "Yaada murtee",  // draft – needs native review
+  "abc.meet.noMotions": "Yaadni murtee ammallee hin jiru.",  // draft – needs native review
+  "abc.meet.newMotion": "Yaada murtee haaraa",  // draft – needs native review
+  "abc.meet.addMotion": "Dabali",  // draft – needs native review
+  "abc.meet.minutes": "Galmee walgahii",  // draft – needs native review
+  "abc.meet.saveMinutes": "Wixinee olkaa'i",  // draft – needs native review
+  "abc.meet.approveMinutes": "Galmee walgahii mirkaneessi",  // draft – needs native review
+  "abc.meet.approvedBy": "{name}n {date} mirkanaa'e.",  // draft – needs native review
+  "abc.meet.print": "Galmee walgahii maxxansi",  // draft – needs native review
+  "abc.motion.yes": "Eeyyee",  // draft – needs native review
+  "abc.motion.no": "Lakki",  // draft – needs native review
+  "abc.motion.abstain": "Of qusachuu",  // draft – needs native review
+  "abc.motion.tally": "Eeyyee {yes} ({ny}) · Lakki {no} ({nn}) · Of qusachuu {abstain} ({na})",  // draft – needs native review
+  "abc.motion.saveVotes": "Sagalee olkaa'i",  // draft – needs native review
+  "abc.motion.close": "Sagalee kennuu cufi",  // draft – needs native review
+  "abc.motion.result.open": "Banaa",  // draft – needs native review
+  "abc.motion.result.passed": "Darbe",  // draft – needs native review
+  "abc.motion.result.failed": "Hin darbine",  // draft – needs native review
+  "abc.motion.result.no_quorum": "Kooramni hin guutamne",  // draft – needs native review
+  "abc.action.abc.production.record": "Oomishni galmaa'e",  // draft – needs native review
+  "abc.action.abc.voting.snapshot": "Ulfaatinni sagalee dhaabbate",  // draft – needs native review
+  "abc.action.abc.meeting.create": "Walgahiin karoorfame",  // draft – needs native review
+  "abc.action.abc.meeting.notice": "Beeksisni walgahii ergame",  // draft – needs native review
+  "abc.action.abc.meeting.attendance": "Argamni galmaa'e",  // draft – needs native review
+  "abc.action.abc.meeting.cancel": "Walgahiin haqame",  // draft – needs native review
+  "abc.action.abc.motion.create": "Yaadni murtee dabalame",  // draft – needs native review
+  "abc.action.abc.motion.votes": "Sagaleen galfame",  // draft – needs native review
+  "abc.action.abc.motion.close": "Sagalee kennuun cufame",  // draft – needs native review
+  "abc.action.abc.minutes.draft": "Galmeen walgahii wixinfame",  // draft – needs native review
+  "abc.action.abc.minutes.approve": "Galmeen walgahii mirkanaa'e",  // draft – needs native review
+  "abc.action.abc.vote.confirm": "Miseensi sagalee isaa mirkaneesse",  // draft – needs native review
+  "abcInv.voteRecorded": "\"{meeting}\" irratti sagaleen keessan \"{motion}\" irratti akkasitti galmaa'e: {choice}. Sirrii dhaa?",  // draft – needs native review
+  "abcInv.voteCorrect": "Eeyyee, sirrii dha",  // draft – needs native review
+  "abcInv.voteWrong": "Lakki, dogoggora",  // draft – needs native review
 };

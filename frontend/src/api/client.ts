@@ -9,7 +9,8 @@ import type { LivestockImportResult, LivestockPrices, LivestockSummary } from "@
 import type { MapLayers } from "@/types/map";
 import type { AbcCompany, AbcDocKind, AbcDocument, AbcFormation, AbcHistoryEntry, AbcProfile, AbcRole, AbcRule,
   AbcImportReport, AbcInclusion, AbcRegistryMember, AbcTeamMember, MyAbcMembership, AbcApproval, AbcCertificate,
-  AbcSharePayment, AbcSharesOverview, PayMethod } from "@/types/abc";
+  AbcSharePayment, AbcSharesOverview, PayMethod, AbcMeeting, AbcMeetingRow, AbcQuorum, AbcTally, AbcWeights,
+  MyAbcVote } from "@/types/abc";
 import type {
   AdminArea,
   AiKey,
@@ -426,6 +427,29 @@ export const api = {
   abcRegister: (orgId: number, data: { authority: string; number: string; registered_on: string; certificate_doc_id: number;
     override_reason?: string | null }) => platform.post<unknown>(`/abc/registration?org_id=${orgId}`, data),
   myAbcMemberships: () => platform.get<MyAbcMembership[]>("/abc/my/memberships"),
+  abcWeights: (orgId: number, season?: string | null) => platform.get<AbcWeights>("/abc/voting/weights", { org_id: orgId, season }),
+  abcRecordProduction: (orgId: number, data: { farmer_id: number; season: string; quantity_qt: number; source: "estimate" | "delivered" }) =>
+    platform.post<AbcWeights>(`/abc/voting/production?org_id=${orgId}`, data),
+  abcSnapshot: (orgId: number, label: string, season?: string | null) =>
+    platform.post<{ snapshot_id: number }>(`/abc/voting/snapshot?org_id=${orgId}`, { label, season: season ?? null }),
+  abcMeetings: (orgId: number) =>
+    platform.get<{ meetings: AbcMeetingRow[]; can_meet: boolean; can_approve: boolean }>("/abc/meetings", { org_id: orgId }),
+  abcCreateMeeting: (orgId: number, data: { kind: string; title: string; scheduled_at: string; location?: string | null; agenda: string[] }) =>
+    platform.post<AbcMeeting>(`/abc/meetings?org_id=${orgId}`, data),
+  abcMeeting: (orgId: number, id: number) => platform.get<AbcMeeting>(`/abc/meetings/${id}`, { org_id: orgId }),
+  abcNotify: (orgId: number, id: number) => platform.post<{ sent: number }>(`/abc/meetings/${id}/notify?org_id=${orgId}`),
+  abcAttendance: (orgId: number, id: number, present: number[]) =>
+    platform.put<AbcQuorum>(`/abc/meetings/${id}/attendance?org_id=${orgId}`, { present }),
+  abcCancelMeeting: (orgId: number, id: number) => platform.post<unknown>(`/abc/meetings/${id}/cancel?org_id=${orgId}`),
+  abcAddMotion: (orgId: number, id: number, title: string, text?: string | null) =>
+    platform.post<{ motion_id: number }>(`/abc/meetings/${id}/motions?org_id=${orgId}`, { title, text: text ?? null }),
+  abcVotes: (orgId: number, motionId: number, votes: { user_id: number; choice: string }[]) =>
+    platform.post<AbcTally>(`/abc/motions/${motionId}/votes?org_id=${orgId}`, { votes }),
+  abcCloseMotion: (orgId: number, motionId: number) => platform.post<AbcTally>(`/abc/motions/${motionId}/close?org_id=${orgId}`),
+  abcSaveMinutes: (orgId: number, id: number, text: string) => platform.put<unknown>(`/abc/meetings/${id}/minutes?org_id=${orgId}`, { text }),
+  abcApproveMinutes: (orgId: number, id: number) => platform.post<unknown>(`/abc/meetings/${id}/minutes/approve?org_id=${orgId}`),
+  myAbcVotes: () => platform.get<MyAbcVote[]>("/abc/my/votes"),
+  confirmMyAbcVote: (id: number, correct: boolean) => platform.post<unknown>(`/abc/my/votes/${id}/confirm`, { correct }),
   abcShares: (orgId: number) => platform.get<AbcSharesOverview>("/abc/shares", { org_id: orgId }),
   abcShareSetup: (orgId: number, data: { share_value_etb?: number; shares_offered?: number }) =>
     platform.put<unknown>(`/abc/shares/setup?org_id=${orgId}`, data),
