@@ -8,7 +8,8 @@
 import type { LivestockImportResult, LivestockPrices, LivestockSummary } from "@/types/livestock";
 import type { MapLayers } from "@/types/map";
 import type { AbcCompany, AbcDocKind, AbcDocument, AbcFormation, AbcHistoryEntry, AbcProfile, AbcRole, AbcRule,
-  AbcImportReport, AbcInclusion, AbcRegistryMember, AbcTeamMember, MyAbcMembership } from "@/types/abc";
+  AbcImportReport, AbcInclusion, AbcRegistryMember, AbcTeamMember, MyAbcMembership, AbcApproval, AbcCertificate,
+  AbcSharePayment, AbcSharesOverview, PayMethod } from "@/types/abc";
 import type {
   AdminArea,
   AiKey,
@@ -110,7 +111,7 @@ import type {
   User,
 } from "@/types/api";
 
-import { tr } from "@/i18n/core";
+import { tr, type MessageKey } from "@/i18n/core";
 
 // By default the services are on the same machine that served the page, so the app also
 // works from a phone on the same network (http://<pc-address>:5173).
@@ -159,6 +160,15 @@ function detailMessage(data: unknown, status: number): string {
   const detail = (data as { detail?: unknown })?.detail;
   if (typeof detail === "string") return detail;
   if (Array.isArray(detail)) return detail.map((d) => d?.msg ?? String(d)).join("; ");
+  // A refused action with a rule code (e.g. the ABC ownership cap): shown in the user's language when the
+  // text exists ("rule.<code>"), else the server's English message.
+  if (detail && typeof detail === "object" && "code" in detail) {
+    const d = detail as { code: string; params?: Record<string, string | number>; message?: string };
+    const key = `rule.${d.code}` as MessageKey;
+    const params = Object.fromEntries(Object.entries(d.params ?? {}).map(([k, v]) => [k, typeof v === "number" ? v.toLocaleString() : v]));
+    const text = tr(key, params);
+    return text !== key ? text : (d.message ?? tr("error.requestFailed", { status }));
+  }
   return tr("error.requestFailed", { status });
 }
 
@@ -416,6 +426,28 @@ export const api = {
   abcRegister: (orgId: number, data: { authority: string; number: string; registered_on: string; certificate_doc_id: number;
     override_reason?: string | null }) => platform.post<unknown>(`/abc/registration?org_id=${orgId}`, data),
   myAbcMemberships: () => platform.get<MyAbcMembership[]>("/abc/my/memberships"),
+  abcShares: (orgId: number) => platform.get<AbcSharesOverview>("/abc/shares", { org_id: orgId }),
+  abcShareSetup: (orgId: number, data: { share_value_etb?: number; shares_offered?: number }) =>
+    platform.put<unknown>(`/abc/shares/setup?org_id=${orgId}`, data),
+  abcPledge: (orgId: number, data: { farmer_id: number; shares: number; kind: "minimum" | "extra";
+    first_payment?: { amount_etb: number; method: PayMethod; reference?: string | null } | null }) =>
+    platform.post<{ pledge_id: number; due_on: string | null; payment?: { receipt_no: string; shares_issued: number } }>(
+      `/abc/shares/pledges?org_id=${orgId}`, data),
+  abcSharePay: (orgId: number, data: { pledge_id: number; amount_etb: number; method: PayMethod; reference?: string | null }) =>
+    platform.post<{ receipt_no: string; shares_issued: number; remaining_etb: number }>(`/abc/shares/payments?org_id=${orgId}`, data),
+  abcShareReverse: (orgId: number, paymentId: number, reason: string) =>
+    platform.post<unknown>(`/abc/shares/payments/${paymentId}/reverse?org_id=${orgId}`, { reason }),
+  abcSharePayments: (orgId: number) => platform.get<AbcSharePayment[]>("/abc/shares/payments", { org_id: orgId }),
+  abcCertificates: (orgId: number, farmerId?: number) =>
+    platform.get<{ certificates: AbcCertificate[]; org: string; share_value_etb: number | null; official_record_note: string }>(
+      "/abc/shares/certificates", { org_id: orgId, farmer_id: farmerId }),
+  abcShareTransfer: (orgId: number, data: { from_farmer: number; to_farmer: number; shares: number; reason: string }) =>
+    platform.post<{ approval_id: number }>(`/abc/shares/transfers?org_id=${orgId}`, data),
+  abcShareReminders: (orgId: number) => platform.post<{ sent: number }>(`/abc/shares/reminders?org_id=${orgId}`),
+  abcApprovals: (orgId: number, status?: string) =>
+    platform.get<{ approvals: AbcApproval[]; can_approve: boolean }>("/abc/approvals", { org_id: orgId, status }),
+  abcDecide: (orgId: number, id: number, decision: "approve" | "reject", note?: string | null) =>
+    platform.post<unknown>(`/abc/approvals/${id}/${decision}?org_id=${orgId}`, { note: note ?? null }),
   abcRegistry: (orgId: number) =>
     platform.get<{ members: AbcRegistryMember[]; can_edit: boolean; official_record_note: string }>("/abc/registry", { org_id: orgId }),
   abcInclusion: (orgId: number) => platform.get<AbcInclusion>("/abc/registry/inclusion", { org_id: orgId }),

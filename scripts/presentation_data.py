@@ -242,7 +242,40 @@ def seed_abc_team(conn) -> int:
             conn.execute("INSERT OR IGNORE INTO abc_roles (org_id, user_id, role, since) VALUES (?,?,?, '2026-09-01 09:00:00')",
                          (org, u[0], role))
             n += 1
+    conn.commit()
+    seed_abc_shares(conn, org)
     return n
+
+
+def seed_abc_shares(conn, org: int) -> None:
+    """Sample share capital (A4): 1,000 birr shares, 30,000 offered; each member's minimum pledge, paid through the
+    real share functions (receipts, certificates). Two members still owe part. Only when the ABC has no pledges."""
+    from datetime import date
+
+    from backend import abc_company, abc_shares
+
+    abc_shares.ensure_schema(conn)
+    if conn.execute("SELECT 1 FROM abc_share_pledges WHERE org_id=?", (org,)).fetchone():
+        return
+    gm = conn.execute("SELECT u.* FROM users u WHERE u.phone='0944000008'").fetchone()
+    if not gm:
+        return
+    cols = [d[1] for d in conn.execute("PRAGMA table_info(users)")]
+    actor = dict(zip(cols, gm))
+    ctx = abc_company.abc_for(conn, actor, org, "shares")
+    abc_shares.setup(conn, ctx, actor, 1000, 30000)
+    members = [r[0] for r in conn.execute("""SELECT m.farmer_id FROM abc_members m JOIN abc_member_details d
+                                             ON d.org_id = m.org_id AND d.farmer_id = m.farmer_id
+                                             WHERE m.org_id=? AND m.status='active' ORDER BY d.member_no""", (org,))]
+    methods = ["cash", "telebirr", "bank", "cash", "telebirr", "cash", "bank", "cash", "cash"]
+    for i, fid in enumerate(members):
+        shares = 5 if i % 3 else 10
+        amount = shares * 1000 if i not in (4, 7) else 3000            # two members still owe part
+        method = methods[i % len(methods)]
+        abc_shares.pledge(conn, ctx, actor, farmer_id=fid, shares=shares, kind="minimum", pledged_on=date(2026, 9, 5),
+                          first_payment={"amount_etb": amount, "method": method,
+                                         "reference": None if method == "cash" else f"SAMPLE-{1000 + i}",
+                                         "paid_on": date(2026, 9, 5 + i)})
 
 
 if __name__ == "__main__":

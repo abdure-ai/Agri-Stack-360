@@ -131,5 +131,8 @@
   "lv_note": "These are market reports per head (lowest and highest price). The price depends on the animal's size, condition and the market day: check at the market before you sell. An outlook is not a promise.",
   "livestock_source": "NMIS livestock market data",
   "lv_reason_short_period": "Only {days} days of data: too short to tell a trend from a passing change.",
-  "cited_dose_warning": "Spray rates are from the MoA wheat manual (page cited). Before spraying, check that the product is in the current EAA register, follow the rate on the product label (the label is final), and ask your Development Agent."
+  "cited_dose_warning": "Spray rates are from the MoA wheat manual (page cited). Before spraying, check that the product is in the current EAA register, follow the rate on the product label (the label is final), and ask your Development Agent.",
+  "abc_share_receipt": "{org}: payment received, receipt {receipt}, {amount} birr. Shares issued now: {issued}. You hold {held} shares.",
+  "abc_share_due": "{org}: {amount} birr is still owed on your pledged shares; the last day to pay is {date}.",
+  "abc_share_overdue": "{org}: the deadline {date} for your pledged shares has passed and {amount} birr is still owed. Please talk to the ABC office."
 }

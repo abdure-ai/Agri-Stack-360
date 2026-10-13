@@ -1479,7 +1479,7 @@ export const am: Record<MessageKey, string> = {
   "abc.invitedOk": "ግብዣው ተልኳል። አርሶ አደሩ በመገለጫዬ ውስጥ ይቀበላል።",  // draft – needs native review
   "abc.noMembers": "እስካሁን አባል የለም።",  // draft – needs native review
   "abc.waiting": "በመጠባበቅ ላይ",  // draft – needs native review
-  "abc.contributionsNote": "የባለአክሲዮን መዋጮዎች (መሬት፣ እንስሳት፣ ጉልበት)። በABC የሚያዝ መዝገብ ነው፤ ሕጋዊ ሰነድ አይደለም።",  // draft – needs native review
+  "abc.contributionsNote": "የባለአክሲዮኖች መዋጮ (መሬት፣ እንስሳት፣ ጉልበት)። ዋጋ፦ የሚኒስቴሩን የግምት መመሪያ በመጠባበቅ ላይ። በABC የሚያዝ መዝገብ ነው፣ ሕጋዊ ሰነድ አይደለም።",  // draft – needs native review
   "abc.kind.land": "መሬት",  // draft – needs native review
   "abc.kind.livestock": "እንስሳት",  // draft – needs native review
   "abc.kind.labour": "ጉልበት",  // draft – needs native review
@@ -2077,4 +2077,91 @@ export const am: Record<MessageKey, string> = {
   "abc.idType.fayda": "ፋይዳ (ብሔራዊ መታወቂያ)",  // draft – needs native review
   "abc.idType.kebele_id": "የቀበሌ መታወቂያ",  // draft – needs native review
   "abc.idType.other": "ሌላ መታወቂያ",  // draft – needs native review
+
+  // ── ABC shares (A4) ───────────────────────────────────────────────────────
+  "abc.tab.shares": "አክሲዮኖች",  // draft – needs native review
+  "rule.share_value_min": "አንድ አክሲዮን ቢያንስ {minimum} ብር መሆን አለበት (የABC ደንቦች)።",  // draft – needs native review
+  "rule.min_shares": "የአንድ አባል የመጀመሪያ ቃል ቢያንስ {minimum} አክሲዮኖች መሆን አለበት።",  // draft – needs native review
+  "rule.ownership_cap": "ማንም አባል ከቀረቡት {offered} አክሲዮኖች ከ{percent}% በላይ ({limit} አክሲዮኖች) መያዝ አይችልም። ይህ {after} ያደርገዋል።",  // draft – needs native review
+  "rule.pledge_upfront": "ተጨማሪ አክሲዮኖች ቃል ሲገባ ቢያንስ {percent}% መከፈል አለባቸው፦ {amount} ብር።",  // draft – needs native review
+  "abc.sh.setup": "የአክሲዮን ካፒታል",  // draft – needs native review
+  "abc.sh.rulesLine": "በሥራ ላይ ያሉ ደንቦች፦ ለአንድ አባል ቢያንስ {min} አክሲዮኖች፣ ለእያንዳንዱ ቢበዛ {cap}%፣ በተጨማሪ አክሲዮኖች {upfront}% ቅድሚያ፣ ቀሪው በ{years} ዓመታት ውስጥ።",  // draft – needs native review
+  "abc.sh.pledgedShares": "ቃል የተገቡ አክሲዮኖች",  // draft – needs native review
+  "abc.sh.issuedShares": "የተሰጡ አክሲዮኖች",  // draft – needs native review
+  "abc.sh.paidTotal": "የተከፈለ",  // draft – needs native review
+  "abc.sh.subscribed": "ከቀረቡት አክሲዮኖች",  // draft – needs native review
+  "abc.sh.shareValue": "የአንድ አክሲዮን ዋጋ (ብር)",  // draft – needs native review
+  "abc.sh.sharesOffered": "የቀረቡ አክሲዮኖች",  // draft – needs native review
+  "abc.sh.capLine": "የባለቤትነት ገደብ፦ ለአንድ አባል {n} አክሲዮኖች።",  // draft – needs native review
+  "abc.sh.setFirst": "መጀመሪያ የአክሲዮን ዋጋና የቀረቡትን አክሲዮኖች ብዛት ያስቀምጡ።",  // draft – needs native review
+  "abc.sh.members": "የአባላት አክሲዮኖች",  // draft – needs native review
+  "abc.sh.membersHint": "ቃል ወይም ክፍያ ለመመዝገብ አባሉን ይጫኑ። አክሲዮኖች በተከፈሉ መጠን ይሰጣሉ።",  // draft – needs native review
+  "abc.sh.memberLine": "{held} አክሲዮኖች ተይዘዋል · {pledged} ቃል ተገብቷል · የተከፈለ {paid} · ቀሪ {owed}",  // draft – needs native review
+  "abc.sh.kind.minimum": "ዝቅተኛ ቃል",  // draft – needs native review
+  "abc.sh.kind.extra": "ተጨማሪ ቃል",  // draft – needs native review
+  "abc.sh.sharesN": "{n} አክሲዮኖች",  // draft – needs native review
+  "abc.sh.dueOn": "እስከ {date} ይክፈል",  // draft – needs native review
+  "abc.sh.paidOwed": "የተከፈለ {paid} · ቀሪ {owed}",  // draft – needs native review
+  "abc.sh.amount": "መጠን (ብር)",  // draft – needs native review
+  "abc.sh.method": "የክፍያ መንገድ",  // draft – needs native review
+  "abc.sh.reference": "ማጣቀሻ ቁጥር",  // draft – needs native review
+  "abc.sh.recordPayment": "ክፍያ መዝግብ",  // draft – needs native review
+  "abc.sh.paid": "ክፍያው ተመዝግቧል፤ ደረሰኙ ለአባሉ ተልኳል።",  // draft – needs native review
+  "abc.sh.minimumShares": "ዝቅተኛ ቃል (አክሲዮኖች)",  // draft – needs native review
+  "abc.sh.extraShares": "ተጨማሪ አክሲዮኖች",  // draft – needs native review
+  "abc.sh.addPledge": "ቃል መዝግብ",  // draft – needs native review
+  "abc.sh.pledged": "ቃሉ ተመዝግቧል።",  // draft – needs native review
+  "abc.sh.minimumHint": "የመጀመሪያ ቃል፦ ቢያንስ {n} አክሲዮኖች፤ ሙሉ በሙሉ መከፈል አለበት።",  // draft – needs native review
+  "abc.sh.extraHint": "ተጨማሪ አክሲዮኖች፦ አሁን ቢያንስ {pct}% ይክፈሉ፣ ቀሪውን በ{years} ዓመታት ውስጥ።",  // draft – needs native review
+  "abc.sh.printCertificate": "የአክሲዮን ምስክር ወረቀት አትም",  // draft – needs native review
+  "abc.sh.certificate": "የአክሲዮን ምስክር ወረቀት",  // draft – needs native review
+  "abc.sh.certFor": "አባል፦ {name} (የአባል ቁጥር {no})",  // draft – needs native review
+  "abc.sh.certHeld": "የተያዙ አክሲዮኖች፦ {n}፣ የአንድ አክሲዮን ዋጋ፦ {value}",  // draft – needs native review
+  "abc.sh.certNo": "የምስክር ወረቀት ቁጥር",  // draft – needs native review
+  "abc.sh.shares": "አክሲዮኖች",  // draft – needs native review
+  "abc.sh.approvals": "የቦርድ ፈቃዶች",  // draft – needs native review
+  "abc.sh.approvalsHint": "ሌላ የቦርድ አባል ይወስናል፤ የጠየቀው ሰው የራሱን ጥያቄ ማጽደቅ አይችልም።",  // draft – needs native review
+  "abc.sh.transferLine": "{shares} አክሲዮኖችን ማስተላለፍ፦ {from} → {to}",  // draft – needs native review
+  "abc.appr.pending": "በመጠባበቅ ላይ",  // draft – needs native review
+  "abc.appr.approved": "ጸድቋል",  // draft – needs native review
+  "abc.appr.rejected": "ውድቅ ተደርጓል",  // draft – needs native review
+  "abc.appr.approve": "አጽድቅ",  // draft – needs native review
+  "abc.appr.reject": "ውድቅ አድርግ",  // draft – needs native review
+  "abc.sh.transfer": "አክሲዮኖችን ማስተላለፍ",  // draft – needs native review
+  "abc.sh.transferHint": "በአባላት መካከል (ሽያጭ፣ ውርስ፣ መውጣት)። ቦርዱ ማጽደቅ አለበት።",  // draft – needs native review
+  "abc.sh.from": "ከ",  // draft – needs native review
+  "abc.sh.to": "ወደ",  // draft – needs native review
+  "abc.sh.reason": "ምክንያት",  // draft – needs native review
+  "abc.sh.reasonHint": "ሽያጭ፣ ውርስ፣ መውጣት…",  // draft – needs native review
+  "abc.sh.askApproval": "ቦርዱን ጠይቅ",  // draft – needs native review
+  "abc.sh.transferSent": "ለቦርዱ ፈቃድ ተልኳል።",  // draft – needs native review
+  "abc.sh.payments": "ክፍያዎችና ደረሰኞች",  // draft – needs native review
+  "abc.sh.reverse": "ሰርዝ",  // draft – needs native review
+  "abc.sh.reverseReason": "ይህን ክፍያ የሚሰርዙበት ምክንያት (ለምሳሌ ያልተሳካ ዝውውር)፦",  // draft – needs native review
+  "abc.sh.reminders": "የክፍያ ማስታወሻዎችን ላክ",  // draft – needs native review
+  "abc.sh.remindersSent": "{n} ማስታወሻዎች ተልከዋል (በ30 ቀናት ውስጥ የሚደርሱ ወይም ያለፈባቸው ቃሎች)።",  // draft – needs native review
+  "abc.flag.overdue": "ክፍያ ዘግይቷል",  // draft – needs native review
+  "abc.flag.due_soon": "በቅርቡ ይደርሳል",  // draft – needs native review
+  "abc.flag.minimum_unpaid": "ዝቅተኛው ሙሉ አልተከፈለም",  // draft – needs native review
+  "abc.flag.no_minimum": "ገና ቃል የለም",  // draft – needs native review
+  "abc.flag.over_cap": "ከባለቤትነት ገደብ በላይ",  // draft – needs native review
+  "abc.pay.cash": "ጥሬ ገንዘብ",  // draft – needs native review
+  "abc.pay.bank": "ባንክ",  // draft – needs native review
+  "abc.pay.telebirr": "ቴሌብር",  // draft – needs native review
+  "abc.pay.mpesa": "ኤም-ፔሳ",  // draft – needs native review
+  "abc.pay.other": "ሌላ",  // draft – needs native review
+  "abc.action.abc.share.pledge": "አክሲዮን ቃል ተገብቷል",  // draft – needs native review
+  "abc.action.abc.share.payment": "የአክሲዮን ክፍያ ተመዝግቧል",  // draft – needs native review
+  "abc.action.abc.share.payment_reverse": "የአክሲዮን ክፍያ ተሰርዟል",  // draft – needs native review
+  "abc.action.abc.share.transfer_request": "የአክሲዮን ማስተላለፍ ተጠይቋል",  // draft – needs native review
+  "abc.action.abc.approval.decide": "የቦርድ ውሳኔ",  // draft – needs native review
+  "abc.action.abc.document.upload": "ሰነድ ተጭኗል",  // draft – needs native review
+  "abc.action.abc.formation.recognition": "እውቅና ተመዝግቧል",  // draft – needs native review
+  "abc.action.abc.agreement.sign": "የመመሥረቻ ስምምነት ተፈርሟል",  // draft – needs native review
+  "abc.action.abc.registration": "ምዝገባ ተመዝግቧል",  // draft – needs native review
+  "abc.action.abc.member.enrol": "አባል ተመዝግቧል",  // draft – needs native review
+  "abc.action.abc.member.update": "የአባል ዝርዝር ተቀይሯል",  // draft – needs native review
+  "abc.action.abc.member.id_view": "ሙሉ የመታወቂያ ቁጥር ታይቷል",  // draft – needs native review
+  "abc.action.abc.member.import": "አባላት ገብተዋል",  // draft – needs native review
+  "abc.action.abc.member.remove": "አባል ወጥቷል",  // draft – needs native review
 };

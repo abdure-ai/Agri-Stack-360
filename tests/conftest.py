@@ -37,6 +37,9 @@ def platform(monkeypatch):
     from backend import abc_members
 
     abc_members.ensure_schema(conn)
+    from backend import abc_shares
+
+    abc_shares.ensure_schema(conn)
     from backend.routers import estate
 
     estate.ensure_schema(conn)

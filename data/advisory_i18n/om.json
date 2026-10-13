@@ -89,7 +89,10 @@
       "lv_note",
       "livestock_source",
       "lv_reason_short_period",
-      "cited_dose_warning"
+      "cited_dose_warning",
+      "abc_share_receipt",
+      "abc_share_due",
+      "abc_share_overdue"
     ]
   },
   "dont_know": "Gaaffii kana qajeelfama raggaasifame irraa deebisuu hin dandeenye. Gaaffii kee Hojjetaa Misoomaa (DA) keetiif ergeera; inni/isheen siif deebisu.",
@@ -219,5 +222,8 @@
   "lv_note": "Kunneen gabaasa gabaa horii tokkoo ti (gatii gadi aanaa fi ol aanaa). Gatiin akka guddina, haala horii fi guyyaa gabaatti garaagarama; osoo hin gurgurin dura gabaa irratti mirkaneeffadhaa. Tilmaamni waadaa miti.",
   "livestock_source": "Odeeffannoo gabaa horii NMIS",
   "lv_reason_short_period": "Odeeffannoo guyyaa {days} qofa: adeemsa jijjiirama yeroo gabaabaa irraa adda baasuuf baay'ee gabaabaa dha.",
-  "cited_dose_warning": "Hammamni facaasaa manuwaala qamadii Ministeera Qonnaa irraa fudhatame (fuulli caqafame). Osoo hin facaasin dura oomishni galmee EAA ammaa keessa jiraachuu mirkaneeffadhaa, hammam asxaa oomishaa irratti jiru hordofaa (asxaan isa xumuraa ti), hojjetaa misoomaa keessanis gaafadhaa."
+  "cited_dose_warning": "Hammamni facaasaa manuwaala qamadii Ministeera Qonnaa irraa fudhatame (fuulli caqafame). Osoo hin facaasin dura oomishni galmee EAA ammaa keessa jiraachuu mirkaneeffadhaa, hammam asxaa oomishaa irratti jiru hordofaa (asxaan isa xumuraa ti), hojjetaa misoomaa keessanis gaafadhaa.",
+  "abc_share_receipt": "{org}: kaffaltiin argameera, nagahee {receipt}, qarshii {amount}. Aksiyoona amma kenname: {issued}. Aksiyoona {held} qabdu.",
+  "abc_share_due": "{org}: aksiyoona waadaa galtan irratti qarshii {amount} hafeera; guyyaan kaffaltii dhumaa {date} dha.",
+  "abc_share_overdue": "{org}: guyyaan dhumaa {date} aksiyoona waadaa galtaniif darbeera, qarshii {amount} hafeera. Maaloo waajjira ABC dubbisaa."
 }

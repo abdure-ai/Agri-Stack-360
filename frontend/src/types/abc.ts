@@ -191,3 +191,89 @@ export interface AbcInclusion {
   unknown_gender: number;
   unknown_age: number;
 }
+
+// ── Shares (A4) ──────────────────────────────────────────────────────────────
+
+export type ShareFlag = "overdue" | "due_soon" | "minimum_unpaid" | "no_minimum" | "over_cap";
+export type PayMethod = "cash" | "bank" | "telebirr" | "mpesa" | "other";
+
+export interface AbcPledge {
+  id: number;
+  kind: "minimum" | "extra";
+  shares: number;
+  pledged_on: string;
+  due_on: string | null;
+  status: "open" | "paid";
+  paid_etb: number;
+  owed_etb: number;
+  due_in_days?: number;
+}
+
+export interface AbcShareMember {
+  id: number;
+  name: string;
+  phone: string;
+  member_no: number | null;
+  held: number;
+  pledged: number;
+  paid_etb: number;
+  owed_etb: number;
+  pledges: AbcPledge[];
+  flags: ShareFlag[];
+}
+
+export interface AbcSharesOverview {
+  share_value_etb: number | null;
+  shares_offered: number | null;
+  min_shares: number;
+  cap_percent: number;
+  cap_shares: number | null;
+  upfront_percent: number;
+  deadline_years: number;
+  totals: { pledged_shares: number; issued_shares: number; paid_etb: number; owed_etb: number; subscribed_percent: number | null };
+  members: AbcShareMember[];
+  pending_approvals: number;
+  can_edit: boolean;
+  can_finance: boolean;
+  can_approve: boolean;
+  official_record_note: string;
+}
+
+export interface AbcSharePayment {
+  id: number;
+  receipt_no: string;
+  farmer_id: number;
+  name: string;
+  amount_etb: number;
+  method: PayMethod;
+  reference: string | null;
+  paid_on: string;
+  status: "confirmed" | "reversed";
+  reverse_reason: string | null;
+  recorded_by: string | null;
+}
+
+export interface AbcCertificate {
+  id: number;
+  certificate_no: string;
+  farmer_id: number;
+  name: string;
+  member_no: number | null;
+  shares: number;
+  reason: "issue" | "transfer_in";
+  created_at: string;
+}
+
+export interface AbcApproval {
+  id: number;
+  kind: "share_transfer" | string;
+  ref_id: number;
+  summary: Record<string, string | number>;
+  amount_etb: number | null;
+  status: "pending" | "approved" | "rejected";
+  requested_by_name: string | null;
+  requested_at: string;
+  decided_by_name: string | null;
+  decided_at: string | null;
+  note: string | null;
+}

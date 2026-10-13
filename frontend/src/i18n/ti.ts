@@ -1479,7 +1479,7 @@ export const ti: Record<MessageKey, string> = {
   "abc.invitedOk": "ዕድመ ተላኢኹ። እቲ ሓረስታይ ኣብ መግለጺየ ይቕበሎ።",  // draft – needs native review
   "abc.noMembers": "ክሳብ ሕጂ ኣባል የለን።",  // draft – needs native review
   "abc.waiting": "ይጽበ ኣሎ",  // draft – needs native review
-  "abc.contributionsNote": "ወፈያታት ኣክሲዮናውያን (መሬት፣ እንስሳ፣ ጉልበት)። ብABC ዝሕዝ መዝገብ እዩ፣ ሕጋዊ ሰነድ ኣይኮነን።",  // draft – needs native review
+  "abc.contributionsNote": "ወፈያ ዋናታት ኣክሲዮን (መሬት፣ እንስሳ፣ ጉልበት)። ዋጋ፦ ንመምርሒ ግምት ሚኒስትሪ ይጽበ ኣሎ። ብABC ዝሕዝ መዝገብ እዩ፣ ሕጋዊ ሰነድ ኣይኮነን።",  // draft – needs native review
   "abc.kind.land": "መሬት",  // draft – needs native review
   "abc.kind.livestock": "እንስሳ",  // draft – needs native review
   "abc.kind.labour": "ጉልበት",  // draft – needs native review
@@ -2077,4 +2077,91 @@ export const ti: Record<MessageKey, string> = {
   "abc.idType.fayda": "ፋይዳ (ሃገራዊ መንነት)",  // draft – needs native review
   "abc.idType.kebele_id": "መንነት ቀበሌ",  // draft – needs native review
   "abc.idType.other": "ካልእ መንነት",  // draft – needs native review
+
+  // ── ABC shares (A4) ───────────────────────────────────────────────────────
+  "abc.tab.shares": "ኣክሲዮናት",  // draft – needs native review
+  "rule.share_value_min": "ሓንቲ ኣክሲዮን እንተወሓደ {minimum} ብር ክትከውን ኣለዋ (ሕግታት ABC)።",  // draft – needs native review
+  "rule.min_shares": "ቀዳማይ ቃል ኣባል እንተወሓደ {minimum} ኣክሲዮናት ክኸውን ኣለዎ።",  // draft – needs native review
+  "rule.ownership_cap": "ዝኾነ ኣባል ካብ ዝቐረቡ {offered} ኣክሲዮናት ልዕሊ {percent}% ({limit} ኣክሲዮናት) ክሕዝ ኣይክእልን። እዚ {after} ይገብሮ።",  // draft – needs native review
+  "rule.pledge_upfront": "ተወሰኽቲ ኣክሲዮናት ቃል ክኣቱ እንተወሓደ {percent}% ክኽፈሉ ኣለዎም፦ {amount} ብር።",  // draft – needs native review
+  "abc.sh.setup": "ካፒታል ኣክሲዮን",  // draft – needs native review
+  "abc.sh.rulesLine": "ኣብ ስራሕ ዘለዉ ሕግታት፦ ንሓደ ኣባል እንተወሓደ {min} ኣክሲዮናት፣ ነፍሲ ወከፍ ልዕሊ {cap}% ኣይኮነን፣ ኣብ ተወሰኽቲ {upfront}% ቅድሚት፣ እቲ ዝተረፈ ኣብ {years} ዓመታት።",  // draft – needs native review
+  "abc.sh.pledgedShares": "ቃል ዝተኣትወሎም ኣክሲዮናት",  // draft – needs native review
+  "abc.sh.issuedShares": "ዝተዋህቡ ኣክሲዮናት",  // draft – needs native review
+  "abc.sh.paidTotal": "ዝተኸፍለ",  // draft – needs native review
+  "abc.sh.subscribed": "ካብ ዝቐረቡ ኣክሲዮናት",  // draft – needs native review
+  "abc.sh.shareValue": "ዋጋ ሓንቲ ኣክሲዮን (ብር)",  // draft – needs native review
+  "abc.sh.sharesOffered": "ዝቐረቡ ኣክሲዮናት",  // draft – needs native review
+  "abc.sh.capLine": "ዶብ ዋንነት፦ ንሓደ ኣባል {n} ኣክሲዮናት።",  // draft – needs native review
+  "abc.sh.setFirst": "ቅድም ዋጋ ኣክሲዮንን ብዝሒ ዝቐረቡ ኣክሲዮናትን ኣቐምጡ።",  // draft – needs native review
+  "abc.sh.members": "ኣክሲዮናት ኣባላት",  // draft – needs native review
+  "abc.sh.membersHint": "ቃል ወይ ክፍሊት ንምምዝጋብ ኣባል ጠውቑ። ኣክሲዮናት ብዝተኸፍሉሉ መጠን ይወሃቡ።",  // draft – needs native review
+  "abc.sh.memberLine": "{held} ኣክሲዮናት ተታሒዞም · {pledged} ቃል · ዝተኸፍለ {paid} · ዝተረፈ {owed}",  // draft – needs native review
+  "abc.sh.kind.minimum": "ዝተሓተ ቃል",  // draft – needs native review
+  "abc.sh.kind.extra": "ተወሳኺ ቃል",  // draft – needs native review
+  "abc.sh.sharesN": "{n} ኣክሲዮናት",  // draft – needs native review
+  "abc.sh.dueOn": "ክሳብ {date} ይኽፈል",  // draft – needs native review
+  "abc.sh.paidOwed": "ዝተኸፍለ {paid} · ዝተረፈ {owed}",  // draft – needs native review
+  "abc.sh.amount": "መጠን (ብር)",  // draft – needs native review
+  "abc.sh.method": "መንገዲ ክፍሊት",  // draft – needs native review
+  "abc.sh.reference": "መወከሲ ቁጽሪ",  // draft – needs native review
+  "abc.sh.recordPayment": "ክፍሊት መዝግብ",  // draft – needs native review
+  "abc.sh.paid": "ክፍሊት ተመዝጊቡ፤ ቅብሊት ናብ ኣባል ተላኢኹ።",  // draft – needs native review
+  "abc.sh.minimumShares": "ዝተሓተ ቃል (ኣክሲዮናት)",  // draft – needs native review
+  "abc.sh.extraShares": "ተወሰኽቲ ኣክሲዮናት",  // draft – needs native review
+  "abc.sh.addPledge": "ቃል መዝግብ",  // draft – needs native review
+  "abc.sh.pledged": "ቃል ተመዝጊቡ።",  // draft – needs native review
+  "abc.sh.minimumHint": "ቀዳማይ ቃል፦ እንተወሓደ {n} ኣክሲዮናት፤ ብምሉኡ ክኽፈል ኣለዎ።",  // draft – needs native review
+  "abc.sh.extraHint": "ተወሰኽቲ ኣክሲዮናት፦ ሕጂ እንተወሓደ {pct}% ክፈሉ፣ እቲ ዝተረፈ ኣብ {years} ዓመታት።",  // draft – needs native review
+  "abc.sh.printCertificate": "ምስክር ወረቐት ኣክሲዮን ሕተም",  // draft – needs native review
+  "abc.sh.certificate": "ምስክር ወረቐት ኣክሲዮን",  // draft – needs native review
+  "abc.sh.certFor": "ኣባል፦ {name} (ቁጽሪ ኣባል {no})",  // draft – needs native review
+  "abc.sh.certHeld": "ዝተታሕዙ ኣክሲዮናት፦ {n}፣ ዋጋ ሓንቲ ኣክሲዮን፦ {value}",  // draft – needs native review
+  "abc.sh.certNo": "ቁጽሪ ምስክር ወረቐት",  // draft – needs native review
+  "abc.sh.shares": "ኣክሲዮናት",  // draft – needs native review
+  "abc.sh.approvals": "ፍቓድ ቦርድ",  // draft – needs native review
+  "abc.sh.approvalsHint": "ካልእ ኣባል ቦርድ ይውስን፤ ዝሓተተ ሰብ ንሕቶኡ ከጽድቕ ኣይክእልን።",  // draft – needs native review
+  "abc.sh.transferLine": "{shares} ኣክሲዮናት ምትሕልላፍ፦ {from} → {to}",  // draft – needs native review
+  "abc.appr.pending": "ይጽበ",  // draft – needs native review
+  "abc.appr.approved": "ጸዲቑ",  // draft – needs native review
+  "abc.appr.rejected": "ተነጺጉ",  // draft – needs native review
+  "abc.appr.approve": "ኣጽድቕ",  // draft – needs native review
+  "abc.appr.reject": "ንጸግ",  // draft – needs native review
+  "abc.sh.transfer": "ኣክሲዮናት ምትሕልላፍ",  // draft – needs native review
+  "abc.sh.transferHint": "ኣብ መንጎ ኣባላት (መሸጣ፣ ውርሻ፣ ምውጻእ)። ቦርድ ከጽድቕ ኣለዎ።",  // draft – needs native review
+  "abc.sh.from": "ካብ",  // draft – needs native review
+  "abc.sh.to": "ናብ",  // draft – needs native review
+  "abc.sh.reason": "ምኽንያት",  // draft – needs native review
+  "abc.sh.reasonHint": "መሸጣ፣ ውርሻ፣ ምውጻእ…",  // draft – needs native review
+  "abc.sh.askApproval": "ንቦርድ ሕተት",  // draft – needs native review
+  "abc.sh.transferSent": "ንፍቓድ ናብ ቦርድ ተላኢኹ።",  // draft – needs native review
+  "abc.sh.payments": "ክፍሊታትን ቅብሊታትን",  // draft – needs native review
+  "abc.sh.reverse": "ሰርዝ",  // draft – needs native review
+  "abc.sh.reverseReason": "ነዚ ክፍሊት ትሰርዝሉ ምኽንያት (ንኣብነት ዘይተዓወተ ምትሕልላፍ)፦",  // draft – needs native review
+  "abc.sh.reminders": "መዘኻኸሪ ክፍሊት ስደድ",  // draft – needs native review
+  "abc.sh.remindersSent": "{n} መዘኻኸርታት ተላኢኾም (ኣብ 30 መዓልቲ ዝበጽሑ ወይ ዝሓለፎም ቃላት)።",  // draft – needs native review
+  "abc.flag.overdue": "ክፍሊት ደንጒዩ",  // draft – needs native review
+  "abc.flag.due_soon": "ቀረባ ይበጽሕ",  // draft – needs native review
+  "abc.flag.minimum_unpaid": "ዝተሓተ ብምሉኡ ኣይተኸፍለን",  // draft – needs native review
+  "abc.flag.no_minimum": "ገና ቃል የለን",  // draft – needs native review
+  "abc.flag.over_cap": "ልዕሊ ዶብ ዋንነት",  // draft – needs native review
+  "abc.pay.cash": "ጥረ ገንዘብ",  // draft – needs native review
+  "abc.pay.bank": "ባንክ",  // draft – needs native review
+  "abc.pay.telebirr": "ቴሌብር",  // draft – needs native review
+  "abc.pay.mpesa": "ኤም-ፔሳ",  // draft – needs native review
+  "abc.pay.other": "ካልእ",  // draft – needs native review
+  "abc.action.abc.share.pledge": "ኣክሲዮን ቃል ተኣትዩ",  // draft – needs native review
+  "abc.action.abc.share.payment": "ክፍሊት ኣክሲዮን ተመዝጊቡ",  // draft – needs native review
+  "abc.action.abc.share.payment_reverse": "ክፍሊት ኣክሲዮን ተሰሪዙ",  // draft – needs native review
+  "abc.action.abc.share.transfer_request": "ምትሕልላፍ ኣክሲዮን ተሓቲቱ",  // draft – needs native review
+  "abc.action.abc.approval.decide": "ውሳነ ቦርድ",  // draft – needs native review
+  "abc.action.abc.document.upload": "ሰነድ ተጻዒኑ",  // draft – needs native review
+  "abc.action.abc.formation.recognition": "ኣፍልጦ ተመዝጊቡ",  // draft – needs native review
+  "abc.action.abc.agreement.sign": "ውዕል ምምስራት ተፈሪሙ",  // draft – needs native review
+  "abc.action.abc.registration": "ምዝገባ ተመዝጊቡ",  // draft – needs native review
+  "abc.action.abc.member.enrol": "ኣባል ተመዝጊቡ",  // draft – needs native review
+  "abc.action.abc.member.update": "ዝርዝር ኣባል ተቐይሩ",  // draft – needs native review
+  "abc.action.abc.member.id_view": "ምሉእ ቁጽሪ መንነት ተራእዩ",  // draft – needs native review
+  "abc.action.abc.member.import": "ኣባላት ኣትዮም",  // draft – needs native review
+  "abc.action.abc.member.remove": "ኣባል ወጺኡ",  // draft – needs native review
 };

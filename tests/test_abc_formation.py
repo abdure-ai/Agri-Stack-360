@@ -131,10 +131,11 @@ def test_full_checklist_registers_without_override(world, platform):
         f.post("/api/abc/my/agreement/sign", params={"org_id": org})
     body, it = items(gm)
     assert [k for k, v in it.items() if not v["ok"]] == ["declared_paid"]           # declared capital 0: not counted
-    gm.put("/api/abc/company", json={"declared_capital_etb": 1.0})
-    platform.execute("CREATE TABLE IF NOT EXISTS abc_share_payments (org_id INTEGER, amount_etb REAL, status TEXT)")
-    platform.execute("INSERT INTO abc_share_payments VALUES (?, 1.0, 'confirmed')", (org,))
-    platform.commit()
+    gm.put("/api/abc/company", json={"declared_capital_etb": 20000.0})
+    gm.put("/api/abc/shares/setup", json={"share_value_etb": 1000, "shares_offered": 1000})
+    r = gm.post("/api/abc/shares/pledges", json={"farmer_id": 10, "shares": 5, "kind": "minimum",
+                                                 "first_payment": {"amount_etb": 5000, "method": "cash"}})
+    assert r.status_code == 201                                   # 5 000 of 20 000 declared = the 25% needed
     assert items(gm)[0]["readiness"]["ready"]
     cert = upload(gm, "registration_certificate").json()
     r = gm.post("/api/abc/registration", json={"authority": "MoA", "number": "N1", "registered_on": "2026-10-12",

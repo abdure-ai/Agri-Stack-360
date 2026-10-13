@@ -215,6 +215,12 @@ def run_alert_cycle(conn: sqlite3.Connection, now: datetime | None = None, weath
             (today,))
         report.follow_ups_due = due.rowcount
         _stage_reminders(conn, report, now, default_cap)
+    try:                                   # ABC share payments due / overdue (backend/abc_shares.py)
+        from backend import abc_shares
+
+        abc_shares.send_reminders(conn, now)
+    except sqlite3.OperationalError:       # ABC tables not created (tests with a minimal schema)
+        pass
     if weather is not None:
         _spray_rain_warnings(conn, report, now, weather, default_cap)
     return report

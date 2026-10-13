@@ -1479,7 +1479,7 @@ export const om: Record<MessageKey, string> = {
   "abc.invitedOk": "Affeerraan ergameera. Qonnaan bulaan Piroofaayilii koo keessatti ni fudhata.",  // draft – needs native review
   "abc.noMembers": "Ammaaf miseensi hin jiru.",  // draft – needs native review
   "abc.waiting": "Eegaa jira",  // draft – needs native review
-  "abc.contributionsNote": "Gumaacha qooddattootaa (lafa, horii, humna). Galmee ABC'n qabu, sanada seeraa miti.",  // draft – needs native review
+  "abc.contributionsNote": "Gumaacha qooda qabeeyyii (lafa, horii, humna). Gatii: qajeelfama tilmaama ministeeraa eeggachaa jira. Galmee ABCn qabatu, sanada seeraa miti.",  // draft – needs native review
   "abc.kind.land": "Lafa",  // draft – needs native review
   "abc.kind.livestock": "Horii",  // draft – needs native review
   "abc.kind.labour": "Humna",  // draft – needs native review
@@ -2077,4 +2077,91 @@ export const om: Record<MessageKey, string> = {
   "abc.idType.fayda": "Faayidaa (eenyummaa biyyaalessaa)",  // draft – needs native review
   "abc.idType.kebele_id": "Eenyummaa gandaa",  // draft – needs native review
   "abc.idType.other": "Eenyummaa biraa",  // draft – needs native review
+
+  // ── ABC shares (A4) ───────────────────────────────────────────────────────
+  "abc.tab.shares": "Aksiyoona",  // draft – needs native review
+  "rule.share_value_min": "Aksiyoonni tokko yoo xiqqaate qarshii {minimum} ta'uu qaba (seerota ABC).",  // draft – needs native review
+  "rule.min_shares": "Waadaan jalqabaa miseensaa yoo xiqqaate aksiyoona {minimum} ta'uu qaba.",  // draft – needs native review
+  "rule.ownership_cap": "Miseensi kamiyyuu aksiyoona {offered} dhiyaatan keessaa {percent}% ol ({limit}) qabaachuu hin danda'u. Kun {after} taasisa.",  // draft – needs native review
+  "rule.pledge_upfront": "Aksiyoonni dabalataa yeroo waadaa galan yoo xiqqaate {percent}% kaffalamuu qaba: qarshii {amount}.",  // draft – needs native review
+  "abc.sh.setup": "Kaappitaala aksiyoonaa",  // draft – needs native review
+  "abc.sh.rulesLine": "Seerota hojii irra jiran: miseensa tokkoof yoo xiqqaate aksiyoona {min}, tokkoon tokkoon {cap}% hin caalle, aksiyoona dabalataa irratti {upfront}% dursaan, kan hafe waggoota {years} keessatti.",  // draft – needs native review
+  "abc.sh.pledgedShares": "Aksiyoona waadaa galame",  // draft – needs native review
+  "abc.sh.issuedShares": "Aksiyoona kenname",  // draft – needs native review
+  "abc.sh.paidTotal": "Kaffalame",  // draft – needs native review
+  "abc.sh.subscribed": "Aksiyoona dhiyaatan keessaa",  // draft – needs native review
+  "abc.sh.shareValue": "Gatii aksiyoona tokkoo (qarshii)",  // draft – needs native review
+  "abc.sh.sharesOffered": "Aksiyoona dhiyaatan",  // draft – needs native review
+  "abc.sh.capLine": "Daangaa abbummaa: miseensa tokkoof aksiyoona {n}.",  // draft – needs native review
+  "abc.sh.setFirst": "Dursa gatii aksiyoonaa fi baay'ina aksiyoona dhiyaatanii kaa'aa.",  // draft – needs native review
+  "abc.sh.members": "Aksiyoona miseensotaa",  // draft – needs native review
+  "abc.sh.membersHint": "Waadaa ykn kaffaltii galmeessuuf miseensa tuqaa. Aksiyoonni akkuma kaffalamaniin kennamu.",  // draft – needs native review
+  "abc.sh.memberLine": "Aksiyoona {held} qabame · {pledged} waadaa · kaffalame {paid} · hafe {owed}",  // draft – needs native review
+  "abc.sh.kind.minimum": "Waadaa xiqqaa",  // draft – needs native review
+  "abc.sh.kind.extra": "Waadaa dabalataa",  // draft – needs native review
+  "abc.sh.sharesN": "Aksiyoona {n}",  // draft – needs native review
+  "abc.sh.dueOn": "hanga {date} kaffalaa",  // draft – needs native review
+  "abc.sh.paidOwed": "Kaffalame {paid} · ammallee hafe {owed}",  // draft – needs native review
+  "abc.sh.amount": "Hamma (qarshii)",  // draft – needs native review
+  "abc.sh.method": "Karaa kaffaltii",  // draft – needs native review
+  "abc.sh.reference": "Lakkoofsa wabii",  // draft – needs native review
+  "abc.sh.recordPayment": "Kaffaltii galmeessi",  // draft – needs native review
+  "abc.sh.paid": "Kaffaltiin galmaa'eera; nageessi miseensaaf ergameera.",  // draft – needs native review
+  "abc.sh.minimumShares": "Waadaa xiqqaa (aksiyoona)",  // draft – needs native review
+  "abc.sh.extraShares": "Aksiyoona dabalataa",  // draft – needs native review
+  "abc.sh.addPledge": "Waadaa galmeessi",  // draft – needs native review
+  "abc.sh.pledged": "Waadaan galmaa'eera.",  // draft – needs native review
+  "abc.sh.minimumHint": "Waadaa jalqabaa: yoo xiqqaate aksiyoona {n}; guutummaatti kaffalamuu qaba.",  // draft – needs native review
+  "abc.sh.extraHint": "Aksiyoona dabalataa: amma yoo xiqqaate {pct}% kaffalaa, kan hafe waggoota {years} keessatti.",  // draft – needs native review
+  "abc.sh.printCertificate": "Waraqaa ragaa aksiyoonaa maxxansi",  // draft – needs native review
+  "abc.sh.certificate": "Waraqaa ragaa aksiyoonaa",  // draft – needs native review
+  "abc.sh.certFor": "Miseensa: {name} (lakk. miseensaa {no})",  // draft – needs native review
+  "abc.sh.certHeld": "Aksiyoona qabame: {n}, gatii aksiyoona tokkoo: {value}",  // draft – needs native review
+  "abc.sh.certNo": "Lakk. ragaa",  // draft – needs native review
+  "abc.sh.shares": "Aksiyoona",  // draft – needs native review
+  "abc.sh.approvals": "Hayyama boordii",  // draft – needs native review
+  "abc.sh.approvalsHint": "Miseensi boordii biraa murteessa: namni gaafate gaaffii isaa mataa isaa mirkaneessuu hin danda'u.",  // draft – needs native review
+  "abc.sh.transferLine": "Aksiyoona {shares} dabarsuu: {from} → {to}",  // draft – needs native review
+  "abc.appr.pending": "Eeggachaa",  // draft – needs native review
+  "abc.appr.approved": "Mirkanaa'e",  // draft – needs native review
+  "abc.appr.rejected": "Didame",  // draft – needs native review
+  "abc.appr.approve": "Mirkaneessi",  // draft – needs native review
+  "abc.appr.reject": "Didi",  // draft – needs native review
+  "abc.sh.transfer": "Aksiyoona dabarsuu",  // draft – needs native review
+  "abc.sh.transferHint": "Miseensota gidduutti (gurgurtaa, dhaala, ba'uu). Boordiin mirkaneessuu qaba.",  // draft – needs native review
+  "abc.sh.from": "Irraa",  // draft – needs native review
+  "abc.sh.to": "Gara",  // draft – needs native review
+  "abc.sh.reason": "Sababa",  // draft – needs native review
+  "abc.sh.reasonHint": "gurgurtaa, dhaala, ba'uu…",  // draft – needs native review
+  "abc.sh.askApproval": "Boordii gaafadhu",  // draft – needs native review
+  "abc.sh.transferSent": "Mirkaneessaaf boordiif ergameera.",  // draft – needs native review
+  "abc.sh.payments": "Kaffaltii fi nagaheewwan",  // draft – needs native review
+  "abc.sh.reverse": "Haqi",  // draft – needs native review
+  "abc.sh.reverseReason": "Sababa kaffaltii kana haquu (fkn. dabarsi hin milkoofne):",  // draft – needs native review
+  "abc.sh.reminders": "Yaadachiisa kaffaltii ergi",  // draft – needs native review
+  "abc.sh.remindersSent": "Yaadachiisni {n} ergameera (waadaa guyyaa 30 keessatti ga'u ykn darban).",  // draft – needs native review
+  "abc.flag.overdue": "Kaffaltiin turee",  // draft – needs native review
+  "abc.flag.due_soon": "Dhiyootti ga'a",  // draft – needs native review
+  "abc.flag.minimum_unpaid": "Xiqqaan guutummaatti hin kaffalamne",  // draft – needs native review
+  "abc.flag.no_minimum": "Waadaan ammallee hin jiru",  // draft – needs native review
+  "abc.flag.over_cap": "Daangaa abbummaa ol",  // draft – needs native review
+  "abc.pay.cash": "Maallaqa callaa",  // draft – needs native review
+  "abc.pay.bank": "Baankii",  // draft – needs native review
+  "abc.pay.telebirr": "telebirr",  // draft – needs native review
+  "abc.pay.mpesa": "M-Pesa",  // draft – needs native review
+  "abc.pay.other": "Kan biraa",  // draft – needs native review
+  "abc.action.abc.share.pledge": "Aksiyoonni waadaa galame",  // draft – needs native review
+  "abc.action.abc.share.payment": "Kaffaltiin aksiyoonaa galmaa'e",  // draft – needs native review
+  "abc.action.abc.share.payment_reverse": "Kaffaltiin aksiyoonaa haqame",  // draft – needs native review
+  "abc.action.abc.share.transfer_request": "Dabarsi aksiyoonaa gaafatame",  // draft – needs native review
+  "abc.action.abc.approval.decide": "Murtii boordii",  // draft – needs native review
+  "abc.action.abc.document.upload": "Galmeen fe'ame",  // draft – needs native review
+  "abc.action.abc.formation.recognition": "Beekamtiin galmaa'e",  // draft – needs native review
+  "abc.action.abc.agreement.sign": "Waliigalteen hundeeffamaa mallattaa'e",  // draft – needs native review
+  "abc.action.abc.registration": "Galmeen galmaa'e",  // draft – needs native review
+  "abc.action.abc.member.enrol": "Miseensi galmaa'e",  // draft – needs native review
+  "abc.action.abc.member.update": "Bal'inni miseensaa jijjiirame",  // draft – needs native review
+  "abc.action.abc.member.id_view": "Lakkoofsi eenyummaa guutuun ilaalame",  // draft – needs native review
+  "abc.action.abc.member.import": "Miseensonni galfaman",  // draft – needs native review
+  "abc.action.abc.member.remove": "Miseensi ba'e",  // draft – needs native review
 };
