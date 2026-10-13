@@ -1957,4 +1957,75 @@ export const am: Record<MessageKey, string> = {
   "abc.rules.status": "ተረጋግጧል?",  // draft – needs native review
   "abc.rules.save": "አዲሱን ዋጋ አስቀምጥ",  // draft – needs native review
   "abc.rules.added": "ተቀምጧል። አዲሱ ዋጋ ከቀኑ ጀምሮ ይሠራል።",  // draft – needs native review
+
+  // ── ABC formation & registration (A2) ─────────────────────────────────────
+  "abc.tab.formation": "ምሥረታና ምዝገባ",  // draft – needs native review
+  "abc.rule.board_min_members": "ቦርድ፦ ዝቅተኛ አባላት (ሰብሳቢን ጨምሮ)",  // draft – needs native review
+  "abc.form.checklist": "ለምዝገባ ዝግጁነት",  // draft – needs native review
+  "abc.form.checklistHint": "ከ{total} {done} ዝግጁ። ገደቦቹ በሥራ ላይ ካሉ የABC ደንቦች ይወሰዳሉ።",  // draft – needs native review
+  "abc.form.haveNeed": "ከ{need} {have}",  // draft – needs native review
+  "abc.form.done": "ተጠናቋል",  // draft – needs native review
+  "abc.form.missing": "ይጎድላል",  // draft – needs native review
+  "abc.form.draftRule": "(ረቂቅ ደንብ፦ ያረጋግጡ)",  // draft – needs native review
+  "abc.form.sharesLater": "የተከፈለ ካፒታል ከአክሲዮን ክፍያዎች ይቆጠራል (አክሲዮኖች፣ A4)።",  // draft – needs native review
+  "abc.ready.committee": "አደራጅ ኮሚቴ",  // draft – needs native review
+  "abc.ready.recognition": "ኮሚቴው እውቅና አግኝቷል (አካል፣ ቀን፣ ደብዳቤ)",  // draft – needs native review
+  "abc.ready.members": "መስራች አባላት",  // draft – needs native review
+  "abc.ready.paid_capital": "የተከፈለ ካፒታል",  // draft – needs native review
+  "abc.ready.declared_paid": "ከታወጀው ካፒታል የተከፈለ ድርሻ",  // draft – needs native review
+  "abc.ready.board": "ቦርድ ተመርጧል (ሰብሳቢ + አባላት)",  // draft – needs native review
+  "abc.ready.business_plan": "የንግድ ዕቅድ ተያይዟል (ዓመታት)",  // draft – needs native review
+  "abc.ready.capital_deposit": "የካፒታል ተቀማጭ ማስረጃ ተያይዟል",  // draft – needs native review
+  "abc.ready.agreement": "የመመሥረቻ ስምምነት በሁሉም አባላት ተፈርሟል",  // draft – needs native review
+  "abc.doc.recognition": "የእውቅና ደብዳቤ",  // draft – needs native review
+  "abc.doc.founding_agreement": "የመመሥረቻ ስምምነት / መተዳደሪያ ደንብ",  // draft – needs native review
+  "abc.doc.business_plan": "የንግድ ዕቅድ",  // draft – needs native review
+  "abc.doc.capital_deposit": "የካፒታል ተቀማጭ ማስረጃ",  // draft – needs native review
+  "abc.doc.registration_certificate": "የምዝገባ ምስክር ወረቀት",  // draft – needs native review
+  "abc.doc.minutes": "ቃለ ጉባኤ",  // draft – needs native review
+  "abc.doc.other": "ሌላ (ለምሳሌ የተፈረመ ቅጂ)",  // draft – needs native review
+  "abc.form.documents": "ሰነዶች",  // draft – needs native review
+  "abc.form.documentsHint": "PDF፣ JPEG ወይም PNG እስከ 10 MB። ተመሳሳይ ዓይነት አዲስ ሰነድ አዲስ ስሪት ነው፤ የቀድሞዎቹ ይቀመጣሉ።",  // draft – needs native review
+  "abc.form.noDocuments": "ገና ሰነድ የለም።",  // draft – needs native review
+  "abc.form.kind": "ዓይነት",  // draft – needs native review
+  "abc.form.title": "ርዕስ",  // draft – needs native review
+  "abc.form.planYears": "የሚሸፍናቸው ዓመታት",  // draft – needs native review
+  "abc.form.years": "{n} ዓመታት",  // draft – needs native review
+  "abc.form.older": "የቀድሞ ስሪት",  // draft – needs native review
+  "abc.form.chooseFile": "ፋይል ይምረጡ",  // draft – needs native review
+  "abc.form.fileTypes": "PDF፣ JPEG ወይም PNG፣ እስከ 10 MB",  // draft – needs native review
+  "abc.form.upload": "ጫን",  // draft – needs native review
+  "abc.form.download": "አውርድ",  // draft – needs native review
+  "abc.form.uploaded": "ተጭኗል።",  // draft – needs native review
+  "abc.form.recognition": "የአደራጅ ኮሚቴው እውቅና",  // draft – needs native review
+  "abc.form.recognitionHint": "በሚኒስቴሩ ወይም በክልሉ ቢሮ። መጀመሪያ ደብዳቤውን ይጫኑ (ዓይነት፦ የእውቅና ደብዳቤ)።",  // draft – needs native review
+  "abc.form.recognizedBy": "በ{authority} በ{date} እውቅና ተሰጥቷል።",  // draft – needs native review
+  "abc.form.authority": "አካል",  // draft – needs native review
+  "abc.form.date": "ቀን",  // draft – needs native review
+  "abc.form.letter": "ደብዳቤ",  // draft – needs native review
+  "abc.form.agreement": "የመመሥረቻ ስምምነት ፊርማዎች",  // draft – needs native review
+  "abc.form.signedCount": "ከ{total} አባላት {signed} ስሪት {v} ፈርመዋል።",  // draft – needs native review
+  "abc.form.noAgreement": "ፊርማ ለመሰብሰብ የመመሥረቻ ስምምነቱን ይጫኑ።",  // draft – needs native review
+  "abc.form.signedApp": "በመተግበሪያው አረጋግጧል",  // draft – needs native review
+  "abc.form.signedScan": "በወረቀት ፈርሟል",  // draft – needs native review
+  "abc.form.notSigned": "አልፈረመም",  // draft – needs native review
+  "abc.form.signHow": "አባላት በመተግበሪያው የመገለጫ ገጽ ላይ ያረጋግጣሉ፣ ወይም የተፈረመ የወረቀት ቅጂ ይመዘግባሉ (መጀመሪያ 'ሌላ' ብለው ይጫኑት)።",  // draft – needs native review
+  "abc.form.member": "አባል",  // draft – needs native review
+  "abc.form.scan": "የተፈረመ ቅጂ",  // draft – needs native review
+  "abc.form.recordScan": "ፊርማ መዝግብ",  // draft – needs native review
+  "abc.form.register": "ምዝገባ",  // draft – needs native review
+  "abc.form.notReady": "መጀመሪያ ዝርዝሩን ያጠናቅቁ፤ ከዚያ ምዝገባውን እዚህ ይመዝግቡ።",  // draft – needs native review
+  "abc.form.adminOverride": "ዝርዝሩ አልተጠናቀቀም። እንደ አስተዳዳሪ ምክንያቱን በመጥቀስ ምዝገባ መመዝገብ ይችላሉ (ለምሳሌ ወደ መድረኩ ከመግባቱ በፊት የተመዘገበ)።",  // draft – needs native review
+  "abc.form.readyHint": "ሁሉም ዝግጁ ነው። ከአካሉ የተገኘውን ምዝገባ ይመዝግቡ።",  // draft – needs native review
+  "abc.form.regAuthority": "መዝጋቢ አካል",  // draft – needs native review
+  "abc.form.regNumber": "የምዝገባ ቁጥር",  // draft – needs native review
+  "abc.form.overrideReason": "ምክንያት (ግዴታ፣ ቢያንስ 10 ፊደላት)",  // draft – needs native review
+  "abc.form.registerButton": "ምዝገባ መዝግብ",  // draft – needs native review
+  "abc.form.registered": "ተመዝግቧል",  // draft – needs native review
+  "abc.form.registeredLine": "በ{authority}፣ ቁጥር {number}፣ በ{date} ተመዝግቧል።",  // draft – needs native review
+  "abc.form.overrideNote": "ዝርዝሩ ሳይጠናቀቅ በአስተዳዳሪ የተመዘገበ፦ {reason}",  // draft – needs native review
+  "abcInv.agreementHint": "የመመሥረቻ ስምምነቱ ዝግጁ ነው። ያንብቡት፣ ከዚያ መስማማትዎን ያረጋግጡ።",  // draft – needs native review
+  "abcInv.read": "ስምምነቱን አንብብ",  // draft – needs native review
+  "abcInv.confirm": "እስማማለሁ፣ እፈርማለሁ",  // draft – needs native review
+  "abcInv.signed": "የመመሥረቻ ስምምነቱን በ{date} ፈርመዋል።",  // draft – needs native review
 };

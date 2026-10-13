@@ -1957,4 +1957,75 @@ export const om: Record<MessageKey, string> = {
   "abc.rules.status": "Mirkanaa'eeraa?",  // draft – needs native review
   "abc.rules.save": "Gatii haaraa olkaa'i",  // draft – needs native review
   "abc.rules.added": "Olkaa'ameera. Gatiin haaraan guyyaa isaa irraa hojii irra oola.",  // draft – needs native review
+
+  // ── ABC formation & registration (A2) ─────────────────────────────────────
+  "abc.tab.formation": "Hundeeffamaa fi galmee",  // draft – needs native review
+  "abc.rule.board_min_members": "Boordii: miseensota xiqqaa (itti gaafatamaa dabalatee)",  // draft – needs native review
+  "abc.form.checklist": "Galmeef qophaa'uu",  // draft – needs native review
+  "abc.form.checklistHint": "{total} keessaa {done} qophaa'e. Daangaaleen seerota ABC hojii irra jiran irraa fudhatamu.",  // draft – needs native review
+  "abc.form.haveNeed": "{need} keessaa {have}",  // draft – needs native review
+  "abc.form.done": "Xumurameera",  // draft – needs native review
+  "abc.form.missing": "Hin jiru",  // draft – needs native review
+  "abc.form.draftRule": "(seera wixineen: mirkaneessaa)",  // draft – needs native review
+  "abc.form.sharesLater": "Kaappitaalli kaffalame kaffaltii aksiyoonaa irraa lakkaa'ama (Aksiyoona, A4).",  // draft – needs native review
+  "abc.ready.committee": "Koree qindeessaa",  // draft – needs native review
+  "abc.ready.recognition": "Koreen beekamtii argate (qaama, guyyaa, xalayaa)",  // draft – needs native review
+  "abc.ready.members": "Miseensota hundeessitoota",  // draft – needs native review
+  "abc.ready.paid_capital": "Kaappitaala kaffalame",  // draft – needs native review
+  "abc.ready.declared_paid": "Qooda kaappitaala labsame kaffalame",  // draft – needs native review
+  "abc.ready.board": "Boordiin filatame (itti gaafatamaa + miseensota)",  // draft – needs native review
+  "abc.ready.business_plan": "Karoorri daldalaa walitti qabsiifame (waggoota)",  // draft – needs native review
+  "abc.ready.capital_deposit": "Ragaan kuusaa kaappitaalaa walitti qabsiifame",  // draft – needs native review
+  "abc.ready.agreement": "Waliigalteen hundeeffamaa miseensota hundaan mallattaa'e",  // draft – needs native review
+  "abc.doc.recognition": "Xalayaa beekamtii",  // draft – needs native review
+  "abc.doc.founding_agreement": "Waliigaltee hundeeffamaa / seera bulchiinsaa",  // draft – needs native review
+  "abc.doc.business_plan": "Karoora daldalaa",  // draft – needs native review
+  "abc.doc.capital_deposit": "Ragaa kuusaa kaappitaalaa",  // draft – needs native review
+  "abc.doc.registration_certificate": "Waraqaa ragaa galmee",  // draft – needs native review
+  "abc.doc.minutes": "Galmee yaa'ii",  // draft – needs native review
+  "abc.doc.other": "Kan biraa (fkn. garagalcha mallattaa'e)",  // draft – needs native review
+  "abc.form.documents": "Galmeewwan",  // draft – needs native review
+  "abc.form.documentsHint": "PDF, JPEG ykn PNG hanga 10 MB. Gosa wal fakkaatu haaraan fe'uun gosa haaraa dha; kan durii ni olkaa'amu.",  // draft – needs native review
+  "abc.form.noDocuments": "Galmeen ammallee hin jiru.",  // draft – needs native review
+  "abc.form.kind": "Gosa",  // draft – needs native review
+  "abc.form.title": "Mata duree",  // draft – needs native review
+  "abc.form.planYears": "Waggoota haguugaman",  // draft – needs native review
+  "abc.form.years": "Waggoota {n}",  // draft – needs native review
+  "abc.form.older": "gosa durii",  // draft – needs native review
+  "abc.form.chooseFile": "Faayilii filadhaa",  // draft – needs native review
+  "abc.form.fileTypes": "PDF, JPEG ykn PNG, hanga 10 MB",  // draft – needs native review
+  "abc.form.upload": "Fe'i",  // draft – needs native review
+  "abc.form.download": "Buusi",  // draft – needs native review
+  "abc.form.uploaded": "Fe'ameera.",  // draft – needs native review
+  "abc.form.recognition": "Beekamtii koree qindeessaa",  // draft – needs native review
+  "abc.form.recognitionHint": "Ministeera ykn biiroo naannoon. Dursa xalayaa fe'aa (gosa: xalayaa beekamtii).",  // draft – needs native review
+  "abc.form.recognizedBy": "{authority}n {date} beekamtii argate.",  // draft – needs native review
+  "abc.form.authority": "Qaama",  // draft – needs native review
+  "abc.form.date": "Guyyaa",  // draft – needs native review
+  "abc.form.letter": "Xalayaa",  // draft – needs native review
+  "abc.form.agreement": "Mallattoowwan waliigaltee hundeeffamaa",  // draft – needs native review
+  "abc.form.signedCount": "Miseensota {total} keessaa {signed} gosa {v} mallatteessan.",  // draft – needs native review
+  "abc.form.noAgreement": "Mallattoo sassaabuuf waliigaltee hundeeffamaa fe'aa.",  // draft – needs native review
+  "abc.form.signedApp": "appii keessatti mirkaneesse",  // draft – needs native review
+  "abc.form.signedScan": "waraqaa irratti mallatteesse",  // draft – needs native review
+  "abc.form.notSigned": "hin mallatteessine",  // draft – needs native review
+  "abc.form.signHow": "Miseensonni fuula ibsa isaanii appii keessatti mirkaneessu, ykn garagalcha waraqaa mallattaa'e galmeessitu (dursa 'Kan biraa' jettanii fe'aa).",  // draft – needs native review
+  "abc.form.member": "Miseensa",  // draft – needs native review
+  "abc.form.scan": "Garagalcha mallattaa'e",  // draft – needs native review
+  "abc.form.recordScan": "Mallattoo galmeessi",  // draft – needs native review
+  "abc.form.register": "Galmee",  // draft – needs native review
+  "abc.form.notReady": "Dursa tarreeffama xumuraa; achiis galmee as galmeessaa.",  // draft – needs native review
+  "abc.form.adminOverride": "Tarreeffamni hin xumuramne. Akka bulchaatti sababa isaa caqasuun galmee galmeessuu dandeessu (fkn. waltajjii dura galmaa'e).",  // draft – needs native review
+  "abc.form.readyHint": "Hundi qophaa'eera. Galmee qaama irraa argame galmeessaa.",  // draft – needs native review
+  "abc.form.regAuthority": "Qaama galmeessu",  // draft – needs native review
+  "abc.form.regNumber": "Lakkoofsa galmee",  // draft – needs native review
+  "abc.form.overrideReason": "Sababa (dirqama, yoo xiqqaate qubee 10)",  // draft – needs native review
+  "abc.form.registerButton": "Galmee galmeessi",  // draft – needs native review
+  "abc.form.registered": "Galmaa'eera",  // draft – needs native review
+  "abc.form.registeredLine": "{authority}n, lakk. {number}, {date} galmaa'e.",  // draft – needs native review
+  "abc.form.overrideNote": "Tarreeffamni osoo hin xumuramin bulchaan galmeesse: {reason}",  // draft – needs native review
+  "abcInv.agreementHint": "Waliigalteen hundeeffamaa qophaa'eera. Dubbisaa, achiis walii galuu keessan mirkaneessaa.",  // draft – needs native review
+  "abcInv.read": "Waliigaltee dubbisi",  // draft – needs native review
+  "abcInv.confirm": "Nan waliigala, nan mallatteessa",  // draft – needs native review
+  "abcInv.signed": "Waliigaltee hundeeffamaa {date} mallatteessitaniittu.",  // draft – needs native review
 };

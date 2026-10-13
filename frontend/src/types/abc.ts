@@ -78,3 +78,73 @@ export interface AbcHistoryEntry {
   actor: string | null;
   detail: { before: Record<string, unknown> | null; after: Record<string, unknown> | null } | null;
 }
+
+// ── Formation and registration (A2) ──────────────────────────────────────────
+
+export type AbcDocKind =
+  | "recognition" | "founding_agreement" | "business_plan" | "capital_deposit" | "registration_certificate"
+  | "minutes" | "other";
+export const ABC_DOC_KINDS: AbcDocKind[] = [
+  "recognition", "founding_agreement", "business_plan", "capital_deposit", "registration_certificate", "minutes", "other",
+];
+
+export interface AbcDocument {
+  id: number;
+  kind: AbcDocKind;
+  title: string;
+  filename: string;
+  content_type: string;
+  size_bytes: number;
+  sha256: string;
+  version: number;
+  plan_years: number | null;
+  uploaded_at: string;
+  uploaded_by: string | null;
+  latest?: boolean;
+}
+
+export interface AbcReadinessItem {
+  key: "committee" | "recognition" | "members" | "paid_capital" | "declared_paid" | "board" | "business_plan"
+    | "capital_deposit" | "agreement";
+  ok: boolean;
+  have: number | string | null;
+  need: number | string | null;
+  rules: { key: string; value: number; source: string; verification_status: string }[];
+}
+
+export interface AbcSignatureRow {
+  id: number;
+  name: string;
+  phone: string;
+  signature: { method: "app" | "scan"; signed_at: string; scan_doc_id: number | null } | null;
+}
+
+export interface AbcFormation {
+  org_id: number;
+  status: AbcStatus;
+  readiness: { ready: boolean; items: AbcReadinessItem[]; status: AbcStatus };
+  formation: {
+    recognition_authority: string | null;
+    recognized_on: string | null;
+    recognition_doc_id: number | null;
+    registration_authority: string | null;
+    registration_number: string | null;
+    registered_on: string | null;
+    certificate_doc_id: number | null;
+    override_reason: string | null;
+  };
+  signatures: { document: { id: number; version: number } | null; members: AbcSignatureRow[]; signed: number; total: number };
+  documents: AbcDocument[];
+  can_edit: boolean;
+  is_admin: boolean;
+  official_record_note: string;
+}
+
+export interface MyAbcMembership {
+  org_id: number;
+  name: string;
+  status: AbcStatus;
+  agreement: { version: number } | null;
+  agreement_document_id: number | null;
+  signed: { method: string; signed_at: string } | null;
+}

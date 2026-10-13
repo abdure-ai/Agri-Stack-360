@@ -110,10 +110,11 @@ DEFAULT_RULES: dict[str, list[tuple[str, float, str, str]]] = {
     "committee_max": [("*", 13, "members", "organizing committee")],
     "business_plan_years_min": [("*", 3, "years", "")],
     "business_plan_years_max": [("*", 5, "years", "")],
+    "board_min_members": [("*", 3, "members", "platform default: chair + 2 board members; set from the by-laws or directive")],
     "voting_land_factor": [("*", 0.5, "fraction", "platform default (user decision 2026-10-13), not in the law")],
     "voting_production_factor": [("*", 0.5, "fraction", "platform default (user decision 2026-10-13), not in the law")],
 }
-PLATFORM_DEFAULT_KEYS = {"voting_land_factor", "voting_production_factor"}
+PLATFORM_DEFAULT_KEYS = {"voting_land_factor", "voting_production_factor", "board_min_members"}
 
 
 def _now() -> str:
@@ -122,15 +123,17 @@ def _now() -> str:
 
 def ensure_schema(conn: sqlite3.Connection) -> None:
     conn.executescript(SCHEMA)
-    if not conn.execute("SELECT 1 FROM abc_rules LIMIT 1").fetchone():
-        for key, rows in DEFAULT_RULES.items():
-            for abc_type, value, unit, note in rows:
-                source = ("Agri-Stack 360 platform default, chosen by the ABC programme owner"
-                          if key in PLATFORM_DEFAULT_KEYS else DRAFT_SOURCE)
-                conn.execute("""INSERT INTO abc_rules (key, abc_type, value, unit, effective_from, source,
-                                verification_status, note, created_at) VALUES (?,?,?,?,?,?,?,?,?)""",
-                             (key, abc_type, value, unit, DRAFT_FROM, source,
-                              "platform_default" if key in PLATFORM_DEFAULT_KEYS else PLACEHOLDER, note or None, _now()))
+    present = {r[0] for r in conn.execute("SELECT DISTINCT key FROM abc_rules")}
+    for key, rows in DEFAULT_RULES.items():
+        if key in present:          # never overwrite values an administrator set
+            continue
+        for abc_type, value, unit, note in rows:
+            source = ("Agri-Stack 360 platform default, chosen by the ABC programme owner"
+                      if key in PLATFORM_DEFAULT_KEYS else DRAFT_SOURCE)
+            conn.execute("""INSERT INTO abc_rules (key, abc_type, value, unit, effective_from, source,
+                            verification_status, note, created_at) VALUES (?,?,?,?,?,?,?,?,?)""",
+                         (key, abc_type, value, unit, DRAFT_FROM, source,
+                          "platform_default" if key in PLATFORM_DEFAULT_KEYS else PLACEHOLDER, note or None, _now()))
     conn.commit()
 
 

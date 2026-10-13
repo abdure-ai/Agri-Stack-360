@@ -136,6 +136,7 @@ The server checks every permission again on every request. Hiding a screen is fo
 | Map | `GET /map/layers`, `GET /map/crops`, boundary files `/geo/eth_adm{1,2,3}.json` (see 8.11) |
 | Credit | `GET /financial/profile`, `GET /financial/loan-products` |
 | Requests to me | `GET /users/credit-requests`, `POST /users/credit-requests/{id}/approve\|decline\|revoke`; `GET /users/abc-invitations`, `POST /users/abc-invitations/{org_id}/accept\|decline\|leave` |
+| ABC membership | `GET /users/abc-invitations` (accept/decline/leave), `GET /abc/my/memberships`, `GET /abc/my/agreement/file?org_id=`, `POST /abc/my/agreement/sign?org_id=` (read, then confirm the founding agreement) |
 | Profile and privacy | `GET/PUT /users/profile`, `GET/PUT /users/consent`, `GET /users/my-data`, `GET/POST /users/my-data/erase-request`, `POST …/erase-request/cancel` |
 
 ## 7. DA screens
@@ -442,3 +443,4 @@ show that clearly.
 | 2026-10-13 | New: livestock prices and outlook (6, 8.10); `lv.*` texts in the ARB files. Nothing existing changed |
 | 2026-10-13 | Treatment chain (8.3, 8.7): rates from the MoA manual with the amount for the plot, nearest shops with price, verified-seller badge and phone, pack check against the plan (`diagnosis_id`). New fields only; nothing removed |
 | 2026-10-13 | New: map (6, 8.11): `/map/layers`, `/map/crops`, boundary files; `map.*` texts. Nothing existing changed |
+| 2026-10-13 | ABC membership (6): read and confirm the founding agreement (`/abc/my/*`); `abcInv.*` texts. Nothing existing changed |

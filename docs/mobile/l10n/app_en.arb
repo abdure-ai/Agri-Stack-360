@@ -7862,5 +7862,646 @@
   "mapLegendDashed": "Dashed outline: approximate location.",
   "@mapLegendDashed": {
     "description": "web key: map.legend.dashed"
+  },
+  "navAbcRules": "ABC rules",
+  "@navAbcRules": {
+    "description": "web key: nav.abcRules"
+  },
+  "abcSaved": "Saved.",
+  "@abcSaved": {
+    "description": "web key: abc.saved"
+  },
+  "abcPickCompany": "Company",
+  "@abcPickCompany": {
+    "description": "web key: abc.pickCompany"
+  },
+  "abcTabCompany": "Company",
+  "@abcTabCompany": {
+    "description": "web key: abc.tab.company"
+  },
+  "abcRoleOrganizingCommittee": "Organizing committee",
+  "@abcRoleOrganizingCommittee": {
+    "description": "web key: abc.role.organizing_committee"
+  },
+  "abcRoleGeneralManager": "General manager",
+  "@abcRoleGeneralManager": {
+    "description": "web key: abc.role.general_manager"
+  },
+  "abcRoleChair": "Board chair",
+  "@abcRoleChair": {
+    "description": "web key: abc.role.chair"
+  },
+  "abcRoleBoardMember": "Board member",
+  "@abcRoleBoardMember": {
+    "description": "web key: abc.role.board_member"
+  },
+  "abcRoleSecretary": "Secretary",
+  "@abcRoleSecretary": {
+    "description": "web key: abc.role.secretary"
+  },
+  "abcRoleAccountant": "Accountant",
+  "@abcRoleAccountant": {
+    "description": "web key: abc.role.accountant"
+  },
+  "abcRoleStoreKeeper": "Store keeper",
+  "@abcRoleStoreKeeper": {
+    "description": "web key: abc.role.store_keeper"
+  },
+  "abcRoleMachineryCoordinator": "Machinery coordinator",
+  "@abcRoleMachineryCoordinator": {
+    "description": "web key: abc.role.machinery_coordinator"
+  },
+  "abcRoleAgronomist": "ABC agronomist",
+  "@abcRoleAgronomist": {
+    "description": "web key: abc.role.agronomist"
+  },
+  "abcRoleAuditor": "Auditor",
+  "@abcRoleAuditor": {
+    "description": "web key: abc.role.auditor"
+  },
+  "abcRuleMinFoundingMembers": "Minimum founding members",
+  "@abcRuleMinFoundingMembers": {
+    "description": "web key: abc.rule.min_founding_members"
+  },
+  "abcRuleShareValueMinEtb": "Minimum value of one share",
+  "@abcRuleShareValueMinEtb": {
+    "description": "web key: abc.rule.share_value_min_etb"
+  },
+  "abcRuleMinSharesPerMember": "Minimum shares per member",
+  "@abcRuleMinSharesPerMember": {
+    "description": "web key: abc.rule.min_shares_per_member"
+  },
+  "abcRuleMinPaidCapitalEtb": "Minimum paid-up capital",
+  "@abcRuleMinPaidCapitalEtb": {
+    "description": "web key: abc.rule.min_paid_capital_etb"
+  },
+  "abcRuleRegistrationPaidFraction": "Paid before registration (of declared capital)",
+  "@abcRuleRegistrationPaidFraction": {
+    "description": "web key: abc.rule.registration_paid_fraction"
+  },
+  "abcRulePledgeUpfrontFraction": "Paid at pledge (extra shares)",
+  "@abcRulePledgeUpfrontFraction": {
+    "description": "web key: abc.rule.pledge_upfront_fraction"
+  },
+  "abcRulePledgeDeadlineYears": "Time to pay pledged shares",
+  "@abcRulePledgeDeadlineYears": {
+    "description": "web key: abc.rule.pledge_deadline_years"
+  },
+  "abcRuleMaxOwnershipFraction": "Maximum ownership per member",
+  "@abcRuleMaxOwnershipFraction": {
+    "description": "web key: abc.rule.max_ownership_fraction"
+  },
+  "abcRuleCommitteeMin": "Organizing committee: minimum",
+  "@abcRuleCommitteeMin": {
+    "description": "web key: abc.rule.committee_min"
+  },
+  "abcRuleCommitteeMax": "Organizing committee: maximum",
+  "@abcRuleCommitteeMax": {
+    "description": "web key: abc.rule.committee_max"
+  },
+  "abcRuleBusinessPlanYearsMin": "Business plan: minimum years",
+  "@abcRuleBusinessPlanYearsMin": {
+    "description": "web key: abc.rule.business_plan_years_min"
+  },
+  "abcRuleBusinessPlanYearsMax": "Business plan: maximum years",
+  "@abcRuleBusinessPlanYearsMax": {
+    "description": "web key: abc.rule.business_plan_years_max"
+  },
+  "abcRuleVotingLandFactor": "Voting weight: land part",
+  "@abcRuleVotingLandFactor": {
+    "description": "web key: abc.rule.voting_land_factor"
+  },
+  "abcRuleVotingProductionFactor": "Voting weight: production part",
+  "@abcRuleVotingProductionFactor": {
+    "description": "web key: abc.rule.voting_production_factor"
+  },
+  "abcUnitMembers": "members",
+  "@abcUnitMembers": {
+    "description": "web key: abc.unit.members"
+  },
+  "abcUnitShares": "shares",
+  "@abcUnitShares": {
+    "description": "web key: abc.unit.shares"
+  },
+  "abcUnitYears": "years",
+  "@abcUnitYears": {
+    "description": "web key: abc.unit.years"
+  },
+  "abcRuleVerified": "Verified",
+  "@abcRuleVerified": {
+    "description": "web key: abc.ruleVerified"
+  },
+  "abcRulePlatform": "Platform default",
+  "@abcRulePlatform": {
+    "description": "web key: abc.rulePlatform"
+  },
+  "abcRuleDraft": "Draft: verify",
+  "@abcRuleDraft": {
+    "description": "web key: abc.ruleDraft"
+  },
+  "abcRuleSince": "from {date}",
+  "@abcRuleSince": {
+    "description": "web key: abc.ruleSince",
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "abcSince": "since {date}",
+  "@abcSince": {
+    "description": "web key: abc.since",
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "abcCompanyProfile": "Company profile",
+  "@abcCompanyProfile": {
+    "description": "web key: abc.company.profile"
+  },
+  "abcCompanyType": "ABC type",
+  "@abcCompanyType": {
+    "description": "web key: abc.company.type"
+  },
+  "abcCompanyKebele": "Kebele",
+  "@abcCompanyKebele": {
+    "description": "web key: abc.company.kebele"
+  },
+  "abcCompanyFiscalYear": "Fiscal year starts",
+  "@abcCompanyFiscalYear": {
+    "description": "web key: abc.company.fiscalYear"
+  },
+  "abcCompanyDeclaredCapital": "Declared capital (birr)",
+  "@abcCompanyDeclaredCapital": {
+    "description": "web key: abc.company.declaredCapital"
+  },
+  "abcCompanyApprovalLimit": "Board approval above (birr)",
+  "@abcCompanyApprovalLimit": {
+    "description": "web key: abc.company.approvalLimit"
+  },
+  "abcCompanyApprovalLimitHint": "Purchases and sales above this amount need board approval.",
+  "@abcCompanyApprovalLimitHint": {
+    "description": "web key: abc.company.approvalLimitHint"
+  },
+  "abcCompanyExitPolicy": "Member exit and refund policy",
+  "@abcCompanyExitPolicy": {
+    "description": "web key: abc.company.exitPolicy"
+  },
+  "abcCompanyRules": "Legal rules in force",
+  "@abcCompanyRules": {
+    "description": "web key: abc.company.rules"
+  },
+  "abcCompanyRulesHint": "Set by the administrator from the law and directives; drafts must be checked.",
+  "@abcCompanyRulesHint": {
+    "description": "web key: abc.company.rulesHint"
+  },
+  "abcCompanyTeam": "Team and roles",
+  "@abcCompanyTeam": {
+    "description": "web key: abc.company.team"
+  },
+  "abcCompanyTeamHint": "Each role gives its own rights in this ABC. One person can have several roles, and roles in other ABCs.",
+  "@abcCompanyTeamHint": {
+    "description": "web key: abc.company.teamHint"
+  },
+  "abcCompanyNoTeam": "No roles given yet.",
+  "@abcCompanyNoTeam": {
+    "description": "web key: abc.company.noTeam"
+  },
+  "abcCompanyPhone": "Phone",
+  "@abcCompanyPhone": {
+    "description": "web key: abc.company.phone"
+  },
+  "abcCompanyRole": "Role",
+  "@abcCompanyRole": {
+    "description": "web key: abc.company.role"
+  },
+  "abcCompanyAddRole": "Give role",
+  "@abcCompanyAddRole": {
+    "description": "web key: abc.company.addRole"
+  },
+  "abcCompanyHistory": "History",
+  "@abcCompanyHistory": {
+    "description": "web key: abc.company.history"
+  },
+  "abcCompanyNoHistory": "No changes recorded yet.",
+  "@abcCompanyNoHistory": {
+    "description": "web key: abc.company.noHistory"
+  },
+  "abcStatusFormation": "In formation",
+  "@abcStatusFormation": {
+    "description": "web key: abc.status.formation"
+  },
+  "abcStatusRegistered": "Registered",
+  "@abcStatusRegistered": {
+    "description": "web key: abc.status.registered"
+  },
+  "abcStatusSuspended": "Suspended",
+  "@abcStatusSuspended": {
+    "description": "web key: abc.status.suspended"
+  },
+  "abcStatusDissolved": "Dissolved",
+  "@abcStatusDissolved": {
+    "description": "web key: abc.status.dissolved"
+  },
+  "abcTypeAll": "All types",
+  "@abcTypeAll": {
+    "description": "web key: abc.type.all"
+  },
+  "abcTypeCropGrain": "Crop / grain",
+  "@abcTypeCropGrain": {
+    "description": "web key: abc.type.crop_grain"
+  },
+  "abcTypeHorticulture": "Horticulture",
+  "@abcTypeHorticulture": {
+    "description": "web key: abc.type.horticulture"
+  },
+  "abcTypeFruit": "Fruit",
+  "@abcTypeFruit": {
+    "description": "web key: abc.type.fruit"
+  },
+  "abcTypeLivestock": "Livestock",
+  "@abcTypeLivestock": {
+    "description": "web key: abc.type.livestock"
+  },
+  "abcTypeMixed": "Mixed",
+  "@abcTypeMixed": {
+    "description": "web key: abc.type.mixed"
+  },
+  "abcFyHamle": "1 Hamle (Ethiopian fiscal year)",
+  "@abcFyHamle": {
+    "description": "web key: abc.fy.hamle"
+  },
+  "abcFyMeskerem": "1 Meskerem (Ethiopian new year)",
+  "@abcFyMeskerem": {
+    "description": "web key: abc.fy.meskerem"
+  },
+  "abcFyJanuary": "1 January",
+  "@abcFyJanuary": {
+    "description": "web key: abc.fy.january"
+  },
+  "abcActionAbcProfileUpdate": "Company profile changed",
+  "@abcActionAbcProfileUpdate": {
+    "description": "web key: abc.action.abc.profile.update"
+  },
+  "abcActionAbcRoleAdd": "Role given",
+  "@abcActionAbcRoleAdd": {
+    "description": "web key: abc.action.abc.role.add"
+  },
+  "abcActionAbcRoleRemove": "Role removed",
+  "@abcActionAbcRoleRemove": {
+    "description": "web key: abc.action.abc.role.remove"
+  },
+  "abcRulesDescription": "Legal numbers for ABCs (minimum members, share value, ownership cap…). Change a value from a date, with its source: the old value stays as history.",
+  "@abcRulesDescription": {
+    "description": "web key: abc.rules.description"
+  },
+  "abcRulesAll": "All rules and their history",
+  "@abcRulesAll": {
+    "description": "web key: abc.rules.all"
+  },
+  "abcRulesNew": "New value",
+  "@abcRulesNew": {
+    "description": "web key: abc.rules.new"
+  },
+  "abcRulesNewHint": "Applies from the date you set. Give the law, directive or decision, with the article.",
+  "@abcRulesNewHint": {
+    "description": "web key: abc.rules.newHint"
+  },
+  "abcRulesRule": "Rule",
+  "@abcRulesRule": {
+    "description": "web key: abc.rules.rule"
+  },
+  "abcRulesValue": "Value",
+  "@abcRulesValue": {
+    "description": "web key: abc.rules.value"
+  },
+  "abcRulesFrom": "Applies from",
+  "@abcRulesFrom": {
+    "description": "web key: abc.rules.from"
+  },
+  "abcRulesSource": "Source",
+  "@abcRulesSource": {
+    "description": "web key: abc.rules.source"
+  },
+  "abcRulesSourceHint": "e.g. Directive No. …, article …",
+  "@abcRulesSourceHint": {
+    "description": "web key: abc.rules.sourceHint"
+  },
+  "abcRulesStatus": "Checked?",
+  "@abcRulesStatus": {
+    "description": "web key: abc.rules.status"
+  },
+  "abcRulesSave": "Save new value",
+  "@abcRulesSave": {
+    "description": "web key: abc.rules.save"
+  },
+  "abcRulesAdded": "Saved. The new value applies from its date.",
+  "@abcRulesAdded": {
+    "description": "web key: abc.rules.added"
+  },
+  "abcTabFormation": "Formation & registration",
+  "@abcTabFormation": {
+    "description": "web key: abc.tab.formation"
+  },
+  "abcRuleBoardMinMembers": "Board: minimum members (incl. chair)",
+  "@abcRuleBoardMinMembers": {
+    "description": "web key: abc.rule.board_min_members"
+  },
+  "abcFormChecklist": "Readiness to register",
+  "@abcFormChecklist": {
+    "description": "web key: abc.form.checklist"
+  },
+  "abcFormChecklistHint": "{done} of {total} ready. Thresholds come from the ABC rules in force.",
+  "@abcFormChecklistHint": {
+    "description": "web key: abc.form.checklistHint",
+    "placeholders": {
+      "done": {},
+      "total": {}
+    }
+  },
+  "abcFormHaveNeed": "{have} of {need}",
+  "@abcFormHaveNeed": {
+    "description": "web key: abc.form.haveNeed",
+    "placeholders": {
+      "have": {},
+      "need": {}
+    }
+  },
+  "abcFormDone": "Done",
+  "@abcFormDone": {
+    "description": "web key: abc.form.done"
+  },
+  "abcFormMissing": "Missing",
+  "@abcFormMissing": {
+    "description": "web key: abc.form.missing"
+  },
+  "abcFormDraftRule": "(draft rule: verify)",
+  "@abcFormDraftRule": {
+    "description": "web key: abc.form.draftRule"
+  },
+  "abcFormSharesLater": "Paid capital is counted from share payments (Shares, milestone A4).",
+  "@abcFormSharesLater": {
+    "description": "web key: abc.form.sharesLater"
+  },
+  "abcReadyCommittee": "Organizing committee",
+  "@abcReadyCommittee": {
+    "description": "web key: abc.ready.committee"
+  },
+  "abcReadyRecognition": "Committee recognized (authority, date, letter)",
+  "@abcReadyRecognition": {
+    "description": "web key: abc.ready.recognition"
+  },
+  "abcReadyMembers": "Founding members",
+  "@abcReadyMembers": {
+    "description": "web key: abc.ready.members"
+  },
+  "abcReadyPaidCapital": "Paid-up capital",
+  "@abcReadyPaidCapital": {
+    "description": "web key: abc.ready.paid_capital"
+  },
+  "abcReadyDeclaredPaid": "Share of declared capital paid",
+  "@abcReadyDeclaredPaid": {
+    "description": "web key: abc.ready.declared_paid"
+  },
+  "abcReadyBoard": "Board elected (chair + members)",
+  "@abcReadyBoard": {
+    "description": "web key: abc.ready.board"
+  },
+  "abcReadyBusinessPlan": "Business plan attached (years)",
+  "@abcReadyBusinessPlan": {
+    "description": "web key: abc.ready.business_plan"
+  },
+  "abcReadyCapitalDeposit": "Capital deposit proof attached",
+  "@abcReadyCapitalDeposit": {
+    "description": "web key: abc.ready.capital_deposit"
+  },
+  "abcReadyAgreement": "Founding agreement signed by all members",
+  "@abcReadyAgreement": {
+    "description": "web key: abc.ready.agreement"
+  },
+  "abcDocRecognition": "Recognition letter",
+  "@abcDocRecognition": {
+    "description": "web key: abc.doc.recognition"
+  },
+  "abcDocFoundingAgreement": "Founding agreement / articles",
+  "@abcDocFoundingAgreement": {
+    "description": "web key: abc.doc.founding_agreement"
+  },
+  "abcDocBusinessPlan": "Business plan",
+  "@abcDocBusinessPlan": {
+    "description": "web key: abc.doc.business_plan"
+  },
+  "abcDocCapitalDeposit": "Capital deposit proof",
+  "@abcDocCapitalDeposit": {
+    "description": "web key: abc.doc.capital_deposit"
+  },
+  "abcDocRegistrationCertificate": "Registration certificate",
+  "@abcDocRegistrationCertificate": {
+    "description": "web key: abc.doc.registration_certificate"
+  },
+  "abcDocMinutes": "Minutes",
+  "@abcDocMinutes": {
+    "description": "web key: abc.doc.minutes"
+  },
+  "abcDocOther": "Other (e.g. signed copy)",
+  "@abcDocOther": {
+    "description": "web key: abc.doc.other"
+  },
+  "abcFormDocuments": "Documents",
+  "@abcFormDocuments": {
+    "description": "web key: abc.form.documents"
+  },
+  "abcFormDocumentsHint": "PDF, JPEG or PNG up to 10 MB. A new upload of the same kind is a new version; older versions are kept.",
+  "@abcFormDocumentsHint": {
+    "description": "web key: abc.form.documentsHint"
+  },
+  "abcFormNoDocuments": "No documents yet.",
+  "@abcFormNoDocuments": {
+    "description": "web key: abc.form.noDocuments"
+  },
+  "abcFormKind": "Kind",
+  "@abcFormKind": {
+    "description": "web key: abc.form.kind"
+  },
+  "abcFormTitle": "Title",
+  "@abcFormTitle": {
+    "description": "web key: abc.form.title"
+  },
+  "abcFormPlanYears": "Years covered",
+  "@abcFormPlanYears": {
+    "description": "web key: abc.form.planYears"
+  },
+  "abcFormYears": "{n} years",
+  "@abcFormYears": {
+    "description": "web key: abc.form.years",
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "abcFormOlder": "older version",
+  "@abcFormOlder": {
+    "description": "web key: abc.form.older"
+  },
+  "abcFormChooseFile": "Choose file",
+  "@abcFormChooseFile": {
+    "description": "web key: abc.form.chooseFile"
+  },
+  "abcFormFileTypes": "PDF, JPEG or PNG, up to 10 MB",
+  "@abcFormFileTypes": {
+    "description": "web key: abc.form.fileTypes"
+  },
+  "abcFormUpload": "Upload",
+  "@abcFormUpload": {
+    "description": "web key: abc.form.upload"
+  },
+  "abcFormDownload": "Download",
+  "@abcFormDownload": {
+    "description": "web key: abc.form.download"
+  },
+  "abcFormUploaded": "Uploaded.",
+  "@abcFormUploaded": {
+    "description": "web key: abc.form.uploaded"
+  },
+  "abcFormRecognition": "Recognition of the organizing committee",
+  "@abcFormRecognition": {
+    "description": "web key: abc.form.recognition"
+  },
+  "abcFormRecognitionHint": "By the Ministry or the regional bureau. Upload the letter first (kind: recognition letter).",
+  "@abcFormRecognitionHint": {
+    "description": "web key: abc.form.recognitionHint"
+  },
+  "abcFormRecognizedBy": "Recognized by {authority} on {date}.",
+  "@abcFormRecognizedBy": {
+    "description": "web key: abc.form.recognizedBy",
+    "placeholders": {
+      "authority": {},
+      "date": {}
+    }
+  },
+  "abcFormAuthority": "Authority",
+  "@abcFormAuthority": {
+    "description": "web key: abc.form.authority"
+  },
+  "abcFormDate": "Date",
+  "@abcFormDate": {
+    "description": "web key: abc.form.date"
+  },
+  "abcFormLetter": "Letter",
+  "@abcFormLetter": {
+    "description": "web key: abc.form.letter"
+  },
+  "abcFormAgreement": "Founding agreement signatures",
+  "@abcFormAgreement": {
+    "description": "web key: abc.form.agreement"
+  },
+  "abcFormSignedCount": "{signed} of {total} members signed version {v}.",
+  "@abcFormSignedCount": {
+    "description": "web key: abc.form.signedCount",
+    "placeholders": {
+      "signed": {},
+      "total": {},
+      "v": {}
+    }
+  },
+  "abcFormNoAgreement": "Upload the founding agreement to start collecting signatures.",
+  "@abcFormNoAgreement": {
+    "description": "web key: abc.form.noAgreement"
+  },
+  "abcFormSignedApp": "confirmed in the app",
+  "@abcFormSignedApp": {
+    "description": "web key: abc.form.signedApp"
+  },
+  "abcFormSignedScan": "signed on paper",
+  "@abcFormSignedScan": {
+    "description": "web key: abc.form.signedScan"
+  },
+  "abcFormNotSigned": "not signed",
+  "@abcFormNotSigned": {
+    "description": "web key: abc.form.notSigned"
+  },
+  "abcFormSignHow": "Members confirm on their Profile page in the app, or you record a signed paper copy (upload it first as 'Other').",
+  "@abcFormSignHow": {
+    "description": "web key: abc.form.signHow"
+  },
+  "abcFormMember": "Member",
+  "@abcFormMember": {
+    "description": "web key: abc.form.member"
+  },
+  "abcFormScan": "Signed copy",
+  "@abcFormScan": {
+    "description": "web key: abc.form.scan"
+  },
+  "abcFormRecordScan": "Record signature",
+  "@abcFormRecordScan": {
+    "description": "web key: abc.form.recordScan"
+  },
+  "abcFormRegister": "Registration",
+  "@abcFormRegister": {
+    "description": "web key: abc.form.register"
+  },
+  "abcFormNotReady": "Complete the checklist first; then record the registration here.",
+  "@abcFormNotReady": {
+    "description": "web key: abc.form.notReady"
+  },
+  "abcFormAdminOverride": "The checklist is not complete. As an administrator you can still record a registration, with the reason (e.g. registered before it joined the platform).",
+  "@abcFormAdminOverride": {
+    "description": "web key: abc.form.adminOverride"
+  },
+  "abcFormReadyHint": "Every item is ready. Record the registration from the authority.",
+  "@abcFormReadyHint": {
+    "description": "web key: abc.form.readyHint"
+  },
+  "abcFormRegAuthority": "Registering authority",
+  "@abcFormRegAuthority": {
+    "description": "web key: abc.form.regAuthority"
+  },
+  "abcFormRegNumber": "Registration number",
+  "@abcFormRegNumber": {
+    "description": "web key: abc.form.regNumber"
+  },
+  "abcFormOverrideReason": "Reason (required, at least 10 characters)",
+  "@abcFormOverrideReason": {
+    "description": "web key: abc.form.overrideReason"
+  },
+  "abcFormRegisterButton": "Record registration",
+  "@abcFormRegisterButton": {
+    "description": "web key: abc.form.registerButton"
+  },
+  "abcFormRegistered": "Registered",
+  "@abcFormRegistered": {
+    "description": "web key: abc.form.registered"
+  },
+  "abcFormRegisteredLine": "Registered by {authority}, number {number}, on {date}.",
+  "@abcFormRegisteredLine": {
+    "description": "web key: abc.form.registeredLine",
+    "placeholders": {
+      "authority": {},
+      "number": {},
+      "date": {}
+    }
+  },
+  "abcFormOverrideNote": "Recorded by an administrator although the checklist was not complete: {reason}",
+  "@abcFormOverrideNote": {
+    "description": "web key: abc.form.overrideNote",
+    "placeholders": {
+      "reason": {}
+    }
+  },
+  "abcInvAgreementHint": "The founding agreement is ready. Read it, then confirm that you agree.",
+  "@abcInvAgreementHint": {
+    "description": "web key: abcInv.agreementHint"
+  },
+  "abcInvRead": "Read the agreement",
+  "@abcInvRead": {
+    "description": "web key: abcInv.read"
+  },
+  "abcInvConfirm": "I agree and sign",
+  "@abcInvConfirm": {
+    "description": "web key: abcInv.confirm"
+  },
+  "abcInvSigned": "You signed the founding agreement on {date}.",
+  "@abcInvSigned": {
+    "description": "web key: abcInv.signed",
+    "placeholders": {
+      "date": {}
+    }
   }
 }

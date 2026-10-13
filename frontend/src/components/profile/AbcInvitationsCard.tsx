@@ -2,14 +2,34 @@ import { api } from "@/api/client";
 import Card from "@/components/common/Card";
 import Badge from "@/components/ui/badge/Badge";
 import Button from "@/components/ui/button/Button";
-import { useAsync } from "@/hooks/useAsync";
+import { errorMessage, useAsync } from "@/hooks/useAsync";
+import Alert from "@/components/ui/alert/Alert";
+import { useState } from "react";
 import { tr } from "@/i18n/core";
 import { Handshake } from "lucide-react";
 
 /** The farmer's ABC memberships: accept an invitation (shares plots and crop seasons with the ABC), or leave. */
 export default function AbcInvitationsCard() {
   const list = useAsync(() => api.myAbcInvitations(), []);
+  const memberships = useAsync(() => api.myAbcMemberships(), []);
+  const [error, setError] = useState<string | null>(null);
   if (!list.data?.length) return null;
+  const agreementOf = (orgId: number) => memberships.data?.find((m) => m.org_id === orgId);
+
+  async function readAgreement(orgId: number) {
+    const blob = await api.myAbcAgreementFile(orgId);
+    window.open(URL.createObjectURL(blob), "_blank", "noopener");
+  }
+
+  async function sign(orgId: number) {
+    setError(null);
+    try {
+      await api.signMyAbcAgreement(orgId);
+      memberships.reload();
+    } catch (err) {
+      setError(errorMessage(err));
+    }
+  }
 
   async function decide(
     orgId: number,
@@ -26,6 +46,7 @@ export default function AbcInvitationsCard() {
       title={tr("abcInv.title")}
       description={tr("abcInv.hint")}
     >
+      {error && <Alert className="mb-3" variant="error" message={error} />}
       <ul className="divide-y divide-gray-100 dark:divide-gray-800">
         {list.data.map((i) => (
           <li
@@ -61,6 +82,21 @@ export default function AbcInvitationsCard() {
                   {tr("abcInv.leave")}
                 </Button>
               </span>
+            )}
+            {i.status !== "invited" && agreementOf(i.org_id)?.agreement && (
+              <div className="w-full rounded-lg bg-gray-50 p-3 text-sm dark:bg-white/[0.03]">
+                {agreementOf(i.org_id)?.signed ? (
+                  <p className="text-success-600">{tr("abcInv.signed", { date: agreementOf(i.org_id)!.signed!.signed_at.slice(0, 10) })}</p>
+                ) : (
+                  <>
+                    <p className="text-gray-700 dark:text-gray-300">{tr("abcInv.agreementHint")}</p>
+                    <span className="mt-2 flex flex-wrap gap-2">
+                      <Button size="xs" variant="outline" onClick={() => readAgreement(i.org_id)}>{tr("abcInv.read")}</Button>
+                      <Button size="xs" onClick={() => sign(i.org_id)}>{tr("abcInv.confirm")}</Button>
+                    </span>
+                  </>
+                )}
+              </div>
             )}
           </li>
         ))}

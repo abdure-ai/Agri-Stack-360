@@ -30,8 +30,9 @@ import {
 import { useState, type FormEvent } from "react";
 import { useAuth } from "@/context/AuthContext";
 import CompanyTab from "./CompanyTab";
+import FormationTab from "./FormationTab";
 
-type Tab = "company" | "members" | "contributions" | "planning" | "messages" | "buyers";
+type Tab = "company" | "formation" | "members" | "contributions" | "planning" | "messages" | "buyers";
 
 function saveBlob(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
@@ -90,7 +91,14 @@ export default function AbcPortal() {
         <ErrorState message={company.error} onRetry={company.reload} />
       ) : null)}
       {!isManager ? (
-        company.data && tab === "company" && <CompanyTab c={company.data} onChanged={company.reload} />
+        company.data && (
+          <>
+            <Tabs variant="underline" className="mb-4" value={tab} onChange={setTab}
+              tabs={[{ id: "company", label: tr("abc.tab.company") }, { id: "formation", label: tr("abc.tab.formation") }]} />
+            {tab === "company" && <CompanyTab c={company.data} onChanged={company.reload} />}
+            {tab === "formation" && <FormationTab orgId={company.data.org.id} />}
+          </>
+        )
       ) : overview.loading ? (
         <LoadingState />
       ) : overview.error || !ov ? (
@@ -130,6 +138,7 @@ export default function AbcPortal() {
             onChange={setTab}
             tabs={[
               { id: "company", label: tr("abc.tab.company") },
+              { id: "formation", label: tr("abc.tab.formation") },
               { id: "members", label: tr("abc.tab.members") },
               { id: "contributions", label: tr("abc.tab.contributions") },
               { id: "planning", label: tr("abc.tab.planning") },
@@ -138,6 +147,7 @@ export default function AbcPortal() {
             ]}
           />
           {tab === "company" && company.data && <CompanyTab c={company.data} onChanged={company.reload} />}
+          {tab === "formation" && company.data && <FormationTab orgId={company.data.org.id} />}
           {tab === "members" && <Members ov={ov} onChanged={overview.reload} />}
           {tab === "contributions" && (
             <Contributions ov={ov} onChanged={overview.reload} />

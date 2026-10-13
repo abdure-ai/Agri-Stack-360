@@ -8684,5 +8684,797 @@
   "@mapLegendDashed": {
     "description": "web key: map.legend.dashed",
     "x-draft": true
+  },
+  "navAbcRules": "ሕግታት ABC",
+  "@navAbcRules": {
+    "description": "web key: nav.abcRules",
+    "x-draft": true
+  },
+  "abcSaved": "ተዓቂቡ።",
+  "@abcSaved": {
+    "description": "web key: abc.saved",
+    "x-draft": true
+  },
+  "abcPickCompany": "ትካል",
+  "@abcPickCompany": {
+    "description": "web key: abc.pickCompany",
+    "x-draft": true
+  },
+  "abcTabCompany": "ትካል",
+  "@abcTabCompany": {
+    "description": "web key: abc.tab.company",
+    "x-draft": true
+  },
+  "abcRoleOrganizingCommittee": "ኣወሃሃዲት ኮሚቴ",
+  "@abcRoleOrganizingCommittee": {
+    "description": "web key: abc.role.organizing_committee",
+    "x-draft": true
+  },
+  "abcRoleGeneralManager": "ዋና ኣመሓዳሪ",
+  "@abcRoleGeneralManager": {
+    "description": "web key: abc.role.general_manager",
+    "x-draft": true
+  },
+  "abcRoleChair": "ኣቦ መንበር ቦርድ",
+  "@abcRoleChair": {
+    "description": "web key: abc.role.chair",
+    "x-draft": true
+  },
+  "abcRoleBoardMember": "ኣባል ቦርድ",
+  "@abcRoleBoardMember": {
+    "description": "web key: abc.role.board_member",
+    "x-draft": true
+  },
+  "abcRoleSecretary": "ጸሓፊ",
+  "@abcRoleSecretary": {
+    "description": "web key: abc.role.secretary",
+    "x-draft": true
+  },
+  "abcRoleAccountant": "ሒሳብ ሹም",
+  "@abcRoleAccountant": {
+    "description": "web key: abc.role.accountant",
+    "x-draft": true
+  },
+  "abcRoleStoreKeeper": "ሓላፊ መኽዘን",
+  "@abcRoleStoreKeeper": {
+    "description": "web key: abc.role.store_keeper",
+    "x-draft": true
+  },
+  "abcRoleMachineryCoordinator": "ኣወሃሃዲ ማሽነሪ",
+  "@abcRoleMachineryCoordinator": {
+    "description": "web key: abc.role.machinery_coordinator",
+    "x-draft": true
+  },
+  "abcRoleAgronomist": "ኣግሮኖሚስት ABC",
+  "@abcRoleAgronomist": {
+    "description": "web key: abc.role.agronomist",
+    "x-draft": true
+  },
+  "abcRoleAuditor": "ኦዲተር",
+  "@abcRoleAuditor": {
+    "description": "web key: abc.role.auditor",
+    "x-draft": true
+  },
+  "abcRuleMinFoundingMembers": "ዝተሓተ መስረቲ ኣባላት",
+  "@abcRuleMinFoundingMembers": {
+    "description": "web key: abc.rule.min_founding_members",
+    "x-draft": true
+  },
+  "abcRuleShareValueMinEtb": "ዝተሓተ ዋጋ ሓንቲ ኣክሲዮን",
+  "@abcRuleShareValueMinEtb": {
+    "description": "web key: abc.rule.share_value_min_etb",
+    "x-draft": true
+  },
+  "abcRuleMinSharesPerMember": "ንሓደ ኣባል ዝተሓተ ኣክሲዮን",
+  "@abcRuleMinSharesPerMember": {
+    "description": "web key: abc.rule.min_shares_per_member",
+    "x-draft": true
+  },
+  "abcRuleMinPaidCapitalEtb": "ዝተሓተ ዝተኸፍለ ካፒታል",
+  "@abcRuleMinPaidCapitalEtb": {
+    "description": "web key: abc.rule.min_paid_capital_etb",
+    "x-draft": true
+  },
+  "abcRuleRegistrationPaidFraction": "ቅድሚ ምዝገባ ዝኽፈል (ካብ ዝተኣወጀ ካፒታል)",
+  "@abcRuleRegistrationPaidFraction": {
+    "description": "web key: abc.rule.registration_paid_fraction",
+    "x-draft": true
+  },
+  "abcRulePledgeUpfrontFraction": "ቃል ክኣቱ ዝኽፈል (ተወሳኺ ኣክሲዮን)",
+  "@abcRulePledgeUpfrontFraction": {
+    "description": "web key: abc.rule.pledge_upfront_fraction",
+    "x-draft": true
+  },
+  "abcRulePledgeDeadlineYears": "ግዜ ንምኽፋል ቃል ዝተኣትወሎም ኣክሲዮናት",
+  "@abcRulePledgeDeadlineYears": {
+    "description": "web key: abc.rule.pledge_deadline_years",
+    "x-draft": true
+  },
+  "abcRuleMaxOwnershipFraction": "ንሓደ ኣባል ዝለዓለ ዋንነት",
+  "@abcRuleMaxOwnershipFraction": {
+    "description": "web key: abc.rule.max_ownership_fraction",
+    "x-draft": true
+  },
+  "abcRuleCommitteeMin": "ኣወሃሃዲት ኮሚቴ፦ ዝተሓተ",
+  "@abcRuleCommitteeMin": {
+    "description": "web key: abc.rule.committee_min",
+    "x-draft": true
+  },
+  "abcRuleCommitteeMax": "ኣወሃሃዲት ኮሚቴ፦ ዝለዓለ",
+  "@abcRuleCommitteeMax": {
+    "description": "web key: abc.rule.committee_max",
+    "x-draft": true
+  },
+  "abcRuleBusinessPlanYearsMin": "መደብ ንግዲ፦ ዝተሓተ ዓመታት",
+  "@abcRuleBusinessPlanYearsMin": {
+    "description": "web key: abc.rule.business_plan_years_min",
+    "x-draft": true
+  },
+  "abcRuleBusinessPlanYearsMax": "መደብ ንግዲ፦ ዝለዓለ ዓመታት",
+  "@abcRuleBusinessPlanYearsMax": {
+    "description": "web key: abc.rule.business_plan_years_max",
+    "x-draft": true
+  },
+  "abcRuleVotingLandFactor": "ክብደት ድምጺ፦ ግደ መሬት",
+  "@abcRuleVotingLandFactor": {
+    "description": "web key: abc.rule.voting_land_factor",
+    "x-draft": true
+  },
+  "abcRuleVotingProductionFactor": "ክብደት ድምጺ፦ ግደ ፍርያት",
+  "@abcRuleVotingProductionFactor": {
+    "description": "web key: abc.rule.voting_production_factor",
+    "x-draft": true
+  },
+  "abcUnitMembers": "ኣባላት",
+  "@abcUnitMembers": {
+    "description": "web key: abc.unit.members",
+    "x-draft": true
+  },
+  "abcUnitShares": "ኣክሲዮናት",
+  "@abcUnitShares": {
+    "description": "web key: abc.unit.shares",
+    "x-draft": true
+  },
+  "abcUnitYears": "ዓመታት",
+  "@abcUnitYears": {
+    "description": "web key: abc.unit.years",
+    "x-draft": true
+  },
+  "abcRuleVerified": "ዝተረጋገጸ",
+  "@abcRuleVerified": {
+    "description": "web key: abc.ruleVerified",
+    "x-draft": true
+  },
+  "abcRulePlatform": "ናይ መድረኽ ንቡር",
+  "@abcRulePlatform": {
+    "description": "web key: abc.rulePlatform",
+    "x-draft": true
+  },
+  "abcRuleDraft": "ንድፊ፦ ኣረጋግጹ",
+  "@abcRuleDraft": {
+    "description": "web key: abc.ruleDraft",
+    "x-draft": true
+  },
+  "abcRuleSince": "ካብ {date}",
+  "@abcRuleSince": {
+    "description": "web key: abc.ruleSince",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcSince": "ካብ {date}",
+  "@abcSince": {
+    "description": "web key: abc.since",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcCompanyProfile": "መግለጺ ትካል",
+  "@abcCompanyProfile": {
+    "description": "web key: abc.company.profile",
+    "x-draft": true
+  },
+  "abcCompanyType": "ዓይነት ABC",
+  "@abcCompanyType": {
+    "description": "web key: abc.company.type",
+    "x-draft": true
+  },
+  "abcCompanyKebele": "ቀበሌ",
+  "@abcCompanyKebele": {
+    "description": "web key: abc.company.kebele",
+    "x-draft": true
+  },
+  "abcCompanyFiscalYear": "ዓመተ ባጀት ዝጅምር",
+  "@abcCompanyFiscalYear": {
+    "description": "web key: abc.company.fiscalYear",
+    "x-draft": true
+  },
+  "abcCompanyDeclaredCapital": "ዝተኣወጀ ካፒታል (ብር)",
+  "@abcCompanyDeclaredCapital": {
+    "description": "web key: abc.company.declaredCapital",
+    "x-draft": true
+  },
+  "abcCompanyApprovalLimit": "ፍቓድ ቦርድ ዘድልዮ ካብ (ብር) ንላዕሊ",
+  "@abcCompanyApprovalLimit": {
+    "description": "web key: abc.company.approvalLimit",
+    "x-draft": true
+  },
+  "abcCompanyApprovalLimitHint": "ካብዚ መጠን ንላዕሊ ዝኾኑ ዕድጊታትን መሸጣታትን ፍቓድ ቦርድ የድልዮም።",
+  "@abcCompanyApprovalLimitHint": {
+    "description": "web key: abc.company.approvalLimitHint",
+    "x-draft": true
+  },
+  "abcCompanyExitPolicy": "ፖሊሲ ምውጻእን ምምላስን ኣባል",
+  "@abcCompanyExitPolicy": {
+    "description": "web key: abc.company.exitPolicy",
+    "x-draft": true
+  },
+  "abcCompanyRules": "ኣብ ስራሕ ዘለዉ ሕጋዊ ሕግታት",
+  "@abcCompanyRules": {
+    "description": "web key: abc.company.rules",
+    "x-draft": true
+  },
+  "abcCompanyRulesHint": "ብኣመሓዳሪ ካብ ሕግን መምርሒታትን ዝውሰኑ፤ ንድፍታት ክረጋገጹ ኣለዎም።",
+  "@abcCompanyRulesHint": {
+    "description": "web key: abc.company.rulesHint",
+    "x-draft": true
+  },
+  "abcCompanyTeam": "ጉጅለን ተራታትን",
+  "@abcCompanyTeam": {
+    "description": "web key: abc.company.team",
+    "x-draft": true
+  },
+  "abcCompanyTeamHint": "ነፍሲ ወከፍ ተራ ኣብዚ ABC ናይ ገዛእ ርእሱ መሰል ይህብ። ሓደ ሰብ ብዙሕ ተራታት፣ ኣብ ካልኦት ABC እውን ተራ ክህልዎ ይኽእል።",
+  "@abcCompanyTeamHint": {
+    "description": "web key: abc.company.teamHint",
+    "x-draft": true
+  },
+  "abcCompanyNoTeam": "ገና ተራ ኣይተዋህበን።",
+  "@abcCompanyNoTeam": {
+    "description": "web key: abc.company.noTeam",
+    "x-draft": true
+  },
+  "abcCompanyPhone": "ተሌፎን",
+  "@abcCompanyPhone": {
+    "description": "web key: abc.company.phone",
+    "x-draft": true
+  },
+  "abcCompanyRole": "ተራ",
+  "@abcCompanyRole": {
+    "description": "web key: abc.company.role",
+    "x-draft": true
+  },
+  "abcCompanyAddRole": "ተራ ሃብ",
+  "@abcCompanyAddRole": {
+    "description": "web key: abc.company.addRole",
+    "x-draft": true
+  },
+  "abcCompanyHistory": "ታሪኽ",
+  "@abcCompanyHistory": {
+    "description": "web key: abc.company.history",
+    "x-draft": true
+  },
+  "abcCompanyNoHistory": "ገና ዝተመዝገበ ለውጢ የለን።",
+  "@abcCompanyNoHistory": {
+    "description": "web key: abc.company.noHistory",
+    "x-draft": true
+  },
+  "abcStatusFormation": "ኣብ ምምስራት",
+  "@abcStatusFormation": {
+    "description": "web key: abc.status.formation",
+    "x-draft": true
+  },
+  "abcStatusRegistered": "ዝተመዝገበ",
+  "@abcStatusRegistered": {
+    "description": "web key: abc.status.registered",
+    "x-draft": true
+  },
+  "abcStatusSuspended": "ዝተኣገደ",
+  "@abcStatusSuspended": {
+    "description": "web key: abc.status.suspended",
+    "x-draft": true
+  },
+  "abcStatusDissolved": "ዝፈረሰ",
+  "@abcStatusDissolved": {
+    "description": "web key: abc.status.dissolved",
+    "x-draft": true
+  },
+  "abcTypeAll": "ኩሎም ዓይነታት",
+  "@abcTypeAll": {
+    "description": "web key: abc.type.all",
+    "x-draft": true
+  },
+  "abcTypeCropGrain": "ሰብል / እኽሊ",
+  "@abcTypeCropGrain": {
+    "description": "web key: abc.type.crop_grain",
+    "x-draft": true
+  },
+  "abcTypeHorticulture": "ኣሕምልቲ",
+  "@abcTypeHorticulture": {
+    "description": "web key: abc.type.horticulture",
+    "x-draft": true
+  },
+  "abcTypeFruit": "ፍረታት",
+  "@abcTypeFruit": {
+    "description": "web key: abc.type.fruit",
+    "x-draft": true
+  },
+  "abcTypeLivestock": "እንስሳ",
+  "@abcTypeLivestock": {
+    "description": "web key: abc.type.livestock",
+    "x-draft": true
+  },
+  "abcTypeMixed": "ሕውስዋስ",
+  "@abcTypeMixed": {
+    "description": "web key: abc.type.mixed",
+    "x-draft": true
+  },
+  "abcFyHamle": "1 ሓምለ (ዓመተ ባጀት ኢትዮጵያ)",
+  "@abcFyHamle": {
+    "description": "web key: abc.fy.hamle",
+    "x-draft": true
+  },
+  "abcFyMeskerem": "1 መስከረም (ሓድሽ ዓመት ኢትዮጵያ)",
+  "@abcFyMeskerem": {
+    "description": "web key: abc.fy.meskerem",
+    "x-draft": true
+  },
+  "abcFyJanuary": "1 ጥሪ",
+  "@abcFyJanuary": {
+    "description": "web key: abc.fy.january",
+    "x-draft": true
+  },
+  "abcActionAbcProfileUpdate": "መግለጺ ትካል ተቐይሩ",
+  "@abcActionAbcProfileUpdate": {
+    "description": "web key: abc.action.abc.profile.update",
+    "x-draft": true
+  },
+  "abcActionAbcRoleAdd": "ተራ ተዋሂቡ",
+  "@abcActionAbcRoleAdd": {
+    "description": "web key: abc.action.abc.role.add",
+    "x-draft": true
+  },
+  "abcActionAbcRoleRemove": "ተራ ተሰሪዙ",
+  "@abcActionAbcRoleRemove": {
+    "description": "web key: abc.action.abc.role.remove",
+    "x-draft": true
+  },
+  "abcRulesDescription": "ሕጋዊ ቁጽርታት ንABC (ዝተሓተ ኣባላት፣ ዋጋ ኣክሲዮን፣ ዶብ ዋንነት…)። ዋጋ ካብ ሓንቲ ዕለት ምስ ምንጩ ቀይሩ፤ እቲ ዝነበረ ዋጋ ከም ታሪኽ ይዕቀብ።",
+  "@abcRulesDescription": {
+    "description": "web key: abc.rules.description",
+    "x-draft": true
+  },
+  "abcRulesAll": "ኩሎም ሕግታትን ታሪኾምን",
+  "@abcRulesAll": {
+    "description": "web key: abc.rules.all",
+    "x-draft": true
+  },
+  "abcRulesNew": "ሓድሽ ዋጋ",
+  "@abcRulesNew": {
+    "description": "web key: abc.rules.new",
+    "x-draft": true
+  },
+  "abcRulesNewHint": "ካብ ዝሰራዕኩምዋ ዕለት ይሰርሕ። ሕጊ፣ መምርሒ ወይ ውሳነ ምስ ዓንቀጹ ጥቐሱ።",
+  "@abcRulesNewHint": {
+    "description": "web key: abc.rules.newHint",
+    "x-draft": true
+  },
+  "abcRulesRule": "ሕጊ",
+  "@abcRulesRule": {
+    "description": "web key: abc.rules.rule",
+    "x-draft": true
+  },
+  "abcRulesValue": "ዋጋ",
+  "@abcRulesValue": {
+    "description": "web key: abc.rules.value",
+    "x-draft": true
+  },
+  "abcRulesFrom": "ዝሰርሓሉ ዕለት",
+  "@abcRulesFrom": {
+    "description": "web key: abc.rules.from",
+    "x-draft": true
+  },
+  "abcRulesSource": "ምንጪ",
+  "@abcRulesSource": {
+    "description": "web key: abc.rules.source",
+    "x-draft": true
+  },
+  "abcRulesSourceHint": "ንኣብነት መምርሒ ቁ. …፣ ዓንቀጽ …",
+  "@abcRulesSourceHint": {
+    "description": "web key: abc.rules.sourceHint",
+    "x-draft": true
+  },
+  "abcRulesStatus": "ተረጋጊጹ?",
+  "@abcRulesStatus": {
+    "description": "web key: abc.rules.status",
+    "x-draft": true
+  },
+  "abcRulesSave": "ሓድሽ ዋጋ ዓቅብ",
+  "@abcRulesSave": {
+    "description": "web key: abc.rules.save",
+    "x-draft": true
+  },
+  "abcRulesAdded": "ተዓቂቡ። ሓድሽ ዋጋ ካብ ዕለቱ ይሰርሕ።",
+  "@abcRulesAdded": {
+    "description": "web key: abc.rules.added",
+    "x-draft": true
+  },
+  "abcTabFormation": "ምምስራትን ምዝገባን",
+  "@abcTabFormation": {
+    "description": "web key: abc.tab.formation",
+    "x-draft": true
+  },
+  "abcRuleBoardMinMembers": "ቦርድ፦ ዝተሓተ ኣባላት (ኣቦ መንበር ሓዊሱ)",
+  "@abcRuleBoardMinMembers": {
+    "description": "web key: abc.rule.board_min_members",
+    "x-draft": true
+  },
+  "abcFormChecklist": "ንምዝገባ ድሉውነት",
+  "@abcFormChecklist": {
+    "description": "web key: abc.form.checklist",
+    "x-draft": true
+  },
+  "abcFormChecklistHint": "ካብ {total} {done} ድሉው። ደረታት ካብ ኣብ ስራሕ ዘለዉ ሕግታት ABC ይውሰዱ።",
+  "@abcFormChecklistHint": {
+    "description": "web key: abc.form.checklistHint",
+    "placeholders": {
+      "total": {},
+      "done": {}
+    },
+    "x-draft": true
+  },
+  "abcFormHaveNeed": "ካብ {need} {have}",
+  "@abcFormHaveNeed": {
+    "description": "web key: abc.form.haveNeed",
+    "placeholders": {
+      "need": {},
+      "have": {}
+    },
+    "x-draft": true
+  },
+  "abcFormDone": "ተወዲኡ",
+  "@abcFormDone": {
+    "description": "web key: abc.form.done",
+    "x-draft": true
+  },
+  "abcFormMissing": "ይጎድል",
+  "@abcFormMissing": {
+    "description": "web key: abc.form.missing",
+    "x-draft": true
+  },
+  "abcFormDraftRule": "(ንድፊ ሕጊ፦ ኣረጋግጹ)",
+  "@abcFormDraftRule": {
+    "description": "web key: abc.form.draftRule",
+    "x-draft": true
+  },
+  "abcFormSharesLater": "ዝተኸፍለ ካፒታል ካብ ክፍሊት ኣክሲዮን ይቑጸር (ኣክሲዮናት፣ A4)።",
+  "@abcFormSharesLater": {
+    "description": "web key: abc.form.sharesLater",
+    "x-draft": true
+  },
+  "abcReadyCommittee": "ኣወሃሃዲት ኮሚቴ",
+  "@abcReadyCommittee": {
+    "description": "web key: abc.ready.committee",
+    "x-draft": true
+  },
+  "abcReadyRecognition": "ኮሚቴ ኣፍልጦ ረኺባ (ኣካል፣ ዕለት፣ ደብዳቤ)",
+  "@abcReadyRecognition": {
+    "description": "web key: abc.ready.recognition",
+    "x-draft": true
+  },
+  "abcReadyMembers": "መስረቲ ኣባላት",
+  "@abcReadyMembers": {
+    "description": "web key: abc.ready.members",
+    "x-draft": true
+  },
+  "abcReadyPaidCapital": "ዝተኸፍለ ካፒታል",
+  "@abcReadyPaidCapital": {
+    "description": "web key: abc.ready.paid_capital",
+    "x-draft": true
+  },
+  "abcReadyDeclaredPaid": "ካብ ዝተኣወጀ ካፒታል ዝተኸፍለ ግደ",
+  "@abcReadyDeclaredPaid": {
+    "description": "web key: abc.ready.declared_paid",
+    "x-draft": true
+  },
+  "abcReadyBoard": "ቦርድ ተመሪጹ (ኣቦ መንበር + ኣባላት)",
+  "@abcReadyBoard": {
+    "description": "web key: abc.ready.board",
+    "x-draft": true
+  },
+  "abcReadyBusinessPlan": "መደብ ንግዲ ተተሓሒዙ (ዓመታት)",
+  "@abcReadyBusinessPlan": {
+    "description": "web key: abc.ready.business_plan",
+    "x-draft": true
+  },
+  "abcReadyCapitalDeposit": "መረጋገጺ ተቐማጢ ካፒታል ተተሓሒዙ",
+  "@abcReadyCapitalDeposit": {
+    "description": "web key: abc.ready.capital_deposit",
+    "x-draft": true
+  },
+  "abcReadyAgreement": "ውዕል ምምስራት ብኹሎም ኣባላት ተፈሪሙ",
+  "@abcReadyAgreement": {
+    "description": "web key: abc.ready.agreement",
+    "x-draft": true
+  },
+  "abcDocRecognition": "ደብዳቤ ኣፍልጦ",
+  "@abcDocRecognition": {
+    "description": "web key: abc.doc.recognition",
+    "x-draft": true
+  },
+  "abcDocFoundingAgreement": "ውዕል ምምስራት / መተሓዳደሪ ሕጊ",
+  "@abcDocFoundingAgreement": {
+    "description": "web key: abc.doc.founding_agreement",
+    "x-draft": true
+  },
+  "abcDocBusinessPlan": "መደብ ንግዲ",
+  "@abcDocBusinessPlan": {
+    "description": "web key: abc.doc.business_plan",
+    "x-draft": true
+  },
+  "abcDocCapitalDeposit": "መረጋገጺ ተቐማጢ ካፒታል",
+  "@abcDocCapitalDeposit": {
+    "description": "web key: abc.doc.capital_deposit",
+    "x-draft": true
+  },
+  "abcDocRegistrationCertificate": "ምስክር ወረቐት ምዝገባ",
+  "@abcDocRegistrationCertificate": {
+    "description": "web key: abc.doc.registration_certificate",
+    "x-draft": true
+  },
+  "abcDocMinutes": "ቃለ ጉባኤ",
+  "@abcDocMinutes": {
+    "description": "web key: abc.doc.minutes",
+    "x-draft": true
+  },
+  "abcDocOther": "ካልእ (ንኣብነት ዝተፈረመ ቅዳሕ)",
+  "@abcDocOther": {
+    "description": "web key: abc.doc.other",
+    "x-draft": true
+  },
+  "abcFormDocuments": "ሰነዳት",
+  "@abcFormDocuments": {
+    "description": "web key: abc.form.documents",
+    "x-draft": true
+  },
+  "abcFormDocumentsHint": "PDF፣ JPEG ወይ PNG ክሳብ 10 MB። ሓድሽ ናይ ተመሳሳሊ ዓይነት ሓድሽ ስሪት እዩ፤ ዝነበሩ ይዕቀቡ።",
+  "@abcFormDocumentsHint": {
+    "description": "web key: abc.form.documentsHint",
+    "x-draft": true
+  },
+  "abcFormNoDocuments": "ገና ሰነድ የለን።",
+  "@abcFormNoDocuments": {
+    "description": "web key: abc.form.noDocuments",
+    "x-draft": true
+  },
+  "abcFormKind": "ዓይነት",
+  "@abcFormKind": {
+    "description": "web key: abc.form.kind",
+    "x-draft": true
+  },
+  "abcFormTitle": "ኣርእስቲ",
+  "@abcFormTitle": {
+    "description": "web key: abc.form.title",
+    "x-draft": true
+  },
+  "abcFormPlanYears": "ዝሽፍኖም ዓመታት",
+  "@abcFormPlanYears": {
+    "description": "web key: abc.form.planYears",
+    "x-draft": true
+  },
+  "abcFormYears": "{n} ዓመታት",
+  "@abcFormYears": {
+    "description": "web key: abc.form.years",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "abcFormOlder": "ዝነበረ ስሪት",
+  "@abcFormOlder": {
+    "description": "web key: abc.form.older",
+    "x-draft": true
+  },
+  "abcFormChooseFile": "ፋይል ምረጹ",
+  "@abcFormChooseFile": {
+    "description": "web key: abc.form.chooseFile",
+    "x-draft": true
+  },
+  "abcFormFileTypes": "PDF፣ JPEG ወይ PNG፣ ክሳብ 10 MB",
+  "@abcFormFileTypes": {
+    "description": "web key: abc.form.fileTypes",
+    "x-draft": true
+  },
+  "abcFormUpload": "ጽዓን",
+  "@abcFormUpload": {
+    "description": "web key: abc.form.upload",
+    "x-draft": true
+  },
+  "abcFormDownload": "ኣውርድ",
+  "@abcFormDownload": {
+    "description": "web key: abc.form.download",
+    "x-draft": true
+  },
+  "abcFormUploaded": "ተጻዒኑ።",
+  "@abcFormUploaded": {
+    "description": "web key: abc.form.uploaded",
+    "x-draft": true
+  },
+  "abcFormRecognition": "ኣፍልጦ ኣወሃሃዲት ኮሚቴ",
+  "@abcFormRecognition": {
+    "description": "web key: abc.form.recognition",
+    "x-draft": true
+  },
+  "abcFormRecognitionHint": "ብሚኒስትሪ ወይ ብቤት ጽሕፈት ክልል። ቅድም ደብዳቤ ጽዓኑ (ዓይነት፦ ደብዳቤ ኣፍልጦ)።",
+  "@abcFormRecognitionHint": {
+    "description": "web key: abc.form.recognitionHint",
+    "x-draft": true
+  },
+  "abcFormRecognizedBy": "ብ{authority} ብ{date} ኣፍልጦ ተዋሂቡ።",
+  "@abcFormRecognizedBy": {
+    "description": "web key: abc.form.recognizedBy",
+    "placeholders": {
+      "authority": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcFormAuthority": "ኣካል",
+  "@abcFormAuthority": {
+    "description": "web key: abc.form.authority",
+    "x-draft": true
+  },
+  "abcFormDate": "ዕለት",
+  "@abcFormDate": {
+    "description": "web key: abc.form.date",
+    "x-draft": true
+  },
+  "abcFormLetter": "ደብዳቤ",
+  "@abcFormLetter": {
+    "description": "web key: abc.form.letter",
+    "x-draft": true
+  },
+  "abcFormAgreement": "ፊርማታት ውዕል ምምስራት",
+  "@abcFormAgreement": {
+    "description": "web key: abc.form.agreement",
+    "x-draft": true
+  },
+  "abcFormSignedCount": "ካብ {total} ኣባላት {signed} ስሪት {v} ፈሪሞም።",
+  "@abcFormSignedCount": {
+    "description": "web key: abc.form.signedCount",
+    "placeholders": {
+      "total": {},
+      "signed": {},
+      "v": {}
+    },
+    "x-draft": true
+  },
+  "abcFormNoAgreement": "ፊርማ ንምእካብ ውዕል ምምስራት ጽዓኑ።",
+  "@abcFormNoAgreement": {
+    "description": "web key: abc.form.noAgreement",
+    "x-draft": true
+  },
+  "abcFormSignedApp": "ብኣፕ ኣረጋጊጹ",
+  "@abcFormSignedApp": {
+    "description": "web key: abc.form.signedApp",
+    "x-draft": true
+  },
+  "abcFormSignedScan": "ብወረቐት ፈሪሙ",
+  "@abcFormSignedScan": {
+    "description": "web key: abc.form.signedScan",
+    "x-draft": true
+  },
+  "abcFormNotSigned": "ኣይፈረመን",
+  "@abcFormNotSigned": {
+    "description": "web key: abc.form.notSigned",
+    "x-draft": true
+  },
+  "abcFormSignHow": "ኣባላት ኣብ ገጽ መግለጺኦም ብኣፕ የረጋግጹ፣ ወይ ዝተፈረመ ቅዳሕ ወረቐት ትምዝግቡ (ቅድም 'ካልእ' ኢልኩም ጽዓንዎ)።",
+  "@abcFormSignHow": {
+    "description": "web key: abc.form.signHow",
+    "x-draft": true
+  },
+  "abcFormMember": "ኣባል",
+  "@abcFormMember": {
+    "description": "web key: abc.form.member",
+    "x-draft": true
+  },
+  "abcFormScan": "ዝተፈረመ ቅዳሕ",
+  "@abcFormScan": {
+    "description": "web key: abc.form.scan",
+    "x-draft": true
+  },
+  "abcFormRecordScan": "ፊርማ መዝግብ",
+  "@abcFormRecordScan": {
+    "description": "web key: abc.form.recordScan",
+    "x-draft": true
+  },
+  "abcFormRegister": "ምዝገባ",
+  "@abcFormRegister": {
+    "description": "web key: abc.form.register",
+    "x-draft": true
+  },
+  "abcFormNotReady": "ቅድም ዝርዝር ኣጻፍፉ፤ ድሕሪኡ ምዝገባ ኣብዚ መዝግቡ።",
+  "@abcFormNotReady": {
+    "description": "web key: abc.form.notReady",
+    "x-draft": true
+  },
+  "abcFormAdminOverride": "ዝርዝር ኣይተወድአን። ከም ኣመሓዳሪ ምኽንያቱ ብምጥቃስ ምዝገባ ክትምዝግቡ ትኽእሉ (ንኣብነት ቅድሚ ናብ መድረኽ ምእታዉ ዝተመዝገበ)።",
+  "@abcFormAdminOverride": {
+    "description": "web key: abc.form.adminOverride",
+    "x-draft": true
+  },
+  "abcFormReadyHint": "ኩሉ ድሉው እዩ። ካብ ኣካል ዝረኸብኩምዎ ምዝገባ መዝግቡ።",
+  "@abcFormReadyHint": {
+    "description": "web key: abc.form.readyHint",
+    "x-draft": true
+  },
+  "abcFormRegAuthority": "መዝጋቢ ኣካል",
+  "@abcFormRegAuthority": {
+    "description": "web key: abc.form.regAuthority",
+    "x-draft": true
+  },
+  "abcFormRegNumber": "ቁጽሪ ምዝገባ",
+  "@abcFormRegNumber": {
+    "description": "web key: abc.form.regNumber",
+    "x-draft": true
+  },
+  "abcFormOverrideReason": "ምኽንያት (ግዴታ፣ እንተወሓደ 10 ፊደላት)",
+  "@abcFormOverrideReason": {
+    "description": "web key: abc.form.overrideReason",
+    "x-draft": true
+  },
+  "abcFormRegisterButton": "ምዝገባ መዝግብ",
+  "@abcFormRegisterButton": {
+    "description": "web key: abc.form.registerButton",
+    "x-draft": true
+  },
+  "abcFormRegistered": "ተመዝጊቡ",
+  "@abcFormRegistered": {
+    "description": "web key: abc.form.registered",
+    "x-draft": true
+  },
+  "abcFormRegisteredLine": "ብ{authority}፣ ቁጽሪ {number}፣ ብ{date} ተመዝጊቡ።",
+  "@abcFormRegisteredLine": {
+    "description": "web key: abc.form.registeredLine",
+    "placeholders": {
+      "authority": {},
+      "number": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "abcFormOverrideNote": "ዝርዝር ከይተወድአ ብኣመሓዳሪ ዝተመዝገበ፦ {reason}",
+  "@abcFormOverrideNote": {
+    "description": "web key: abc.form.overrideNote",
+    "placeholders": {
+      "reason": {}
+    },
+    "x-draft": true
+  },
+  "abcInvAgreementHint": "ውዕል ምምስራት ድሉው እዩ። ኣንብብዎ፣ ድሕሪኡ ከም እትሰማምዑ ኣረጋግጹ።",
+  "@abcInvAgreementHint": {
+    "description": "web key: abcInv.agreementHint",
+    "x-draft": true
+  },
+  "abcInvRead": "ውዕል ኣንብብ",
+  "@abcInvRead": {
+    "description": "web key: abcInv.read",
+    "x-draft": true
+  },
+  "abcInvConfirm": "ይሰማማዕ፣ ይፍርም",
+  "@abcInvConfirm": {
+    "description": "web key: abcInv.confirm",
+    "x-draft": true
+  },
+  "abcInvSigned": "ውዕል ምምስራት ብ{date} ፈሪምኩም።",
+  "@abcInvSigned": {
+    "description": "web key: abcInv.signed",
+    "placeholders": {
+      "date": {}
+    },
+    "x-draft": true
   }
 }

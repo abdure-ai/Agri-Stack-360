@@ -1957,4 +1957,75 @@ export const ti: Record<MessageKey, string> = {
   "abc.rules.status": "ተረጋጊጹ?",  // draft – needs native review
   "abc.rules.save": "ሓድሽ ዋጋ ዓቅብ",  // draft – needs native review
   "abc.rules.added": "ተዓቂቡ። ሓድሽ ዋጋ ካብ ዕለቱ ይሰርሕ።",  // draft – needs native review
+
+  // ── ABC formation & registration (A2) ─────────────────────────────────────
+  "abc.tab.formation": "ምምስራትን ምዝገባን",  // draft – needs native review
+  "abc.rule.board_min_members": "ቦርድ፦ ዝተሓተ ኣባላት (ኣቦ መንበር ሓዊሱ)",  // draft – needs native review
+  "abc.form.checklist": "ንምዝገባ ድሉውነት",  // draft – needs native review
+  "abc.form.checklistHint": "ካብ {total} {done} ድሉው። ደረታት ካብ ኣብ ስራሕ ዘለዉ ሕግታት ABC ይውሰዱ።",  // draft – needs native review
+  "abc.form.haveNeed": "ካብ {need} {have}",  // draft – needs native review
+  "abc.form.done": "ተወዲኡ",  // draft – needs native review
+  "abc.form.missing": "ይጎድል",  // draft – needs native review
+  "abc.form.draftRule": "(ንድፊ ሕጊ፦ ኣረጋግጹ)",  // draft – needs native review
+  "abc.form.sharesLater": "ዝተኸፍለ ካፒታል ካብ ክፍሊት ኣክሲዮን ይቑጸር (ኣክሲዮናት፣ A4)።",  // draft – needs native review
+  "abc.ready.committee": "ኣወሃሃዲት ኮሚቴ",  // draft – needs native review
+  "abc.ready.recognition": "ኮሚቴ ኣፍልጦ ረኺባ (ኣካል፣ ዕለት፣ ደብዳቤ)",  // draft – needs native review
+  "abc.ready.members": "መስረቲ ኣባላት",  // draft – needs native review
+  "abc.ready.paid_capital": "ዝተኸፍለ ካፒታል",  // draft – needs native review
+  "abc.ready.declared_paid": "ካብ ዝተኣወጀ ካፒታል ዝተኸፍለ ግደ",  // draft – needs native review
+  "abc.ready.board": "ቦርድ ተመሪጹ (ኣቦ መንበር + ኣባላት)",  // draft – needs native review
+  "abc.ready.business_plan": "መደብ ንግዲ ተተሓሒዙ (ዓመታት)",  // draft – needs native review
+  "abc.ready.capital_deposit": "መረጋገጺ ተቐማጢ ካፒታል ተተሓሒዙ",  // draft – needs native review
+  "abc.ready.agreement": "ውዕል ምምስራት ብኹሎም ኣባላት ተፈሪሙ",  // draft – needs native review
+  "abc.doc.recognition": "ደብዳቤ ኣፍልጦ",  // draft – needs native review
+  "abc.doc.founding_agreement": "ውዕል ምምስራት / መተሓዳደሪ ሕጊ",  // draft – needs native review
+  "abc.doc.business_plan": "መደብ ንግዲ",  // draft – needs native review
+  "abc.doc.capital_deposit": "መረጋገጺ ተቐማጢ ካፒታል",  // draft – needs native review
+  "abc.doc.registration_certificate": "ምስክር ወረቐት ምዝገባ",  // draft – needs native review
+  "abc.doc.minutes": "ቃለ ጉባኤ",  // draft – needs native review
+  "abc.doc.other": "ካልእ (ንኣብነት ዝተፈረመ ቅዳሕ)",  // draft – needs native review
+  "abc.form.documents": "ሰነዳት",  // draft – needs native review
+  "abc.form.documentsHint": "PDF፣ JPEG ወይ PNG ክሳብ 10 MB። ሓድሽ ናይ ተመሳሳሊ ዓይነት ሓድሽ ስሪት እዩ፤ ዝነበሩ ይዕቀቡ።",  // draft – needs native review
+  "abc.form.noDocuments": "ገና ሰነድ የለን።",  // draft – needs native review
+  "abc.form.kind": "ዓይነት",  // draft – needs native review
+  "abc.form.title": "ኣርእስቲ",  // draft – needs native review
+  "abc.form.planYears": "ዝሽፍኖም ዓመታት",  // draft – needs native review
+  "abc.form.years": "{n} ዓመታት",  // draft – needs native review
+  "abc.form.older": "ዝነበረ ስሪት",  // draft – needs native review
+  "abc.form.chooseFile": "ፋይል ምረጹ",  // draft – needs native review
+  "abc.form.fileTypes": "PDF፣ JPEG ወይ PNG፣ ክሳብ 10 MB",  // draft – needs native review
+  "abc.form.upload": "ጽዓን",  // draft – needs native review
+  "abc.form.download": "ኣውርድ",  // draft – needs native review
+  "abc.form.uploaded": "ተጻዒኑ።",  // draft – needs native review
+  "abc.form.recognition": "ኣፍልጦ ኣወሃሃዲት ኮሚቴ",  // draft – needs native review
+  "abc.form.recognitionHint": "ብሚኒስትሪ ወይ ብቤት ጽሕፈት ክልል። ቅድም ደብዳቤ ጽዓኑ (ዓይነት፦ ደብዳቤ ኣፍልጦ)።",  // draft – needs native review
+  "abc.form.recognizedBy": "ብ{authority} ብ{date} ኣፍልጦ ተዋሂቡ።",  // draft – needs native review
+  "abc.form.authority": "ኣካል",  // draft – needs native review
+  "abc.form.date": "ዕለት",  // draft – needs native review
+  "abc.form.letter": "ደብዳቤ",  // draft – needs native review
+  "abc.form.agreement": "ፊርማታት ውዕል ምምስራት",  // draft – needs native review
+  "abc.form.signedCount": "ካብ {total} ኣባላት {signed} ስሪት {v} ፈሪሞም።",  // draft – needs native review
+  "abc.form.noAgreement": "ፊርማ ንምእካብ ውዕል ምምስራት ጽዓኑ።",  // draft – needs native review
+  "abc.form.signedApp": "ብኣፕ ኣረጋጊጹ",  // draft – needs native review
+  "abc.form.signedScan": "ብወረቐት ፈሪሙ",  // draft – needs native review
+  "abc.form.notSigned": "ኣይፈረመን",  // draft – needs native review
+  "abc.form.signHow": "ኣባላት ኣብ ገጽ መግለጺኦም ብኣፕ የረጋግጹ፣ ወይ ዝተፈረመ ቅዳሕ ወረቐት ትምዝግቡ (ቅድም 'ካልእ' ኢልኩም ጽዓንዎ)።",  // draft – needs native review
+  "abc.form.member": "ኣባል",  // draft – needs native review
+  "abc.form.scan": "ዝተፈረመ ቅዳሕ",  // draft – needs native review
+  "abc.form.recordScan": "ፊርማ መዝግብ",  // draft – needs native review
+  "abc.form.register": "ምዝገባ",  // draft – needs native review
+  "abc.form.notReady": "ቅድም ዝርዝር ኣጻፍፉ፤ ድሕሪኡ ምዝገባ ኣብዚ መዝግቡ።",  // draft – needs native review
+  "abc.form.adminOverride": "ዝርዝር ኣይተወድአን። ከም ኣመሓዳሪ ምኽንያቱ ብምጥቃስ ምዝገባ ክትምዝግቡ ትኽእሉ (ንኣብነት ቅድሚ ናብ መድረኽ ምእታዉ ዝተመዝገበ)።",  // draft – needs native review
+  "abc.form.readyHint": "ኩሉ ድሉው እዩ። ካብ ኣካል ዝረኸብኩምዎ ምዝገባ መዝግቡ።",  // draft – needs native review
+  "abc.form.regAuthority": "መዝጋቢ ኣካል",  // draft – needs native review
+  "abc.form.regNumber": "ቁጽሪ ምዝገባ",  // draft – needs native review
+  "abc.form.overrideReason": "ምኽንያት (ግዴታ፣ እንተወሓደ 10 ፊደላት)",  // draft – needs native review
+  "abc.form.registerButton": "ምዝገባ መዝግብ",  // draft – needs native review
+  "abc.form.registered": "ተመዝጊቡ",  // draft – needs native review
+  "abc.form.registeredLine": "ብ{authority}፣ ቁጽሪ {number}፣ ብ{date} ተመዝጊቡ።",  // draft – needs native review
+  "abc.form.overrideNote": "ዝርዝር ከይተወድአ ብኣመሓዳሪ ዝተመዝገበ፦ {reason}",  // draft – needs native review
+  "abcInv.agreementHint": "ውዕል ምምስራት ድሉው እዩ። ኣንብብዎ፣ ድሕሪኡ ከም እትሰማምዑ ኣረጋግጹ።",  // draft – needs native review
+  "abcInv.read": "ውዕል ኣንብብ",  // draft – needs native review
+  "abcInv.confirm": "ይሰማማዕ፣ ይፍርም",  // draft – needs native review
+  "abcInv.signed": "ውዕል ምምስራት ብ{date} ፈሪምኩም።",  // draft – needs native review
 };

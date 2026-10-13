@@ -7,7 +7,8 @@
 
 import type { LivestockImportResult, LivestockPrices, LivestockSummary } from "@/types/livestock";
 import type { MapLayers } from "@/types/map";
-import type { AbcCompany, AbcHistoryEntry, AbcProfile, AbcRole, AbcRule, AbcTeamMember } from "@/types/abc";
+import type { AbcCompany, AbcDocKind, AbcDocument, AbcFormation, AbcHistoryEntry, AbcProfile, AbcRole, AbcRule,
+  AbcTeamMember, MyAbcMembership } from "@/types/abc";
 import type {
   AdminArea,
   AiKey,
@@ -404,6 +405,19 @@ export const api = {
     platform.del<unknown>(`/abc/team/${userId}/${role}?org_id=${orgId}`),
   abcHistory: (orgId: number) => platform.get<AbcHistoryEntry[]>("/abc/history", { org_id: orgId }),
   abcAllRules: () => platform.get<AbcRule[]>("/admin/abc-rules"),
+  abcFormation: (orgId: number) => platform.get<AbcFormation>("/abc/formation", { org_id: orgId }),
+  abcSetRecognition: (orgId: number, data: { authority: string; recognized_on: string; doc_id: number | null }) =>
+    platform.put<unknown>(`/abc/formation/recognition?org_id=${orgId}`, data),
+  abcUploadDocument: (orgId: number, kind: AbcDocKind, title: string, file: File, planYears?: number | null) =>
+    platform.upload<AbcDocument>(`/abc/documents?org_id=${orgId}`, formOf({ kind, title, file, plan_years: planYears ?? null })),
+  abcDocumentFile: (orgId: number, docId: number) => getBlob(BASE, `/abc/documents/${docId}/file`, { org_id: orgId }),
+  abcRecordScan: (orgId: number, farmerId: number, scanDocId: number) =>
+    platform.post<unknown>(`/abc/agreement/signatures?org_id=${orgId}`, { farmer_id: farmerId, scan_doc_id: scanDocId }),
+  abcRegister: (orgId: number, data: { authority: string; number: string; registered_on: string; certificate_doc_id: number;
+    override_reason?: string | null }) => platform.post<unknown>(`/abc/registration?org_id=${orgId}`, data),
+  myAbcMemberships: () => platform.get<MyAbcMembership[]>("/abc/my/memberships"),
+  myAbcAgreementFile: (orgId: number) => getBlob(BASE, "/abc/my/agreement/file", { org_id: orgId }),
+  signMyAbcAgreement: (orgId: number) => platform.post<{ signed: boolean }>(`/abc/my/agreement/sign?org_id=${orgId}`),
   abcAddRule: (data: { key: string; abc_type: string; value: number; unit?: string | null; effective_from: string;
     source: string; verification_status: string; note?: string | null }) => platform.post<AbcRule>("/admin/abc-rules", data),
   abcInvite: (phone: string) => platform.post<{ farmer_id: number; status: string }>("/abc/members", { phone }),
