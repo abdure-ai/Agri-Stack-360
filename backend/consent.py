@@ -20,7 +20,7 @@ import sqlite3
 # The wording shown to farmers is a draft until legal review; the version is stored with
 # every consent so we know which text the farmer agreed to.
 CONSENT_TEXT_VERSION = "draft-2026-10-09 PLACEHOLDER_VERIFY legal review"
-METHODS = ("self", "da_verbal", "admin")
+METHODS = ("self", "da_verbal", "admin", "abc_spoken", "abc_paper")
 
 
 def get_consent(conn: sqlite3.Connection, user_id: int) -> dict:

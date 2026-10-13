@@ -25,12 +25,12 @@ import {
   Megaphone,
   ShoppingCart,
   Sprout,
-  Users,
 } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { useAuth } from "@/context/AuthContext";
 import CompanyTab from "./CompanyTab";
 import FormationTab from "./FormationTab";
+import RegistryTab from "./RegistryTab";
 
 type Tab = "company" | "formation" | "members" | "contributions" | "planning" | "messages" | "buyers";
 
@@ -94,8 +94,10 @@ export default function AbcPortal() {
         company.data && (
           <>
             <Tabs variant="underline" className="mb-4" value={tab} onChange={setTab}
-              tabs={[{ id: "company", label: tr("abc.tab.company") }, { id: "formation", label: tr("abc.tab.formation") }]} />
+              tabs={[{ id: "company", label: tr("abc.tab.company") }, { id: "formation", label: tr("abc.tab.formation") },
+                { id: "members", label: tr("abc.tab.members") }]} />
             {tab === "company" && <CompanyTab c={company.data} onChanged={company.reload} />}
+            {tab === "members" && <RegistryTab orgId={company.data.org.id} />}
             {tab === "formation" && <FormationTab orgId={company.data.org.id} />}
           </>
         )
@@ -148,7 +150,7 @@ export default function AbcPortal() {
           />
           {tab === "company" && company.data && <CompanyTab c={company.data} onChanged={company.reload} />}
           {tab === "formation" && company.data && <FormationTab orgId={company.data.org.id} />}
-          {tab === "members" && <Members ov={ov} onChanged={overview.reload} />}
+          {tab === "members" && company.data && <RegistryTab orgId={company.data.org.id} />}
           {tab === "contributions" && (
             <Contributions ov={ov} onChanged={overview.reload} />
           )}
@@ -158,116 +160,6 @@ export default function AbcPortal() {
         </>
       )}
     </>
-  );
-}
-
-function Members({
-  ov,
-  onChanged,
-}: {
-  ov: AbcOverview;
-  onChanged: () => void;
-}) {
-  const [phone, setPhone] = useState("");
-  const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
-
-  async function invite(e: FormEvent) {
-    e.preventDefault();
-    setMsg(null);
-    try {
-      await api.abcInvite(phone.trim());
-      setPhone("");
-      setMsg({ ok: true, text: tr("abc.invitedOk") });
-      onChanged();
-    } catch (err) {
-      setMsg({ ok: false, text: errorMessage(err) });
-    }
-  }
-
-  return (
-    <Card
-      accent="green"
-      icon={<Users className="size-5" />}
-      title={tr("abc.tab.members")}
-      description={tr("abc.membersHint")}
-    >
-      <form
-        onSubmit={invite}
-        noValidate
-        className="mb-4 flex flex-wrap items-end gap-2"
-      >
-        <div className="w-56">
-          <Label htmlFor="abc-phone">{tr("abc.invitePhone")}</Label>
-          <Input
-            id="abc-phone"
-            inputMode="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-        </div>
-        <Button type="submit" size="sm" disabled={phone.trim().length < 9}>
-          {tr("abc.invite")}
-        </Button>
-      </form>
-      {msg && (
-        <Alert
-          className="mb-4"
-          variant={msg.ok ? "success" : "error"}
-          message={msg.text}
-        />
-      )}
-      {!ov.members.length && !ov.invited.length ? (
-        <EmptyState title={tr("abc.noMembers")} />
-      ) : (
-        <ul className="divide-y divide-gray-100 dark:divide-gray-800">
-          {ov.members.map((m) => (
-            <li
-              key={m.id}
-              className="flex flex-wrap items-center justify-between gap-2 py-2.5 text-theme-sm"
-            >
-              <span>
-                <span className="font-medium text-gray-800 dark:text-white/90">
-                  {m.name}
-                </span>
-                <span className="text-gray-500">
-                  {" "}
-                  · {m.phone}
-                  {m.woreda ? ` · ${m.woreda}` : ""}
-                </span>
-              </span>
-              <span className="flex items-center gap-2">
-                <Badge size="sm" color="success">
-                  {tr("abcInv.member")}
-                </Badge>
-                <Button
-                  size="xs"
-                  variant="ghost"
-                  onClick={async () => {
-                    await api.abcRemoveMember(m.id);
-                    onChanged();
-                  }}
-                >
-                  {tr("supplier.remove")}
-                </Button>
-              </span>
-            </li>
-          ))}
-          {ov.invited.map((m) => (
-            <li
-              key={m.id}
-              className="flex items-center justify-between gap-2 py-2.5 text-theme-sm"
-            >
-              <span className="text-gray-600 dark:text-gray-400">
-                {m.name} · {m.phone}
-              </span>
-              <Badge size="sm" color="warning">
-                {tr("abc.waiting")}
-              </Badge>
-            </li>
-          ))}
-        </ul>
-      )}
-    </Card>
   );
 }
 

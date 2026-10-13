@@ -2028,4 +2028,53 @@ export const om: Record<MessageKey, string> = {
   "abcInv.read": "Waliigaltee dubbisi",  // draft – needs native review
   "abcInv.confirm": "Nan waliigala, nan mallatteessa",  // draft – needs native review
   "abcInv.signed": "Waliigaltee hundeeffamaa {date} mallatteessitaniittu.",  // draft – needs native review
+
+  // ── ABC member registry (A3) ──────────────────────────────────────────────
+  "abc.reg.title": "Galmee miseensotaa",  // draft – needs native review
+  "abc.reg.hint": "Miseensotaa fi affeerraa {n}. Lafa, hayyama fi bal'ina argachuuf miseensa tuqaa.",  // draft – needs native review
+  "abc.reg.none": "Miseensi ammallee hin jiru.",  // draft – needs native review
+  "abc.reg.members": "Miseensota",  // draft – needs native review
+  "abc.reg.women": "Dubartoota",  // draft – needs native review
+  "abc.reg.youth": "Dargaggoota (15-29)",  // draft – needs native review
+  "abc.reg.unknown": "Kan hin galmoofne",  // draft – needs native review
+  "abc.reg.plots": "Lafa {n}, hektaara {ha}",  // draft – needs native review
+  "abc.reg.status.invited": "Affeerame",  // draft – needs native review
+  "abc.reg.status.active": "Miseensa",  // draft – needs native review
+  "abc.reg.consentLine": "Hayyama: {method}, {by}n {date} galmeesse.",  // draft – needs native review
+  "abc.reg.irrigated": "jallisiin",  // draft – needs native review
+  "abc.reg.noPlots": "Miseensi kun lafa hin galmeessine.",  // draft – needs native review
+  "abc.reg.gender": "Saala",  // draft – needs native review
+  "abc.reg.age": "Garee umurii",  // draft – needs native review
+  "abc.reg.idReason": "Lakkoofsa eenyummaa guutuu maaliif barbaaddu? (galmee odiitii keessatti galmaa'a)",  // draft – needs native review
+  "abc.reg.showId": "Eenyummaa guutuu agarsiisi",  // draft – needs native review
+  "abc.reg.removeReason": "Sababa miseensi itti ba'u (seenaa keessatti olkaa'ama):",  // draft – needs native review
+  "abc.reg.remove": "Miseensi ni ba'a",  // draft – needs native review
+  "abc.reg.invited": "Affeerraan ergameera: qonnaan bulaan appii keessatti fudhata.",  // draft – needs native review
+  "abc.reg.created": "Herregni uumameera, miseensis dabalameera. PIN yeroo qonnaan bulaaf kennaa.",  // draft – needs native review
+  "abc.reg.added": "Miseensi dabalameera.",  // draft – needs native review
+  "abc.reg.enrol": "Miseensa galmeessi",  // draft – needs native review
+  "abc.reg.enrolHint": "Qonnaan bulaa jiru: bilbila qofa. Qonnaan bulaa haaraa: maqaa, aanaa fi PIN yeroo dabalataan.",  // draft – needs native review
+  "abc.reg.consent": "Hayyama",  // draft – needs native review
+  "abc.reg.newHint": "Qonnaan bulaa herrega hin qabneef qofa:",  // draft – needs native review
+  "abc.reg.name": "Maqaa guutuu",  // draft – needs native review
+  "abc.reg.pin": "PIN yeroo (lakkoofsa 6+)",  // draft – needs native review
+  "abc.reg.idType": "Gosa eenyummaa",  // draft – needs native review
+  "abc.reg.idNumber": "Lakkoofsa eenyummaa (filannoo)",  // draft – needs native review
+  "abc.reg.idHint": "Iccitiin olkaa'ama; lakkoofsota 4 dhumaa qofatu mul'ata.",  // draft – needs native review
+  "abc.reg.enrolButton": "Galmeessi",  // draft – needs native review
+  "abc.reg.import": "Miseensota galchi (CSV)",  // draft – needs native review
+  "abc.reg.importHint": "Miseensota baay'eef, fkn. waldaa jijjiiruuf. Dursa faayilii mirkaneessaa; hanga galchitanitti homtuu hin olkaa'amu.",  // draft – needs native review
+  "abc.reg.check": "Faayilii mirkaneessi",  // draft – needs native review
+  "abc.reg.importButton": "Miseensota {n} galchi",  // draft – needs native review
+  "abc.reg.checkResult": "Tarree {rows}: {ok} qophaa'e (herrega haaraa {created}), {errors} rakkoo qaban.",  // draft – needs native review
+  "abc.reg.importResult": "Tarree {rows} keessaa {ok} galfame (herrega haaraa {created}); {errors} dhiifame.",  // draft – needs native review
+  "abc.reg.line": "Tarree {line}",  // draft – needs native review
+  "abc.gender.female": "Dubartii",  // draft – needs native review
+  "abc.gender.male": "Dhiira",  // draft – needs native review
+  "abc.consent.app": "appii keessatti (affeerraa)",  // draft – needs native review
+  "abc.consent.spoken": "afaaniin, hojjetaan galmeesse",  // draft – needs native review
+  "abc.consent.paper": "unka waraqaa mallattaa'e",  // draft – needs native review
+  "abc.idType.fayda": "Faayidaa (eenyummaa biyyaalessaa)",  // draft – needs native review
+  "abc.idType.kebele_id": "Eenyummaa gandaa",  // draft – needs native review
+  "abc.idType.other": "Eenyummaa biraa",  // draft – needs native review
 };

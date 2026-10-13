@@ -8,7 +8,7 @@
 import type { LivestockImportResult, LivestockPrices, LivestockSummary } from "@/types/livestock";
 import type { MapLayers } from "@/types/map";
 import type { AbcCompany, AbcDocKind, AbcDocument, AbcFormation, AbcHistoryEntry, AbcProfile, AbcRole, AbcRule,
-  AbcTeamMember, MyAbcMembership } from "@/types/abc";
+  AbcImportReport, AbcInclusion, AbcRegistryMember, AbcTeamMember, MyAbcMembership } from "@/types/abc";
 import type {
   AdminArea,
   AiKey,
@@ -416,6 +416,23 @@ export const api = {
   abcRegister: (orgId: number, data: { authority: string; number: string; registered_on: string; certificate_doc_id: number;
     override_reason?: string | null }) => platform.post<unknown>(`/abc/registration?org_id=${orgId}`, data),
   myAbcMemberships: () => platform.get<MyAbcMembership[]>("/abc/my/memberships"),
+  abcRegistry: (orgId: number) =>
+    platform.get<{ members: AbcRegistryMember[]; can_edit: boolean; official_record_note: string }>("/abc/registry", { org_id: orgId }),
+  abcInclusion: (orgId: number) => platform.get<AbcInclusion>("/abc/registry/inclusion", { org_id: orgId }),
+  abcEnrol: (orgId: number, data: Record<string, unknown>) =>
+    platform.post<{ farmer_id: number; status: string; account_created: boolean }>(`/abc/registry?org_id=${orgId}`, data),
+  abcUpdateMember: (orgId: number, farmerId: number, data: Record<string, unknown>) =>
+    platform.put<AbcRegistryMember>(`/abc/registry/${farmerId}?org_id=${orgId}`, data),
+  abcMemberPlots: (orgId: number, farmerId: number) =>
+    platform.get<{ id: number; field_name: string; crop_name: string | null; area_ha: number | null; irrigated: number | null;
+      active_season: string | null }[]>(`/abc/registry/${farmerId}/plots`, { org_id: orgId }),
+  abcViewId: (orgId: number, farmerId: number, reason: string) =>
+    platform.post<{ id_type: string; id_number: string }>(`/abc/registry/${farmerId}/id?org_id=${orgId}`, { reason }),
+  abcRemoveMemberRegistry: (orgId: number, farmerId: number, reason: string) =>
+    platform.post<unknown>(`/abc/registry/${farmerId}/remove?org_id=${orgId}`, { reason }),
+  abcMembersTemplate: (orgId: number) => getBlob(BASE, "/abc/registry/template.csv", { org_id: orgId }),
+  abcImportMembers: (orgId: number, file: File, dryRun: boolean) =>
+    platform.upload<AbcImportReport>(`/abc/registry/import?org_id=${orgId}&dry_run=${dryRun}`, formOf({ file })),
   myAbcAgreementFile: (orgId: number) => getBlob(BASE, "/abc/my/agreement/file", { org_id: orgId }),
   signMyAbcAgreement: (orgId: number) => platform.post<{ signed: boolean }>(`/abc/my/agreement/sign?org_id=${orgId}`),
   abcAddRule: (data: { key: string; abc_type: string; value: number; unit?: string | null; effective_from: string;

@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS consent_events (
     kind         TEXT    NOT NULL CHECK (kind IN ('data','alerts','training')),
     granted      INTEGER NOT NULL,
     recorded_by  INTEGER REFERENCES users(id) ON DELETE SET NULL,
-    method       TEXT    NOT NULL CHECK (method IN ('self','da_verbal','admin')),
+    method       TEXT    NOT NULL CHECK (method IN ('self','da_verbal','admin','abc_spoken','abc_paper')),
     text_version TEXT    NOT NULL,
     created_at   TEXT    DEFAULT CURRENT_TIMESTAMP
 );
@@ -310,11 +310,12 @@ _DISEASE_COLUMNS = {"name_ti": "TEXT"}
 
 
 def _migrate_consent(conn: sqlite3.Connection) -> None:
-    """2026-10-11: third consent ('training'). Adds the column and widens the consent_events CHECK."""
+    """2026-10-11: third consent ('training'); 2026-10-13: consent recorded by ABC staff ('abc_spoken', 'abc_paper').
+    Adds the column and widens the consent_events CHECKs (table rebuilt, rows kept)."""
     if "consent_training" not in {r[1] for r in conn.execute("PRAGMA table_info(farmer_profiles)")}:
         conn.execute("ALTER TABLE farmer_profiles ADD COLUMN consent_training INTEGER NOT NULL DEFAULT 0")
     sql = conn.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='consent_events'").fetchone()
-    if sql and "'training'" not in sql[0]:
+    if sql and ("'training'" not in sql[0] or "'abc_spoken'" not in sql[0]):
         cols = "id, user_id, kind, granted, recorded_by, method, text_version, created_at"
         with conn:
             conn.execute("ALTER TABLE consent_events RENAME TO consent_events_old")

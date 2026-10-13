@@ -2028,4 +2028,53 @@ export const ti: Record<MessageKey, string> = {
   "abcInv.read": "ውዕል ኣንብብ",  // draft – needs native review
   "abcInv.confirm": "ይሰማማዕ፣ ይፍርም",  // draft – needs native review
   "abcInv.signed": "ውዕል ምምስራት ብ{date} ፈሪምኩም።",  // draft – needs native review
+
+  // ── ABC member registry (A3) ──────────────────────────────────────────────
+  "abc.reg.title": "መዝገብ ኣባላት",  // draft – needs native review
+  "abc.reg.hint": "{n} ኣባላትን ዕድማታትን። ንግራውቲ፣ ፍቓድን ዝርዝርን ኣባል ጠውቑ።",  // draft – needs native review
+  "abc.reg.none": "ገና ኣባል የለን።",  // draft – needs native review
+  "abc.reg.members": "ኣባላት",  // draft – needs native review
+  "abc.reg.women": "ደቂ ኣንስትዮ",  // draft – needs native review
+  "abc.reg.youth": "መንእሰያት (15-29)",  // draft – needs native review
+  "abc.reg.unknown": "ዘይተመዝገበ",  // draft – needs native review
+  "abc.reg.plots": "{n} ግራውቲ፣ {ha} ሄክታር",  // draft – needs native review
+  "abc.reg.status.invited": "ተዓዲሙ",  // draft – needs native review
+  "abc.reg.status.active": "ኣባል",  // draft – needs native review
+  "abc.reg.consentLine": "ፍቓድ፦ {method}፣ ብ{by} ብ{date} ተመዝጊቡ።",  // draft – needs native review
+  "abc.reg.irrigated": "ብመስኖ",  // draft – needs native review
+  "abc.reg.noPlots": "እዚ ኣባል ግራት ኣይመዝገበን።",  // draft – needs native review
+  "abc.reg.gender": "ጾታ",  // draft – needs native review
+  "abc.reg.age": "ክሊ ዕድመ",  // draft – needs native review
+  "abc.reg.idReason": "ምሉእ ቁጽሪ መንነት ንምንታይ የድልየኩም? (ኣብ መዝገብ ኦዲት ይምዝገብ)",  // draft – needs native review
+  "abc.reg.showId": "ምሉእ መንነት ኣርኢ",  // draft – needs native review
+  "abc.reg.removeReason": "ኣባል ዝወጽኣሉ ምኽንያት (ኣብ ታሪኽ ይዕቀብ)፦",  // draft – needs native review
+  "abc.reg.remove": "ኣባል ይወጽእ",  // draft – needs native review
+  "abc.reg.invited": "ዕድመ ተላኢኹ፤ ሓረስታይ ብኣፕ ይቕበል።",  // draft – needs native review
+  "abc.reg.created": "ሕሳብ ተፈጢሩ፣ ኣባል ተወሲኹ። ግዝያዊ PIN ንሓረስታይ ሃቡ።",  // draft – needs native review
+  "abc.reg.added": "ኣባል ተወሲኹ።",  // draft – needs native review
+  "abc.reg.enrol": "ኣባል መዝግብ",  // draft – needs native review
+  "abc.reg.enrolHint": "ዘሎ ሓረስታይ፦ ተሌፎን ጥራይ። ሓድሽ ሓረስታይ፦ ሽም፣ ወረዳን ግዝያዊ PIN ውን።",  // draft – needs native review
+  "abc.reg.consent": "ፍቓድ",  // draft – needs native review
+  "abc.reg.newHint": "ሕሳብ ንዘይብሉ ሓረስታይ ጥራይ፦",  // draft – needs native review
+  "abc.reg.name": "ምሉእ ሽም",  // draft – needs native review
+  "abc.reg.pin": "ግዝያዊ PIN (6+ ኣሃዝ)",  // draft – needs native review
+  "abc.reg.idType": "ዓይነት መንነት",  // draft – needs native review
+  "abc.reg.idNumber": "ቁጽሪ መንነት (ኣማራጺ)",  // draft – needs native review
+  "abc.reg.idHint": "ብምስጢር ይዕቀብ፤ ናይ መወዳእታ 4 ኣሃዛት ጥራይ ይርኣዩ።",  // draft – needs native review
+  "abc.reg.enrolButton": "መዝግብ",  // draft – needs native review
+  "abc.reg.import": "ኣባላት ኣእቱ (CSV)",  // draft – needs native review
+  "abc.reg.importHint": "ንብዙሓት ኣባላት፣ ንኣብነት ማሕበር ክትቕይሩ ከለኹም። ቅድም ፋይል ኣረጋግጹ፤ ክሳብ እተእትዉ ዋላ ሓንቲ ኣይዕቀብን።",  // draft – needs native review
+  "abc.reg.check": "ፋይል ኣረጋግጽ",  // draft – needs native review
+  "abc.reg.importButton": "{n} ኣባላት ኣእቱ",  // draft – needs native review
+  "abc.reg.checkResult": "{rows} መስመራት፦ {ok} ድሉው ({created} ሓደስቲ ሕሳባት)፣ {errors} ጸገም ዘለዎም።",  // draft – needs native review
+  "abc.reg.importResult": "ካብ {rows} መስመራት {ok} ኣትዮም ({created} ሓደስቲ ሕሳባት)፤ {errors} ተሓሊፎም።",  // draft – needs native review
+  "abc.reg.line": "መስመር {line}",  // draft – needs native review
+  "abc.gender.female": "ጓል ኣንስተይቲ",  // draft – needs native review
+  "abc.gender.male": "ወዲ ተባዕታይ",  // draft – needs native review
+  "abc.consent.app": "ብኣፕ (ዕድመ)",  // draft – needs native review
+  "abc.consent.spoken": "ብቓል፣ ብሰራሕተኛ ዝተመዝገበ",  // draft – needs native review
+  "abc.consent.paper": "ዝተፈረመ ቅጥዒ ወረቐት",  // draft – needs native review
+  "abc.idType.fayda": "ፋይዳ (ሃገራዊ መንነት)",  // draft – needs native review
+  "abc.idType.kebele_id": "መንነት ቀበሌ",  // draft – needs native review
+  "abc.idType.other": "ካልእ መንነት",  // draft – needs native review
 };

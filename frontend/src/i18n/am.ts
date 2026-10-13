@@ -2028,4 +2028,53 @@ export const am: Record<MessageKey, string> = {
   "abcInv.read": "ስምምነቱን አንብብ",  // draft – needs native review
   "abcInv.confirm": "እስማማለሁ፣ እፈርማለሁ",  // draft – needs native review
   "abcInv.signed": "የመመሥረቻ ስምምነቱን በ{date} ፈርመዋል።",  // draft – needs native review
+
+  // ── ABC member registry (A3) ──────────────────────────────────────────────
+  "abc.reg.title": "የአባላት መዝገብ",  // draft – needs native review
+  "abc.reg.hint": "{n} አባላትና ግብዣዎች። ለማሳዎች፣ ፈቃድና ዝርዝር አባሉን ይጫኑ።",  // draft – needs native review
+  "abc.reg.none": "ገና አባል የለም።",  // draft – needs native review
+  "abc.reg.members": "አባላት",  // draft – needs native review
+  "abc.reg.women": "ሴቶች",  // draft – needs native review
+  "abc.reg.youth": "ወጣቶች (15-29)",  // draft – needs native review
+  "abc.reg.unknown": "ያልተመዘገበ",  // draft – needs native review
+  "abc.reg.plots": "{n} ማሳዎች፣ {ha} ሄክታር",  // draft – needs native review
+  "abc.reg.status.invited": "ተጋብዟል",  // draft – needs native review
+  "abc.reg.status.active": "አባል",  // draft – needs native review
+  "abc.reg.consentLine": "ፈቃድ፦ {method}፣ በ{by} በ{date} ተመዝግቧል።",  // draft – needs native review
+  "abc.reg.irrigated": "በመስኖ",  // draft – needs native review
+  "abc.reg.noPlots": "ይህ አባል ማሳ አልመዘገበም።",  // draft – needs native review
+  "abc.reg.gender": "ፆታ",  // draft – needs native review
+  "abc.reg.age": "የዕድሜ ክልል",  // draft – needs native review
+  "abc.reg.idReason": "ሙሉ የመታወቂያ ቁጥር ለምን ያስፈልግዎታል? (በኦዲት መዝገብ ይመዘገባል)",  // draft – needs native review
+  "abc.reg.showId": "ሙሉ መታወቂያ አሳይ",  // draft – needs native review
+  "abc.reg.removeReason": "አባሉ የሚወጣበት ምክንያት (በታሪክ ይቀመጣል)፦",  // draft – needs native review
+  "abc.reg.remove": "አባሉ ይወጣል",  // draft – needs native review
+  "abc.reg.invited": "ግብዣ ተልኳል፤ ገበሬው በመተግበሪያው ይቀበላል።",  // draft – needs native review
+  "abc.reg.created": "አካውንት ተፈጥሯል፣ አባሉም ተጨምሯል። ጊዜያዊውን ፒን ለገበሬው ይስጡ።",  // draft – needs native review
+  "abc.reg.added": "አባል ተጨምሯል።",  // draft – needs native review
+  "abc.reg.enrol": "አባል መዝግብ",  // draft – needs native review
+  "abc.reg.enrolHint": "ያለ ገበሬ፦ ስልክ ብቻ። አዲስ ገበሬ፦ ስም፣ ወረዳና ጊዜያዊ ፒን ጭምር።",  // draft – needs native review
+  "abc.reg.consent": "ፈቃድ",  // draft – needs native review
+  "abc.reg.newHint": "አካውንት ለሌለው ገበሬ ብቻ፦",  // draft – needs native review
+  "abc.reg.name": "ሙሉ ስም",  // draft – needs native review
+  "abc.reg.pin": "ጊዜያዊ ፒን (6+ አሃዝ)",  // draft – needs native review
+  "abc.reg.idType": "የመታወቂያ ዓይነት",  // draft – needs native review
+  "abc.reg.idNumber": "የመታወቂያ ቁጥር (አማራጭ)",  // draft – needs native review
+  "abc.reg.idHint": "ተመስጥሮ ይቀመጣል፤ የመጨረሻዎቹ 4 አሃዞች ብቻ ይታያሉ።",  // draft – needs native review
+  "abc.reg.enrolButton": "መዝግብ",  // draft – needs native review
+  "abc.reg.import": "አባላትን አስገባ (CSV)",  // draft – needs native review
+  "abc.reg.importHint": "ለብዙ አባላት፣ ለምሳሌ ማህበርን ሲቀይሩ። መጀመሪያ ፋይሉን ያረጋግጡ፤ እስኪያስገቡ ድረስ ምንም አይቀመጥም።",  // draft – needs native review
+  "abc.reg.check": "ፋይሉን አረጋግጥ",  // draft – needs native review
+  "abc.reg.importButton": "{n} አባላትን አስገባ",  // draft – needs native review
+  "abc.reg.checkResult": "{rows} ረድፎች፦ {ok} ዝግጁ ({created} አዳዲስ አካውንቶች)፣ {errors} ችግር ያለባቸው።",  // draft – needs native review
+  "abc.reg.importResult": "ከ{rows} ረድፎች {ok} ገብተዋል ({created} አዳዲስ አካውንቶች)፤ {errors} ተዘልለዋል።",  // draft – needs native review
+  "abc.reg.line": "ረድፍ {line}",  // draft – needs native review
+  "abc.gender.female": "ሴት",  // draft – needs native review
+  "abc.gender.male": "ወንድ",  // draft – needs native review
+  "abc.consent.app": "በመተግበሪያው (ግብዣ)",  // draft – needs native review
+  "abc.consent.spoken": "በቃል፣ በሠራተኛ የተመዘገበ",  // draft – needs native review
+  "abc.consent.paper": "የተፈረመ የወረቀት ቅጽ",  // draft – needs native review
+  "abc.idType.fayda": "ፋይዳ (ብሔራዊ መታወቂያ)",  // draft – needs native review
+  "abc.idType.kebele_id": "የቀበሌ መታወቂያ",  // draft – needs native review
+  "abc.idType.other": "ሌላ መታወቂያ",  // draft – needs native review
 };

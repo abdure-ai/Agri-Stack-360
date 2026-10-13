@@ -223,6 +223,18 @@ def seed_abc_team(conn) -> int:
     abc_company.profile(conn, org)
     conn.execute(f"UPDATE abc_profiles SET {', '.join(f'{k}=?' for k in ABC_PROFILE)} WHERE org_id=?",
                  (*ABC_PROFILE.values(), org))
+    from backend import abc_members
+
+    abc_members.ensure_schema(conn)
+    # Members who accepted in the app get their registry row (member number, consent 'app'); gender and age
+    # group stay empty until the ABC records them.
+    for (fid,) in conn.execute("""SELECT m.farmer_id FROM abc_members m LEFT JOIN abc_member_details d
+                                  ON d.org_id = m.org_id AND d.farmer_id = m.farmer_id
+                                  WHERE m.org_id = ? AND m.status = 'active' AND d.farmer_id IS NULL
+                                  ORDER BY m.joined_at, m.farmer_id""", (org,)).fetchall():
+        no = (conn.execute("SELECT MAX(member_no) FROM abc_member_details WHERE org_id=?", (org,)).fetchone()[0] or 0) + 1
+        conn.execute("""INSERT INTO abc_member_details (org_id, farmer_id, member_no, consent_method, consent_recorded_at,
+                        enrolled_at) VALUES (?, ?, ?, 'app', '2026-09-01 09:00:00', '2026-09-01 09:00:00')""", (org, fid, no))
     n = 0
     for phone, role in ABC_TEAM:
         u = conn.execute("SELECT id FROM users WHERE phone=?", (phone,)).fetchone()

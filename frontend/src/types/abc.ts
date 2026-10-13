@@ -148,3 +148,46 @@ export interface MyAbcMembership {
   agreement_document_id: number | null;
   signed: { method: string; signed_at: string } | null;
 }
+
+// ── Member registry (A3) ─────────────────────────────────────────────────────
+
+export type Gender = "female" | "male";
+export type AgeGroup = "15-29" | "30-44" | "45-59" | "60+";
+export type IdType = "fayda" | "kebele_id" | "other";
+
+export interface AbcRegistryMember {
+  farmer_id: number;
+  name: string;
+  phone: string;
+  woreda: string | null;
+  kebele: string | null;
+  status: "invited" | "active";
+  member_no: number | null;
+  gender: Gender | null;
+  age_group: AgeGroup | null;
+  id_type: IdType | null;
+  id_masked: string | null;
+  consent_method: "app" | "spoken" | "paper" | null;
+  consent_recorded_at: string | null;
+  consent_recorded_by: string | null;
+  plots: number;
+  area_ha: number;
+  irrigated_plots: number;
+}
+
+export interface AbcImportReport {
+  rows: number;
+  ok: number;
+  new_accounts: number;
+  already_members: number;
+  dry_run: boolean;
+  errors: { line: number; phone: string; problems: string[] }[];
+}
+
+export interface AbcInclusion {
+  total: number;
+  gender: Partial<Record<Gender, number>>;
+  age_group: Partial<Record<AgeGroup, number>>;
+  unknown_gender: number;
+  unknown_age: number;
+}
