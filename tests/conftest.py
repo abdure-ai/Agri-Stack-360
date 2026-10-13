@@ -43,6 +43,9 @@ def platform(monkeypatch):
     from backend import abc_governance
 
     abc_governance.ensure_schema(conn)
+    from backend import abc_finance
+
+    abc_finance.ensure_schema(conn)
     from backend.routers import estate
 
     estate.ensure_schema(conn)

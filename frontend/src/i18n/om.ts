@@ -2236,4 +2236,62 @@ export const om: Record<MessageKey, string> = {
   "abcInv.voteRecorded": "\"{meeting}\" irratti sagaleen keessan \"{motion}\" irratti akkasitti galmaa'e: {choice}. Sirrii dhaa?",  // draft – needs native review
   "abcInv.voteCorrect": "Eeyyee, sirrii dha",  // draft – needs native review
   "abcInv.voteWrong": "Lakki, dogoggora",  // draft – needs native review
+
+  // ── ABC finance (A6) ──────────────────────────────────────────────────────
+  "abc.tab.finance": "Faayinaansii",  // draft – needs native review
+  "abc.fin.note": "Galmee herregaa salphaa ABCf. Gorsa gibiraa miti: herregaaf baasaa.",  // draft – needs native review
+  "abc.fin.export": "Gara Excel baasi",  // draft – needs native review
+  "abc.fin.shareCapital": "Kaappitaala aksiyoonaa argame",  // draft – needs native review
+  "abc.fin.income": "Galii",  // draft – needs native review
+  "abc.fin.expenses": "Baasii",  // draft – needs native review
+  "abc.fin.assets": "Qabeenya bitame",  // draft – needs native review
+  "abc.fin.loans": "Liqii hin kaffalamne",  // draft – needs native review
+  "abc.fin.cash": "Maallaqa (tilmaama)",  // draft – needs native review
+  "abc.fin.membersOwe": "Miseensonni ABCf liqii qaban",  // draft – needs native review
+  "abc.fin.pending": "Boordii eeggachaa",  // draft – needs native review
+  "abc.fin.ledger": "Galmee herregaa",  // draft – needs native review
+  "abc.fin.limitHint": "Baasiiwwanii fi bittaan {limit} ol murtee boordii eeggatu.",  // draft – needs native review
+  "abc.fin.noLimit": "Daangaan hayyama boordii hin kaa'amne (Dhaabbata).",  // draft – needs native review
+  "abc.fin.kind": "Gosa",  // draft – needs native review
+  "abc.fin.kind.income": "Galii",  // draft – needs native review
+  "abc.fin.kind.expense": "Baasii",  // draft – needs native review
+  "abc.fin.kind.asset": "Bittaa qabeenyaa",  // draft – needs native review
+  "abc.fin.kind.liability": "Liqii",  // draft – needs native review
+  "abc.fin.category": "Ramaddii",  // draft – needs native review
+  "abc.fin.categoryHint": "boba'aa, mindaa, gurgurtaa…",  // draft – needs native review
+  "abc.fin.direction": "Liqii",  // draft – needs native review
+  "abc.fin.loanIn": "Argame",  // draft – needs native review
+  "abc.fin.loanOut": "Deebi'e",  // draft – needs native review
+  "abc.fin.counterparty": "Kan kaffalameef / irraa argame",  // draft – needs native review
+  "abc.fin.description": "Ibsa",  // draft – needs native review
+  "abc.fin.add": "Galmeessi",  // draft – needs native review
+  "abc.fin.posted": "Galmaa'eera.",  // draft – needs native review
+  "abc.fin.sentToBoard": "Daangaa hayyamaa ol: boordiif ergameera. Yeroo mirkanaa'u lakkaa'ama.",  // draft – needs native review
+  "abc.fin.status.pending": "Boordii eeggachaa",  // draft – needs native review
+  "abc.fin.status.rejected": "Boordiin didame",  // draft – needs native review
+  "abc.fin.status.void": "Haqame",  // draft – needs native review
+  "abc.fin.status.posted": "Galmaa'e",  // draft – needs native review
+  "abc.fin.void": "Haqi",  // draft – needs native review
+  "abc.fin.voidReason": "Kun maaliif haqama? (seenaa keessatti olkaa'ama)",  // draft – needs native review
+  "abc.fin.noEntries": "Galmeen ammallee hin jiru.",  // draft – needs native review
+  "abc.fin.accounts": "Herrega miseensotaa",  // draft – needs native review
+  "abc.fin.accountsHint": "Kan tokkoon tokkoon miseensaa ABCf qabu (liqii galtee, tajaajila) kan deebise hir'isee.",  // draft – needs native review
+  "abc.fin.accountLine": "Liqii {credit} · tajaajila {services} · deebi'e {repaid}",  // draft – needs native review
+  "abc.fin.noTxns": "Daldalli ammallee hin jiru.",  // draft – needs native review
+  "abc.fin.receiptSent": "Deebiin galmaa'eera; nageessi miseensaaf ergameera.",  // draft – needs native review
+  "abc.fin.printStatement": "Ibsa maxxansi",  // draft – needs native review
+  "abc.fin.statement": "Ibsa herrega miseensaa",  // draft – needs native review
+  "abc.fin.statementLine": "Liqii ABCf hafe: {balance}. Aksiyoona qabame: {shares}.",  // draft – needs native review
+  "abc.fin.what": "Maal",  // draft – needs native review
+  "abc.fin.effect": "Jijjiirama",  // draft – needs native review
+  "abc.fin.balance": "Hafe",  // draft – needs native review
+  "abc.txn.input_credit": "Galtee liqiidhaan",  // draft – needs native review
+  "abc.txn.service_charge": "Kaffaltii tajaajilaa",  // draft – needs native review
+  "abc.txn.repayment": "Deebii",  // draft – needs native review
+  "abc.txn.produce_deduction": "Kaffaltii oomishaa irraa hir'ifame",  // draft – needs native review
+  "abc.txn.adjustment": "Sirreeffama",  // draft – needs native review
+  "abc.action.abc.ledger.add": "Galmeen herregaa galmaa'e",  // draft – needs native review
+  "abc.action.abc.ledger.void": "Galmeen herregaa haqame",  // draft – needs native review
+  "abc.action.abc.member_account.add": "Galmee herrega miseensaa",  // draft – needs native review
+  "abc.action.abc.member_account.void": "Galmeen herrega miseensaa haqame",  // draft – needs native review
 };

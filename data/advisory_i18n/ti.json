@@ -94,7 +94,8 @@
       "abc_share_due",
       "abc_share_overdue",
       "abc_meeting_notice",
-      "abc_meeting_notice_board"
+      "abc_meeting_notice_board",
+      "abc_member_receipt"
     ]
   },
   "dont_know": "ካብቶም ዝተፈቕዱ መምርሒታት መልሲ ናይዚ ኣይፈልጥን። ሕቶኹም ናብ ሰራሕተኛ ልምዓትኩም ሰዲደዮ ኣለኹ፣ ንሱ ክምልሰልኩም እዩ።",
@@ -229,5 +230,6 @@
   "abc_share_due": "{org}፦ ኣብ ቃል ዝኣተኹምሎም ኣክሲዮናት {amount} ብር ተሪፉ፤ ናይ መወዳእታ መዓልቲ ክፍሊት {date} እዩ።",
   "abc_share_overdue": "{org}፦ ናይ {date} መወዳእታ ዕለት ንቓል ዝኣተኹምሎም ኣክሲዮናት ሓሊፉ፣ {amount} ብር ተሪፉ። በጃኹም ንቤት ጽሕፈት ABC ተዛረቡ።",
   "abc_meeting_notice": "{org}፦ ሓፈሻዊ ጉባኤ \"{title}\" ብ{when} ኣብ {place}። ኣጀንዳ፦ {agenda}። ድምጽኹም ብመሬትኩምን ፍርያትኩምን ይቑጸር።",
-  "abc_meeting_notice_board": "{org}፦ ኣኼባ ቦርድ \"{title}\" ብ{when} ኣብ {place}። ኣጀንዳ፦ {agenda}።"
+  "abc_meeting_notice_board": "{org}፦ ኣኼባ ቦርድ \"{title}\" ብ{when} ኣብ {place}። ኣጀንዳ፦ {agenda}።",
+  "abc_member_receipt": "{org}፦ ክፍሊት ተቐቢልና፣ ቅብሊት {receipt}፣ {amount} ብር። ሕጂ ንABC {balance} ብር ዕዳ ኣለኩም።"
 }

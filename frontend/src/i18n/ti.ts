@@ -2236,4 +2236,62 @@ export const ti: Record<MessageKey, string> = {
   "abcInv.voteRecorded": "ኣብ \"{meeting}\" ድምጽኹም ኣብ \"{motion}\" ከምዚ ተመዝጊቡ፦ {choice}። ቅኑዕ ድዩ?",  // draft – needs native review
   "abcInv.voteCorrect": "እወ፣ ቅኑዕ እዩ",  // draft – needs native review
   "abcInv.voteWrong": "ኣይፋል፣ ጌጋ እዩ",  // draft – needs native review
+
+  // ── ABC finance (A6) ──────────────────────────────────────────────────────
+  "abc.tab.finance": "ፋይናንስ",  // draft – needs native review
+  "abc.fin.note": "ንABC ቀሊል መዝገብ ሒሳብ። ምኽሪ ግብሪ ኣይኮነን፤ ንሒሳብ ሹም ኣውጽኡ።",  // draft – needs native review
+  "abc.fin.export": "ናብ ኤክሴል ኣውጽእ",  // draft – needs native review
+  "abc.fin.shareCapital": "ዝተቐበለ ካፒታል ኣክሲዮን",  // draft – needs native review
+  "abc.fin.income": "እቶት",  // draft – needs native review
+  "abc.fin.expenses": "ወጻኢ",  // draft – needs native review
+  "abc.fin.assets": "ዝተዓደጉ ንብረታት",  // draft – needs native review
+  "abc.fin.loans": "ዘይተኸፍሉ ልቓሕ",  // draft – needs native review
+  "abc.fin.cash": "ጥረ ገንዘብ (ግምት)",  // draft – needs native review
+  "abc.fin.membersOwe": "ኣባላት ንABC ዘለዎም ዕዳ",  // draft – needs native review
+  "abc.fin.pending": "ንቦርድ ይጽበ",  // draft – needs native review
+  "abc.fin.ledger": "መዝገብ ሒሳብ",  // draft – needs native review
+  "abc.fin.limitHint": "ካብ {limit} ንላዕሊ ዝኾኑ ወጻእታትን ዕድጊታትን ውሳነ ቦርድ ይጽበዩ።",  // draft – needs native review
+  "abc.fin.noLimit": "ዶብ ፍቓድ ቦርድ ኣይተቐመጠን (ትካል)።",  // draft – needs native review
+  "abc.fin.kind": "ዓይነት",  // draft – needs native review
+  "abc.fin.kind.income": "እቶት",  // draft – needs native review
+  "abc.fin.kind.expense": "ወጻኢ",  // draft – needs native review
+  "abc.fin.kind.asset": "ዕድጊት ንብረት",  // draft – needs native review
+  "abc.fin.kind.liability": "ልቓሕ",  // draft – needs native review
+  "abc.fin.category": "ምድብ",  // draft – needs native review
+  "abc.fin.categoryHint": "ነዳዲ፣ ደሞዝ፣ መሸጣ…",  // draft – needs native review
+  "abc.fin.direction": "ልቓሕ",  // draft – needs native review
+  "abc.fin.loanIn": "ዝተቐበልናዮ",  // draft – needs native review
+  "abc.fin.loanOut": "ዝመለስናዮ",  // draft – needs native review
+  "abc.fin.counterparty": "ዝተኸፈሎ / ዝተቐበልናሉ",  // draft – needs native review
+  "abc.fin.description": "መግለጺ",  // draft – needs native review
+  "abc.fin.add": "መዝግብ",  // draft – needs native review
+  "abc.fin.posted": "ተመዝጊቡ።",  // draft – needs native review
+  "abc.fin.sentToBoard": "ልዕሊ ዶብ ፍቓድ፦ ናብ ቦርድ ተላኢኹ። ምስ ጸደቐ ይቑጸር።",  // draft – needs native review
+  "abc.fin.status.pending": "ንቦርድ ይጽበ",  // draft – needs native review
+  "abc.fin.status.rejected": "ብቦርድ ተነጺጉ",  // draft – needs native review
+  "abc.fin.status.void": "ተሰሪዙ",  // draft – needs native review
+  "abc.fin.status.posted": "ተመዝጊቡ",  // draft – needs native review
+  "abc.fin.void": "ሰርዝ",  // draft – needs native review
+  "abc.fin.voidReason": "እዚ ስለምንታይ ይስረዝ? (ኣብ ታሪኽ ይዕቀብ)",  // draft – needs native review
+  "abc.fin.noEntries": "ገና ምዝገባ የለን።",  // draft – needs native review
+  "abc.fin.accounts": "ሒሳብ ኣባላት",  // draft – needs native review
+  "abc.fin.accountsHint": "ነፍሲ ወከፍ ኣባል ንABC ዘለዎ (ልቓሕ እታወት፣ ኣገልግሎት) ዝመለሶ ተቐኒሱ።",  // draft – needs native review
+  "abc.fin.accountLine": "ልቓሕ {credit} · ኣገልግሎት {services} · ዝተመልሰ {repaid}",  // draft – needs native review
+  "abc.fin.noTxns": "ገና ምንቅስቓስ የለን።",  // draft – needs native review
+  "abc.fin.receiptSent": "ምምላስ ተመዝጊቡ፤ ቅብሊት ናብ ኣባል ተላኢኹ።",  // draft – needs native review
+  "abc.fin.printStatement": "መግለጺ ሕተም",  // draft – needs native review
+  "abc.fin.statement": "መግለጺ ሒሳብ ኣባል",  // draft – needs native review
+  "abc.fin.statementLine": "ንABC ዝተረፈ ዕዳ፦ {balance}። ዝተታሕዙ ኣክሲዮናት፦ {shares}።",  // draft – needs native review
+  "abc.fin.what": "እንታይ",  // draft – needs native review
+  "abc.fin.effect": "ለውጢ",  // draft – needs native review
+  "abc.fin.balance": "ዝተረፈ",  // draft – needs native review
+  "abc.txn.input_credit": "እታወት ብልቓሕ",  // draft – needs native review
+  "abc.txn.service_charge": "ክፍሊት ኣገልግሎት",  // draft – needs native review
+  "abc.txn.repayment": "ምምላስ",  // draft – needs native review
+  "abc.txn.produce_deduction": "ካብ ክፍሊት ፍርያት ዝተቐንሰ",  // draft – needs native review
+  "abc.txn.adjustment": "ምትዕርራይ",  // draft – needs native review
+  "abc.action.abc.ledger.add": "ምዝገባ ሒሳብ ተገይሩ",  // draft – needs native review
+  "abc.action.abc.ledger.void": "ምዝገባ ሒሳብ ተሰሪዙ",  // draft – needs native review
+  "abc.action.abc.member_account.add": "ምዝገባ ሒሳብ ኣባል",  // draft – needs native review
+  "abc.action.abc.member_account.void": "ምዝገባ ሒሳብ ኣባል ተሰሪዙ",  // draft – needs native review
 };

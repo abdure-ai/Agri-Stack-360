@@ -2236,4 +2236,62 @@ export const am: Record<MessageKey, string> = {
   "abcInv.voteRecorded": "በ\"{meeting}\" ስብሰባ \"{motion}\" ላይ ድምፅዎ እንደዚህ ተመዝግቧል፦ {choice}። ትክክል ነው?",  // draft – needs native review
   "abcInv.voteCorrect": "አዎ፣ ትክክል ነው",  // draft – needs native review
   "abcInv.voteWrong": "አይ፣ ስህተት ነው",  // draft – needs native review
+
+  // ── ABC finance (A6) ──────────────────────────────────────────────────────
+  "abc.tab.finance": "ፋይናንስ",  // draft – needs native review
+  "abc.fin.note": "ለABC ቀላል የሂሳብ መዝገብ። የግብር ምክር አይደለም፤ ለሂሳብ ባለሙያው ያውጡ።",  // draft – needs native review
+  "abc.fin.export": "ወደ ኤክሴል ላክ",  // draft – needs native review
+  "abc.fin.shareCapital": "የተቀበለ የአክሲዮን ካፒታል",  // draft – needs native review
+  "abc.fin.income": "ገቢ",  // draft – needs native review
+  "abc.fin.expenses": "ወጪ",  // draft – needs native review
+  "abc.fin.assets": "የተገዙ ንብረቶች",  // draft – needs native review
+  "abc.fin.loans": "ያልተከፈሉ ብድሮች",  // draft – needs native review
+  "abc.fin.cash": "ጥሬ ገንዘብ (ግምት)",  // draft – needs native review
+  "abc.fin.membersOwe": "አባላት ለABC ያለባቸው",  // draft – needs native review
+  "abc.fin.pending": "የቦርድ ውሳኔ በመጠባበቅ",  // draft – needs native review
+  "abc.fin.ledger": "የሂሳብ መዝገብ",  // draft – needs native review
+  "abc.fin.limitHint": "ከ{limit} በላይ የሆኑ ወጪዎችና ግዢዎች የቦርድ ውሳኔ ይጠብቃሉ።",  // draft – needs native review
+  "abc.fin.noLimit": "የቦርድ ፈቃድ ገደብ አልተቀመጠም (የኩባንያ ትር)።",  // draft – needs native review
+  "abc.fin.kind": "ዓይነት",  // draft – needs native review
+  "abc.fin.kind.income": "ገቢ",  // draft – needs native review
+  "abc.fin.kind.expense": "ወጪ",  // draft – needs native review
+  "abc.fin.kind.asset": "የንብረት ግዢ",  // draft – needs native review
+  "abc.fin.kind.liability": "ብድር",  // draft – needs native review
+  "abc.fin.category": "ምድብ",  // draft – needs native review
+  "abc.fin.categoryHint": "ነዳጅ፣ ደመወዝ፣ ሽያጭ…",  // draft – needs native review
+  "abc.fin.direction": "ብድር",  // draft – needs native review
+  "abc.fin.loanIn": "የተቀበልነው",  // draft – needs native review
+  "abc.fin.loanOut": "የመለስነው",  // draft – needs native review
+  "abc.fin.counterparty": "የተከፈለው ለ / የተቀበልነው ከ",  // draft – needs native review
+  "abc.fin.description": "መግለጫ",  // draft – needs native review
+  "abc.fin.add": "መዝግብ",  // draft – needs native review
+  "abc.fin.posted": "ተመዝግቧል።",  // draft – needs native review
+  "abc.fin.sentToBoard": "ከፈቃድ ገደቡ በላይ፦ ለቦርዱ ተልኳል። ሲጸድቅ ይቆጠራል።",  // draft – needs native review
+  "abc.fin.status.pending": "ቦርድ በመጠባበቅ",  // draft – needs native review
+  "abc.fin.status.rejected": "በቦርዱ ውድቅ ሆኗል",  // draft – needs native review
+  "abc.fin.status.void": "ተሰርዟል",  // draft – needs native review
+  "abc.fin.status.posted": "ተመዝግቧል",  // draft – needs native review
+  "abc.fin.void": "ሰርዝ",  // draft – needs native review
+  "abc.fin.voidReason": "ይህ ለምን ይሰረዛል? (በታሪክ ይቀመጣል)",  // draft – needs native review
+  "abc.fin.noEntries": "ገና ምዝገባ የለም።",  // draft – needs native review
+  "abc.fin.accounts": "የአባላት ሂሳብ",  // draft – needs native review
+  "abc.fin.accountsHint": "እያንዳንዱ አባል ለABC ያለበት (የግብዓት ብድር፣ አገልግሎት) ከመለሰው ተቀንሶ።",  // draft – needs native review
+  "abc.fin.accountLine": "ብድር {credit} · አገልግሎት {services} · የተመለሰ {repaid}",  // draft – needs native review
+  "abc.fin.noTxns": "ገና ግብይት የለም።",  // draft – needs native review
+  "abc.fin.receiptSent": "ክፍያው ተመዝግቧል፤ ደረሰኙ ለአባሉ ተልኳል።",  // draft – needs native review
+  "abc.fin.printStatement": "መግለጫውን አትም",  // draft – needs native review
+  "abc.fin.statement": "የአባል የሂሳብ መግለጫ",  // draft – needs native review
+  "abc.fin.statementLine": "ለABC ያለ ቀሪ ዕዳ፦ {balance}። የተያዙ አክሲዮኖች፦ {shares}።",  // draft – needs native review
+  "abc.fin.what": "ምን",  // draft – needs native review
+  "abc.fin.effect": "ለውጥ",  // draft – needs native review
+  "abc.fin.balance": "ቀሪ",  // draft – needs native review
+  "abc.txn.input_credit": "በብድር የተሰጠ ግብዓት",  // draft – needs native review
+  "abc.txn.service_charge": "የአገልግሎት ክፍያ",  // draft – needs native review
+  "abc.txn.repayment": "ክፍያ (መመለስ)",  // draft – needs native review
+  "abc.txn.produce_deduction": "ከምርት ክፍያ የተቀነሰ",  // draft – needs native review
+  "abc.txn.adjustment": "ማስተካከያ",  // draft – needs native review
+  "abc.action.abc.ledger.add": "የሂሳብ ምዝገባ ተደርጓል",  // draft – needs native review
+  "abc.action.abc.ledger.void": "የሂሳብ ምዝገባ ተሰርዟል",  // draft – needs native review
+  "abc.action.abc.member_account.add": "የአባል ሂሳብ ምዝገባ",  // draft – needs native review
+  "abc.action.abc.member_account.void": "የአባል ሂሳብ ምዝገባ ተሰርዟል",  // draft – needs native review
 };

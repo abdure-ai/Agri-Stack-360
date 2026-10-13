@@ -10,7 +10,7 @@ import type { MapLayers } from "@/types/map";
 import type { AbcCompany, AbcDocKind, AbcDocument, AbcFormation, AbcHistoryEntry, AbcProfile, AbcRole, AbcRule,
   AbcImportReport, AbcInclusion, AbcRegistryMember, AbcTeamMember, MyAbcMembership, AbcApproval, AbcCertificate,
   AbcSharePayment, AbcSharesOverview, PayMethod, AbcMeeting, AbcMeetingRow, AbcQuorum, AbcTally, AbcWeights,
-  MyAbcVote } from "@/types/abc";
+  MyAbcVote, AbcFinanceSummary, AbcLedgerEntry, AbcMemberAccount, AbcStatement } from "@/types/abc";
 import type {
   AdminArea,
   AiKey,
@@ -450,6 +450,20 @@ export const api = {
   abcApproveMinutes: (orgId: number, id: number) => platform.post<unknown>(`/abc/meetings/${id}/minutes/approve?org_id=${orgId}`),
   myAbcVotes: () => platform.get<MyAbcVote[]>("/abc/my/votes"),
   confirmMyAbcVote: (id: number, correct: boolean) => platform.post<unknown>(`/abc/my/votes/${id}/confirm`, { correct }),
+  abcFinanceSummary: (orgId: number) => platform.get<AbcFinanceSummary>("/abc/finance/summary", { org_id: orgId }),
+  abcLedger: (orgId: number) => platform.get<AbcLedgerEntry[]>("/abc/finance/ledger", { org_id: orgId }),
+  abcAddLedger: (orgId: number, data: Record<string, unknown>) =>
+    platform.post<{ entry_id: number; status: string; approval_id: number | null }>(`/abc/finance/ledger?org_id=${orgId}`, data),
+  abcVoidLedger: (orgId: number, id: number, reason: string) =>
+    platform.post<unknown>(`/abc/finance/ledger/${id}/void?org_id=${orgId}`, { reason }),
+  abcMemberAccounts: (orgId: number) => platform.get<AbcMemberAccount[]>("/abc/finance/members", { org_id: orgId }),
+  abcStatement: (orgId: number, farmerId: number) => platform.get<AbcStatement>(`/abc/finance/members/${farmerId}`, { org_id: orgId }),
+  abcMemberTxn: (orgId: number, farmerId: number, data: Record<string, unknown>) =>
+    platform.post<{ txn_id: number; receipt_no: string | null; balance_etb: number }>(`/abc/finance/members/${farmerId}?org_id=${orgId}`, data),
+  abcVoidMemberTxn: (orgId: number, id: number, reason: string) =>
+    platform.post<unknown>(`/abc/finance/member-txns/${id}/void?org_id=${orgId}`, { reason }),
+  abcFinanceExport: (orgId: number) => getBlob(BASE, "/abc/finance/export.xlsx", { org_id: orgId }),
+  myAbcStatement: (orgId: number) => platform.get<AbcStatement>("/abc/my/statement", { org_id: orgId }),
   abcShares: (orgId: number) => platform.get<AbcSharesOverview>("/abc/shares", { org_id: orgId }),
   abcShareSetup: (orgId: number, data: { share_value_etb?: number; shares_offered?: number }) =>
     platform.put<unknown>(`/abc/shares/setup?org_id=${orgId}`, data),

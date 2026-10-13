@@ -354,3 +354,78 @@ export interface MyAbcVote {
   scheduled_at: string;
   org: string;
 }
+
+// ── Finance (A6) ─────────────────────────────────────────────────────────────
+
+export interface AbcFinanceSummary {
+  share_capital_etb: number;
+  income_etb: number;
+  expense_etb: number;
+  assets_bought_etb: number;
+  loans_received_etb: number;
+  loans_repaid_etb: number;
+  result_etb: number;
+  cash_estimate_etb: number;
+  members_owe_etb: number;
+  pending_approval_etb: number;
+  by_category: { kind: string; category: string; amount_etb: number }[];
+  can_edit: boolean;
+  approval_limit_etb: number | null;
+  official_record_note: string;
+}
+
+export interface AbcLedgerEntry {
+  id: number;
+  entry_date: string;
+  kind: "income" | "expense" | "asset" | "liability";
+  category: string;
+  description: string | null;
+  amount_etb: number;
+  direction: "in" | "out";
+  method: string | null;
+  reference: string | null;
+  counterparty: string | null;
+  source: string;
+  status: "posted" | "pending" | "rejected" | "void";
+  void_reason: string | null;
+  recorded_by_name: string | null;
+}
+
+export interface AbcMemberAccount {
+  farmer_id: number;
+  name: string;
+  phone: string;
+  member_no: number | null;
+  balance_etb: number;
+  input_credit_etb: number;
+  services_etb: number;
+  repaid_etb: number;
+  last_txn: string | null;
+}
+
+export interface AbcMemberTxn {
+  id: number;
+  txn_date: string;
+  kind: "input_credit" | "service_charge" | "repayment" | "produce_deduction" | "adjustment";
+  amount_etb: number;
+  balance_effect: number;
+  description: string | null;
+  method: string | null;
+  reference: string | null;
+  receipt_no: string | null;
+  source: string;
+  status: "posted" | "void";
+  void_reason: string | null;
+  running_balance_etb: number;
+  recorded_by_name: string | null;
+}
+
+export interface AbcStatement {
+  farmer_id: number;
+  name: string | null;
+  transactions: AbcMemberTxn[];
+  balance_etb: number;
+  shares_held: number;
+  org: string | null;
+  official_record_note: string;
+}

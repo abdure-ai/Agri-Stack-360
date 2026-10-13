@@ -30,6 +30,8 @@ from backend import audit
 
 METHODS = ("cash", "bank", "telebirr", "mpesa", "other")
 EPS = 0.005
+# Other modules register what happens when a request of their kind is decided: fn(conn, ctx, approval, approved).
+APPROVAL_HANDLERS: dict = {}
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS abc_share_pledges (
@@ -395,6 +397,8 @@ def decide(conn, ctx: core.AbcContext, actor: dict, approval_id: int, approve: b
             conn.execute("UPDATE abc_share_transfers SET status='done' WHERE id=?", (t["id"],))
         elif a["kind"] == "share_transfer":
             conn.execute("UPDATE abc_share_transfers SET status='rejected' WHERE id=?", (a["ref_id"],))
+        elif a["kind"] in APPROVAL_HANDLERS:
+            APPROVAL_HANDLERS[a["kind"]](conn, ctx, a, approve)
         conn.execute("UPDATE abc_approvals SET status=?, decided_by=?, decided_at=?, note=? WHERE id=?",
                      ("approved" if approve else "rejected", actor["id"], _now(), note, approval_id))
     audit.record(conn, actor_id=actor["id"], actor_role=actor["role"], action="abc.approval.decide", target_type="abc",

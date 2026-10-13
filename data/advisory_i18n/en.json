@@ -136,5 +136,6 @@
   "abc_share_due": "{org}: {amount} birr is still owed on your pledged shares; the last day to pay is {date}.",
   "abc_share_overdue": "{org}: the deadline {date} for your pledged shares has passed and {amount} birr is still owed. Please talk to the ABC office.",
   "abc_meeting_notice": "{org}: general assembly \"{title}\" on {when} at {place}. Agenda: {agenda}. Your vote counts by your land and production.",
-  "abc_meeting_notice_board": "{org}: board meeting \"{title}\" on {when} at {place}. Agenda: {agenda}."
+  "abc_meeting_notice_board": "{org}: board meeting \"{title}\" on {when} at {place}. Agenda: {agenda}.",
+  "abc_member_receipt": "{org}: payment received, receipt {receipt}, {amount} birr. You now owe the ABC {balance} birr."
 }

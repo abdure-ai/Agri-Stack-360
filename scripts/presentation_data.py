@@ -245,7 +245,39 @@ def seed_abc_team(conn) -> int:
     conn.commit()
     seed_abc_shares(conn, org)
     seed_abc_meeting(conn, org)
+    seed_abc_finance(conn, org)
     return n
+
+
+def seed_abc_finance(conn, org: int) -> None:
+    """Sample books (A6): a few ledger entries and member accounts (input credit, one repayment)."""
+    from datetime import date
+
+    from backend import abc_company, abc_finance
+
+    abc_finance.ensure_schema(conn)
+    if conn.execute("SELECT 1 FROM abc_ledger WHERE org_id=?", (org,)).fetchone():
+        return
+    gm = conn.execute("SELECT * FROM users WHERE phone='0944000008'").fetchone()
+    if not gm:
+        return
+    actor = dict(zip([d[1] for d in conn.execute("PRAGMA table_info(users)")], gm))
+    ctx = abc_company.abc_for(conn, actor, org, "finance")
+    for kind, category, amount, day, who in (
+            ("expense", "office rent", 3000, date(2026, 9, 1), "Kemise kebele administration"),
+            ("expense", "fuel", 4200, date(2026, 9, 18), "Kemise fuel station"),
+            ("income", "ploughing services", 18000, date(2026, 9, 25), "Members (machinery services)"),
+            ("expense", "irrigation pump repair", 6500, date(2026, 10, 2), "Kemise Engineering Workshop")):
+        abc_finance.add_entry(conn, ctx, actor, kind=kind, category=category, amount_etb=amount, entry_date=day,
+                              counterparty=who, method="cash")
+    members = [r[0] for r in conn.execute("""SELECT farmer_id FROM abc_member_details WHERE org_id=? ORDER BY member_no
+                                             LIMIT 3""", (org,))]
+    for fid in members:
+        abc_finance.member_txn(conn, ctx, actor, farmer_id=fid, kind="input_credit", amount_etb=2330,
+                               description="Tilt 250 EC, 1 L (rust spray)", txn_date=date(2026, 10, 3))
+    if members:
+        abc_finance.member_txn(conn, ctx, actor, farmer_id=members[0], kind="repayment", amount_etb=1000, method="cash",
+                               txn_date=date(2026, 10, 10))
 
 
 def seed_abc_meeting(conn, org: int) -> None:
