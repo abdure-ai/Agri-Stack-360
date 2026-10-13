@@ -6,6 +6,7 @@
 //   data sync     (port 8002)  VITE_SYNC_URL
 
 import type { LivestockImportResult, LivestockPrices, LivestockSummary } from "@/types/livestock";
+import type { MapLayers } from "@/types/map";
 import type {
   AdminArea,
   AiKey,
@@ -241,6 +242,9 @@ export const api = {
   summary: (params: Params) => platform.get<SummaryResponse>("/summary", params),
   regional: (params: Params) => platform.get<RegionalResponse>("/regional", params),
   spread: (params: Params) => platform.get<SpreadResponse>("/spread", params),
+  mapLayers: (params: { layers: string; crop?: string; days?: number; language?: string }) =>
+    platform.get<MapLayers>("/map/layers", params),
+  mapCrops: () => platform.get<string[]>("/map/crops"),
   livestockSummary: () => platform.get<LivestockSummary>("/livestock/summary"),
   livestockPrices: (animal: string, region?: string | null) =>
     platform.get<LivestockPrices>("/livestock/prices", { animal, region: region || undefined }),

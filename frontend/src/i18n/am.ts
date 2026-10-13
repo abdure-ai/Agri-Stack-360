@@ -1840,4 +1840,37 @@ export const am: Record<MessageKey, string> = {
   "dealer.savePrice": "ዋጋ አስቀምጥ",  // draft – needs native review
   "dealer.sampleNote": "የናሙና ዋጋ (ለማሳያ)፦ ለመተካት የራስዎን ዋጋ ያስገቡ።",  // draft – needs native review
   "dealer.priceHint": "መተግበሪያው ምርቱን ሲመክር ገበሬዎች ይህንን ዋጋ ከቀኑ ጋር ያያሉ።",  // draft – needs native review
+
+  // ── Map ─────────────────────────────────────────────────────────────────────
+  "nav.map": "ካርታ",  // draft – needs native review
+  "map.description": "የበሽታ ቦታዎች፣ የገበያ ዋጋዎች፣ የግብዓት ሱቆችና እርሻዎች በአንድ ካርታ ላይ፣ ከይፋዊ የክልል፣ የዞንና የወረዳ ወሰኖች ጋር።",  // draft – needs native review
+  "map.layers": "ንብርብሮች",  // draft – needs native review
+  "map.layer.disease": "የበሽታ ቦታዎች",  // draft – needs native review
+  "map.layer.markets": "የሰብል ገበያዎችና ዋጋዎች",  // draft – needs native review
+  "map.layer.shops": "የግብዓት ሱቆች",  // draft – needs native review
+  "map.layer.farms": "እርሻዎች",  // draft – needs native review
+  "map.crop": "ለዋጋ የሚታይ ሰብል",  // draft – needs native review
+  "map.period": "የበሽታ ጊዜ",  // draft – needs native review
+  "map.lastDays": "ያለፉት {n} ቀናት",  // draft – needs native review
+  "map.legend": "መግለጫ",  // draft – needs native review
+  "map.scope": "የሚታየው፦ {area}",  // draft – needs native review
+  "map.kebele": "ቀበሌ፦ {kebele}",  // draft – needs native review
+  "map.approxWoreda": "በወረዳው መሃል ላይ ይታያል (ግምታዊ)።",  // draft – needs native review
+  "map.small": "ከ5 በታች የሆኑ ቁጥሮች <5 ተብለው ይታያሉ።",  // draft – needs native review
+  "map.farms.mine": "የእኔ እርሻ",  // draft – needs native review
+  "map.farms.visit": "ጉብኝት፦",  // draft – needs native review
+  "map.farms.count": "{farmers} ገበሬዎች · {farms} ማሳዎች",  // draft – needs native review
+  "map.farms.hectares": "{ha} ሄክታር ተመዝግቧል",  // draft – needs native review
+  "map.farms.legendCounts": "እርሻዎች፦ በወረዳ የተመዘገቡ ገበሬዎች (አንድም ገበሬ በተናጠል አይታይም)።",  // draft – needs native review
+  "map.farms.legendDa": "አብረዋቸው የሚሰሩ ገበሬዎች (በፈቃዳቸው)። ቀይ፦ መጀመሪያ ይጎብኙ፤ ብርቱካናማ፦ ጉብኝት ያስፈልጋል።",  // draft – needs native review
+  "map.farms.legendOwn": "የእርስዎ እርሻ (ወይን ጠጅ)።",  // draft – needs native review
+  "map.markets.noPrice": "በዚህ ገበያ የቅርብ ጊዜ የ{crop} ዋጋ የለም።",  // draft – needs native review
+  "map.markets.approx": "ቦታው ግምታዊ ነው፤ በክልሉ መሃል ላይ ይታያል።",  // draft – needs native review
+  "map.markets.legend": "የቅርብ ጊዜ የNMIS የችርቻሮ ዋጋ",  // draft – needs native review
+  "map.shops.counterfeit": "{warnings} የኮድ ማስጠንቀቂያዎች · {fakes} የሀሰተኛ ምርት ሪፖርቶች",  // draft – needs native review
+  "map.shops.noStock": "የተመዘገበ ምርት በክምችት የለም።",  // draft – needs native review
+  "map.shops.legend": "የግብዓት ሱቅ (አረንጓዴ ቀለበት፦ የተረጋገጠ ሻጭ)",  // draft – needs native review
+  "map.disease.scans": "{n} የፎቶ ምርመራዎች፣ የመጨረሻው {date}",  // draft – needs native review
+  "map.disease.note": "በወረዳ ደረጃ የተቆጠረ፤ የእርሻ ቦታዎች ፈጽሞ አይታዩም።",  // draft – needs native review
+  "map.legend.dashed": "ነጠብጣብ መስመር፦ ግምታዊ ቦታ።",  // draft – needs native review
 };

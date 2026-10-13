@@ -38,6 +38,11 @@ import Escalations from "@/pages/DA/Escalations";
 import NotFound from "@/pages/OtherPage/NotFound";
 import Profile from "@/pages/Profile/Profile";
 import { BrowserRouter, Navigate, Route, Routes, useParams } from "react-router";
+import { lazy, Suspense } from "react";
+import { LoadingState } from "@/components/common/States";
+
+// The map page brings Leaflet (~150 kB): loaded only when the page is opened.
+const MapPage = lazy(() => import("@/pages/Map/MapPage"));
 
 /** Old /app/<page> addresses from the previous UI. */
 const LEGACY_PATHS: Record<string, string> = {
@@ -67,6 +72,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="/market" element={<MarketIntel />} />
             <Route path="/livestock" element={<Livestock />} />
+            <Route path="/map" element={<Suspense fallback={<LoadingState />}><MapPage /></Suspense>} />
             <Route path="/advisory" element={<Advisory />} />
             <Route path="/tips" element={<TipsPage />} />
             <Route path="/profile" element={<Profile />} />

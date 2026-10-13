@@ -8502,5 +8502,187 @@
   "@dealerPriceHint": {
     "description": "web key: dealer.priceHint",
     "x-draft": true
+  },
+  "navMap": "ካርታ",
+  "@navMap": {
+    "description": "web key: nav.map",
+    "x-draft": true
+  },
+  "mapDescription": "ቦታታት ሕማም፣ ዋጋታት ዕዳጋ፣ ድኳናት እታወታትን ግራውትን ኣብ ሓደ ካርታ፣ ምስ ወግዓዊ ዶባት ክልል፣ ዞባን ወረዳን።",
+  "@mapDescription": {
+    "description": "web key: map.description",
+    "x-draft": true
+  },
+  "mapLayers": "ደረጃታት",
+  "@mapLayers": {
+    "description": "web key: map.layers",
+    "x-draft": true
+  },
+  "mapLayerDisease": "ቦታታት ሕማም",
+  "@mapLayerDisease": {
+    "description": "web key: map.layer.disease",
+    "x-draft": true
+  },
+  "mapLayerMarkets": "ዕዳጋታት ሰብልን ዋጋታትን",
+  "@mapLayerMarkets": {
+    "description": "web key: map.layer.markets",
+    "x-draft": true
+  },
+  "mapLayerShops": "ድኳናት እታወታት",
+  "@mapLayerShops": {
+    "description": "web key: map.layer.shops",
+    "x-draft": true
+  },
+  "mapLayerFarms": "ግራውቲ",
+  "@mapLayerFarms": {
+    "description": "web key: map.layer.farms",
+    "x-draft": true
+  },
+  "mapCrop": "ንዋጋ ዝርአ ሰብል",
+  "@mapCrop": {
+    "description": "web key: map.crop",
+    "x-draft": true
+  },
+  "mapPeriod": "እዋን ሕማም",
+  "@mapPeriod": {
+    "description": "web key: map.period",
+    "x-draft": true
+  },
+  "mapLastDays": "ዝሓለፉ {n} መዓልታት",
+  "@mapLastDays": {
+    "description": "web key: map.lastDays",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "mapLegend": "መግለጺ",
+  "@mapLegend": {
+    "description": "web key: map.legend",
+    "x-draft": true
+  },
+  "mapScope": "ዝርአ፦ {area}",
+  "@mapScope": {
+    "description": "web key: map.scope",
+    "placeholders": {
+      "area": {}
+    },
+    "x-draft": true
+  },
+  "mapKebele": "ቀበሌ፦ {kebele}",
+  "@mapKebele": {
+    "description": "web key: map.kebele",
+    "placeholders": {
+      "kebele": {}
+    },
+    "x-draft": true
+  },
+  "mapApproxWoreda": "ኣብ ማእከል ወረዳ ይርአ (ግምታዊ)።",
+  "@mapApproxWoreda": {
+    "description": "web key: map.approxWoreda",
+    "x-draft": true
+  },
+  "mapSmall": "ካብ 5 ዝወሓዱ ቁጽርታት <5 ተባሂሎም ይርኣዩ።",
+  "@mapSmall": {
+    "description": "web key: map.small",
+    "x-draft": true
+  },
+  "mapFarmsMine": "ግራተይ",
+  "@mapFarmsMine": {
+    "description": "web key: map.farms.mine",
+    "x-draft": true
+  },
+  "mapFarmsVisit": "ምብጻሕ፦",
+  "@mapFarmsVisit": {
+    "description": "web key: map.farms.visit",
+    "x-draft": true
+  },
+  "mapFarmsCount": "{farmers} ሓረስቶት · {farms} ግራውቲ",
+  "@mapFarmsCount": {
+    "description": "web key: map.farms.count",
+    "placeholders": {
+      "farmers": {},
+      "farms": {}
+    },
+    "x-draft": true
+  },
+  "mapFarmsHectares": "{ha} ሄክታር ተመዝጊቡ",
+  "@mapFarmsHectares": {
+    "description": "web key: map.farms.hectares",
+    "placeholders": {
+      "ha": {}
+    },
+    "x-draft": true
+  },
+  "mapFarmsLegendCounts": "ግራውቲ፦ ብወረዳ ዝተመዝገቡ ሓረስቶት (ሓደ ሓረስታይ በይኑ ኣይርአን)።",
+  "@mapFarmsLegendCounts": {
+    "description": "web key: map.farms.legendCounts",
+    "x-draft": true
+  },
+  "mapFarmsLegendDa": "ምሳኹም ዝሰርሑ ሓረስቶት (ብፍቓዶም)። ቀይሕ፦ ቅድም በጽሑ፤ ብርቱኳናዊ፦ ምብጻሕ የድልዮ።",
+  "@mapFarmsLegendDa": {
+    "description": "web key: map.farms.legendDa",
+    "x-draft": true
+  },
+  "mapFarmsLegendOwn": "ግራትኩም (ሊላ)።",
+  "@mapFarmsLegendOwn": {
+    "description": "web key: map.farms.legendOwn",
+    "x-draft": true
+  },
+  "mapMarketsNoPrice": "ኣብዚ ዕዳጋ ናይ ቀረባ እዋን ዋጋ {crop} የለን።",
+  "@mapMarketsNoPrice": {
+    "description": "web key: map.markets.noPrice",
+    "placeholders": {
+      "crop": {}
+    },
+    "x-draft": true
+  },
+  "mapMarketsApprox": "ቦታ ግምታዊ እዩ፤ ኣብ ማእከል ክልል ይርአ።",
+  "@mapMarketsApprox": {
+    "description": "web key: map.markets.approx",
+    "x-draft": true
+  },
+  "mapMarketsLegend": "ናይ ቀረባ እዋን ዋጋ ቸርቻሪ NMIS",
+  "@mapMarketsLegend": {
+    "description": "web key: map.markets.legend",
+    "x-draft": true
+  },
+  "mapShopsCounterfeit": "{warnings} መጠንቀቕታ ኮድ · {fakes} ጸብጻብ ሓሶት",
+  "@mapShopsCounterfeit": {
+    "description": "web key: map.shops.counterfeit",
+    "placeholders": {
+      "warnings": {},
+      "fakes": {}
+    },
+    "x-draft": true
+  },
+  "mapShopsNoStock": "ዝተመዝገበ ፍርያት ኣብ መኽዘን የለን።",
+  "@mapShopsNoStock": {
+    "description": "web key: map.shops.noStock",
+    "x-draft": true
+  },
+  "mapShopsLegend": "ድኳን እታወት (ቀለበት ቀጠልያ፦ ዝተረጋገጸ ሸያጢ)",
+  "@mapShopsLegend": {
+    "description": "web key: map.shops.legend",
+    "x-draft": true
+  },
+  "mapDiseaseScans": "{n} ምርመራታት ስእሊ፣ እቲ ናይ መወዳእታ {date}",
+  "@mapDiseaseScans": {
+    "description": "web key: map.disease.scans",
+    "placeholders": {
+      "n": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "mapDiseaseNote": "ብወረዳ ዝተቖጽረ፤ ቦታታት ግራውቲ ፈጺሞም ኣይርኣዩን።",
+  "@mapDiseaseNote": {
+    "description": "web key: map.disease.note",
+    "x-draft": true
+  },
+  "mapLegendDashed": "ነጠብጣብ መስመር፦ ግምታዊ ቦታ።",
+  "@mapLegendDashed": {
+    "description": "web key: map.legend.dashed",
+    "x-draft": true
   }
 }

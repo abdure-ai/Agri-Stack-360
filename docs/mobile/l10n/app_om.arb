@@ -8502,5 +8502,187 @@
   "@dealerPriceHint": {
     "description": "web key: dealer.priceHint",
     "x-draft": true
+  },
+  "navMap": "Kaartaa",
+  "@navMap": {
+    "description": "web key: nav.map",
+    "x-draft": true
+  },
+  "mapDescription": "Bakkeewwan dhukkubaa, gatii gabaa, suuqiiwwan galtee fi lafa qonnaa kaartaa tokko irratti, daangaa naannoo, godinaa fi aanaa seera qabeessa waliin.",
+  "@mapDescription": {
+    "description": "web key: map.description",
+    "x-draft": true
+  },
+  "mapLayers": "Sadarkaalee",
+  "@mapLayers": {
+    "description": "web key: map.layers",
+    "x-draft": true
+  },
+  "mapLayerDisease": "Bakkeewwan dhukkubaa",
+  "@mapLayerDisease": {
+    "description": "web key: map.layer.disease",
+    "x-draft": true
+  },
+  "mapLayerMarkets": "Gabaawwan midhaanii fi gatii",
+  "@mapLayerMarkets": {
+    "description": "web key: map.layer.markets",
+    "x-draft": true
+  },
+  "mapLayerShops": "Suuqiiwwan galtee",
+  "@mapLayerShops": {
+    "description": "web key: map.layer.shops",
+    "x-draft": true
+  },
+  "mapLayerFarms": "Lafa qonnaa",
+  "@mapLayerFarms": {
+    "description": "web key: map.layer.farms",
+    "x-draft": true
+  },
+  "mapCrop": "Midhaan gatiif",
+  "@mapCrop": {
+    "description": "web key: map.crop",
+    "x-draft": true
+  },
+  "mapPeriod": "Yeroo dhukkubaa",
+  "@mapPeriod": {
+    "description": "web key: map.period",
+    "x-draft": true
+  },
+  "mapLastDays": "Guyyoota {n} darban",
+  "@mapLastDays": {
+    "description": "web key: map.lastDays",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "mapLegend": "Ibsa mallattoo",
+  "@mapLegend": {
+    "description": "web key: map.legend",
+    "x-draft": true
+  },
+  "mapScope": "Kan mul'atu: {area}",
+  "@mapScope": {
+    "description": "web key: map.scope",
+    "placeholders": {
+      "area": {}
+    },
+    "x-draft": true
+  },
+  "mapKebele": "Ganda: {kebele}",
+  "@mapKebele": {
+    "description": "web key: map.kebele",
+    "placeholders": {
+      "kebele": {}
+    },
+    "x-draft": true
+  },
+  "mapApproxWoreda": "Giddu galeessa aanaa irratti mul'ata (tilmaamaan).",
+  "@mapApproxWoreda": {
+    "description": "web key: map.approxWoreda",
+    "x-draft": true
+  },
+  "mapSmall": "Lakkoofsi 5 gadii <5 jedhamee mul'ata.",
+  "@mapSmall": {
+    "description": "web key: map.small",
+    "x-draft": true
+  },
+  "mapFarmsMine": "Lafa koo",
+  "@mapFarmsMine": {
+    "description": "web key: map.farms.mine",
+    "x-draft": true
+  },
+  "mapFarmsVisit": "Daawwannaa:",
+  "@mapFarmsVisit": {
+    "description": "web key: map.farms.visit",
+    "x-draft": true
+  },
+  "mapFarmsCount": "Qonnaan bultoota {farmers} · lafa {farms}",
+  "@mapFarmsCount": {
+    "description": "web key: map.farms.count",
+    "placeholders": {
+      "farmers": {},
+      "farms": {}
+    },
+    "x-draft": true
+  },
+  "mapFarmsHectares": "Hektaara {ha} galmaa'e",
+  "@mapFarmsHectares": {
+    "description": "web key: map.farms.hectares",
+    "placeholders": {
+      "ha": {}
+    },
+    "x-draft": true
+  },
+  "mapFarmsLegendCounts": "Lafa qonnaa: qonnaan bultoota aanaa tokkoon galmaa'an (qonnaan bulaan tokkollee adda hin mul'atu).",
+  "@mapFarmsLegendCounts": {
+    "description": "web key: map.farms.legendCounts",
+    "x-draft": true
+  },
+  "mapFarmsLegendDa": "Qonnaan bultoota isin waliin hojjetan (hayyama isaaniitiin). Diimaa: dursa daawwadhaa; burtukaanii: daawwannaa barbaada.",
+  "@mapFarmsLegendDa": {
+    "description": "web key: map.farms.legendDa",
+    "x-draft": true
+  },
+  "mapFarmsLegendOwn": "Lafa keessan (gurraacha diimaa).",
+  "@mapFarmsLegendOwn": {
+    "description": "web key: map.farms.legendOwn",
+    "x-draft": true
+  },
+  "mapMarketsNoPrice": "Gabaa kana irratti gatiin {crop} dhiyoo hin jiru.",
+  "@mapMarketsNoPrice": {
+    "description": "web key: map.markets.noPrice",
+    "placeholders": {
+      "crop": {}
+    },
+    "x-draft": true
+  },
+  "mapMarketsApprox": "Bakki tilmaamaan: giddu galeessa naannoo irratti mul'ata.",
+  "@mapMarketsApprox": {
+    "description": "web key: map.markets.approx",
+    "x-draft": true
+  },
+  "mapMarketsLegend": "gatii daldalaa NMIS dhiyoo",
+  "@mapMarketsLegend": {
+    "description": "web key: map.markets.legend",
+    "x-draft": true
+  },
+  "mapShopsCounterfeit": "Akeekkachiisa koodii {warnings} · gabaasa sobaa {fakes}",
+  "@mapShopsCounterfeit": {
+    "description": "web key: map.shops.counterfeit",
+    "placeholders": {
+      "warnings": {},
+      "fakes": {}
+    },
+    "x-draft": true
+  },
+  "mapShopsNoStock": "Oomishni galmaa'e kuusaa keessa hin jiru.",
+  "@mapShopsNoStock": {
+    "description": "web key: map.shops.noStock",
+    "x-draft": true
+  },
+  "mapShopsLegend": "Suuqii galtee (marsaa magariisa: gurgurtaa mirkanaa'e)",
+  "@mapShopsLegend": {
+    "description": "web key: map.shops.legend",
+    "x-draft": true
+  },
+  "mapDiseaseScans": "Qorannoo suuraa {n}, isa dhumaa {date}",
+  "@mapDiseaseScans": {
+    "description": "web key: map.disease.scans",
+    "placeholders": {
+      "n": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "mapDiseaseNote": "Aanaan lakkaa'ame; bakki lafa qonnaa gonkumaa hin mul'atu.",
+  "@mapDiseaseNote": {
+    "description": "web key: map.disease.note",
+    "x-draft": true
+  },
+  "mapLegendDashed": "Sarara cita'aa: bakka tilmaamaa.",
+  "@mapLegendDashed": {
+    "description": "web key: map.legend.dashed",
+    "x-draft": true
   }
 }

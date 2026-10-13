@@ -23,7 +23,7 @@ OUT = ROOT / "docs" / "mobile"
 
 MOBILE_PREFIXES = ("/api/auth", "/api/users", "/api/advisory", "/api/tips", "/api/trust", "/api/da",
                    "/api/financial", "/api/geo", "/api/prices", "/api/markets", "/api/summary", "/api/meta",
-                   "/api/varieties", "/api/health", "/api/crop-health", "/api/livestock")
+                   "/api/varieties", "/api/health", "/api/crop-health", "/api/livestock", "/api/map")
 EXCLUDE = ("/api/advisory/admin", "/api/advisory/farmers/{farmer_id}/context")
 
 

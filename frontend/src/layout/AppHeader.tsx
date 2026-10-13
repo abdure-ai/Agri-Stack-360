@@ -31,8 +31,8 @@ const AppHeader: React.FC = () => {
           </button>
 
           <Link to="/" className="xl:hidden" aria-label={t("app.home")}>
-            <Logo className="hidden 2xsm:inline-flex" />
-            <Logo iconOnly className="2xsm:hidden" />
+            <Logo className="hidden sm:inline-flex" />
+            <Logo iconOnly className="sm:hidden" />
           </Link>
         </div>
 

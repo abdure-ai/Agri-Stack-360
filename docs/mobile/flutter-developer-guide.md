@@ -133,6 +133,7 @@ The server checks every permission again on every request. Hiding a screen is fo
 | Check a product | `POST /trust/verify {code}`, `POST /trust/fake-reports`, `GET /trust/shops` |
 | Market prices | `GET /summary`, `GET /prices?crop=&region=&price_level=retail`, `GET /markets`, `GET /meta` |
 | Livestock prices | `GET /livestock/summary`, `GET /livestock/prices?animal=&region=` (see 8.10) |
+| Map | `GET /map/layers`, `GET /map/crops`, boundary files `/geo/eth_adm{1,2,3}.json` (see 8.11) |
 | Credit | `GET /financial/profile`, `GET /financial/loan-products` |
 | Requests to me | `GET /users/credit-requests`, `POST /users/credit-requests/{id}/approve\|decline\|revoke`; `GET /users/abc-invitations`, `POST /users/abc-invitations/{org_id}/accept\|decline\|leave` |
 | Profile and privacy | `GET/PUT /users/profile`, `GET/PUT /users/consent`, `GET /users/my-data`, `GET/POST /users/my-data/erase-request`, `POST …/erase-request/cancel` |
@@ -290,6 +291,30 @@ NMIS livestock market prices per head, with a 4-week outlook. Same data as the w
 
 Import and retraining are web-only (admin). Cache the last response for offline like the crop prices.
 
+### 8.11 Map
+
+`GET /map/layers?layers=disease,markets,shops,farms&crop=Wheat&days=30&language=` returns `{available[], scope,
+layers}`. Only the layers this user may see are in `layers`; build the layer switches from `available`.
+
+- `scope`: `{pcode, names[], latitude, longitude, level}`: centre the map there (level 0 country, 1 region,
+  2 zone, 3 woreda). A farmer: centre on their own farm (`layers.farms.farmers[0]`).
+- `disease.hotspots[]`: per woreda and disease, at the woreda centre: `disease`, `scans` (a number or `"<5"`),
+  `scans_band` (`low|medium|high` → circle size), `latest`. Never show these as farm points.
+- `markets.markets[]`: `name, region, latitude, longitude, approximate, price_etb, unit, date,
+  price_per_quintal`. Colour by `price_per_quintal` between `price_min` and `price_max` (values outside get the end
+  colours); show `price_etb` / `unit` in the popup. `approximate: true` = at the region's centre (dashed marker).
+  `GET /map/crops` gives the crop list.
+- `shops.shops[]`: `name, verified, phone, woreda, latitude, longitude, products[{product_name, price_etb,
+  pack_size, price_is_sample}]` (at the woreda centre, approximate). Regulators also get `shops.counterfeits[]`.
+- `farms`: `mode: "own"` (the farmer's farm), `"farmers"` (a DA: consenting farmers with `priority` and
+  `reasons[]`, texts `da.reason.*`) or `"counts"` (government/admin: `woredas[]` with `farmers`, `farms`,
+  `hectares`, never names).
+- Boundaries: download once and cache: `/geo/eth_adm1.json` (regions, 20 kB), `/geo/eth_adm2.json` (zones,
+  250 kB), `/geo/eth_adm3.json` (woredas, 1.8 MB; load only when zoomed in). GeoJSON with `pcode` and `name`.
+- Base map: OpenStreetMap tiles (e.g. `flutter_map`), with the credit "© OpenStreetMap contributors · Boundaries ©
+  OCHA (CC BY-IGO)". Follow the OSM tile usage policy (set a User-Agent, no bulk downloads); for heavy use, a tile
+  provider with a key.
+
 ## 9. Offline (required)
 
 Many farmers have no signal in the field. The web app already behaves like this; the mobile app must match it.
@@ -416,3 +441,4 @@ show that clearly.
 | 2026-10-12 | `/advisory/ask`: don't send the screen language; the answer follows the question's language (10). Server fixed too |
 | 2026-10-13 | New: livestock prices and outlook (6, 8.10); `lv.*` texts in the ARB files. Nothing existing changed |
 | 2026-10-13 | Treatment chain (8.3, 8.7): rates from the MoA manual with the amount for the plot, nearest shops with price, verified-seller badge and phone, pack check against the plan (`diagnosis_id`). New fields only; nothing removed |
+| 2026-10-13 | New: map (6, 8.11): `/map/layers`, `/map/crops`, boundary files; `map.*` texts. Nothing existing changed |

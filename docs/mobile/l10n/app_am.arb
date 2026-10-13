@@ -8502,5 +8502,187 @@
   "@dealerPriceHint": {
     "description": "web key: dealer.priceHint",
     "x-draft": true
+  },
+  "navMap": "ካርታ",
+  "@navMap": {
+    "description": "web key: nav.map",
+    "x-draft": true
+  },
+  "mapDescription": "የበሽታ ቦታዎች፣ የገበያ ዋጋዎች፣ የግብዓት ሱቆችና እርሻዎች በአንድ ካርታ ላይ፣ ከይፋዊ የክልል፣ የዞንና የወረዳ ወሰኖች ጋር።",
+  "@mapDescription": {
+    "description": "web key: map.description",
+    "x-draft": true
+  },
+  "mapLayers": "ንብርብሮች",
+  "@mapLayers": {
+    "description": "web key: map.layers",
+    "x-draft": true
+  },
+  "mapLayerDisease": "የበሽታ ቦታዎች",
+  "@mapLayerDisease": {
+    "description": "web key: map.layer.disease",
+    "x-draft": true
+  },
+  "mapLayerMarkets": "የሰብል ገበያዎችና ዋጋዎች",
+  "@mapLayerMarkets": {
+    "description": "web key: map.layer.markets",
+    "x-draft": true
+  },
+  "mapLayerShops": "የግብዓት ሱቆች",
+  "@mapLayerShops": {
+    "description": "web key: map.layer.shops",
+    "x-draft": true
+  },
+  "mapLayerFarms": "እርሻዎች",
+  "@mapLayerFarms": {
+    "description": "web key: map.layer.farms",
+    "x-draft": true
+  },
+  "mapCrop": "ለዋጋ የሚታይ ሰብል",
+  "@mapCrop": {
+    "description": "web key: map.crop",
+    "x-draft": true
+  },
+  "mapPeriod": "የበሽታ ጊዜ",
+  "@mapPeriod": {
+    "description": "web key: map.period",
+    "x-draft": true
+  },
+  "mapLastDays": "ያለፉት {n} ቀናት",
+  "@mapLastDays": {
+    "description": "web key: map.lastDays",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "mapLegend": "መግለጫ",
+  "@mapLegend": {
+    "description": "web key: map.legend",
+    "x-draft": true
+  },
+  "mapScope": "የሚታየው፦ {area}",
+  "@mapScope": {
+    "description": "web key: map.scope",
+    "placeholders": {
+      "area": {}
+    },
+    "x-draft": true
+  },
+  "mapKebele": "ቀበሌ፦ {kebele}",
+  "@mapKebele": {
+    "description": "web key: map.kebele",
+    "placeholders": {
+      "kebele": {}
+    },
+    "x-draft": true
+  },
+  "mapApproxWoreda": "በወረዳው መሃል ላይ ይታያል (ግምታዊ)።",
+  "@mapApproxWoreda": {
+    "description": "web key: map.approxWoreda",
+    "x-draft": true
+  },
+  "mapSmall": "ከ5 በታች የሆኑ ቁጥሮች <5 ተብለው ይታያሉ።",
+  "@mapSmall": {
+    "description": "web key: map.small",
+    "x-draft": true
+  },
+  "mapFarmsMine": "የእኔ እርሻ",
+  "@mapFarmsMine": {
+    "description": "web key: map.farms.mine",
+    "x-draft": true
+  },
+  "mapFarmsVisit": "ጉብኝት፦",
+  "@mapFarmsVisit": {
+    "description": "web key: map.farms.visit",
+    "x-draft": true
+  },
+  "mapFarmsCount": "{farmers} ገበሬዎች · {farms} ማሳዎች",
+  "@mapFarmsCount": {
+    "description": "web key: map.farms.count",
+    "placeholders": {
+      "farmers": {},
+      "farms": {}
+    },
+    "x-draft": true
+  },
+  "mapFarmsHectares": "{ha} ሄክታር ተመዝግቧል",
+  "@mapFarmsHectares": {
+    "description": "web key: map.farms.hectares",
+    "placeholders": {
+      "ha": {}
+    },
+    "x-draft": true
+  },
+  "mapFarmsLegendCounts": "እርሻዎች፦ በወረዳ የተመዘገቡ ገበሬዎች (አንድም ገበሬ በተናጠል አይታይም)።",
+  "@mapFarmsLegendCounts": {
+    "description": "web key: map.farms.legendCounts",
+    "x-draft": true
+  },
+  "mapFarmsLegendDa": "አብረዋቸው የሚሰሩ ገበሬዎች (በፈቃዳቸው)። ቀይ፦ መጀመሪያ ይጎብኙ፤ ብርቱካናማ፦ ጉብኝት ያስፈልጋል።",
+  "@mapFarmsLegendDa": {
+    "description": "web key: map.farms.legendDa",
+    "x-draft": true
+  },
+  "mapFarmsLegendOwn": "የእርስዎ እርሻ (ወይን ጠጅ)።",
+  "@mapFarmsLegendOwn": {
+    "description": "web key: map.farms.legendOwn",
+    "x-draft": true
+  },
+  "mapMarketsNoPrice": "በዚህ ገበያ የቅርብ ጊዜ የ{crop} ዋጋ የለም።",
+  "@mapMarketsNoPrice": {
+    "description": "web key: map.markets.noPrice",
+    "placeholders": {
+      "crop": {}
+    },
+    "x-draft": true
+  },
+  "mapMarketsApprox": "ቦታው ግምታዊ ነው፤ በክልሉ መሃል ላይ ይታያል።",
+  "@mapMarketsApprox": {
+    "description": "web key: map.markets.approx",
+    "x-draft": true
+  },
+  "mapMarketsLegend": "የቅርብ ጊዜ የNMIS የችርቻሮ ዋጋ",
+  "@mapMarketsLegend": {
+    "description": "web key: map.markets.legend",
+    "x-draft": true
+  },
+  "mapShopsCounterfeit": "{warnings} የኮድ ማስጠንቀቂያዎች · {fakes} የሀሰተኛ ምርት ሪፖርቶች",
+  "@mapShopsCounterfeit": {
+    "description": "web key: map.shops.counterfeit",
+    "placeholders": {
+      "warnings": {},
+      "fakes": {}
+    },
+    "x-draft": true
+  },
+  "mapShopsNoStock": "የተመዘገበ ምርት በክምችት የለም።",
+  "@mapShopsNoStock": {
+    "description": "web key: map.shops.noStock",
+    "x-draft": true
+  },
+  "mapShopsLegend": "የግብዓት ሱቅ (አረንጓዴ ቀለበት፦ የተረጋገጠ ሻጭ)",
+  "@mapShopsLegend": {
+    "description": "web key: map.shops.legend",
+    "x-draft": true
+  },
+  "mapDiseaseScans": "{n} የፎቶ ምርመራዎች፣ የመጨረሻው {date}",
+  "@mapDiseaseScans": {
+    "description": "web key: map.disease.scans",
+    "placeholders": {
+      "n": {},
+      "date": {}
+    },
+    "x-draft": true
+  },
+  "mapDiseaseNote": "በወረዳ ደረጃ የተቆጠረ፤ የእርሻ ቦታዎች ፈጽሞ አይታዩም።",
+  "@mapDiseaseNote": {
+    "description": "web key: map.disease.note",
+    "x-draft": true
+  },
+  "mapLegendDashed": "ነጠብጣብ መስመር፦ ግምታዊ ቦታ።",
+  "@mapLegendDashed": {
+    "description": "web key: map.legend.dashed",
+    "x-draft": true
   }
 }

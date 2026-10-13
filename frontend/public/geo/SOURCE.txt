@@ -1,0 +1,13 @@
+Ethiopia administrative boundaries: regions (eth_adm1.json), zones (eth_adm2.json), woredas (eth_adm3.json).
+
+Source: OCHA, "Ethiopia - Subnational Administrative Boundaries" (COD-AB), version v04, valid from 2025-01-01,
+https://data.humdata.org/dataset/cod-ab-eth  (file eth_admin_boundaries.geojson.zip)
+Licence: Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO). The map shows the credit
+"Boundaries (c) OCHA (CC BY-IGO)".
+
+Same dataset and P-codes as data/reference/eth_admin_boundaries.xlsx (the platform's admin areas).
+Simplified with mapshaper 0.6 (keep-shapes, shared borders preserved), properties reduced to pcode and name:
+  mapshaper eth_admin1.geojson -simplify 4%  keep-shapes -filter-fields adm1_pcode,adm1_name -rename-fields pcode=adm1_pcode,name=adm1_name -o eth_adm1.json format=geojson precision=0.0001
+  mapshaper eth_admin2.geojson -simplify 6%  keep-shapes ... (adm2)
+  mapshaper eth_admin3.geojson -simplify 10% keep-shapes ... (adm3)
+For an official map product, use the full-resolution files from the source.

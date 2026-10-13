@@ -1840,4 +1840,37 @@ export const ti: Record<MessageKey, string> = {
   "dealer.savePrice": "ዋጋ ዓቅብ",  // draft – needs native review
   "dealer.sampleNote": "ናይ ኣብነት ዋጋ (ንምርኢት)፦ ንምትካእ ናይ ገዛእ ርእስኹም ዋጋ ኣእትዉ።",  // draft – needs native review
   "dealer.priceHint": "እቲ ኣፕ ነቲ ፍርያት ክመኽር ከሎ ሓረስቶት ነዚ ዋጋ ምስ ዕለቱ ይርእዩ።",  // draft – needs native review
+
+  // ── Map ─────────────────────────────────────────────────────────────────────
+  "nav.map": "ካርታ",  // draft – needs native review
+  "map.description": "ቦታታት ሕማም፣ ዋጋታት ዕዳጋ፣ ድኳናት እታወታትን ግራውትን ኣብ ሓደ ካርታ፣ ምስ ወግዓዊ ዶባት ክልል፣ ዞባን ወረዳን።",  // draft – needs native review
+  "map.layers": "ደረጃታት",  // draft – needs native review
+  "map.layer.disease": "ቦታታት ሕማም",  // draft – needs native review
+  "map.layer.markets": "ዕዳጋታት ሰብልን ዋጋታትን",  // draft – needs native review
+  "map.layer.shops": "ድኳናት እታወታት",  // draft – needs native review
+  "map.layer.farms": "ግራውቲ",  // draft – needs native review
+  "map.crop": "ንዋጋ ዝርአ ሰብል",  // draft – needs native review
+  "map.period": "እዋን ሕማም",  // draft – needs native review
+  "map.lastDays": "ዝሓለፉ {n} መዓልታት",  // draft – needs native review
+  "map.legend": "መግለጺ",  // draft – needs native review
+  "map.scope": "ዝርአ፦ {area}",  // draft – needs native review
+  "map.kebele": "ቀበሌ፦ {kebele}",  // draft – needs native review
+  "map.approxWoreda": "ኣብ ማእከል ወረዳ ይርአ (ግምታዊ)።",  // draft – needs native review
+  "map.small": "ካብ 5 ዝወሓዱ ቁጽርታት <5 ተባሂሎም ይርኣዩ።",  // draft – needs native review
+  "map.farms.mine": "ግራተይ",  // draft – needs native review
+  "map.farms.visit": "ምብጻሕ፦",  // draft – needs native review
+  "map.farms.count": "{farmers} ሓረስቶት · {farms} ግራውቲ",  // draft – needs native review
+  "map.farms.hectares": "{ha} ሄክታር ተመዝጊቡ",  // draft – needs native review
+  "map.farms.legendCounts": "ግራውቲ፦ ብወረዳ ዝተመዝገቡ ሓረስቶት (ሓደ ሓረስታይ በይኑ ኣይርአን)።",  // draft – needs native review
+  "map.farms.legendDa": "ምሳኹም ዝሰርሑ ሓረስቶት (ብፍቓዶም)። ቀይሕ፦ ቅድም በጽሑ፤ ብርቱኳናዊ፦ ምብጻሕ የድልዮ።",  // draft – needs native review
+  "map.farms.legendOwn": "ግራትኩም (ሊላ)።",  // draft – needs native review
+  "map.markets.noPrice": "ኣብዚ ዕዳጋ ናይ ቀረባ እዋን ዋጋ {crop} የለን።",  // draft – needs native review
+  "map.markets.approx": "ቦታ ግምታዊ እዩ፤ ኣብ ማእከል ክልል ይርአ።",  // draft – needs native review
+  "map.markets.legend": "ናይ ቀረባ እዋን ዋጋ ቸርቻሪ NMIS",  // draft – needs native review
+  "map.shops.counterfeit": "{warnings} መጠንቀቕታ ኮድ · {fakes} ጸብጻብ ሓሶት",  // draft – needs native review
+  "map.shops.noStock": "ዝተመዝገበ ፍርያት ኣብ መኽዘን የለን።",  // draft – needs native review
+  "map.shops.legend": "ድኳን እታወት (ቀለበት ቀጠልያ፦ ዝተረጋገጸ ሸያጢ)",  // draft – needs native review
+  "map.disease.scans": "{n} ምርመራታት ስእሊ፣ እቲ ናይ መወዳእታ {date}",  // draft – needs native review
+  "map.disease.note": "ብወረዳ ዝተቖጽረ፤ ቦታታት ግራውቲ ፈጺሞም ኣይርኣዩን።",  // draft – needs native review
+  "map.legend.dashed": "ነጠብጣብ መስመር፦ ግምታዊ ቦታ።",  // draft – needs native review
 };

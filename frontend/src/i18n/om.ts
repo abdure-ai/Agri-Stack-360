@@ -1840,4 +1840,37 @@ export const om: Record<MessageKey, string> = {
   "dealer.savePrice": "Gatii olkaa'i",  // draft – needs native review
   "dealer.sampleNote": "Gatii fakkeenyaa (agarsiisaaf): bakka buusuuf gatii mataa keessanii galchaa.",  // draft – needs native review
   "dealer.priceHint": "Yeroo appiin oomisha gorsu qonnaan bultoonni gatii kana guyyaa isaa waliin argu.",  // draft – needs native review
+
+  // ── Map ─────────────────────────────────────────────────────────────────────
+  "nav.map": "Kaartaa",  // draft – needs native review
+  "map.description": "Bakkeewwan dhukkubaa, gatii gabaa, suuqiiwwan galtee fi lafa qonnaa kaartaa tokko irratti, daangaa naannoo, godinaa fi aanaa seera qabeessa waliin.",  // draft – needs native review
+  "map.layers": "Sadarkaalee",  // draft – needs native review
+  "map.layer.disease": "Bakkeewwan dhukkubaa",  // draft – needs native review
+  "map.layer.markets": "Gabaawwan midhaanii fi gatii",  // draft – needs native review
+  "map.layer.shops": "Suuqiiwwan galtee",  // draft – needs native review
+  "map.layer.farms": "Lafa qonnaa",  // draft – needs native review
+  "map.crop": "Midhaan gatiif",  // draft – needs native review
+  "map.period": "Yeroo dhukkubaa",  // draft – needs native review
+  "map.lastDays": "Guyyoota {n} darban",  // draft – needs native review
+  "map.legend": "Ibsa mallattoo",  // draft – needs native review
+  "map.scope": "Kan mul'atu: {area}",  // draft – needs native review
+  "map.kebele": "Ganda: {kebele}",  // draft – needs native review
+  "map.approxWoreda": "Giddu galeessa aanaa irratti mul'ata (tilmaamaan).",  // draft – needs native review
+  "map.small": "Lakkoofsi 5 gadii <5 jedhamee mul'ata.",  // draft – needs native review
+  "map.farms.mine": "Lafa koo",  // draft – needs native review
+  "map.farms.visit": "Daawwannaa:",  // draft – needs native review
+  "map.farms.count": "Qonnaan bultoota {farmers} · lafa {farms}",  // draft – needs native review
+  "map.farms.hectares": "Hektaara {ha} galmaa'e",  // draft – needs native review
+  "map.farms.legendCounts": "Lafa qonnaa: qonnaan bultoota aanaa tokkoon galmaa'an (qonnaan bulaan tokkollee adda hin mul'atu).",  // draft – needs native review
+  "map.farms.legendDa": "Qonnaan bultoota isin waliin hojjetan (hayyama isaaniitiin). Diimaa: dursa daawwadhaa; burtukaanii: daawwannaa barbaada.",  // draft – needs native review
+  "map.farms.legendOwn": "Lafa keessan (gurraacha diimaa).",  // draft – needs native review
+  "map.markets.noPrice": "Gabaa kana irratti gatiin {crop} dhiyoo hin jiru.",  // draft – needs native review
+  "map.markets.approx": "Bakki tilmaamaan: giddu galeessa naannoo irratti mul'ata.",  // draft – needs native review
+  "map.markets.legend": "gatii daldalaa NMIS dhiyoo",  // draft – needs native review
+  "map.shops.counterfeit": "Akeekkachiisa koodii {warnings} · gabaasa sobaa {fakes}",  // draft – needs native review
+  "map.shops.noStock": "Oomishni galmaa'e kuusaa keessa hin jiru.",  // draft – needs native review
+  "map.shops.legend": "Suuqii galtee (marsaa magariisa: gurgurtaa mirkanaa'e)",  // draft – needs native review
+  "map.disease.scans": "Qorannoo suuraa {n}, isa dhumaa {date}",  // draft – needs native review
+  "map.disease.note": "Aanaan lakkaa'ame; bakki lafa qonnaa gonkumaa hin mul'atu.",  // draft – needs native review
+  "map.legend.dashed": "Sarara cita'aa: bakka tilmaamaa.",  // draft – needs native review
 };

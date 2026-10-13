@@ -7711,5 +7711,156 @@
   "dealerPriceHint": "Farmers see this price, with the date you set it, when the app recommends the product.",
   "@dealerPriceHint": {
     "description": "web key: dealer.priceHint"
+  },
+  "navMap": "Map",
+  "@navMap": {
+    "description": "web key: nav.map"
+  },
+  "mapDescription": "Disease hotspots, market prices, input shops and farms on one map, with official region, zone and woreda boundaries.",
+  "@mapDescription": {
+    "description": "web key: map.description"
+  },
+  "mapLayers": "Layers",
+  "@mapLayers": {
+    "description": "web key: map.layers"
+  },
+  "mapLayerDisease": "Disease hotspots",
+  "@mapLayerDisease": {
+    "description": "web key: map.layer.disease"
+  },
+  "mapLayerMarkets": "Crop markets & prices",
+  "@mapLayerMarkets": {
+    "description": "web key: map.layer.markets"
+  },
+  "mapLayerShops": "Input shops",
+  "@mapLayerShops": {
+    "description": "web key: map.layer.shops"
+  },
+  "mapLayerFarms": "Farms",
+  "@mapLayerFarms": {
+    "description": "web key: map.layer.farms"
+  },
+  "mapCrop": "Crop for prices",
+  "@mapCrop": {
+    "description": "web key: map.crop"
+  },
+  "mapPeriod": "Disease period",
+  "@mapPeriod": {
+    "description": "web key: map.period"
+  },
+  "mapLastDays": "Last {n} days",
+  "@mapLastDays": {
+    "description": "web key: map.lastDays",
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "mapLegend": "Legend",
+  "@mapLegend": {
+    "description": "web key: map.legend"
+  },
+  "mapScope": "Showing: {area}",
+  "@mapScope": {
+    "description": "web key: map.scope",
+    "placeholders": {
+      "area": {}
+    }
+  },
+  "mapKebele": "Kebele: {kebele}",
+  "@mapKebele": {
+    "description": "web key: map.kebele",
+    "placeholders": {
+      "kebele": {}
+    }
+  },
+  "mapApproxWoreda": "Shown at the woreda centre (approximate).",
+  "@mapApproxWoreda": {
+    "description": "web key: map.approxWoreda"
+  },
+  "mapSmall": "Counts under 5 are shown as <5.",
+  "@mapSmall": {
+    "description": "web key: map.small"
+  },
+  "mapFarmsMine": "My farm",
+  "@mapFarmsMine": {
+    "description": "web key: map.farms.mine"
+  },
+  "mapFarmsVisit": "Visit:",
+  "@mapFarmsVisit": {
+    "description": "web key: map.farms.visit"
+  },
+  "mapFarmsCount": "{farmers} farmers · {farms} plots",
+  "@mapFarmsCount": {
+    "description": "web key: map.farms.count",
+    "placeholders": {
+      "farmers": {},
+      "farms": {}
+    }
+  },
+  "mapFarmsHectares": "{ha} ha registered",
+  "@mapFarmsHectares": {
+    "description": "web key: map.farms.hectares",
+    "placeholders": {
+      "ha": {}
+    }
+  },
+  "mapFarmsLegendCounts": "Farms: registered farmers per woreda (no single farmer is shown).",
+  "@mapFarmsLegendCounts": {
+    "description": "web key: map.farms.legendCounts"
+  },
+  "mapFarmsLegendDa": "Farmers you work with (with their consent). Red: visit first; orange: needs a visit.",
+  "@mapFarmsLegendDa": {
+    "description": "web key: map.farms.legendDa"
+  },
+  "mapFarmsLegendOwn": "Your farm (purple).",
+  "@mapFarmsLegendOwn": {
+    "description": "web key: map.farms.legendOwn"
+  },
+  "mapMarketsNoPrice": "No recent {crop} price at this market.",
+  "@mapMarketsNoPrice": {
+    "description": "web key: map.markets.noPrice",
+    "placeholders": {
+      "crop": {}
+    }
+  },
+  "mapMarketsApprox": "Location approximate: shown at the region's centre.",
+  "@mapMarketsApprox": {
+    "description": "web key: map.markets.approx"
+  },
+  "mapMarketsLegend": "latest NMIS retail price",
+  "@mapMarketsLegend": {
+    "description": "web key: map.markets.legend"
+  },
+  "mapShopsCounterfeit": "{warnings} code warnings · {fakes} fake reports",
+  "@mapShopsCounterfeit": {
+    "description": "web key: map.shops.counterfeit",
+    "placeholders": {
+      "warnings": {},
+      "fakes": {}
+    }
+  },
+  "mapShopsNoStock": "No registered product in stock.",
+  "@mapShopsNoStock": {
+    "description": "web key: map.shops.noStock"
+  },
+  "mapShopsLegend": "Input shop (green ring: verified seller)",
+  "@mapShopsLegend": {
+    "description": "web key: map.shops.legend"
+  },
+  "mapDiseaseScans": "{n} photo checks, latest {date}",
+  "@mapDiseaseScans": {
+    "description": "web key: map.disease.scans",
+    "placeholders": {
+      "n": {},
+      "date": {}
+    }
+  },
+  "mapDiseaseNote": "Counted per woreda; farm locations are never shown.",
+  "@mapDiseaseNote": {
+    "description": "web key: map.disease.note"
+  },
+  "mapLegendDashed": "Dashed outline: approximate location.",
+  "@mapLegendDashed": {
+    "description": "web key: map.legend.dashed"
   }
 }

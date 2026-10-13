@@ -62,6 +62,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { name: "nav.dashboard", path: "/", icon: <GridIcon className={ICON} /> },
       { name: "nav.market", path: "/market", icon: <ChartAltIcon className={ICON} /> },
       { name: "nav.livestock", path: "/livestock", icon: <Beef className={ICON} strokeWidth={1.5} /> },
+      { name: "nav.map", path: "/map", icon: <MapIcon className={ICON} strokeWidth={1.5} /> },
       { name: "nav.advisory", path: "/advisory", icon: <AiIcon className={ICON} /> },
       { name: "nav.tips", path: "/tips", icon: <Lightbulb className={ICON} strokeWidth={1.5} /> },
     ],
