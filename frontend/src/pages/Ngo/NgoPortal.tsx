@@ -17,12 +17,13 @@ import TextArea from "@/components/form/input/TextArea";
 import Alert from "@/components/ui/alert/Alert";
 import Badge from "@/components/ui/badge/Badge";
 import Button from "@/components/ui/button/Button";
+import { useAdminOrg } from "@/hooks/useAdminOrg";
 import { errorMessage, useAsync } from "@/hooks/useAsync";
 import { tr, type MessageKey } from "@/i18n/core";
 import type { NgoProject } from "@/types/api";
 import { formatFullDate, todayISO } from "@/utils/formatters";
 import { Download, FolderKanban, Plus } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 
 function saveBlob(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
@@ -45,7 +46,19 @@ const FIGURES: { key: string; label: MessageKey }[] = [
 
 /** NGO / development project workspace: projects, their woredas, advisory messages and aggregated impact. */
 export default function NgoPortal() {
-  const data = useAsync(() => api.ngoProjects(), []);
+  const scope = useAdminOrg("ngo");
+  if (!scope.gate) return <Ngo key={scope.orgId ?? "mine"} orgId={scope.orgId} picker={scope.picker} />;
+  return (
+    <>
+      <PageMeta title={`${tr("nav.ngo")} | ${tr("app.name")}`} description={tr("ngo.description")} />
+      <PageHeader title={tr("nav.ngo")} description={tr("ngo.description")} actions={scope.picker} />
+      {scope.gate}
+    </>
+  );
+}
+
+function Ngo({ orgId, picker }: { orgId: number | null; picker?: ReactNode }) {
+  const data = useAsync(() => api.ngoProjects(orgId), [orgId]);
   const [name, setName] = useState("");
   const [start, setStart] = useState(todayISO());
   const [error, setError] = useState<string | null>(null);
@@ -54,7 +67,7 @@ export default function NgoPortal() {
     e.preventDefault();
     setError(null);
     try {
-      await api.ngoCreateProject({ name: name.trim(), start_date: start });
+      await api.ngoCreateProject(orgId, { name: name.trim(), start_date: start });
       setName("");
       data.reload();
     } catch (err) {
@@ -71,6 +84,7 @@ export default function NgoPortal() {
       <PageHeader
         title={data.data?.org.name ?? tr("nav.ngo")}
         description={tr("ngo.description")}
+        actions={picker}
       />
       <Card
         className="mb-4"
@@ -117,7 +131,7 @@ export default function NgoPortal() {
       ) : (
         <div className="space-y-4">
           {data.data.projects.map((p) => (
-            <ProjectCard key={p.id} project={p} onChanged={data.reload} />
+            <ProjectCard key={p.id} orgId={orgId} project={p} onChanged={data.reload} />
           ))}
         </div>
       )}
@@ -126,14 +140,16 @@ export default function NgoPortal() {
 }
 
 function ProjectCard({
+  orgId,
   project,
   onChanged,
 }: {
+  orgId: number | null;
   project: NgoProject;
   onChanged: () => void;
 }) {
   const impact = useAsync(
-    () => api.ngoImpact(project.id),
+    () => api.ngoImpact(orgId, project.id),
     [project.id, project.areas.length],
   );
   const [area, setArea] = useState<AreaValue>(EMPTY_AREA);
@@ -178,7 +194,7 @@ function ProjectCard({
             startIcon={<Download className="size-3.5" />}
             onClick={async () =>
               saveBlob(
-                await api.ngoImpactCsv(project.id),
+                await api.ngoImpactCsv(orgId, project.id),
                 `impact-project-${project.id}.csv`,
               )
             }
@@ -214,7 +230,7 @@ function ProjectCard({
                       aria-label={tr("supplier.remove")}
                       className="text-gray-400 hover:text-error-600"
                       onClick={() =>
-                        run(() => api.ngoRemoveArea(project.id, a.woreda_pcode))
+                        run(() => api.ngoRemoveArea(orgId, project.id, a.woreda_pcode))
                       }
                     >
                       ×
@@ -239,7 +255,7 @@ function ProjectCard({
               disabled={!area.woreda_pcode}
               onClick={() =>
                 run(async () => {
-                  await api.ngoAddArea(project.id, area.woreda_pcode);
+                  await api.ngoAddArea(orgId, project.id, area.woreda_pcode);
                   setArea(EMPTY_AREA);
                 })
               }
@@ -265,7 +281,7 @@ function ProjectCard({
               onClick={() =>
                 run(
                   async () => {
-                    const r = await api.ngoBroadcast(project.id, text.trim());
+                    const r = await api.ngoBroadcast(orgId, project.id, text.trim());
                     setText("");
                     return r;
                   },

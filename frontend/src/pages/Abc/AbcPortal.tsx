@@ -15,6 +15,7 @@ import Alert from "@/components/ui/alert/Alert";
 import Badge from "@/components/ui/badge/Badge";
 import Button from "@/components/ui/button/Button";
 import Tabs from "@/components/ui/tabs/Tabs";
+import { useAdminOrg } from "@/hooks/useAdminOrg";
 import { errorMessage, useAsync } from "@/hooks/useAsync";
 import { tr, trTerm, type MessageKey } from "@/i18n/core";
 import type { AbcOverview } from "@/types/api";
@@ -26,7 +27,7 @@ import {
   ShoppingCart,
   Sprout,
 } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import { useAuth } from "@/context/AuthContext";
 import CompanyTab from "./CompanyTab";
 import FormationTab from "./FormationTab";
@@ -52,12 +53,26 @@ function saveBlob(blob: Blob, filename: string) {
 /** ABC workspace. Everyone with a role in the ABC: company (profile, rules, team, history). ABC managers also:
  *  members who accepted, contributions, crop planning, messages to members, buyer requests. */
 export default function AbcPortal() {
+  const scope = useAdminOrg("abc");
+  if (!scope.gate) return <Abc key={scope.orgId ?? "mine"} adminOrg={scope.orgId} picker={scope.picker} />;
+  return (
+    <>
+      <PageMeta title={`${tr("nav.abc")} | ${tr("app.name")}`} description={tr("abc.description")} />
+      <PageHeader title={tr("nav.abc")} description={tr("abc.description")} actions={scope.picker} />
+      {scope.gate}
+    </>
+  );
+}
+
+/** adminOrg: the ABC an admin picked (admins belong to none); null for ABC officers, who work in their own. */
+function Abc({ adminOrg, picker }: { adminOrg: number | null; picker?: ReactNode }) {
   const { user, can } = useAuth();
   const companies = user?.abc_companies ?? [];
-  const [orgId, setOrgId] = useState<number | null>(companies[0]?.org_id ?? null);
+  const [picked, setOrgId] = useState<number | null>(companies[0]?.org_id ?? null);
+  const orgId = adminOrg ?? picked;
   const company = useAsync(() => api.abcCompany(orgId), [orgId]);
   const isManager = can("abc:manage");
-  const overview = useAsync(() => (isManager ? api.abcOverview() : Promise.resolve(null)), [isManager]);
+  const overview = useAsync(() => (isManager ? api.abcOverview(adminOrg) : Promise.resolve(null)), [isManager, adminOrg]);
   const [tab, setTab] = useState<Tab>("company");
   const ov = overview.data;
 
@@ -70,20 +85,23 @@ export default function AbcPortal() {
       <PageHeader
         title={company.data?.org.name ?? ov?.org.name ?? tr("nav.abc")}
         description={tr("abc.description")}
-        actions={isManager && (
-          <Button
+        actions={(picker || isManager) && (
+          <div className="flex flex-wrap gap-2">
+          {picker}
+          {isManager && <Button
             size="sm"
             variant="outline"
             startIcon={<Download className="size-4" />}
             onClick={async () =>
-              saveBlob(await api.abcReportCsv(), "abc-report.csv")
+              saveBlob(await api.abcReportCsv(adminOrg), "abc-report.csv")
             }
           >
             {tr("abc.report")}
-          </Button>
+          </Button>}
+          </div>
         )}
       />
-      {companies.length > 1 && (
+      {!adminOrg && companies.length > 1 && (
         <div className="mb-4 max-w-sm">
           <Label htmlFor="abc-pick">{tr("abc.pickCompany")}</Label>
           <Select id="abc-pick" value={String(orgId ?? "")} onChange={(v) => setOrgId(Number(v))}
@@ -175,11 +193,11 @@ export default function AbcPortal() {
           {tab === "inputs" && company.data && <InputsTab orgId={company.data.org.id} />}
           {tab === "machinery" && company.data && <MachineryTab orgId={company.data.org.id} />}
           {tab === "contributions" && (
-            <Contributions ov={ov} onChanged={overview.reload} />
+            <Contributions orgId={adminOrg} ov={ov} onChanged={overview.reload} />
           )}
-          {tab === "planning" && <Planning />}
-          {tab === "messages" && <Messages ov={ov} />}
-          {tab === "buyers" && <Buyers />}
+          {tab === "planning" && <Planning orgId={adminOrg} />}
+          {tab === "messages" && <Messages orgId={adminOrg} ov={ov} />}
+          {tab === "buyers" && <Buyers orgId={adminOrg} />}
         </>
       )}
     </>
@@ -187,13 +205,15 @@ export default function AbcPortal() {
 }
 
 function Contributions({
+  orgId,
   ov,
   onChanged,
 }: {
+  orgId: number | null;
   ov: AbcOverview;
   onChanged: () => void;
 }) {
-  const list = useAsync(() => api.abcContributions(), []);
+  const list = useAsync(() => api.abcContributions(orgId), [orgId]);
   const [form, setForm] = useState({
     farmer: "",
     kind: "land",
@@ -209,7 +229,7 @@ function Contributions({
     e.preventDefault();
     setError(null);
     try {
-      await api.abcAddContribution({
+      await api.abcAddContribution(orgId, {
         farmer_id: Number(form.farmer),
         kind: form.kind,
         description: form.description || null,
@@ -312,8 +332,8 @@ function Contributions({
   );
 }
 
-function Planning() {
-  const plan = useAsync(() => api.abcPlanning(), []);
+function Planning({ orgId }: { orgId: number | null }) {
+  const plan = useAsync(() => api.abcPlanning(orgId), [orgId]);
   const stage = (k: string) =>
     k === "unknown" ? tr("outlook.unknown") : trTerm("stage", k);
   if (plan.loading) return <LoadingState />;
@@ -397,13 +417,13 @@ function Planning() {
   );
 }
 
-function Messages({ ov }: { ov: AbcOverview }) {
+function Messages({ orgId, ov }: { orgId: number | null; ov: AbcOverview }) {
   const [text, setText] = useState("");
   const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
   async function send() {
     setMsg(null);
     try {
-      const r = await api.abcBroadcast(text.trim());
+      const r = await api.abcBroadcast(orgId, text.trim());
       setMsg({
         ok: true,
         text: tr("abc.sent", {
@@ -444,8 +464,8 @@ function Messages({ ov }: { ov: AbcOverview }) {
   );
 }
 
-function Buyers() {
-  const list = useAsync(() => api.abcBuyRequests(), []);
+function Buyers({ orgId }: { orgId: number | null }) {
+  const list = useAsync(() => api.abcBuyRequests(orgId), [orgId]);
   const [answer, setAnswer] = useState<
     Record<number, { text: string; qty: string }>
   >({});
@@ -531,7 +551,7 @@ function Buyers() {
                       size="sm"
                       disabled={a.text.trim().length < 3}
                       onClick={async () => {
-                        await api.abcRespond(
+                        await api.abcRespond(orgId, 
                           b.id,
                           a.text.trim(),
                           a.qty ? Number(a.qty) : null,

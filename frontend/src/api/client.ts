@@ -235,6 +235,11 @@ const platform = {
   upload: <T>(path: string, form: FormData) => request<T>(BASE, "POST", path, { form }),
 };
 
+/** `?org_id=N` for org-scoped writes: admins (orgs:manage) must name the organisation, members leave it out. */
+function oq(orgId: number | null): string {
+  return orgId != null ? `?org_id=${orgId}` : "";
+}
+
 function formOf(fields: Record<string, string | number | Blob | null | undefined>): FormData {
   const f = new FormData();
   for (const [k, v] of Object.entries(fields)) {
@@ -396,19 +401,20 @@ export const api = {
   reviewTranslationsCsv: () => getBlob(BASE, "/review/translations.csv"),
 
   // ── Agro-dealer shops ─────────────────────────────────────────────────────
-  dealerShop: () => platform.get<DealerShop>("/dealer/shop"),
-  dealerUpdateShop: (data: { area_pcode?: string | null; phone?: string | null; note?: string | null }) =>
-    platform.put<Organisation>("/dealer/shop", data),
-  dealerSetProduct: (productId: number, in_stock: boolean) => platform.put<unknown>(`/dealer/products/${productId}`, { in_stock }),
-  dealerSetPrice: (productId: number, in_stock: boolean, price_etb: number | null, pack_size: string | null) =>
-    platform.put<unknown>(`/dealer/products/${productId}`, { in_stock, price_etb, pack_size }),
-  dealerRemoveProduct: (productId: number) => platform.del<unknown>(`/dealer/products/${productId}`),
-  dealerCheck: (code: string) => platform.post<TrustResult>("/dealer/check", { code }),
-  dealerChecks: () => platform.get<DealerCheck[]>("/dealer/checks"),
+  dealerShop: (orgId: number | null) => platform.get<DealerShop>("/dealer/shop", { org_id: orgId }),
+  dealerUpdateShop: (orgId: number | null, data: { area_pcode?: string | null; phone?: string | null; note?: string | null }) =>
+    platform.put<Organisation>(`/dealer/shop${oq(orgId)}`, data),
+  dealerSetProduct: (orgId: number | null, productId: number, in_stock: boolean) =>
+    platform.put<unknown>(`/dealer/products/${productId}${oq(orgId)}`, { in_stock }),
+  dealerSetPrice: (orgId: number | null, productId: number, in_stock: boolean, price_etb: number | null, pack_size: string | null) =>
+    platform.put<unknown>(`/dealer/products/${productId}${oq(orgId)}`, { in_stock, price_etb, pack_size }),
+  dealerRemoveProduct: (orgId: number | null, productId: number) => platform.del<unknown>(`/dealer/products/${productId}${oq(orgId)}`),
+  dealerCheck: (orgId: number | null, code: string) => platform.post<TrustResult>(`/dealer/check${oq(orgId)}`, { code }),
+  dealerChecks: (orgId: number | null) => platform.get<DealerCheck[]>("/dealer/checks", { org_id: orgId }),
   trustShops: (productId?: number | null) => platform.get<VerifiedShop[]>("/trust/shops", { product_id: productId }),
 
   // ── ABC (abc:manage) and buy requests (trade:request) ─────────────────────
-  abcOverview: () => platform.get<AbcOverview>("/abc/overview"),
+  abcOverview: (orgId: number | null) => platform.get<AbcOverview>("/abc/overview", { org_id: orgId }),
   abcCompany: (orgId?: number | null) => platform.get<AbcCompany>("/abc/company", { org_id: orgId ?? undefined }),
   abcUpdateCompany: (orgId: number, data: Partial<AbcProfile>) =>
     platform.put<AbcProfile>(`/abc/company?org_id=${orgId}`, data),
@@ -552,17 +558,18 @@ export const api = {
   signMyAbcAgreement: (orgId: number) => platform.post<{ signed: boolean }>(`/abc/my/agreement/sign?org_id=${orgId}`),
   abcAddRule: (data: { key: string; abc_type: string; value: number; unit?: string | null; effective_from: string;
     source: string; verification_status: string; note?: string | null }) => platform.post<AbcRule>("/admin/abc-rules", data),
-  abcInvite: (phone: string) => platform.post<{ farmer_id: number; status: string }>("/abc/members", { phone }),
-  abcRemoveMember: (farmerId: number) => platform.del<unknown>(`/abc/members/${farmerId}`),
-  abcContributions: () => platform.get<AbcContribution[]>("/abc/contributions"),
-  abcAddContribution: (data: { farmer_id: number; kind: string; description?: string | null; quantity?: number | null; unit?: string | null }) =>
-    platform.post<AbcContribution>("/abc/contributions", data),
-  abcPlanning: () => platform.get<AbcPlanning>("/abc/planning"),
-  abcBroadcast: (text: string) => platform.post<{ sent: number; suppressed: number; no_consent: number }>("/abc/broadcast", { text }),
-  abcReportCsv: () => getBlob(BASE, "/abc/report.csv"),
-  abcBuyRequests: () => platform.get<BuyRequest[]>("/abc/buy-requests"),
-  abcRespond: (id: number, message: string, quantity_qt?: number | null) =>
-    platform.post<unknown>(`/abc/buy-requests/${id}/respond`, { message, quantity_qt: quantity_qt ?? null }),
+  abcInvite: (orgId: number | null, phone: string) => platform.post<{ farmer_id: number; status: string }>(`/abc/members${oq(orgId)}`, { phone }),
+  abcRemoveMember: (orgId: number | null, farmerId: number) => platform.del<unknown>(`/abc/members/${farmerId}${oq(orgId)}`),
+  abcContributions: (orgId: number | null) => platform.get<AbcContribution[]>("/abc/contributions", { org_id: orgId }),
+  abcAddContribution: (orgId: number | null, data: { farmer_id: number; kind: string; description?: string | null; quantity?: number | null; unit?: string | null }) =>
+    platform.post<AbcContribution>(`/abc/contributions${oq(orgId)}`, data),
+  abcPlanning: (orgId: number | null) => platform.get<AbcPlanning>("/abc/planning", { org_id: orgId }),
+  abcBroadcast: (orgId: number | null, text: string) =>
+    platform.post<{ sent: number; suppressed: number; no_consent: number }>(`/abc/broadcast${oq(orgId)}`, { text }),
+  abcReportCsv: (orgId: number | null) => getBlob(BASE, "/abc/report.csv", { org_id: orgId }),
+  abcBuyRequests: (orgId: number | null) => platform.get<BuyRequest[]>("/abc/buy-requests", { org_id: orgId }),
+  abcRespond: (orgId: number | null, id: number, message: string, quantity_qt?: number | null) =>
+    platform.post<unknown>(`/abc/buy-requests/${id}/respond${oq(orgId)}`, { message, quantity_qt: quantity_qt ?? null }),
   creditRequests: () => platform.get<LenderCreditRequest[]>("/credit/requests"),
   createCreditRequest: (phone: string, purpose: string) =>
     platform.post<{ ok: boolean; message: string }>("/credit/requests", { phone, purpose }),
@@ -579,14 +586,15 @@ export const api = {
   closeBuyRequest: (id: number) => platform.post<unknown>(`/trade/buy-requests/${id}/close`),
 
   // ── Commercial farm (estate:manage) ───────────────────────────────────────
-  estateOverview: () => platform.get<EstateOverview>("/estate/overview"),
+  estateOverview: (orgId: number | null) => platform.get<EstateOverview>("/estate/overview", { org_id: orgId }),
   estateDiseases: (language?: string | null) => platform.get<DaDisease[]>("/estate/diseases", { language }),
-  estateAddBlock: (data: Record<string, unknown>) => platform.post<EstateBlock>("/estate/blocks", data),
-  estateUpdateBlock: (id: number, data: Record<string, unknown>) => platform.put<EstateBlock>(`/estate/blocks/${id}`, data),
-  estateDeleteBlock: (id: number) => platform.del<unknown>(`/estate/blocks/${id}`),
-  estateScout: (id: number, data: { disease_key?: string | null; severity: string; incidence_pct?: number | null; note?: string | null }) =>
-    platform.post<unknown>(`/estate/blocks/${id}/scouting`, data),
-  estateReportCsv: () => getBlob(BASE, "/estate/report.csv"),
+  estateAddBlock: (orgId: number | null, data: Record<string, unknown>) => platform.post<EstateBlock>(`/estate/blocks${oq(orgId)}`, data),
+  estateUpdateBlock: (orgId: number | null, id: number, data: Record<string, unknown>) =>
+    platform.put<EstateBlock>(`/estate/blocks/${id}${oq(orgId)}`, data),
+  estateDeleteBlock: (orgId: number | null, id: number) => platform.del<unknown>(`/estate/blocks/${id}${oq(orgId)}`),
+  estateScout: (orgId: number | null, id: number, data: { disease_key?: string | null; severity: string; incidence_pct?: number | null; note?: string | null }) =>
+    platform.post<unknown>(`/estate/blocks/${id}/scouting${oq(orgId)}`, data),
+  estateReportCsv: (orgId: number | null) => getBlob(BASE, "/estate/report.csv", { org_id: orgId }),
 
   // ── Regulator (registry:manage) ───────────────────────────────────────────
   regulatorRegistry: () => platform.get<RegistryResponse>("/regulator/registry"),
@@ -597,15 +605,18 @@ export const api = {
   regulatorIssuance: () => platform.get<IssuanceRow[]>("/regulator/issuance"),
 
   // ── NGO projects (ngo:manage) ─────────────────────────────────────────────
-  ngoProjects: () => platform.get<{ org: Organisation; projects: NgoProject[] }>("/ngo/projects"),
-  ngoCreateProject: (data: { name: string; start_date: string; description?: string | null; end_date?: string | null }) =>
-    platform.post<NgoProject>("/ngo/projects", data),
-  ngoAddArea: (id: number, woreda_pcode: string) => platform.post<unknown>(`/ngo/projects/${id}/areas`, { woreda_pcode }),
-  ngoRemoveArea: (id: number, woreda: string) => platform.del<unknown>(`/ngo/projects/${id}/areas/${woreda}`),
-  ngoBroadcast: (id: number, text: string) =>
-    platform.post<{ sent: number | string; farmers_in_area: number | string; not_sent: number | string }>(`/ngo/projects/${id}/broadcast`, { text }),
-  ngoImpact: (id: number) => platform.get<{ project: NgoProject; areas: NgoProject["areas"]; summary: AreaSummary | null }>(`/ngo/projects/${id}/impact`),
-  ngoImpactCsv: (id: number) => getBlob(BASE, `/ngo/projects/${id}/impact.csv`),
+  ngoProjects: (orgId: number | null) => platform.get<{ org: Organisation; projects: NgoProject[] }>("/ngo/projects", { org_id: orgId }),
+  ngoCreateProject: (orgId: number | null, data: { name: string; start_date: string; description?: string | null; end_date?: string | null }) =>
+    platform.post<NgoProject>(`/ngo/projects${oq(orgId)}`, data),
+  ngoAddArea: (orgId: number | null, id: number, woreda_pcode: string) =>
+    platform.post<unknown>(`/ngo/projects/${id}/areas${oq(orgId)}`, { woreda_pcode }),
+  ngoRemoveArea: (orgId: number | null, id: number, woreda: string) =>
+    platform.del<unknown>(`/ngo/projects/${id}/areas/${woreda}${oq(orgId)}`),
+  ngoBroadcast: (orgId: number | null, id: number, text: string) =>
+    platform.post<{ sent: number | string; farmers_in_area: number | string; not_sent: number | string }>(`/ngo/projects/${id}/broadcast${oq(orgId)}`, { text }),
+  ngoImpact: (orgId: number | null, id: number) =>
+    platform.get<{ project: NgoProject; areas: NgoProject["areas"]; summary: AreaSummary | null }>(`/ngo/projects/${id}/impact`, { org_id: orgId }),
+  ngoImpactCsv: (orgId: number | null, id: number) => getBlob(BASE, `/ngo/projects/${id}/impact.csv`, { org_id: orgId }),
 
   // ── DA Copilot (da:work) ──────────────────────────────────────────────────
   daFarmers: (language?: string | null) => platform.get<DaFarmer[]>("/da/farmers", { language }),

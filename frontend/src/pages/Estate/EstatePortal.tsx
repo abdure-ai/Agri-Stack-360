@@ -22,13 +22,14 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { useAdminOrg } from "@/hooks/useAdminOrg";
 import { errorMessage, useAsync } from "@/hooks/useAsync";
 import { tr, trTerm, type MessageKey } from "@/i18n/core";
 import { useI18n } from "@/i18n/I18nProvider";
 import type { EstateBlock } from "@/types/api";
 import { formatFullDate, todayISO } from "@/utils/formatters";
 import { BellRing, Download, LayoutGrid, Plus, Users } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 
 const TH =
   "px-4 py-3 text-start text-theme-xs font-medium text-gray-500 dark:text-gray-400";
@@ -63,8 +64,20 @@ function saveBlob(blob: Blob, filename: string) {
 
 /** Commercial farm: blocks with crop stage, scouting, disease alerts near the blocks, team, export. */
 export default function EstatePortal() {
+  const scope = useAdminOrg("commercial_farm");
+  if (!scope.gate) return <Estate key={scope.orgId ?? "mine"} orgId={scope.orgId} picker={scope.picker} />;
+  return (
+    <>
+      <PageMeta title={`${tr("nav.estate")} | ${tr("app.name")}`} description={tr("estate.description")} />
+      <PageHeader title={tr("nav.estate")} description={tr("estate.description")} actions={scope.picker} />
+      {scope.gate}
+    </>
+  );
+}
+
+function Estate({ orgId, picker }: { orgId: number | null; picker?: ReactNode }) {
   const { lang } = useI18n();
-  const ov = useAsync(() => api.estateOverview(), []);
+  const ov = useAsync(() => api.estateOverview(orgId), [orgId]);
   const diseases = useAsync(() => api.estateDiseases(lang), [lang]);
   const [editing, setEditing] = useState<EstateBlock | "new" | null>(null);
   const [scouting, setScouting] = useState<EstateBlock | null>(null);
@@ -84,7 +97,8 @@ export default function EstatePortal() {
         title={d?.org.name ?? tr("nav.estate")}
         description={tr("estate.description")}
         actions={
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
+            {picker}
             <Button
               size="sm"
               startIcon={<Plus className="size-4" />}
@@ -97,7 +111,7 @@ export default function EstatePortal() {
               variant="outline"
               startIcon={<Download className="size-4" />}
               onClick={async () =>
-                saveBlob(await api.estateReportCsv(), "farm-blocks.csv")
+                saveBlob(await api.estateReportCsv(orgId), "farm-blocks.csv")
               }
             >
               {tr("reports.export")}
@@ -307,6 +321,7 @@ export default function EstatePortal() {
       )}
       {editing && (
         <BlockModal
+          orgId={orgId}
           block={editing === "new" ? null : editing}
           onClose={() => setEditing(null)}
           onSaved={() => {
@@ -317,6 +332,7 @@ export default function EstatePortal() {
       )}
       {scouting && (
         <ScoutModal
+          orgId={orgId}
           block={scouting}
           diseases={diseases.data ?? []}
           onClose={() => setScouting(null)}
@@ -342,10 +358,12 @@ function Tile({ label, value }: { label: string; value: string }) {
 }
 
 function BlockModal({
+  orgId,
   block,
   onClose,
   onSaved,
 }: {
+  orgId: number | null;
   block: EstateBlock | null;
   onClose: () => void;
   onSaved: () => void;
@@ -383,8 +401,8 @@ function BlockModal({
       woreda_pcode: area.woreda_pcode || null,
     };
     try {
-      if (block) await api.estateUpdateBlock(block.id, body);
-      else await api.estateAddBlock(body);
+      if (block) await api.estateUpdateBlock(orgId, block.id, body);
+      else await api.estateAddBlock(orgId, body);
       onSaved();
     } catch (err) {
       setError(errorMessage(err));
@@ -495,7 +513,7 @@ function BlockModal({
               size="sm"
               disabled={busy}
               onClick={async () => {
-                await api.estateDeleteBlock(block.id);
+                await api.estateDeleteBlock(orgId, block.id);
                 onSaved();
               }}
             >
@@ -529,11 +547,13 @@ function BlockModal({
 }
 
 function ScoutModal({
+  orgId,
   block,
   diseases,
   onClose,
   onSaved,
 }: {
+  orgId: number | null;
   block: EstateBlock;
   diseases: { key: string; name: string; is_disease?: boolean }[];
   onClose: () => void;
@@ -553,7 +573,7 @@ function ScoutModal({
     e.preventDefault();
     setError(null);
     try {
-      await api.estateScout(block.id, {
+      await api.estateScout(orgId, block.id, {
         disease_key: form.disease_key || null,
         severity: form.severity,
         incidence_pct: form.incidence_pct ? Number(form.incidence_pct) : null,

@@ -15,6 +15,7 @@ import Input from "@/components/form/input/InputField";
 import Alert from "@/components/ui/alert/Alert";
 import Badge from "@/components/ui/badge/Badge";
 import Button from "@/components/ui/button/Button";
+import { useAdminOrg } from "@/hooks/useAdminOrg";
 import { errorMessage, useAsync } from "@/hooks/useAsync";
 import { tr, type MessageKey } from "@/i18n/core";
 import type { DealerShop, TrustResult } from "@/types/api";
@@ -24,7 +25,7 @@ import { useState, type FormEvent } from "react";
 
 /** Agro-dealer shop: profile and location, products in stock, check a pack's code before selling it. */
 export default function DealerPortal() {
-  const shop = useAsync(() => api.dealerShop(), []);
+  const scope = useAdminOrg("agro_dealer");
   return (
     <>
       <PageMeta
@@ -34,10 +35,20 @@ export default function DealerPortal() {
       <PageHeader
         title={tr("nav.dealer")}
         description={tr("dealer.description")}
+        actions={scope.picker}
       />
       <div className="mb-4">
         <DemoDataNotice message="demo.message.trust" />
       </div>
+      {scope.gate ?? <Shop key={scope.orgId ?? "mine"} orgId={scope.orgId} />}
+    </>
+  );
+}
+
+function Shop({ orgId }: { orgId: number | null }) {
+  const shop = useAsync(() => api.dealerShop(orgId), [orgId]);
+  return (
+    <>
       {shop.loading ? (
         <LoadingState />
       ) : shop.error || !shop.data ? (
@@ -45,11 +56,11 @@ export default function DealerPortal() {
       ) : (
         <div className="grid grid-cols-12 gap-4 md:gap-6">
           <div className="col-span-12 space-y-4 md:space-y-6 xl:col-span-5">
-            <ProfileCard data={shop.data} onSaved={shop.reload} />
-            <CheckCard />
+            <ProfileCard orgId={orgId} data={shop.data} onSaved={shop.reload} />
+            <CheckCard orgId={orgId} />
           </div>
           <div className="col-span-12 xl:col-span-7">
-            <ProductsCard data={shop.data} onChanged={shop.reload} />
+            <ProductsCard orgId={orgId} data={shop.data} onChanged={shop.reload} />
           </div>
         </div>
       )}
@@ -58,9 +69,11 @@ export default function DealerPortal() {
 }
 
 function ProfileCard({
+  orgId,
   data,
   onSaved,
 }: {
+  orgId: number | null;
   data: DealerShop;
   onSaved: () => void;
 }) {
@@ -79,7 +92,7 @@ function ProfileCard({
     setBusy(true);
     setMsg(null);
     try {
-      await api.dealerUpdateShop({
+      await api.dealerUpdateShop(orgId, {
         area_pcode: area.woreda_pcode ? areaPcode(area) : null,
         phone,
       });
@@ -143,9 +156,11 @@ function ProfileCard({
 }
 
 function ProductsCard({
+  orgId,
   data,
   onChanged,
 }: {
+  orgId: number | null;
   data: DealerShop;
   onChanged: () => void;
 }) {
@@ -196,19 +211,19 @@ function ProductsCard({
                 <PriceEditor
                   key={`${p.id}-${p.price_etb ?? ""}-${p.pack_size ?? ""}`}
                   product={p}
-                  onSave={(price, pack) => run(() => api.dealerSetPrice(p.id, !!p.in_stock, price, pack))}
+                  onSave={(price, pack) => run(() => api.dealerSetPrice(orgId, p.id, !!p.in_stock, price, pack))}
                 />
               </div>
               <div className="flex items-center gap-3">
                 <Switch
                   checked={!!p.in_stock}
-                  onChange={(v) => run(() => api.dealerSetProduct(p.id, v))}
+                  onChange={(v) => run(() => api.dealerSetProduct(orgId, p.id, v))}
                   label={tr("dealer.inStock")}
                 />
                 <Button
                   size="xs"
                   variant="ghost"
-                  onClick={() => run(() => api.dealerRemoveProduct(p.id))}
+                  onClick={() => run(() => api.dealerRemoveProduct(orgId, p.id))}
                 >
                   {tr("supplier.remove")}
                 </Button>
@@ -236,7 +251,7 @@ function ProductsCard({
             disabled={!adding}
             onClick={() =>
               run(async () => {
-                await api.dealerSetProduct(Number(adding), true);
+                await api.dealerSetProduct(orgId, Number(adding), true);
                 setAdding("");
               })
             }
@@ -282,8 +297,8 @@ function PriceEditor({
   );
 }
 
-function CheckCard() {
-  const history = useAsync(() => api.dealerChecks(), []);
+function CheckCard({ orgId }: { orgId: number | null }) {
+  const history = useAsync(() => api.dealerChecks(orgId), [orgId]);
   const [code, setCode] = useState("");
   const [result, setResult] = useState<TrustResult | null>(null);
   const [busy, setBusy] = useState(false);
@@ -294,7 +309,7 @@ function CheckCard() {
     setBusy(true);
     setError(null);
     try {
-      setResult(await api.dealerCheck(code));
+      setResult(await api.dealerCheck(orgId, code));
       history.reload();
     } catch (err) {
       setError(errorMessage(err));
