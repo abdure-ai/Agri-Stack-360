@@ -247,7 +247,34 @@ def seed_abc_team(conn) -> int:
     seed_abc_meeting(conn, org)
     seed_abc_finance(conn, org)
     seed_abc_inputs(conn, org)
+    seed_abc_machinery(conn, org)
     return n
+
+
+def seed_abc_machinery(conn, org: int) -> None:
+    """Sample machinery (A8): an ATI-provided tractor and a pump with the ABC's sample rates; two member bookings."""
+    from datetime import date, timedelta
+
+    from backend import abc_company, abc_machinery
+
+    abc_machinery.ensure_schema(conn)
+    if conn.execute("SELECT 1 FROM abc_machines WHERE org_id=?", (org,)).fetchone():
+        return
+    gm = conn.execute("SELECT * FROM users WHERE phone='0944000008'").fetchone()
+    if not gm:
+        return
+    actor = dict(zip([d[1] for d in conn.execute("PRAGMA table_info(users)")], gm))
+    ctx = abc_company.abc_for(conn, actor, org, "machinery")
+    abc_machinery.add_machine(conn, ctx, actor, {"name": "Tractor 1 (provided by ATI)", "kind": "tractor",
+                                                 "ownership": "ati_provided", "rate_per_ha_etb": 2800, "hours_per_week": 40})
+    abc_machinery.add_machine(conn, ctx, actor, {"name": "Irrigation pump 1", "kind": "pump", "ownership": "abc",
+                                                 "rate_per_hour_etb": 150, "hours_per_week": 42})
+    for i, fid in enumerate(r[0] for r in conn.execute("SELECT farmer_id FROM abc_member_details WHERE org_id=? "
+                                                       "ORDER BY member_no LIMIT 2", (org,))):
+        farm = conn.execute("SELECT id FROM farms WHERE user_id=? ORDER BY id LIMIT 1", (fid,)).fetchone()
+        abc_machinery.book(conn, org, actor, farmer_id=fid, service="ploughing", farm_id=farm[0] if farm else None,
+                           area_ha=None if farm else 0.5, requested_date=date.today() + timedelta(days=3 + i), by="member",
+                           note=None)
 
 
 def seed_abc_inputs(conn, org: int) -> None:

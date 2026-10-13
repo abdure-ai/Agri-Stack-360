@@ -5,7 +5,7 @@ import Button from "@/components/ui/button/Button";
 import { errorMessage, useAsync } from "@/hooks/useAsync";
 import Alert from "@/components/ui/alert/Alert";
 import { useState } from "react";
-import { tr } from "@/i18n/core";
+import { tr, type MessageKey } from "@/i18n/core";
 import { Handshake } from "lucide-react";
 
 /** The farmer's ABC memberships: accept an invitation (shares plots and crop seasons with the ABC), or leave. */
@@ -14,6 +14,8 @@ export default function AbcInvitationsCard() {
   const memberships = useAsync(() => api.myAbcMemberships(), []);
   const votes = useAsync(() => api.myAbcVotes(), []);
   const orders = useAsync(() => api.myAbcOrders(), []);
+  const bookings = useAsync(() => api.myAbcBookings(), []);
+  const [book, setBook] = useState<{ org: number; service: string; date: string; ha: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
   if (!list.data?.length) return null;
   const agreementOf = (orgId: number) => memberships.data?.find((m) => m.org_id === orgId);
@@ -111,6 +113,45 @@ export default function AbcInvitationsCard() {
                   {tr("abcInv.leave")}
                 </Button>
               </span>
+            )}
+            {i.status !== "invited" && (
+              <div className="w-full text-sm">
+                {bookings.data?.filter((b) => b.org_id === i.org_id && b.status !== "cancelled").slice(0, 3).map((b) => (
+                  <p key={b.id} className="text-theme-xs text-gray-600 dark:text-gray-400">
+                    {tr(`abc.mac.svc.${b.service}` as MessageKey)} · {b.scheduled_date ?? b.requested_date} · {tr(`abc.mac.status.${b.status}` as MessageKey)}
+                    {b.machine ? ` · ${b.machine}` : ""}
+                  </p>
+                ))}
+                {book?.org === i.org_id ? (
+                  <span className="mt-2 flex flex-wrap items-center gap-2">
+                    <select className="rounded border border-gray-300 px-2 py-1 text-sm dark:border-gray-700 dark:bg-gray-900" value={book.service}
+                      onChange={(e) => setBook({ ...book, service: e.target.value })}>
+                      {["ploughing", "planting", "spraying", "harvesting", "threshing", "transport"].map((s) => (
+                        <option key={s} value={s}>{tr(`abc.mac.svc.${s}` as MessageKey)}</option>
+                      ))}
+                    </select>
+                    <input type="date" className="rounded border border-gray-300 px-2 py-1 text-sm dark:border-gray-700 dark:bg-gray-900" value={book.date}
+                      onChange={(e) => setBook({ ...book, date: e.target.value })} />
+                    <input inputMode="decimal" placeholder={tr("unit.ha")} className="w-20 rounded border border-gray-300 px-2 py-1 text-sm dark:border-gray-700 dark:bg-gray-900"
+                      value={book.ha} onChange={(e) => setBook({ ...book, ha: e.target.value })} />
+                    <Button size="xs" disabled={!book.date} onClick={async () => {
+                      setError(null);
+                      try {
+                        await api.myAbcBook({ org_id: i.org_id, service: book.service, requested_date: book.date, area_ha: book.ha ? Number(book.ha) : null });
+                        setBook(null);
+                        bookings.reload();
+                      } catch (err) {
+                        setError(errorMessage(err));
+                      }
+                    }}>{tr("abcInv.bookSend")}</Button>
+                  </span>
+                ) : (
+                  <Button className="mt-1" size="xs" variant="outline"
+                    onClick={() => setBook({ org: i.org_id, service: "ploughing", date: new Date().toISOString().slice(0, 10), ha: "" })}>
+                    {tr("abcInv.book")}
+                  </Button>
+                )}
+              </div>
             )}
             {i.status !== "invited" && agreementOf(i.org_id)?.agreement && (
               <div className="w-full rounded-lg bg-gray-50 p-3 text-sm dark:bg-white/[0.03]">

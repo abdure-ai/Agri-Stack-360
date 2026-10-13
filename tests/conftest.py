@@ -49,6 +49,9 @@ def platform(monkeypatch):
     from backend import abc_inputs
 
     abc_inputs.ensure_schema(conn)
+    from backend import abc_machinery
+
+    abc_machinery.ensure_schema(conn)
     from backend.routers import estate
 
     estate.ensure_schema(conn)

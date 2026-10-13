@@ -2369,4 +2369,74 @@ export const om: Record<MessageKey, string> = {
   "abc.action.abc.stock.receive": "Kuusaan fudhatame",  // draft – needs native review
   "abc.action.abc.stock.release": "Kuusaan dhorkame gadhiifame",  // draft – needs native review
   "abc.action.abc.stock.issue": "Galteen miseensaaf kenname",  // draft – needs native review
+
+  // ── ABC machinery (A8) ────────────────────────────────────────────────────
+  "abc.tab.machinery": "Maashinii",  // draft – needs native review
+  "abc.mac.register": "Galmee maashinii",  // draft – needs native review
+  "abc.mac.none": "Maashiniin ammallee hin jiru.",  // draft – needs native review
+  "abc.mac.add": "Maashinii dabali",  // draft – needs native review
+  "abc.mac.added": "Maashiniin dabalameera.",  // draft – needs native review
+  "abc.mac.name": "Maqaa",  // draft – needs native review
+  "abc.mac.kind": "Gosa",  // draft – needs native review
+  "abc.mac.ownership": "Abbaa",  // draft – needs native review
+  "abc.mac.reg": "Lakk. galmee",  // draft – needs native review
+  "abc.mac.perHa": "Gatii hektaaraan (qarshii)",  // draft – needs native review
+  "abc.mac.perHour": "Gatii sa'aatiin (qarshii)",  // draft – needs native review
+  "abc.mac.hours": "Sa'aatii torbaniin",  // draft – needs native review
+  "abc.mac.kind.tractor": "Traaktara",  // draft – needs native review
+  "abc.mac.kind.combine": "Kombaayinarii",  // draft – needs native review
+  "abc.mac.kind.thresher": "Maashinii midhaan tumu",  // draft – needs native review
+  "abc.mac.kind.truck": "Konkolaataa fe'umsaa",  // draft – needs native review
+  "abc.mac.kind.pump": "Paampii bishaanii",  // draft – needs native review
+  "abc.mac.kind.planter": "Maashinii facaasuu",  // draft – needs native review
+  "abc.mac.kind.sprayer": "Facaasaa",  // draft – needs native review
+  "abc.mac.kind.other": "Kan biraa",  // draft – needs native review
+  "abc.mac.own.abc": "Kan ABC",  // draft – needs native review
+  "abc.mac.own.ati_provided": "ATIn kan dhiyaate",  // draft – needs native review
+  "abc.mac.own.rented": "Kan kireeffame",  // draft – needs native review
+  "abc.mac.cond.good": "Gaarii",  // draft – needs native review
+  "abc.mac.cond.needs_repair": "Suphaa barbaada",  // draft – needs native review
+  "abc.mac.cond.out_of_service": "Tajaajila ala",  // draft – needs native review
+  "abc.mac.condition": "Haala",  // draft – needs native review
+  "abc.mac.serviceDue": "Suphaan ga'eera",  // draft – needs native review
+  "abc.mac.util": "{pct}% fayyadame · {available} keessaa {hours} h · hektaara {ha} (guyyaa 30)",  // draft – needs native review
+  "abc.mac.lastService": "Suphaa dhumaa {date}",  // draft – needs native review
+  "abc.mac.noService": "Suphaan hin galmoofne",  // draft – needs native review
+  "abc.mac.nextService": "itti aanu {date}",  // draft – needs native review
+  "abc.mac.work": "Hojii hojjetame",  // draft – needs native review
+  "abc.mac.cost": "Baasii (qarshii)",  // draft – needs native review
+  "abc.mac.next": "Suphaa itti aanu",  // draft – needs native review
+  "abc.mac.addService": "Suphaa galmeessi",  // draft – needs native review
+  "abc.mac.bookings": "Beellama tajaajilaa",  // draft – needs native review
+  "abc.mac.bookingsHint": "Tartiiba imalaatiin: guyyaan, achiis gandaan, achiis fageenya waajjira ABC irraa.",  // draft – needs native review
+  "abc.mac.noBookings": "Beellamni banaan hin jiru.",  // draft – needs native review
+  "abc.mac.chooseMachine": "Maashinii",  // draft – needs native review
+  "abc.mac.schedule": "Beellami",  // draft – needs native review
+  "abc.mac.hoursWorked": "Sa'aatii",  // draft – needs native review
+  "abc.mac.operator": "Oogaa",  // draft – needs native review
+  "abc.mac.fuel": "Boba'aa (L)",  // draft – needs native review
+  "abc.mac.fuelCost": "Baasii boba'aa",  // draft – needs native review
+  "abc.mac.done": "Hojiin xumurame",  // draft – needs native review
+  "abc.mac.jobLogged": "Hojiin galmaa'eera; kaffaltiin herrega miseensaatti dabalameera.",  // draft – needs native review
+  "abc.mac.jobs": "Galmee hojii",  // draft – needs native review
+  "abc.mac.status.requested": "Gaafatame",  // draft – needs native review
+  "abc.mac.status.scheduled": "Beellamame",  // draft – needs native review
+  "abc.mac.status.done": "Xumurame",  // draft – needs native review
+  "abc.mac.status.cancelled": "Haqame",  // draft – needs native review
+  "abc.mac.svc.ploughing": "Qotuu",  // draft – needs native review
+  "abc.mac.svc.planting": "Facaasuu",  // draft – needs native review
+  "abc.mac.svc.spraying": "Facaasuu (qoricha)",  // draft – needs native review
+  "abc.mac.svc.harvesting": "Sassaabuu",  // draft – needs native review
+  "abc.mac.svc.threshing": "Tumuu",  // draft – needs native review
+  "abc.mac.svc.transport": "Geejjiba",  // draft – needs native review
+  "abc.mac.svc.other": "Kan biraa",  // draft – needs native review
+  "abcInv.book": "Tajaajila maashinii gaafadhu",  // draft – needs native review
+  "abcInv.bookSend": "Gaaffii ergi",  // draft – needs native review
+  "abc.action.abc.machine.add": "Maashiniin dabalame",  // draft – needs native review
+  "abc.action.abc.machine.update": "Maashiniin jijjiirame",  // draft – needs native review
+  "abc.action.abc.machine.job": "Hojiin maashinii galmaa'e",  // draft – needs native review
+  "abc.action.abc.machine.maintenance": "Maashiniin suphame",  // draft – needs native review
+  "abc.action.abc.booking.request": "Tajaajilli gaafatame",  // draft – needs native review
+  "abc.action.abc.booking.schedule": "Tajaajilli beellamame",  // draft – needs native review
+  "abc.action.abc.booking.cancel": "Beellamni haqame",  // draft – needs native review
 };

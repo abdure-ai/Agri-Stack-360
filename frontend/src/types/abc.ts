@@ -469,3 +469,30 @@ export interface MyAbcOrder {
   org: string; product_name: string; area_ha: number; suggested_qty: number | null; confirmed_qty: number | null;
   status: AbcInputOrder["status"];
 }
+
+// ── Machinery (A8) ───────────────────────────────────────────────────────────
+
+export interface AbcMachine {
+  id: number; name: string; kind: string; ownership: "abc" | "ati_provided" | "rented"; reg_no: string | null;
+  condition: "good" | "needs_repair" | "out_of_service"; rate_per_ha_etb: number | null; rate_per_hour_etb: number | null;
+  hours_per_week: number; status: "active" | "retired"; note: string | null;
+  hours_30d: number; hectares_30d: number; jobs_30d: number; available_hours_30d: number; utilisation_percent: number | null;
+  last_service: string | null; next_service: string | null; service_due: boolean;
+}
+
+export interface AbcBooking {
+  id: number; farmer_id: number; name: string; phone: string; kebele: string | null; service: string; farm_id: number | null;
+  field_name: string | null; area_ha: number | null; requested_date: string; scheduled_date: string | null;
+  machine_id: number | null; machine: string | null; status: "requested" | "scheduled" | "done" | "cancelled";
+  requested_by: "member" | "staff"; note: string | null; distance_km: number | null;
+}
+
+export interface AbcJob {
+  id: number; machine: string; member: string | null; job_date: string; service: string; hectares: number | null;
+  hours: number | null; operator: string | null; fuel_litres: number | null; charge_etb: number;
+}
+
+export interface MyAbcBooking {
+  id: number; service: string; area_ha: number | null; requested_date: string; scheduled_date: string | null;
+  status: AbcBooking["status"]; machine: string | null; field_name: string | null; org_id: number; org: string;
+}

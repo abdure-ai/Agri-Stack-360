@@ -2369,4 +2369,74 @@ export const ti: Record<MessageKey, string> = {
   "abc.action.abc.stock.receive": "መኽዘን ኣትዩ",  // draft – needs native review
   "abc.action.abc.stock.release": "ዝተኣገደ መኽዘን ተለቒቑ",  // draft – needs native review
   "abc.action.abc.stock.issue": "እታወት ንኣባል ተዋሂቡ",  // draft – needs native review
+
+  // ── ABC machinery (A8) ────────────────────────────────────────────────────
+  "abc.tab.machinery": "ማሽነሪ",  // draft – needs native review
+  "abc.mac.register": "መዝገብ ማሽነሪ",  // draft – needs native review
+  "abc.mac.none": "ገና ማሽን የለን።",  // draft – needs native review
+  "abc.mac.add": "ማሽን ወስኽ",  // draft – needs native review
+  "abc.mac.added": "ማሽን ተወሲኹ።",  // draft – needs native review
+  "abc.mac.name": "ሽም",  // draft – needs native review
+  "abc.mac.kind": "ዓይነት",  // draft – needs native review
+  "abc.mac.ownership": "ዋና",  // draft – needs native review
+  "abc.mac.reg": "ቁጽሪ ምዝገባ",  // draft – needs native review
+  "abc.mac.perHa": "ዋጋ ብሄክታር (ብር)",  // draft – needs native review
+  "abc.mac.perHour": "ዋጋ ብሰዓት (ብር)",  // draft – needs native review
+  "abc.mac.hours": "ሰዓታት ብሰሙን",  // draft – needs native review
+  "abc.mac.kind.tractor": "ትራክተር",  // draft – needs native review
+  "abc.mac.kind.combine": "ኮምባይነር",  // draft – needs native review
+  "abc.mac.kind.thresher": "መውቂዒ ማሽን",  // draft – needs native review
+  "abc.mac.kind.truck": "መኪና ጽዕነት",  // draft – needs native review
+  "abc.mac.kind.pump": "ፓምፕ ማይ",  // draft – needs native review
+  "abc.mac.kind.planter": "መዝርኢ ማሽን",  // draft – needs native review
+  "abc.mac.kind.sprayer": "መርጨዊ",  // draft – needs native review
+  "abc.mac.kind.other": "ካልእ",  // draft – needs native review
+  "abc.mac.own.abc": "ናይ ABC",  // draft – needs native review
+  "abc.mac.own.ati_provided": "ብATI ዝቐረበ",  // draft – needs native review
+  "abc.mac.own.rented": "ዝተኻረየ",  // draft – needs native review
+  "abc.mac.cond.good": "ጽቡቕ",  // draft – needs native review
+  "abc.mac.cond.needs_repair": "ጽገና የድልዮ",  // draft – needs native review
+  "abc.mac.cond.out_of_service": "ካብ ኣገልግሎት ወጻኢ",  // draft – needs native review
+  "abc.mac.condition": "ኩነታት",  // draft – needs native review
+  "abc.mac.serviceDue": "ጽገና በጺሑ",  // draft – needs native review
+  "abc.mac.util": "{pct}% ተጠቒሙ · ካብ {available} {hours} ሰዓት · {ha} ሄክታር (30 መዓልቲ)",  // draft – needs native review
+  "abc.mac.lastService": "ናይ መወዳእታ ጽገና {date}",  // draft – needs native review
+  "abc.mac.noService": "ጽገና ኣይተመዝገበን",  // draft – needs native review
+  "abc.mac.nextService": "ዝቕጽል {date}",  // draft – needs native review
+  "abc.mac.work": "ዝተሰርሐ ስራሕ",  // draft – needs native review
+  "abc.mac.cost": "ወጻኢ (ብር)",  // draft – needs native review
+  "abc.mac.next": "ዝቕጽል ጽገና",  // draft – needs native review
+  "abc.mac.addService": "ጽገና መዝግብ",  // draft – needs native review
+  "abc.mac.bookings": "ቆጸራታት ኣገልግሎት",  // draft – needs native review
+  "abc.mac.bookingsHint": "ብስርዓት ጉዕዞ፦ ብመዓልቲ፣ ድሕሪኡ ብቀበሌ፣ ድሕሪኡ ብርሕቀት ካብ ቤት ጽሕፈት ABC።",  // draft – needs native review
+  "abc.mac.noBookings": "ክፉት ቆጸራ የለን።",  // draft – needs native review
+  "abc.mac.chooseMachine": "ማሽን",  // draft – needs native review
+  "abc.mac.schedule": "ቆጸራ ሃብ",  // draft – needs native review
+  "abc.mac.hoursWorked": "ሰዓት",  // draft – needs native review
+  "abc.mac.operator": "ኦፕሬተር",  // draft – needs native review
+  "abc.mac.fuel": "ነዳዲ (ሊ)",  // draft – needs native review
+  "abc.mac.fuelCost": "ወጻኢ ነዳዲ",  // draft – needs native review
+  "abc.mac.done": "ስራሕ ተወዲኡ",  // draft – needs native review
+  "abc.mac.jobLogged": "ስራሕ ተመዝጊቡ፤ ክፍሊት ናብ ሒሳብ ኣባል ተወሲኹ።",  // draft – needs native review
+  "abc.mac.jobs": "መዝገብ ስራሕ",  // draft – needs native review
+  "abc.mac.status.requested": "ተሓቲቱ",  // draft – needs native review
+  "abc.mac.status.scheduled": "ቆጸራ ተታሒዙ",  // draft – needs native review
+  "abc.mac.status.done": "ተወዲኡ",  // draft – needs native review
+  "abc.mac.status.cancelled": "ተሰሪዙ",  // draft – needs native review
+  "abc.mac.svc.ploughing": "ምሕራስ",  // draft – needs native review
+  "abc.mac.svc.planting": "ምዝራእ",  // draft – needs native review
+  "abc.mac.svc.spraying": "ምርጫት",  // draft – needs native review
+  "abc.mac.svc.harvesting": "ምእካብ",  // draft – needs native review
+  "abc.mac.svc.threshing": "ምውቃዕ",  // draft – needs native review
+  "abc.mac.svc.transport": "መጓዓዝያ",  // draft – needs native review
+  "abc.mac.svc.other": "ካልእ",  // draft – needs native review
+  "abcInv.book": "ኣገልግሎት ማሽነሪ ሕተት",  // draft – needs native review
+  "abcInv.bookSend": "ሕቶ ስደድ",  // draft – needs native review
+  "abc.action.abc.machine.add": "ማሽን ተወሲኹ",  // draft – needs native review
+  "abc.action.abc.machine.update": "ማሽን ተቐይሩ",  // draft – needs native review
+  "abc.action.abc.machine.job": "ስራሕ ማሽን ተመዝጊቡ",  // draft – needs native review
+  "abc.action.abc.machine.maintenance": "ማሽን ተጸጊኑ",  // draft – needs native review
+  "abc.action.abc.booking.request": "ኣገልግሎት ተሓቲቱ",  // draft – needs native review
+  "abc.action.abc.booking.schedule": "ኣገልግሎት ተቖጺሩ",  // draft – needs native review
+  "abc.action.abc.booking.cancel": "ቆጸራ ተሰሪዙ",  // draft – needs native review
 };

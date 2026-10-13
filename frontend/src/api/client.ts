@@ -11,7 +11,7 @@ import type { AbcCompany, AbcDocKind, AbcDocument, AbcFormation, AbcHistoryEntry
   AbcImportReport, AbcInclusion, AbcRegistryMember, AbcTeamMember, MyAbcMembership, AbcApproval, AbcCertificate,
   AbcSharePayment, AbcSharesOverview, PayMethod, AbcMeeting, AbcMeetingRow, AbcQuorum, AbcTally, AbcWeights,
   MyAbcVote, AbcFinanceSummary, AbcLedgerEntry, AbcMemberAccount, AbcStatement, AbcInputPlan, AbcPlannable,
-  AbcPurchaseOrder, AbcStockLot, AbcSupplier, MyAbcOrder } from "@/types/abc";
+  AbcPurchaseOrder, AbcStockLot, AbcSupplier, MyAbcOrder, AbcBooking, AbcJob, AbcMachine, MyAbcBooking } from "@/types/abc";
 import type {
   AdminArea,
   AiKey,
@@ -485,6 +485,25 @@ export const api = {
     platform.post<{ txn_id: number; amount_etb: number; remaining: number }>(`/abc/inputs/issue?org_id=${orgId}`, data),
   myAbcOrders: () => platform.get<MyAbcOrder[]>("/abc/my/orders"),
   confirmMyAbcOrder: (id: number, qty: number | null) => platform.post<unknown>(`/abc/my/orders/${id}/confirm`, { qty }),
+  abcMachines: (orgId: number) => platform.get<{ machines: AbcMachine[]; can_edit: boolean }>("/abc/machinery", { org_id: orgId }),
+  abcAddMachine: (orgId: number, data: Record<string, unknown>) => platform.post<AbcMachine>(`/abc/machinery?org_id=${orgId}`, data),
+  abcUpdateMachine: (orgId: number, id: number, data: Record<string, unknown>) =>
+    platform.put<AbcMachine>(`/abc/machinery/${id}?org_id=${orgId}`, data),
+  abcBookings: (orgId: number, all = false) => platform.get<AbcBooking[]>("/abc/machinery/bookings", { org_id: orgId, all }),
+  abcStaffBooking: (orgId: number, data: Record<string, unknown>) =>
+    platform.post<{ booking_id: number }>(`/abc/machinery/bookings?org_id=${orgId}`, data),
+  abcScheduleBooking: (orgId: number, id: number, machineId: number, date: string) =>
+    platform.post<AbcBooking>(`/abc/machinery/bookings/${id}/schedule?org_id=${orgId}`, { machine_id: machineId, scheduled_date: date }),
+  abcCancelBooking: (orgId: number, id: number) => platform.post<unknown>(`/abc/machinery/bookings/${id}/cancel?org_id=${orgId}`),
+  abcJobs: (orgId: number) => platform.get<AbcJob[]>("/abc/machinery/jobs", { org_id: orgId }),
+  abcLogJob: (orgId: number, data: Record<string, unknown>) =>
+    platform.post<{ job_id: number; charge_etb: number }>(`/abc/machinery/jobs?org_id=${orgId}`, data),
+  abcMaintenance: (orgId: number, machineId: number, data: Record<string, unknown>) =>
+    platform.post<unknown>(`/abc/machinery/${machineId}/maintenance?org_id=${orgId}`, data),
+  myAbcBookings: () => platform.get<MyAbcBooking[]>("/abc/my/bookings"),
+  myAbcBook: (data: { org_id: number; service: string; farm_id?: number | null; area_ha?: number | null; requested_date: string }) =>
+    platform.post<{ booking_id: number }>("/abc/my/bookings", data),
+  myAbcCancelBooking: (id: number) => platform.post<unknown>(`/abc/my/bookings/${id}/cancel`),
   abcShares: (orgId: number) => platform.get<AbcSharesOverview>("/abc/shares", { org_id: orgId }),
   abcShareSetup: (orgId: number, data: { share_value_etb?: number; shares_offered?: number }) =>
     platform.put<unknown>(`/abc/shares/setup?org_id=${orgId}`, data),
