@@ -169,9 +169,12 @@ def file_path(doc: dict) -> Path:
 # ── Formation record ──────────────────────────────────────────────────────────
 
 def formation(conn: sqlite3.Connection, org_id: int) -> dict:
-    conn.execute("INSERT OR IGNORE INTO abc_formation (org_id) VALUES (?)", (org_id,))
-    conn.commit()
-    return _one(conn, "SELECT * FROM abc_formation WHERE org_id=?", (org_id,))
+    row = _one(conn, "SELECT * FROM abc_formation WHERE org_id=?", (org_id,))
+    if row is None:                       # first use only: reads do not take the write lock
+        with conn:
+            conn.execute("INSERT OR IGNORE INTO abc_formation (org_id) VALUES (?)", (org_id,))
+        row = _one(conn, "SELECT * FROM abc_formation WHERE org_id=?", (org_id,))
+    return row
 
 
 def set_recognition(conn, ctx: core.AbcContext, user: dict, authority: str, recognized_on: date,

@@ -198,11 +198,16 @@ def add_rule(conn: sqlite3.Connection, user: dict, *, key: str, abc_type: str, v
 # ── Profile ───────────────────────────────────────────────────────────────────
 
 def profile(conn: sqlite3.Connection, org_id: int) -> dict:
-    """The ABC's profile row (created with defaults on first use)."""
-    conn.execute("INSERT OR IGNORE INTO abc_profiles (org_id, updated_at) VALUES (?, ?)", (org_id, _now()))
-    conn.commit()
+    """The ABC's profile row (created with defaults on first use). Reads never write when the row exists, so a page
+    load does not wait for the database write lock."""
     cur = conn.execute("SELECT * FROM abc_profiles WHERE org_id = ?", (org_id,))
-    return dict(zip([d[0] for d in cur.description], cur.fetchone()))
+    row = cur.fetchone()
+    if row is None:
+        with conn:
+            conn.execute("INSERT OR IGNORE INTO abc_profiles (org_id, updated_at) VALUES (?, ?)", (org_id, _now()))
+        cur = conn.execute("SELECT * FROM abc_profiles WHERE org_id = ?", (org_id,))
+        row = cur.fetchone()
+    return dict(zip([d[0] for d in cur.description], row))
 
 
 def update_profile(conn: sqlite3.Connection, user: dict, org_id: int, changes: dict) -> dict:
