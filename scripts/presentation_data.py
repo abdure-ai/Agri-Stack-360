@@ -246,7 +246,26 @@ def seed_abc_team(conn) -> int:
     seed_abc_shares(conn, org)
     seed_abc_meeting(conn, org)
     seed_abc_finance(conn, org)
+    seed_abc_inputs(conn, org)
     return n
+
+
+def seed_abc_inputs(conn, org: int) -> None:
+    """A demand plan (A7): Tilt 250 EC for wheat at the MoA manual rate × members' wheat area. No stock is received
+    here (receiving checks pack codes, which would count against the demo QR labels)."""
+    from backend import abc_company, abc_inputs
+
+    abc_inputs.ensure_schema(conn)
+    if conn.execute("SELECT 1 FROM abc_input_plans WHERE org_id=?", (org,)).fetchone():
+        return
+    gm = conn.execute("SELECT * FROM users WHERE phone='0944000008'").fetchone()
+    tilt = conn.execute("SELECT id FROM approved_products WHERE product_name='Tilt 250 EC'").fetchone()
+    if not gm or not tilt:
+        return
+    actor = dict(zip([d[1] for d in conn.execute("PRAGMA table_info(users)")], gm))
+    ctx = abc_company.abc_for(conn, actor, org, "stock")
+    abc_inputs.create_plan(conn, ctx, actor, season="2019 E.C. irrigated", crop="wheat", product_id=tilt[0],
+                           target="yellow_rust")
 
 
 def seed_abc_finance(conn, org: int) -> None:

@@ -34,8 +34,9 @@ import RegistryTab from "./RegistryTab";
 import SharesTab from "./SharesTab";
 import MeetingsTab from "./MeetingsTab";
 import FinanceTab from "./FinanceTab";
+import InputsTab from "./InputsTab";
 
-type Tab = "company" | "formation" | "members" | "shares" | "meetings" | "finance" | "contributions" | "planning" | "messages" | "buyers";
+type Tab = "company" | "formation" | "members" | "shares" | "meetings" | "finance" | "inputs" | "contributions" | "planning" | "messages" | "buyers";
 
 function saveBlob(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
@@ -100,12 +101,14 @@ export default function AbcPortal() {
               tabs={[{ id: "company", label: tr("abc.tab.company") }, { id: "formation", label: tr("abc.tab.formation") },
                 { id: "members", label: tr("abc.tab.members") }, { id: "shares", label: tr("abc.tab.shares") },
                 { id: "meetings", label: tr("abc.tab.meetings") },
-                ...(company.data.capabilities.includes("finance_read") ? [{ id: "finance" as const, label: tr("abc.tab.finance") }] : [])]} />
+                ...(company.data.capabilities.includes("finance_read") ? [{ id: "finance" as const, label: tr("abc.tab.finance") }] : []),
+                { id: "inputs", label: tr("abc.tab.inputs") }]} />
             {tab === "company" && <CompanyTab c={company.data} onChanged={company.reload} />}
             {tab === "members" && <RegistryTab orgId={company.data.org.id} />}
             {tab === "shares" && <SharesTab orgId={company.data.org.id} />}
             {tab === "meetings" && <MeetingsTab orgId={company.data.org.id} />}
             {tab === "finance" && <FinanceTab orgId={company.data.org.id} />}
+            {tab === "inputs" && <InputsTab orgId={company.data.org.id} />}
             {tab === "formation" && <FormationTab orgId={company.data.org.id} />}
           </>
         )
@@ -153,6 +156,7 @@ export default function AbcPortal() {
               { id: "shares", label: tr("abc.tab.shares") },
               { id: "meetings", label: tr("abc.tab.meetings") },
               { id: "finance", label: tr("abc.tab.finance") },
+              { id: "inputs", label: tr("abc.tab.inputs") },
               { id: "contributions", label: tr("abc.tab.contributions") },
               { id: "planning", label: tr("abc.tab.planning") },
               { id: "messages", label: tr("abc.tab.messages") },
@@ -165,6 +169,7 @@ export default function AbcPortal() {
           {tab === "shares" && company.data && <SharesTab orgId={company.data.org.id} />}
           {tab === "meetings" && company.data && <MeetingsTab orgId={company.data.org.id} />}
           {tab === "finance" && company.data && <FinanceTab orgId={company.data.org.id} />}
+          {tab === "inputs" && company.data && <InputsTab orgId={company.data.org.id} />}
           {tab === "contributions" && (
             <Contributions ov={ov} onChanged={overview.reload} />
           )}

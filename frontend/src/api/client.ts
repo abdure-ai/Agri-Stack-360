@@ -10,7 +10,8 @@ import type { MapLayers } from "@/types/map";
 import type { AbcCompany, AbcDocKind, AbcDocument, AbcFormation, AbcHistoryEntry, AbcProfile, AbcRole, AbcRule,
   AbcImportReport, AbcInclusion, AbcRegistryMember, AbcTeamMember, MyAbcMembership, AbcApproval, AbcCertificate,
   AbcSharePayment, AbcSharesOverview, PayMethod, AbcMeeting, AbcMeetingRow, AbcQuorum, AbcTally, AbcWeights,
-  MyAbcVote, AbcFinanceSummary, AbcLedgerEntry, AbcMemberAccount, AbcStatement } from "@/types/abc";
+  MyAbcVote, AbcFinanceSummary, AbcLedgerEntry, AbcMemberAccount, AbcStatement, AbcInputPlan, AbcPlannable,
+  AbcPurchaseOrder, AbcStockLot, AbcSupplier, MyAbcOrder } from "@/types/abc";
 import type {
   AdminArea,
   AiKey,
@@ -464,6 +465,26 @@ export const api = {
     platform.post<unknown>(`/abc/finance/member-txns/${id}/void?org_id=${orgId}`, { reason }),
   abcFinanceExport: (orgId: number) => getBlob(BASE, "/abc/finance/export.xlsx", { org_id: orgId }),
   myAbcStatement: (orgId: number) => platform.get<AbcStatement>("/abc/my/statement", { org_id: orgId }),
+  abcPlannable: (orgId: number, crop: string) => platform.get<AbcPlannable[]>("/abc/inputs/products", { org_id: orgId, crop }),
+  abcInputPlans: (orgId: number) =>
+    platform.get<{ plans: AbcInputPlan[]; can_stock: boolean; can_plan: boolean }>("/abc/inputs/plans", { org_id: orgId }),
+  abcCreatePlan: (orgId: number, data: { season: string; crop: string; product_id: number; target?: string | null }) =>
+    platform.post<AbcInputPlan>(`/abc/inputs/plans?org_id=${orgId}`, data),
+  abcConfirmOrder: (orgId: number, orderId: number, qty: number | null) =>
+    platform.post<unknown>(`/abc/inputs/orders/${orderId}/confirm?org_id=${orgId}`, { qty }),
+  abcSuppliers: (orgId: number, productId: number) =>
+    platform.get<AbcSupplier[]>("/abc/inputs/suppliers", { org_id: orgId, product_id: productId }),
+  abcPurchaseOrders: (orgId: number) => platform.get<AbcPurchaseOrder[]>("/abc/inputs/purchase-orders", { org_id: orgId }),
+  abcCreatePO: (orgId: number, data: Record<string, unknown>) =>
+    platform.post<{ po_id: number; status: string; approval_id: number | null; total_etb: number }>(`/abc/inputs/purchase-orders?org_id=${orgId}`, data),
+  abcReceive: (orgId: number, data: Record<string, unknown>) => platform.post<AbcStockLot>(`/abc/inputs/receive?org_id=${orgId}`, data),
+  abcStock: (orgId: number) => platform.get<{ lots: AbcStockLot[]; can_stock: boolean }>("/abc/inputs/stock", { org_id: orgId }),
+  abcReleaseLot: (orgId: number, lotId: number, reason: string) =>
+    platform.post<AbcStockLot>(`/abc/inputs/stock/${lotId}/release?org_id=${orgId}`, { reason }),
+  abcIssue: (orgId: number, data: Record<string, unknown>) =>
+    platform.post<{ txn_id: number; amount_etb: number; remaining: number }>(`/abc/inputs/issue?org_id=${orgId}`, data),
+  myAbcOrders: () => platform.get<MyAbcOrder[]>("/abc/my/orders"),
+  confirmMyAbcOrder: (id: number, qty: number | null) => platform.post<unknown>(`/abc/my/orders/${id}/confirm`, { qty }),
   abcShares: (orgId: number) => platform.get<AbcSharesOverview>("/abc/shares", { org_id: orgId }),
   abcShareSetup: (orgId: number, data: { share_value_etb?: number; shares_offered?: number }) =>
     platform.put<unknown>(`/abc/shares/setup?org_id=${orgId}`, data),

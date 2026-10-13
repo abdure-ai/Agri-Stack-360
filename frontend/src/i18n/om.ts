@@ -2294,4 +2294,79 @@ export const om: Record<MessageKey, string> = {
   "abc.action.abc.ledger.void": "Galmeen herregaa haqame",  // draft – needs native review
   "abc.action.abc.member_account.add": "Galmee herrega miseensaa",  // draft – needs native review
   "abc.action.abc.member_account.void": "Galmeen herrega miseensaa haqame",  // draft – needs native review
+
+  // ── ABC inputs & stock (A7) ───────────────────────────────────────────────
+  "abc.tab.inputs": "Galtee fi kuusaa",  // draft – needs native review
+  "abc.inp.newPlan": "Fedhii galtee karoorsi",  // draft – needs native review
+  "abc.inp.newPlanHint": "Hammi miseensa tokkoo = hammam hektaaraan caqafame × lafa midhaan sanaa. Hammi caqafame yoo hin jiraanne hammi hin kennamu.",  // draft – needs native review
+  "abc.inp.product": "Oomisha (galmaa'e)",  // draft – needs native review
+  "abc.inp.noRate": "hammi caqafame hin jiru",  // draft – needs native review
+  "abc.inp.noProducts": "Midhaan kanaaf oomishni galmaa'e hammam qabu ammallee hin jiru.",  // draft – needs native review
+  "abc.inp.createPlan": "Karoora uumi",  // draft – needs native review
+  "abc.inp.planCreated": "Karoorri uumameera: miseensonni ajaja isaanii appii keessatti mirkaneessuu danda'u.",  // draft – needs native review
+  "abc.inp.plans": "Karoora fedhii",  // draft – needs native review
+  "abc.inp.plansHint": "Ajaja miseensotaa ilaaluu fi dhiyeessaa irraa bituuf karoora tuqaa.",  // draft – needs native review
+  "abc.inp.noPlans": "Karoorri ammallee hin jiru.",  // draft – needs native review
+  "abc.inp.rateLine": "Hektaaraan {rate} · {source}",  // draft – needs native review
+  "abc.inp.noRateLine": "Hammi caqafame hin jiru: hammi hin herregamu. Hojjetaa misoomaa gaafadhaa.",  // draft – needs native review
+  "abc.inp.totals": "Miseensota {members} · hektaara {ha} · yaadame {suggested} · mirkanaa'e {confirmed} ({n})",  // draft – needs native review
+  "abc.inp.suggested": "Yaadame",  // draft – needs native review
+  "abc.inp.confirmed": "Mirkanaa'e",  // draft – needs native review
+  "abc.inp.status.suggested": "Miseensa eeggachaa",  // draft – needs native review
+  "abc.inp.status.confirmed": "Mirkanaa'e",  // draft – needs native review
+  "abc.inp.status.declined": "Hin barbaachisu",  // draft – needs native review
+  "abc.inp.status.delivered": "Ga'eera",  // draft – needs native review
+  "abc.inp.by.member": "appii keessatti",  // draft – needs native review
+  "abc.inp.by.staff": "hojjetaan",  // draft – needs native review
+  "abc.inp.confirmForMember": "Miseensi qaamaan walii gale",  // draft – needs native review
+  "abc.inp.buy": "Dhiyeessaa irraa bitadhu",  // draft – needs native review
+  "abc.inp.qty": "Hamma",  // draft – needs native review
+  "abc.inp.unitPrice": "Gatii tokkoo (qarshii)",  // draft – needs native review
+  "abc.inp.createPO": "Ajaja bittaa uumi",  // draft – needs native review
+  "abc.inp.poCreated": "Ajajni bittaa uumameera (daangaa ol yoo ta'e boordii eeggata).",  // draft – needs native review
+  "abc.inp.neutral": "Suuqiiwwan kan dhiyoo irraa jalqabee tarreeffamu; mallattoo fi gatiin ni mul'atu malee tartiiba hin jijjiiran.",  // draft – needs native review
+  "abc.inp.pos": "Ajaja bittaa",  // draft – needs native review
+  "abc.inp.po.pending": "Boordii eeggachaa",  // draft – needs native review
+  "abc.inp.po.approved": "Mirkanaa'e",  // draft – needs native review
+  "abc.inp.po.rejected": "Didame",  // draft – needs native review
+  "abc.inp.po.received": "Fudhatame",  // draft – needs native review
+  "abc.inp.po.cancelled": "Haqame",  // draft – needs native review
+  "abc.inp.receive": "Fudhu",  // draft – needs native review
+  "abc.inp.received": "Fudhatameera: koodiin qorannoo oomishaa darbeera.",  // draft – needs native review
+  "abc.inp.quarantined": "Fudhatame garuu dhorkame: {reason}. Miseensotaaf kennamuu hin danda'u.",  // draft – needs native review
+  "abc.inp.receiveHint": "Koodii qodaa tokkoon tokkoon irratti jiru barreessaa ykn iskaanii godhaa: kan qorannoo darbe qofatu kennama.",  // draft – needs native review
+  "abc.inp.reason.ok": "darbe",  // draft – needs native review
+  "abc.inp.reason.no_code": "koodiin hin kennamne: dursa qodaa mirkaneessaa",  // draft – needs native review
+  "abc.inp.reason.duplicate_in_abc": "koodiin kun duraan ABCn fudhatameera (garagalcha ta'uu danda'a)",  // draft – needs native review
+  "abc.inp.reason.unknown_code": "koodii hin beekamne",  // draft – needs native review
+  "abc.inp.reason.possible_copy": "garagalcha ta'uu danda'a (yeroo baay'ee mul'ate)",  // draft – needs native review
+  "abc.inp.reason.recalled": "baachiin deebi'e",  // draft – needs native review
+  "abc.inp.reason.expired": "yeroon darbe",  // draft – needs native review
+  "abc.inp.reason.not_registered": "oomishni hin galmoofne",  // draft – needs native review
+  "abc.inp.reason.supplier_suspended": "dhiyeessaan dhorkame",  // draft – needs native review
+  "abc.inp.reason.other_product": "koodiin kun kan oomisha biraa ti",  // draft – needs native review
+  "abc.inp.stock": "Kuusaa",  // draft – needs native review
+  "abc.inp.noStock": "Kuusaan ammallee hin jiru.",  // draft – needs native review
+  "abc.inp.lot.available": "Ni argama",  // draft – needs native review
+  "abc.inp.lot.quarantined": "Dhorkame",  // draft – needs native review
+  "abc.inp.lot.expired": "Yeroon darbe",  // draft – needs native review
+  "abc.inp.lot.expiresSoon": "Dhiyootti yeroon darba",  // draft – needs native review
+  "abc.inp.lot.empty": "Xumurame",  // draft – needs native review
+  "abc.inp.release": "Qorannoo qaamaa booda gadhiisi",  // draft – needs native review
+  "abc.inp.releaseReason": "Kuusaan kun akkamitti mirkanaa'e? (seenaa keessatti olkaa'ama)",  // draft – needs native review
+  "abc.inp.payment": "Kaffaltii",  // draft – needs native review
+  "abc.inp.onCredit": "Liqiidhaan",  // draft – needs native review
+  "abc.inp.issue": "Kenni",  // draft – needs native review
+  "abc.inp.issued": "Kennameera; liqiidhaan yoo ta'e herrega miseensaatti dabalameera.",  // draft – needs native review
+  "abcInv.orderSuggested": "{org} {product} karoorsa: lafa keessan hektaara {ha}f {qty} {unit}. Ni barbaadduu?",  // draft – needs native review
+  "abcInv.orderConfirm": "Eeyyee, kana ajaji",  // draft – needs native review
+  "abcInv.orderChange": "Hamma biraa",  // draft – needs native review
+  "abcInv.orderOther": "Hammam barbaaddu ({unit})?",  // draft – needs native review
+  "abcInv.orderDecline": "Hin barbaachisu",  // draft – needs native review
+  "abc.action.abc.input.plan": "Fedhiin galtee karoorfame",  // draft – needs native review
+  "abc.action.abc.input.order_confirm": "Ajajni galtee mirkanaa'e",  // draft – needs native review
+  "abc.action.abc.input.po_create": "Ajajni bittaa uumame",  // draft – needs native review
+  "abc.action.abc.stock.receive": "Kuusaan fudhatame",  // draft – needs native review
+  "abc.action.abc.stock.release": "Kuusaan dhorkame gadhiifame",  // draft – needs native review
+  "abc.action.abc.stock.issue": "Galteen miseensaaf kenname",  // draft – needs native review
 };

@@ -40,6 +40,7 @@ from backend.routers.abc_members import router as abc_members_router
 from backend.routers.abc_shares import router as abc_shares_router
 from backend.routers.abc_governance import router as abc_governance_router
 from backend.routers.abc_finance import router as abc_finance_router
+from backend.routers.abc_inputs import router as abc_inputs_router
 from backend import ai_keys
 from backend import admin_areas, audit, erasure, input_trust, platform_db, tips, training_data
 from backend.advisory.schema import ensure_schema
@@ -53,13 +54,14 @@ audit.ensure_schema(get_platform_connection())
 erasure.ensure_schema(get_platform_connection())
 review_routes.ensure_schema(get_platform_connection())
 abc_routes.ensure_schema(get_platform_connection())
-from backend import abc_company, abc_finance, abc_formation, abc_governance, abc_members, abc_shares  # noqa: E402
+from backend import abc_company, abc_finance, abc_formation, abc_governance, abc_inputs, abc_members, abc_shares  # noqa: E402
 abc_company.ensure_schema(get_platform_connection())
 abc_formation.ensure_schema(get_platform_connection())
 abc_members.ensure_schema(get_platform_connection())
 abc_shares.ensure_schema(get_platform_connection())
 abc_governance.ensure_schema(get_platform_connection())
 abc_finance.ensure_schema(get_platform_connection())
+abc_inputs.ensure_schema(get_platform_connection())
 estate_routes.ensure_schema(get_platform_connection())
 ngo_routes.ensure_schema(get_platform_connection())
 credit_routes.ensure_schema(get_platform_connection())
@@ -136,6 +138,7 @@ app.include_router(abc_members_router, prefix="/api")
 app.include_router(abc_shares_router, prefix="/api")
 app.include_router(abc_governance_router, prefix="/api")
 app.include_router(abc_finance_router, prefix="/api")
+app.include_router(abc_inputs_router, prefix="/api")
 app.include_router(beckn_router,       prefix="/api")   # signed network requests, off unless BECKN_ENABLED=1
 
 

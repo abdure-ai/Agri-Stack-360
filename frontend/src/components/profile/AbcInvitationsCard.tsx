@@ -13,6 +13,7 @@ export default function AbcInvitationsCard() {
   const list = useAsync(() => api.myAbcInvitations(), []);
   const memberships = useAsync(() => api.myAbcMemberships(), []);
   const votes = useAsync(() => api.myAbcVotes(), []);
+  const orders = useAsync(() => api.myAbcOrders(), []);
   const [error, setError] = useState<string | null>(null);
   if (!list.data?.length) return null;
   const agreementOf = (orgId: number) => memberships.data?.find((m) => m.org_id === orgId);
@@ -48,6 +49,22 @@ export default function AbcInvitationsCard() {
       description={tr("abcInv.hint")}
     >
       {error && <Alert className="mb-3" variant="error" message={error} />}
+      {orders.data?.filter((o) => o.status === "suggested").map((o) => (
+        <div key={`o${o.id}`} className="mb-3 rounded-lg bg-success-50 p-3 text-sm dark:bg-success-500/10">
+          <p className="text-gray-800 dark:text-white/90">
+            {tr("abcInv.orderSuggested", { org: o.org, product: o.product_name, qty: o.suggested_qty ?? "—", unit: o.unit ?? "", ha: o.area_ha })}
+          </p>
+          {o.rate_text && <p className="text-theme-xs text-gray-500">{tr("abc.inp.rateLine", { rate: o.rate_text, source: o.rate_source ?? "—" })}</p>}
+          <span className="mt-2 flex flex-wrap gap-2">
+            <Button size="xs" onClick={async () => { await api.confirmMyAbcOrder(o.id, o.suggested_qty); orders.reload(); }}>{tr("abcInv.orderConfirm")}</Button>
+            <Button size="xs" variant="outline" onClick={async () => {
+              const v = window.prompt(tr("abcInv.orderOther", { unit: o.unit ?? "" }));
+              if (v !== null && v.trim() !== "" && !Number.isNaN(Number(v))) { await api.confirmMyAbcOrder(o.id, Number(v)); orders.reload(); }
+            }}>{tr("abcInv.orderChange")}</Button>
+            <Button size="xs" variant="ghost" onClick={async () => { await api.confirmMyAbcOrder(o.id, 0); orders.reload(); }}>{tr("abcInv.orderDecline")}</Button>
+          </span>
+        </div>
+      ))}
       {votes.data?.filter((v) => !v.confirmed_at).map((v) => (
         <div key={v.id} className="mb-3 rounded-lg bg-brand-50 p-3 text-sm dark:bg-brand-500/10">
           <p className="text-gray-800 dark:text-white/90">

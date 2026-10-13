@@ -2294,4 +2294,79 @@ export const am: Record<MessageKey, string> = {
   "abc.action.abc.ledger.void": "የሂሳብ ምዝገባ ተሰርዟል",  // draft – needs native review
   "abc.action.abc.member_account.add": "የአባል ሂሳብ ምዝገባ",  // draft – needs native review
   "abc.action.abc.member_account.void": "የአባል ሂሳብ ምዝገባ ተሰርዟል",  // draft – needs native review
+
+  // ── ABC inputs & stock (A7) ───────────────────────────────────────────────
+  "abc.tab.inputs": "ግብዓትና ክምችት",  // draft – needs native review
+  "abc.inp.newPlan": "የግብዓት ፍላጎት አቅድ",  // draft – needs native review
+  "abc.inp.newPlanHint": "የእያንዳንዱ አባል መጠን = በሄክታር የተጠቀሰው መጠን × በሰብሉ ያለው ማሳ። የተጠቀሰ መጠን ከሌለ መጠን አይሰጥም።",  // draft – needs native review
+  "abc.inp.product": "ምርት (የተመዘገበ)",  // draft – needs native review
+  "abc.inp.noRate": "የተጠቀሰ መጠን የለም",  // draft – needs native review
+  "abc.inp.noProducts": "ለዚህ ሰብል መጠን ያለው የተመዘገበ ምርት ገና የለም።",  // draft – needs native review
+  "abc.inp.createPlan": "ዕቅድ ፍጠር",  // draft – needs native review
+  "abc.inp.planCreated": "ዕቅዱ ተፈጥሯል፤ አባላት ትዕዛዛቸውን በመተግበሪያው ማረጋገጥ ይችላሉ።",  // draft – needs native review
+  "abc.inp.plans": "የፍላጎት ዕቅዶች",  // draft – needs native review
+  "abc.inp.plansHint": "የአባላትን ትዕዛዝ ለማየትና ከአቅራቢ ለመግዛት ዕቅዱን ይጫኑ።",  // draft – needs native review
+  "abc.inp.noPlans": "ገና ዕቅድ የለም።",  // draft – needs native review
+  "abc.inp.rateLine": "በሄክታር {rate} · {source}",  // draft – needs native review
+  "abc.inp.noRateLine": "የተጠቀሰ መጠን የለም፤ መጠኑ አይሰላም። የልማት ሰራተኛዎን ይጠይቁ።",  // draft – needs native review
+  "abc.inp.totals": "{members} አባላት · {ha} ሄክታር · የተጠቆመ {suggested} · የተረጋገጠ {confirmed} ({n})",  // draft – needs native review
+  "abc.inp.suggested": "የተጠቆመ",  // draft – needs native review
+  "abc.inp.confirmed": "የተረጋገጠ",  // draft – needs native review
+  "abc.inp.status.suggested": "አባሉን በመጠባበቅ",  // draft – needs native review
+  "abc.inp.status.confirmed": "ተረጋግጧል",  // draft – needs native review
+  "abc.inp.status.declined": "አያስፈልግም",  // draft – needs native review
+  "abc.inp.status.delivered": "ደርሷል",  // draft – needs native review
+  "abc.inp.by.member": "በመተግበሪያው",  // draft – needs native review
+  "abc.inp.by.staff": "በሠራተኛ",  // draft – needs native review
+  "abc.inp.confirmForMember": "አባሉ በአካል ተስማምቷል",  // draft – needs native review
+  "abc.inp.buy": "ከአቅራቢ ግዛ",  // draft – needs native review
+  "abc.inp.qty": "መጠን",  // draft – needs native review
+  "abc.inp.unitPrice": "ዋጋ በአንድ (ብር)",  // draft – needs native review
+  "abc.inp.createPO": "የግዢ ትዕዛዝ ፍጠር",  // draft – needs native review
+  "abc.inp.poCreated": "የግዢ ትዕዛዝ ተፈጥሯል (ከገደቡ በላይ ከሆነ ቦርዱን ይጠብቃል)።",  // draft – needs native review
+  "abc.inp.neutral": "ሱቆች ቅርብ ከሆነው ጀምሮ ይዘረዘራሉ፤ ምልክቱና ዋጋው ይታያሉ እንጂ ቅደም ተከተሉን አይለውጡም።",  // draft – needs native review
+  "abc.inp.pos": "የግዢ ትዕዛዞች",  // draft – needs native review
+  "abc.inp.po.pending": "ቦርዱን በመጠባበቅ",  // draft – needs native review
+  "abc.inp.po.approved": "ጸድቋል",  // draft – needs native review
+  "abc.inp.po.rejected": "ውድቅ ሆኗል",  // draft – needs native review
+  "abc.inp.po.received": "ደርሷል",  // draft – needs native review
+  "abc.inp.po.cancelled": "ተሰርዟል",  // draft – needs native review
+  "abc.inp.receive": "ተቀበል",  // draft – needs native review
+  "abc.inp.received": "ተቀብለናል፤ ኮዱ የምርት ማረጋገጫውን አልፏል።",  // draft – needs native review
+  "abc.inp.quarantined": "ተቀብለናል ግን ታግዷል፦ {reason}። ለአባላት ሊሰጥ አይችልም።",  // draft – needs native review
+  "abc.inp.receiveHint": "በእያንዳንዱ ማሸጊያ ያለውን ኮድ ይጻፉ ወይም ይቃኙ፤ ማረጋገጫውን ያለፉ ብቻ ሊሰጡ ይችላሉ።",  // draft – needs native review
+  "abc.inp.reason.ok": "አልፏል",  // draft – needs native review
+  "abc.inp.reason.no_code": "ኮድ አልተሰጠም፤ መጀመሪያ ማሸጊያውን ያረጋግጡ",  // draft – needs native review
+  "abc.inp.reason.duplicate_in_abc": "ይህ ኮድ ቀደም ሲል በABC ተቀብሏል (ሊኮረጅ ይችላል)",  // draft – needs native review
+  "abc.inp.reason.unknown_code": "ያልታወቀ ኮድ",  // draft – needs native review
+  "abc.inp.reason.possible_copy": "ሊኮረጅ ይችላል (በጣም ብዙ ጊዜ ታይቷል)",  // draft – needs native review
+  "abc.inp.reason.recalled": "ስብስቡ ተመልሷል",  // draft – needs native review
+  "abc.inp.reason.expired": "ጊዜው አልፏል",  // draft – needs native review
+  "abc.inp.reason.not_registered": "ምርቱ አልተመዘገበም",  // draft – needs native review
+  "abc.inp.reason.supplier_suspended": "አቅራቢው ታግዷል",  // draft – needs native review
+  "abc.inp.reason.other_product": "ኮዱ የሌላ ምርት ነው",  // draft – needs native review
+  "abc.inp.stock": "ክምችት",  // draft – needs native review
+  "abc.inp.noStock": "ገና ክምችት የለም።",  // draft – needs native review
+  "abc.inp.lot.available": "ይገኛል",  // draft – needs native review
+  "abc.inp.lot.quarantined": "ታግዷል",  // draft – needs native review
+  "abc.inp.lot.expired": "ጊዜው አልፏል",  // draft – needs native review
+  "abc.inp.lot.expiresSoon": "በቅርቡ ጊዜው ያልፋል",  // draft – needs native review
+  "abc.inp.lot.empty": "አልቋል",  // draft – needs native review
+  "abc.inp.release": "በአካል ከተረጋገጠ በኋላ ልቀቅ",  // draft – needs native review
+  "abc.inp.releaseReason": "ይህ ክምችት እንዴት ተረጋገጠ? (በታሪክ ይቀመጣል)",  // draft – needs native review
+  "abc.inp.payment": "ክፍያ",  // draft – needs native review
+  "abc.inp.onCredit": "በብድር",  // draft – needs native review
+  "abc.inp.issue": "ስጥ",  // draft – needs native review
+  "abc.inp.issued": "ተሰጥቷል፤ በብድር ከሆነ ወደ አባሉ ሂሳብ ተጨምሯል።",  // draft – needs native review
+  "abcInv.orderSuggested": "{org} {product} ያቅዳል፦ ለ{ha} ሄክታር ማሳዎ {qty} {unit}። ይፈልጋሉ?",  // draft – needs native review
+  "abcInv.orderConfirm": "አዎ፣ ይህን አዝዝ",  // draft – needs native review
+  "abcInv.orderChange": "ሌላ መጠን",  // draft – needs native review
+  "abcInv.orderOther": "ምን ያህል ይፈልጋሉ ({unit})?",  // draft – needs native review
+  "abcInv.orderDecline": "አያስፈልገኝም",  // draft – needs native review
+  "abc.action.abc.input.plan": "የግብዓት ፍላጎት ታቅዷል",  // draft – needs native review
+  "abc.action.abc.input.order_confirm": "የግብዓት ትዕዛዝ ተረጋግጧል",  // draft – needs native review
+  "abc.action.abc.input.po_create": "የግዢ ትዕዛዝ ተፈጥሯል",  // draft – needs native review
+  "abc.action.abc.stock.receive": "ክምችት ገብቷል",  // draft – needs native review
+  "abc.action.abc.stock.release": "የታገደ ክምችት ተለቋል",  // draft – needs native review
+  "abc.action.abc.stock.issue": "ግብዓት ለአባል ተሰጥቷል",  // draft – needs native review
 };

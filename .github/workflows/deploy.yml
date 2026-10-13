@@ -82,7 +82,7 @@ jobs:
             fi
             # Demo site: refresh the MoA product rates and the sample shops once per data version (safe to re-run;
             # never overwrites a price a dealer entered). Bump the version when scripts/presentation_data.py changes.
-            PRES=/state/.presentation-v7
+            PRES=/state/.presentation-v8
             if grep -q '^DEMO_MODE=1' .env && \
                ! docker compose run --rm --no-deps --entrypoint sh api -c "test -f $PRES"; then
               docker compose --profile demo run --rm --no-deps demo python scripts/presentation_data.py   # via the entrypoint: /state links

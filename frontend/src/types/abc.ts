@@ -429,3 +429,43 @@ export interface AbcStatement {
   org: string | null;
   official_record_note: string;
 }
+
+// ── Inputs and stock (A7) ────────────────────────────────────────────────────
+
+export interface AbcPlannable { product_id: number; product_name: string; active_ingredient: string; target: string;
+  dose_per_ha: string | null; source: string | null; verification_status: string }
+
+export interface AbcInputOrder {
+  id: number; plan_id: number; farmer_id: number; name: string; member_no: number | null; area_ha: number;
+  suggested_qty: number | null; confirmed_qty: number | null; delivered_qty: number;
+  status: "suggested" | "confirmed" | "declined" | "delivered"; confirmed_by: "member" | "staff" | null;
+}
+
+export interface AbcInputPlan {
+  id: number; season: string; crop: string; product_id: number; product_name: string; target: string | null;
+  rate_text: string | null; rate_per_ha: number | null; unit: string | null; rate_source: string | null; status: string;
+  orders: AbcInputOrder[];
+  totals: { members: number; area_ha: number; suggested_qty: number; confirmed_members: number; confirmed_qty: number; delivered_qty: number };
+}
+
+export interface AbcSupplier { shop_id: number; name: string; phone: string | null; verified: boolean; woreda: string | null;
+  distance_km: number | null; price_etb: number | null; pack_size: string | null; price_is_sample: boolean }
+
+export interface AbcPurchaseOrder {
+  id: number; supplier: string; supplier_shop_id: number | null; total_etb: number; created_at: string; note: string | null;
+  status: "pending" | "approved" | "rejected" | "received" | "cancelled"; plan_id: number | null;
+  items: { product_id: number; product_name: string; qty: number; unit: string; unit_price_etb: number | null }[];
+}
+
+export interface AbcStockLot {
+  id: number; product_id: number; product_name: string; po_id: number | null; qty_received: number; qty_remaining: number;
+  unit: string; unit_cost_etb: number | null; code: string | null; batch_number: string | null; expires_on: string | null;
+  status: "available" | "quarantined" | "released"; trust_result: string | null; trust_reason: string | null; received_at: string;
+  expired: boolean; expires_soon: boolean; issuable: boolean;
+}
+
+export interface MyAbcOrder {
+  id: number; plan_id: number; season: string; crop: string; unit: string | null; rate_text: string | null; rate_source: string | null;
+  org: string; product_name: string; area_ha: number; suggested_qty: number | null; confirmed_qty: number | null;
+  status: AbcInputOrder["status"];
+}

@@ -2294,4 +2294,79 @@ export const ti: Record<MessageKey, string> = {
   "abc.action.abc.ledger.void": "ምዝገባ ሒሳብ ተሰሪዙ",  // draft – needs native review
   "abc.action.abc.member_account.add": "ምዝገባ ሒሳብ ኣባል",  // draft – needs native review
   "abc.action.abc.member_account.void": "ምዝገባ ሒሳብ ኣባል ተሰሪዙ",  // draft – needs native review
+
+  // ── ABC inputs & stock (A7) ───────────────────────────────────────────────
+  "abc.tab.inputs": "እታወትን መኽዘንን",  // draft – needs native review
+  "abc.inp.newPlan": "ጠለብ እታወት መድብ",  // draft – needs native review
+  "abc.inp.newPlanHint": "መጠን ነፍሲ ወከፍ ኣባል = ብሄክታር ዝተጠቕሰ መጠን × ኣብቲ ሰብል ዘሎ ግራት። ዝተጠቕሰ መጠን እንተዘይሃልዩ መጠን ኣይውሃብን።",  // draft – needs native review
+  "abc.inp.product": "ፍርያት (ዝተመዝገበ)",  // draft – needs native review
+  "abc.inp.noRate": "ዝተጠቕሰ መጠን የለን",  // draft – needs native review
+  "abc.inp.noProducts": "ነዚ ሰብል መጠን ዘለዎ ዝተመዝገበ ፍርያት ገና የለን።",  // draft – needs native review
+  "abc.inp.createPlan": "መደብ ፍጠር",  // draft – needs native review
+  "abc.inp.planCreated": "መደብ ተፈጢሩ፤ ኣባላት ትእዛዞም ብኣፕ ከረጋግጹ ይኽእሉ።",  // draft – needs native review
+  "abc.inp.plans": "መደባት ጠለብ",  // draft – needs native review
+  "abc.inp.plansHint": "ትእዛዝ ኣባላት ንምርኣይን ካብ ኣቕራቢ ንምዕዳግን መደብ ጠውቑ።",  // draft – needs native review
+  "abc.inp.noPlans": "ገና መደብ የለን።",  // draft – needs native review
+  "abc.inp.rateLine": "ብሄክታር {rate} · {source}",  // draft – needs native review
+  "abc.inp.noRateLine": "ዝተጠቕሰ መጠን የለን፤ መጠን ኣይሕሰብን። ንሰራሕተኛ ልምዓት ሕተቱ።",  // draft – needs native review
+  "abc.inp.totals": "{members} ኣባላት · {ha} ሄክታር · ዝተሓበረ {suggested} · ዝተረጋገጸ {confirmed} ({n})",  // draft – needs native review
+  "abc.inp.suggested": "ዝተሓበረ",  // draft – needs native review
+  "abc.inp.confirmed": "ዝተረጋገጸ",  // draft – needs native review
+  "abc.inp.status.suggested": "ንኣባል ይጽበ",  // draft – needs native review
+  "abc.inp.status.confirmed": "ተረጋጊጹ",  // draft – needs native review
+  "abc.inp.status.declined": "ኣየድልን",  // draft – needs native review
+  "abc.inp.status.delivered": "በጺሑ",  // draft – needs native review
+  "abc.inp.by.member": "ብኣፕ",  // draft – needs native review
+  "abc.inp.by.staff": "ብሰራሕተኛ",  // draft – needs native review
+  "abc.inp.confirmForMember": "ኣባል ብኣካል ተሰማሚዑ",  // draft – needs native review
+  "abc.inp.buy": "ካብ ኣቕራቢ ዕደግ",  // draft – needs native review
+  "abc.inp.qty": "መጠን",  // draft – needs native review
+  "abc.inp.unitPrice": "ዋጋ ንሓደ (ብር)",  // draft – needs native review
+  "abc.inp.createPO": "ትእዛዝ ዕድጊት ፍጠር",  // draft – needs native review
+  "abc.inp.poCreated": "ትእዛዝ ዕድጊት ተፈጢሩ (ልዕሊ ዶብ እንተኾይኑ ንቦርድ ይጽበ)።",  // draft – needs native review
+  "abc.inp.neutral": "ድኳናት ካብ ዝቐረበ ጀሚሮም ይዝርዘሩ፤ ምልክትን ዋጋን ይርኣዩ እምበር ስርዓት ኣይቕይሩን።",  // draft – needs native review
+  "abc.inp.pos": "ትእዛዛት ዕድጊት",  // draft – needs native review
+  "abc.inp.po.pending": "ንቦርድ ይጽበ",  // draft – needs native review
+  "abc.inp.po.approved": "ጸዲቑ",  // draft – needs native review
+  "abc.inp.po.rejected": "ተነጺጉ",  // draft – needs native review
+  "abc.inp.po.received": "በጺሑ",  // draft – needs native review
+  "abc.inp.po.cancelled": "ተሰሪዙ",  // draft – needs native review
+  "abc.inp.receive": "ተቐበል",  // draft – needs native review
+  "abc.inp.received": "ተቐቢልና፤ ኮድ ምርግጋጽ ፍርያት ሓሊፉ።",  // draft – needs native review
+  "abc.inp.quarantined": "ተቐቢልና ግን ተኣጊዱ፦ {reason}። ንኣባላት ክወሃብ ኣይክእልን።",  // draft – needs native review
+  "abc.inp.receiveHint": "ኣብ ነፍሲ ወከፍ ማሸጊያ ዘሎ ኮድ ጽሓፉ ወይ ስካን ግበሩ፤ ነቲ ምርግጋጽ ዝሓለፉ ጥራይ ይወሃቡ።",  // draft – needs native review
+  "abc.inp.reason.ok": "ሓሊፉ",  // draft – needs native review
+  "abc.inp.reason.no_code": "ኮድ ኣይተዋህበን፤ ቅድም ማሸጊያ ኣረጋግጹ",  // draft – needs native review
+  "abc.inp.reason.duplicate_in_abc": "እዚ ኮድ ቀደም ብABC ተቐቢሉ (ቅዳሕ ክኸውን ይኽእል)",  // draft – needs native review
+  "abc.inp.reason.unknown_code": "ዘይፍለጥ ኮድ",  // draft – needs native review
+  "abc.inp.reason.possible_copy": "ቅዳሕ ክኸውን ይኽእል (ብዙሕ ግዜ ተራእዩ)",  // draft – needs native review
+  "abc.inp.reason.recalled": "ስብስብ ተመሊሱ",  // draft – needs native review
+  "abc.inp.reason.expired": "ግዜኡ ሓሊፉ",  // draft – needs native review
+  "abc.inp.reason.not_registered": "ፍርያት ኣይተመዝገበን",  // draft – needs native review
+  "abc.inp.reason.supplier_suspended": "ኣቕራቢ ተኣጊዱ",  // draft – needs native review
+  "abc.inp.reason.other_product": "እቲ ኮድ ናይ ካልእ ፍርያት እዩ",  // draft – needs native review
+  "abc.inp.stock": "መኽዘን",  // draft – needs native review
+  "abc.inp.noStock": "ገና መኽዘን የለን።",  // draft – needs native review
+  "abc.inp.lot.available": "ይርከብ",  // draft – needs native review
+  "abc.inp.lot.quarantined": "ተኣጊዱ",  // draft – needs native review
+  "abc.inp.lot.expired": "ግዜኡ ሓሊፉ",  // draft – needs native review
+  "abc.inp.lot.expiresSoon": "ቀረባ ግዜኡ ይሓልፍ",  // draft – needs native review
+  "abc.inp.lot.empty": "ተወዲኡ",  // draft – needs native review
+  "abc.inp.release": "ብኣካል ድሕሪ ምርግጋጽ ልቐቕ",  // draft – needs native review
+  "abc.inp.releaseReason": "እዚ መኽዘን ብኸመይ ተረጋጊጹ? (ኣብ ታሪኽ ይዕቀብ)",  // draft – needs native review
+  "abc.inp.payment": "ክፍሊት",  // draft – needs native review
+  "abc.inp.onCredit": "ብልቓሕ",  // draft – needs native review
+  "abc.inp.issue": "ሃብ",  // draft – needs native review
+  "abc.inp.issued": "ተዋሂቡ፤ ብልቓሕ እንተኾይኑ ናብ ሒሳብ ኣባል ተወሲኹ።",  // draft – needs native review
+  "abcInv.orderSuggested": "{org} {product} ይመድብ፦ ን{ha} ሄክታር ግራትኩም {qty} {unit}። ትደልዩዶ?",  // draft – needs native review
+  "abcInv.orderConfirm": "እወ፣ እዚ እዘዝ",  // draft – needs native review
+  "abcInv.orderChange": "ካልእ መጠን",  // draft – needs native review
+  "abcInv.orderOther": "ክንደይ ትደልዩ ({unit})?",  // draft – needs native review
+  "abcInv.orderDecline": "ኣየድልየንን",  // draft – needs native review
+  "abc.action.abc.input.plan": "ጠለብ እታወት ተመዲቡ",  // draft – needs native review
+  "abc.action.abc.input.order_confirm": "ትእዛዝ እታወት ተረጋጊጹ",  // draft – needs native review
+  "abc.action.abc.input.po_create": "ትእዛዝ ዕድጊት ተፈጢሩ",  // draft – needs native review
+  "abc.action.abc.stock.receive": "መኽዘን ኣትዩ",  // draft – needs native review
+  "abc.action.abc.stock.release": "ዝተኣገደ መኽዘን ተለቒቑ",  // draft – needs native review
+  "abc.action.abc.stock.issue": "እታወት ንኣባል ተዋሂቡ",  // draft – needs native review
 };
