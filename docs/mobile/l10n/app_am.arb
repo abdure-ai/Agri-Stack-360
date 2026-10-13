@@ -180,9 +180,10 @@
   "@commonViewAll": {
     "description": "web key: common.viewAll"
   },
-  "commonDemoData": "የማሳያ መረጃ",
+  "commonDemoData": "አመላካች መረጃ",
   "@commonDemoData": {
-    "description": "web key: common.demoData"
+    "description": "web key: common.demoData",
+    "x-draft": true
   },
   "commonToggleSidebar": "የጎን ዝርዝሩን ክፈት/ዝጋ",
   "@commonToggleSidebar": {
@@ -685,9 +686,10 @@
   "@signinCreateOne": {
     "description": "web key: signin.createOne"
   },
-  "signinDemoAccounts": "የማሳያ መለያዎች",
+  "signinDemoAccounts": "ፈጣን መግቢያ",
   "@signinDemoAccounts": {
-    "description": "web key: signin.demoAccounts"
+    "description": "web key: signin.demoAccounts",
+    "x-draft": true
   },
   "signupMetaTitle": "መለያ ይክፈቱ",
   "@signupMetaTitle": {
@@ -2024,16 +2026,18 @@
   "@areaLoadFailed": {
     "description": "web key: area.loadFailed"
   },
-  "demoTitle": "የማሳያ መረጃ — የተረጋገጠ ምክር አይደለም",
+  "demoTitle": "አመላካች መረጃ፦ ከመጠቀምዎ በፊት ያረጋግጡ",
   "@demoTitle": {
-    "description": "web key: demo.title"
+    "description": "web key: demo.title",
+    "x-draft": true
   },
-  "demoMessage": "እዚህ የሚታዩት {subject} ለማሳያ ብቻ የቀረቡ ምሳሌዎች ናቸው። ከተመዘገቡት ኦፊሴላዊ ዝርዝር ጋር አልተረጋገጡም። ኬሚካል ለመግዛት ወይም ለመርጨት አይጠቀሙባቸው — የልማት ጣቢያ ሰራተኛዎን ይጠይቁ።",
+  "demoMessage": "እዚህ የሚታዩት {subject} አመላካች ናቸው። ከመግዛትዎ ወይም ከመርጨትዎ በፊት ከምርቱ መለያና ከወቅታዊው የEAA መዝገብ ጋር ያረጋግጡ፤ ከልማት ጣቢያ ሰራተኛዎም ጋር ይመካከሩ።",
   "@demoMessage": {
     "description": "web key: demo.message",
     "placeholders": {
       "subject": {}
-    }
+    },
+    "x-draft": true
   },
   "demoSubjectProducts": "የምርት ስሞች እና መጠኖች",
   "@demoSubjectProducts": {
@@ -2047,7 +2051,7 @@
   "@demoSubjectTextDiagnosis": {
     "description": "web key: demo.subject.textDiagnosis"
   },
-  "demoMessageLoans": "እዚህ የሚታዩት አበዳሪዎች፣ የብድር ዓይነቶች እና የወለድ መጠኖች ለማሳያ ብቻ የቀረቡ ምሳሌዎች ናቸው። እውነተኛ ቅናሾች አይደሉም። ከማመልከትዎ በፊት ባንክዎን ወይም የጥቃቅን ፋይናንስ ተቋምዎን ይጠይቁ።",
+  "demoMessageLoans": "እዚህ የሚታዩት አበዳሪዎች፣ የብድር ዓይነቶችና የወለድ መጠኖች አመላካች ናቸው። ከማመልከትዎ በፊት ውሉን ከባንኩ ወይም ከጥቃቅን ፋይናንስ ተቋሙ ጋር ያረጋግጡ።",
   "@demoMessageLoans": {
     "description": "web key: demo.message.loans",
     "x-draft": true
@@ -2154,9 +2158,10 @@
   "@cropModePhoto": {
     "description": "web key: crop.mode.photo"
   },
-  "cropModeDescribe": "በመግለጽ (ማሳያ)",
+  "cropModeDescribe": "ይግለጹ (ቤታ)",
   "@cropModeDescribe": {
-    "description": "web key: crop.mode.describe"
+    "description": "web key: crop.mode.describe",
+    "x-draft": true
   },
   "cropWhichField": "የትኛው ማሳ?",
   "@cropWhichField": {
@@ -2215,9 +2220,10 @@
   "@cropSigns": {
     "description": "web key: crop.signs"
   },
-  "cropWhatToDoDemo": "ምን ማድረግ እንዳለብዎ (የማሳያ ምሳሌ)",
+  "cropWhatToDoDemo": "ምን ማድረግ እንዳለብዎ (ቤታ)",
   "@cropWhatToDoDemo": {
-    "description": "web key: crop.whatToDoDemo"
+    "description": "web key: crop.whatToDoDemo",
+    "x-draft": true
   },
   "cropCheckAgain": "ማሳውን በ{date} እንደገና ይመርምሩ።",
   "@cropCheckAgain": {
@@ -2377,9 +2383,10 @@
   "@photoVerified": {
     "description": "web key: photo.verified"
   },
-  "photoPlaceholder": "ጊዜያዊ — ያልተረጋገጠ",
+  "photoPlaceholder": "የEAA መዝገብን ያረጋግጡ",
   "@photoPlaceholder": {
-    "description": "web key: photo.placeholder"
+    "description": "web key: photo.placeholder",
+    "x-draft": true
   },
   "photoPpe": "የመከላከያ ልብስ፦ {items}",
   "@photoPpe": {
@@ -2396,9 +2403,10 @@
   "@photoNotChecked": {
     "description": "web key: photo.notChecked"
   },
-  "photoNotCheckedBody": "የምርትና የመጠን ዝርዝሮች ኦፊሴላዊ ዝርዝሩ እስኪረጋገጥ ድረስ ጊዜያዊ ናቸው። ከመግዛትዎ ወይም ከመርጨትዎ በፊት ከልማት ጣቢያ ሰራተኛዎ ጋር ያረጋግጡ።",
+  "photoNotCheckedBody": "መጠኖች ከEAA መዝገብ ጋር እስኪረጋገጡ ድረስ አይታዩም። የምርቱን መለያ ይከተሉ፤ ከመግዛትዎ ወይም ከመርጨትዎ በፊት ከልማት ጣቢያ ሰራተኛዎ ጋር ያረጋግጡ።",
   "@photoNotCheckedBody": {
-    "description": "web key: photo.notCheckedBody"
+    "description": "web key: photo.notCheckedBody",
+    "x-draft": true
   },
   "photoInField": "በማሳው ላይ ምን ማድረግ አለብዎት",
   "@photoInField": {
@@ -4138,9 +4146,10 @@
   "@aikeysMeta": {
     "description": "web key: aikeys.meta"
   },
-  "aikeysDescription": "በርካታ የGemini API ቁልፎችን ይጨምሩ። አንዱ ኮታው ሲያልቅ ወይም ውድቅ ሲደረግ መድረኩ በራሱ ወደሚቀጥለው ቁልፍ ይቀይራል።",
+  "aikeysDescription": "የGemini እና የDeepSeek API ቁልፎችን ይጨምሩና መልሶቹን የትኛው AI እንደሚጽፍ ይምረጡ። አንድ ቁልፍ ገደቡ ወይም ሂሳቡ ሲያልቅ ወይም ውድቅ ሲሆን፣ መድረኩ በራሱ ወደ ቀጣዩ ቁልፍ ይቀይራል።",
   "@aikeysDescription": {
-    "description": "web key: aikeys.description"
+    "description": "web key: aikeys.description",
+    "x-draft": true
   },
   "aikeysAdd": "ቁልፍ ጨምር",
   "@aikeysAdd": {
@@ -4321,9 +4330,10 @@
   "@aikeysAddTitle": {
     "description": "web key: aikeys.addTitle"
   },
-  "aikeysAddHint": "ቁልፍ በaistudio.google.com/apikey ይፍጠሩ። ከተለያዩ የGoogle ፕሮጀክቶች የሚመጡ ቁልፎች የተለያየ ኮታ አላቸው።",
+  "aikeysAddHint": "አቅራቢውን ይምረጡ፣ ከዚያ ቁልፉን ይለጥፉ።",
   "@aikeysAddHint": {
-    "description": "web key: aikeys.addHint"
+    "description": "web key: aikeys.addHint",
+    "x-draft": true
   },
   "aikeysLabelPlaceholder": "ለምሳሌ ፕሮጀክት 2 (ነጻ)",
   "@aikeysLabelPlaceholder": {
@@ -5494,12 +5504,12 @@
     },
     "x-draft": true
   },
-  "reportsDemo": "የማሳያ መረጃን አካት",
+  "reportsDemo": "ናሙና መዛግብትን አካት",
   "@reportsDemo": {
     "description": "web key: reports.demo",
     "x-draft": true
   },
-  "reportsDemoBadge": "የማሳያ መረጃን ያካትታል",
+  "reportsDemoBadge": "ናሙና መዛግብትን ያካትታል",
   "@reportsDemoBadge": {
     "description": "web key: reports.demoBadge",
     "x-draft": true
@@ -5592,7 +5602,7 @@
     "description": "web key: perm.orgs_manage.desc",
     "x-draft": true
   },
-  "demoMessageTrust": "እዚህ ያሉት ምርቶች፣ የምዝገባ ቁጥሮችና አቅራቢዎች ለሙከራው የተቀመጡ ምሳሌዎች ናቸው። ይፋዊው የተመዘገቡ ምርቶች ዝርዝር አይደሉም።",
+  "demoMessageTrust": "የምርት ዝርዝሩ ከግብርና ሚኒስቴር የስንዴ ማኑዋል የተወሰደ ነው። የምዝገባ ቁጥሮች ይፋዊው የEAA መዝገብ ሲገናኝ ይመጣሉ።",
   "@demoMessageTrust": {
     "description": "web key: demo.message.trust",
     "x-draft": true
@@ -7814,9 +7824,14 @@
     "description": "web key: tips.cancel",
     "x-draft": true
   },
-  "signinDemoHint": "ለመግባት መለያ ይንኩ። ለማሳያ ብቻ፦ በእውነተኛው ስሪት ይደበቃል።",
+  "signinDemoHint": "የማቅረቢያ አካባቢ፤ ናሙና ሰዎችና መዛግብት ይዟል። ለመግባት መለያ ይንኩ።",
   "@signinDemoHint": {
     "description": "web key: signin.demoHint",
+    "x-draft": true
+  },
+  "signinDemoPassword": "የይለፍ ቃል",
+  "@signinDemoPassword": {
+    "description": "web key: signin.demoPassword",
     "x-draft": true
   },
   "signinDemoPitchFarmer": "የማሳያው አርሶ አደር፣ ደዋ ጨፋ",
@@ -7857,6 +7872,522 @@
   "tipsManage": "ምክር ጻፍ ወይም አጽድቅ",
   "@tipsManage": {
     "description": "web key: tips.manage",
+    "x-draft": true
+  },
+  "aikeysEngineTitle": "የጽሑፍ መልሶች ሞተር",
+  "@aikeysEngineTitle": {
+    "description": "web key: aikeys.engine.title",
+    "x-draft": true
+  },
+  "aikeysEngineDescription": "የአማካሪውን መልሶች፣ ዕለታዊ ምክሮችንና አጫጭር ማብራሪያዎችን የትኛው AI እንደሚጽፍ ይምረጡ። ደንቦቹ አይቀየሩም፦ መልሶች ከመመሪያዎቹ ብቻ፣ ከምንጭ ጋር፣ የግል መረጃ አይላክም።",
+  "@aikeysEngineDescription": {
+    "description": "web key: aikeys.engine.description",
+    "x-draft": true
+  },
+  "aikeysEngineGeminiHint": "ለድምፅና ለእውቀት ቋት ፍለጋም ያገለግላል። ነፃ ደረጃ አለው።",
+  "@aikeysEngineGeminiHint": {
+    "description": "web key: aikeys.engine.geminiHint",
+    "x-draft": true
+  },
+  "aikeysEngineDeepseekHint": "ጽሑፍ ብቻ፤ በቅድመ ክፍያ ሂሳብ በአጠቃቀም ይከፈላል። መረጃው በቻይና በሚገኙ የDeepSeek አገልጋዮች ይሰራል፤ ለGemini የሚላከውን ተመሳሳይ ስም-አልባ ጽሑፍ ይቀበላል።",
+  "@aikeysEngineDeepseekHint": {
+    "description": "web key: aikeys.engine.deepseekHint",
+    "x-draft": true
+  },
+  "aikeysEngineInUse": "በጥቅም ላይ",
+  "@aikeysEngineInUse": {
+    "description": "web key: aikeys.engine.inUse",
+    "x-draft": true
+  },
+  "aikeysEngineUse": "ይህን ተጠቀም",
+  "@aikeysEngineUse": {
+    "description": "web key: aikeys.engine.use",
+    "x-draft": true
+  },
+  "aikeysEngineKeys": "{n} የሚሰሩ ቁልፍ(ፎች)",
+  "@aikeysEngineKeys": {
+    "description": "web key: aikeys.engine.keys",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "aikeysEngineFallbackOn": "የተመረጠው ሞተር ካልሰራ፣ ሌላው የሚሰራ ቁልፍ ካለው ይመልሳል (በምክር ቅንብሮች ገጽ ላይ ይቀየራል)።",
+  "@aikeysEngineFallbackOn": {
+    "description": "web key: aikeys.engine.fallbackOn",
+    "x-draft": true
+  },
+  "aikeysEngineFallbackOff": "ወደ ሌላው ሞተር መቀየር ጠፍቷል (የምክር ቅንብሮች ገጽ)።",
+  "@aikeysEngineFallbackOff": {
+    "description": "web key: aikeys.engine.fallbackOff",
+    "x-draft": true
+  },
+  "aikeysEngineGeminiOnly": "ድምፅና የእውቀት ቋት ፍለጋ ሁልጊዜ Geminiን ይጠቀማሉ፤ ስለዚህ ቢያንስ አንድ የGemini ቁልፍ ያስቀምጡ።",
+  "@aikeysEngineGeminiOnly": {
+    "description": "web key: aikeys.engine.geminiOnly",
+    "x-draft": true
+  },
+  "aikeysEngineSaved": "አሁን መልሶቹን {name} ይጽፋል።",
+  "@aikeysEngineSaved": {
+    "description": "web key: aikeys.engine.saved",
+    "placeholders": {
+      "name": {}
+    },
+    "x-draft": true
+  },
+  "aikeysEngineNoKey": "{name} ተመርጧል ነገር ግን እስካሁን የሚሰራ ቁልፍ የለውም። ቁልፍ ይጨምሩ፤ እስከዚያው መቀየሩ ከበራ ሌላው ሞተር ይመልሳል።",
+  "@aikeysEngineNoKey": {
+    "description": "web key: aikeys.engine.noKey",
+    "placeholders": {
+      "name": {}
+    },
+    "x-draft": true
+  },
+  "aikeysProviderKeys": "የ{name} ቁልፎች",
+  "@aikeysProviderKeys": {
+    "description": "web key: aikeys.providerKeys",
+    "placeholders": {
+      "name": {}
+    },
+    "x-draft": true
+  },
+  "aikeysProvider": "አቅራቢ",
+  "@aikeysProvider": {
+    "description": "web key: aikeys.provider",
+    "x-draft": true
+  },
+  "aikeysGetGemini": "በaistudio.google.com/apikey ቁልፍ ይፍጠሩ። ከተለያዩ የGoogle ፕሮጀክቶች የተገኙ ቁልፎች የተለያየ ገደብ አላቸው።",
+  "@aikeysGetGemini": {
+    "description": "web key: aikeys.getGemini",
+    "x-draft": true
+  },
+  "aikeysGetDeepseek": "በplatform.deepseek.com (API keys) ቁልፍ ይፍጠሩና እዚያው ሂሳብ ይሙሉ። ሂሳብ የሌለው ቁልፍ ይዘለላል።",
+  "@aikeysGetDeepseek": {
+    "description": "web key: aikeys.getDeepseek",
+    "x-draft": true
+  },
+  "settingsLlmFallback": "የተመረጠው AI ሞተር ካልሰራ ሌላውን ተጠቀም",
+  "@settingsLlmFallback": {
+    "description": "web key: settings.llm_fallback",
+    "x-draft": true
+  },
+  "settingsLlmFallbackHint": "በርቷል፦ የተመረጠው ሞተር (Gemini ወይም DeepSeek) ቁልፍ ወይም ሂሳብ ከሌለው ወይም ከተቋረጠ፣ ሌላው የሚሰራ ቁልፍ ካለው ይመልሳል። ሞተሩ የሚመረጠው በAI API ቁልፎች ገጽ ላይ ነው።",
+  "@settingsLlmFallbackHint": {
+    "description": "web key: settings.llm_fallback.hint",
+    "x-draft": true
+  },
+  "settingsDailyTipsAuto": "በየማለዳው ዕለታዊ ምክሮችን አርቅቅ",
+  "@settingsDailyTipsAuto": {
+    "description": "web key: settings.daily_tips_auto",
+    "x-draft": true
+  },
+  "settingsDailyTipsAutoHint": "በርቷል፦ በየማለዳው ስርዓቱ የነገውን ምክሮች ለግምገማ ያረቅቃል። አግሮኖሚስት ወይም አስተዳዳሪ እስኪያጸድቅ ድረስ ምንም አይታተምም።",
+  "@settingsDailyTipsAutoHint": {
+    "description": "web key: settings.daily_tips_auto.hint",
+    "x-draft": true
+  },
+  "settingsDailyTipsPerDay": "በቀን የሚረቀቁ ምክሮች",
+  "@settingsDailyTipsPerDay": {
+    "description": "web key: settings.daily_tips_per_day",
+    "x-draft": true
+  },
+  "settingsDailyTipsPerDayHint": "እያንዳንዱ የAI ረቂቅ አንድ የAI ጥያቄ ይጠቀማል።",
+  "@settingsDailyTipsPerDayHint": {
+    "description": "web key: settings.daily_tips_per_day.hint",
+    "x-draft": true
+  },
+  "aikeysNoneHintDeepseek": "አንድ እስኪጨምሩ ድረስ DeepSeek ሊጠቀም የሚችለው በአገልጋዩ .env ፋይል ውስጥ ያለውን DEEPSEEK_API_KEY ብቻ ነው፣ ከተቀመጠ።",
+  "@aikeysNoneHintDeepseek": {
+    "description": "web key: aikeys.noneHintDeepseek",
+    "x-draft": true
+  },
+  "navGroupFarming": "እርሻ",
+  "@navGroupFarming": {
+    "description": "web key: nav.group.farming",
+    "x-draft": true
+  },
+  "navGroupExtension": "የኤክስቴንሽን ስራ",
+  "@navGroupExtension": {
+    "description": "web key: nav.group.extension",
+    "x-draft": true
+  },
+  "navGroupPartners": "የአጋሮች መግቢያዎች",
+  "@navGroupPartners": {
+    "description": "web key: nav.group.partners",
+    "x-draft": true
+  },
+  "navGroupContentAi": "ይዘትና AI",
+  "@navGroupContentAi": {
+    "description": "web key: nav.group.contentAi",
+    "x-draft": true
+  },
+  "navGroupSystem": "ስርዓት",
+  "@navGroupSystem": {
+    "description": "web key: nav.group.system",
+    "x-draft": true
+  },
+  "navLivestock": "የእንስሳት ዋጋ",
+  "@navLivestock": {
+    "description": "web key: nav.livestock",
+    "x-draft": true
+  },
+  "lvDescription": "በNMIS የእንስሳት ገበያዎች የተዘገበ የአንድ እንስሳ ዋጋ፣ ከ4 ሳምንት ግምትና ምን ያህል እርግጠኛ እንደሆነ ጋር።",
+  "@lvDescription": {
+    "description": "web key: lv.description",
+    "x-draft": true
+  },
+  "lvAnimal": "እንስሳ",
+  "@lvAnimal": {
+    "description": "web key: lv.animal",
+    "x-draft": true
+  },
+  "lvAnimalOx": "በሬ",
+  "@lvAnimalOx": {
+    "description": "web key: lv.animal.ox",
+    "x-draft": true
+  },
+  "lvAnimalCow": "ላም",
+  "@lvAnimalCow": {
+    "description": "web key: lv.animal.cow",
+    "x-draft": true
+  },
+  "lvAnimalBull": "ኮርማ",
+  "@lvAnimalBull": {
+    "description": "web key: lv.animal.bull",
+    "x-draft": true
+  },
+  "lvAnimalHeifer": "ጊደር",
+  "@lvAnimalHeifer": {
+    "description": "web key: lv.animal.heifer",
+    "x-draft": true
+  },
+  "lvAnimalCalf": "ጥጃ",
+  "@lvAnimalCalf": {
+    "description": "web key: lv.animal.calf",
+    "x-draft": true
+  },
+  "lvAnimalSheep": "በግ",
+  "@lvAnimalSheep": {
+    "description": "web key: lv.animal.sheep",
+    "x-draft": true
+  },
+  "lvAnimalGoat": "ፍየል",
+  "@lvAnimalGoat": {
+    "description": "web key: lv.animal.goat",
+    "x-draft": true
+  },
+  "lvAnimalCamel": "ግመል",
+  "@lvAnimalCamel": {
+    "description": "web key: lv.animal.camel",
+    "x-draft": true
+  },
+  "lvAnimalChicken": "ዶሮ",
+  "@lvAnimalChicken": {
+    "description": "web key: lv.animal.chicken",
+    "x-draft": true
+  },
+  "lvSourceLine": "ምንጭ፦ የNMIS የእንስሳት ገበያ መረጃ፣ ከ{start} እስከ {end}።",
+  "@lvSourceLine": {
+    "description": "web key: lv.sourceLine",
+    "placeholders": {
+      "start": {},
+      "end": {}
+    },
+    "x-draft": true
+  },
+  "lvStatReports": "የዋጋ ሪፖርቶች",
+  "@lvStatReports": {
+    "description": "web key: lv.stat.reports",
+    "x-draft": true
+  },
+  "lvStatMarkets": "ገበያዎች",
+  "@lvStatMarkets": {
+    "description": "web key: lv.stat.markets",
+    "x-draft": true
+  },
+  "lvStatPeriod": "የመረጃ ጊዜ",
+  "@lvStatPeriod": {
+    "description": "web key: lv.stat.period",
+    "x-draft": true
+  },
+  "lvStatDays": "{n} ቀናት",
+  "@lvStatDays": {
+    "description": "web key: lv.stat.days",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "lvEmptyTitle": "ገና የእንስሳት ዋጋ አልተጫነም",
+  "@lvEmptyTitle": {
+    "description": "web key: lv.empty.title",
+    "x-draft": true
+  },
+  "lvEmptyDescription": "የNMIS የእንስሳት ገበያ ሪፖርቶች ሲገቡ ዋጋዎች እዚህ ይታያሉ።",
+  "@lvEmptyDescription": {
+    "description": "web key: lv.empty.description",
+    "x-draft": true
+  },
+  "lvNoSeries": "ለዚህ ምርጫ ሪፖርት የለም።",
+  "@lvNoSeries": {
+    "description": "web key: lv.noSeries",
+    "x-draft": true
+  },
+  "lvOutlookTitle": "የ4 ሳምንት ግምት",
+  "@lvOutlookTitle": {
+    "description": "web key: lv.outlook.title",
+    "x-draft": true
+  },
+  "lvOutlookCountry": "መላ አገሪቱ፣ ሁሉም ደረጃዎች በአንድ",
+  "@lvOutlookCountry": {
+    "description": "web key: lv.outlook.country",
+    "x-draft": true
+  },
+  "lvOutlookRegion": "{region}፣ ሁሉም ደረጃዎች በአንድ",
+  "@lvOutlookRegion": {
+    "description": "web key: lv.outlook.region",
+    "placeholders": {
+      "region": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookCountryFallback": "በ{region} ሪፖርቶች ጥቂት ናቸው፤ የመላ አገሪቱ ግምት",
+  "@lvOutlookCountryFallback": {
+    "description": "web key: lv.outlook.countryFallback",
+    "placeholders": {
+      "region": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookUp": "ዋጋ በ{pct}% ገደማ ሊጨምር ይችላል",
+  "@lvOutlookUp": {
+    "description": "web key: lv.outlook.up",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookDown": "ዋጋ በ{pct}% ገደማ ሊቀንስ ይችላል",
+  "@lvOutlookDown": {
+    "description": "web key: lv.outlook.down",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookFlat": "ዋጋ ብዙም ላይለወጥ ይችላል",
+  "@lvOutlookFlat": {
+    "description": "web key: lv.outlook.flat",
+    "x-draft": true
+  },
+  "lvOutlookRange": "(ምናልባት ከ{low}% እስከ {high}%)",
+  "@lvOutlookRange": {
+    "description": "web key: lv.outlook.range",
+    "placeholders": {
+      "low": {},
+      "high": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookNone": "ገና ግምት የለም፤ አዝማሚያ ለመለካት መረጃው በቂ አይደለም።",
+  "@lvOutlookNone": {
+    "description": "web key: lv.outlook.none",
+    "x-draft": true
+  },
+  "lvOutlookWhy": "ለምን ይህ የእምነት ደረጃ",
+  "@lvOutlookWhy": {
+    "description": "web key: lv.outlook.why",
+    "x-draft": true
+  },
+  "lvOutlookNote": "እያንዳንዱ ደረጃ በእያንዳንዱ ገበያ የራሱ የዋጋ ደረጃ አለው፤ ሞዴሉ የጋራ አዝማሚያውን ይለካል። ግምት ቃል ኪዳን አይደለም፤ ከመሸጥዎ በፊት ገበያ ላይ ያረጋግጡ።",
+  "@lvOutlookNote": {
+    "description": "web key: lv.outlook.note",
+    "x-draft": true
+  },
+  "lvConfHigh": "ከፍተኛ እምነት",
+  "@lvConfHigh": {
+    "description": "web key: lv.conf.high",
+    "x-draft": true
+  },
+  "lvConfMedium": "መካከለኛ እምነት",
+  "@lvConfMedium": {
+    "description": "web key: lv.conf.medium",
+    "x-draft": true
+  },
+  "lvConfLow": "ዝቅተኛ እምነት",
+  "@lvConfLow": {
+    "description": "web key: lv.conf.low",
+    "x-draft": true
+  },
+  "lvReasonPeriod": "ከ{start} እስከ {end} ከ{markets} ገበያ(ዎች) በተገኙ {reports} የዋጋ ሪፖርቶች ላይ የተመሰረተ።",
+  "@lvReasonPeriod": {
+    "description": "web key: lv.reason.period",
+    "placeholders": {
+      "start": {},
+      "end": {},
+      "markets": {},
+      "reports": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonNoSeason": "መረጃው ከአንድ ዓመት በታች ስለሆነ የወቅት ለውጦች (በዓላት፣ ደረቅ ወቅት) በሞዴሉ ውስጥ የሉም።",
+  "@lvReasonNoSeason": {
+    "description": "web key: lv.reason.no_season",
+    "x-draft": true
+  },
+  "lvReasonFewReports": "{reports} ሪፖርቶች ብቻ ናቸው፤ አንድ ያልተለመደ የገበያ ቀን ውጤቱን ሊለውጥ ይችላል።",
+  "@lvReasonFewReports": {
+    "description": "web key: lv.reason.few_reports",
+    "placeholders": {
+      "reports": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonShortPeriod": "የ{days} ቀናት መረጃ ብቻ ነው፤ አዝማሚያን ከጊዜያዊ ለውጥ ለመለየት በጣም አጭር ነው።",
+  "@lvReasonShortPeriod": {
+    "description": "web key: lv.reason.short_period",
+    "placeholders": {
+      "days": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonStale": "የመጨረሻው ሪፖርት የ{days} ቀናት ዕድሜ አለው።",
+  "@lvReasonStale": {
+    "description": "web key: lv.reason.stale",
+    "placeholders": {
+      "days": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonChecked": "ባላያቸው የቅርብ ሪፖርቶች ላይ ተፈትኗል፦ በአማካይ በ{pct}% ተሳስቷል ('ለውጥ የለም' ብሎ መገመት በ{naive}% ተሳስቷል)።",
+  "@lvReasonChecked": {
+    "description": "web key: lv.reason.checked",
+    "placeholders": {
+      "pct": {},
+      "naive": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonNoTrend": "በቅርብ ሪፖርቶች ላይ አዝማሚያው ({pct}% ስህተት) 'ለውጥ የለም' ከሚለው ግምት ({naive}%) የተሻለ ስላልሆነ ግምቱ 'ብዙም አይለወጥም' ነው።",
+  "@lvReasonNoTrend": {
+    "description": "web key: lv.reason.no_trend",
+    "placeholders": {
+      "pct": {},
+      "naive": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonNotChecked": "ሞዴሉን ባላየው መረጃ ለመፈተን የቅርብ ሪፖርቶች በጣም ጥቂት ናቸው።",
+  "@lvReasonNotChecked": {
+    "description": "web key: lv.reason.not_checked",
+    "x-draft": true
+  },
+  "lvReasonTooFew": "አዝማሚያ ለማየት በተመሳሳይ ገበያ የተመሳሳይ ደረጃ ተደጋጋሚ ሪፖርቶች በቂ አይደሉም።",
+  "@lvReasonTooFew": {
+    "description": "web key: lv.reason.too_few",
+    "x-draft": true
+  },
+  "lvReasonNoData": "ለዚህ እንስሳ የተጫነ ሪፖርት የለም።",
+  "@lvReasonNoData": {
+    "description": "web key: lv.reason.no_data",
+    "x-draft": true
+  },
+  "lvChartTitle": "የአንድ እንስሳ አማካይ ዋጋ",
+  "@lvChartTitle": {
+    "description": "web key: lv.chart.title",
+    "x-draft": true
+  },
+  "lvChartDescription": "የዝቅተኛውና የከፍተኛው ዋጋ መካከለኛ፤ በቅርቡ የተዘገቡ {n} ደረጃዎች።",
+  "@lvChartDescription": {
+    "description": "web key: lv.chart.description",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "lvTableTitle": "የቅርብ ጊዜ ዋጋዎች",
+  "@lvTableTitle": {
+    "description": "web key: lv.table.title",
+    "x-draft": true
+  },
+  "lvTableDescription": "ለአንድ እንስሳ፣ ከዝቅተኛ እስከ ከፍተኛ የተዘገበ ዋጋ። ግምት፦ ከመጨረሻው ሪፖርት 4 ሳምንታት በኋላ የሚጠበቀው ክልል።",
+  "@lvTableDescription": {
+    "description": "web key: lv.table.description",
+    "x-draft": true
+  },
+  "lvTableMarket": "ገበያ",
+  "@lvTableMarket": {
+    "description": "web key: lv.table.market",
+    "x-draft": true
+  },
+  "lvTableGrade": "ደረጃ",
+  "@lvTableGrade": {
+    "description": "web key: lv.table.grade",
+    "x-draft": true
+  },
+  "lvTableLatest": "የቅርብ ዋጋ",
+  "@lvTableLatest": {
+    "description": "web key: lv.table.latest",
+    "x-draft": true
+  },
+  "lvTableDate": "የተዘገበበት",
+  "@lvTableDate": {
+    "description": "web key: lv.table.date",
+    "x-draft": true
+  },
+  "lvTableChange": "ካለፈው ጀምሮ",
+  "@lvTableChange": {
+    "description": "web key: lv.table.change",
+    "x-draft": true
+  },
+  "lvTableOutlook": "በ4 ሳምንት",
+  "@lvTableOutlook": {
+    "description": "web key: lv.table.outlook",
+    "x-draft": true
+  },
+  "lvImportTitle": "የእንስሳት ዋጋ አስገባ",
+  "@lvImportTitle": {
+    "description": "web key: lv.import.title",
+    "x-draft": true
+  },
+  "lvImportDescription": "የNMIS የእንስሳት ዋጋ ሪፖርቶችን CSV ይጫኑ (ለአምዶቹ ቅጹን ያውርዱ)። የተጫኑ ሪፖርቶች ይዘመናሉ፣ ግምቱም እንደገና ይሰለጥናል።",
+  "@lvImportDescription": {
+    "description": "web key: lv.import.description",
+    "x-draft": true
+  },
+  "lvImportTemplate": "ቅጹን አውርድ",
+  "@lvImportTemplate": {
+    "description": "web key: lv.import.template",
+    "x-draft": true
+  },
+  "lvImportUpload": "CSV ጫን",
+  "@lvImportUpload": {
+    "description": "web key: lv.import.upload",
+    "x-draft": true
+  },
+  "lvImportRetrain": "ግምቱን እንደገና አሰልጥን",
+  "@lvImportRetrain": {
+    "description": "web key: lv.import.retrain",
+    "x-draft": true
+  },
+  "lvImportResult": "{added} ሪፖርቶች ተጨመሩ፣ {updated} ተዘመኑ፣ {rejected} ውድቅ ሆኑ፤ {forecasts} ግምቶች ሰለጠኑ።",
+  "@lvImportResult": {
+    "description": "web key: lv.import.result",
+    "placeholders": {
+      "added": {},
+      "updated": {},
+      "rejected": {},
+      "forecasts": {}
+    },
+    "x-draft": true
+  },
+  "lvImportTrained": "{trained} ሞዴሎች እንደገና ሰለጠኑ፤ {forecasts} ለግምት በቂ መረጃ አላቸው።",
+  "@lvImportTrained": {
+    "description": "web key: lv.import.trained",
+    "placeholders": {
+      "trained": {},
+      "forecasts": {}
+    },
     "x-draft": true
   }
 }

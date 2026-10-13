@@ -132,6 +132,7 @@ The server checks every permission again on every request. Hiding a screen is fo
 | My farms and seasons | `GET/POST /users/farms`, `PUT/DELETE /users/farms/{id}`, `GET/POST /users/farms/{id}/seasons`, `PUT/DELETE …/seasons/{sid}` |
 | Check a product | `POST /trust/verify {code}`, `POST /trust/fake-reports`, `GET /trust/shops` |
 | Market prices | `GET /summary`, `GET /prices?crop=&region=&price_level=retail`, `GET /markets`, `GET /meta` |
+| Livestock prices | `GET /livestock/summary`, `GET /livestock/prices?animal=&region=` (see 8.10) |
 | Credit | `GET /financial/profile`, `GET /financial/loan-products` |
 | Requests to me | `GET /users/credit-requests`, `POST /users/credit-requests/{id}/approve\|decline\|revoke`; `GET /users/abc-invitations`, `POST /users/abc-invitations/{org_id}/accept\|decline\|leave` |
 | Profile and privacy | `GET/PUT /users/profile`, `GET/PUT /users/consent`, `GET /users/my-data`, `GET/POST /users/my-data/erase-request`, `POST …/erase-request/cancel` |
@@ -250,6 +251,26 @@ A bank or MFI can ask to see the farmer's credit profile. `GET /users/credit-req
 `approve` shares the profile for 30 days, `decline` refuses, and `revoke` stops sharing at any time. ABC invitations
 work the same way through `GET /users/abc-invitations`. Show both on the Profile screen only when the lists are
 not empty.
+
+### 8.10 Livestock prices
+
+NMIS livestock market prices per head, with a 4-week outlook. Same data as the web page *Livestock prices*.
+
+- `GET /livestock/summary` → `{reports, markets, first_date, last_date, animals: [{animal, reports, markets, …}],
+  regions[]}`. `reports == 0`: show "No livestock prices loaded yet" and nothing else.
+- `GET /livestock/prices?animal=Ox&region=Oromia` (region optional) →
+  `{forecast, series: [{market, region, breed, sex, production_type, body_condition, latest: {date, min, max, avg},
+  change_pct, points[], outlook: {date, low, avg, high} | null}]}`. Prices are birr **per head**.
+- `forecast`: `status` (`ok` | `insufficient` | `no_data`), `confidence` (`high` | `medium` | `low` | null),
+  `direction` (`up` | `down` | `flat`), `change_pct`, `range_pct: [low, high]` (80% range), and `reasons[]`.
+  **Always show the confidence and the reasons next to the outlook**; with `status != ok` show "No outlook yet"
+  and the reasons. Each reason is `{code, params, text}`: translate by `code` with the `lv.reason.*` texts in the
+  ARB files (fill `{reports}`, `{markets}`, `{start}`, `{end}`, `{days}`, `{pct}`, `{naive}` from `params`;
+  `model_error_pct` → `pct`, `no_change_error_pct` → `naive`), or show `text` (English) for an unknown code.
+- When the region has too few reports, `forecast.region` is `null`: the outlook is for the whole country (say so).
+- The advisor answers livestock price questions too ("የበሬ ዋጋ ስንት ነው?"): nothing to do in the app.
+
+Import and retraining are web-only (admin). Cache the last response for offline like the crop prices.
 
 ## 9. Offline (required)
 
@@ -375,4 +396,4 @@ show that clearly.
 | 2026-10-11 | First version |
 | 2026-10-11 | Admins can publish tips (web); demo accounts updated (Oromia farmer, admin); debug-only demo-login picker (4); 9 new and 1 changed texts in the ARB files. API contract for the app unchanged |
 | 2026-10-12 | `/advisory/ask`: don't send the screen language; the answer follows the question's language (10). Server fixed too |
-
+| 2026-10-13 | New: livestock prices and outlook (6, 8.10); `lv.*` texts in the ARB files. Nothing existing changed |

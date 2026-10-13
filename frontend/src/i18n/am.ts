@@ -1755,4 +1755,67 @@ export const am: Record<MessageKey, string> = {
   "nav.group.partners": "የአጋሮች መግቢያዎች",  // draft – needs native review
   "nav.group.contentAi": "ይዘትና AI",  // draft – needs native review
   "nav.group.system": "ስርዓት",  // draft – needs native review
+
+  // ── Livestock prices ──────────────────────────────────────────────────────
+  "nav.livestock": "የእንስሳት ዋጋ",  // draft – needs native review
+  "lv.description": "በNMIS የእንስሳት ገበያዎች የተዘገበ የአንድ እንስሳ ዋጋ፣ ከ4 ሳምንት ግምትና ምን ያህል እርግጠኛ እንደሆነ ጋር።",  // draft – needs native review
+  "lv.animal": "እንስሳ",  // draft – needs native review
+  "lv.animal.ox": "በሬ",  // draft – needs native review
+  "lv.animal.cow": "ላም",  // draft – needs native review
+  "lv.animal.bull": "ኮርማ",  // draft – needs native review
+  "lv.animal.heifer": "ጊደር",  // draft – needs native review
+  "lv.animal.calf": "ጥጃ",  // draft – needs native review
+  "lv.animal.sheep": "በግ",  // draft – needs native review
+  "lv.animal.goat": "ፍየል",  // draft – needs native review
+  "lv.animal.camel": "ግመል",  // draft – needs native review
+  "lv.animal.chicken": "ዶሮ",  // draft – needs native review
+  "lv.sourceLine": "ምንጭ፦ የNMIS የእንስሳት ገበያ መረጃ፣ ከ{start} እስከ {end}።",  // draft – needs native review
+  "lv.stat.reports": "የዋጋ ሪፖርቶች",  // draft – needs native review
+  "lv.stat.markets": "ገበያዎች",  // draft – needs native review
+  "lv.stat.period": "የመረጃ ጊዜ",  // draft – needs native review
+  "lv.stat.days": "{n} ቀናት",  // draft – needs native review
+  "lv.empty.title": "ገና የእንስሳት ዋጋ አልተጫነም",  // draft – needs native review
+  "lv.empty.description": "የNMIS የእንስሳት ገበያ ሪፖርቶች ሲገቡ ዋጋዎች እዚህ ይታያሉ።",  // draft – needs native review
+  "lv.noSeries": "ለዚህ ምርጫ ሪፖርት የለም።",  // draft – needs native review
+  "lv.outlook.title": "የ4 ሳምንት ግምት",  // draft – needs native review
+  "lv.outlook.country": "መላ አገሪቱ፣ ሁሉም ደረጃዎች በአንድ",  // draft – needs native review
+  "lv.outlook.region": "{region}፣ ሁሉም ደረጃዎች በአንድ",  // draft – needs native review
+  "lv.outlook.countryFallback": "በ{region} ሪፖርቶች ጥቂት ናቸው፤ የመላ አገሪቱ ግምት",  // draft – needs native review
+  "lv.outlook.up": "ዋጋ በ{pct}% ገደማ ሊጨምር ይችላል",  // draft – needs native review
+  "lv.outlook.down": "ዋጋ በ{pct}% ገደማ ሊቀንስ ይችላል",  // draft – needs native review
+  "lv.outlook.flat": "ዋጋ ብዙም ላይለወጥ ይችላል",  // draft – needs native review
+  "lv.outlook.range": "(ምናልባት ከ{low}% እስከ {high}%)",  // draft – needs native review
+  "lv.outlook.none": "ገና ግምት የለም፤ አዝማሚያ ለመለካት መረጃው በቂ አይደለም።",  // draft – needs native review
+  "lv.outlook.why": "ለምን ይህ የእምነት ደረጃ",  // draft – needs native review
+  "lv.outlook.note": "እያንዳንዱ ደረጃ በእያንዳንዱ ገበያ የራሱ የዋጋ ደረጃ አለው፤ ሞዴሉ የጋራ አዝማሚያውን ይለካል። ግምት ቃል ኪዳን አይደለም፤ ከመሸጥዎ በፊት ገበያ ላይ ያረጋግጡ።",  // draft – needs native review
+  "lv.conf.high": "ከፍተኛ እምነት",  // draft – needs native review
+  "lv.conf.medium": "መካከለኛ እምነት",  // draft – needs native review
+  "lv.conf.low": "ዝቅተኛ እምነት",  // draft – needs native review
+  "lv.reason.period": "ከ{start} እስከ {end} ከ{markets} ገበያ(ዎች) በተገኙ {reports} የዋጋ ሪፖርቶች ላይ የተመሰረተ።",  // draft – needs native review
+  "lv.reason.no_season": "መረጃው ከአንድ ዓመት በታች ስለሆነ የወቅት ለውጦች (በዓላት፣ ደረቅ ወቅት) በሞዴሉ ውስጥ የሉም።",  // draft – needs native review
+  "lv.reason.few_reports": "{reports} ሪፖርቶች ብቻ ናቸው፤ አንድ ያልተለመደ የገበያ ቀን ውጤቱን ሊለውጥ ይችላል።",  // draft – needs native review
+  "lv.reason.short_period": "የ{days} ቀናት መረጃ ብቻ ነው፤ አዝማሚያን ከጊዜያዊ ለውጥ ለመለየት በጣም አጭር ነው።",  // draft – needs native review
+  "lv.reason.stale": "የመጨረሻው ሪፖርት የ{days} ቀናት ዕድሜ አለው።",  // draft – needs native review
+  "lv.reason.checked": "ባላያቸው የቅርብ ሪፖርቶች ላይ ተፈትኗል፦ በአማካይ በ{pct}% ተሳስቷል ('ለውጥ የለም' ብሎ መገመት በ{naive}% ተሳስቷል)።",  // draft – needs native review
+  "lv.reason.no_trend": "በቅርብ ሪፖርቶች ላይ አዝማሚያው ({pct}% ስህተት) 'ለውጥ የለም' ከሚለው ግምት ({naive}%) የተሻለ ስላልሆነ ግምቱ 'ብዙም አይለወጥም' ነው።",  // draft – needs native review
+  "lv.reason.not_checked": "ሞዴሉን ባላየው መረጃ ለመፈተን የቅርብ ሪፖርቶች በጣም ጥቂት ናቸው።",  // draft – needs native review
+  "lv.reason.too_few": "አዝማሚያ ለማየት በተመሳሳይ ገበያ የተመሳሳይ ደረጃ ተደጋጋሚ ሪፖርቶች በቂ አይደሉም።",  // draft – needs native review
+  "lv.reason.no_data": "ለዚህ እንስሳ የተጫነ ሪፖርት የለም።",  // draft – needs native review
+  "lv.chart.title": "የአንድ እንስሳ አማካይ ዋጋ",  // draft – needs native review
+  "lv.chart.description": "የዝቅተኛውና የከፍተኛው ዋጋ መካከለኛ፤ በቅርቡ የተዘገቡ {n} ደረጃዎች።",  // draft – needs native review
+  "lv.table.title": "የቅርብ ጊዜ ዋጋዎች",  // draft – needs native review
+  "lv.table.description": "ለአንድ እንስሳ፣ ከዝቅተኛ እስከ ከፍተኛ የተዘገበ ዋጋ። ግምት፦ ከመጨረሻው ሪፖርት 4 ሳምንታት በኋላ የሚጠበቀው ክልል።",  // draft – needs native review
+  "lv.table.market": "ገበያ",  // draft – needs native review
+  "lv.table.grade": "ደረጃ",  // draft – needs native review
+  "lv.table.latest": "የቅርብ ዋጋ",  // draft – needs native review
+  "lv.table.date": "የተዘገበበት",  // draft – needs native review
+  "lv.table.change": "ካለፈው ጀምሮ",  // draft – needs native review
+  "lv.table.outlook": "በ4 ሳምንት",  // draft – needs native review
+  "lv.import.title": "የእንስሳት ዋጋ አስገባ",  // draft – needs native review
+  "lv.import.description": "የNMIS የእንስሳት ዋጋ ሪፖርቶችን CSV ይጫኑ (ለአምዶቹ ቅጹን ያውርዱ)። የተጫኑ ሪፖርቶች ይዘመናሉ፣ ግምቱም እንደገና ይሰለጥናል።",  // draft – needs native review
+  "lv.import.template": "ቅጹን አውርድ",  // draft – needs native review
+  "lv.import.upload": "CSV ጫን",  // draft – needs native review
+  "lv.import.retrain": "ግምቱን እንደገና አሰልጥን",  // draft – needs native review
+  "lv.import.result": "{added} ሪፖርቶች ተጨመሩ፣ {updated} ተዘመኑ፣ {rejected} ውድቅ ሆኑ፤ {forecasts} ግምቶች ሰለጠኑ።",  // draft – needs native review
+  "lv.import.trained": "{trained} ሞዴሎች እንደገና ሰለጠኑ፤ {forecasts} ለግምት በቂ መረጃ አላቸው።",  // draft – needs native review
 };

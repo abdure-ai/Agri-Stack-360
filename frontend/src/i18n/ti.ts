@@ -1755,4 +1755,67 @@ export const ti: Record<MessageKey, string> = {
   "nav.group.partners": "መእተዊ መሻርኽቲ",  // draft – needs native review
   "nav.group.contentAi": "ትሕዝቶን AI",  // draft – needs native review
   "nav.group.system": "ስርዓት",  // draft – needs native review
+
+  // ── Livestock prices ──────────────────────────────────────────────────────
+  "nav.livestock": "ዋጋ እንስሳ",  // draft – needs native review
+  "lv.description": "ብዕዳጋታት እንስሳ NMIS ዝተጸብጸበ ዋጋ ንሓደ እንስሳ፣ ምስ ግምት 4 ሰሙንን ክንደይ ርግጸኛ ምዃኑን።",  // draft – needs native review
+  "lv.animal": "እንስሳ",  // draft – needs native review
+  "lv.animal.ox": "ብዕራይ",  // draft – needs native review
+  "lv.animal.cow": "ላም",  // draft – needs native review
+  "lv.animal.bull": "ኮርማ",  // draft – needs native review
+  "lv.animal.heifer": "ጊደር",  // draft – needs native review
+  "lv.animal.calf": "ምራኽ",  // draft – needs native review
+  "lv.animal.sheep": "በጊዕ",  // draft – needs native review
+  "lv.animal.goat": "ጤል",  // draft – needs native review
+  "lv.animal.camel": "ገመል",  // draft – needs native review
+  "lv.animal.chicken": "ደርሆ",  // draft – needs native review
+  "lv.sourceLine": "ምንጪ፦ ሓበሬታ ዕዳጋ እንስሳ NMIS፣ ካብ {start} ክሳብ {end}።",  // draft – needs native review
+  "lv.stat.reports": "ጸብጻባት ዋጋ",  // draft – needs native review
+  "lv.stat.markets": "ዕዳጋታት",  // draft – needs native review
+  "lv.stat.period": "እዋን ሓበሬታ",  // draft – needs native review
+  "lv.stat.days": "{n} መዓልታት",  // draft – needs native review
+  "lv.empty.title": "ገና ዋጋ እንስሳ ኣይተጻዕነን",  // draft – needs native review
+  "lv.empty.description": "ጸብጻባት ዕዳጋ እንስሳ NMIS ምስ ኣተዉ ዋጋታት ኣብዚ ይርኣዩ።",  // draft – needs native review
+  "lv.noSeries": "ነዚ ምርጫ ጸብጻብ የለን።",  // draft – needs native review
+  "lv.outlook.title": "ግምት 4 ሰሙን",  // draft – needs native review
+  "lv.outlook.country": "ብምሉእ ሃገር፣ ኩሎም ደረጃታት ብሓባር",  // draft – needs native review
+  "lv.outlook.region": "{region}፣ ኩሎም ደረጃታት ብሓባር",  // draft – needs native review
+  "lv.outlook.countryFallback": "ኣብ {region} ጸብጻባት ውሑዳት እዮም፤ ግምት ምሉእ ሃገር",  // draft – needs native review
+  "lv.outlook.up": "ዋጋ ብ{pct}% ኣቢሉ ክውስኽ ይኽእል",  // draft – needs native review
+  "lv.outlook.down": "ዋጋ ብ{pct}% ኣቢሉ ክንኪ ይኽእል",  // draft – needs native review
+  "lv.outlook.flat": "ዋጋ ብዙሕ ኣይቅየርን",  // draft – needs native review
+  "lv.outlook.range": "(ምናልባት ካብ {low}% ክሳብ {high}%)",  // draft – needs native review
+  "lv.outlook.none": "ገና ግምት የለን፤ ኣንፈት ንምዕቃን ሓበሬታ እኹል ኣይኮነን።",  // draft – needs native review
+  "lv.outlook.why": "ስለምንታይ እዚ ደረጃ እምነት",  // draft – needs native review
+  "lv.outlook.note": "ነፍሲ ወከፍ ደረጃ ኣብ ነፍሲ ወከፍ ዕዳጋ ናይ ገዛእ ርእሱ ደረጃ ዋጋ ኣለዎ፤ እቲ ሞዴል ነቲ ሓባራዊ ኣንፈት ይዕቅን። ግምት መብጽዓ ኣይኮነን፤ ቅድሚ ምሻጥኩም ኣብ ዕዳጋ ኣረጋግጹ።",  // draft – needs native review
+  "lv.conf.high": "ልዑል እምነት",  // draft – needs native review
+  "lv.conf.medium": "ማእከላይ እምነት",  // draft – needs native review
+  "lv.conf.low": "ትሑት እምነት",  // draft – needs native review
+  "lv.reason.period": "ካብ {start} ክሳብ {end} ካብ {markets} ዕዳጋ(ታት) ዝተረኽቡ {reports} ጸብጻባት ዋጋ ዝተመርኮሰ።",  // draft – needs native review
+  "lv.reason.no_season": "ሓበሬታ ካብ ሓደ ዓመት ስለ ዝወሓደ ናይ ወቕቲ ለውጥታት (በዓላት፣ ሓጋይ) ኣብቲ ሞዴል የለዉን።",  // draft – needs native review
+  "lv.reason.few_reports": "{reports} ጸብጻባት ጥራይ፤ ሓንቲ ዘይልሙድ መዓልቲ ዕዳጋ ውጽኢት ክትቅይር ትኽእል።",  // draft – needs native review
+  "lv.reason.short_period": "ናይ {days} መዓልታት ሓበሬታ ጥራይ፤ ኣንፈት ካብ ግዝያዊ ለውጢ ንምፍላይ ኣዝዩ ሓጺር እዩ።",  // draft – needs native review
+  "lv.reason.stale": "እቲ ናይ መወዳእታ ጸብጻብ ቅድሚ {days} መዓልታት እዩ።",  // draft – needs native review
+  "lv.reason.checked": "ኣብ ዘይረኣዮም ናይ ቀረባ ጸብጻባት ተፈቲኑ፦ ብማእከላይ ብ{pct}% ተጋጊዩ ('ለውጢ የለን' ምግማት ብ{naive}%)።",  // draft – needs native review
+  "lv.reason.no_trend": "ኣብ ናይ ቀረባ ጸብጻባት እቲ ኣንፈት ({pct}%) 'ለውጢ የለን' ካብ ዝብል ({naive}%) ስለ ዘይበለጸ ግምት 'ብዙሕ ኣይቅየርን' እዩ።",  // draft – needs native review
+  "lv.reason.not_checked": "ነቲ ሞዴል ብዘይረኣዮ ሓበሬታ ንምፍታን ናይ ቀረባ ጸብጻባት ኣዝዮም ውሑዳት እዮም።",  // draft – needs native review
+  "lv.reason.too_few": "ኣንፈት ንምርኣይ ኣብ ሓደ ዕዳጋ ናይ ተመሳሳሊ ደረጃ ተደጋጋሚ ጸብጻባት እኹላት ኣይኮኑን።",  // draft – needs native review
+  "lv.reason.no_data": "ነዚ እንስሳ ዝተጻዕነ ጸብጻብ የለን።",  // draft – needs native review
+  "lv.chart.title": "ማእከላይ ዋጋ ንሓደ እንስሳ",  // draft – needs native review
+  "lv.chart.description": "ማእከል ዝተሓተን ዝለዓለን ዋጋ፤ ብቐረባ ዝተጸብጸቡ {n} ደረጃታት።",  // draft – needs native review
+  "lv.table.title": "ናይ ቀረባ ዋጋታት",  // draft – needs native review
+  "lv.table.description": "ንሓደ እንስሳ፣ ካብ ዝተሓተ ክሳብ ዝለዓለ ዝተጸብጸበ ዋጋ። ግምት፦ ድሕሪ ናይ መወዳእታ ጸብጻብ 4 ሰሙን ዝጽበ ክሊ።",  // draft – needs native review
+  "lv.table.market": "ዕዳጋ",  // draft – needs native review
+  "lv.table.grade": "ደረጃ",  // draft – needs native review
+  "lv.table.latest": "ናይ ቀረባ ዋጋ",  // draft – needs native review
+  "lv.table.date": "ዝተጸብጸበሉ",  // draft – needs native review
+  "lv.table.change": "ካብ ዝሓለፈ",  // draft – needs native review
+  "lv.table.outlook": "ኣብ 4 ሰሙን",  // draft – needs native review
+  "lv.import.title": "ዋጋ እንስሳ ኣእቱ",  // draft – needs native review
+  "lv.import.description": "CSV ጸብጻባት ዋጋ እንስሳ NMIS ጸዓኑ (ንዓምድታት ቅጥዒ ኣውርዱ)። ዝተጻዕኑ ጸብጻባት ይሕደሱ፣ ግምት እውን ከም ብሓድሽ ይሰልጥን።",  // draft – needs native review
+  "lv.import.template": "ቅጥዒ ኣውርድ",  // draft – needs native review
+  "lv.import.upload": "CSV ጽዓን",  // draft – needs native review
+  "lv.import.retrain": "ግምት ከም ብሓድሽ ኣሰልጥን",  // draft – needs native review
+  "lv.import.result": "{added} ጸብጻባት ተወሲኾም፣ {updated} ተሓዲሶም፣ {rejected} ተነጺጎም፤ {forecasts} ግምታት ሰልጢኖም።",  // draft – needs native review
+  "lv.import.trained": "{trained} ሞዴላት ከም ብሓድሽ ሰልጢኖም፤ {forecasts} ንግምት እኹል ሓበሬታ ኣለዎም።",  // draft – needs native review
 };

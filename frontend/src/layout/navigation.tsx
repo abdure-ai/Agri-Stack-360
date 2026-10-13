@@ -13,6 +13,7 @@ import type { Permission } from "@/types/api";
 import {
   Activity,
   Banknote,
+  Beef,
   BookOpenText,
   Building2,
   Factory,
@@ -60,6 +61,7 @@ export const NAV_GROUPS: NavGroup[] = [
     items: [
       { name: "nav.dashboard", path: "/", icon: <GridIcon className={ICON} /> },
       { name: "nav.market", path: "/market", icon: <ChartAltIcon className={ICON} /> },
+      { name: "nav.livestock", path: "/livestock", icon: <Beef className={ICON} strokeWidth={1.5} /> },
       { name: "nav.advisory", path: "/advisory", icon: <AiIcon className={ICON} /> },
       { name: "nav.tips", path: "/tips", icon: <Lightbulb className={ICON} strokeWidth={1.5} /> },
     ],

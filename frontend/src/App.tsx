@@ -14,6 +14,7 @@ import CropHealth from "@/pages/CropHealth/CropHealth";
 import Home from "@/pages/Dashboard/Home";
 import Financial from "@/pages/Financial/Financial";
 import InputSuppliers from "@/pages/Inputs/InputSuppliers";
+import Livestock from "@/pages/Market/Livestock";
 import MarketIntel from "@/pages/Market/MarketIntel";
 import AdvisorySettings from "@/pages/Admin/AdvisorySettings";
 import AuditLog from "@/pages/Admin/AuditLog";
@@ -65,6 +66,7 @@ export default function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Home />} />
             <Route path="/market" element={<MarketIntel />} />
+            <Route path="/livestock" element={<Livestock />} />
             <Route path="/advisory" element={<Advisory />} />
             <Route path="/tips" element={<TipsPage />} />
             <Route path="/profile" element={<Profile />} />

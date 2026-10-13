@@ -180,9 +180,10 @@
   "@commonViewAll": {
     "description": "web key: common.viewAll"
   },
-  "commonDemoData": "ናይ መርኣዪ ሓበሬታ",
+  "commonDemoData": "ኣመላኻቲ ሓበሬታ",
   "@commonDemoData": {
-    "description": "web key: common.demoData"
+    "description": "web key: common.demoData",
+    "x-draft": true
   },
   "commonToggleSidebar": "ናይ ጎኒ ዝርዝር ክፈት/ዕጾ",
   "@commonToggleSidebar": {
@@ -685,9 +686,10 @@
   "@signinCreateOne": {
     "description": "web key: signin.createOne"
   },
-  "signinDemoAccounts": "ናይ መርኣዪ ሕሳባት",
+  "signinDemoAccounts": "ቅልጡፍ ምእታው",
   "@signinDemoAccounts": {
-    "description": "web key: signin.demoAccounts"
+    "description": "web key: signin.demoAccounts",
+    "x-draft": true
   },
   "signupMetaTitle": "ሕሳብ ክፈቱ",
   "@signupMetaTitle": {
@@ -2024,16 +2026,18 @@
   "@areaLoadFailed": {
     "description": "web key: area.loadFailed"
   },
-  "demoTitle": "ናይ መርኣዪ ሓበሬታ — ዝተረጋገጸ ምኽሪ ኣይኮነን",
+  "demoTitle": "ኣመላኻቲ ሓበሬታ፦ ቅድሚ ምጥቃምኩም ኣረጋግጹ",
   "@demoTitle": {
-    "description": "web key: demo.title"
+    "description": "web key: demo.title",
+    "x-draft": true
   },
-  "demoMessage": "ኣብዚ ዝርኣዩ {subject} ንመርኣዪ ጥራይ ዝቐረቡ ኣብነታት እዮም። ምስ ወግዓዊ ዝርዝር ምዝገባ ኣይተረጋገጹን። ኬሚካል ንምዕዳግ ወይ ንምንፍሕ ኣይትጠቐሙሎም — ሰራሕተኛ ልምዓትኩም ሕተቱ።",
+  "demoMessage": "ኣብዚ ዝርኣዩ {subject} ኣመላኻቲ እዮም። ቅድሚ ምግዛእኩም ወይ ምንጻግኩም ምስ መለለዪ ፍርያትን ናይ ሕጂ መዝገብ EAA ኣረጋግጹ፤ ምስ ሰራሕተኛ ልምዓትኩም'ውን ተመኻኸሩ።",
   "@demoMessage": {
     "description": "web key: demo.message",
     "placeholders": {
       "subject": {}
-    }
+    },
+    "x-draft": true
   },
   "demoSubjectProducts": "ኣስማት ፍርያትን መጠናትን",
   "@demoSubjectProducts": {
@@ -2047,7 +2051,7 @@
   "@demoSubjectTextDiagnosis": {
     "description": "web key: demo.subject.textDiagnosis"
   },
-  "demoMessageLoans": "ኣብዚ ዝርአዩ ለቓሕቲ፣ ዓይነታት ልቓሕን መጠን ወለድን ንምርኣይ ጥራይ ዝቐረቡ ኣብነታት እዮም። ሓቀኛ ቅናሻት ኣይኮኑን። ቅድሚ ምምልካትኩም ባንኪኹም ወይ ትካል ንኡስ ፋይናንስ ሕተቱ።",
+  "demoMessageLoans": "ኣብዚ ዝርኣዩ ለቃሕቲ፣ ዓይነታት ልቓሕን መጠን ወለድን ኣመላኻቲ እዮም። ቅድሚ ምምልካትኩም ውዕሉ ምስ ባንኪ ወይ ትካል ማይክሮፋይናንስ ኣረጋግጹ።",
   "@demoMessageLoans": {
     "description": "web key: demo.message.loans",
     "x-draft": true
@@ -2154,9 +2158,10 @@
   "@cropModePhoto": {
     "description": "web key: crop.mode.photo"
   },
-  "cropModeDescribe": "ብምግላጽ (መርኣዪ)",
+  "cropModeDescribe": "ግለጹ (ቤታ)",
   "@cropModeDescribe": {
-    "description": "web key: crop.mode.describe"
+    "description": "web key: crop.mode.describe",
+    "x-draft": true
   },
   "cropWhichField": "ኣየናይ ግራት?",
   "@cropWhichField": {
@@ -2215,9 +2220,10 @@
   "@cropSigns": {
     "description": "web key: crop.signs"
   },
-  "cropWhatToDoDemo": "እንታይ ክትገብሩ ከም ዘለኩም (ኣብነት መርኣዪ)",
+  "cropWhatToDoDemo": "እንታይ ክትገብሩ (ቤታ)",
   "@cropWhatToDoDemo": {
-    "description": "web key: crop.whatToDoDemo"
+    "description": "web key: crop.whatToDoDemo",
+    "x-draft": true
   },
   "cropCheckAgain": "ግራት ብ{date} ደጊምኩም መርምሩ።",
   "@cropCheckAgain": {
@@ -2377,9 +2383,10 @@
   "@photoVerified": {
     "description": "web key: photo.verified"
   },
-  "photoPlaceholder": "ግዝያዊ — ዘይተረጋገጸ",
+  "photoPlaceholder": "መዝገብ EAA ኣረጋግጹ",
   "@photoPlaceholder": {
-    "description": "web key: photo.placeholder"
+    "description": "web key: photo.placeholder",
+    "x-draft": true
   },
   "photoPpe": "ክዳን መከላኸሊ፦ {items}",
   "@photoPpe": {
@@ -2396,9 +2403,10 @@
   "@photoNotChecked": {
     "description": "web key: photo.notChecked"
   },
-  "photoNotCheckedBody": "ዝርዝራት ፍርያትን መጠንን ወግዓዊ ዝርዝር ክሳብ ዝረጋገጽ ግዝያዊ እዮም። ቅድሚ ምዕዳግኩም ወይ ምንፋሕኩም ምስ ሰራሕተኛ ልምዓትኩም ኣረጋግጹ።",
+  "photoNotCheckedBody": "መጠናት ምስ መዝገብ EAA ክሳብ ዝረጋገጹ ኣይርኣዩን። መለለዪ ፍርያት ስዓቡ፤ ቅድሚ ምግዛእኩም ወይ ምንጻግኩም ምስ ሰራሕተኛ ልምዓትኩም ኣረጋግጹ።",
   "@photoNotCheckedBody": {
-    "description": "web key: photo.notCheckedBody"
+    "description": "web key: photo.notCheckedBody",
+    "x-draft": true
   },
   "photoInField": "ኣብ ግራት እንታይ ክትገብሩ ኣለኩም",
   "@photoInField": {
@@ -4138,9 +4146,10 @@
   "@aikeysMeta": {
     "description": "web key: aikeys.meta"
   },
-  "aikeysDescription": "ብዙሓት መፍትሕታት API Gemini ወስኹ። ሓደ ኮታኡ ምስ ወድአ ወይ ምስ ተነጸገ፣ መድረኽ ባዕሉ ናብቲ ዝቕጽል መፍትሕ ይቕይር።",
+  "aikeysDescription": "መፍትሕታት API Gemini ከምኡ'ውን DeepSeek ወስኹን ኣየናይ AI መልስታት ከም ዝጽሕፍ ምረጹን። ሓደ መፍትሕ ደረቱ ወይ ሕሳቡ ምስ ተወድአ ወይ ምስ ተነጸገ፣ እቲ መድረኽ ባዕሉ ናብ ዝቕጽል መፍትሕ ይቕይር።",
   "@aikeysDescription": {
-    "description": "web key: aikeys.description"
+    "description": "web key: aikeys.description",
+    "x-draft": true
   },
   "aikeysAdd": "መፍትሕ ወስኽ",
   "@aikeysAdd": {
@@ -4321,9 +4330,10 @@
   "@aikeysAddTitle": {
     "description": "web key: aikeys.addTitle"
   },
-  "aikeysAddHint": "መፍትሕ ኣብ aistudio.google.com/apikey ፍጠሩ። ካብ ዝተፈላለዩ ፕሮጀክታት Google ዝመጹ መፍትሕታት ዝተፈላለየ ኮታ ኣለዎም።",
+  "aikeysAddHint": "ኣቕራቢ ምረጹ፣ ድሕሪኡ መፍትሕ ለጥፉ።",
   "@aikeysAddHint": {
-    "description": "web key: aikeys.addHint"
+    "description": "web key: aikeys.addHint",
+    "x-draft": true
   },
   "aikeysLabelPlaceholder": "ንኣብነት ፕሮጀክት 2 (ብነጻ)",
   "@aikeysLabelPlaceholder": {
@@ -5494,12 +5504,12 @@
     },
     "x-draft": true
   },
-  "reportsDemo": "ሓበሬታ ምርኢት ኣእቱ",
+  "reportsDemo": "ኣብነታዊ መዛግብቲ ኣእቱ",
   "@reportsDemo": {
     "description": "web key: reports.demo",
     "x-draft": true
   },
-  "reportsDemoBadge": "ሓበሬታ ምርኢት ሓዊሱ",
+  "reportsDemoBadge": "ኣብነታዊ መዛግብቲ የጠቓልል",
   "@reportsDemoBadge": {
     "description": "web key: reports.demoBadge",
     "x-draft": true
@@ -5592,7 +5602,7 @@
     "description": "web key: perm.orgs_manage.desc",
     "x-draft": true
   },
-  "demoMessageTrust": "ኣብዚ ዘለዉ ፍርያታት፣ ቁጽርታት ምዝገባን ኣቕረብትን ንፈተነ ዝተቐመጡ ኣብነታት እዮም። እቲ ወግዓዊ ዝርዝር ዝተመዝገቡ ፍርያታት ኣይኮኑን።",
+  "demoMessageTrust": "ዝርዝር ፍርያት ካብ ማንዋል ስርናይ ሚኒስትሪ ሕርሻ እዩ። ቁጽሪ ምዝገባ እቲ ወግዓዊ መዝገብ EAA ምስ ተራኸበ ይመጽእ።",
   "@demoMessageTrust": {
     "description": "web key: demo.message.trust",
     "x-draft": true
@@ -7814,9 +7824,14 @@
     "description": "web key: tips.cancel",
     "x-draft": true
   },
-  "signinDemoHint": "ንምእታው ሕሳብ ጠውቑ። ንመርኣዪ ጥራይ፦ ኣብ ናይ ሓቂ ስሪት ይሕባእ።",
+  "signinDemoHint": "ናይ ምቕራብ ከባቢ ምስ ኣብነታዊ ሰባትን መዛግብትን። ንምእታው ሕሳብ ጠውቑ።",
   "@signinDemoHint": {
     "description": "web key: signin.demoHint",
+    "x-draft": true
+  },
+  "signinDemoPassword": "ቃል ምሕላፍ",
+  "@signinDemoPassword": {
+    "description": "web key: signin.demoPassword",
     "x-draft": true
   },
   "signinDemoPitchFarmer": "ሓረስታይ መርኣዪ፣ ደዋ ጨፋ",
@@ -7857,6 +7872,522 @@
   "tipsManage": "ምኽሪ ጽሓፍ ወይ ኣጽድቕ",
   "@tipsManage": {
     "description": "web key: tips.manage",
+    "x-draft": true
+  },
+  "aikeysEngineTitle": "ሞተር ጽሑፋዊ መልስታት",
+  "@aikeysEngineTitle": {
+    "description": "web key: aikeys.engine.title",
+    "x-draft": true
+  },
+  "aikeysEngineDescription": "ኣየናይ AI መልስታት ኣማኻሪ፣ ዕለታዊ ምኽርታትን ሓጸርቲ መብርሂታትን ከም ዝጽሕፍ ምረጹ። ሕግታት ኣይቅየሩን፦ መልስታት ካብ መምርሒታት ጥራይ፣ ምስ ምንጪ፣ ውልቃዊ ሓበሬታ ኣይለኣኽን።",
+  "@aikeysEngineDescription": {
+    "description": "web key: aikeys.engine.description",
+    "x-draft": true
+  },
+  "aikeysEngineGeminiHint": "ንድምጽን ንድለያ መኽዘን ፍልጠትን'ውን ይውዕል። ናጻ ደረጃ ኣለዎ።",
+  "@aikeysEngineGeminiHint": {
+    "description": "web key: aikeys.engine.geminiHint",
+    "x-draft": true
+  },
+  "aikeysEngineDeepseekHint": "ጽሑፍ ጥራይ፤ ብቕድመ ክፍሊት ሕሳብ ብኣጠቓቕማ ይኽፈል። ሓበሬታ ኣብ ቻይና ዘለዉ ኣገልገልቲ DeepSeek ይስራሕ፤ ነቲ ንGemini ዝለኣኽ ተመሳሳሊ ስም-ኣልቦ ጽሑፍ ይቕበል።",
+  "@aikeysEngineDeepseekHint": {
+    "description": "web key: aikeys.engine.deepseekHint",
+    "x-draft": true
+  },
+  "aikeysEngineInUse": "ኣብ ጥቕሚ",
+  "@aikeysEngineInUse": {
+    "description": "web key: aikeys.engine.inUse",
+    "x-draft": true
+  },
+  "aikeysEngineUse": "እዚ ተጠቐም",
+  "@aikeysEngineUse": {
+    "description": "web key: aikeys.engine.use",
+    "x-draft": true
+  },
+  "aikeysEngineKeys": "{n} ዝሰርሕ መፍትሕ",
+  "@aikeysEngineKeys": {
+    "description": "web key: aikeys.engine.keys",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "aikeysEngineFallbackOn": "እቲ ዝተመርጸ ሞተር እንተዘይሰሪሑ፣ እቲ ካልእ ዝሰርሕ መፍትሕ እንተሃልይዎ ይምልስ (ኣብ ገጽ ቅጥዒታት ምኽሪ ይቕየር)።",
+  "@aikeysEngineFallbackOn": {
+    "description": "web key: aikeys.engine.fallbackOn",
+    "x-draft": true
+  },
+  "aikeysEngineFallbackOff": "ናብ ካልእ ሞተር ምቕያር ጠፊኡ ኣሎ (ገጽ ቅጥዒታት ምኽሪ)።",
+  "@aikeysEngineFallbackOff": {
+    "description": "web key: aikeys.engine.fallbackOff",
+    "x-draft": true
+  },
+  "aikeysEngineGeminiOnly": "ድምጽን ድለያ መኽዘን ፍልጠትን ኩሉ ግዜ Gemini ይጥቀሙ፤ ስለዚ እንተወሓደ ሓደ መፍትሕ Gemini ሓልዉ።",
+  "@aikeysEngineGeminiOnly": {
+    "description": "web key: aikeys.engine.geminiOnly",
+    "x-draft": true
+  },
+  "aikeysEngineSaved": "ሕጂ {name} መልስታት ይጽሕፍ።",
+  "@aikeysEngineSaved": {
+    "description": "web key: aikeys.engine.saved",
+    "placeholders": {
+      "name": {}
+    },
+    "x-draft": true
+  },
+  "aikeysEngineNoKey": "{name} ተመሪጹ ግን ክሳብ ሕጂ ዝሰርሕ መፍትሕ የብሉን። መፍትሕ ወስኹ፤ ክሳብ ሽዑ ምቕያር እንተተወሊዑ እቲ ካልእ ሞተር ይምልስ።",
+  "@aikeysEngineNoKey": {
+    "description": "web key: aikeys.engine.noKey",
+    "placeholders": {
+      "name": {}
+    },
+    "x-draft": true
+  },
+  "aikeysProviderKeys": "መፍትሕታት {name}",
+  "@aikeysProviderKeys": {
+    "description": "web key: aikeys.providerKeys",
+    "placeholders": {
+      "name": {}
+    },
+    "x-draft": true
+  },
+  "aikeysProvider": "ኣቕራቢ",
+  "@aikeysProvider": {
+    "description": "web key: aikeys.provider",
+    "x-draft": true
+  },
+  "aikeysGetGemini": "ኣብ aistudio.google.com/apikey መፍትሕ ፍጠሩ። ካብ ዝተፈላለዩ ፕሮጀክታት Google ዝመጹ መፍትሕታት ዝተፈላለየ ደረት ኣለዎም።",
+  "@aikeysGetGemini": {
+    "description": "web key: aikeys.getGemini",
+    "x-draft": true
+  },
+  "aikeysGetDeepseek": "ኣብ platform.deepseek.com (API keys) መፍትሕ ፍጠሩን ኣብኡ ሕሳብ መልኡን። ሕሳብ ዘይብሉ መፍትሕ ይሕለፍ።",
+  "@aikeysGetDeepseek": {
+    "description": "web key: aikeys.getDeepseek",
+    "x-draft": true
+  },
+  "settingsLlmFallback": "እቲ ዝተመርጸ ሞተር AI እንተዘይሰሪሑ እቲ ካልእ ተጠቐም",
+  "@settingsLlmFallback": {
+    "description": "web key: settings.llm_fallback",
+    "x-draft": true
+  },
+  "settingsLlmFallbackHint": "ተወሊዑ፦ እቲ ዝተመርጸ ሞተር (Gemini ወይ DeepSeek) መፍትሕ ወይ ሕሳብ እንተዘይብሉ ወይ እንተተቛሪጹ፣ እቲ ካልእ ዝሰርሕ መፍትሕ እንተሃልይዎ ይምልስ። ሞተር ኣብ ገጽ መፍትሕታት AI API ይምረጽ።",
+  "@settingsLlmFallbackHint": {
+    "description": "web key: settings.llm_fallback.hint",
+    "x-draft": true
+  },
+  "settingsDailyTipsAuto": "ኩሉ ንግሆ ዕለታዊ ምኽርታት ኣዳሉ",
+  "@settingsDailyTipsAuto": {
+    "description": "web key: settings.daily_tips_auto",
+    "x-draft": true
+  },
+  "settingsDailyTipsAutoHint": "ተወሊዑ፦ ኩሉ ንግሆ እቲ ስርዓት ናይ ጽባሕ ምኽርታት ንገምጋም የዳሉ። ኣግሮኖሚስት ወይ ኣመሓዳሪ ክሳብ ዘጽድቕ ዋላ ሓንቲ ኣይሕተምን።",
+  "@settingsDailyTipsAutoHint": {
+    "description": "web key: settings.daily_tips_auto.hint",
+    "x-draft": true
+  },
+  "settingsDailyTipsPerDay": "ብመዓልቲ ዝዳለዉ ምኽርታት",
+  "@settingsDailyTipsPerDay": {
+    "description": "web key: settings.daily_tips_per_day",
+    "x-draft": true
+  },
+  "settingsDailyTipsPerDayHint": "ነፍሲ ወከፍ ንድፊ AI ሓደ ሕቶ AI ይጥቀም።",
+  "@settingsDailyTipsPerDayHint": {
+    "description": "web key: settings.daily_tips_per_day.hint",
+    "x-draft": true
+  },
+  "aikeysNoneHintDeepseek": "ሓደ ክሳብ እትውስኹ፣ DeepSeek ክጥቀመሉ ዝኽእል ኣብ ፋይል .env ናይ ኣገልጋሊ ዘሎ DEEPSEEK_API_KEY ጥራይ እዩ፣ እንተተቐሚጡ።",
+  "@aikeysNoneHintDeepseek": {
+    "description": "web key: aikeys.noneHintDeepseek",
+    "x-draft": true
+  },
+  "navGroupFarming": "ሕርሻ",
+  "@navGroupFarming": {
+    "description": "web key: nav.group.farming",
+    "x-draft": true
+  },
+  "navGroupExtension": "ስራሕ ኤክስቴንሽን",
+  "@navGroupExtension": {
+    "description": "web key: nav.group.extension",
+    "x-draft": true
+  },
+  "navGroupPartners": "መእተዊ መሻርኽቲ",
+  "@navGroupPartners": {
+    "description": "web key: nav.group.partners",
+    "x-draft": true
+  },
+  "navGroupContentAi": "ትሕዝቶን AI",
+  "@navGroupContentAi": {
+    "description": "web key: nav.group.contentAi",
+    "x-draft": true
+  },
+  "navGroupSystem": "ስርዓት",
+  "@navGroupSystem": {
+    "description": "web key: nav.group.system",
+    "x-draft": true
+  },
+  "navLivestock": "ዋጋ እንስሳ",
+  "@navLivestock": {
+    "description": "web key: nav.livestock",
+    "x-draft": true
+  },
+  "lvDescription": "ብዕዳጋታት እንስሳ NMIS ዝተጸብጸበ ዋጋ ንሓደ እንስሳ፣ ምስ ግምት 4 ሰሙንን ክንደይ ርግጸኛ ምዃኑን።",
+  "@lvDescription": {
+    "description": "web key: lv.description",
+    "x-draft": true
+  },
+  "lvAnimal": "እንስሳ",
+  "@lvAnimal": {
+    "description": "web key: lv.animal",
+    "x-draft": true
+  },
+  "lvAnimalOx": "ብዕራይ",
+  "@lvAnimalOx": {
+    "description": "web key: lv.animal.ox",
+    "x-draft": true
+  },
+  "lvAnimalCow": "ላም",
+  "@lvAnimalCow": {
+    "description": "web key: lv.animal.cow",
+    "x-draft": true
+  },
+  "lvAnimalBull": "ኮርማ",
+  "@lvAnimalBull": {
+    "description": "web key: lv.animal.bull",
+    "x-draft": true
+  },
+  "lvAnimalHeifer": "ጊደር",
+  "@lvAnimalHeifer": {
+    "description": "web key: lv.animal.heifer",
+    "x-draft": true
+  },
+  "lvAnimalCalf": "ምራኽ",
+  "@lvAnimalCalf": {
+    "description": "web key: lv.animal.calf",
+    "x-draft": true
+  },
+  "lvAnimalSheep": "በጊዕ",
+  "@lvAnimalSheep": {
+    "description": "web key: lv.animal.sheep",
+    "x-draft": true
+  },
+  "lvAnimalGoat": "ጤል",
+  "@lvAnimalGoat": {
+    "description": "web key: lv.animal.goat",
+    "x-draft": true
+  },
+  "lvAnimalCamel": "ገመል",
+  "@lvAnimalCamel": {
+    "description": "web key: lv.animal.camel",
+    "x-draft": true
+  },
+  "lvAnimalChicken": "ደርሆ",
+  "@lvAnimalChicken": {
+    "description": "web key: lv.animal.chicken",
+    "x-draft": true
+  },
+  "lvSourceLine": "ምንጪ፦ ሓበሬታ ዕዳጋ እንስሳ NMIS፣ ካብ {start} ክሳብ {end}።",
+  "@lvSourceLine": {
+    "description": "web key: lv.sourceLine",
+    "placeholders": {
+      "start": {},
+      "end": {}
+    },
+    "x-draft": true
+  },
+  "lvStatReports": "ጸብጻባት ዋጋ",
+  "@lvStatReports": {
+    "description": "web key: lv.stat.reports",
+    "x-draft": true
+  },
+  "lvStatMarkets": "ዕዳጋታት",
+  "@lvStatMarkets": {
+    "description": "web key: lv.stat.markets",
+    "x-draft": true
+  },
+  "lvStatPeriod": "እዋን ሓበሬታ",
+  "@lvStatPeriod": {
+    "description": "web key: lv.stat.period",
+    "x-draft": true
+  },
+  "lvStatDays": "{n} መዓልታት",
+  "@lvStatDays": {
+    "description": "web key: lv.stat.days",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "lvEmptyTitle": "ገና ዋጋ እንስሳ ኣይተጻዕነን",
+  "@lvEmptyTitle": {
+    "description": "web key: lv.empty.title",
+    "x-draft": true
+  },
+  "lvEmptyDescription": "ጸብጻባት ዕዳጋ እንስሳ NMIS ምስ ኣተዉ ዋጋታት ኣብዚ ይርኣዩ።",
+  "@lvEmptyDescription": {
+    "description": "web key: lv.empty.description",
+    "x-draft": true
+  },
+  "lvNoSeries": "ነዚ ምርጫ ጸብጻብ የለን።",
+  "@lvNoSeries": {
+    "description": "web key: lv.noSeries",
+    "x-draft": true
+  },
+  "lvOutlookTitle": "ግምት 4 ሰሙን",
+  "@lvOutlookTitle": {
+    "description": "web key: lv.outlook.title",
+    "x-draft": true
+  },
+  "lvOutlookCountry": "ብምሉእ ሃገር፣ ኩሎም ደረጃታት ብሓባር",
+  "@lvOutlookCountry": {
+    "description": "web key: lv.outlook.country",
+    "x-draft": true
+  },
+  "lvOutlookRegion": "{region}፣ ኩሎም ደረጃታት ብሓባር",
+  "@lvOutlookRegion": {
+    "description": "web key: lv.outlook.region",
+    "placeholders": {
+      "region": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookCountryFallback": "ኣብ {region} ጸብጻባት ውሑዳት እዮም፤ ግምት ምሉእ ሃገር",
+  "@lvOutlookCountryFallback": {
+    "description": "web key: lv.outlook.countryFallback",
+    "placeholders": {
+      "region": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookUp": "ዋጋ ብ{pct}% ኣቢሉ ክውስኽ ይኽእል",
+  "@lvOutlookUp": {
+    "description": "web key: lv.outlook.up",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookDown": "ዋጋ ብ{pct}% ኣቢሉ ክንኪ ይኽእል",
+  "@lvOutlookDown": {
+    "description": "web key: lv.outlook.down",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookFlat": "ዋጋ ብዙሕ ኣይቅየርን",
+  "@lvOutlookFlat": {
+    "description": "web key: lv.outlook.flat",
+    "x-draft": true
+  },
+  "lvOutlookRange": "(ምናልባት ካብ {low}% ክሳብ {high}%)",
+  "@lvOutlookRange": {
+    "description": "web key: lv.outlook.range",
+    "placeholders": {
+      "low": {},
+      "high": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookNone": "ገና ግምት የለን፤ ኣንፈት ንምዕቃን ሓበሬታ እኹል ኣይኮነን።",
+  "@lvOutlookNone": {
+    "description": "web key: lv.outlook.none",
+    "x-draft": true
+  },
+  "lvOutlookWhy": "ስለምንታይ እዚ ደረጃ እምነት",
+  "@lvOutlookWhy": {
+    "description": "web key: lv.outlook.why",
+    "x-draft": true
+  },
+  "lvOutlookNote": "ነፍሲ ወከፍ ደረጃ ኣብ ነፍሲ ወከፍ ዕዳጋ ናይ ገዛእ ርእሱ ደረጃ ዋጋ ኣለዎ፤ እቲ ሞዴል ነቲ ሓባራዊ ኣንፈት ይዕቅን። ግምት መብጽዓ ኣይኮነን፤ ቅድሚ ምሻጥኩም ኣብ ዕዳጋ ኣረጋግጹ።",
+  "@lvOutlookNote": {
+    "description": "web key: lv.outlook.note",
+    "x-draft": true
+  },
+  "lvConfHigh": "ልዑል እምነት",
+  "@lvConfHigh": {
+    "description": "web key: lv.conf.high",
+    "x-draft": true
+  },
+  "lvConfMedium": "ማእከላይ እምነት",
+  "@lvConfMedium": {
+    "description": "web key: lv.conf.medium",
+    "x-draft": true
+  },
+  "lvConfLow": "ትሑት እምነት",
+  "@lvConfLow": {
+    "description": "web key: lv.conf.low",
+    "x-draft": true
+  },
+  "lvReasonPeriod": "ካብ {start} ክሳብ {end} ካብ {markets} ዕዳጋ(ታት) ዝተረኽቡ {reports} ጸብጻባት ዋጋ ዝተመርኮሰ።",
+  "@lvReasonPeriod": {
+    "description": "web key: lv.reason.period",
+    "placeholders": {
+      "start": {},
+      "end": {},
+      "markets": {},
+      "reports": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonNoSeason": "ሓበሬታ ካብ ሓደ ዓመት ስለ ዝወሓደ ናይ ወቕቲ ለውጥታት (በዓላት፣ ሓጋይ) ኣብቲ ሞዴል የለዉን።",
+  "@lvReasonNoSeason": {
+    "description": "web key: lv.reason.no_season",
+    "x-draft": true
+  },
+  "lvReasonFewReports": "{reports} ጸብጻባት ጥራይ፤ ሓንቲ ዘይልሙድ መዓልቲ ዕዳጋ ውጽኢት ክትቅይር ትኽእል።",
+  "@lvReasonFewReports": {
+    "description": "web key: lv.reason.few_reports",
+    "placeholders": {
+      "reports": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonShortPeriod": "ናይ {days} መዓልታት ሓበሬታ ጥራይ፤ ኣንፈት ካብ ግዝያዊ ለውጢ ንምፍላይ ኣዝዩ ሓጺር እዩ።",
+  "@lvReasonShortPeriod": {
+    "description": "web key: lv.reason.short_period",
+    "placeholders": {
+      "days": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonStale": "እቲ ናይ መወዳእታ ጸብጻብ ቅድሚ {days} መዓልታት እዩ።",
+  "@lvReasonStale": {
+    "description": "web key: lv.reason.stale",
+    "placeholders": {
+      "days": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonChecked": "ኣብ ዘይረኣዮም ናይ ቀረባ ጸብጻባት ተፈቲኑ፦ ብማእከላይ ብ{pct}% ተጋጊዩ ('ለውጢ የለን' ምግማት ብ{naive}%)።",
+  "@lvReasonChecked": {
+    "description": "web key: lv.reason.checked",
+    "placeholders": {
+      "pct": {},
+      "naive": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonNoTrend": "ኣብ ናይ ቀረባ ጸብጻባት እቲ ኣንፈት ({pct}%) 'ለውጢ የለን' ካብ ዝብል ({naive}%) ስለ ዘይበለጸ ግምት 'ብዙሕ ኣይቅየርን' እዩ።",
+  "@lvReasonNoTrend": {
+    "description": "web key: lv.reason.no_trend",
+    "placeholders": {
+      "pct": {},
+      "naive": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonNotChecked": "ነቲ ሞዴል ብዘይረኣዮ ሓበሬታ ንምፍታን ናይ ቀረባ ጸብጻባት ኣዝዮም ውሑዳት እዮም።",
+  "@lvReasonNotChecked": {
+    "description": "web key: lv.reason.not_checked",
+    "x-draft": true
+  },
+  "lvReasonTooFew": "ኣንፈት ንምርኣይ ኣብ ሓደ ዕዳጋ ናይ ተመሳሳሊ ደረጃ ተደጋጋሚ ጸብጻባት እኹላት ኣይኮኑን።",
+  "@lvReasonTooFew": {
+    "description": "web key: lv.reason.too_few",
+    "x-draft": true
+  },
+  "lvReasonNoData": "ነዚ እንስሳ ዝተጻዕነ ጸብጻብ የለን።",
+  "@lvReasonNoData": {
+    "description": "web key: lv.reason.no_data",
+    "x-draft": true
+  },
+  "lvChartTitle": "ማእከላይ ዋጋ ንሓደ እንስሳ",
+  "@lvChartTitle": {
+    "description": "web key: lv.chart.title",
+    "x-draft": true
+  },
+  "lvChartDescription": "ማእከል ዝተሓተን ዝለዓለን ዋጋ፤ ብቐረባ ዝተጸብጸቡ {n} ደረጃታት።",
+  "@lvChartDescription": {
+    "description": "web key: lv.chart.description",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "lvTableTitle": "ናይ ቀረባ ዋጋታት",
+  "@lvTableTitle": {
+    "description": "web key: lv.table.title",
+    "x-draft": true
+  },
+  "lvTableDescription": "ንሓደ እንስሳ፣ ካብ ዝተሓተ ክሳብ ዝለዓለ ዝተጸብጸበ ዋጋ። ግምት፦ ድሕሪ ናይ መወዳእታ ጸብጻብ 4 ሰሙን ዝጽበ ክሊ።",
+  "@lvTableDescription": {
+    "description": "web key: lv.table.description",
+    "x-draft": true
+  },
+  "lvTableMarket": "ዕዳጋ",
+  "@lvTableMarket": {
+    "description": "web key: lv.table.market",
+    "x-draft": true
+  },
+  "lvTableGrade": "ደረጃ",
+  "@lvTableGrade": {
+    "description": "web key: lv.table.grade",
+    "x-draft": true
+  },
+  "lvTableLatest": "ናይ ቀረባ ዋጋ",
+  "@lvTableLatest": {
+    "description": "web key: lv.table.latest",
+    "x-draft": true
+  },
+  "lvTableDate": "ዝተጸብጸበሉ",
+  "@lvTableDate": {
+    "description": "web key: lv.table.date",
+    "x-draft": true
+  },
+  "lvTableChange": "ካብ ዝሓለፈ",
+  "@lvTableChange": {
+    "description": "web key: lv.table.change",
+    "x-draft": true
+  },
+  "lvTableOutlook": "ኣብ 4 ሰሙን",
+  "@lvTableOutlook": {
+    "description": "web key: lv.table.outlook",
+    "x-draft": true
+  },
+  "lvImportTitle": "ዋጋ እንስሳ ኣእቱ",
+  "@lvImportTitle": {
+    "description": "web key: lv.import.title",
+    "x-draft": true
+  },
+  "lvImportDescription": "CSV ጸብጻባት ዋጋ እንስሳ NMIS ጸዓኑ (ንዓምድታት ቅጥዒ ኣውርዱ)። ዝተጻዕኑ ጸብጻባት ይሕደሱ፣ ግምት እውን ከም ብሓድሽ ይሰልጥን።",
+  "@lvImportDescription": {
+    "description": "web key: lv.import.description",
+    "x-draft": true
+  },
+  "lvImportTemplate": "ቅጥዒ ኣውርድ",
+  "@lvImportTemplate": {
+    "description": "web key: lv.import.template",
+    "x-draft": true
+  },
+  "lvImportUpload": "CSV ጽዓን",
+  "@lvImportUpload": {
+    "description": "web key: lv.import.upload",
+    "x-draft": true
+  },
+  "lvImportRetrain": "ግምት ከም ብሓድሽ ኣሰልጥን",
+  "@lvImportRetrain": {
+    "description": "web key: lv.import.retrain",
+    "x-draft": true
+  },
+  "lvImportResult": "{added} ጸብጻባት ተወሲኾም፣ {updated} ተሓዲሶም፣ {rejected} ተነጺጎም፤ {forecasts} ግምታት ሰልጢኖም።",
+  "@lvImportResult": {
+    "description": "web key: lv.import.result",
+    "placeholders": {
+      "added": {},
+      "updated": {},
+      "rejected": {},
+      "forecasts": {}
+    },
+    "x-draft": true
+  },
+  "lvImportTrained": "{trained} ሞዴላት ከም ብሓድሽ ሰልጢኖም፤ {forecasts} ንግምት እኹል ሓበሬታ ኣለዎም።",
+  "@lvImportTrained": {
+    "description": "web key: lv.import.trained",
+    "placeholders": {
+      "trained": {},
+      "forecasts": {}
+    },
     "x-draft": true
   }
 }

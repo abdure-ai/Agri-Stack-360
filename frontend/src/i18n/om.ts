@@ -1755,4 +1755,67 @@ export const om: Record<MessageKey, string> = {
   "nav.group.partners": "Seensa michootaa",  // draft – needs native review
   "nav.group.contentAi": "Qabiyyee fi AI",  // draft – needs native review
   "nav.group.system": "Sirna",  // draft – needs native review
+
+  // ── Livestock prices ──────────────────────────────────────────────────────
+  "nav.livestock": "Gatii horii",  // draft – needs native review
+  "lv.description": "Gatii horii tokkoo gabaawwan horii NMIS gabaasan, tilmaama torban 4 fi hammam amanamaa akka ta'e waliin.",  // draft – needs native review
+  "lv.animal": "Horii",  // draft – needs native review
+  "lv.animal.ox": "Qotiyyoo",  // draft – needs native review
+  "lv.animal.cow": "Sa'a",  // draft – needs native review
+  "lv.animal.bull": "Korma",  // draft – needs native review
+  "lv.animal.heifer": "Goromsa",  // draft – needs native review
+  "lv.animal.calf": "Jabbii",  // draft – needs native review
+  "lv.animal.sheep": "Hoolaa",  // draft – needs native review
+  "lv.animal.goat": "Re'ee",  // draft – needs native review
+  "lv.animal.camel": "Gaala",  // draft – needs native review
+  "lv.animal.chicken": "Lukkuu",  // draft – needs native review
+  "lv.sourceLine": "Madda: odeeffannoo gabaa horii NMIS, {start} hanga {end}.",  // draft – needs native review
+  "lv.stat.reports": "Gabaasa gatii",  // draft – needs native review
+  "lv.stat.markets": "Gabaawwan",  // draft – needs native review
+  "lv.stat.period": "Yeroo odeeffannoo",  // draft – needs native review
+  "lv.stat.days": "Guyyaa {n}",  // draft – needs native review
+  "lv.empty.title": "Gatiin horii ammallee hin fe'amne",  // draft – needs native review
+  "lv.empty.description": "Gabaasni gabaa horii NMIS yeroo galfamu gatiin as mul'ata.",  // draft – needs native review
+  "lv.noSeries": "Filannoo kanaaf gabaasni hin jiru.",  // draft – needs native review
+  "lv.outlook.title": "Tilmaama torban 4",  // draft – needs native review
+  "lv.outlook.country": "Biyya guutuu, sadarkaa hunda waliin",  // draft – needs native review
+  "lv.outlook.region": "{region}, sadarkaa hunda waliin",  // draft – needs native review
+  "lv.outlook.countryFallback": "{region} keessatti gabaasni xiqqaa dha: tilmaama biyya guutuu",  // draft – needs native review
+  "lv.outlook.up": "Gatiin gara {pct}% ol ka'uu danda'a",  // draft – needs native review
+  "lv.outlook.down": "Gatiin gara {pct}% gadi bu'uu danda'a",  // draft – needs native review
+  "lv.outlook.flat": "Gatiin baay'ee hin jijjiiramu",  // draft – needs native review
+  "lv.outlook.range": "(tarii {low}% hanga {high}%)",  // draft – needs native review
+  "lv.outlook.none": "Tilmaamni ammaaf hin jiru: adeemsa safaruuf odeeffannoon gahaa miti.",  // draft – needs native review
+  "lv.outlook.why": "Maaliif amanamummaan kun",  // draft – needs native review
+  "lv.outlook.note": "Sadarkaan tokkoon tokkoon gabaa irratti sadarkaa gatii mataa isaa qaba; moodeelli adeemsa waloo safara. Tilmaamni waadaa miti: osoo hin gurgurin dura gabaa irratti mirkaneeffadhaa.",  // draft – needs native review
+  "lv.conf.high": "Amanamummaa ol aanaa",  // draft – needs native review
+  "lv.conf.medium": "Amanamummaa giddu galeessaa",  // draft – needs native review
+  "lv.conf.low": "Amanamummaa gadi aanaa",  // draft – needs native review
+  "lv.reason.period": "Gabaasa gatii {reports} gabaa {markets} irraa, {start} hanga {end} irratti hundaa'e.",  // draft – needs native review
+  "lv.reason.no_season": "Odeeffannoon waggaa tokkoo gadi waan ta'eef jijjiiramni waqtii (ayyaana, bona) moodeela keessa hin jiru.",  // draft – needs native review
+  "lv.reason.few_reports": "Gabaasa {reports} qofa: guyyaan gabaa adda ta'e tokko bu'aa jijjiiruu danda'a.",  // draft – needs native review
+  "lv.reason.short_period": "Odeeffannoo guyyaa {days} qofa: adeemsa jijjiirama yeroo gabaabaa irraa adda baasuuf baay'ee gabaabaa dha.",  // draft – needs native review
+  "lv.reason.stale": "Gabaasni dhumaa guyyaa {days} dura kan ture.",  // draft – needs native review
+  "lv.reason.checked": "Gabaasa dhiyoo hin argin irratti qoratame: giddugaleessaan {pct}% dogoggore ('jijjiiramni hin jiru' jedhanii tilmaamuun {naive}%).",  // draft – needs native review
+  "lv.reason.no_trend": "Gabaasa dhiyoo irratti adeemsi ({pct}%) 'jijjiiramni hin jiru' ({naive}%) irra hin caalle, kanaaf tilmaamni 'baay'ee hin jijjiiramu' dha.",  // draft – needs native review
+  "lv.reason.not_checked": "Moodeela odeeffannoo hin argin irratti qoruuf gabaasni dhiyoo baay'ee xiqqaa dha.",  // draft – needs native review
+  "lv.reason.too_few": "Adeemsa arguuf gabaasni irra deddeebi'ame sadarkaa walfakkaataa gabaa tokko irratti gahaa miti.",  // draft – needs native review
+  "lv.reason.no_data": "Horii kanaaf gabaasni fe'ame hin jiru.",  // draft – needs native review
+  "lv.chart.title": "Gatii giddugaleessaa horii tokkoo",  // draft – needs native review
+  "lv.chart.description": "Gidduu gatii gadi aanaa fi ol aanaa; sadarkaalee {n} dhiyeenya gabaafaman.",  // draft – needs native review
+  "lv.table.title": "Gatii dhiyoo",  // draft – needs native review
+  "lv.table.description": "Horii tokkoof, gatii gabaafame gadi aanaa hanga ol aanaa. Tilmaama: daangaa torban 4 gabaasa dhumaa booda eegamu.",  // draft – needs native review
+  "lv.table.market": "Gabaa",  // draft – needs native review
+  "lv.table.grade": "Sadarkaa",  // draft – needs native review
+  "lv.table.latest": "Gatii dhiyoo",  // draft – needs native review
+  "lv.table.date": "Kan gabaafame",  // draft – needs native review
+  "lv.table.change": "Kan duraa irraa",  // draft – needs native review
+  "lv.table.outlook": "Torban 4 keessatti",  // draft – needs native review
+  "lv.import.title": "Gatii horii galchi",  // draft – needs native review
+  "lv.import.description": "CSV gabaasa gatii horii NMIS fe'aa (tarree beekuuf unka buufadhaa). Gabaasni duraan fe'ame ni haaromfama, tilmaamnis irra deebi'ee leenji'a.",  // draft – needs native review
+  "lv.import.template": "Unka buusi",  // draft – needs native review
+  "lv.import.upload": "CSV fe'i",  // draft – needs native review
+  "lv.import.retrain": "Tilmaama irra deebi'ii leenjisi",  // draft – needs native review
+  "lv.import.result": "Gabaasa {added} dabalame, {updated} haaromfame, {rejected} didame; tilmaama {forecasts} leenji'e.",  // draft – needs native review
+  "lv.import.trained": "Moodeelli {trained} irra deebi'anii leenji'an; {forecasts} tilmaamaaf odeeffannoo gahaa qabu.",  // draft – needs native review
 };

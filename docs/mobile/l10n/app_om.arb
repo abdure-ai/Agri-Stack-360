@@ -180,9 +180,10 @@
   "@commonViewAll": {
     "description": "web key: common.viewAll"
   },
-  "commonDemoData": "Ragaa agarsiisaa",
+  "commonDemoData": "Odeeffannoo agarsiisaa",
   "@commonDemoData": {
-    "description": "web key: common.demoData"
+    "description": "web key: common.demoData",
+    "x-draft": true
   },
   "commonToggleSidebar": "Tarree cinaa bani/cufi",
   "@commonToggleSidebar": {
@@ -685,9 +686,10 @@
   "@signinCreateOne": {
     "description": "web key: signin.createOne"
   },
-  "signinDemoAccounts": "Herrega agarsiisaa",
+  "signinDemoAccounts": "Seensa ariifataa",
   "@signinDemoAccounts": {
-    "description": "web key: signin.demoAccounts"
+    "description": "web key: signin.demoAccounts",
+    "x-draft": true
   },
   "signupMetaTitle": "Herrega bani",
   "@signupMetaTitle": {
@@ -2024,16 +2026,18 @@
   "@areaLoadFailed": {
     "description": "web key: area.loadFailed"
   },
-  "demoTitle": "Ragaa agarsiisaa — gorsa mirkanaa'e miti",
+  "demoTitle": "Odeeffannoo agarsiisaa: osoo hin fayyadamin dura mirkaneessaa",
   "@demoTitle": {
-    "description": "web key: demo.title"
+    "description": "web key: demo.title",
+    "x-draft": true
   },
-  "demoMessage": "{subject} asitti mul'atan fakkeenya agarsiisaaf qofa. Tarree galmaa'e seeraa wajjin hin mirkanoofne. Keemikaala bituuf ykn biifuuf itti hin fayyadamin — Hojjetaa Misoomaa kee gaafadhu.",
+  "demoMessage": "{subject} asitti mul'atan agarsiisaa qofa. Osoo hin bitin ykn hin biifin dura moxxaa oomishaa fi galmee EAA ammaa waliin mirkaneessaa, DA keessan waliinis mari'adhaa.",
   "@demoMessage": {
     "description": "web key: demo.message",
     "placeholders": {
       "subject": {}
-    }
+    },
+    "x-draft": true
   },
   "demoSubjectProducts": "Maqaa oomishaa fi hamma",
   "@demoSubjectProducts": {
@@ -2047,7 +2051,7 @@
   "@demoSubjectTextDiagnosis": {
     "description": "web key: demo.subject.textDiagnosis"
   },
-  "demoMessageLoans": "Liqeessitoonni, gosoonni liqii fi dhalli liqii asitti mul'atan fakkeenya agarsiisaaf qofa. Dhiyeessii dhugaa miti. Osoo hin iyyatin dura baankii keessan ykn dhaabbata maayikiroo faayinaansii gaafadhaa.",
+  "demoMessageLoans": "Liqeessitoonni, gosoonni liqii fi dhalli asitti mul'atan agarsiisaa qofa. Osoo hin iyyatin dura haalawwan baankii ykn dhaabbata maaykiroofaayinaansii waliin mirkaneessaa.",
   "@demoMessageLoans": {
     "description": "web key: demo.message.loans",
     "x-draft": true
@@ -2154,9 +2158,10 @@
   "@cropModePhoto": {
     "description": "web key: crop.mode.photo"
   },
-  "cropModeDescribe": "Ibsuun (agarsiisa)",
+  "cropModeDescribe": "Ibsi (beetaa)",
   "@cropModeDescribe": {
-    "description": "web key: crop.mode.describe"
+    "description": "web key: crop.mode.describe",
+    "x-draft": true
   },
   "cropWhichField": "Lafa qonnaa kami?",
   "@cropWhichField": {
@@ -2215,9 +2220,10 @@
   "@cropSigns": {
     "description": "web key: crop.signs"
   },
-  "cropWhatToDoDemo": "Maal gochuu qabda (fakkeenya agarsiisaa)",
+  "cropWhatToDoDemo": "Maal gochuu qabdu (beetaa)",
   "@cropWhatToDoDemo": {
-    "description": "web key: crop.whatToDoDemo"
+    "description": "web key: crop.whatToDoDemo",
+    "x-draft": true
   },
   "cropCheckAgain": "Lafa qonnaa {date} irra deebi'ii qoradhu.",
   "@cropCheckAgain": {
@@ -2377,9 +2383,10 @@
   "@photoVerified": {
     "description": "web key: photo.verified"
   },
-  "photoPlaceholder": "Yeroof — hin mirkanoofne",
+  "photoPlaceholder": "Galmee EAA mirkaneessi",
   "@photoPlaceholder": {
-    "description": "web key: photo.placeholder"
+    "description": "web key: photo.placeholder",
+    "x-draft": true
   },
   "photoPpe": "Uffata eegumsaa: {items}",
   "@photoPpe": {
@@ -2396,9 +2403,10 @@
   "@photoNotChecked": {
     "description": "web key: photo.notChecked"
   },
-  "photoNotCheckedBody": "Odeeffannoon oomishaa fi hammaa hanga tarreen seeraa mirkanaa'utti yeroof qofa. Bituu ykn biifuu dura Hojjetaa Misoomaa kee wajjin mirkaneessi.",
+  "photoNotCheckedBody": "Hammi hanga galmee EAA waliin mirkanaa'utti hin mul'atu. Moxxaa oomishaa hordofaa; osoo hin bitin ykn hin biifin dura DA keessan waliin mirkaneessaa.",
   "@photoNotCheckedBody": {
-    "description": "web key: photo.notCheckedBody"
+    "description": "web key: photo.notCheckedBody",
+    "x-draft": true
   },
   "photoInField": "Lafa qonnaa irratti maal gochuu qabda",
   "@photoInField": {
@@ -4138,9 +4146,10 @@
   "@aikeysMeta": {
     "description": "web key: aikeys.meta"
   },
-  "aikeysDescription": "Furtuuwwan API Gemini hedduu dabali. Tokko yoo kooteen isaa dhume ykn didame, waltajjiin ofumaan gara furtuu itti aanutti jijjiira.",
+  "aikeysDescription": "Furtuuwwan API Gemini fi DeepSeek dabalaatii AI kamtu deebii akka barreessu filadhaa. Furtuun tokko daangaa ykn herrega yoo xumure ykn yoo didame, platformichi ofumaan gara furtuu itti aanutti jijjiira.",
   "@aikeysDescription": {
-    "description": "web key: aikeys.description"
+    "description": "web key: aikeys.description",
+    "x-draft": true
   },
   "aikeysAdd": "Furtuu dabali",
   "@aikeysAdd": {
@@ -4321,9 +4330,10 @@
   "@aikeysAddTitle": {
     "description": "web key: aikeys.addTitle"
   },
-  "aikeysAddHint": "Furtuu aistudio.google.com/apikey irratti uumi. Furtuuwwan pirojektoota Google adda addaa irraa kootee adda addaa qabu.",
+  "aikeysAddHint": "Dhiyeessaa filadhaa, achiis furtuu maxxansaa.",
   "@aikeysAddHint": {
-    "description": "web key: aikeys.addHint"
+    "description": "web key: aikeys.addHint",
+    "x-draft": true
   },
   "aikeysLabelPlaceholder": "fkn. Pirojektii 2 (bilisa)",
   "@aikeysLabelPlaceholder": {
@@ -5494,12 +5504,12 @@
     },
     "x-draft": true
   },
-  "reportsDemo": "Odeeffannoo agarsiisaa dabali",
+  "reportsDemo": "Galmeewwan fakkeenyaa dabaluu",
   "@reportsDemo": {
     "description": "web key: reports.demo",
     "x-draft": true
   },
-  "reportsDemoBadge": "odeeffannoo agarsiisaa of keessaa qaba",
+  "reportsDemoBadge": "galmeewwan fakkeenyaa ni dabalata",
   "@reportsDemoBadge": {
     "description": "web key: reports.demoBadge",
     "x-draft": true
@@ -5592,7 +5602,7 @@
     "description": "web key: perm.orgs_manage.desc",
     "x-draft": true
   },
-  "demoMessageTrust": "Oomishaaleen, lakkoofsonni galmee fi dhiyeessitoonni asii fakkeenya yaaliif kaa'aman. Tarree oomishaalee galmaa'anii ifaa miti.",
+  "demoMessageTrust": "Tarreen oomishaa maanuwaalii qamadii MoA irraa fudhatame. Lakkoofsonni galmee galmeen EAA seera qabeessi yeroo walqabatu dhufu.",
   "@demoMessageTrust": {
     "description": "web key: demo.message.trust",
     "x-draft": true
@@ -7814,9 +7824,14 @@
     "description": "web key: tips.cancel",
     "x-draft": true
   },
-  "signinDemoHint": "Seenuuf herrega tuqi. Agarsiisaaf qofa: gosa hojii dhugaa keessatti ni dhokata.",
+  "signinDemoHint": "Naannoo dhiyeessaa namoota fi galmeewwan fakkeenyaa qabu. Seenuuf herrega tuqi.",
   "@signinDemoHint": {
     "description": "web key: signin.demoHint",
+    "x-draft": true
+  },
+  "signinDemoPassword": "Jecha darbii",
+  "@signinDemoPassword": {
+    "description": "web key: signin.demoPassword",
     "x-draft": true
   },
   "signinDemoPitchFarmer": "Qonnaan bulaa agarsiisaa, Dawaa Caffaa",
@@ -7857,6 +7872,522 @@
   "tipsManage": "Gorsa barreessi ykn raggaasisi",
   "@tipsManage": {
     "description": "web key: tips.manage",
+    "x-draft": true
+  },
+  "aikeysEngineTitle": "Motora deebii barreeffamaa",
+  "@aikeysEngineTitle": {
+    "description": "web key: aikeys.engine.title",
+    "x-draft": true
+  },
+  "aikeysEngineDescription": "AI kamtu deebii gorsaa, gorsa guyyaa fi ibsa gaggabaabaa akka barreessu filadhaa. Seeronni hin jijjiiraman: deebiin qajeelfama qofa irraa, madda waliin, odeeffannoon dhuunfaa hin ergamu.",
+  "@aikeysEngineDescription": {
+    "description": "web key: aikeys.engine.description",
+    "x-draft": true
+  },
+  "aikeysEngineGeminiHint": "Sagaleef fi barbaacha kuusaa beekumsaatiifis ni oola. Sadarkaa bilisaa qaba.",
+  "@aikeysEngineGeminiHint": {
+    "description": "web key: aikeys.engine.geminiHint",
+    "x-draft": true
+  },
+  "aikeysEngineDeepseekHint": "Barreeffama qofa; kaffaltii dursaatiin itti fayyadama irratti kaffalama. Odeeffannoon tajaajiltoota DeepSeek Chaayinaa keessa jiran irratti hojjetama; barreeffama maqaa malee kan Gemini argatu wal fakkaatu argata.",
+  "@aikeysEngineDeepseekHint": {
+    "description": "web key: aikeys.engine.deepseekHint",
+    "x-draft": true
+  },
+  "aikeysEngineInUse": "Hojii irra jira",
+  "@aikeysEngineInUse": {
+    "description": "web key: aikeys.engine.inUse",
+    "x-draft": true
+  },
+  "aikeysEngineUse": "Kana fayyadami",
+  "@aikeysEngineUse": {
+    "description": "web key: aikeys.engine.use",
+    "x-draft": true
+  },
+  "aikeysEngineKeys": "Furtuu hojjetu {n}",
+  "@aikeysEngineKeys": {
+    "description": "web key: aikeys.engine.keys",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "aikeysEngineFallbackOn": "Motorri filatame yoo hin hojjenne, kan biraa furtuu hojjetu yoo qabaate ni deebisa (fuula qindaa'ina gorsaa irratti jijjiirama).",
+  "@aikeysEngineFallbackOn": {
+    "description": "web key: aikeys.engine.fallbackOn",
+    "x-draft": true
+  },
+  "aikeysEngineFallbackOff": "Gara motora biraatti jijjiiruun dhaabbateera (fuula qindaa'ina gorsaa).",
+  "@aikeysEngineFallbackOff": {
+    "description": "web key: aikeys.engine.fallbackOff",
+    "x-draft": true
+  },
+  "aikeysEngineGeminiOnly": "Sagaleen fi barbaachi kuusaa beekumsaa yeroo hunda Gemini fayyadamu; kanaaf yoo xiqqaate furtuu Gemini tokko qabaadhaa.",
+  "@aikeysEngineGeminiOnly": {
+    "description": "web key: aikeys.engine.geminiOnly",
+    "x-draft": true
+  },
+  "aikeysEngineSaved": "Amma {name} deebii barreessa.",
+  "@aikeysEngineSaved": {
+    "description": "web key: aikeys.engine.saved",
+    "placeholders": {
+      "name": {}
+    },
+    "x-draft": true
+  },
+  "aikeysEngineNoKey": "{name} filatameera garuu ammallee furtuu hojjetu hin qabu. Furtuu dabalaa; hanga sanaatti jijjiirraan yoo banaa ta'e motorri biraa ni deebisa.",
+  "@aikeysEngineNoKey": {
+    "description": "web key: aikeys.engine.noKey",
+    "placeholders": {
+      "name": {}
+    },
+    "x-draft": true
+  },
+  "aikeysProviderKeys": "Furtuuwwan {name}",
+  "@aikeysProviderKeys": {
+    "description": "web key: aikeys.providerKeys",
+    "placeholders": {
+      "name": {}
+    },
+    "x-draft": true
+  },
+  "aikeysProvider": "Dhiyeessaa",
+  "@aikeysProvider": {
+    "description": "web key: aikeys.provider",
+    "x-draft": true
+  },
+  "aikeysGetGemini": "aistudio.google.com/apikey irratti furtuu uumaa. Furtuuwwan pirojektii Google adda addaa irraa daangaa adda addaa qabu.",
+  "@aikeysGetGemini": {
+    "description": "web key: aikeys.getGemini",
+    "x-draft": true
+  },
+  "aikeysGetDeepseek": "platform.deepseek.com (API keys) irratti furtuu uumaatii achumatti herrega guutaa. Furtuun herrega hin qabne ni darbama.",
+  "@aikeysGetDeepseek": {
+    "description": "web key: aikeys.getDeepseek",
+    "x-draft": true
+  },
+  "settingsLlmFallback": "Motorri AI filatame yoo hin hojjenne kan biraa fayyadami",
+  "@settingsLlmFallback": {
+    "description": "web key: settings.llm_fallback",
+    "x-draft": true
+  },
+  "settingsLlmFallbackHint": "Banaa: motorri filatame (Gemini ykn DeepSeek) furtuu ykn herrega yoo hin qabaanne ykn yoo cite, kan biraa furtuu hojjetu yoo qabaate ni deebisa. Motorri fuula furtuuwwan AI API irratti filatama.",
+  "@settingsLlmFallbackHint": {
+    "description": "web key: settings.llm_fallback.hint",
+    "x-draft": true
+  },
+  "settingsDailyTipsAuto": "Ganama ganama gorsa guyyaa qopheessi",
+  "@settingsDailyTipsAuto": {
+    "description": "web key: settings.daily_tips_auto",
+    "x-draft": true
+  },
+  "settingsDailyTipsAutoHint": "Banaa: ganama ganama sirnichi gorsa boruu gamaaggamaaf qopheessa. Hanga agroonoomistiin ykn bulchaan raggaasisutti homtuu hin maxxanfamu.",
+  "@settingsDailyTipsAutoHint": {
+    "description": "web key: settings.daily_tips_auto.hint",
+    "x-draft": true
+  },
+  "settingsDailyTipsPerDay": "Gorsa guyyaatti qophaa'u",
+  "@settingsDailyTipsPerDay": {
+    "description": "web key: settings.daily_tips_per_day",
+    "x-draft": true
+  },
+  "settingsDailyTipsPerDayHint": "Wixineen AI tokko gaaffii AI tokko fayyadama.",
+  "@settingsDailyTipsPerDayHint": {
+    "description": "web key: settings.daily_tips_per_day.hint",
+    "x-draft": true
+  },
+  "aikeysNoneHintDeepseek": "Hanga tokko dabaltanitti, DeepSeek DEEPSEEK_API_KEY faayilii .env tajaajilaa keessa jiru qofa fayyadamuu danda'a, yoo kaa'ame.",
+  "@aikeysNoneHintDeepseek": {
+    "description": "web key: aikeys.noneHintDeepseek",
+    "x-draft": true
+  },
+  "navGroupFarming": "Qonna",
+  "@navGroupFarming": {
+    "description": "web key: nav.group.farming",
+    "x-draft": true
+  },
+  "navGroupExtension": "Hojii ekisteenshinii",
+  "@navGroupExtension": {
+    "description": "web key: nav.group.extension",
+    "x-draft": true
+  },
+  "navGroupPartners": "Seensa michootaa",
+  "@navGroupPartners": {
+    "description": "web key: nav.group.partners",
+    "x-draft": true
+  },
+  "navGroupContentAi": "Qabiyyee fi AI",
+  "@navGroupContentAi": {
+    "description": "web key: nav.group.contentAi",
+    "x-draft": true
+  },
+  "navGroupSystem": "Sirna",
+  "@navGroupSystem": {
+    "description": "web key: nav.group.system",
+    "x-draft": true
+  },
+  "navLivestock": "Gatii horii",
+  "@navLivestock": {
+    "description": "web key: nav.livestock",
+    "x-draft": true
+  },
+  "lvDescription": "Gatii horii tokkoo gabaawwan horii NMIS gabaasan, tilmaama torban 4 fi hammam amanamaa akka ta'e waliin.",
+  "@lvDescription": {
+    "description": "web key: lv.description",
+    "x-draft": true
+  },
+  "lvAnimal": "Horii",
+  "@lvAnimal": {
+    "description": "web key: lv.animal",
+    "x-draft": true
+  },
+  "lvAnimalOx": "Qotiyyoo",
+  "@lvAnimalOx": {
+    "description": "web key: lv.animal.ox",
+    "x-draft": true
+  },
+  "lvAnimalCow": "Sa'a",
+  "@lvAnimalCow": {
+    "description": "web key: lv.animal.cow",
+    "x-draft": true
+  },
+  "lvAnimalBull": "Korma",
+  "@lvAnimalBull": {
+    "description": "web key: lv.animal.bull",
+    "x-draft": true
+  },
+  "lvAnimalHeifer": "Goromsa",
+  "@lvAnimalHeifer": {
+    "description": "web key: lv.animal.heifer",
+    "x-draft": true
+  },
+  "lvAnimalCalf": "Jabbii",
+  "@lvAnimalCalf": {
+    "description": "web key: lv.animal.calf",
+    "x-draft": true
+  },
+  "lvAnimalSheep": "Hoolaa",
+  "@lvAnimalSheep": {
+    "description": "web key: lv.animal.sheep",
+    "x-draft": true
+  },
+  "lvAnimalGoat": "Re'ee",
+  "@lvAnimalGoat": {
+    "description": "web key: lv.animal.goat",
+    "x-draft": true
+  },
+  "lvAnimalCamel": "Gaala",
+  "@lvAnimalCamel": {
+    "description": "web key: lv.animal.camel",
+    "x-draft": true
+  },
+  "lvAnimalChicken": "Lukkuu",
+  "@lvAnimalChicken": {
+    "description": "web key: lv.animal.chicken",
+    "x-draft": true
+  },
+  "lvSourceLine": "Madda: odeeffannoo gabaa horii NMIS, {start} hanga {end}.",
+  "@lvSourceLine": {
+    "description": "web key: lv.sourceLine",
+    "placeholders": {
+      "start": {},
+      "end": {}
+    },
+    "x-draft": true
+  },
+  "lvStatReports": "Gabaasa gatii",
+  "@lvStatReports": {
+    "description": "web key: lv.stat.reports",
+    "x-draft": true
+  },
+  "lvStatMarkets": "Gabaawwan",
+  "@lvStatMarkets": {
+    "description": "web key: lv.stat.markets",
+    "x-draft": true
+  },
+  "lvStatPeriod": "Yeroo odeeffannoo",
+  "@lvStatPeriod": {
+    "description": "web key: lv.stat.period",
+    "x-draft": true
+  },
+  "lvStatDays": "Guyyaa {n}",
+  "@lvStatDays": {
+    "description": "web key: lv.stat.days",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "lvEmptyTitle": "Gatiin horii ammallee hin fe'amne",
+  "@lvEmptyTitle": {
+    "description": "web key: lv.empty.title",
+    "x-draft": true
+  },
+  "lvEmptyDescription": "Gabaasni gabaa horii NMIS yeroo galfamu gatiin as mul'ata.",
+  "@lvEmptyDescription": {
+    "description": "web key: lv.empty.description",
+    "x-draft": true
+  },
+  "lvNoSeries": "Filannoo kanaaf gabaasni hin jiru.",
+  "@lvNoSeries": {
+    "description": "web key: lv.noSeries",
+    "x-draft": true
+  },
+  "lvOutlookTitle": "Tilmaama torban 4",
+  "@lvOutlookTitle": {
+    "description": "web key: lv.outlook.title",
+    "x-draft": true
+  },
+  "lvOutlookCountry": "Biyya guutuu, sadarkaa hunda waliin",
+  "@lvOutlookCountry": {
+    "description": "web key: lv.outlook.country",
+    "x-draft": true
+  },
+  "lvOutlookRegion": "{region}, sadarkaa hunda waliin",
+  "@lvOutlookRegion": {
+    "description": "web key: lv.outlook.region",
+    "placeholders": {
+      "region": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookCountryFallback": "{region} keessatti gabaasni xiqqaa dha: tilmaama biyya guutuu",
+  "@lvOutlookCountryFallback": {
+    "description": "web key: lv.outlook.countryFallback",
+    "placeholders": {
+      "region": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookUp": "Gatiin gara {pct}% ol ka'uu danda'a",
+  "@lvOutlookUp": {
+    "description": "web key: lv.outlook.up",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookDown": "Gatiin gara {pct}% gadi bu'uu danda'a",
+  "@lvOutlookDown": {
+    "description": "web key: lv.outlook.down",
+    "placeholders": {
+      "pct": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookFlat": "Gatiin baay'ee hin jijjiiramu",
+  "@lvOutlookFlat": {
+    "description": "web key: lv.outlook.flat",
+    "x-draft": true
+  },
+  "lvOutlookRange": "(tarii {low}% hanga {high}%)",
+  "@lvOutlookRange": {
+    "description": "web key: lv.outlook.range",
+    "placeholders": {
+      "low": {},
+      "high": {}
+    },
+    "x-draft": true
+  },
+  "lvOutlookNone": "Tilmaamni ammaaf hin jiru: adeemsa safaruuf odeeffannoon gahaa miti.",
+  "@lvOutlookNone": {
+    "description": "web key: lv.outlook.none",
+    "x-draft": true
+  },
+  "lvOutlookWhy": "Maaliif amanamummaan kun",
+  "@lvOutlookWhy": {
+    "description": "web key: lv.outlook.why",
+    "x-draft": true
+  },
+  "lvOutlookNote": "Sadarkaan tokkoon tokkoon gabaa irratti sadarkaa gatii mataa isaa qaba; moodeelli adeemsa waloo safara. Tilmaamni waadaa miti: osoo hin gurgurin dura gabaa irratti mirkaneeffadhaa.",
+  "@lvOutlookNote": {
+    "description": "web key: lv.outlook.note",
+    "x-draft": true
+  },
+  "lvConfHigh": "Amanamummaa ol aanaa",
+  "@lvConfHigh": {
+    "description": "web key: lv.conf.high",
+    "x-draft": true
+  },
+  "lvConfMedium": "Amanamummaa giddu galeessaa",
+  "@lvConfMedium": {
+    "description": "web key: lv.conf.medium",
+    "x-draft": true
+  },
+  "lvConfLow": "Amanamummaa gadi aanaa",
+  "@lvConfLow": {
+    "description": "web key: lv.conf.low",
+    "x-draft": true
+  },
+  "lvReasonPeriod": "Gabaasa gatii {reports} gabaa {markets} irraa, {start} hanga {end} irratti hundaa'e.",
+  "@lvReasonPeriod": {
+    "description": "web key: lv.reason.period",
+    "placeholders": {
+      "reports": {},
+      "markets": {},
+      "start": {},
+      "end": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonNoSeason": "Odeeffannoon waggaa tokkoo gadi waan ta'eef jijjiiramni waqtii (ayyaana, bona) moodeela keessa hin jiru.",
+  "@lvReasonNoSeason": {
+    "description": "web key: lv.reason.no_season",
+    "x-draft": true
+  },
+  "lvReasonFewReports": "Gabaasa {reports} qofa: guyyaan gabaa adda ta'e tokko bu'aa jijjiiruu danda'a.",
+  "@lvReasonFewReports": {
+    "description": "web key: lv.reason.few_reports",
+    "placeholders": {
+      "reports": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonShortPeriod": "Odeeffannoo guyyaa {days} qofa: adeemsa jijjiirama yeroo gabaabaa irraa adda baasuuf baay'ee gabaabaa dha.",
+  "@lvReasonShortPeriod": {
+    "description": "web key: lv.reason.short_period",
+    "placeholders": {
+      "days": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonStale": "Gabaasni dhumaa guyyaa {days} dura kan ture.",
+  "@lvReasonStale": {
+    "description": "web key: lv.reason.stale",
+    "placeholders": {
+      "days": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonChecked": "Gabaasa dhiyoo hin argin irratti qoratame: giddugaleessaan {pct}% dogoggore ('jijjiiramni hin jiru' jedhanii tilmaamuun {naive}%).",
+  "@lvReasonChecked": {
+    "description": "web key: lv.reason.checked",
+    "placeholders": {
+      "pct": {},
+      "naive": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonNoTrend": "Gabaasa dhiyoo irratti adeemsi ({pct}%) 'jijjiiramni hin jiru' ({naive}%) irra hin caalle, kanaaf tilmaamni 'baay'ee hin jijjiiramu' dha.",
+  "@lvReasonNoTrend": {
+    "description": "web key: lv.reason.no_trend",
+    "placeholders": {
+      "pct": {},
+      "naive": {}
+    },
+    "x-draft": true
+  },
+  "lvReasonNotChecked": "Moodeela odeeffannoo hin argin irratti qoruuf gabaasni dhiyoo baay'ee xiqqaa dha.",
+  "@lvReasonNotChecked": {
+    "description": "web key: lv.reason.not_checked",
+    "x-draft": true
+  },
+  "lvReasonTooFew": "Adeemsa arguuf gabaasni irra deddeebi'ame sadarkaa walfakkaataa gabaa tokko irratti gahaa miti.",
+  "@lvReasonTooFew": {
+    "description": "web key: lv.reason.too_few",
+    "x-draft": true
+  },
+  "lvReasonNoData": "Horii kanaaf gabaasni fe'ame hin jiru.",
+  "@lvReasonNoData": {
+    "description": "web key: lv.reason.no_data",
+    "x-draft": true
+  },
+  "lvChartTitle": "Gatii giddugaleessaa horii tokkoo",
+  "@lvChartTitle": {
+    "description": "web key: lv.chart.title",
+    "x-draft": true
+  },
+  "lvChartDescription": "Gidduu gatii gadi aanaa fi ol aanaa; sadarkaalee {n} dhiyeenya gabaafaman.",
+  "@lvChartDescription": {
+    "description": "web key: lv.chart.description",
+    "placeholders": {
+      "n": {}
+    },
+    "x-draft": true
+  },
+  "lvTableTitle": "Gatii dhiyoo",
+  "@lvTableTitle": {
+    "description": "web key: lv.table.title",
+    "x-draft": true
+  },
+  "lvTableDescription": "Horii tokkoof, gatii gabaafame gadi aanaa hanga ol aanaa. Tilmaama: daangaa torban 4 gabaasa dhumaa booda eegamu.",
+  "@lvTableDescription": {
+    "description": "web key: lv.table.description",
+    "x-draft": true
+  },
+  "lvTableMarket": "Gabaa",
+  "@lvTableMarket": {
+    "description": "web key: lv.table.market",
+    "x-draft": true
+  },
+  "lvTableGrade": "Sadarkaa",
+  "@lvTableGrade": {
+    "description": "web key: lv.table.grade",
+    "x-draft": true
+  },
+  "lvTableLatest": "Gatii dhiyoo",
+  "@lvTableLatest": {
+    "description": "web key: lv.table.latest",
+    "x-draft": true
+  },
+  "lvTableDate": "Kan gabaafame",
+  "@lvTableDate": {
+    "description": "web key: lv.table.date",
+    "x-draft": true
+  },
+  "lvTableChange": "Kan duraa irraa",
+  "@lvTableChange": {
+    "description": "web key: lv.table.change",
+    "x-draft": true
+  },
+  "lvTableOutlook": "Torban 4 keessatti",
+  "@lvTableOutlook": {
+    "description": "web key: lv.table.outlook",
+    "x-draft": true
+  },
+  "lvImportTitle": "Gatii horii galchi",
+  "@lvImportTitle": {
+    "description": "web key: lv.import.title",
+    "x-draft": true
+  },
+  "lvImportDescription": "CSV gabaasa gatii horii NMIS fe'aa (tarree beekuuf unka buufadhaa). Gabaasni duraan fe'ame ni haaromfama, tilmaamnis irra deebi'ee leenji'a.",
+  "@lvImportDescription": {
+    "description": "web key: lv.import.description",
+    "x-draft": true
+  },
+  "lvImportTemplate": "Unka buusi",
+  "@lvImportTemplate": {
+    "description": "web key: lv.import.template",
+    "x-draft": true
+  },
+  "lvImportUpload": "CSV fe'i",
+  "@lvImportUpload": {
+    "description": "web key: lv.import.upload",
+    "x-draft": true
+  },
+  "lvImportRetrain": "Tilmaama irra deebi'ii leenjisi",
+  "@lvImportRetrain": {
+    "description": "web key: lv.import.retrain",
+    "x-draft": true
+  },
+  "lvImportResult": "Gabaasa {added} dabalame, {updated} haaromfame, {rejected} didame; tilmaama {forecasts} leenji'e.",
+  "@lvImportResult": {
+    "description": "web key: lv.import.result",
+    "placeholders": {
+      "added": {},
+      "updated": {},
+      "rejected": {},
+      "forecasts": {}
+    },
+    "x-draft": true
+  },
+  "lvImportTrained": "Moodeelli {trained} irra deebi'anii leenji'an; {forecasts} tilmaamaaf odeeffannoo gahaa qabu.",
+  "@lvImportTrained": {
+    "description": "web key: lv.import.trained",
+    "placeholders": {
+      "trained": {},
+      "forecasts": {}
+    },
     "x-draft": true
   }
 }

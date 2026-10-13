@@ -32,6 +32,7 @@ from backend.routers import ngo as ngo_routes
 from backend.routers import credit as credit_routes
 from backend.routers.beckn import router as beckn_router
 from backend.routers.tips import router as tips_router
+from backend.routers.livestock import router as livestock_router
 from backend import ai_keys
 from backend import admin_areas, audit, erasure, input_trust, platform_db, tips, training_data
 from backend.advisory.schema import ensure_schema
@@ -113,6 +114,7 @@ app.include_router(regulator_router,   prefix="/api")
 app.include_router(ngo_routes.router, prefix="/api")
 app.include_router(credit_routes.router, prefix="/api")
 app.include_router(tips_router,        prefix="/api")
+app.include_router(livestock_router,   prefix="/api")
 app.include_router(beckn_router,       prefix="/api")   # signed network requests, off unless BECKN_ENABLED=1
 
 

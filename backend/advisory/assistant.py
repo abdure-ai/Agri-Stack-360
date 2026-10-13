@@ -224,12 +224,22 @@ def _dont_know(lang: str, farmer_id: int | None, conn: sqlite3.Connection) -> st
 
 def _price_answer(conn: sqlite3.Connection, question: str, lang: str, user: dict, farmer_id: int | None) -> dict | None:
     """A price question about an NMIS crop, answered from the price data; None for any other question."""
-    from backend.advisory import market_answer, registry
+    from backend.advisory import livestock_answer, market_answer, registry
     from backend.advisory.calendar import farmer_point
+    from backend.database import get_connection as get_prices_connection
 
     if not market_answer.is_price_question(question):
         return None
     crops = market_answer.crops_in(question)
+    if not crops and (animals := livestock_answer.animals_in(question)):
+        try:
+            subject = farmer_id or user.get("id")
+            row = conn.execute("SELECT region FROM users WHERE id=?", (subject,)).fetchone() if subject else None
+            return livestock_answer.answer(get_prices_connection(), animals=animals, lang=lang,
+                                           region=(row[0] if row else None) or user.get("region"))
+        except Exception:      # price database problems: fall back to the normal advisor
+            log.exception("livestock price answer failed")
+            return None
     if not crops:
         others = market_answer.other_crops_in(question)
         return market_answer.not_covered(others, lang) if others else None

@@ -5,6 +5,7 @@
 //   forecast API  (port 8001)  VITE_FORECAST_URL
 //   data sync     (port 8002)  VITE_SYNC_URL
 
+import type { LivestockImportResult, LivestockPrices, LivestockSummary } from "@/types/livestock";
 import type {
   AdminArea,
   AiKey,
@@ -240,6 +241,12 @@ export const api = {
   summary: (params: Params) => platform.get<SummaryResponse>("/summary", params),
   regional: (params: Params) => platform.get<RegionalResponse>("/regional", params),
   spread: (params: Params) => platform.get<SpreadResponse>("/spread", params),
+  livestockSummary: () => platform.get<LivestockSummary>("/livestock/summary"),
+  livestockPrices: (animal: string, region?: string | null) =>
+    platform.get<LivestockPrices>("/livestock/prices", { animal, region: region || undefined }),
+  livestockTemplate: () => getBlob(BASE, "/admin/livestock/template.csv"),
+  livestockImport: (file: File) => platform.upload<LivestockImportResult>("/admin/livestock/import", formOf({ file })),
+  livestockTrain: () => platform.post<{ trained: number; forecasts: number }>("/admin/livestock/train"),
 
   // ── Forecasts ─────────────────────────────────────────────────────────────
   forecastHealth: () => request<{ status: string }>(FORECAST_BASE, "GET", "/health", { auth: false }),
