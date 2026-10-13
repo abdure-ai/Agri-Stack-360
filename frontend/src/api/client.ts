@@ -310,7 +310,8 @@ export const api = {
     platform.get<{ days: number; hotspots: Hotspot[] }>("/reports/outbreaks", { days, ...opts }),
 
   // ── Input Trust ───────────────────────────────────────────────────────────
-  trustVerify: (code: string) => platform.post<TrustResult>("/trust/verify", { code }),
+  trustVerify: (code: string, diagnosisId?: number | null) =>
+    platform.post<TrustResult>("/trust/verify", diagnosisId ? { code, diagnosis_id: diagnosisId } : { code }),
   trustProducts: () => platform.get<RegistryProduct[]>("/trust/products"),
   trustFakeReport: (data: FakeReportInput) => platform.post<{ id: number; status: string }>("/trust/fake-reports", data),
   supplierOrg: (orgId?: number | null) =>
@@ -380,6 +381,8 @@ export const api = {
   dealerUpdateShop: (data: { area_pcode?: string | null; phone?: string | null; note?: string | null }) =>
     platform.put<Organisation>("/dealer/shop", data),
   dealerSetProduct: (productId: number, in_stock: boolean) => platform.put<unknown>(`/dealer/products/${productId}`, { in_stock }),
+  dealerSetPrice: (productId: number, in_stock: boolean, price_etb: number | null, pack_size: string | null) =>
+    platform.put<unknown>(`/dealer/products/${productId}`, { in_stock, price_etb, pack_size }),
   dealerRemoveProduct: (productId: number) => platform.del<unknown>(`/dealer/products/${productId}`),
   dealerCheck: (code: string) => platform.post<TrustResult>("/dealer/check", { code }),
   dealerChecks: () => platform.get<DealerCheck[]>("/dealer/checks"),

@@ -162,6 +162,52 @@ class ATIFarmerProfileSource:
         return dataclasses.replace(base, **updates)
 
 
+class ShopInputHub:
+    """Offers from the platform's agro-dealer shops: registered products in stock, with the shop's own price.
+
+    Nearest first (woreda centre of the shop to the farm point, else same woreda / zone / region). Neither the
+    verified-seller badge nor anything else changes the order (spec F8): the badge is shown next to the shop."""
+
+    MAX_SHOPS = 4          # the nearest shops, each with every plan product it has in stock
+
+    def __init__(self, conn: sqlite3.Connection):
+        self.conn = conn
+
+    def offers(self, product_ids: list[int], latitude: float | None, longitude: float | None,
+               region: str | None, area_pcode: str | None = None) -> list[InputOffer]:
+        if not product_ids:
+            return []
+        marks = ",".join("?" * len(product_ids))
+        cur = self.conn.execute(
+            f"""SELECT o.id AS shop_id, o.name, o.phone, o.verified, o.woreda_pcode, w.name AS woreda,
+                       p.id AS product_id, p.product_name, sp.price_etb, sp.pack_size, sp.price_is_sample,
+                       sp.price_updated_at
+                FROM shop_products sp JOIN organisations o ON o.id = sp.org_id
+                JOIN approved_products p ON p.id = sp.product_id
+                LEFT JOIN admin_areas w ON w.pcode = o.woreda_pcode
+                WHERE sp.product_id IN ({marks}) AND sp.in_stock = 1 AND p.status = 'registered'
+                  AND o.type = 'agro_dealer' AND o.status = 'active'""", tuple(product_ids))
+        cols = [d[0] for d in cur.description]
+        out: list[tuple] = []
+        for r in (dict(zip(cols, row)) for row in cur.fetchall()):
+            dist = None
+            area = admin_areas.get_area(self.conn, r["woreda_pcode"] or "") if r["woreda_pcode"] else None
+            if area and area.latitude is not None and latitude is not None:
+                dist = round(admin_areas.distance_km(latitude, longitude, area.latitude, area.longitude), 1)
+            here, there = area_pcode or "", r["woreda_pcode"] or ""
+            rank = next((i for i, n in enumerate((len(here), 6, 4)) if here and there and len(here) >= n
+                         and here[:n] == there[:n]), 3)
+            offer = InputOffer(
+                product_id=r["product_id"], product_name=r["product_name"], supplier=r["name"], distance_km=dist,
+                price_etb=r["price_etb"], unit=r["pack_size"], in_stock=True, shop_id=r["shop_id"], phone=r["phone"],
+                woreda=r["woreda"], verified_seller=bool(r["verified"]), price_is_sample=bool(r["price_is_sample"]),
+                price_updated_at=r["price_updated_at"])
+            out.append(((dist is None, dist or 0.0, rank, r["name"], r["product_name"]), offer))
+        ranked = [o for _, o in sorted(out, key=lambda x: x[0])]
+        shops = list(dict.fromkeys(o.shop_id for o in ranked))[:self.MAX_SHOPS]
+        return [o for o in ranked if o.shop_id in shops]
+
+
 class StubInputHub:
     def __init__(self, conn: sqlite3.Connection, offers_file: Path = OFFERS_FILE):
         self.conn = conn

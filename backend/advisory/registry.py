@@ -116,9 +116,10 @@ def farmer_profiles(conn: sqlite3.Connection):
 
 
 def input_hub(conn: sqlite3.Connection):
-    from backend.advisory.adapters.platform import StubInputHub
+    """Agro-dealer shops in the platform; ADVISORY_INPUT_HUB=stub keeps the old CSV file (tests, offline kits)."""
+    from backend.advisory.adapters.platform import ShopInputHub, StubInputHub
 
-    return StubInputHub(conn)
+    return StubInputHub(conn) if env("ADVISORY_INPUT_HUB", "shops") == "stub" else ShopInputHub(conn)
 
 
 def market(conn: sqlite3.Connection, today: date | None = None):

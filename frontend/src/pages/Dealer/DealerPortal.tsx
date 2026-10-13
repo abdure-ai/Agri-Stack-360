@@ -193,6 +193,11 @@ function ProductsCard({
                     .filter(Boolean)
                     .join(" · ")}
                 </p>
+                <PriceEditor
+                  key={`${p.id}-${p.price_etb ?? ""}-${p.pack_size ?? ""}`}
+                  product={p}
+                  onSave={(price, pack) => run(() => api.dealerSetPrice(p.id, !!p.in_stock, price, pack))}
+                />
               </div>
               <div className="flex items-center gap-3">
                 <Switch
@@ -241,6 +246,39 @@ function ProductsCard({
         </div>
       )}
     </Card>
+  );
+}
+
+function PriceEditor({
+  product,
+  onSave,
+}: {
+  product: DealerShop["products"][number];
+  onSave: (price: number | null, pack: string | null) => void;
+}) {
+  const [price, setPrice] = useState(product.price_etb != null ? String(product.price_etb) : "");
+  const [pack, setPack] = useState(product.pack_size ?? "");
+  const value = price.trim() ? Number(price.replace(/,/g, "")) : null;
+  const valid = value === null || (Number.isFinite(value) && value > 0);
+  return (
+    <div className="mt-2">
+      <div className="flex flex-wrap items-end gap-2">
+        <div className="w-36">
+          <Label htmlFor={`price-${product.id}`}>{tr("dealer.price")}</Label>
+          <Input id={`price-${product.id}`} inputMode="decimal" value={price} onChange={(e) => setPrice(e.target.value)} />
+        </div>
+        <div className="w-28">
+          <Label htmlFor={`pack-${product.id}`}>{tr("dealer.pack")}</Label>
+          <Input id={`pack-${product.id}`} placeholder="1 L" value={pack} onChange={(e) => setPack(e.target.value)} />
+        </div>
+        <Button size="sm" variant="outline" disabled={!valid} onClick={() => onSave(value, pack.trim() || null)}>
+          {tr("dealer.savePrice")}
+        </Button>
+      </div>
+      <p className="mt-1 text-theme-xs text-gray-500">
+        {product.price_is_sample ? tr("dealer.sampleNote") : tr("dealer.priceHint")}
+      </p>
+    </div>
   );
 }
 

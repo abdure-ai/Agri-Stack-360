@@ -8389,5 +8389,118 @@
       "forecasts": {}
     },
     "x-draft": true
+  },
+  "photoPForYourPlot": "ንግራትኩም",
+  "@photoPForYourPlot": {
+    "description": "web key: photo.p.forYourPlot",
+    "x-draft": true
+  },
+  "photoPRateSource": "መጠን፦ {source}",
+  "@photoPRateSource": {
+    "description": "web key: photo.p.rateSource",
+    "placeholders": {
+      "source": {}
+    },
+    "x-draft": true
+  },
+  "photoPCited": "መጠን ማንዋል MoA",
+  "@photoPCited": {
+    "description": "web key: photo.p.cited",
+    "x-draft": true
+  },
+  "photoPFollowLabel": "ኣብቲ ማሸጊያ ዘሎ ምልክት ናይ መወዳእታ እዩ።",
+  "@photoPFollowLabel": {
+    "description": "web key: photo.p.followLabel",
+    "x-draft": true
+  },
+  "photoShopVerified": "ዝተረጋገጸ ሸያጢ",
+  "@photoShopVerified": {
+    "description": "web key: photo.shop.verified",
+    "x-draft": true
+  },
+  "photoShopSamplePrice": "ናይ ኣብነት ዋጋ",
+  "@photoShopSamplePrice": {
+    "description": "web key: photo.shop.samplePrice",
+    "x-draft": true
+  },
+  "photoShopAskPrice": "ዋጋ ንድኳን ሕተቱ",
+  "@photoShopAskPrice": {
+    "description": "web key: photo.shop.askPrice",
+    "x-draft": true
+  },
+  "photoShopCall": "ደውሉ",
+  "@photoShopCall": {
+    "description": "web key: photo.shop.call",
+    "x-draft": true
+  },
+  "photoShopNone": "ነዚኦም ፍርያት ዝሓዘ ድኳን ኣብቲ ስርዓት ገና የለን። ንሰራሕተኛ ልምዓት ወይ ማሕበርኩም ሕተቱ።",
+  "@photoShopNone": {
+    "description": "web key: photo.shop.none",
+    "x-draft": true
+  },
+  "photoCheckPack": "ቅድሚ ምርጫትኩም ነቲ ማሸጊያ ኣረጋግጹ",
+  "@photoCheckPack": {
+    "description": "web key: photo.checkPack",
+    "x-draft": true
+  },
+  "photoCheckPackHint": "ኣብቲ ማሸጊያ ዘሎ QR ኮድ ስካን ግበሩ ወይ ኮድ ጽሓፉ፤ እቲ ኣፕ ሓቀኛ ምዃኑን ነዚ ሕማም ቅኑዕ ፍርያት ምዃኑን ይነግረኩም።",
+  "@photoCheckPackHint": {
+    "description": "web key: photo.checkPackHint",
+    "x-draft": true
+  },
+  "verifyPlanMatch": "እዚ ኣብ ናይ {disease} መደብ ሕክምናኹም ካብ ዘለዉ ፍርያት ሓደ እዩ።",
+  "@verifyPlanMatch": {
+    "description": "web key: verify.plan.match",
+    "placeholders": {
+      "disease": {}
+    },
+    "x-draft": true
+  },
+  "verifyPlanMatchButWarning": "እዚ ፍርያት ኣብ ናይ {disease} መደብ ሕክምናኹም ኣሎ፣ ግን እዚ ማሸጊያ ነቲ ምርግጋጽ ኣይሓለፈን፤ ኣይትጠቐሙሉ። ካልእ ማሸጊያ ገዚእኩም እንደገና ኣረጋግጹ።",
+  "@verifyPlanMatchButWarning": {
+    "description": "web key: verify.plan.matchButWarning",
+    "placeholders": {
+      "disease": {}
+    },
+    "x-draft": true
+  },
+  "verifyPlanNoMatch": "እዚ ፍርያት ኣብ ናይ {disease} መደብ ሕክምናኹም የለን። ኣብቲ መደብ ዘለዉ ፍርያት፦ {list}። ቅድሚ ምጥቃምኩም ንሰራሕተኛ ልምዓት ሕተቱ።",
+  "@verifyPlanNoMatch": {
+    "description": "web key: verify.plan.noMatch",
+    "placeholders": {
+      "disease": {},
+      "list": {}
+    },
+    "x-draft": true
+  },
+  "verifyPlanFor": "ንናይ ስእሊ ምርመራኹም ማሸጊያ ተረጋግጹ ኣለኹም፤ እቲ ውጽኢት ኣብ መደብ ሕክምናኹም ምህላዉ እውን ይነግር።",
+  "@verifyPlanFor": {
+    "description": "web key: verify.plan.for",
+    "x-draft": true
+  },
+  "dealerPrice": "ዋጋ ንሓደ ማሸጊያ (ብር)",
+  "@dealerPrice": {
+    "description": "web key: dealer.price",
+    "x-draft": true
+  },
+  "dealerPack": "ዓቐን ማሸጊያ",
+  "@dealerPack": {
+    "description": "web key: dealer.pack",
+    "x-draft": true
+  },
+  "dealerSavePrice": "ዋጋ ዓቅብ",
+  "@dealerSavePrice": {
+    "description": "web key: dealer.savePrice",
+    "x-draft": true
+  },
+  "dealerSampleNote": "ናይ ኣብነት ዋጋ (ንምርኢት)፦ ንምትካእ ናይ ገዛእ ርእስኹም ዋጋ ኣእትዉ።",
+  "@dealerSampleNote": {
+    "description": "web key: dealer.sampleNote",
+    "x-draft": true
+  },
+  "dealerPriceHint": "እቲ ኣፕ ነቲ ፍርያት ክመኽር ከሎ ሓረስቶት ነዚ ዋጋ ምስ ዕለቱ ይርእዩ።",
+  "@dealerPriceHint": {
+    "description": "web key: dealer.priceHint",
+    "x-draft": true
   }
 }

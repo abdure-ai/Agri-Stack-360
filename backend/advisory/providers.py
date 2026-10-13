@@ -133,6 +133,12 @@ class InputOffer:
     unit: str | None
     in_stock: bool | None
     sponsored: bool = False        # display-only; never used in ranking (spec F8)
+    shop_id: int | None = None
+    phone: str | None = None
+    woreda: str | None = None
+    verified_seller: bool = False  # admin-granted badge; shown, never used in ranking
+    price_is_sample: bool = False  # presentation site: a sample price, not one the shop entered
+    price_updated_at: str | None = None
 
 
 class InputHubSource(Protocol):

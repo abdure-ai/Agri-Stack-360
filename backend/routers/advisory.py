@@ -167,9 +167,13 @@ def _plan_and_record(conn, *, user: dict, farmer_id: int, farm_id: int | None, p
                 forecast = registry.weather().forecast(profile["latitude"], profile["longitude"])
             except ProviderError:
                 forecast = None
+        plot = conn.execute("SELECT area_ha FROM farms WHERE id=?",
+                            (farm_id or (season or {}).get("farm_id"),)).fetchone()
+        woreda = conn.execute("SELECT woreda_pcode FROM users WHERE id=?", (farmer_id,)).fetchone()
         plan = build_plan(conn, decision.disease_key, crop, lang, weather_forecast=forecast, now=now,
                           input_hub=registry.input_hub(conn), latitude=profile.get("latitude"),
-                          longitude=profile.get("longitude"), region=profile.get("region"))
+                          longitude=profile.get("longitude"), region=profile.get("region"),
+                          area_ha=plot[0] if plot else None, area_pcode=woreda[0] if woreda else None)
     did, follow_up = record_diagnosis(
         conn, farmer_id=farmer_id, farm_id=farm_id or (season or {}).get("farm_id"),
         crop_season_id=(season or {}).get("id"), decision=decision, pred=pred, latitude=profile.get("latitude"),

@@ -1816,6 +1816,28 @@ export const en = {
   "lv.import.retrain": "Retrain outlook",
   "lv.import.result": "{added} reports added, {updated} updated, {rejected} rejected; {forecasts} outlooks trained.",
   "lv.import.trained": "Retrained {trained} models; {forecasts} have enough data for an outlook.",
+
+  // ── Treatment value chain: dose, shops, pack check ───────────────────────
+  "photo.p.forYourPlot": "For your plot",
+  "photo.p.rateSource": "Rate: {source}",
+  "photo.p.cited": "MoA manual rate",
+  "photo.p.followLabel": "The label on the pack is final.",
+  "photo.shop.verified": "Verified seller",
+  "photo.shop.samplePrice": "sample price",
+  "photo.shop.askPrice": "Ask the shop for the price",
+  "photo.shop.call": "Call",
+  "photo.shop.none": "No shop in the system has these products in stock yet. Ask your Development Agent or cooperative.",
+  "photo.checkPack": "Check the pack before you spray",
+  "photo.checkPackHint": "Scan the QR code or type the code on the pack: the app tells you if it is genuine and if it is the right product for this disease.",
+  "verify.plan.match": "This is one of the products on your treatment plan for {disease}.",
+  "verify.plan.matchButWarning": "This product is on your treatment plan for {disease}, but this pack did not pass the check: do not use it. Buy another pack and check it again.",
+  "verify.plan.noMatch": "This product is not on your treatment plan for {disease}. Products on the plan: {list}. Ask your Development Agent before using it.",
+  "verify.plan.for": "Checking a pack for your photo check: the result also says if it is on your treatment plan.",
+  "dealer.price": "Price per pack (birr)",
+  "dealer.pack": "Pack size",
+  "dealer.savePrice": "Save price",
+  "dealer.sampleNote": "Sample price (presentation): enter your own price to replace it.",
+  "dealer.priceHint": "Farmers see this price, with the date you set it, when the app recommends the product.",
 } satisfies Record<string, string>;
 
 export type MessageKey = keyof typeof en;

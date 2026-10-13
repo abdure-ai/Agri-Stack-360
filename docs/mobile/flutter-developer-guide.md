@@ -195,6 +195,20 @@ escalation_reason, guardrail_flags[]`.
    - `plan` (`TreatmentPlan`): `cultural_practices[]`, `scouting_advice`, `recommended_active_ingredients[]`,
      `products[]`, `offers[]`, `weather_advice`, `safety`, `sources[]`, `verified`, `warnings[]`. Show
      `safety` every time chemicals appear. When `verified` is false, show that the plan is not yet verified.
+   - **The treatment chain on one screen**, in this order: what to do in the field → products with usage →
+     where to buy → "Check the pack before you spray".
+   - `products[]`: `product_name`, `active_ingredient`, `dose_per_ha` (e.g. `"0.5 L"`), `amount_for_plot`
+     (`"250 mL / 0.5 ha"`, the rate × the farm's area; null when the farm has no area), `water_volume_l_per_ha`,
+     `dose_per_knapsack` (only where the source gives the water volume), PPE, `source` and `dose_cited`.
+     `dose_cited: true` means the rate is copied from the cited MoA manual page: show the badge `photo.p.cited`,
+     the `source` line and `photo.p.followLabel`. Show only the fields that are not null; never calculate a
+     dose in the app.
+   - `offers[]` (nearest 4 shops, each with every plan product it has in stock, nearest first): `shop_id`,
+     `supplier` (shop name), `woreda`, `distance_km` (hide when 0), `phone` (tap to call), `verified_seller`
+     (badge `photo.shop.verified`), `product_name`, `price_etb` + `unit` (pack size; null price →
+     `photo.shop.askPrice`), `price_is_sample` (show `photo.shop.samplePrice`), `price_updated_at`. Group the
+     rows by `shop_id`. Never reorder by badge or price. Empty list → `photo.shop.none`.
+   - The "Check the pack" button opens the product check with this `diagnosis_id` (8.7).
 5. Seven days later the farmer gets a follow-up alert. Answer it with
    `POST /advisory/diagnoses/{id}/outcome {outcome: improved|same|worse}`. `worse` alerts the DA.
 
@@ -231,7 +245,11 @@ list is empty, show `tips.none`. Refresh on app start and on resume; a tip publi
 
 Scan the QR on the pack, or type the 12-character code (`AB3D-EF7H-JK9M`). A QR may contain a URL ending in
 `?code=…`: send the whole text, the server extracts the code. `POST /trust/verify {code}` returns `{result:
-genuine|warning, reason, product_name, org_name, batch_number, expires_on, placeholder, …}`. The `reason` values
+genuine|warning, reason, product_name, org_name, batch_number, expires_on, placeholder, …}`. Opened from a
+treatment plan, send `{code, diagnosis_id}`: the answer then has `plan_match: {disease_key, matches,
+recommended[]}`. `matches` and `genuine` → `verify.plan.match`; `matches` but `warning` →
+`verify.plan.matchButWarning` (do not use the pack); not matching → `verify.plan.noMatch` with the `recommended`
+names. The `reason` values
 are `ok`, `unknown_code`, `recalled`, `supplier_suspended`, `not_registered`, `expired` and `possible_copy`. Use the
 texts `trust.reason.<reason>`. When `placeholder` is true, show that the product data is a placeholder.
 "Report a suspected fake" sends `POST /trust/fake-reports {code?, product_text?, shop_text?, note?}`.
@@ -397,3 +415,4 @@ show that clearly.
 | 2026-10-11 | Admins can publish tips (web); demo accounts updated (Oromia farmer, admin); debug-only demo-login picker (4); 9 new and 1 changed texts in the ARB files. API contract for the app unchanged |
 | 2026-10-12 | `/advisory/ask`: don't send the screen language; the answer follows the question's language (10). Server fixed too |
 | 2026-10-13 | New: livestock prices and outlook (6, 8.10); `lv.*` texts in the ARB files. Nothing existing changed |
+| 2026-10-13 | Treatment chain (8.3, 8.7): rates from the MoA manual with the amount for the plot, nearest shops with price, verified-seller badge and phone, pack check against the plan (`diagnosis_id`). New fields only; nothing removed |

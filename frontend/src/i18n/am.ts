@@ -1818,4 +1818,26 @@ export const am: Record<MessageKey, string> = {
   "lv.import.retrain": "ግምቱን እንደገና አሰልጥን",  // draft – needs native review
   "lv.import.result": "{added} ሪፖርቶች ተጨመሩ፣ {updated} ተዘመኑ፣ {rejected} ውድቅ ሆኑ፤ {forecasts} ግምቶች ሰለጠኑ።",  // draft – needs native review
   "lv.import.trained": "{trained} ሞዴሎች እንደገና ሰለጠኑ፤ {forecasts} ለግምት በቂ መረጃ አላቸው።",  // draft – needs native review
+
+  // ── Treatment value chain: dose, shops, pack check ───────────────────────
+  "photo.p.forYourPlot": "ለማሳዎ",  // draft – needs native review
+  "photo.p.rateSource": "መጠን፦ {source}",  // draft – needs native review
+  "photo.p.cited": "የግብርና ሚኒስቴር ማኑዋል መጠን",  // draft – needs native review
+  "photo.p.followLabel": "በማሸጊያው ላይ ያለው መለያ የመጨረሻ ነው።",  // draft – needs native review
+  "photo.shop.verified": "የተረጋገጠ ሻጭ",  // draft – needs native review
+  "photo.shop.samplePrice": "የናሙና ዋጋ",  // draft – needs native review
+  "photo.shop.askPrice": "ዋጋውን ሱቁን ይጠይቁ",  // draft – needs native review
+  "photo.shop.call": "ይደውሉ",  // draft – needs native review
+  "photo.shop.none": "በስርዓቱ ውስጥ እነዚህን ምርቶች የያዘ ሱቅ ገና የለም። የልማት ሰራተኛዎን ወይም ማህበርዎን ይጠይቁ።",  // draft – needs native review
+  "photo.checkPack": "ከመርጨትዎ በፊት ማሸጊያውን ያረጋግጡ",  // draft – needs native review
+  "photo.checkPackHint": "በማሸጊያው ላይ ያለውን QR ኮድ ይቃኙ ወይም ኮዱን ይጻፉ፤ መተግበሪያው ትክክለኛ መሆኑንና ለዚህ በሽታ ትክክለኛው ምርት መሆኑን ይነግርዎታል።",  // draft – needs native review
+  "verify.plan.match": "ይህ ለ{disease} በሕክምና ዕቅድዎ ላይ ካሉት ምርቶች አንዱ ነው።",  // draft – needs native review
+  "verify.plan.matchButWarning": "ይህ ምርት ለ{disease} በሕክምና ዕቅድዎ ላይ አለ፣ ነገር ግን ይህ ማሸጊያ ማረጋገጫውን አላለፈም፤ አይጠቀሙበት። ሌላ ማሸጊያ ገዝተው እንደገና ያረጋግጡ።",  // draft – needs native review
+  "verify.plan.noMatch": "ይህ ምርት ለ{disease} በሕክምና ዕቅድዎ ላይ የለም። በዕቅዱ ላይ ያሉ ምርቶች፦ {list}። ከመጠቀምዎ በፊት የልማት ሰራተኛዎን ይጠይቁ።",  // draft – needs native review
+  "verify.plan.for": "ለፎቶ ምርመራዎ ማሸጊያ እያረጋገጡ ነው፤ ውጤቱ በሕክምና ዕቅድዎ ላይ መኖሩንም ይነግርዎታል።",  // draft – needs native review
+  "dealer.price": "ዋጋ ለአንድ ማሸጊያ (ብር)",  // draft – needs native review
+  "dealer.pack": "የማሸጊያ መጠን",  // draft – needs native review
+  "dealer.savePrice": "ዋጋ አስቀምጥ",  // draft – needs native review
+  "dealer.sampleNote": "የናሙና ዋጋ (ለማሳያ)፦ ለመተካት የራስዎን ዋጋ ያስገቡ።",  // draft – needs native review
+  "dealer.priceHint": "መተግበሪያው ምርቱን ሲመክር ገበሬዎች ይህንን ዋጋ ከቀኑ ጋር ያያሉ።",  // draft – needs native review
 };

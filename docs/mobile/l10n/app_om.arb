@@ -8389,5 +8389,118 @@
       "forecasts": {}
     },
     "x-draft": true
+  },
+  "photoPForYourPlot": "Lafa keessaniif",
+  "@photoPForYourPlot": {
+    "description": "web key: photo.p.forYourPlot",
+    "x-draft": true
+  },
+  "photoPRateSource": "Hammam: {source}",
+  "@photoPRateSource": {
+    "description": "web key: photo.p.rateSource",
+    "placeholders": {
+      "source": {}
+    },
+    "x-draft": true
+  },
+  "photoPCited": "Hammam manuwaala MoA",
+  "@photoPCited": {
+    "description": "web key: photo.p.cited",
+    "x-draft": true
+  },
+  "photoPFollowLabel": "Asxaan qodaa irratti jiru isa xumuraa ti.",
+  "@photoPFollowLabel": {
+    "description": "web key: photo.p.followLabel",
+    "x-draft": true
+  },
+  "photoShopVerified": "Gurgurtaa mirkanaa'e",
+  "@photoShopVerified": {
+    "description": "web key: photo.shop.verified",
+    "x-draft": true
+  },
+  "photoShopSamplePrice": "gatii fakkeenyaa",
+  "@photoShopSamplePrice": {
+    "description": "web key: photo.shop.samplePrice",
+    "x-draft": true
+  },
+  "photoShopAskPrice": "Gatii suuqii gaafadhaa",
+  "@photoShopAskPrice": {
+    "description": "web key: photo.shop.askPrice",
+    "x-draft": true
+  },
+  "photoShopCall": "Bilbilaa",
+  "@photoShopCall": {
+    "description": "web key: photo.shop.call",
+    "x-draft": true
+  },
+  "photoShopNone": "Suuqiin oomishaalee kana qabu sirna keessa ammallee hin jiru. Hojjetaa misoomaa ykn waldaa keessan gaafadhaa.",
+  "@photoShopNone": {
+    "description": "web key: photo.shop.none",
+    "x-draft": true
+  },
+  "photoCheckPack": "Osoo hin facaasin dura qodaa mirkaneeffadhaa",
+  "@photoCheckPack": {
+    "description": "web key: photo.checkPack",
+    "x-draft": true
+  },
+  "photoCheckPackHint": "Koodii QR qodaa irratti jiru iskaanii godhaa ykn koodii barreessaa: appiin dhugaa ta'uu fi dhukkuba kanaaf oomisha sirrii ta'uu isaa isinitti hima.",
+  "@photoCheckPackHint": {
+    "description": "web key: photo.checkPackHint",
+    "x-draft": true
+  },
+  "verifyPlanMatch": "Kun oomishaalee karoora yaalii {disease} keessan irra jiran keessaa tokko.",
+  "@verifyPlanMatch": {
+    "description": "web key: verify.plan.match",
+    "placeholders": {
+      "disease": {}
+    },
+    "x-draft": true
+  },
+  "verifyPlanMatchButWarning": "Oomishni kun karoora yaalii {disease} keessan irra jira, garuu qodaan kun qorannoo hin darbine: hin fayyadaminaa. Qodaa biraa bitaatii irra deebi'aa mirkaneeffadhaa.",
+  "@verifyPlanMatchButWarning": {
+    "description": "web key: verify.plan.matchButWarning",
+    "placeholders": {
+      "disease": {}
+    },
+    "x-draft": true
+  },
+  "verifyPlanNoMatch": "Oomishni kun karoora yaalii {disease} keessan irra hin jiru. Oomishaalee karoora irra jiran: {list}. Osoo hin fayyadamin dura hojjetaa misoomaa gaafadhaa.",
+  "@verifyPlanNoMatch": {
+    "description": "web key: verify.plan.noMatch",
+    "placeholders": {
+      "disease": {},
+      "list": {}
+    },
+    "x-draft": true
+  },
+  "verifyPlanFor": "Qorannoo suuraa keessaniif qodaa mirkaneessaa jirtu: bu'aan karoora yaalii keessan irra jiraachuu isaas ni hima.",
+  "@verifyPlanFor": {
+    "description": "web key: verify.plan.for",
+    "x-draft": true
+  },
+  "dealerPrice": "Gatii qodaa tokkoo (qarshii)",
+  "@dealerPrice": {
+    "description": "web key: dealer.price",
+    "x-draft": true
+  },
+  "dealerPack": "Hamma qodaa",
+  "@dealerPack": {
+    "description": "web key: dealer.pack",
+    "x-draft": true
+  },
+  "dealerSavePrice": "Gatii olkaa'i",
+  "@dealerSavePrice": {
+    "description": "web key: dealer.savePrice",
+    "x-draft": true
+  },
+  "dealerSampleNote": "Gatii fakkeenyaa (agarsiisaaf): bakka buusuuf gatii mataa keessanii galchaa.",
+  "@dealerSampleNote": {
+    "description": "web key: dealer.sampleNote",
+    "x-draft": true
+  },
+  "dealerPriceHint": "Yeroo appiin oomisha gorsu qonnaan bultoonni gatii kana guyyaa isaa waliin argu.",
+  "@dealerPriceHint": {
+    "description": "web key: dealer.priceHint",
+    "x-draft": true
   }
 }

@@ -19,6 +19,7 @@ dosage_rules and the translation files.
 from __future__ import annotations
 
 import json
+import re
 import sqlite3
 from dataclasses import asdict, dataclass, field
 from datetime import date, datetime, timedelta
@@ -108,6 +109,8 @@ class ProductCard:
     ppe_required: list[str]
     source: str | None
     verified: bool
+    dose_cited: bool = False              # rate copied from a cited MoA document (not yet checked on the label/EAA)
+    amount_for_plot: str | None = None    # rate × the farmer's plot area, e.g. '0.25 L for 0.5 ha'
 
 
 @dataclass
@@ -127,8 +130,27 @@ class TreatmentPlan:
     warnings: list[str] = field(default_factory=list)
 
 
+DOSE_CITED = "moa_cited"     # dosage_rules.verification_status: copied verbatim from a cited MoA manual page
+_RATE = re.compile(r"^\s*(\d+(?:\.\d+)?)\s*(ml|l|kg|g)(?![a-z])", re.I)
+
+
+def amount_for_area(dose_per_ha: str | None, area_ha: float | None) -> str | None:
+    """'0.5 L' per ha × 0.5 ha -> '250 mL for 0.5 ha'. None when the rate or the area is unknown."""
+    m = _RATE.match(dose_per_ha or "")
+    if not m or not area_ha or area_ha <= 0:
+        return None
+    qty, unit = float(m.group(1)) * area_ha, m.group(2).lower()
+    if unit in ("l", "kg") and qty < 1:
+        qty, unit = qty * 1000, {"l": "mL", "kg": "g"}[unit]
+    else:
+        unit = {"l": "L", "kg": "kg", "g": "g", "ml": "mL"}[unit]
+    text = f"{qty:.0f}" if qty >= 100 else f"{qty:.2f}".rstrip("0").rstrip(".")
+    return f"{text} {unit} / {area_ha:g} ha"
+
+
 def build_plan(conn: sqlite3.Connection, disease_key: str, crop: str, lang: str, *, weather_forecast=None,
-               now: datetime | None = None, input_hub=None, latitude=None, longitude=None, region=None) -> TreatmentPlan:
+               now: datetime | None = None, input_hub=None, latitude=None, longitude=None, region=None,
+               area_ha: float | None = None, area_pcode: str | None = None) -> TreatmentPlan:
     cur = conn.cursor()
     cur.row_factory = sqlite3.Row
     disease = cur.execute("SELECT * FROM diseases WHERE key=?", (disease_key,)).fetchone()
@@ -148,12 +170,15 @@ def build_plan(conn: sqlite3.Connection, disease_key: str, crop: str, lang: str,
         r["dose_per_knapsack"], r["water_volume_l_per_ha"], r["max_applications"], r["interval_days"],
         r["pre_harvest_interval_days"], r["re_entry_hours"], r["rain_free_hours"], json.loads(r["ppe_required"] or "[]"),
         r["dose_source"] or r["source"],
-        r["verification_status"] != PLACEHOLDER and r["dose_status"] != PLACEHOLDER,
+        r["verification_status"] != PLACEHOLDER and r["dose_status"] not in (PLACEHOLDER, DOSE_CITED),
+        dose_cited=r["dose_status"] == DOSE_CITED and bool(r["dose_per_ha"]),
+        amount_for_plot=amount_for_area(r["dose_per_ha"], area_ha),
     ) for r in rows]
 
     statuses = [p.verified for p in products] + ([proto["verification_status"] != PLACEHOLDER] if proto else [])
     verified = bool(statuses) and all(statuses)
-    warnings = [] if verified else [t("placeholder_warning", lang)]
+    cited = any(p.dose_cited for p in products)
+    warnings = [] if verified else [t("cited_dose_warning" if cited else "placeholder_warning", lang)]
     if not products:
         warnings.append(t("no_registered_product", lang))
 
@@ -171,7 +196,12 @@ def build_plan(conn: sqlite3.Connection, disease_key: str, crop: str, lang: str,
 
     offers = []
     if input_hub is not None and products:
-        offers = [asdict(o) for o in input_hub.offers([p.product_id for p in products], latitude, longitude, region)]
+        ids = [p.product_id for p in products]
+        try:
+            found = input_hub.offers(ids, latitude, longitude, region, area_pcode=area_pcode)
+        except TypeError:      # input hubs without the area argument
+            found = input_hub.offers(ids, latitude, longitude, region)
+        offers = [asdict(o) for o in found]
 
     sources = [s for s in ([proto["source"]] if proto and proto["source"] else []) +
                sorted({p.source for p in products if p.source})]

@@ -7618,5 +7618,98 @@
       "trained": {},
       "forecasts": {}
     }
+  },
+  "photoPForYourPlot": "For your plot",
+  "@photoPForYourPlot": {
+    "description": "web key: photo.p.forYourPlot"
+  },
+  "photoPRateSource": "Rate: {source}",
+  "@photoPRateSource": {
+    "description": "web key: photo.p.rateSource",
+    "placeholders": {
+      "source": {}
+    }
+  },
+  "photoPCited": "MoA manual rate",
+  "@photoPCited": {
+    "description": "web key: photo.p.cited"
+  },
+  "photoPFollowLabel": "The label on the pack is final.",
+  "@photoPFollowLabel": {
+    "description": "web key: photo.p.followLabel"
+  },
+  "photoShopVerified": "Verified seller",
+  "@photoShopVerified": {
+    "description": "web key: photo.shop.verified"
+  },
+  "photoShopSamplePrice": "sample price",
+  "@photoShopSamplePrice": {
+    "description": "web key: photo.shop.samplePrice"
+  },
+  "photoShopAskPrice": "Ask the shop for the price",
+  "@photoShopAskPrice": {
+    "description": "web key: photo.shop.askPrice"
+  },
+  "photoShopCall": "Call",
+  "@photoShopCall": {
+    "description": "web key: photo.shop.call"
+  },
+  "photoShopNone": "No shop in the system has these products in stock yet. Ask your Development Agent or cooperative.",
+  "@photoShopNone": {
+    "description": "web key: photo.shop.none"
+  },
+  "photoCheckPack": "Check the pack before you spray",
+  "@photoCheckPack": {
+    "description": "web key: photo.checkPack"
+  },
+  "photoCheckPackHint": "Scan the QR code or type the code on the pack: the app tells you if it is genuine and if it is the right product for this disease.",
+  "@photoCheckPackHint": {
+    "description": "web key: photo.checkPackHint"
+  },
+  "verifyPlanMatch": "This is one of the products on your treatment plan for {disease}.",
+  "@verifyPlanMatch": {
+    "description": "web key: verify.plan.match",
+    "placeholders": {
+      "disease": {}
+    }
+  },
+  "verifyPlanMatchButWarning": "This product is on your treatment plan for {disease}, but this pack did not pass the check: do not use it. Buy another pack and check it again.",
+  "@verifyPlanMatchButWarning": {
+    "description": "web key: verify.plan.matchButWarning",
+    "placeholders": {
+      "disease": {}
+    }
+  },
+  "verifyPlanNoMatch": "This product is not on your treatment plan for {disease}. Products on the plan: {list}. Ask your Development Agent before using it.",
+  "@verifyPlanNoMatch": {
+    "description": "web key: verify.plan.noMatch",
+    "placeholders": {
+      "disease": {},
+      "list": {}
+    }
+  },
+  "verifyPlanFor": "Checking a pack for your photo check: the result also says if it is on your treatment plan.",
+  "@verifyPlanFor": {
+    "description": "web key: verify.plan.for"
+  },
+  "dealerPrice": "Price per pack (birr)",
+  "@dealerPrice": {
+    "description": "web key: dealer.price"
+  },
+  "dealerPack": "Pack size",
+  "@dealerPack": {
+    "description": "web key: dealer.pack"
+  },
+  "dealerSavePrice": "Save price",
+  "@dealerSavePrice": {
+    "description": "web key: dealer.savePrice"
+  },
+  "dealerSampleNote": "Sample price (presentation): enter your own price to replace it.",
+  "@dealerSampleNote": {
+    "description": "web key: dealer.sampleNote"
+  },
+  "dealerPriceHint": "Farmers see this price, with the date you set it, when the app recommends the product.",
+  "@dealerPriceHint": {
+    "description": "web key: dealer.priceHint"
   }
 }

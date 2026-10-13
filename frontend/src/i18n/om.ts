@@ -1818,4 +1818,26 @@ export const om: Record<MessageKey, string> = {
   "lv.import.retrain": "Tilmaama irra deebi'ii leenjisi",  // draft – needs native review
   "lv.import.result": "Gabaasa {added} dabalame, {updated} haaromfame, {rejected} didame; tilmaama {forecasts} leenji'e.",  // draft – needs native review
   "lv.import.trained": "Moodeelli {trained} irra deebi'anii leenji'an; {forecasts} tilmaamaaf odeeffannoo gahaa qabu.",  // draft – needs native review
+
+  // ── Treatment value chain: dose, shops, pack check ───────────────────────
+  "photo.p.forYourPlot": "Lafa keessaniif",  // draft – needs native review
+  "photo.p.rateSource": "Hammam: {source}",  // draft – needs native review
+  "photo.p.cited": "Hammam manuwaala MoA",  // draft – needs native review
+  "photo.p.followLabel": "Asxaan qodaa irratti jiru isa xumuraa ti.",  // draft – needs native review
+  "photo.shop.verified": "Gurgurtaa mirkanaa'e",  // draft – needs native review
+  "photo.shop.samplePrice": "gatii fakkeenyaa",  // draft – needs native review
+  "photo.shop.askPrice": "Gatii suuqii gaafadhaa",  // draft – needs native review
+  "photo.shop.call": "Bilbilaa",  // draft – needs native review
+  "photo.shop.none": "Suuqiin oomishaalee kana qabu sirna keessa ammallee hin jiru. Hojjetaa misoomaa ykn waldaa keessan gaafadhaa.",  // draft – needs native review
+  "photo.checkPack": "Osoo hin facaasin dura qodaa mirkaneeffadhaa",  // draft – needs native review
+  "photo.checkPackHint": "Koodii QR qodaa irratti jiru iskaanii godhaa ykn koodii barreessaa: appiin dhugaa ta'uu fi dhukkuba kanaaf oomisha sirrii ta'uu isaa isinitti hima.",  // draft – needs native review
+  "verify.plan.match": "Kun oomishaalee karoora yaalii {disease} keessan irra jiran keessaa tokko.",  // draft – needs native review
+  "verify.plan.matchButWarning": "Oomishni kun karoora yaalii {disease} keessan irra jira, garuu qodaan kun qorannoo hin darbine: hin fayyadaminaa. Qodaa biraa bitaatii irra deebi'aa mirkaneeffadhaa.",  // draft – needs native review
+  "verify.plan.noMatch": "Oomishni kun karoora yaalii {disease} keessan irra hin jiru. Oomishaalee karoora irra jiran: {list}. Osoo hin fayyadamin dura hojjetaa misoomaa gaafadhaa.",  // draft – needs native review
+  "verify.plan.for": "Qorannoo suuraa keessaniif qodaa mirkaneessaa jirtu: bu'aan karoora yaalii keessan irra jiraachuu isaas ni hima.",  // draft – needs native review
+  "dealer.price": "Gatii qodaa tokkoo (qarshii)",  // draft – needs native review
+  "dealer.pack": "Hamma qodaa",  // draft – needs native review
+  "dealer.savePrice": "Gatii olkaa'i",  // draft – needs native review
+  "dealer.sampleNote": "Gatii fakkeenyaa (agarsiisaaf): bakka buusuuf gatii mataa keessanii galchaa.",  // draft – needs native review
+  "dealer.priceHint": "Yeroo appiin oomisha gorsu qonnaan bultoonni gatii kana guyyaa isaa waliin argu.",  // draft – needs native review
 };

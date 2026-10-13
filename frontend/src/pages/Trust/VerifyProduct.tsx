@@ -12,7 +12,7 @@ import TextArea from "@/components/form/input/TextArea";
 import Alert from "@/components/ui/alert/Alert";
 import Button from "@/components/ui/button/Button";
 import { errorMessage, useAsync } from "@/hooks/useAsync";
-import { tr, type MessageKey } from "@/i18n/core";
+import { tr, trTerm, type MessageKey } from "@/i18n/core";
 import { useI18n } from "@/i18n/I18nProvider";
 import type { TrustResult } from "@/types/api";
 import { cn } from "@/utils";
@@ -38,19 +38,21 @@ export default function VerifyProduct() {
   const [error, setError] = useState<string | null>(null);
   const [scanning, setScanning] = useState(false);
   const autoChecked = useRef(false);
+  // Opened from a photo check's treatment plan (…/verify?diagnosis=…): say if the pack is on that plan.
+  const diagnosisId = Number(params.get("diagnosis")) || null;
 
   const check = useCallback(async (value: string) => {
     if (value.trim().length < 4) return;
     setBusy(true);
     setError(null);
     try {
-      setResult(await api.trustVerify(value));
+      setResult(await api.trustVerify(value, diagnosisId));
     } catch (err) {
       setError(errorMessage(err));
     } finally {
       setBusy(false);
     }
-  }, []);
+  }, [diagnosisId]);
 
   // Opened from a scanned label (…/verify?code=…): check straight away.
   useEffect(() => {
@@ -87,7 +89,12 @@ export default function VerifyProduct() {
 
       <div className="grid grid-cols-12 gap-4 md:gap-6">
         <div className="col-span-12 space-y-4 md:space-y-6 xl:col-span-7">
-          <Card accent="teal" icon={<ShieldCheck className="size-5" />} title={tr("nav.verify")}>
+          <Card
+            accent="teal"
+            icon={<ShieldCheck className="size-5" />}
+            title={tr("nav.verify")}
+            description={diagnosisId ? tr("verify.plan.for") : undefined}
+          >
             <form onSubmit={onSubmit} noValidate className="space-y-4">
               <div>
                 <Label htmlFor="trust-code">{tr("trust.codeLabel")}</Label>
@@ -171,6 +178,21 @@ export default function VerifyProduct() {
               )}
               {result.result === "genuine" && <p className="mt-3 text-theme-xs text-gray-600 dark:text-gray-400">{tr("trust.batchNote")}</p>}
             </div>
+          )}
+          {result?.plan_match && result.product_name && (
+            <Alert
+              variant={result.plan_match.matches && result.result === "genuine" ? "success" : "warning"}
+              message={
+                result.plan_match.matches
+                  ? tr(result.result === "genuine" ? "verify.plan.match" : "verify.plan.matchButWarning", {
+                      disease: trTerm("model", result.plan_match.disease_key),
+                    })
+                  : tr("verify.plan.noMatch", {
+                      disease: trTerm("model", result.plan_match.disease_key),
+                      list: result.plan_match.recommended.join(", ") || "—",
+                    })
+              }
+            />
           )}
           {result?.product_id && <VerifiedShopsCard productId={result.product_id} compact />}
         </div>

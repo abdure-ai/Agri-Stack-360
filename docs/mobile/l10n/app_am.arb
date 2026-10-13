@@ -8389,5 +8389,118 @@
       "forecasts": {}
     },
     "x-draft": true
+  },
+  "photoPForYourPlot": "ለማሳዎ",
+  "@photoPForYourPlot": {
+    "description": "web key: photo.p.forYourPlot",
+    "x-draft": true
+  },
+  "photoPRateSource": "መጠን፦ {source}",
+  "@photoPRateSource": {
+    "description": "web key: photo.p.rateSource",
+    "placeholders": {
+      "source": {}
+    },
+    "x-draft": true
+  },
+  "photoPCited": "የግብርና ሚኒስቴር ማኑዋል መጠን",
+  "@photoPCited": {
+    "description": "web key: photo.p.cited",
+    "x-draft": true
+  },
+  "photoPFollowLabel": "በማሸጊያው ላይ ያለው መለያ የመጨረሻ ነው።",
+  "@photoPFollowLabel": {
+    "description": "web key: photo.p.followLabel",
+    "x-draft": true
+  },
+  "photoShopVerified": "የተረጋገጠ ሻጭ",
+  "@photoShopVerified": {
+    "description": "web key: photo.shop.verified",
+    "x-draft": true
+  },
+  "photoShopSamplePrice": "የናሙና ዋጋ",
+  "@photoShopSamplePrice": {
+    "description": "web key: photo.shop.samplePrice",
+    "x-draft": true
+  },
+  "photoShopAskPrice": "ዋጋውን ሱቁን ይጠይቁ",
+  "@photoShopAskPrice": {
+    "description": "web key: photo.shop.askPrice",
+    "x-draft": true
+  },
+  "photoShopCall": "ይደውሉ",
+  "@photoShopCall": {
+    "description": "web key: photo.shop.call",
+    "x-draft": true
+  },
+  "photoShopNone": "በስርዓቱ ውስጥ እነዚህን ምርቶች የያዘ ሱቅ ገና የለም። የልማት ሰራተኛዎን ወይም ማህበርዎን ይጠይቁ።",
+  "@photoShopNone": {
+    "description": "web key: photo.shop.none",
+    "x-draft": true
+  },
+  "photoCheckPack": "ከመርጨትዎ በፊት ማሸጊያውን ያረጋግጡ",
+  "@photoCheckPack": {
+    "description": "web key: photo.checkPack",
+    "x-draft": true
+  },
+  "photoCheckPackHint": "በማሸጊያው ላይ ያለውን QR ኮድ ይቃኙ ወይም ኮዱን ይጻፉ፤ መተግበሪያው ትክክለኛ መሆኑንና ለዚህ በሽታ ትክክለኛው ምርት መሆኑን ይነግርዎታል።",
+  "@photoCheckPackHint": {
+    "description": "web key: photo.checkPackHint",
+    "x-draft": true
+  },
+  "verifyPlanMatch": "ይህ ለ{disease} በሕክምና ዕቅድዎ ላይ ካሉት ምርቶች አንዱ ነው።",
+  "@verifyPlanMatch": {
+    "description": "web key: verify.plan.match",
+    "placeholders": {
+      "disease": {}
+    },
+    "x-draft": true
+  },
+  "verifyPlanMatchButWarning": "ይህ ምርት ለ{disease} በሕክምና ዕቅድዎ ላይ አለ፣ ነገር ግን ይህ ማሸጊያ ማረጋገጫውን አላለፈም፤ አይጠቀሙበት። ሌላ ማሸጊያ ገዝተው እንደገና ያረጋግጡ።",
+  "@verifyPlanMatchButWarning": {
+    "description": "web key: verify.plan.matchButWarning",
+    "placeholders": {
+      "disease": {}
+    },
+    "x-draft": true
+  },
+  "verifyPlanNoMatch": "ይህ ምርት ለ{disease} በሕክምና ዕቅድዎ ላይ የለም። በዕቅዱ ላይ ያሉ ምርቶች፦ {list}። ከመጠቀምዎ በፊት የልማት ሰራተኛዎን ይጠይቁ።",
+  "@verifyPlanNoMatch": {
+    "description": "web key: verify.plan.noMatch",
+    "placeholders": {
+      "disease": {},
+      "list": {}
+    },
+    "x-draft": true
+  },
+  "verifyPlanFor": "ለፎቶ ምርመራዎ ማሸጊያ እያረጋገጡ ነው፤ ውጤቱ በሕክምና ዕቅድዎ ላይ መኖሩንም ይነግርዎታል።",
+  "@verifyPlanFor": {
+    "description": "web key: verify.plan.for",
+    "x-draft": true
+  },
+  "dealerPrice": "ዋጋ ለአንድ ማሸጊያ (ብር)",
+  "@dealerPrice": {
+    "description": "web key: dealer.price",
+    "x-draft": true
+  },
+  "dealerPack": "የማሸጊያ መጠን",
+  "@dealerPack": {
+    "description": "web key: dealer.pack",
+    "x-draft": true
+  },
+  "dealerSavePrice": "ዋጋ አስቀምጥ",
+  "@dealerSavePrice": {
+    "description": "web key: dealer.savePrice",
+    "x-draft": true
+  },
+  "dealerSampleNote": "የናሙና ዋጋ (ለማሳያ)፦ ለመተካት የራስዎን ዋጋ ያስገቡ።",
+  "@dealerSampleNote": {
+    "description": "web key: dealer.sampleNote",
+    "x-draft": true
+  },
+  "dealerPriceHint": "መተግበሪያው ምርቱን ሲመክር ገበሬዎች ይህንን ዋጋ ከቀኑ ጋር ያያሉ።",
+  "@dealerPriceHint": {
+    "description": "web key: dealer.priceHint",
+    "x-draft": true
   }
 }

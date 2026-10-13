@@ -130,6 +130,11 @@ def _migrate_organisations(conn: sqlite3.Connection) -> None:
 def ensure_schema(conn: sqlite3.Connection) -> None:
     _migrate_organisations(conn)
     conn.executescript(SCHEMA)
+    cols = {r[1] for r in conn.execute("PRAGMA table_info(shop_products)")}
+    for col, decl in (("price_etb", "REAL"), ("pack_size", "TEXT"), ("price_is_sample", "INTEGER NOT NULL DEFAULT 0"),
+                      ("price_updated_at", "TEXT")):
+        if col not in cols:      # shop price per pack, set by the dealer (added after the first release)
+            conn.execute(f"ALTER TABLE shop_products ADD COLUMN {col} {decl}")
     conn.commit()
 
 

@@ -1818,4 +1818,26 @@ export const ti: Record<MessageKey, string> = {
   "lv.import.retrain": "ግምት ከም ብሓድሽ ኣሰልጥን",  // draft – needs native review
   "lv.import.result": "{added} ጸብጻባት ተወሲኾም፣ {updated} ተሓዲሶም፣ {rejected} ተነጺጎም፤ {forecasts} ግምታት ሰልጢኖም።",  // draft – needs native review
   "lv.import.trained": "{trained} ሞዴላት ከም ብሓድሽ ሰልጢኖም፤ {forecasts} ንግምት እኹል ሓበሬታ ኣለዎም።",  // draft – needs native review
+
+  // ── Treatment value chain: dose, shops, pack check ───────────────────────
+  "photo.p.forYourPlot": "ንግራትኩም",  // draft – needs native review
+  "photo.p.rateSource": "መጠን፦ {source}",  // draft – needs native review
+  "photo.p.cited": "መጠን ማንዋል MoA",  // draft – needs native review
+  "photo.p.followLabel": "ኣብቲ ማሸጊያ ዘሎ ምልክት ናይ መወዳእታ እዩ።",  // draft – needs native review
+  "photo.shop.verified": "ዝተረጋገጸ ሸያጢ",  // draft – needs native review
+  "photo.shop.samplePrice": "ናይ ኣብነት ዋጋ",  // draft – needs native review
+  "photo.shop.askPrice": "ዋጋ ንድኳን ሕተቱ",  // draft – needs native review
+  "photo.shop.call": "ደውሉ",  // draft – needs native review
+  "photo.shop.none": "ነዚኦም ፍርያት ዝሓዘ ድኳን ኣብቲ ስርዓት ገና የለን። ንሰራሕተኛ ልምዓት ወይ ማሕበርኩም ሕተቱ።",  // draft – needs native review
+  "photo.checkPack": "ቅድሚ ምርጫትኩም ነቲ ማሸጊያ ኣረጋግጹ",  // draft – needs native review
+  "photo.checkPackHint": "ኣብቲ ማሸጊያ ዘሎ QR ኮድ ስካን ግበሩ ወይ ኮድ ጽሓፉ፤ እቲ ኣፕ ሓቀኛ ምዃኑን ነዚ ሕማም ቅኑዕ ፍርያት ምዃኑን ይነግረኩም።",  // draft – needs native review
+  "verify.plan.match": "እዚ ኣብ ናይ {disease} መደብ ሕክምናኹም ካብ ዘለዉ ፍርያት ሓደ እዩ።",  // draft – needs native review
+  "verify.plan.matchButWarning": "እዚ ፍርያት ኣብ ናይ {disease} መደብ ሕክምናኹም ኣሎ፣ ግን እዚ ማሸጊያ ነቲ ምርግጋጽ ኣይሓለፈን፤ ኣይትጠቐሙሉ። ካልእ ማሸጊያ ገዚእኩም እንደገና ኣረጋግጹ።",  // draft – needs native review
+  "verify.plan.noMatch": "እዚ ፍርያት ኣብ ናይ {disease} መደብ ሕክምናኹም የለን። ኣብቲ መደብ ዘለዉ ፍርያት፦ {list}። ቅድሚ ምጥቃምኩም ንሰራሕተኛ ልምዓት ሕተቱ።",  // draft – needs native review
+  "verify.plan.for": "ንናይ ስእሊ ምርመራኹም ማሸጊያ ተረጋግጹ ኣለኹም፤ እቲ ውጽኢት ኣብ መደብ ሕክምናኹም ምህላዉ እውን ይነግር።",  // draft – needs native review
+  "dealer.price": "ዋጋ ንሓደ ማሸጊያ (ብር)",  // draft – needs native review
+  "dealer.pack": "ዓቐን ማሸጊያ",  // draft – needs native review
+  "dealer.savePrice": "ዋጋ ዓቅብ",  // draft – needs native review
+  "dealer.sampleNote": "ናይ ኣብነት ዋጋ (ንምርኢት)፦ ንምትካእ ናይ ገዛእ ርእስኹም ዋጋ ኣእትዉ።",  // draft – needs native review
+  "dealer.priceHint": "እቲ ኣፕ ነቲ ፍርያት ክመኽር ከሎ ሓረስቶት ነዚ ዋጋ ምስ ዕለቱ ይርእዩ።",  // draft – needs native review
 };

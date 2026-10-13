@@ -2,7 +2,7 @@
 routers/input_trust.py — Input Trust pilot API (see backend/input_trust.py for the rules).
 
 Check (inputs:verify — farmer, agent, trader, admin)
-  POST /api/trust/verify                     {code} -> Genuine / Warning + reason
+  POST /api/trust/verify                     {code, diagnosis_id?} -> Genuine / Warning + reason (+ plan_match)
   POST /api/trust/fake-reports               report a suspected fake (woreda from the profile)
   GET  /api/trust/products                   registered products (for the report form)
 
@@ -45,12 +45,35 @@ _orgs = require_permission(P.ORGS_MANAGE)
 
 class VerifyRequest(BaseModel):
     code: str = Field(..., min_length=4, max_length=300)
+    diagnosis_id: int | None = Field(None, description="Photo check this pack is for: the answer then says "
+                                                       "whether the product is on that treatment plan.")
+
+
+def plan_match(conn, diagnosis_id: int, product_id: int | None, user: dict) -> dict | None:
+    """Is the checked product one of the registered products the treatment plan lists for this diagnosis?"""
+    from backend.access import farmer_for_read
+
+    d = conn.execute("""SELECT d.farmer_id, d.disease_key, COALESCE(s.crop, 'wheat') FROM diagnoses d
+                        LEFT JOIN crop_seasons s ON s.id = d.crop_season_id WHERE d.id = ?""",
+                     (diagnosis_id,)).fetchone()
+    if not d or not d[1]:
+        return None
+    if d[0] != user["id"]:
+        farmer_for_read(user, d[0])          # 403 unless the user may see this farmer
+    rows = conn.execute("""SELECT p.id, p.product_name FROM dosage_rules r JOIN approved_products p ON p.id = r.product_id
+                           WHERE r.target = ? AND lower(r.crop) = lower(?) AND p.status = 'registered'
+                           ORDER BY p.product_name""", (d[1], d[2])).fetchall()
+    return {"diagnosis_id": diagnosis_id, "disease_key": d[1], "matches": any(r[0] == product_id for r in rows),
+            "recommended": [r[1] for r in rows]}
 
 
 @router.post("/trust/verify")
 async def verify(req: VerifyRequest, user: dict = Depends(_verify)):
-    return input_trust.verify(get_platform_connection(), req.code, user_id=user["id"],
-                              woreda_pcode=user.get("woreda_pcode"))
+    conn = get_platform_connection()
+    result = input_trust.verify(conn, req.code, user_id=user["id"], woreda_pcode=user.get("woreda_pcode"))
+    if req.diagnosis_id:
+        result["plan_match"] = plan_match(conn, req.diagnosis_id, result.get("product_id"), user)
+    return result
 
 
 @router.get("/trust/products")

@@ -4654,6 +4654,18 @@
             "maxLength": 300,
             "minLength": 4,
             "title": "Code"
+          },
+          "diagnosis_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Diagnosis Id",
+            "description": "Photo check this pack is for: the answer then says whether the product is on that treatment plan."
           }
         },
         "type": "object",

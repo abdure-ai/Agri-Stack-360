@@ -130,5 +130,6 @@
   "lv_none": "There is no NMIS livestock price for {animal} yet.",
   "lv_note": "These are market reports per head (lowest and highest price). The price depends on the animal's size, condition and the market day: check at the market before you sell. An outlook is not a promise.",
   "livestock_source": "NMIS livestock market data",
-  "lv_reason_short_period": "Only {days} days of data: too short to tell a trend from a passing change."
+  "lv_reason_short_period": "Only {days} days of data: too short to tell a trend from a passing change.",
+  "cited_dose_warning": "Spray rates are from the MoA wheat manual (page cited). Before spraying, check that the product is in the current EAA register, follow the rate on the product label (the label is final), and ask your Development Agent."
 }

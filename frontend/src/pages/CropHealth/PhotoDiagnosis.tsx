@@ -30,13 +30,16 @@ import {
   Leaf,
   MapPin,
   Mountain,
+  Phone,
   PhoneCall,
+  QrCode,
   ShieldCheck,
   Store,
   ThermometerSun,
   Droplets,
 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
+import { Link } from "react-router";
 
 const CONDITION_LABELS: Record<keyof EcologicalInput, { label: MessageKey; unit: string; icon: React.ReactNode }> = {
   altitude_m: { label: "photo.cond.altitude", unit: "m", icon: <Mountain className="size-4" /> },
@@ -304,8 +307,9 @@ function ModelComparison({ result }: { result: AdvisoryDiagnosis }) {
 }
 
 function Product({ p }: { p: ProductCard }) {
-  const rows: [string, string | number | null][] = [
+  const rows: [string, string | number | null | undefined][] = [
     [tr("photo.p.dosePerHa"), p.dose_per_ha],
+    [tr("photo.p.forYourPlot"), p.amount_for_plot],
     [tr("photo.p.perKnapsack"), p.dose_per_knapsack],
     [tr("photo.p.water"), p.water_volume_l_per_ha && `${p.water_volume_l_per_ha} ${tr("unit.lPerHa")}`],
     [tr("photo.p.maxSprays"), p.max_applications],
@@ -324,15 +328,22 @@ function Product({ p }: { p: ProductCard }) {
             {p.registration_number && ` · ${tr("photo.reg", { n: p.registration_number })}`}
           </p>
         </div>
-        {p.verified ? (
-          <Badge size="sm" color="success">
-            {tr("photo.verified")}
-          </Badge>
-        ) : (
-          <Badge size="sm" color="warning">
-            {tr("photo.placeholder")}
-          </Badge>
-        )}
+        <div className="flex flex-wrap gap-1.5">
+          {p.dose_cited && (
+            <Badge size="sm" color="info">
+              {tr("photo.p.cited")}
+            </Badge>
+          )}
+          {p.verified ? (
+            <Badge size="sm" color="success">
+              {tr("photo.verified")}
+            </Badge>
+          ) : (
+            <Badge size="sm" color="warning">
+              {tr("photo.placeholder")}
+            </Badge>
+          )}
+        </div>
       </div>
       <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1.5 sm:grid-cols-4">
         {rows
@@ -347,16 +358,36 @@ function Product({ p }: { p: ProductCard }) {
       {!!p.ppe_required.length && (
         <p className="mt-2 text-theme-xs text-gray-500 dark:text-gray-400">{tr("photo.ppe", { items: p.ppe_required.map((x) => trTerm("ppe", x)).join(", ") })}</p>
       )}
+      {p.dose_per_ha && p.source && (
+        <p className="mt-1 text-theme-xs text-gray-500 dark:text-gray-400">
+          {tr("photo.p.rateSource", { source: p.source })} {tr("photo.p.followLabel")}
+        </p>
+      )}
     </div>
   );
 }
 
-function Offer({ o }: { o: InputOffer }) {
+/** Offers of the same shop together, in the server's order (nearest shop first). */
+function groupByShop(offers: InputOffer[]): InputOffer[][] {
+  const groups = new Map<string, InputOffer[]>();
+  for (const o of offers) {
+    const key = String(o.shop_id ?? o.supplier);
+    groups.set(key, [...(groups.get(key) ?? []), o]);
+  }
+  return [...groups.values()];
+}
+
+function Offer({ o, first = true }: { o: InputOffer; first?: boolean }) {
   return (
     <li className="flex items-center justify-between gap-3 py-2">
       <div className="min-w-0">
-        <p className="truncate text-sm font-medium text-gray-800 dark:text-white/90">
-          {o.supplier}
+        <p className={cn("flex flex-wrap items-center gap-x-2 text-sm font-medium text-gray-800 dark:text-white/90", !first && "sr-only")}>
+          <span className="truncate">{o.supplier}</span>
+          {o.verified_seller && (
+            <span className="inline-flex items-center gap-0.5 text-theme-xs font-medium text-success-600">
+              <ShieldCheck className="size-3.5" /> {tr("photo.shop.verified")}
+            </span>
+          )}
           {o.sponsored && (
             <span className="ms-2 rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-semibold text-gray-500 uppercase dark:bg-white/5">
               {tr("photo.sponsored")}
@@ -365,7 +396,8 @@ function Offer({ o }: { o: InputOffer }) {
         </p>
         <p className="text-theme-xs text-gray-500 dark:text-gray-400">
           {o.product_name}
-          {o.distance_km !== null && (
+          {o.woreda && ` · ${o.woreda}`}
+          {o.distance_km !== null && o.distance_km > 0 && (
             <>
               {" · "}
               <MapPin className="inline size-3" /> {o.distance_km} {tr("unit.km")}
@@ -373,17 +405,33 @@ function Offer({ o }: { o: InputOffer }) {
           )}
           {o.in_stock === false && ` · ${tr("photo.outOfStock")}`}
         </p>
+        {first && o.phone && (
+          <a href={`tel:${o.phone}`} className="mt-0.5 inline-flex items-center gap-1 text-theme-xs font-medium text-brand-600">
+            <Phone className="size-3" /> {tr("photo.shop.call")} {o.phone}
+          </a>
+        )}
       </div>
-      {o.price_etb !== null && (
-        <p className="shrink-0 text-sm font-semibold text-gray-800 dark:text-white/90">
-          {o.price_etb.toLocaleString()} {tr("unit.etb")}{o.unit && <span className="text-theme-xs font-normal text-gray-500"> / {o.unit}</span>}
-        </p>
-      )}
+      <div className="shrink-0 text-end">
+        {o.price_etb !== null ? (
+          <>
+            <p className="text-sm font-semibold text-gray-800 dark:text-white/90">
+              {o.price_etb.toLocaleString()} {tr("unit.etb")}{o.unit && <span className="text-theme-xs font-normal text-gray-500"> / {o.unit}</span>}
+            </p>
+            {o.price_is_sample ? (
+              <p className="text-[10px] font-semibold text-warning-600 uppercase">{tr("photo.shop.samplePrice")}</p>
+            ) : (
+              o.price_updated_at && <p className="text-[10px] text-gray-400">{formatFullDate(o.price_updated_at.slice(0, 10))}</p>
+            )}
+          </>
+        ) : (
+          <p className="text-theme-xs text-gray-500">{tr("photo.shop.askPrice")}</p>
+        )}
+      </div>
     </li>
   );
 }
 
-function PlanSection({ plan }: { plan: TreatmentPlan }) {
+function PlanSection({ plan, diagnosisId }: { plan: TreatmentPlan; diagnosisId: number }) {
   return (
     <div className="space-y-5">
       {(!plan.verified || plan.warnings.length > 0) && (
@@ -433,16 +481,41 @@ function PlanSection({ plan }: { plan: TreatmentPlan }) {
 
       {plan.weather_advice && <Alert variant="info" title={tr("photo.weather")} message={plan.weather_advice} />}
 
-      {!!plan.offers.length && (
+      {plan.products.length > 0 && (
         <div>
           <h4 className="mb-1 flex items-center gap-2 text-sm font-semibold text-gray-800 dark:text-white/90">
             <Store className="size-4 text-orange-500" /> {tr("photo.whereToBuy")}
           </h4>
-          <ul className="divide-y divide-gray-100 dark:divide-gray-800">
-            {plan.offers.map((o, i) => (
-              <Offer key={`${o.supplier}-${o.product_id}-${i}`} o={o} />
-            ))}
-          </ul>
+          {plan.offers.length ? (
+            <div className="space-y-3">
+              {groupByShop(plan.offers).map((offers) => (
+                <ul key={`${offers[0].shop_id ?? offers[0].supplier}`} className="divide-y divide-gray-100 rounded-xl border border-gray-200 px-3 dark:divide-gray-800 dark:border-gray-800">
+                  {offers.map((o, i) => (
+                    <Offer key={`${o.supplier}-${o.product_id}-${i}`} o={o} first={i === 0} />
+                  ))}
+                </ul>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-gray-600 dark:text-gray-400">{tr("photo.shop.none")}</p>
+          )}
+        </div>
+      )}
+
+      {plan.products.length > 0 && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-teal-200 bg-teal-50 p-4 dark:border-teal-500/30 dark:bg-teal-500/10">
+          <div className="min-w-0 flex-1">
+            <p className="flex items-center gap-2 text-sm font-semibold text-teal-800 dark:text-teal-300">
+              <QrCode className="size-4" /> {tr("photo.checkPack")}
+            </p>
+            <p className="mt-0.5 text-theme-xs text-teal-700 dark:text-teal-400">{tr("photo.checkPackHint")}</p>
+          </div>
+          <Link
+            to={`/verify?diagnosis=${diagnosisId}`}
+            className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700"
+          >
+            <QrCode className="size-4" /> {tr("nav.verify")}
+          </Link>
         </div>
       )}
 
@@ -555,7 +628,7 @@ export function PhotoDiagnosisResult({ result }: { result: AdvisoryDiagnosis }) 
 
         <ModelComparison result={result} />
 
-        {result.plan && <PlanSection plan={result.plan} />}
+        {result.plan && <PlanSection plan={result.plan} diagnosisId={result.diagnosis_id} />}
 
         {result.follow_up_date && (
           <div className="flex flex-wrap items-center justify-between gap-3 border-t border-gray-100 pt-4 dark:border-gray-800">

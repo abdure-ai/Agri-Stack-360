@@ -4,7 +4,7 @@ routers/dealer.py — Agro-dealer shops (checklist 1.7) on the shared organisati
 Shop staff (dealer:manage)
   GET  /api/dealer/shop                      shop profile, products carried, verified badge
   PUT  /api/dealer/shop                      location (woreda P-code), phone, note
-  PUT  /api/dealer/products/{product_id}     carry a registered product / set in-stock
+  PUT  /api/dealer/products/{product_id}     carry a registered product: in-stock, price per pack, pack size
   DELETE /api/dealer/products/{product_id}
   POST /api/dealer/check                     check a product code at sale (Input Trust), logged for the shop
   GET  /api/dealer/checks                    the shop's recent checks
@@ -42,7 +42,8 @@ def _shop(user: dict, org_id: int | None) -> dict:
 async def shop(org_id: int | None = None, user: dict = Depends(_dealer)):
     org = _shop(user, org_id)
     products = pquery("""SELECT p.id, p.product_name, p.active_ingredient, p.registration_number, p.category,
-                                p.verification_status, sp.in_stock, sp.updated_at
+                                p.verification_status, sp.in_stock, sp.updated_at, sp.price_etb, sp.pack_size,
+                                sp.price_is_sample, sp.price_updated_at
                          FROM shop_products sp JOIN approved_products p ON p.id = sp.product_id
                          WHERE sp.org_id = ? ORDER BY p.product_name""", (org["id"],))
     registry = pquery("""SELECT id, product_name, active_ingredient, registration_number, category FROM approved_products
@@ -80,6 +81,8 @@ async def update_shop(req: ShopIn, org_id: int | None = None, user: dict = Depen
 
 class StockIn(BaseModel):
     in_stock: bool = True
+    price_etb: float | None = Field(None, gt=0, le=1_000_000, description="Shop price per pack, birr; null = not given")
+    pack_size: str | None = Field(None, max_length=40, description="e.g. '1 L', '500 mL', '1 kg'")
 
 
 @router.put("/dealer/products/{product_id}")
@@ -91,11 +94,26 @@ async def set_product(product_id: int, req: StockIn, org_id: int | None = None, 
     if p["status"] != "registered":
         raise HTTPException(400, "Only registered products can be listed.")
     conn = get_platform_connection()
-    with conn:
-        conn.execute("""INSERT INTO shop_products (org_id, product_id, in_stock, updated_at) VALUES (?,?,?,?)
-                        ON CONFLICT(org_id, product_id) DO UPDATE SET in_stock=excluded.in_stock, updated_at=excluded.updated_at""",
-                     (org["id"], product_id, int(req.in_stock), _now()))
-    return {"product_id": product_id, "in_stock": req.in_stock}
+    now = _now()
+    old = conn.execute("SELECT price_etb, pack_size, price_is_sample, price_updated_at FROM shop_products "
+                       "WHERE org_id=? AND product_id=?", (org["id"], product_id)).fetchone()
+    if "price_etb" not in req.model_fields_set and "pack_size" not in req.model_fields_set:
+        with conn:    # stock change only: the price stays as it is
+            conn.execute("""INSERT INTO shop_products (org_id, product_id, in_stock, updated_at) VALUES (?,?,?,?)
+                            ON CONFLICT(org_id, product_id) DO UPDATE SET in_stock=excluded.in_stock,
+                                updated_at=excluded.updated_at""", (org["id"], product_id, int(req.in_stock), now))
+        return {"product_id": product_id, "in_stock": req.in_stock,
+                "price_etb": old[0] if old else None, "pack_size": old[1] if old else None}
+    pack = (req.pack_size or "").strip() or None
+    with conn:       # a price the shop enters replaces any sample price
+        conn.execute("""INSERT INTO shop_products (org_id, product_id, in_stock, updated_at, price_etb, pack_size,
+                                                   price_is_sample, price_updated_at) VALUES (?,?,?,?,?,?,0,?)
+                        ON CONFLICT(org_id, product_id) DO UPDATE SET in_stock=excluded.in_stock,
+                            updated_at=excluded.updated_at, price_etb=excluded.price_etb, pack_size=excluded.pack_size,
+                            price_is_sample=0, price_updated_at=excluded.price_updated_at""",
+                     (org["id"], product_id, int(req.in_stock), now, req.price_etb, pack,
+                      now if req.price_etb is not None else None))
+    return {"product_id": product_id, "in_stock": req.in_stock, "price_etb": req.price_etb, "pack_size": pack}
 
 
 @router.delete("/dealer/products/{product_id}", status_code=204)

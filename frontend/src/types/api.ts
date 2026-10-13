@@ -704,6 +704,10 @@ export interface ProductCard {
   ppe_required: string[];
   source: string | null;
   verified: boolean;
+  /** The rate is copied from a cited MoA manual page (the label and the EAA register stay final). */
+  dose_cited?: boolean;
+  /** Rate × the farmer's plot area, e.g. "250 mL / 0.5 ha". */
+  amount_for_plot?: string | null;
 }
 
 export interface InputOffer {
@@ -715,6 +719,13 @@ export interface InputOffer {
   unit: string | null;
   in_stock: boolean | null;
   sponsored: boolean;
+  shop_id?: number | null;
+  phone?: string | null;
+  woreda?: string | null;
+  verified_seller?: boolean;
+  /** Presentation site: a sample price, not one the shop entered. */
+  price_is_sample?: boolean;
+  price_updated_at?: string | null;
 }
 
 export interface TreatmentPlan {
@@ -1002,6 +1013,8 @@ export interface TrustResult {
   /** Product data not yet checked against the official registered list. */
   placeholder?: boolean;
   product_id?: number;
+  /** Only when the check was made for a photo check (diagnosis_id). */
+  plan_match?: { diagnosis_id: number; disease_key: string; matches: boolean; recommended: string[] } | null;
 }
 
 export interface VerifiedShop {
@@ -1015,7 +1028,14 @@ export interface VerifiedShop {
 
 export interface DealerShop {
   org: Organisation & { area: string[] };
-  products: (RegistryProduct & { in_stock: number; updated_at: string | null })[];
+  products: (RegistryProduct & {
+    in_stock: number;
+    updated_at: string | null;
+    price_etb?: number | null;
+    pack_size?: string | null;
+    price_is_sample?: number;
+    price_updated_at?: string | null;
+  })[];
   registry: RegistryProduct[];
 }
 
