@@ -2509,4 +2509,61 @@ export const am: Record<MessageKey, string> = {
   "pf.alert.machinery_out_of_service": "ማሽነሪ ከአገልግሎት ውጭ",  // draft – needs native review
   "pf.membersShort": "{n} አባላት",  // draft – needs native review
   "pf.capitalShort": "{paid} ካፒታል ተከፍሏል",  // draft – needs native review
+
+  // ── Website feedback (admin) ──────────────────────────────────────────────
+  "nav.feedback": "የድረ-ገጽ አስተያየቶች",  // draft – needs native review
+  "fb.description": "የድረ-ገጽ እና የኤግዚቢሽን ጎብኚዎች የሰጡን አስተያየት ከአድራሻቸው ጋር። ይህን ገጽ ማየት የሚችሉት አስተዳዳሪዎች ብቻ ናቸው።",  // draft – needs native review
+  "fb.total": "ምላሾች",  // draft – needs native review
+  "fb.avgRating": "አማካይ ደረጃ",  // draft – needs native review
+  "fb.topLiked": "በብዛት የተወደደው",  // draft – needs native review
+  "fb.interests": "ፍላጎት",  // draft – needs native review
+  "fb.pageViews": "የገጽ እይታዎች",  // draft – needs native review
+  "fb.exportCsv": "CSV አውርድ",  // draft – needs native review
+  "fb.filter.type": "የጎብኚ ዓይነት",  // draft – needs native review
+  "fb.filter.interest": "ፍላጎት",  // draft – needs native review
+  "fb.filter.rating": "ደረጃ",  // draft – needs native review
+  "fb.filter.source": "ምንጭ",  // draft – needs native review
+  "fb.filter.status": "ሁኔታ",  // draft – needs native review
+  "fb.filter.from": "ከ",  // draft – needs native review
+  "fb.filter.to": "እስከ",  // draft – needs native review
+  "fb.filter.all": "ሁሉም",  // draft – needs native review
+  "fb.filter.minRating": "{n}+ ኮከቦች",  // draft – needs native review
+  "fb.filter.clear": "ማጣሪያዎችን አጽዳ",  // draft – needs native review
+  "fb.none": "እስካሁን ምንም አስተያየት የለም።",  // draft – needs native review
+  "fb.col.date": "ቀን",  // draft – needs native review
+  "fb.col.name": "ስም",  // draft – needs native review
+  "fb.col.contact": "አድራሻ",  // draft – needs native review
+  "fb.organisation": "ድርጅት",  // draft – needs native review
+  "fb.status.new": "አዲስ",  // draft – needs native review
+  "fb.status.contacted": "ተገናኝተናል",  // draft – needs native review
+  "fb.status.closed": "ተዘግቷል",  // draft – needs native review
+  "fb.liked": "የወደዱት",  // draft – needs native review
+  "fb.comments": "አስተያየት",  // draft – needs native review
+  "fb.contactOk": "እንድናገኛቸው ፈቅደዋል",  // draft – needs native review
+  "fb.contactNo": "እንድናገኛቸው አልፈቀዱም",  // draft – needs native review
+  "fb.notes": "የቡድን ማስታወሻ",  // draft – needs native review
+  "fb.save": "አስቀምጥ",  // draft – needs native review
+  "fb.saved": "ተቀምጧል",  // draft – needs native review
+  "fb.source.direct": "በቀጥታ",  // draft – needs native review
+
+  // ── Website partners (admin) ──────────────────────────────────────────────
+  "nav.websitePartners": "የድረ-ገጽ አጋሮች",  // draft – needs native review
+  "wp.description": "በሕዝብ ድረ-ገጹ ላይ “አብረን ሠርተናል” በሚለው ስር የሚታዩ አጋሮች እና አርማዎች። እንድትጠቀሙ የተፈቀደላችሁን አርማዎች ብቻ ያክሉ።",  // draft – needs native review
+  "wp.add": "አጋር ያክሉ",  // draft – needs native review
+  "wp.name": "ስም",  // draft – needs native review
+  "wp.logo": "አርማ (አማራጭ)",  // draft – needs native review
+  "wp.logoHint": "PNG፣ JPG ወይም WebP፣ እስከ 3 MB። ግልጽ ወይም ነጭ ዳራ ያለው ሰፊ አርማ የተሻለ ነው። አርማ ከሌለ ስሙ ይታያል።",  // draft – needs native review
+  "wp.save": "አስቀምጥ",  // draft – needs native review
+  "wp.upload": "አርማ ጫን",  // draft – needs native review
+  "wp.replace": "አርማ ቀይር",  // draft – needs native review
+  "wp.removeLogo": "አርማ አስወግድ",  // draft – needs native review
+  "wp.noLogo": "አርማ የለም፤ ስሙ ይታያል",  // draft – needs native review
+  "wp.hidden": "ተደብቋል",  // draft – needs native review
+  "wp.show": "በድረ-ገጹ ላይ አሳይ",  // draft – needs native review
+  "wp.hide": "ከድረ-ገጹ ደብቅ",  // draft – needs native review
+  "wp.delete": "ሰርዝ",  // draft – needs native review
+  "wp.deleteConfirm": "{name}ን ከድረ-ገጹ ይሰርዙ?",  // draft – needs native review
+  "wp.moveUp": "ወደ ላይ",  // draft – needs native review
+  "wp.moveDown": "ወደ ታች",  // draft – needs native review
+  "wp.none": "እስካሁን በድረ-ገጹ ላይ አጋር የለም።",  // draft – needs native review
 };

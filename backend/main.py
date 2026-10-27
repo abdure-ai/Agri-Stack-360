@@ -44,8 +44,10 @@ from backend.routers.abc_inputs import router as abc_inputs_router
 from backend.routers.abc_machinery import router as abc_machinery_router
 from backend.routers.abc_my import router as abc_my_router
 from backend.routers.abc_portfolio import router as abc_portfolio_router
+from backend.routers.feedback import router as feedback_router
+from backend.routers.website import router as website_router
 from backend import ai_keys
-from backend import admin_areas, audit, erasure, input_trust, platform_db, tips, training_data
+from backend import admin_areas, audit, erasure, feedback, input_trust, platform_db, tips, training_data, website
 from backend.advisory.schema import ensure_schema
 from backend.platform_db import get_platform_connection
 
@@ -73,6 +75,8 @@ credit_routes.ensure_schema(get_platform_connection())
 training_data.ensure_schema(get_platform_connection())
 tips.ensure_schema(get_platform_connection())
 input_trust.ensure_schema(get_platform_connection())
+feedback.ensure_schema(get_platform_connection())
+website.ensure_schema(get_platform_connection())
 
 app = FastAPI(
     title="NMIS Agri-Platform API",
@@ -147,6 +151,8 @@ app.include_router(abc_inputs_router, prefix="/api")
 app.include_router(abc_machinery_router, prefix="/api")
 app.include_router(abc_my_router, prefix="/api")
 app.include_router(abc_portfolio_router, prefix="/api")
+app.include_router(feedback_router,    prefix="/api")   # public website feedback + admin view
+app.include_router(website_router,     prefix="/api")   # public website partners + admin management
 app.include_router(beckn_router,       prefix="/api")   # signed network requests, off unless BECKN_ENABLED=1
 
 

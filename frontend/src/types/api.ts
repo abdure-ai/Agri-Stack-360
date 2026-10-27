@@ -58,7 +58,9 @@ export type Permission =
   | "estate:manage"
   | "registry:manage"
   | "ngo:manage"
-  | "credit:request";
+  | "credit:request"
+  | "feedback:manage"
+  | "site:manage";
 
 export interface User {
   id: number;

@@ -2509,4 +2509,61 @@ export const ti: Record<MessageKey, string> = {
   "pf.alert.machinery_out_of_service": "ማሽነሪ ካብ ኣገልግሎት ወጻኢ",  // draft – needs native review
   "pf.membersShort": "{n} ኣባላት",  // draft – needs native review
   "pf.capitalShort": "{paid} ካፒታል ተኸፊሉ",  // draft – needs native review
+
+  // ── Website feedback (admin) ──────────────────────────────────────────────
+  "nav.feedback": "ርእይቶ መርበብ ሓበሬታ",  // draft – needs native review
+  "fb.description": "በጻሕቲ መርበብ ሓበሬታን ምርኢትን ዝሃቡና ርእይቶ ምስ ኣድራሻኦም። ነዚ ገጽ ክርእዩ ዝኽእሉ ኣመሓደርቲ ጥራይ እዮም።",  // draft – needs native review
+  "fb.total": "መልስታት",  // draft – needs native review
+  "fb.avgRating": "ማእከላይ ደረጃ",  // draft – needs native review
+  "fb.topLiked": "ብዝበዝሐ ዝተፈተወ",  // draft – needs native review
+  "fb.interests": "ተገዳስነት",  // draft – needs native review
+  "fb.pageViews": "ብዝሒ ምርኣይ ገጽ",  // draft – needs native review
+  "fb.exportCsv": "CSV ኣውርድ",  // draft – needs native review
+  "fb.filter.type": "ዓይነት በጻሒ",  // draft – needs native review
+  "fb.filter.interest": "ተገዳስነት",  // draft – needs native review
+  "fb.filter.rating": "ደረጃ",  // draft – needs native review
+  "fb.filter.source": "ምንጪ",  // draft – needs native review
+  "fb.filter.status": "ኩነታት",  // draft – needs native review
+  "fb.filter.from": "ካብ",  // draft – needs native review
+  "fb.filter.to": "ክሳብ",  // draft – needs native review
+  "fb.filter.all": "ኩሉ",  // draft – needs native review
+  "fb.filter.minRating": "{n}+ ኮኾብ",  // draft – needs native review
+  "fb.filter.clear": "መጻረዪ ኣጽሪ",  // draft – needs native review
+  "fb.none": "ክሳብ ሕጂ ርእይቶ የለን።",  // draft – needs native review
+  "fb.col.date": "ዕለት",  // draft – needs native review
+  "fb.col.name": "ስም",  // draft – needs native review
+  "fb.col.contact": "ርክብ",  // draft – needs native review
+  "fb.organisation": "ትካል",  // draft – needs native review
+  "fb.status.new": "ሓድሽ",  // draft – needs native review
+  "fb.status.contacted": "ተራኺብና",  // draft – needs native review
+  "fb.status.closed": "ተዓጽዩ",  // draft – needs native review
+  "fb.liked": "ዝፈተውዎ",  // draft – needs native review
+  "fb.comments": "ርእይቶ",  // draft – needs native review
+  "fb.contactOk": "ክንረኽቦም ፈቒዶም",  // draft – needs native review
+  "fb.contactNo": "ክንረኽቦም ኣይፈቐዱን",  // draft – needs native review
+  "fb.notes": "መዘኻኸሪ ጉጅለ",  // draft – needs native review
+  "fb.save": "ዓቅብ",  // draft – needs native review
+  "fb.saved": "ተዓቂቡ",  // draft – needs native review
+  "fb.source.direct": "ብቐጥታ",  // draft – needs native review
+
+  // ── Website partners (admin) ──────────────────────────────────────────────
+  "nav.websitePartners": "መሻርኽቲ መርበብ ሓበሬታ",  // draft – needs native review
+  "wp.description": "ኣብ ህዝባዊ መርበብ ሓበሬታ “ምስኦም ሰሪሕና” ኣብ ትሕቲ ዝርከቡ መሻርኽቲን ኣርማታትን። ክትጥቀሙሉ ዝተፈቐደልኩም ኣርማ ጥራይ ወስኹ።",  // draft – needs native review
+  "wp.add": "መሻርኽቲ ወስኽ",  // draft – needs native review
+  "wp.name": "ስም",  // draft – needs native review
+  "wp.logo": "ኣርማ (ኣማራጺ)",  // draft – needs native review
+  "wp.logoHint": "PNG፣ JPG ወይ WebP፣ ክሳብ 3 MB። ግሉጽ ወይ ጻዕዳ ድሕሪት ዘለዎ ሰፊሕ ኣርማ ይሓይሽ። ኣርማ እንተዘይብሉ ስሙ ይርአ።",  // draft – needs native review
+  "wp.save": "ዓቅብ",  // draft – needs native review
+  "wp.upload": "ኣርማ ጽዓን",  // draft – needs native review
+  "wp.replace": "ኣርማ ቀይር",  // draft – needs native review
+  "wp.removeLogo": "ኣርማ ኣወግድ",  // draft – needs native review
+  "wp.noLogo": "ኣርማ የለን፡ ስሙ ይርአ",  // draft – needs native review
+  "wp.hidden": "ተሓቢኡ",  // draft – needs native review
+  "wp.show": "ኣብ መርበብ ሓበሬታ ኣርኢ",  // draft – needs native review
+  "wp.hide": "ካብ መርበብ ሓበሬታ ሕባእ",  // draft – needs native review
+  "wp.delete": "ደምስስ",  // draft – needs native review
+  "wp.deleteConfirm": "{name} ካብ መርበብ ሓበሬታ ይደምሰስ?",  // draft – needs native review
+  "wp.moveUp": "ናብ ላዕሊ",  // draft – needs native review
+  "wp.moveDown": "ናብ ታሕቲ",  // draft – needs native review
+  "wp.none": "ክሳብ ሕጂ ኣብ መርበብ ሓበሬታ መሻርኽቲ የለን።",  // draft – needs native review
 };

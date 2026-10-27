@@ -17,6 +17,7 @@ of Agriculture wheat guidelines and the official administrative boundaries.
 | Government, NGOs | Aggregated area reports and impact (small numbers hidden), outbreak maps, project messaging |
 | Suppliers, dealers, regulator | Code batches and labels, checks at sale, counterfeit map, registered-product list |
 | ABCs, commercial farms, traders, lenders | Member planning and buyer requests, block scouting, harvest outlook, credit profile with the farmer's consent |
+| Visitors (public, no sign-in) | Landing page `/`, feedback form `/feedback` (`?type=partner`, `?src=expo`), privacy note `/privacy`; admins read feedback, follow up and export CSV under Website feedback. The signed-in dashboard is at `/dashboard` |
 
 Every route checks a permission on the server (`backend/permissions.py`, enforced by `tests/test_rbac.py`); no
 personal data is sent to the AI (`tests/advisory/test_privacy.py`).

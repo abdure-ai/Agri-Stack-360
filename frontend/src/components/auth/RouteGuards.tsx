@@ -28,11 +28,11 @@ export function RequireAuth() {
  */
 export function RequirePermission({ any }: { any: Permission[] }) {
   const { can } = useAuth();
-  return can(...any) ? <Outlet /> : <Navigate to="/" replace />;
+  return can(...any) ? <Outlet /> : <Navigate to="/dashboard" replace />;
 }
 
 /** Sign-in / sign-up pages: already signed-in users skip straight to the app. */
 export function GuestOnly() {
   const { isAuthenticated } = useAuth();
-  return isAuthenticated ? <Navigate to="/" replace /> : <Outlet />;
+  return isAuthenticated ? <Navigate to="/dashboard" replace /> : <Outlet />;
 }

@@ -30,7 +30,7 @@ const AppHeader: React.FC = () => {
             {isMobileOpen ? <CloseIcon className="size-6" /> : <MenuIcon className="size-6 rtl:-scale-x-100" />}
           </button>
 
-          <Link to="/" className="xl:hidden" aria-label={t("app.home")}>
+          <Link to="/dashboard" className="xl:hidden" aria-label={t("app.home")}>
             <Logo className="hidden sm:inline-flex" />
             <Logo iconOnly className="sm:hidden" />
           </Link>

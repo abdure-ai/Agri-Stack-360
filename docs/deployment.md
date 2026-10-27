@@ -193,6 +193,9 @@ Get the HTTPS certificate with Let's Encrypt (`certbot --nginx`).
 - [ ] Daily backups of `agri_platform.db`, `data/uploads/` and `data/training/` run and a restore was tested.
 - [ ] Data sync scheduled (admin: Data Sync page) so prices stay current.
 - [ ] Logs rotate; disk space is monitored (photos and the price database grow).
+- [ ] Public website: `/`, `/feedback` and `/privacy` open on a phone over mobile data without signing in (the
+      exhibition QR codes point at `/` and `/feedback`, so those addresses must never change); a test submission
+      shows under Admin → Website feedback (`feedback` table in `agri_platform.db`, backed up with it).
 - [ ] Open items from `docs/checklist-audit.md` reviewed: emergency number, legal review of consent texts,
       native-speaker review of am/om/ti texts, placeholder product data replaced with the official registry.
 

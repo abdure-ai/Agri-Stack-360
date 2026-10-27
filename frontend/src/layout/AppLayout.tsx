@@ -1,8 +1,10 @@
 import ChatPanel from "@/components/chat/ChatPanel";
 import OfflineBanner from "@/components/common/OfflineBanner";
+import { LoadingState } from "@/components/common/States";
 import { useAuth } from "@/context/AuthContext";
 import { SidebarProvider, useSidebar } from "@/context/SidebarContext";
 import { cn } from "@/utils";
+import { Suspense } from "react";
 import { Outlet, useLocation } from "react-router";
 import AppHeader from "./AppHeader";
 import AppSidebar from "./AppSidebar";
@@ -32,7 +34,10 @@ const LayoutContent: React.FC = () => {
         <AppHeader />
         <main className="mx-auto max-w-(--breakpoint-2xl) p-4 md:p-6">
           <OfflineBanner />
-          <Outlet />
+          {/* Each screen is loaded when first opened; the sidebar and header stay in place meanwhile. */}
+          <Suspense fallback={<LoadingState />}>
+            <Outlet />
+          </Suspense>
         </main>
       </div>
 

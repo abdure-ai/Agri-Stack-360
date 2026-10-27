@@ -25,6 +25,7 @@ import {
   KeySquare,
   Lightbulb,
   Map as MapIcon,
+  MessageSquareHeart,
   Microscope,
   Scale,
   ScrollText,
@@ -59,7 +60,7 @@ export const NAV_GROUPS: NavGroup[] = [
   {
     title: "nav.menu",
     items: [
-      { name: "nav.dashboard", path: "/", icon: <GridIcon className={ICON} /> },
+      { name: "nav.dashboard", path: "/dashboard", icon: <GridIcon className={ICON} /> },
       { name: "nav.market", path: "/market", icon: <ChartAltIcon className={ICON} /> },
       { name: "nav.livestock", path: "/livestock", icon: <Beef className={ICON} strokeWidth={1.5} /> },
       { name: "nav.map", path: "/map", icon: <MapIcon className={ICON} strokeWidth={1.5} /> },
@@ -129,6 +130,8 @@ export const NAV_GROUPS: NavGroup[] = [
       { name: "nav.orgs", path: "/admin/orgs", icon: <Building2 className={ICON} strokeWidth={1.5} />, permissions: ["orgs:manage"] },
       { name: "nav.abcRules", path: "/admin/abc-rules", icon: <Scale className={ICON} strokeWidth={1.5} />, permissions: ["orgs:manage"] },
       { name: "nav.auditLog", path: "/admin/audit-log", icon: <ScrollText className={ICON} strokeWidth={1.5} />, permissions: ["audit:read"] },
+      { name: "nav.feedback", path: "/admin/feedback", icon: <MessageSquareHeart className={ICON} strokeWidth={1.5} />, permissions: ["feedback:manage"] },
+      { name: "nav.websitePartners", path: "/admin/website-partners", icon: <Handshake className={ICON} strokeWidth={1.5} />, permissions: ["site:manage"] },
     ],
   },
 ];

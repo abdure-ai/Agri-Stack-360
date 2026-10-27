@@ -24,6 +24,8 @@ PUBLIC = {
     ("GET", "/api/meta"), ("GET", "/api/varieties"), ("GET", "/api/markets"), ("GET", "/api/prices"),
     ("GET", "/api/summary"), ("GET", "/api/regional"), ("GET", "/api/spread"),
     ("POST", "/api/beckn/search"),
+    ("POST", "/api/feedback"), ("POST", "/api/visits"),   # public website (tests/test_feedback.py)
+    ("GET", "/api/site/partners"), ("GET", "/api/site/partners/{partner_id}/logo"),   # tests/test_website.py
     ("GET", "/api/auth/demo-accounts"),   # empty unless DEMO_MODE=1 (tests/test_demo_accounts.py)   # authenticated by the Beckn signature, not sign-in (tests/test_beckn.py)
 }
 

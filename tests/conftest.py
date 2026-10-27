@@ -67,6 +67,12 @@ def platform(monkeypatch):
     from backend import tips
 
     tips.ensure_schema(conn)
+    from backend import feedback
+
+    feedback.ensure_schema(conn)
+    from backend import website
+
+    website.ensure_schema(conn)
     monkeypatch.setattr(platform_db, "_conn", conn)
     yield conn
     conn.close()

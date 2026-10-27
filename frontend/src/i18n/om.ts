@@ -2509,4 +2509,61 @@ export const om: Record<MessageKey, string> = {
   "pf.alert.machinery_out_of_service": "Maashiniin tajaajila ala",  // draft – needs native review
   "pf.membersShort": "Miseensota {n}",  // draft – needs native review
   "pf.capitalShort": "Kaappitaala {paid} kaffalame",  // draft – needs native review
+
+  // ── Website feedback (admin) ──────────────────────────────────────────────
+  "nav.feedback": "Yaada marsariitii",  // draft – needs native review
+  "fb.description": "Yaada daawwattoonni marsariitii fi agarsiisaa nuuf kennan, teessoo isaanii waliin. Fuula kana bulchitoota qofatu arguu danda'a.",  // draft – needs native review
+  "fb.total": "Deebiiwwan",  // draft – needs native review
+  "fb.avgRating": "Sadarkaa giddugaleessaa",  // draft – needs native review
+  "fb.topLiked": "Kan caalaatti jaallatame",  // draft – needs native review
+  "fb.interests": "Fedhii",  // draft – needs native review
+  "fb.pageViews": "Daawwannaa fuulaa",  // draft – needs native review
+  "fb.exportCsv": "CSV buusi",  // draft – needs native review
+  "fb.filter.type": "Gosa daawwataa",  // draft – needs native review
+  "fb.filter.interest": "Fedhii",  // draft – needs native review
+  "fb.filter.rating": "Sadarkaa",  // draft – needs native review
+  "fb.filter.source": "Madda",  // draft – needs native review
+  "fb.filter.status": "Haala",  // draft – needs native review
+  "fb.filter.from": "Irraa",  // draft – needs native review
+  "fb.filter.to": "Hanga",  // draft – needs native review
+  "fb.filter.all": "Hunda",  // draft – needs native review
+  "fb.filter.minRating": "Urjii {n}+",  // draft – needs native review
+  "fb.filter.clear": "Calalii haqi",  // draft – needs native review
+  "fb.none": "Hanga ammaatti yaadni hin jiru.",  // draft – needs native review
+  "fb.col.date": "Guyyaa",  // draft – needs native review
+  "fb.col.name": "Maqaa",  // draft – needs native review
+  "fb.col.contact": "Quunnamtii",  // draft – needs native review
+  "fb.organisation": "Dhaabbata",  // draft – needs native review
+  "fb.status.new": "Haaraa",  // draft – needs native review
+  "fb.status.contacted": "Quunnamameera",  // draft – needs native review
+  "fb.status.closed": "Cufameera",  // draft – needs native review
+  "fb.liked": "Kan jaallatan",  // draft – needs native review
+  "fb.comments": "Yaada",  // draft – needs native review
+  "fb.contactOk": "Akka quunnamnu eeyyamaniiru",  // draft – needs native review
+  "fb.contactNo": "Akka quunnamnu hin eeyyamne",  // draft – needs native review
+  "fb.notes": "Yaadannoo garee",  // draft – needs native review
+  "fb.save": "Olkaa'i",  // draft – needs native review
+  "fb.saved": "Olkaa'ameera",  // draft – needs native review
+  "fb.source.direct": "Kallattiin",  // draft – needs native review
+
+  // ── Website partners (admin) ──────────────────────────────────────────────
+  "nav.websitePartners": "Michuu marsariitii",  // draft – needs native review
+  "wp.description": "Michuu fi mallattoolee marsariitii ummataa irratti “Waliin hojjenneerra” jalatti mul'atan. Mallattoolee akka fayyadamtan isinii hayyamame qofa dabalaa.",  // draft – needs native review
+  "wp.add": "Michuu dabali",  // draft – needs native review
+  "wp.name": "Maqaa",  // draft – needs native review
+  "wp.logo": "Mallattoo (filannoo)",  // draft – needs native review
+  "wp.logoHint": "PNG, JPG ykn WebP, hanga 3 MB. Mallattoon bal'aan duubbee ifaa ykn adii qabu caalaa gaarii dha. Mallattoo malee maqaan mul'ata.",  // draft – needs native review
+  "wp.save": "Olkaa'i",  // draft – needs native review
+  "wp.upload": "Mallattoo fe'i",  // draft – needs native review
+  "wp.replace": "Mallattoo jijjiiri",  // draft – needs native review
+  "wp.removeLogo": "Mallattoo haqi",  // draft – needs native review
+  "wp.noLogo": "Mallattoo hin qabu: maqaan mul'ata",  // draft – needs native review
+  "wp.hidden": "Dhokateera",  // draft – needs native review
+  "wp.show": "Marsariitii irratti agarsiisi",  // draft – needs native review
+  "wp.hide": "Marsariitii irraa dhoksi",  // draft – needs native review
+  "wp.delete": "Haqi",  // draft – needs native review
+  "wp.deleteConfirm": "{name} marsariitii irraa haqxuu?",  // draft – needs native review
+  "wp.moveUp": "Ol kaasi",  // draft – needs native review
+  "wp.moveDown": "Gad buusi",  // draft – needs native review
+  "wp.none": "Hanga ammaatti marsariitii irratti michuun hin jiru.",  // draft – needs native review
 };

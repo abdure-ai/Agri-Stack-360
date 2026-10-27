@@ -5,6 +5,8 @@
 //   forecast API  (port 8001)  VITE_FORECAST_URL
 //   data sync     (port 8002)  VITE_SYNC_URL
 
+import type { FeedbackFilters, FeedbackForm, FeedbackItem, FeedbackResult, FeedbackStatus,
+  FeedbackSummary, WebsitePartner } from "@/types/feedback";
 import type { LivestockImportResult, LivestockPrices, LivestockSummary } from "@/types/livestock";
 import type { MapLayers } from "@/types/map";
 import type { AbcCompany, AbcDocKind, AbcDocument, AbcFormation, AbcHistoryEntry, AbcProfile, AbcRole, AbcRule,
@@ -198,6 +200,48 @@ async function request<T>(
     throw new ApiError(detailMessage(data, res.status), res.status);
   }
   return data as T;
+}
+
+/**
+ * Public website feedback (no sign-in). Answers the form can't accept come back as messages per field;
+ * a network failure throws, so the form keeps the answers and offers Retry.
+ */
+export async function submitFeedback(form: FeedbackForm): Promise<FeedbackResult> {
+  const res = await fetch(`${BASE}/feedback`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(form),
+  });
+  if (res.ok) return { ok: true };
+  const detail = ((await res.json().catch(() => null)) as { detail?: unknown } | null)?.detail;
+  if (detail && typeof detail === "object" && "fields" in detail) {
+    const d = detail as { message: string; fields: Record<string, string> };
+    return { ok: false, status: res.status, message: d.message, fields: d.fields };
+  }
+  const message = typeof detail === "string" ? detail : "Something went wrong. Please try again.";
+  return { ok: false, status: res.status, message, fields: {} };
+}
+
+/** Count one view of a public page (counts per page and ?src= only; failures are ignored). */
+export function recordVisit(path: string, source: string | null): void {
+  void fetch(`${BASE}/visits`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ path, source }),
+    keepalive: true,
+  }).catch(() => undefined);
+}
+
+/** Partners shown on the public website, in order (no sign-in). */
+export async function fetchPartners(): Promise<WebsitePartner[]> {
+  const res = await fetch(`${BASE}/site/partners`);
+  if (!res.ok) throw new ApiError(`partners ${res.status}`, res.status);
+  return (await res.json()) as WebsitePartner[];
+}
+
+/** Full address of a partner logo (logo_url is relative to the API base). */
+export function partnerLogoSrc(logoUrl: string): string {
+  return BASE + logoUrl;
 }
 
 /** GET returning binary data (e.g. a printable SVG label). */
@@ -695,6 +739,24 @@ export const api = {
   adminErasureRequests: (status = "pending") => platform.get<ErasureRequest[]>("/admin/erasure-requests", { status }),
   approveErasure: (id: number, note: string) => platform.post<ErasureRequest>(`/admin/erasure-requests/${id}/approve`, { note: note || null }),
   rejectErasure: (id: number, note: string) => platform.post<ErasureRequest>(`/admin/erasure-requests/${id}/reject`, { note: note || null }),
+
+  // ── Website feedback (admin) ──────────────────────────────────────────────
+  adminFeedback: (f: FeedbackFilters) => platform.get<FeedbackItem[]>("/admin/feedback", { ...f }),
+  adminFeedbackSummary: (f: FeedbackFilters) => platform.get<FeedbackSummary>("/admin/feedback/summary", { ...f }),
+  adminFeedbackExport: (f: FeedbackFilters) => getBlob(BASE, "/admin/feedback/export.csv", { ...f }),
+  updateFeedback: (id: number, patch: { status?: FeedbackStatus; notes?: string }) =>
+    platform.patch<FeedbackItem>(`/admin/feedback/${id}`, patch),
+
+  // ── Website partners (admin) ──────────────────────────────────────────────
+  adminPartners: () => platform.get<WebsitePartner[]>("/admin/partners"),
+  createPartner: (name: string, logo: File | null) =>
+    platform.upload<WebsitePartner>("/admin/partners", formOf({ name, logo })),
+  updatePartner: (id: number, patch: { name?: string; active?: boolean }) =>
+    platform.patch<WebsitePartner>(`/admin/partners/${id}`, patch),
+  setPartnerLogo: (id: number, logo: File) => platform.upload<WebsitePartner>(`/admin/partners/${id}/logo`, formOf({ logo })),
+  removePartnerLogo: (id: number) => platform.del<WebsitePartner>(`/admin/partners/${id}/logo`),
+  reorderPartners: (ids: number[]) => platform.put<WebsitePartner[]>("/admin/partners/order", { ids }),
+  deletePartner: (id: number) => request<null>(BASE, "DELETE", `/admin/partners/${id}`),
   getFarms: () => platform.get<Farm[]>("/users/farms"),
   getSeasons: (farmId: number) => platform.get<CropSeason[]>(`/users/farms/${farmId}/seasons`),
   addSeason: (farmId: number, data: SeasonInput) => platform.post<CropSeason>(`/users/farms/${farmId}/seasons`, data),

@@ -1,10 +1,7 @@
 // i18n/core.ts — current language, dictionaries and tr(), usable outside React
 // (formatters, insight builders). Components use useI18n() so they re-render on change.
 
-import { am } from "./am";
 import { en, type MessageKey } from "./en";
-import { om } from "./om";
-import { ti } from "./ti";
 
 export const LANGUAGES = ["en", "am", "om", "ti"] as const;
 export type Lang = (typeof LANGUAGES)[number];
@@ -17,7 +14,34 @@ export const LANGUAGE_NAMES: Record<Lang, string> = {
   ti: "ትግርኛ",
 };
 
-const DICTIONARIES: Record<Lang, Record<MessageKey, string>> = { en, am, om, ti };
+// English is built in; the others (≈150 kB compressed together) are fetched when first used, so the
+// public website and English users don't download them. Until one arrives, tr() falls back to English.
+const DICTIONARIES: Partial<Record<Lang, Record<MessageKey, string>>> = { en };
+const LOADERS: Record<Exclude<Lang, "en">, () => Promise<Record<MessageKey, string>>> = {
+  am: () => import("./am").then((m) => m.am),
+  om: () => import("./om").then((m) => m.om),
+  ti: () => import("./ti").then((m) => m.ti),
+};
+const loading: Partial<Record<Lang, Promise<void>>> = {};
+
+export function dictionaryLoaded(lang: Lang): boolean {
+  return lang in DICTIONARIES;
+}
+
+/** Fetch a language's dictionary once; resolves when tr() can use it. */
+export function loadDictionary(lang: Lang): Promise<void> {
+  if (lang === "en" || dictionaryLoaded(lang)) return Promise.resolve();
+  loading[lang] ??= LOADERS[lang]().then(
+    (dict) => {
+      DICTIONARIES[lang] = dict;
+    },
+    (err) => {
+      delete loading[lang];   // try again next time (offline, new deploy)
+      throw err;
+    },
+  );
+  return loading[lang];
+}
 
 export const LANG_STORAGE_KEY = "as360_lang";
 
@@ -40,7 +64,7 @@ export type Vars = Record<string, string | number | null | undefined>;
 
 /** Translate a key in the current language: tr("dash.greeting", { name }) . */
 export function tr(key: MessageKey, vars?: Vars, lang: Lang = current): string {
-  const text = DICTIONARIES[lang][key] ?? en[key] ?? key;
+  const text = DICTIONARIES[lang]?.[key] ?? en[key] ?? key;
   if (!vars) return text;
   return text.replace(/\{(\w+)\}/g, (m, name: string) => {
     const v = vars[name];

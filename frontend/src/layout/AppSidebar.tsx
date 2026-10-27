@@ -34,7 +34,7 @@ const AppSidebar: React.FC = () => {
       aria-label={t("common.mainNavigation")}
     >
       <div className={cn("flex py-8", !isExpanded && !isHovered ? "xl:justify-center" : "justify-start")}>
-        <Link to="/" aria-label={t("app.home")}>
+        <Link to="/dashboard" aria-label={t("app.home")}>
           <Logo iconOnly={!showText} />
         </Link>
       </div>

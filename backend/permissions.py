@@ -80,6 +80,8 @@ class P:
     ABC_PORTFOLIO = "abc:portfolio"            # read-only ABC portfolio (ATI: all ABCs; government: own area)
     DA_WORK = "da:work"                        # DA Copilot: my farmers, visit list, escalation inbox,
                                                # verify diagnoses, register farmers (with consent)
+    FEEDBACK_MANAGE = "feedback:manage"        # website visitor feedback: read, follow up, export
+    SITE_MANAGE = "site:manage"                # public website content: partner names and logos
 
 
 ALL_PERMISSIONS: frozenset[str] = frozenset(
@@ -166,6 +168,10 @@ PERMISSION_INFO: Mapping[str, tuple[str, str, str]] = {
                       "ABCs in their area (ATI: all): status, members, capital, machinery and compliance alerts, without member names."),
     P.DA_WORK: ("Farms & crop health", "Work as a Development Agent",
                 "See my farmers and visit list, answer escalated questions, verify diagnoses and register farmers."),
+    P.FEEDBACK_MANAGE: ("Administration", "Manage website feedback",
+                        "Read feedback and contact details left by website visitors, mark follow-up and export CSV."),
+    P.SITE_MANAGE: ("Administration", "Manage website partners",
+                    "Add, order, hide and remove the partners and logos shown on the public website."),
 }
 
 _EVERYONE = {P.MARKET_READ, P.ADVISORY_USE, P.PROFILE_MANAGE}

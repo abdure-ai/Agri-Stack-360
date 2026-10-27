@@ -1,7 +1,11 @@
 import { api } from "@/api/client";
 import { useAuth } from "@/context/AuthContext";
 import { createContext, Fragment, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { isLang, LANG_STORAGE_KEY, setCurrentLang, tr, trTerm, type Lang, type MessageKey, type Vars } from "./core";
+import { dictionaryLoaded, isLang, LANG_STORAGE_KEY, loadDictionary, setCurrentLang, tr, trTerm, type Lang, type MessageKey,
+  type Vars } from "./core";
+
+/** The public website (pages/Public): English only, shown without waiting for other languages. */
+const PUBLIC_PATHS = ["/", "/feedback", "/privacy"];
 
 type I18nContextType = {
   lang: Lang;
@@ -47,6 +51,24 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     document.documentElement.lang = lang;
   }, [lang]);
 
+  // Amharic, Afaan Oromoo and Tigrinya text is fetched on first use (i18n/core.ts). App screens wait for
+  // it rather than flash English; the public website is English and doesn't wait.
+  const ready = dictionaryLoaded(lang);
+  const [failed, setFailed] = useState<Lang | null>(null);
+  const [, setLoaded] = useState(0);
+  useEffect(() => {
+    if (ready) return;
+    let live = true;
+    loadDictionary(lang).then(
+      () => live && setLoaded((n) => n + 1),
+      () => live && setFailed(lang),   // offline before it was ever saved: show English
+    );
+    return () => {
+      live = false;
+    };
+  }, [lang, ready]);
+  const waiting = !ready && failed !== lang && !PUBLIC_PATHS.includes(window.location.pathname);
+
   const setLang = useCallback(
     (next: Lang) => {
       setDeviceLang(next);
@@ -73,7 +95,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   // with tr() outside components (formatters, insights). Saved state is restored on remount.
   return (
     <I18nContext.Provider value={value}>
-      <Fragment key={lang}>{children}</Fragment>
+      {waiting ? null : <Fragment key={lang}>{children}</Fragment>}
     </I18nContext.Provider>
   );
 }
